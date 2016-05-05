@@ -4,11 +4,6 @@
 # perhaps use l3build one day, but not today
 
 
-cd ..
-rm -f hyperref.zip
-zip -r hyperref.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc,hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.md,README.pdf,test,xr-hyper.sty}
-
-cd hyperref
 
 tex hyperref.ins
 lualatex hyperref.dtx
@@ -49,3 +44,7 @@ zip -r hyperref.tds.zip  doc source tex
 mv hyperref.tds.zip ..
 
 
+
+cd ../..
+rm -f hyperref.zip
+zip -r hyperref.zip hyperref/{hyperref.tds.zip,backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc,hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.md,README.pdf,test,xr-hyper.sty}

@@ -1,0 +1,151 @@
+% \iffalse meta-comment
+%
+% 2012/07/12
+%
+% Copyright 1999-2000 Sebastian Rahtz, Heiko Oberdiek
+%           2001-2012 Heiko Oberdiek
+%
+% This file is part of the `Hyperref Bundle'.
+% -------------------------------------------
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Heiko Oberdiek.
+%
+% The list of all files belonging to the LaTeX `Hyperref Bundle' is
+% given in the file `manifest.txt'.
+%
+% \fi
+%
+% CONTENTS OF THE HYPERREF BUNDLE
+% ===============================
+
+hyperref.dtx
+        Main package with various drivers.
+backref.dtx
+        Bibliographical back referencing.
+nameref.dtx
+        Cross-referencing by name of section.
+
+hyperref.pdf, backref.pdf, nameref.pdf
+        Source code documentation.
+
+hyperref.ins
+        Docstrip batch file.
+
+minitoc-hyper.sty
+        Patched version of `minitoc.sty' to work with `hyperref.sty'.
+ntheorem-hyper.sty
+        Patched version of `ntheorem.sty' to work with `hyperref.sty'.
+xr-hyper.sty
+        Patched version of `xr.sty' to work with `hyperref.sty'.
+
+bmhydoc.sty
+	Help package for generating the documentation.
+
+psdmapshortnames.pl
+	Helper script for generating psdextra.def.
+
+ChangeLog, ChangeLog.pdf
+        History of versions
+hylatex.ltx
+        For creating format file.
+Makefile
+        Makefile for installing and other things.
+manifest.txt
+        Short description of the files.
+README, README.pdf
+        Short readme file.
+
+% Derived files
+% =============
+
+backref.sty
+nameref.sty
+hyperref.sty
+nohyperref.sty
+        LaTeX package files.
+hycheck.tex
+	Test file.
+backref.drv
+nameref.drv
+hyperref.drv
+        Documentation drivers.
+hypertex.def
+pdfmark.def
+hvtexmrk.def
+htexture.def
+hdvipson.def
+hdvips.def
+hpdftex.def
+hdviwind.def
+htex4ht.def
+hvtex.def
+hvtexhtm.def
+hdvipdfm.def
+hxetex.def
+        Hyperref drivers.
+pd1enc.def
+puenc.def
+puvnenc.def
+puarenc.def
+psdextra.def
+        Font encoding definition files.
+
+% Directory doc/
+% =============
+
+manual.pdf
+        Manual, but a little out of date.
+manual.html, manual2.html, manual3.html, manual.css,
+cmsy10-21.gif, cmmi10-22.gif
+        HTML version of the manual.
+options.tex, options.pdf
+        Short description of options from package `hyperref'.
+paper.pdf
+        Online version of paper for Heiko Oberdiek's talk
+        at EuroTeX'99.
+slides.pdf
+        Slides for Heiko Oberdiek's talk at EuroTeX'99.
+
+% Directory test/
+% ==============
+
+test0.tex, test0.dvi, hog.eps, hog.pdf
+test1.tex
+test2.tex
+test3.tex, phys1.jpg, phys2.jpg
+test4.tex, bit.tex
+test5.tex
+test6.tex
+test7.tex
+test8.tex
+testams.tex
+testbib.tex, testbib.bib, testbib.bbl
+testbookmark.tex
+testfor2.tex
+testform.tex
+testnb.tex
+testoz.tex
+testslide.tex, seminar.con
+testurl.tex, testurl.bib, testurl.bbl
+picture.eps, picture.pdf, picture.png
+        Used in `test0.tex' and `test1.tex'.
+
+testbmgl.tex
+        Test file that produces all glyphs of PDFDocEncoding
+        in the bookmarks and shows the commands to produce them.
+testbmu.tex
+        Test file that produces glyphs 0x0000 until 0x04FF
+        of Unicode in the bookmarks and the commands.
+        (Caution: large pool size needed.)
+
+test-bm-pu-licr.tex

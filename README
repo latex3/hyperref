@@ -1,4 +1,4 @@
-README for hyperref bundle, 2012/10/13
+README for hyperref bundle, 2016/05/05
 
 
 TABLE OF CONTENTS
@@ -1644,6 +1644,7 @@ Responsible for the additions to PU encoding for Arabi is
 
 TeX Live
 --------
+* TL 2016:      2016/05/05 v6.83n (at time of first release)
 * TL 2011:      2011/04/17 v6.82g (at time of first release)
 * TL 2010:      2010/06/18 v6.81g (at time of first release)
 * TL 2009:      2009/10/09 v6.79a (at time of first release)

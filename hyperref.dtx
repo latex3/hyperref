@@ -45,7 +45,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2012/11/06 v6.83m %
+%<!none>  [2016/05/05 v6.83n %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -147,7 +147,7 @@
 \end{document}
 %</driver>
 % \fi
-% \CheckSum{39761}
+% \CheckSum{39767}
 %
 % \MakeShortVerb{|}
 % \StopEventually{}
@@ -493,6 +493,16 @@
 %<*package>
 %    \end{macrocode}
 % \section{Package options and setup}\label{options}
+%
+% \subsection{Lua\TeX\ compatibility}
+%
+% Until a Lua\TeX\ driver is writen, load |luatex85| so that
+% the |pdftex| driver continues to work with Lua\TeX.
+%    \begin{macrocode}
+\ifx\directlua\@undefined\else
+  \RequirePackage{luatex85}
+\fi
+%    \end{macrocode}
 %
 % \subsection{Save catcodes}
 %    There are many packages that change the standard catcodes.

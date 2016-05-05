@@ -1,3 +1,7 @@
+2016-05-05  6.83n David Carlisle
+    * 6.83n
+    * Load luatex85 package for luatex compatibility
+
 2012-11-06  6.83m  Heiko Oberdiek
     * 6.83m
     * Option `pdflang': Default is `\relax' that suppresses

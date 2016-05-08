@@ -40,11 +40,13 @@ cp  backref.sty hdvipdfm.def hdvips.def hdvipson.def hdviwind.def hpdftex.def ht
   hyperref-tds/tex/latex/hyperref
 
 cd hyperref-tds
+echo making tds zip
 zip -r hyperref.tds.zip  doc source tex
 mv hyperref.tds.zip ..
 
 
 
 cd ../..
+echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref/{hyperref.tds.zip,backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc,hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.md,README.pdf,test,xr-hyper.sty}
+zip -r hyperref.zip hyperref/{hyperref.tds.zip,backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc,hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,test,xr-hyper.sty}

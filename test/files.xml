@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE files [
+  <!ELEMENT files       (file)*>
+  <!ATTLIST files       destination CDATA #REQUIRED>
+  <!ELEMENT file        (title?, author*, date?, description?)>
+  <!ATTLIST file        name        CDATA #REQUIRED
+                        mark        (normal|beta) "normal">
+  <!ELEMENT title       (#PCDATA)>
+  <!ELEMENT author      (#PCDATA)>
+  <!ELEMENT date        (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+]>
+<files destination="test">
+  <file name="Makefile">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="bit.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="hog.eps">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="hog.pdf">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="phys1.jpg">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="phys2.jpg">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="picture.eps">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="picture.pdf">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="picture.png">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test0.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test1.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test2.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test3.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test4.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test6.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test7.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="test8.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testams.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testbib.bbl">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testbib.bib">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testbib.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testbmgl.tex">
+    <title>Test bookmark glyphs (PDFDocEncoding)</title>
+    <author>Heiko Oberdiek</author>
+  </file>
+  <file name="test-bm-pu-licr.tex">
+    <title>Test bookmark glyphs with LICR list (Unicode)</title>
+    <author>Heiko Oberdiek</author>
+  </file>
+  <file name="testbmu.tex">
+    <title>Test bookmark glyphs (Unicode)</title>
+    <author>Heiko Oberdiek</author>
+  </file>
+  <file name="testbookmark.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testfor2.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testform.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testinfo.tex">
+    <author>Heiko Oberdiek</author>
+  </file>
+  <file name="testnb.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testoz.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testslide.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testurl.bbl">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testurl.bib">
+    <author>Sebastian Rahtz</author>
+  </file>
+  <file name="testurl.tex">
+    <author>Sebastian Rahtz</author>
+  </file>
+</files>

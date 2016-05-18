@@ -12,8 +12,8 @@ lualatex hyperref.dtx
 rm -rf hyperref-tds
 mkdir hyperref-tds
 
-saxon9 saxon9 -versionmsg:off README.xml README_txt.xsl > README
-saxon9 saxon9 -versionmsg:off README.xml README_tex.xsl > README.tex
+saxon9  -versionmsg:off README.xml README_txt.xsl > README
+saxon9  -versionmsg:off README.xml README_tex.xsl > README.tex
 lualatex README.tex
 lualatex README.tex
 
@@ -41,6 +41,7 @@ mkdir hyperref-tds/tex/latex
 mkdir hyperref-tds/tex/latex/hyperref
 
 cp  backref.sty hdvipdfm.def hdvips.def hdvipson.def hdviwind.def hpdftex.def htex4ht.cfg htex4ht.def htexture.def hvtex.def hvtexhtm.def hvtexmrk.def hxetex.def hylatex.ltx hyperref.sty hypertex.def minitoc-hyper.sty nameref.sty nohyperref.sty ntheorem-hyper.sty pd1enc.def pdfmark.def psdextra.def puarenc.def puenc.def puvnenc.def xr-hyper.sty \
+  hluatex.def \
   hyperref-tds/tex/latex/hyperref
 
 cd hyperref-tds

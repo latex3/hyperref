@@ -1,6 +1,8 @@
-2016-05-05  6.83n David Carlisle
+2016-05-18  6.83m David Carlisle
     * 6.83m
-    * merge request from H. Yamashita pass driver options to color package.
+	* merge pull request from H. Yamashita pass driver options to
+	color package.
+	* replace call to luatex85 package by new luatex back end option
 
 2016-05-05  6.83n David Carlisle
     * 6.83n

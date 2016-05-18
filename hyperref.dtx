@@ -147,7 +147,6 @@
 \end{document}
 %</driver>
 % \fi
-% \CheckSum{39772}
 %
 % \MakeShortVerb{|}
 % \StopEventually{}
@@ -499,9 +498,9 @@
 % Until a Lua\TeX\ driver is writen, load |luatex85| so that
 % the |pdftex| driver continues to work with Lua\TeX.
 %    \begin{macrocode}
-\ifx\directlua\@undefined\else
-  \RequirePackage{luatex85}
-\fi
+%\ifx\directlua\@undefined\else
+%  \RequirePackage{luatex85}
+%\fi
 %    \end{macrocode}
 %
 % \subsection{Save catcodes}
@@ -5360,10 +5359,27 @@
 \DeclareVoidOption{pdftex}{%
   \ifpdf
     \def\Hy@driver{hpdftex}%
+    \PassOptionsToPackage{pdftex}{color}%
   \else
     \Hy@Error{%
       Wrong driver option `pdftex',\MessageBreak
       because pdfTeX in PDF mode is not detected%
+    }\@ehc
+  \fi
+}
+\DeclareVoidOption{luatex}{%
+  \ifpdf
+    \ifx\pdfextension\@undefined
+      \def\Hy@driver{hpdftex}%
+      \PassOptionsToPackage{pdftex}{color}%
+    \else
+      \def\Hy@driver{hluatex}%
+      \PassOptionsToPackage{luatex}{color}%
+    \fi
+  \else
+    \Hy@Error{%
+      Wrong driver option `luatex',\MessageBreak
+      because luaTeX in PDF mode is not detected%
     }\@ehc
   \fi
 }
@@ -7359,7 +7375,11 @@
       \def\HyOpt@DriverType{ (autodetected)}%
       \providecommand*{\Hy@defaultdriver}{hypertex}%
       \ifpdf
-        \def\Hy@driver{hpdftex}%
+        \ifx\pdfextension\@undefined
+          \def\Hy@driver{hpdftex}%
+        \else
+          \def\Hy@driver{hluatex}%
+        \fi
       \else
         \ifxetex
           \def\Hy@driver{hxetex}%

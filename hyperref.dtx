@@ -147,7 +147,7 @@
 \end{document}
 %</driver>
 % \fi
-% \CheckSum{39767}
+% \CheckSum{39772}
 %
 % \MakeShortVerb{|}
 % \StopEventually{}
@@ -5370,6 +5370,7 @@
 \DeclareVoidOption{nativepdf}{%
   \HyOpt@CheckDvi{nativepdf}{%
     \def\Hy@driver{hdvips}%
+    \PassOptionsToPackage{dvips}{color}%
   }%
 }
 \DeclareVoidOption{dvipdfm}{%
@@ -5380,6 +5381,7 @@
 \DeclareVoidOption{dvipdfmx}{%
   \HyOpt@CheckDvi{dvipdfmx}{%
     \def\Hy@driver{hdvipdfm}%
+    \PassOptionsToPackage{dvipdfmx}{color}%
   }%
 }
 \define@key{Hyp}{dvipdfmx-outline-open}[true]{%
@@ -5408,6 +5410,7 @@
 \DeclareVoidOption{dvips}{%
   \HyOpt@CheckDvi{dvips}{%
     \def\Hy@driver{hdvips}%
+    \PassOptionsToPackage{dvipsone}{color}%
   }%
 }
 \DeclareVoidOption{hypertex}{%
@@ -5472,6 +5475,7 @@
 \DeclareVoidOption{dvipsone}{%
   \HyOpt@CheckDvi{dvipsone}{%
     \def\Hy@driver{hdvipson}%
+    \PassOptionsToPackage{dvipsone}{color}%
   }%
 }
 \DeclareVoidOption{textures}{%
@@ -5490,6 +5494,7 @@
 \DeclareVoidOption{ps2pdf}{%
   \HyOpt@CheckDvi{ps2pdf}{%
     \def\Hy@driver{hdvips}%
+    \PassOptionsToPackage{dvips}{color}%
   }%
 }
 %    \end{macrocode}

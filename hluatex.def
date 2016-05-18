@@ -40,12 +40,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % remains of luatex85 package
-\protected\def\pdfinfo           {\pdfextension info }
-\protected\def\pdfoutline        {\pdfextension outline }
 \protected\def\pdfcatalog        {\pdfextension catalog }
-\protected\def\pdfdest           {\pdfextension dest }
-\protected\edef\pdfhorigin             {\pdfvariable horigin}
-\protected\edef\pdfvorigin             {\pdfvariable vorigin}
+
 \protected\def\pdflastannot      {\numexpr\pdffeedback lastannot\relax}
 \protected\def\pdflastlink       {\numexpr\pdffeedback lastlink\relax}
 \protected\def\pdflastobj        {\numexpr\pdffeedback lastobj\relax}
@@ -53,7 +49,7 @@
 
 \protected\edef\pdflinkmargin          {\pdfvariable linkmargin}
 \protected\def\pdfliteral        {\pdfextension literal}
-\protected\edef\pdfminorversion        {\pdfvariable minorversion}
+
 \protected\def\pdfobj            {\pdfextension obj }
 \protected\edef\pdfcompresslevel       {\pdfvariable compresslevel}
 \protected\edef\pdfpageattr            {\pdfvariable pageattr}
@@ -149,7 +145,7 @@
   [0-9]*[1-9][0-9]* 0 R%
 }
 
-\def\Hy@pdfminorversion{\pdfminorversion}%
+\edef\Hy@pdfminorversion{\pdfvariable minorversion}%
   \ifHy@ocgcolorlinks
     \ifnum\Hy@pdfminorversion<5 %
       \kvsetkeys{Hyp}{pdfversion=1.5}%
@@ -372,7 +368,7 @@
 }
 \let\pdf@endanchor\@empty
 \def\Hy@DestName#1#2{%
-  \pdfdest name{#1}#2\relax
+  \pdfextension dest name{#1}#2\relax
 }
 \providecommand*\@pdfborder{0 0 1}
 \providecommand*\@pdfborderstyle{}
@@ -644,7 +640,7 @@
   \pdf@ifdraftmode{}{%
     \Hy@UseMaketitleInfos
     \HyInfo@GenerateAddons
-    \pdfinfo{%
+    \pdfextension info{%
       /Author(\@pdfauthor)%
       /Title(\@pdftitle)%
       /Subject(\@pdfsubject)%
@@ -765,8 +761,8 @@
   \fi
   {%
     \@ifclassloaded{seminar}{%
-      \setlength{\pdfhorigin}{1truein}%
-      \setlength{\pdfvorigin}{1truein}%
+      \setlength{\pdfvariable horigin}{1truein}%
+      \setlength{\pdfvariable vorigin}{1truein}%
       \ifportrait
         \ifdim\paperwidth=\z@
         \else
@@ -1901,7 +1897,7 @@
   \fi
 }
 \def\Hy@OutlineName#1#2#3#4{%
-  \pdfoutline goto name{#2}count#3{#4}%
+  \pdfextension outline goto name{#2}count#3{#4}%
 }
 \def\check@bm@number#1{%
   \expandafter\ifx\csname B_#1\endcsname\relax

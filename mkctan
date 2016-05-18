@@ -12,6 +12,10 @@ lualatex hyperref.dtx
 rm -rf hyperref-tds
 mkdir hyperref-tds
 
+saxon9 saxon9 -versionmsg:off README.xml README_txt.xsl > README
+saxon9 saxon9 -versionmsg:off README.xml README_tex.xsl > README.tex
+lualatex README.tex
+lualatex README.tex
 
 mkdir hyperref-tds/doc
 mkdir hyperref-tds/doc/latex

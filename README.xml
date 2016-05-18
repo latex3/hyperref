@@ -1635,7 +1635,7 @@ C%
 
   <section>
     <title>Authors/Maintainers</title>
-    <p>* Sebastian Rahtz
+    <p>* Sebastian Rahtz (died 2016)
 * Heiko Oberdiek
     </p>
   </section>
@@ -1660,10 +1660,10 @@ C%
     </p>
     <subsection>
       <title>Bug address</title>
-      <p>A bug tracker is available at Puszcza:
-  https://puszcza.gnu.org.ua/bugs/?group=hyperref
-Alternatively bug reports can be send to the maintainer:
-  Heiko Oberdiek &lt;heiko [dot] oberdiek [at] googlemail [dot] com&gt;
+      <p>A bug tracker is available at github:
+    https://github.com/ho-tex/oberdiek/issues
+Alternatively bug reports can be send to the support group public email list:
+ &lt;ho-tex [at] tug [dot] org&gt;
       </p>
     </subsection>
     <subsection>

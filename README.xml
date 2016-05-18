@@ -1,50 +1,43 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <!DOCTYPE readme SYSTEM "README.dtd">
 <readme>
-  <date>2013/01/10</date>
+  <date>2016/05/05</date>
   <section>
     <title>Introduction</title>
-    <p>
-This package is used to emend cross-referencing commands in LaTeX to
+    <p>This package is used to emend cross-referencing commands in LaTeX to
 produce some sort of \special commands; there are backends for the
 \special set defined for HyperTeX dvi processors, for embedded pdfmark
 commands for processing by Acrobat Distiller (dvips and dvipsone), for
 dviwindo, for pdfTeX, for dvipdfm, for TeX4ht, and for VTEX's pdf and HTML
 backends.
-    </p>
-    <p>
-Included are:
+</p>
+
+<p>Included are:
 a) `backref' a package by David Carlisle to provide links back from
    bibliography to the main text; these are hypertext links after using
    hyperref.
 b) nameref' a package to allow reference to the *names* of sections rather
-   than their numbers.
-    </p>
+   than their numbers.</p>
   </section>
 
   <section>
     <title>Download</title>
-    <p>
-`hyperref' is available on CTAN:
+    <p>`hyperref' is available on CTAN:
   CTAN:macros/latex/contrib/hyperref/
     </p>
-    <p>
-Also a ZIP file is provided that contains the files, already sorted
+    <p>Also a ZIP file is provided that contains the files, already sorted
 in a TDS tree:
   CTAN:install/macros/latex/contrib/hyperref.tds.zip
     </p>
-    <p>
-`CTAN:' means one of the `Comprehensive TeX Archive Network'
+    <p>`CTAN:' means one of the `Comprehensive TeX Archive Network'
 nodes or one of its mirrors.  This is explained in
   http://www.tex.ac.uk/cgi-bin/texfaq2html?label=archives
     </p>
-    <p>
-The main repository of hyperref is located at the server
+    <p>The main repository of hyperref is located at the server
 of the international `TeX User Group' (TUG):
   http://www.tug.org/applications/hyperref/
     </p>
-    <p>
-The CTAN stuff will be mirrored automatically from the
+    <p>The CTAN stuff will be mirrored automatically from the
 ftp server, so
   ftp://ftp.tug.org/pub/tex/hyperref/
 corresponds to
@@ -52,8 +45,7 @@ corresponds to
     </p>
     <subsection>
       <title>Sources</title>
-      <p>
-The subversion source repository for hyperref is hosted at Puszcza:
+      <p>The subversion source repository for hyperref is hosted at Puszcza:
   https://puszcza.gnu.org.ua/svn/?group=hyperref
 It offers anonymous access. For daily use I recommend using
 a release. If new features are added or bugs are fixed, then
@@ -67,8 +59,7 @@ intermediate states between releases.
     <title>Installation</title>
     <subsection>
       <title>Installation with ZIP file in TDS format</title>
-      <p>
-The ZIP file `hyperref.tds.zip' contains the files sorted
+      <p>The ZIP file `hyperref.tds.zip' contains the files sorted
 in a TDS tree. Thus you can directly unpack the ZIP file
 inside a TDS tree. (See CTAN:tds.zip for an explanation of TDS.)
 Example:
@@ -81,8 +72,7 @@ Example:
     </subsection>
     <subsection>
       <title>Manual installation</title>
-      <p>
-a) Download the hyperref files from CTAN or the TUG server.
+      <p>a) Download the hyperref files from CTAN or the TUG server.
    If necessary, unpack them.
 b) If directory `beta' exists, replace the files by the counterparts
    in this directory, if you want to use the latest versions.
@@ -105,8 +95,7 @@ f) Update the databases if necessary, eg. for teTeX:
 
   <section>
     <title>Additional Packages</title>
-    <p>
-Depending on the driver and option settings, hyperref loads
+    <p>Depending on the driver and option settings, hyperref loads
 other packages:
 * atbegshi.sty:
     CTAN:macros/latex/contrib/oberdiek/atbegshi.pdf
@@ -183,30 +172,25 @@ other packages:
     <title>New Features</title>
     <subsection>
       <title>Option `pdflinkmargin'</title>
-      <p>
-  Option `pdflinkmargin' is an experimental option for specifying
+      <p>  Option `pdflinkmargin' is an experimental option for specifying
   a link margin, if the driver supports this. Default is 1 pt for
   supporting drivers.
       </p>
-      <p>
-  pdfTeX:
+      <p>  pdfTeX:
   * The link area also depends on the surrounding box.
   * Settings have local effect.
   * When a page is shipped out, pdfTeX uses the current setting
     of the link margin for all links on the page.
       </p>
-      <p>
-  pdfmark:
+      <p>  pdfmark:
   * Settings have global effect.
       </p>
-      <p>
-  Other drivers: Unsupported.
+      <p>  Other drivers: Unsupported.
       </p>
     </subsection>
     <subsection>
       <title>Field option `calculatesortkey'</title>
-      <p>
-  Fields with calculated values are calculated in document order
+      <p>  Fields with calculated values are calculated in document order
   by default. If calculated field values depend on other calculated
   fields that appear later in the document, then the correct calculation
   order can be specified with option `calculatesortkey'. Its value is
@@ -214,19 +198,16 @@ other packages:
   The sort key do not need to be unique. Fields that share the same
   key are sorted in document order.
       </p>
-      <p>
-  Currently the field option `calculatesortkey' is only supported by
+      <p>  Currently the field option `calculatesortkey' is only supported by
   the driver for pdfTeX.
       </p>
     </subsection>
     <subsection>
       <title>Option `localanchorname'</title>
-      <p>
-  When an anchor is set (e.g. via \refstepcounter), then the
+      <p>  When an anchor is set (e.g. via \refstepcounter), then the
   anchor name is globally set to the current anchor name.
       </p>
-      <p>
-  For example:
+      <p>  For example:
     \section{Foobar}
     \begin{equation}\end{equation}
     \label{sec:foobar}
@@ -236,30 +217,26 @@ other packages:
   is forgotten after the environment and the reference
   `sec:foobar' jumps to the section title.
       </p>
-      <p>
-  Option `localanchorname' is an experimental option, there
+      <p>  Option `localanchorname' is an experimental option, there
   might be situations, where the anchor name is not available
   as expected.
       </p>
     </subsection>
     <subsection>
       <title>Option `customdriver'</title>
-      <p>
-  The value of option `customdriver' is the name of an external
+      <p>  The value of option `customdriver' is the name of an external
   driver file without extension `.def'. The file must have
   \ProvidesFile with a version date and number that match the
   date and number of `hyperref', otherwise a warning is given.
       </p>
-      <p>
-  Because the interface, what needs to be defined in the driver,
+      <p>  Because the interface, what needs to be defined in the driver,
   is not well defined and quite messy, the option is mainly intended
   to ease developing, testing, debugging the driver part.
       </p>
     </subsection>
     <subsection>
       <title>Option `psdextra'</title>
-      <p>
-  LaTeX's NFSS is used to assist the conversion of arbitrary
+      <p>  LaTeX's NFSS is used to assist the conversion of arbitrary
   TeX strings to PDF strings (bookmarks, PDF information entries).
   Many math command names (\geq, \notin, ...) are not in control
   of NFSS, therefore they are defined with prefix `text'
@@ -275,8 +252,7 @@ other packages:
     </subsection>
     <subsection>
       <title>\XeTeXLinkBox</title>
-      <p>
-  When XeTeX generates a link annotation, it does not look
+      <p>  When XeTeX generates a link annotation, it does not look
   at the boxes (as the other drivers), but only at the character
   glyphs. If there are no glyphs (images, rules, ...), then
   it does not generate a link annotation. Macro \XeTeXLinkBox
@@ -285,8 +261,7 @@ other packages:
   by setting it to the dimen register \XeTeXLinkMargin. The default
   is 2pt.
       </p>
-      <p>
-  Example:
+      <p>  Example:
     % xelatex
     \documentclass{article}
     \usepackage{hyperref}
@@ -300,36 +275,31 @@ other packages:
     }
     \end{document}
       </p>
-    </subsection> 
+    </subsection>
     <subsection>
       <title>\IfHyperBooleanExists and \IfHyperBoolean</title>
-      <p>
-  \IfHyperBooleanExists{OPTION}{YES}{NO}
+      <p>  \IfHyperBooleanExists{OPTION}{YES}{NO}
   If a hyperref OPTION is a boolean, that means it takes values
   `true' or `false', then \IfHyperBooleanExists calls YES, otherwise NO.
       </p>
-      <p>
-  \IfHyperBoolean{OPTION}{YES}{NO}
+      <p>  \IfHyperBoolean{OPTION}{YES}{NO}
   Macro \IfHyperBoolean calls YES, if OPTION exists as boolean and is
   enabled. Otherwise NO is executed.
       </p>
-      <p>
-  Both macros are expandable. Additionally option `stoppedearly' is
+      <p>  Both macros are expandable. Additionally option `stoppedearly' is
   available. It is enabled if \MaybeStopEarly or \MaybeStopNow
   end hyperref prematurely.
       </p>
     </subsection>
     <subsection>
       <title>\unichar</title>
-      <p>
-  If a Unicode character is not supported by puenc.def, it can
+      <p>  If a Unicode character is not supported by puenc.def, it can
   be given by using \unichar. It's name and syntax is inherited
   from package `ucs'. However it is defined independently for
   use in hyperref's \pdfstringdef (that converts arbitrary
   TeX code to PDF strings or tries to do this).
       </p>
-      <p>
-  Macro \unichar takes a TeX number as argument,
+      <p>  Macro \unichar takes a TeX number as argument,
   examples for U+263A (WHITE SMILING FACE):
     \unichar{"263A}% hexadecimal notation
     \unichar{9786}% decimal notation
@@ -342,8 +312,7 @@ other packages:
     </subsection>
     <subsection>
       <title>\ifpdfstringunicode</title>
-      <p>
-  Some features of the PDF specification needs PDF strings.
+      <p>  Some features of the PDF specification needs PDF strings.
   Examples are bookmarks or the entries in the information dictionary.
   The PDF specification allows two encodings `PDFDocEncoding'
   (8-bit encoding) and `Unicode' (UTF-16). The user can help
@@ -355,8 +324,7 @@ other packages:
   the full range of Unicode. The second is limited to the
   characters available in PDFDocEncoding.
       </p>
-      <p>
-  As example we take a macro definition for the Vietnamese
+      <p>  As example we take a macro definition for the Vietnamese
   name of Han The Thanh. Correctly written it needs some
   accented characters, one character even with a double accent.
   Class `tugboat.cls' defines a macro for the typesetted name:
@@ -403,11 +371,9 @@ other packages:
     </subsection>
     <subsection>
       <title>Customizing index style file with \nohyperpage</title>
-      <p>
-  Since version 2008/08/14 v6.78f.
+      <p>  Since version 2008/08/14 v6.78f.
       </p>
-      <p>
-  For hyperlink support in the index, hyperref inserts \hyperpage
+      <p>  For hyperlink support in the index, hyperref inserts \hyperpage
   into the index macros. After processing with Makeindex, \hyperpage
   analyzes its argument to detect page ranges and page comma lists.
   However, only the standard settings are supported directly:
@@ -429,8 +395,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Experimental option `ocgcolorlinks'</title>
-      <p>
-  The idea are colored links, when viewed, but printed without colors.
+      <p>  The idea are colored links, when viewed, but printed without colors.
   This new experimental option `ocgcolorlinks' uses Optional Content
   Groups, a feature introduced in PDF 1.5.
   * The option must be given for package loading:
@@ -451,14 +416,12 @@ other packages:
     </subsection>
     <subsection>
       <title>Option `pdfa'</title>
-      <p>
-  The new option `pdfa' tries to avoid violations of PDF/A in code
+      <p>  The new option `pdfa' tries to avoid violations of PDF/A in code
   generated by hyperref. However, the result is usually not in PDF/A,
   because many features aren't controlled by hyperref (XMP metadata,
   fonts, colors, driver dependend low level stuff, ...).
       </p>
-      <p>
-  Currently, option `pdfa' sets and disables the following items:
+      <p>  Currently, option `pdfa' sets and disables the following items:
   * Enabled annotation flags: Print, NoZoom, NoRotate [PDF/A 6.5.3].
   * Disabled annotation flags: Hidden, Invisible, NoView [PDF/A 6.5.3].
   * Disabled: Launch action (\href{run:...} [PDF/A 6.6.1].
@@ -472,13 +435,11 @@ other packages:
       (Because of this, hyperref's implementation of Forms looks ugly).
       [PDF/A 6.9]
       </p>
-      <p>
-  The default value of the new option `pdfa' is `false'. It influences
+      <p>  The default value of the new option `pdfa' is `false'. It influences
   the loading of the package and cannot be changed after hyperref is
   loaded (\usepackage{hyperref}).
       </p>
-      <p>
-  ToDo:
+      <p>  ToDo:
   * XMP support
   * ...
   But perhaps Adobe Acrobat is now happy and can now convert
@@ -487,8 +448,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Option `linktoc' added</title>
-      <p>
-  The new option `linktoc' allows more control which part
+      <p>  The new option `linktoc' allows more control which part
   of an entry in the table of contents is made into a link:
   * `linktoc=none'    (no links)
   * `linktoc=section' (default behaviour, same as `linktocpage=false')
@@ -498,8 +458,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Option `pdfnewwindow' changed</title>
-      <p>
-  Before 6.77b:
+      <p>  Before 6.77b:
   * pdfnewwindow=true --&gt; /NewWindow true
   * pdfnewwindow=false --&gt; (absent)
   * unused pdfnewwindow --&gt; (absent)
@@ -509,8 +468,7 @@ other packages:
   * pdfnewwindow={} --&gt; (absent)
   * unused pdfnewwindow --&gt; (absent)
       </p>
-      <p>
-  Rationale: There is a difference between setting to `false'
+      <p>  Rationale: There is a difference between setting to `false'
   and an absent entry. In the former case the new document
   replaces the old one, in the latter case the PDF viewer
   application should respect the user preference.
@@ -518,8 +476,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Flag options for PDF forms</title>
-      <p>
-  PDF form field macros (\TextField, \CheckBox, ...) support
+      <p>  PDF form field macros (\TextField, \CheckBox, ...) support
   boolean flag options. The option name is the lowercase
   version of the names in the PDF specification (1.7):
     http://www.adobe.com/devnet/pdf/pdf_reference.html
@@ -575,8 +532,7 @@ other packages:
     12 ExclFKey (PDF 1.4)
     14 EmbedForm (PDF 1.5)
       </p>
-      <p>
-  New option `export' sets the export format of a submit action.
+      <p>  New option `export' sets the export format of a submit action.
   Valid values are (upper- or lowercase):
   * FDF
   * HTML
@@ -586,20 +542,16 @@ other packages:
     </subsection>
     <subsection>
       <title>Option `pdfversion'</title>
-      <p>
-  This is an experimental option. It notifies `hyperref' about
+      <p>  This is an experimental option. It notifies `hyperref' about
   the intended PDF version. Currently this is used in code for
   PDF forms (implementation notes 116 and 122 of PDF spec 1.7).
       </p>
-      <p>
-  Values: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7. Values below 1.2 are not
+      <p>  Values: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7. Values below 1.2 are not
   supported, because most drivers expect higher PDF versions.
       </p>
-      <p>
-  The option must be used early, not after \usepackage{hyperref}.
+      <p>  The option must be used early, not after \usepackage{hyperref}.
       </p>
-      <p>
-  In theory this option should also set the PDF version,
+      <p>  In theory this option should also set the PDF version,
   but this is not generally supported.
   * pdfTeX below 1.10a: unsupported.
     pdfTeX &gt;= 1.10a and &lt; 1.30: \pdfoptionpdfminorversion
@@ -611,8 +563,7 @@ other packages:
   * Ghostscript: option -dCompatibilityLevel (this is set in
     `ps2pdf12', `ps2pdf13', `ps2pdf14').
       </p>
-      <p>
-  The current PDF version is used as default if this version
+      <p>  The current PDF version is used as default if this version
   can be detected (only pdfTeX &gt;= 1.10a). Otherwise the lowest
   version 1.2 is assumed. Thus `hyperref' tries to avoid PDF code
   that breaks this version, but is free to use ignorable higher PDF
@@ -621,8 +572,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Field option `name'</title>
-      <p>
-  Many form objects uses the label argument
+      <p>  Many form objects uses the label argument
   for several purposes:
   * Layouted label.
   * As name in HTML structures.
@@ -635,8 +585,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Option `pdfencoding'</title>
-      <p>
-  The PDF format allows two encodings for bookmarks and entries
+      <p>  The PDF format allows two encodings for bookmarks and entries
   in the information dictionary: PDFDocEncoding and Unicode
   as UTF-16BE. Option "pdfencoding" selects between these encodings:
   * "pdfdoc" uses PDFDocEncoding. It uses just one byte per character,
@@ -649,14 +598,12 @@ other packages:
     </subsection>
     <subsection>
       <title>Color options/package hycolor</title>
-      <p>
-  See documentation of package `hycolor'.
+      <p>  See documentation of package `hycolor'.
       </p>
     </subsection>
     <subsection>
       <title>Option pdfusetitle</title>
-      <p>
-  If option pdfusetitle is set then hyperref tries to
+      <p>  If option pdfusetitle is set then hyperref tries to
   derive the values for pdftitle and pdfauthor from
   \title and \author. An optional argument for \title and
   \author is supported (class amsart).
@@ -664,14 +611,12 @@ other packages:
     </subsection>
     <subsection>
       <title>Starred form of \autoref</title>
-      <p>
-  \autoref* generates a reference without link as \ref* or \pageref*.
+      <p>  \autoref* generates a reference without link as \ref* or \pageref*.
       </p>
     </subsection>
     <subsection>
       <title>Link border style</title>
-      <p>
-  Links can be underlined instead of the default rectangle or
+      <p>  Links can be underlined instead of the default rectangle or
   options "colorlinks", "frenchlinks". This is done by option
       pdfborderstyle={/S/U/W 1}
 
@@ -707,8 +652,7 @@ other packages:
     </subsection>
     <subsection>
       <title>Option "bookmarksdepth"</title>
-      <p>
-  The depth of the bookmarks can be controlled by the new
+      <p>  The depth of the bookmarks can be controlled by the new
   option "bookmarksdepth".  The option acts globally and
   distinguishes three cases:
   * "bookmarksdepth" without value
@@ -730,8 +674,7 @@ other packages:
 
     <subsection>
       <title>Option "pdfescapeform"</title>
-      <p>
-  There are many places where arbitrary strings end up as
+      <p>  There are many places where arbitrary strings end up as
   PS or PDF strings. The PS/PDF strings in parentheses form
   require the protection of some characters, e.g. unmatched
   left or right parentheses need escaping or the escape
@@ -758,8 +701,7 @@ other packages:
 
     <subsection>
       <title>Default driver setting</title>
-      <p>
-  (hyperref &gt;= 6.72s)
+      <p>  (hyperref &gt;= 6.72s)
   If no driver is given, hyperref tries its best to guess the
   most suitable driver. Thus it loads "hpdftex", if pdfTeX is
   detected running in PDF mode. Or it loads the corresponding
@@ -775,15 +717,13 @@ other packages:
     \providecommand*{\Hy@defaultdriver}{hypertex}
   for the default behaviour of hyperref.
       </p>
-      <p>
-  See also the new option `driverfallback'.
+      <p>  See also the new option `driverfallback'.
       </p>
     </subsection>
 
     <subsection>
       <title>Backref entries</title>
-      <p>
-  Alternative interface for formatting of backref entries, example:
+      <p>  Alternative interface for formatting of backref entries, example:
 
 \documentclass[12pt,UKenglish]{article}
 
@@ -876,8 +816,7 @@ other packages:
 
     <subsection>
       <title>\phantomsection</title>
-      <p>
-Set an anchor at this location.  It is often used in conjunction
+      <p>Set an anchor at this location.  It is often used in conjunction
 with \addcontentsline for sectionlike things (index, bibliography,
 preface). \addcontentsline refers to the latest previous location
 where an anchor is set.
@@ -895,34 +834,29 @@ before this page.
 
     <subsection>
       <title>\hypercalcbp</title>
-      <p>
-See manual.
+      <p>See manual.
       </p>
     </subsection>
   </section>
 
   <section>
     <title>Package Compatibility</title>
-    <p>
-Currently only package loading orders are available:
+    <p>Currently only package loading orders are available:
     </p>
-    <p>
-Note: hyperref loads package "nameref" at \begin{document}.
+    <p>Note: hyperref loads package "nameref" at \begin{document}.
 Sometimes this is too late, thus this package must be loaded
 earlier.
     </p>
     <subsection>
       <title>algorithm</title>
-      <p>
-  \usepackage{float}
+      <p>  \usepackage{float}
   \usepackage{hyperref}
   \usepackage[chapter]{algorithm}% eg.
       </p>
     </subsection>
     <subsection>
       <title>amsmath</title>
-      <p>
-  The environments equation and eqnarray are not supported too well.
+      <p>  The environments equation and eqnarray are not supported too well.
   For example, there might be spacing problems (eqnarray isn't recommended
   anyway, see CTAN:info/l2tabu/, the situation for equation is unclear,
   because nobody is interested in investigating). Consider using the
@@ -936,8 +870,7 @@ earlier.
     </subsection>
     <subsection>
       <title>amsrefs</title>
-      <p>
-  Package loading order:
+      <p>  Package loading order:
 
   \usepackage{hyperref}
   \usepackage{amsrefs}
@@ -945,8 +878,7 @@ earlier.
     </subsection>
     <subsection>
       <title>arydshln, longtable</title>
-      <p>
-  Package longtable must be put before hyperref and arydshln,
+      <p>  Package longtable must be put before hyperref and arydshln,
   hyperref after arydshln generates an error, thus the
   resulting package order is then:
 
@@ -957,16 +889,14 @@ earlier.
     </subsection>
     <subsection>
       <title>babel/magyar.ldf</title>
-      <p>
-  The old version 2005/03/30 v1.4j will not work.
+      <p>  The old version 2005/03/30 v1.4j will not work.
   You need at least version 1.5, maintained by P\'eter Szab\'o,
   see CTAN:language/hungarian/babel/.
       </p>
     </subsection>
     <subsection>
       <title>babel/spanish.ldf</title>
-      <p>
-  Babel's spanish.ldf redefines `\.' to support `\...'.
+      <p>  Babel's spanish.ldf redefines `\.' to support `\...'.
   In bookmarks (\pdfstringdef) only `\.' is supported.
   If `\...' is needed,
     \texorpdfstring{\...}{\dots}
@@ -975,8 +905,7 @@ earlier.
     </subsection>
     <subsection>
       <title>bibentry</title>
-      <p>
-  Workaround:
+      <p>  Workaround:
 
   \makeatletter
   \let\saved@bibitem\@bibitem
@@ -996,16 +925,14 @@ earlier.
     </subsection>
     <subsection>
       <title>bigfoot</title>
-      <p>
-  Hyperref does not support package `bigfoot'. And package
+      <p>  Hyperref does not support package `bigfoot'. And package
   `bigfoot' does not support hyperref's footnotes and disables
   them (hyperfootnotes=false).
       </p>
     </subsection>
     <subsection>
       <title>chappg</title>
-      <p>
-  Package `chappg' uses \@addtoreset that is redefined by `hyperref'.
+      <p>  Package `chappg' uses \@addtoreset that is redefined by `hyperref'.
   The package order is therefore:
 
   \usepackage{hyperref}
@@ -1014,8 +941,7 @@ earlier.
     </subsection>
     <subsection>
       <title>cite</title>
-      <p>
-  This is from Mike Shell:
+      <p>  This is from Mike Shell:
 &gt; cite.sty cannot currently be used with hyperref.
 &gt; However, I can do a workaround via:
 &gt;
@@ -1032,8 +958,7 @@ earlier.
     </subsection>
     <subsection>
       <title>count1to</title>
-      <p>
-  Package `count1to' adds several \@addtoreset commands that confuse
+      <p>  Package `count1to' adds several \@addtoreset commands that confuse
   `hyperref'. Therefore \theH&lt;...&gt; has to be fixed:
 
   \usepackage{count1to}
@@ -1043,13 +968,12 @@ earlier.
     \renewcommand*{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}%
     \renewcommand*{\theHparagraph}{\theHsubsubsection.\arabic{paragraph}}%
     \renewcommand*{\theHsubparagraph}{\theHparagraph.\arabic{subparagraph}}%
-  }   
+  }
       </p>
     </subsection>
     <subsection>
       <title>dblaccnt</title>
-      <p>
-  pd1enc.def or puenc.def should be loaded before:
+      <p>  pd1enc.def or puenc.def should be loaded before:
   \usepackage{hyperref}
   \usepackage{dblaccnt}
   or see entry for "vietnam".
@@ -1057,14 +981,12 @@ earlier.
     </subsection>
     <subsection>
       <title>easyeqn</title>
-      <p>
-  Not compatible, breaks.
+      <p>  Not compatible, breaks.
       </p>
     </subsection>
     <subsection>
       <title>ellipsis</title>
-      <p>
-  This packages redefines \textellipsis, thus it has to be loaded
+      <p>  This packages redefines \textellipsis, thus it has to be loaded
   after package hyperref (pd1enc.def/puenc.def should be loaded before):
   \usepackage{hyperref}
   \usepackage{ellipsis}
@@ -1072,8 +994,7 @@ earlier.
     </subsection>
     <subsection>
       <title>float</title>
-      <p>
-  \usepackage{float}
+      <p>  \usepackage{float}
   \usepackage{hyperref}
 
   * Several \caption commands are not supported inside one float object.
@@ -1083,14 +1004,12 @@ earlier.
     </subsection>
     <subsection>
       <title>endnotes</title>
-      <p>
-  Unsupported.
+      <p>  Unsupported.
       </p>
     </subsection>
     <subsection>
       <title>foiltex</title>
-      <p>
-  Update to version 2008/01/28 v2.1.4b:
+      <p>  Update to version 2008/01/28 v2.1.4b:
   Since version 6.77a hyperref does not hack into \@begindvi,
   it uses package `atbegshi' instead, that hooks into \shipout.
   Thus the patch of `foils.cls' regarding hyperref is now obsolete
@@ -1100,15 +1019,13 @@ earlier.
     </subsection>
     <subsection>
       <title>footnote</title>
-      <p>
-  This package is not supported, you have to disable hyperref's footnote
+      <p>  This package is not supported, you have to disable hyperref's footnote
   support by using option "hyperfootnotes=false".
       </p>
     </subsection>
     <subsection>
       <title>geometry</title>
-      <p>
-  Driver `dvipdfm' and program `dvipdfm' might generate a warning:
+      <p>  Driver `dvipdfm' and program `dvipdfm' might generate a warning:
       Sorry.  Too late to change page size
   Then prefer the program `dvipdfmx' or use one of the following
   workarounds to move the \special of geometry to an earlier
@@ -1143,44 +1060,37 @@ earlier.
     </subsection>
     <subsection>
       <title>IEEEtran.cls</title>
-      <p>
-  version &gt;= V1.6b (because of \@makecaption, see ChangeLog)
+      <p>  version &gt;= V1.6b (because of \@makecaption, see ChangeLog)
       </p>
     </subsection>
     <subsection>
       <title>index</title>
-      <p>
-  version &gt;= 1995/09/28 v4.1 (because of \addcontentsline redefinition)
+      <p>  version &gt;= 1995/09/28 v4.1 (because of \addcontentsline redefinition)
       </p>
     </subsection>
     <subsection>
       <title>lastpage</title>
-      <p>
-  Compatible.
+      <p>  Compatible.
       </p>
     </subsection>
     <subsection>
       <title>linguex</title>
-      <p>
-  \usepackage{hyperref}
+      <p>  \usepackage{hyperref}
   \usepackage{linguex}
       </p>
     </subsection>
     <subsection>
       <title>ltabptch</title>
-      <p>
-  \usepackage{longtable}
+      <p>  \usepackage{longtable}
   \usepackage{ltabptch}
   \usepackage{hyperref}
       </p>
     </subsection>
     <subsection>
       <title>mathenv</title>
-      <p>
-  Unsupported.
+      <p>  Unsupported.
       </p>
-      <p>
-  Both `mathenv' and `hyperref' messes around with
+      <p>  Both `mathenv' and `hyperref' messes around with
   environment `eqnarray'. You can load `mathenv' after
   `hyperref' to avoid an error message. But \label
   will not work inside environment `eqnarray' properly,
@@ -1189,33 +1099,28 @@ earlier.
     </subsection>
     <subsection>
       <title>minitoc-hyper</title>
-      <p>
-  This package is obsolete, use the uptodate original
+      <p>  This package is obsolete, use the uptodate original
   package minitoc instead.
       </p>
     </subsection>
     <subsection>
       <title>multind</title>
-      <p>
-  \usepackage{multind}
+      <p>  \usepackage{multind}
   \usepackage{hyperref}
       </p>
     </subsection>
     <subsection>
       <title>natbib</title>
-      <p>
-  \usepackage{natbib}
+      <p>  \usepackage{natbib}
   \usepackage{hyperref}
       </p>
     </subsection>
     <subsection>
       <title>nomencl</title>
-      <p>
-  * Example for introducing links for the page numbers:
+      <p>  * Example for introducing links for the page numbers:
       \renewcommand*{\pagedeclaration}[1]{\unskip, \hyperpage{#1}}
       </p>
-      <p>
-  * For equations the following might work:
+      <p>  * For equations the following might work:
       \renewcommand*{\eqdeclaration}[1]{%
         \hyperlink{equation.#1}{(Equation~#1)}%
       }
@@ -1225,18 +1130,15 @@ earlier.
     </subsection>
     <subsection>
       <title>parskip</title>
-      <p>
-  \usepackage{parskip}
+      <p>  \usepackage{parskip}
   \usepackage{hyperref}[2012/08/20]
       </p>
-      <p>
-  Both packages want to redefine \@starttoc.
+      <p>  Both packages want to redefine \@starttoc.
       </p>
     </subsection>
     <subsection>
       <title>prettyref</title>
-      <p>
-%%% example for prettyref %%%
+      <p>%%% example for prettyref %%%
 \documentclass{article}
 \usepackage{prettyref}
 \usepackage[pdftex]{hyperref}
@@ -1257,8 +1159,7 @@ earlier.
     </subsection>
     <subsection>
       <title>ntheorem</title>
-      <p>
-  ntheorem-hyper.sty is an old patched version of ntheorem.sty.
+      <p>  ntheorem-hyper.sty is an old patched version of ntheorem.sty.
   Newer versions of ntheorem know the option hyperref:
     \usepackage{hyperref}
     \usepackage[hyperref]{ntheorem}
@@ -1267,15 +1168,13 @@ earlier.
     </subsection>
     <subsection>
       <title>setspace</title>
-      <p>
-  \usepackage{setspace}
+      <p>  \usepackage{setspace}
   \usepackage{hyperref}
       </p>
     </subsection>
     <subsection>
       <title>sidecap</title>
-      <p>
-  Before 2002/05/24 v1.5h:
+      <p>  Before 2002/05/24 v1.5h:
     \usepackage{nameref}
     \usepackage{hyperref}
     \usepackage{sidecap}
@@ -1283,8 +1182,7 @@ earlier.
     </subsection>
     <subsection>
       <title>subfigure</title>
-      <p>
-  1995/03/06 v2.0:
+      <p>  1995/03/06 v2.0:
     \usepackage{subfigure}
     \usepackage{hyperref}
     % hypertexnames is set to false.
@@ -1305,16 +1203,14 @@ earlier.
     </subsection>
     <subsection>
       <title>titleref</title>
-      <p>
-  \usepackage{nameref}
+      <p>  \usepackage{nameref}
   \usepackage{titleref}% without usetoc
   \usepackage{hyperref}
       </p>
     </subsection>
     <subsection>
       <title>tabularx</title>
-      <p>
-  Linked footnotes are not supported inside environment `tabularx',
+      <p>  Linked footnotes are not supported inside environment `tabularx',
   because they uses the optional argument of \footnotetext, see
   section `Limitations'. Before version 2011/09/28 6.82i
   hyperref had disabled footnotes entirely by `hyperfootnotes=false'.
@@ -1322,16 +1218,14 @@ earlier.
     </subsection>
     <subsection>
       <title>titlesec</title>
-      <p>
-  "nameref" supports titlesec, but hyperref does not
+      <p>  "nameref" supports titlesec, but hyperref does not
   (unsolved is the anchor setting, missing with unnumbered
   section, perhaps problems with page breaks with numbered ones).
       </p>
     </subsection>
     <subsection>
       <title>ucs/utf8x.def</title>
-      <p>
-  The first time a multibyte UTF8 sequence is called, it
+      <p>  The first time a multibyte UTF8 sequence is called, it
   does some calculations and stores the result in a macro
   for speeding up the next calls of that UTF8 sequence.
   However this makes the first call non-expandable and
@@ -1349,24 +1243,20 @@ earlier.
     </subsection>
     <subsection>
       <title>varioref</title>
-      <p>
-  There are too many problems with varioref. Nobody has time to
+      <p>  There are too many problems with varioref. Nobody has time to
   sort them out. Therefore this package is now unsupported.
       </p>
-      <p>
-  Perhaps you are lucky and some of the features of varioref works
+      <p>  Perhaps you are lucky and some of the features of varioref works
   with the following loading order:
     \usepackage{nameref}
     \usepackage{varioref}
     \usepackage{hyperref}
       </p>
-      <p>
-  Also some babel versions can be problematic. For exmample,
+      <p>  Also some babel versions can be problematic. For exmample,
   2005/05/21 v3.8g contains a patch for varioref that breaks
   the hyperref support for varioref.
       </p>
-      <p>
-  Also unsupported:
+      <p>  Also unsupported:
   * \Ref, \Vref do not uppercase the first letter.
   * \vpageref[]{...}
     On the same page a previous space is not suppressed.
@@ -1374,8 +1264,7 @@ earlier.
     </subsection>
     <subsection>
       <title>verse</title>
-      <p>
-  Version 2005/08/22 v2.22 contains support for hyperref.
+      <p>  Version 2005/08/22 v2.22 contains support for hyperref.
 
   For older versions see example from
   de.comp.text.tex (2005/08/11, slightly modified):
@@ -1424,8 +1313,7 @@ earlier.
     </subsection>
     <subsection>
       <title>vietnam</title>
-      <p>
-  % pd1enc.def should be loaded before package dblaccnt:
+      <p>  % pd1enc.def should be loaded before package dblaccnt:
   \usepackage[PD1,OT1]{fontenc}
   \usepackage{vietnam}
   \usepackage{hyperref}
@@ -1433,15 +1321,13 @@ earlier.
     </subsection>
     <subsection>
       <title>XeTeX</title>
-      <p>
-  Default for the encoding of bookmarks is `pdfencoding=auto'.
+      <p>  Default for the encoding of bookmarks is `pdfencoding=auto'.
   That means the strings are always treated as unicode strings.
   Only if the string restricts to the printable ASCII set,
   it is written as ASCII string. The reason is that the
   \special does not support PDFDocEncoding.
       </p>
-      <p>
-  XeTeX uses the program xdvipdfmx for PDF output generation.
+      <p>  XeTeX uses the program xdvipdfmx for PDF output generation.
   This program behaves a little different from dvipdfm, because
   of the supported Unicode characters. Strings for bookmarks
   or information entries can be output directly. The
@@ -1480,8 +1366,7 @@ earlier.
     <title>Limitations</title>
     <subsection>
       <title>Wrapped/broken link support</title>
-      <p>
-  Only few drivers support automatically wrapped/broken links,
+      <p>  Only few drivers support automatically wrapped/broken links,
   e.g. pdftex, dvipdfm, hypertex. Other drivers lack this
   feature, e.g. dvips, dvipsone.
 
@@ -1505,8 +1390,7 @@ earlier.
     </subsection>
     <subsection>
       <title>Links across pages</title>
-      <p>
-  In general they have problems:
+      <p>  In general they have problems:
   * Some driver doesn't support them at all (see above).
   * The driver allows it, but the link result might include
     the footer and/or header, or an error message can
@@ -1515,8 +1399,7 @@ earlier.
     </subsection>
     <subsection>
       <title>Footnotes</title>
-      <p>
-  LaTeX allows the separation of the footnote mark and the
+      <p>  LaTeX allows the separation of the footnote mark and the
   footnote text (\footnotemark, \footnotetext). This interface
   might be enough for visual typesetting. But the relation between
   \footnotemark to \footnotetext is not as strong as \ref to \label.
@@ -1532,8 +1415,7 @@ earlier.
     <title>Hints</title>
     <subsection>
       <title>Spaces in option values</title>
-      <p>
-  Unhappily LaTeX strips spaces from options if they are given
+      <p>  Unhappily LaTeX strips spaces from options if they are given
   in \documentclass or \usepackage (or \RequirePackage), e.g.:
     \usepackage[pdfborder=0 0 1]{hyperref}
   Package hyperref now gets
@@ -1546,16 +1428,14 @@ earlier.
   In \hypersetup the options are directly processed as key value
   options (see package keyval) without space stripping in the value part.
       </p>
-      <p>
-  Alternatively, LaTeX's option handling system can be adapted
+      <p>  Alternatively, LaTeX's option handling system can be adapted
   to key value options by one of the packages "kvoptions-patch"
   (from project "kvoptions") or "xkvltxp" (from project "xsetkeys").
       </p>
     </subsection>
     <subsection>
       <title>Index with makeindex</title>
-      <p>
-  * Package hyperref adds \hyperpage commands by the encap
+      <p>  * Package hyperref adds \hyperpage commands by the encap
     mechanism (see documentation of Makeindex),
     if option hyperindex is set (default).
     \hyperpage uses the page anchors that are set by
@@ -1600,8 +1480,7 @@ encap_suffix "}"
     </subsection>
     <subsection>
       <title>Warning "bookmark level for unknown &lt;foobar&gt; defaults to 0"</title>
-      <p>
-  Getting rid of it:
+      <p>  Getting rid of it:
 
 \makeatletter
 \providecommand*{\toclevel@&lt;foobar&gt;}{0}
@@ -1610,8 +1489,7 @@ encap_suffix "}"
     </subsection>
     <subsection>
       <title>Link anchors in figures</title>
-      <p>
-  The caption command increments the counter and here is the
+      <p>  The caption command increments the counter and here is the
   place where hyperref set the corresponding anchor. Unhappily
   the caption is set below the figure, so the figure is not
   visible if a link jumps to a figure.
@@ -1621,8 +1499,7 @@ encap_suffix "}"
     </subsection>
     <subsection>
       <title>Additional unicode characters in bookmarks and pdf information entries:</title>
-      <p>
-\documentclass[pdftex]{article}
+      <p>\documentclass[pdftex]{article}
 \usepackage[unicode]{hyperref}
 
 % Support for additional unicode characters:
@@ -1671,8 +1548,7 @@ encap_suffix "}"
     </subsection>
     <subsection>
       <title>Footnotes</title>
-      <p>
-  The footnote support is rather limited. It is beyond the scope
+      <p>  The footnote support is rather limited. It is beyond the scope
   to use \footnotemark and \footnotetext out of order or reusing
   \footnotemark. Here you can either disable hyperref's footnote
   support by "hyperfootnotes=false" or fiddle with internal macros,
@@ -1681,10 +1557,10 @@ encap_suffix "}"
 \documentclass{article}
 \usepackage{hyperref}
 \begin{document}
-Hello%      
-\footnote{The first footnote} 
+Hello%
+\footnote{The first footnote}
 World%
-\addtocounter{footnote}{-1}% 
+\addtocounter{footnote}{-1}%
 \addtocounter{Hfootnote}{-1}%
 \footnotemark.
 \end{document}
@@ -1729,8 +1605,7 @@ C%
     </subsection>
     <subsection>
       <title>Subordinate counters</title>
-      <p>
-  Some counters do not have unique values and require the value
+      <p>  Some counters do not have unique values and require the value
   of other counters to be unique. For example, sections or figures
   might be numbered within chapters or \newtheorem is used with
   an optional counter argument. Internally LaTeX uses \@addtoreset
@@ -1738,15 +1613,13 @@ C%
   hyperref hooks into \@addtoreset to catch this situation.
   Also \numberwithin of package amsmath is catched by hyperref.
       </p>
-      <p>
-  However, if the definition of subordinate counters take place
+      <p>  However, if the definition of subordinate counters take place
   before hyperref is loaded, the old meaning of \@addtoreset is
   called without hyperref's additions. Then the companion counter
   macro \theH&lt;counter&gt; can be redefined accordingly. Or move the
   definition of subordinate counters after hyperref is loaded.
       </p>
-      <p>
-  Example for \newtheorem, problematic case:
+      <p>  Example for \newtheorem, problematic case:
     \newtheorem{corA}{CorollaryA}[section]
     \usepackage{hyperref}
   Solution a)
@@ -1762,16 +1635,14 @@ C%
 
   <section>
     <title>Authors/Maintainers</title>
-    <p>
-* Sebastian Rahtz
+    <p>* Sebastian Rahtz
 * Heiko Oberdiek
     </p>
   </section>
 
   <section>
     <title>Bug Reports</title>
-    <p>
-A bug report should contain:
+    <p>A bug report should contain:
 * Comprehensive problem description. This includes error or
   warning messages.
   * \errorcontextlines=\maxdimen can be added in the TeX code
@@ -1789,8 +1660,7 @@ A bug report should contain:
     </p>
     <subsection>
       <title>Bug address</title>
-      <p>
-A bug tracker is available at Puszcza:
+      <p>A bug tracker is available at Puszcza:
   https://puszcza.gnu.org.ua/bugs/?group=hyperref
 Alternatively bug reports can be send to the maintainer:
   Heiko Oberdiek &lt;heiko [dot] oberdiek [at] googlemail [dot] com&gt;
@@ -1798,8 +1668,7 @@ Alternatively bug reports can be send to the maintainer:
     </subsection>
     <subsection>
       <title>Vietnamese part</title>
-      <p>
-Responsible for the Vietnamese translations of the
+      <p>Responsible for the Vietnamese translations of the
 \autoref names and puvnenc.def are:
   Han The Thanh &lt;hanthethanh [at] gmail [dot] com&gt;
   Reinhard Kotucha &lt;reinhard [dot] kotucha at web [dot] de&gt;
@@ -1807,8 +1676,7 @@ Responsible for the Vietnamese translations of the
     </subsection>
     <subsection>
       <title>Arabic part</title>
-      <p>
-Responsible for the additions to PU encoding for Arabi is
+      <p>Responsible for the additions to PU encoding for Arabi is
   Youssef Jabri &lt;yjabri [at] ensa [dot] univ-oujda [dot] ac [dot] ma&gt;
       </p>
     </subsection>
@@ -1816,8 +1684,7 @@ Responsible for the additions to PU encoding for Arabi is
 
   <section>
     <title>Known Problems</title>
-    <p>
-* (half-done) hyper images (link from thumbnail in text)
+    <p>* (half-done) hyper images (link from thumbnail in text)
 * Relative links are not sorted out or documented well.
   For PDF generation:
   * With baseurl: all links are considered relative to this URL.
@@ -1833,8 +1700,7 @@ Responsible for the additions to PU encoding for Arabi is
 
   <section>
     <title>ToDo</title>
-    <p>
-* modules
+    <p>* modules
 * bookmark organisation
 * documentation
 * PDF threads
@@ -1852,7 +1718,7 @@ Responsible for the additions to PU encoding for Arabi is
     <title>Versions in TeX distributions</title>
     <subsection>
       <title>TeX Live</title>
-      <p>
+      <p>* TL 2016:      2016/05/05 v6.83n (at time of first release)
 * TL 2011:      2011/04/17 v6.82g (at time of first release)
 * TL 2010:      2010/06/18 v6.81g (at time of first release)
 * TL 2009:      2009/10/09 v6.79a (at time of first release)

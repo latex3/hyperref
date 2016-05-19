@@ -34,7 +34,7 @@
 %%
 
 \ProvidesFile{hluatex.def}
-  [2016/05/18 v6.83m %
+  [2016/05/18 v6.83o %
   Hyperref driver for pdfTeX]
 \Hy@VersionCheck{hluatex.def}
 

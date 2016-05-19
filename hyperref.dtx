@@ -2,6 +2,7 @@
 %% File: hyperref.dtx Copyright 1995-2001 Sebastian Rahtz,
 %% with portions written by David Carlisle and Heiko Oberdiek,
 %% 2001-2012 Heiko Oberdiek.
+%% 2016 Oberdiek Package Suport Group
 %%
 %% This file is part of the `Hyperref Bundle'.
 %% -------------------------------------------
@@ -5941,6 +5942,28 @@
   \def\theoremautorefname{Teorema}%
   \def\pageautorefname{P\'agina}%
 }
+%    \end{macrocode}
+%    \begin{macrocode}
+\def\HyLang@catalan{%
+\def\equationautorefname{Equaci\'o}%
+\def\footnoteautorefname{Nota al peu de p\`agina}%
+\def\itemautorefname{Element}%
+\def\figureautorefname{Figura}%
+\def\tableautorefname{Taula}%
+\def\partautorefname{Part}%
+\def\appendixautorefname{Ap\`endix}%
+\def\chapterautorefname{Cap\'itol}%
+\def\sectionautorefname{Secci\'o}%
+\def\subsectionautorefname{Subsecci\'o}%
+\def\subsubsectionautorefname{Subsubsecci\'o}%
+\def\paragraphautorefname{Par\`agraf}%
+\def\subparagraphautorefname{Subpar\`agraf}%
+\def\FancyVerbLineautorefname{L\'inia}%
+\def\theoremautorefname{Teorema}%
+\def\pageautorefname{P\`agina}%
+}
+%    \end{macrocode}
+%    \begin{macrocode}
 \def\HyLang@vietnamese{%
   \def\equationautorefname{Ph\uhorn{}\ohorn{}ng tr\`inh}%
   \def\footnoteautorefname{Ch\'u th\'ich}%
@@ -6025,6 +6048,7 @@
 \HyLang@DeclareLang{brazilian}{portuges}{}
 \HyLang@DeclareLang{portuguese}{portuges}{}
 \HyLang@DeclareLang{spanish}{spanish}{}
+\HyLang@DeclareLang{catalan}{catalan}{}
 \HyLang@DeclareLang{afrikaans}{afrikaans}{}
 \HyLang@DeclareLang{french}{french}{}
 \HyLang@DeclareLang{frenchb}{french}{}

@@ -3,6 +3,7 @@
 	* merge pull request from H. Yamashita pass driver options to
 	color package.
 	* replace call to luatex85 package by new luatex back end option
+	* Catalan autoref translation contributed in issue #4
 
 2016-05-05  6.83n David Carlisle
     * 6.83n

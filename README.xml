@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <!DOCTYPE readme SYSTEM "README.dtd">
 <readme>
-  <date>2016/05/18</date>
+  <date>2016/05/21</date>
   <section>
     <title>Introduction</title>
     <p>This package is used to emend cross-referencing commands in LaTeX to
@@ -33,28 +33,10 @@ in a TDS tree:
 nodes or one of its mirrors.  This is explained in
   http://www.tex.ac.uk/cgi-bin/texfaq2html?label=archives
     </p>
-    <p>The main repository of hyperref is located at the server
-of the international `TeX User Group' (TUG):
-  http://www.tug.org/applications/hyperref/
+    <p>The main repository of hyperref is located at github
+       https://github.com/ho-tex/hyperref
     </p>
-    <p>The CTAN stuff will be mirrored automatically from the
-ftp server, so
-  ftp://ftp.tug.org/pub/tex/hyperref/
-corresponds to
-  CTAN:macros/latex/contrib/hyperref/
-    </p>
-    <subsection>
-      <title>Sources</title>
-      <p>The subversion source repository for hyperref is hosted at Puszcza:
-  https://puszcza.gnu.org.ua/svn/?group=hyperref
-It offers anonymous access. For daily use I recommend using
-a release. If new features are added or bugs are fixed, then
-the new version is usually released fast. Please avoid distributing
-intermediate states between releases.
-      </p>
-    </subsection>
   </section>
-
   <section>
     <title>Installation</title>
     <subsection>

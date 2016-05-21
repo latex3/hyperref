@@ -7,7 +7,17 @@
 
 tex hyperref.ins
 lualatex hyperref.dtx
+makeindex -s gind.ist hyperref.idx
 lualatex hyperref.dtx
+
+lualatex nameref.dtx
+makeindex -s gind.ist nameref.dtx
+lualatex nameref.dtx
+
+lualatex backref.dtx
+makeindex -s gind.ist backref.dtx
+lualatex backref.dtx
+
 
 rm -rf hyperref-tds
 mkdir hyperref-tds
@@ -16,6 +26,11 @@ saxon9  -versionmsg:off README.xml README_txt.xsl > README
 saxon9  -versionmsg:off README.xml README_tex.xsl > README.tex
 lualatex README.tex
 lualatex README.tex
+
+saxon9  -versionmsg:off ChangeLog.xml ChangeLog_txt.xsl > ChangeLog
+saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
+lualatex ChangeLog.tex
+lualatex ChangeLog.tex
 
 mkdir hyperref-tds/doc
 mkdir hyperref-tds/doc/latex

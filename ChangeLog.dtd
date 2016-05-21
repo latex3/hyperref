@@ -5,3 +5,4 @@
                     version CDATA #IMPLIED>
 <!ENTITY SR "Sebastian Rahtz">
 <!ENTITY HO "Heiko Oberdiek">
+<!ENTITY DC "David Carlisle">

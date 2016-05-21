@@ -1,0 +1,3414 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
+<CHANGELOG>
+
+<ENTRY date="2012-12-08" version="6.83n" by="&HO;">
+* 6.83n
+* Support for \texorpdfstring inside counter values (used for
+  anchor names).
+* Validation for option `pdfstartpage' added.
+* pdfmark drivers: support for `pdfview' added (except `FitR').
+* pdfmark drivers: support for nested annotations added.
+* Some fixes for babel shorthands (bug introduced in v6.83d).
+</ENTRY>
+
+<ENTRY date="2012-11-06" version="6.83m" by="&HO;">
+* 6.83m
+* Option `pdflang': Default is `\relax' that suppresses
+  the entry in the PDF catalogue. An empty value (undetermined
+  language) is written to the PDF catalogue.
+* Option `pdflang': Checks for well-formedness added
+  (if \pdfmatch is available).
+* Option `hyperindex': The latest encapsulating command is repeated
+  for the close range entries, if it is not already given. That improves
+  compatibility to `xindy'. (Formatting commands remain unsupported.)
+</ENTRY>
+
+<ENTRY date="2012-10-31" version="6.83l" by="&HO;">
+* 6.83l
+* Workaround for bug in `frenchb.ldf' 2010/08/21 v2.5a added that
+  destroys `\pdfstringdefDisableCommands' in `\AtBeginDocument'.
+* nameref 2.43:
+  * Support for theorem names in class `beamer'.
+  * Some support for `description' labels in class `beamer', if
+    `\label' is inside the optional argument of `\item'.
+</ENTRY>
+
+<ENTRY date="2012-10-15" version="6.83k" by="&HO;">
+* 6.83k
+* If `hyperref' is loaded in the document class and `htlatex' is used,
+  then `hyperref' passes options for `tex4ht' found in \@documentclasshook
+  to `tex4ht'.
+* \hyper@link@ suppresses links with empty target.
+</ENTRY>
+
+<ENTRY date="2012-10-13" version="6.83j" by="&HO;">
+* 6.83j
+* PDF forms/hpdftex.def: Field option `calculatesortkey' added
+  (pdfTeX/LuateX only) to specify the calculation order for
+  calculated fields.
+* Option `pdflinkmargin' implemented for pdfmark drivers.
+</ENTRY>
+
+<ENTRY date="2012-10-12" version="6.83i" by="&HO;">
+* 6.83i
+* PDF forms: /CO (calculation order) is set for fields with
+  calculations. Only document order is supported currently.
+* pdfmark.def: /Fields is set like in the other PDF form drivers.
+</ENTRY>
+
+<ENTRY date="2012-10-11" version="6.83h" by="&HO;">
+* 6.83h
+* If `hyperref' is loaded in the document class, then it misses
+  the detection of package `tex4ht' of `htlatex' because it is
+  loaded after the documentclass. Therefore another test for
+  `\HCode' is added that is defined by `htlatex'.
+* The setting of additional information entries is done globally
+  like the other standard options (pdfauthor, pdftitle, ...)
+  for the information dictionary. (Bug report:
+  http://tex.stackexchange.com/q/75684/16967)
+</ENTRY>
+
+<ENTRY date="2012-09-27" version="6.83g" by="&HO;">
+* 6.83g
+* Fix for \hyper@link@.
+</ENTRY>
+
+<ENTRY date="2012-09-26" version="6.83f" by="&HO;">
+* 6.83f
+* Option `customdriver' added.
+</ENTRY>
+
+<ENTRY date="2012-09-24" version="6.83e" by="&HO;">
+* 6.83e
+* Fix for \hyper@link@.
+</ENTRY>
+
+<ENTRY date="2012-09-23" version="6.83d" by="&HO;">
+* 6.83d
+* Table of contents: If the page number is empty, then the
+  link is suppressed to avoid tiny link boxes.
+* puenc.def/psdextra.def: Wrong names \(text)capricorn
+  renamed to \(text)capricornus (wasysym).
+* hyperref.sty: \hyper@link@ recoded.
+* hpdftex.def: Fix for option `ocgcolorlinks' to prevent removing
+  other page resources.
+* LuaTeX: Workaround for LuaTeX bug 773 added that can be triggered
+  by \pdfstringdef.
+</ENTRY>
+
+<ENTRY date="2012-08-21" version="6.83c" by="&HO;">
+* 6.83c
+* Package `parskip': The changes of \@starttoc of package `parskip'
+  2001/04/09 are supported (setting \parskip to zero).
+* Optional page object references added to field annotations.
+  (hpdftex.def: only if package `zref-abspage' is loaded.)
+* Bug fix for bug in bug fix of 6.82w. The active `Q' was redefined
+  and not restored after usage (breaks package `flexisym').
+  (Thanks Dominic J\"anichen and Ulrike Fischer.)
+</ENTRY>
+
+<ENTRY date="2012-08-18" version="6.83b" by="&HO;">
+* 6.83b
+* pd1enc.def: \ij and \IJ fixed, now they expand to `ij' and `IJ'
+  (these glyphs are not available in PDFDocEncoding).
+* Shorthands of babel deactivated in \hyper@makecurrent (destination names)
+  and the destination name of \contentsline.
+* \XeTeXLinkBox with \XeTeXLinkMargin added for XeTeX if the link
+  does not contain character glyphs.
+</ENTRY>
+
+<ENTRY date="2012-08-13" version="6.83a" by="&HO;">
+* 6.83a
+* Syntax fixes in additions for puenc.def.
+  (Thanks Yury Donskoy for bug report.)
+* Fix for option `psdextra'.
+* puenc.def: further additions.
+</ENTRY>
+
+<ENTRY date="2012-08-11" version="6.82z" by="&HO;">
+* 6.82z
+* Fix in parent counter lookup, meaning of \@elt is restored
+  after usage. (Thanks Victor Ivrii for bug report.)
+* puenc.def: fixes and additions.
+</ENTRY>
+
+<ENTRY date="2012-08-03" version="6.82y" by="&HO;">
+* 6.82y
+* Unique destination names: Lookup for parent counters added
+  for counters that are defined before hyperref is loaded and
+  \theH&lt;counter&gt; is not provided.
+* Fixes: File `psdextra.def` was loaded always with option `unicode',
+  restriction of set option `psdextra' was missing. Also the
+  catcode was not explicitely set to `letter', when the file is loaded.
+  (Thanks Daniel Halperin for bug report.)
+</ENTRY>
+
+<ENTRY date="2012-07-31" version="6.82x" by="&HO;">
+* 6.82x
+* nameref 2.42: Definition for \strip@period provided.
+  It was removed in 2.41, but it is needed by package `subfig'.
+</ENTRY>
+
+<ENTRY date="2012-07-30" version="6.82w" by="&HO;">
+* 6.82w
+* Bug fix in \pdfstringdef: Active characters defined with
+  \protected are catched and converted to characters with
+  catcode 12 (other).
+* hpdftex.def: Before setting the version number it is checked,
+  whether objects are already written. Also \pdfobjcompresslevel
+  is disabled for versions &lt; 5.
+* puenc.def: Hebrew letters added.
+</ENTRY>
+
+<ENTRY date="2012-07-29" version="6.82v" by="&HO;">
+* 6.82v
+* Bug fix (introduced in 6.82r): Information entries did not
+  get written in some drivers (xetex, dvipdfm, ...).
+</ENTRY>
+
+<ENTRY date="2012-07-28" version="6.82u" by="&HO;">
+* 6.82u
+* Option `destlabel' and \HyperDestRename added.
+* nameref 2.41:
+  * The hook \label@hook is added to \label.
+  * \strip@period is fixed (unnecessary addition of \relax)
+    and renamed to \NR@strip@period.
+</ENTRY>
+
+<ENTRY date="2012-07-26" version="6.82t" by="&HO;">
+* 6.82t
+* Some fixes in PU encoding, especially \textbackslash.
+</ENTRY>
+
+<ENTRY date="2012-07-25" version="6.82s" by="&HO;">
+* 6.82s
+* \pdfstringdef: \ensuremath added to avoid warnings
+  about "removing `math shift'".
+* backref 1.38: Explicit package dependency for `ltxcmds' added.
+</ENTRY>
+
+<ENTRY date="2012-07-24" version="6.82r" by="&HO;">
+* 6.82r
+* Package pifont: \ding in Unicode bookmarks supported.
+* puenc.def: lots of symbols added.
+* New experimental option `psdextra' that loads file `psdextra.def'
+  with defines the original short character names (mostly math)
+  to the names with prefix `text' because of NFSS.
+* puarenc.def: \noboundary fixed.
+* Definitions of \theH&lt;counter&gt; made global (GL).
+* Bug fix in hpdftex.def for links across the first and second page:
+  \Hy@FixNotFirstPage is disabled for package `atbegshi' &gt;= 2011/10/05.
+* backref 1.37:
+  * \backrefsetup added.
+  * Options `enable' and `disable' added.
+</ENTRY>
+
+<ENTRY date="2012-05-13" version="6.82q" by="&HO;">
+* 6.82q
+* \HyNew@float@makebox added for package `caption'
+  (feature request from Axel Sommerfeldt).
+</ENTRY>
+
+<ENTRY date="2012-02-28" version="6.82p" by="&HO;">
+* 6.82p
+* pdfmark: Missing border color setting for \Acrobatmenu added.
+* dvipdfmx/xetex: Fix for \Acrobatmenu if \@menubordercolor is \relax.
+* Some warnings for entries of the information dictionary added,
+  if the driver does not support them.
+* Test file testinfo.tex added that sets all entries of
+  the information dictionary.
+</ENTRY>
+
+<ENTRY date="2012-02-06" version="6.82o" by="&HO;">
+* 6.82o
+* At the begin and end of an equation an \hbox might be
+  present that affects math spacing (for example, if the
+  equation starts with an unary minus). By putting \hbox
+  in \mathopen/\mathclose, now only a math punctuation at
+  the end of the equation will add some space afterwords.
+  Environment eqnarray is fixed in a similar way, also
+  its anchor position is fixed.
+</ENTRY>
+
+<ENTRY date="2011-12-06" version="6.82n" by="&HO;">
+* 6.82n
+* Redefinition of \theHchapter/\theHsection in \appendix
+  uses \Hy@AlphNoErr instead of \Alph to provide values
+  for the cases unsupported in \Alph.
+</ENTRY>
+
+<ENTRY date="2011-12-04" version="6.82m" by="&HO;">
+* 6.82m
+* \...footnotetext commands might contain unbalanced conditionals.
+</ENTRY>
+
+<ENTRY date="2011-11-21" version="6.82l" by="&HO;">
+* 6.82l
+* Bug fix in page labels (bug introduced in 6.82a).
+* Field/borderwidth: Also a dimen can be given
+  instead of a number with default unit bp.
+  (Feature request of GL.)
+* Fix for \TextField and \TextCheckField:
+  \leavevmode is inserted before the formular field
+  to avoid the error that \pdfstartlink cannot be
+  used in vertical mode. (Bug reported by GL.)
+</ENTRY>
+
+<ENTRY date="2011-11-19" version="6.82k" by="&HO;">
+* 6.82k
+* The macros \theH&lt;counter&gt; are defined using
+  \providecommmand to allow previous definitions
+  (feature request from Axel Sommerfeldt).
+</ENTRY>
+
+<ENTRY date="2011-10-01" version="6.82j" by="&HO;">
+* 6.82j
+* Patch of \TX@endtabularx modified in order to support
+  biblatex's patching (reported by Marc Baudoin).
+</ENTRY>
+
+<ENTRY date="2011-09-28" version="6.82i" by="&HO;">
+* 6.82i
+* Internal boolean switches renamed if the boolean switch differs from
+  its option. This simplifies the implementation of \Hy@boolkey,
+  \IfHyperBooleanExists and \IfHyperBoolean.
+* Package tabularx: Footnote linking is only disabled inside
+  environment tabularx.
+</ENTRY>
+
+<ENTRY date="2011-08-19" version="6.82h" by="&HO;">
+* 6.82h
+* dvipdfm/xetex: pdfpagetransition, pdfpageduration, pdfpagehidden
+  implemented.
+* \IfHyperBooleanExists and \IfHyperBoolean added.
+* The label form of \hyperref[...]{...} does not set
+  a broken link if the reference is not defined.
+</ENTRY>
+
+<ENTRY date="2011-04-17" version="6.82g" by="&HO;">
+* 6.82g
+* Make use of package `hobsub-hyperref'.
+* Patch for package `ltxcmds' removed by requiring the fixed version
+  (see v6.81t).
+* Drivers dvipdfm/xetex: missing \leavevmode added for links.
+</ENTRY>
+
+<ENTRY date="2011-04-09" version="6.82f" by="&HO;">
+* 6.82f
+* Definition of \Hy@xspace@end moved to an earlier place.
+</ENTRY>
+
+<ENTRY date="2011-04-07" version="6.82e" by="&HO;">
+* 6.82e
+* \xspace without space at end of links and anchors.
+</ENTRY>
+
+<ENTRY date="2011-03-09" version="6.82d" by="&HO;">
+* 6.82d
+* dvipdfm/xetex: missing launch actions added for \href.
+</ENTRY>
+
+<ENTRY date="2011-02-28" version="6.82c" by="&HO;">
+* 6.82c
+* Fix for references with dvips/breaklinks=true in math mode.
+  (Bug found by Gady Kozma).
+</ENTRY>
+
+<ENTRY date="2011-02-07" version="6.82b" by="&HO;">
+* 6.82b
+* Fix for class `slides' with option `pageanchors'
+  and anchor name shortened if page is not used.
+</ENTRY>
+
+<ENTRY date="2011-02-05" version="6.82a" by="&HO;">
+* 6.82a
+* Options `hidelinks', `allcolors' and `allbordercolors' added.
+* \pdfstringdef: \begin, \end, \foreignlanguage catched.
+* Options `pdfpagelabels' and `pageanchor': some support
+  for class with its page counters (slide/overlay/note/page) added.
+* Option `pageanchor': Double string escaping removed
+  for default setting hypertexnames=true, plainpages=false.
+</ENTRY>
+
+<ENTRY date="2010-12-16" version="6.81z" by="&HO;">
+* 6.81z
+* Fix for bug #135 `amsclass: wrong formatting of theorems'
+ (thanks to Dan Luecking for his analysis).
+</ENTRY>
+
+<ENTRY date="2010-12-15" version="6.81y" by="&HO;">
+* 6.81y
+* Allowing driver tex4ht if XeTeX is running (htxelatex).
+</ENTRY>
+
+<ENTRY date="2010-12-14" version="6.81x" by="&HO;">
+* 6.81x
+* Destination names (\hyper@makecurrent) now use
+  the original definition of \@arabic to avoid
+  trouble with redefined \@arabic (polyglossia/arabic).
+</ENTRY>
+
+<ENTRY date="2010-12-03" version="6.81w" by="&HO;">
+* 6.81w
+* Fix for draftmode, because .out file wasn't written.
+</ENTRY>
+
+<ENTRY date="2010-11-26" version="6.81v" by="&HO;">
+* 6.81v
+* Fix for driver hpdftex.def (undefined \pdf@draftmode).
+</ENTRY>
+
+<ENTRY date="2010-11-22" version="6.81u" by="&HO;">
+* 6.81u
+* Driver hpdftex.def: Use of \pdfdraftmode.
+* Driver pdfmark.def: Math mode respected in links.
+* Some unnecessary code removed in \LT@p@ftntext (GL).
+</ENTRY>
+
+<ENTRY date="2010-10-30" version="6.81t" by="&HO;">
+* 6.81t
+* Radio buttons: small fix, escaping values and adding /DV.
+* Temporary fix for \ltx@LocalAppendToMacro until next bundle update.
+</ENTRY>
+
+<ENTRY date="2010-10-19" version="6.81s" by="&HO;">
+* 6.81s
+* Version check added for driver files.
+* Field options `altname' and `mappingname' added.
+</ENTRY>
+
+<ENTRY date="2010-09-25" version="6.81r" by="&HO;">
+* 6.81r
+* \SpecialDvipdfmxOutlineOpen is set in case of XeTeX.
+</ENTRY>
+
+<ENTRY date="2010-09-17" version="6.81q" by="&HO;">
+* 6.81q
+* Broken error messages because of broken \Hy@Error fixed.
+</ENTRY>
+
+<ENTRY date="2010-09-17" version="6.81p" by="&HO;">
+* 6.81p
+* Sanitizing (babel shorthands) of anchor names in
+  \hyper@anchor and \hyper@anchorstart.
+</ENTRY>
+
+<ENTRY date="2010-09-16" version="6.81o" by="&HO;">
+* 6.81o
+* Broken option `pdfborder' fixed (since 6.81n).
+</ENTRY>
+
+<ENTRY date="2010-09-13" version="6.81n" by="&HO;">
+* 6.81n
+* New option `driverfallback'. It takes a driver option for
+  the case that a driver is not given and cannot be autodetected.
+  (Feature request by Markus Kohm.)
+* Unused option `hyperref' removed.
+* Driver options are now `void' options that do not accept any values.
+</ENTRY>
+
+<ENTRY date="2010-09-11" version="6.81m" by="&HO;">
+* 6.81m
+* New option `pdfremotestartview'.
+* \href with new optional argument with
+  keys `page' and `pdfremotestartview', `pdfnewwindow', `ismap',
+  `nextactionraw'.
+* Fix for urls in \href: Prefix 'file:' is not added.
+</ENTRY>
+
+<ENTRY date="2010-09-11" version="6.81l" by="&HO;">
+* 6.81l
+* Fix spacefactor corrections of 6.81i for math mode.
+* Fixing GoToR actions if \href contains `file:///' or
+  `file://localhost/'.
+</ENTRY>
+
+<ENTRY date="2010-09-10" version="6.81k" by="&HO;">
+* 6.81k
+* PDF forms: Missing JavaScript actions added for check boxes,
+  push, submit and reset buttons.
+* PDF forms: Warnings are given, if HTML field options are used.
+</ENTRY>
+
+<ENTRY date="2010-09-04" version="6.81j" by="&HO;">
+* 6.81j
+* \Hy@EveryPageAnchor fixed to avoid Overfull \hbox warnings
+  with some drivers.
+</ENTRY>
+
+<ENTRY date="2010-09-04" version="6.81i" by="&HO;">
+* 6.81i
+* Various drivers: Destinations made transparent for \spacefactor.
+* Various drivers: Links made transparent for \spacefactor.
+* Various drivers: Fixes for option `raiselinks' without color.
+</ENTRY>
+
+<ENTRY date="2010-09-01" version="6.81h" by="&HO;">
+* 6.81h
+* Fix for clash with package `varioref', that redefines
+  \refstepcounter with loss of hyperref's additions.
+* Additions for README.
+</ENTRY>
+
+<ENTRY date="2010-08-30" by="&HO;">
+* backref 1.36: Typo in warning fixed.
+</ENTRY>
+
+<ENTRY date="2010-06-18" version="6.81g" by="&HO;">
+* 6.81g
+* pdfmark: Disabling of \escapechar is removed during reading
+  the .out file. With package xkeyval the \pdfmark causes
+  lots of character `2' in the output.
+* kvsetkeys: \setkeys is replaced by \kvsetkeys.
+</ENTRY>
+
+<ENTRY date="2010-06-04" version="6.81f" by="&HO;">
+* 6.81f
+* Beautifying error text of utf8x.def of \utf@viii@undeferr.
+* pdfmark.def: Avoid \leavevmode and \hbox of \pdf@rect
+  for destinations with empty target area. It fixes spacing
+  in situations like "\section{A}\hypertarget{foobar}{}\section{B}".
+  (Bug detected by Thomas Beuthe.)
+</ENTRY>
+
+<ENTRY date="2010-05-13" version="6.81e" by="&HO;">
+* 6.81e
+* Real epsilon for \eTeX and \LaTeXe in Unicode bookmarks.
+</ENTRY>
+
+<ENTRY date="2010-05-12" version="6.81d" by="&HO;">
+* 6.81d
+* Fix for russian. (Bug found by Victor Kozyakin.)
+</ENTRY>
+
+<ENTRY date="2010-05-11" version="6.81c" by="&HO;">
+* 6.81c
+* Fix for funny \@alph and \@Alph definitions for use
+  in anchor names.
+* \@fnsymbol uses replacement in anchor names.
+</ENTRY>
+
+<ENTRY date="2010-05-10" version="6.81b" by="&HO;">
+* 6.81b
+* Bookmarks: memoir's \booknumberline supported.
+</ENTRY>
+
+<ENTRY date="2010-05-04" version="6.81a" by="&HO;">
+* 6.81a
+* Patch for longtable takes package arydshln into account.
+</ENTRY>
+
+<ENTRY date="2010-05-01" version="6.80z" by="&HO;">
+* 6.80z
+* Language definitions for \autoref are provided automatically
+  without global or package language options if babel is loaded
+  before.
+</ENTRY>
+
+<ENTRY date="2010-04-30" version="6.80y" by="&HO;">
+* 6.80y
+* pdfencoding=auto: Escape TeX characters in .out file after
+  successful conversion to PDFDocEncoding (or subset).
+* nameref 2.40: Support of environment `description'.
+</ENTRY>
+
+<ENTRY date="2010-04-17" version="6.80x" by="&HO;">
+* 6.80x
+* Define \@currentHref as "Doc-Start" right at the beginning
+  for a better support of \label lost in the preamble.
+* nameref 2.39: \@currentHref and \@currentlabelname are not overwritten.
+</ENTRY>
+
+<ENTRY date="2010-04-16" version="6.80w" by="&HO;">
+* 6.80w
+* nameref fix for memoir disabled.
+* nameref 2.38: Support for theorems.
+</ENTRY>
+
+<ENTRY date="2010-04-15" version="6.80v" by="&HO;">
+* 6.80v
+* Support for star form of \nameref added in hyperref.
+* nameref 2.37
+  * Support for forgotten star form \part* added.
+  * Support for memoir fixed: non-star forms of \section, \chapter.
+</ENTRY>
+
+<ENTRY date="2010-03-30" version="6.80u" by="&HO;">
+* 6.80u
+* \pdfstringdef: Fix for unexpandable shorthand `"-'
+  of `russianb.ldf'. (Bug found by Uladzimir Pylinski.)
+</ENTRY>
+
+<ENTRY date="2010-03-29" version="6.80t" by="&HO;">
+* 6.80t
+* Support for package `amsthm' fixed.
+  (Bug found by Dana Lahat.)
+</ENTRY>
+
+<ENTRY date="2010-03-28" version="6.80s" by="&HO;">
+* 6.80s
+* \@currentHlabel is no longer used.
+* \HyperGlobalCurrentHref and \HyperLocalCurrentHref added.
+  (Not yet supported in footnotes.)
+* Fix in bookmarks/.out file: some special characters protected.
+* \href: detection of file links fixed if the file base name
+  contains dots (bug found by Uladzimir Pylinski).
+* Some changes to allow `hyperref' to be loaded via
+  \AtBeginDocument (experimental).
+</ENTRY>
+
+<ENTRY date="2010-03-19" version="6.80r" by="&HO;">
+* 6.80r
+* Experimental boolean option `localanchorname' added.
+* Warning text corrected for empty anchor.
+* Some \@ifundefined replaced by \ltx@IfUndefined
+  (avoids definition of macros like \thechapter as \relax).
+</ENTRY>
+
+<ENTRY date="2010-03-18" version="6.80q" by="&HO;">
+* 6.80q
+* hpdftex.def, option `verbose': end of links are
+  recorded in the .log file at shipout time.
+  This helps to find the link in case of the pdfTeX error
+  `\pdfendlink ended up in different nesting level ...'
+</ENTRY>
+
+<ENTRY date="2010-03-16" version="6.80p" by="&HO;">
+* 6.80p
+* Bookmark output for \CJKnumber fixed.
+* Bookmark implementation of \CJKnumber changed.
+  \CJK@one is suppressed before \CJK@ten, if the
+  number starts with this.
+</ENTRY>
+
+<ENTRY date="2010-03-13" version="6.80o" by="&HO;">
+* 6.80o
+* Typo fixed in CJK bookmark code (Jinsong Zhao).
+</ENTRY>
+
+<ENTRY date="2010-03-11" version="6.80n" by="&HO;">
+* 6.80n: \undefined relaced by \@undefined.
+* backref 1.35: \undefined replaced by \@undefined.
+</ENTRY>
+
+<ENTRY date="2010-03-10" version="6.80m" by="&HO;">
+* 6.80m
+* If package `ucs' is loaded \PrerenderUnicode is called
+  for information entries.
+</ENTRY>
+
+<ENTRY date="2010-03-09" version="6.80l" by="&HO;">
+* 6.80l
+* Support of CJKnumb.sty's \CJKnumber and \CJKdigits in bookmarks,
+  if encoding is Unicode.
+</ENTRY>
+
+<ENTRY date="2010-03-04" version="6.80k" by="&HO;">
+* 6.80k
+* \pdfstringdef: generic font commands (\selectfont,
+  \usefont, \fontencoding, ...) disabled.
+</ENTRY>
+
+<ENTRY date="2010-03-03" version="6.80j" by="&HO;">
+* 6.80j
+* pdfmark.def: better support of hyphenation if breaklinks=false.
+</ENTRY>
+
+<ENTRY date="2010-03-01" version="6.80i" by="&HO;">
+* 6.80i
+* hpdftex.def: form fields array collects field references
+  via .aux file to avoid recording field references of field
+  inside canceled boxes.
+* README updated.
+</ENTRY>
+
+<ENTRY date="2010-02-25" version="6.80h" by="&HO;">
+* 6.80h
+* Compatibility for KOMA-Script's \footref.
+</ENTRY>
+
+<ENTRY date="2010-02-24" version="6.80g" by="&HO;">
+* 6.80g
+* Option `verbose': anchors and internal links are recorded in
+  the .log file for all drivers.
+</ENTRY>
+
+<ENTRY date="2010-02-21" version="6.80f" by="&HO;">
+* 6.80f
+* Unicode support is loaded only if unicode is set to true.
+  Previously the option regardless of setting triggered
+  the loading of unicode support (or an error, if after
+  \begin{document}).
+</ENTRY>
+
+<ENTRY date="2010-02-08" version="6.80e" by="&HO;">
+* 6.80e
+* \ref and \pageref robust again before \begin{document}.
+  (Bug report by Gerrit Schmitz.)
+* Project/repository moved to Puszcza
+  (https://puszcza.gnu.org.ua/projects/hyperref).
+</ENTRY>
+
+<ENTRY date="2010-01-25" version="6.80d" by="&HO;">
+* 6.80d
+* License update to LPPL 1.3+
+* nameref 2.36, backref 1.34: LPPL 1.3+
+</ENTRY>
+
+<ENTRY date="2010-01-16" version="6.80c" by="&HO;">
+* 6.80c
+* Problem with package `titlesec' fixed (reported by GL in comp.text.tex).
+* backref 1.33:
+  * \backrefentrycount added.
+  * Internal calculations for \backrefalt and \backrefentrycount
+    are disabled, if these features are not used.
+</ENTRY>
+
+<ENTRY date="2010-01-11" version="6.80b" by="&HO;">
+* 6.80b
+* Options `pdfinfo' and `pdftrapped' added.
+</ENTRY>
+
+<ENTRY date="2010-01-09" by="&HO;">
+* backref 1.32:
+  * Brazilian Portuguese added (Rog\'erio Brito).
+  * Some language aliases added.
+</ENTRY>
+
+<ENTRY date="2010-01-08" version="6.80a" by="&HO;">
+* 6.80a
+* Missing \expandafter added for fix in 6.79z.
+  `\.' now works again for other languages than Spanish
+   in bookmarks.
+</ENTRY>
+
+<ENTRY date="2009-12-28" version="6.79z" by="&HO;">
+* 6.79z
+* \pdfstringdef/spanish.ldf: \. breaks \pdfstringdef,
+  therefore it is restored as dot accent (\es@save@dot).
+  \... is not supported. Use \texorpdfstring{\...}{\dots} instead.
+</ENTRY>
+
+<ENTRY date="2009-12-23" version="6.79y" by="&HO;">
+* 6.79y
+* Global papersize options (a4paper, ...) ignored.
+</ENTRY>
+
+<ENTRY date="2009-12-22" version="6.79x" by="&HO;">
+* 6.79x
+* Checking \@outlinefile before writing (workaround for
+  beamer bug in beamerbasecompatibility 1.63).
+</ENTRY>
+
+<ENTRY date="2009-12-18" version="6.79w" by="&HO;">
+* 6.79w
+* Again anchor setting in unnumbered sections fixed.
+  \@currentHref gets overwritten by float objects right
+  after inline section commands like \paragraph, \subparagraph.
+  Reported by Lev Bishop.
+  Now the reference name (\@currentHref) is passed by value
+  (expanded) to the anchor setting code.
+* nameref 2.35: Required date for package `gettitlestring' updated.
+</ENTRY>
+
+<ENTRY date="2009-12-17" version="6.79v" by="&HO;">
+* 6.79v
+* Fix for `pdfencoding=auto', the code accidently got
+  deleted for the other drivers than XeTeX.
+* `pdfencoding=auto' for XeTeX now adds a method to suppress the
+  warning "Failed to convert input string to UTF16...", see README.
+</ENTRY>
+
+<ENTRY date="2009-12-16" version="6.79u" by="&HO;">
+* 6.79u
+* Babel patch of 6.77o rewritten that babel can be loaded
+  after hyperref.
+</ENTRY>
+
+<ENTRY date="2009-12-15" version="6.79t" by="&HO;">
+* 6.79t
+* hxetex: Using encoding `ascii-print' for
+  `pdfencoding=auto'.
+</ENTRY>
+
+<ENTRY date="2009-12-15" version="6.79s" by="&HO;">
+* 6.79s
+* Removed paper options of 6.79o now generate a warning
+  instead of an error.
+</ENTRY>
+
+<ENTRY date="2009-12-15" version="6.79r" by="&HO;">
+* 6.79r
+* hxetex: default is now `pdfencoding=auto' because of
+  bug of AR7/Linux regarding page labels.
+</ENTRY>
+
+<ENTRY date="2009-12-15" version="6.79p" by="&HO;">
+* 6.79p
+* hxetex: PDFDocEncoding is not supported, only
+  option `unicode', `pdfencoding=unicode' or `pdfencoding=auto'.
+  In the latter case, PDFDocEncoding is only used, if the
+  string is an ascii string (7-bit characters).
+  No idea, how to get rid of the warning
+  "Failed to convert input string to UTF16...".
+  The strings are already in UTF16, thus an additional conversion
+  have to fail.
+* Missing package dependency added: intcalc (Vladimir Volovich).
+</ENTRY>
+
+<ENTRY date="2009-12-14" version="6.79o" by="&HO;">
+* 6.79o
+* Paper options `a4paper', `a5paper' are ignored.
+  Setting the page size is done by using \paperwidth
+  and \paperheight. Or in case of memoir \stockwidth and
+  \stockheight are used. Evaluation time for setting the page size
+  is at begin of document or first page (driver dependant).
+* XeTeX has its own driver file `hxetex.def' (based on hdvipdfm.def).
+* hxetex.def uses pdfTeX's \pdfpagewidth and \pagepageheight
+  for setting the media size.
+</ENTRY>
+
+<ENTRY date="2009-12-10" version="6.79n" by="&HO;">
+* 6.79n
+* Use of package `rerunfilecheck'.
+* backref 1.31: Use of package `rerunfilecheck'.
+</ENTRY>
+
+<ENTRY date="2009-12-09" version="6.79m" by="&HO;">
+* 6.79m
+* \clear@document (REVTeX} is not used in favor of \AtVeryEndDocument
+  (Arthur Ogawa).
+  * backref 1.30: Use of package `atveryend'.
+</ENTRY>
+
+<ENTRY date="2009-12-08" version="6.79l" by="&HO;">
+* 6.79l
+* \Hy@SectionAnchor disabled in bookmarks.
+* \clearpage is not added in \AtEndDocument any more by using
+  package `atveryend' instead to prevent problems with column
+  balancing in revtex (reported by Arthur Ogawa).
+* \@caption uses \NR@gettitle from package `nameref' if available.
+* nameref 2.34:
+  * Redefinition of \@caption is restricted to
+    the case if hyperref 6.79l or later is not loaded.
+  * Use of package `gettitlestring' for postprocessing
+    the title strings.
+</ENTRY>
+
+<ENTRY date="2009-11-27" by="&HO;">
+* nameref 2.33: \phantomsection and \addcontentsline are disabled during
+  title string expansion.
+</ENTRY>
+
+<ENTRY date="2009-11-27" version="6.79k" by="&HO;">
+* 6.79k
+* Fix of anchor setting: The anchor setting is filtered out
+  for title extracting classes and packages (memoir, titleref,
+  zref-titleref, nameref 2.32.
+* nameref 2.32: the title string is expanded to filter out
+  unwanted stuff (same way as memoir, titleref, zref-titleref).
+</ENTRY>
+
+<ENTRY date="2009-11-27" version="6.79j" by="&HO;">
+* 6.79j
+* Fix of anchor setting for section titles in 6.79h is made
+  a little more robust.
+</ENTRY>
+
+<ENTRY date="2009-11-26" version="6.79i" by="&HO;">
+* 6.79i
+* Support for empty category parameter fixed for \hyperref and \hyperdef.
+* \hyperdef fixed (.aux file entry).
+</ENTRY>
+
+<ENTRY date="2009-11-25" version="6.79h" by="&HO;">
+* 6.79h
+* Fix of anchor setting for section titles.
+  * chapters, parts (Markus Kohm),
+  * unnumbered sections.
+  Now the workarounds with \phantomsection like
+    \cleardoublepage\phantomsection\printindex
+  should not be necessary any longer.
+* nohyperref: star from \ref and \pageref ignored (Henrik Tidefelt).
+</ENTRY>
+
+<ENTRY date="2009-11-20" version="6.79g" by="&HO;">
+* 6.79g
+* \pdfstringdef: Support for unicode characters added
+  for XeTeX and LuaTeX.
+</ENTRY>
+
+<ENTRY date="2009-11-15" version="6.79f" by="&HO;">
+* 6.79f
+* Forms: Bug in \HyField@PDFChoices fixed, wrong order of
+  export and display value (Donald P. Story).
+</ENTRY>
+
+<ENTRY date="2009-11-14" version="6.79e" by="&HO;">
+* 6.79e
+* Rerun warning added for bookmarks, based on MD5 sum and file size.
+  (This feature requires pdfTeX or LuaTeX.)
+* backref 1.29:
+  * Rerun warning added, based on MD5 sum and file size.
+    (This feature requires pdfTeX or LuaTeX.)
+</ENTRY>
+
+<ENTRY date="2009-10-31" version="6.79d" by="&HO;">
+* 6.79d
+* Full support of makeindex's encap feature (e.g. \index{alpha|textbf}).
+  \hyperpage and the formatting command are cascaded via
+  \hyperindexformat. Internally \index{alpha|textbf} is transferred
+  to \index{alpha|hyperindexformat{\textbf}}. \hyperindexformat calls
+  the formatting command in its first argument with the page range
+  as argument that is put into \hyperpage. The formatting command
+  may call \hyperpage itself, it will be disabled automatically
+  to prevent nested \hyperpage commands.
+</ENTRY>
+
+<ENTRY date="2009-10-28" version="6.79c" by="&HO;">
+* 6.79c
+* Fix for a wrong byte "0xA0", accidently introduced in 6.79b.
+* Adding bookmark sequence numbers in comments to the bookmark
+  auxiliary file (Vladimier Volovich).
+* Manual fix: pdfpicktrackbypdfsize -&gt; pdfpicktraybypdfsize
+  (Gregor Zimmermann).
+</ENTRY>
+
+<ENTRY date="2009-10-19" version="6.79b" by="&HO;">
+* 6.79b
+* Respect \stockwidth and \stockheight for drivers `dvips'
+  and `dvipdfm'.
+</ENTRY>
+
+<ENTRY date="2009-10-09" version="6.79a" by="&HO;">
+* 6.79a
+* Field option `radiosymbol' added.
+* Both `checkboxsymbol' and `radiosymbol' support \ding
+  (see package `pifont' from bundle `psnfss2e').
+</ENTRY>
+
+<ENTRY date="2009-10-02" version="6.78w" by="&HO;">
+* 6.78w
+* Recognize `amsmidx' as multiple index package (David M. Jones).
+* Manual fixes (Herbert Voss).
+</ENTRY>
+
+<ENTRY date="2009-09-22" version="6.78v" by="&HO;">
+* 6.78v
+* PDF objects needed for formulars are only allocated if
+  environment `Form' is used (hpdftex, hdvipdfm).
+</ENTRY>
+
+<ENTRY date="2009-09-10" version="6.78u" by="&HO;">
+* 6.78u
+* Support for open outlines is turned on for XeTeX &gt;= 0.9995.
+  Thus option `dvipdfmx-outline-open' is not necessary in this case.
+  I don't know about older versions of XeTeX.
+* Additions to the manual (aliascnt, bookmarks).
+</ENTRY>
+
+<ENTRY date="2009-08-04" version="6.78t" by="&HO;">
+* 6.78t
+* Fix: Option `bookmarksdepth' with name value now also works
+  as package option.
+</ENTRY>
+
+<ENTRY date="2009-05-23" version="6.78s" by="&HO;">
+* 6.78s
+* Fix: "\let\textlatin\@firstofone from \addcontentsline.
+</ENTRY>
+
+<ENTRY date="2009-05-01" version="6.78r" by="&HO;">
+* 6.78r
+* \pdfstringdef:
+  * Typo in definition of \new@ifnextchar fixed (Ulrike Fischer),
+  * and \kernel@ifnextchar disabled (Dan Luecking).
+* dvipdfm(x)/xetex: This driver family does not support nested
+  annotations. Therefore annotations inside annotations are
+  disabled automatically.
+</ENTRY>
+
+<ENTRY date="2009-04-04" version="6.78q" by="&HO;">
+* 6.78q
+* Better error message for \MakeUppercase and \MakeLowercase
+  in \pdfstringdef (bookmarks).
+* Expandable simulation of \ignorespaces in bookmarks.
+* The values of boolean options are now expanded (\Hy@boolkey).
+* Warnings added for links with empty destination name.
+</ENTRY>
+
+<ENTRY date="2009-02-22" version="6.78p" by="&HO;">
+* 6.78p
+* hpdftex.def: Problem fixed, if a link is broken across the
+  first and the next page.
+</ENTRY>
+
+<ENTRY date="2009-02-02" version="6.78o" by="&HO;">
+* 6.78o
+* Workaround for package `linguex' added (it redefines the
+  accent macros \b, \c, \d).
+</ENTRY>
+
+<ENTRY date="2008-12-26" version="6.78n" by="&HO;">
+* 6.78n
+* Support of active `&amp;' and \&amp; in \href (\hyper@normalise).
+</ENTRY>
+
+<ENTRY date="2008-11-18" version="6.78m" by="&HO;">
+* 6.78m
+* The fix for fancyvrb in hyperef 1998-03-21 is not compatible with
+  and necessary for fancyvrb 1998-05-20 or later. Therefore the
+  fix is disabled for these versions.
+* Option `ocgcolorlinks': Fix for driver `dvipdfm'.
+* Improved anchor setting for package `amsthm' (Daniel M\"ullner).
+</ENTRY>
+
+<ENTRY date="2008-09-29" version="6.78l" by="&HO;">
+* 6.78l
+* Bookmarks: `--' and `---' are automatically replaced by \textendash
+  and \textemdash in bookmark strings. However older AR versions
+  (until AR5/Linux) might miss these glyphs.
+* Encoding name in warnings `Token not allowed' fixed.
+</ENTRY>
+
+<ENTRY date="2008-09-27" version="6.78k" by="&HO;">
+* 6.78k
+* Fix for `slovak' and other babel languages that make `^' and other
+  characters active. This disturbs loading of package `color' and
+  perhaps `nameref' that are loaded later at begin document.
+</ENTRY>
+
+<ENTRY date="2008-09-13" version="6.78j" by="&HO;">
+* 6.78j
+* Forms/hpdftex.def: Missing /Fields entry is set in the same way
+  as it is done by the other drivers.
+</ENTRY>
+
+<ENTRY date="2008-09-12" version="6.78i" by="&HO;">
+* 6.78i
+* \pdfstringdef: accent support of encoding PU reimplemented
+  in a cleaner way.
+</ENTRY>
+
+<ENTRY date="2008-09-11" version="6.78h" by="&HO;">
+* 6.78h
+* \pdfstringdef:
+  * Warning in case of unsupported composite characters fixed.
+  * Unknown composite characters use Unicode combining accents
+    if possible.
+  * Supported range in PU encoding improved, especially
+    extended latin sets, cyrillic, and standard LICRs.
+  * Various fixes in encodig files (pd1enc.def, puenc.def).
+</ENTRY>
+
+<ENTRY date="2008-08-20" version="6.78g" by="&HO;">
+* 6.78g
+* Patch for \pdfstringdef of Manuel P\'egouri\'e-Gonnard
+  for package `xargs'.
+* Option pdfversion accepts versions until 1.9.
+</ENTRY>
+
+<ENTRY date="2008-08-14" version="6.78f" by="&HO;">
+* 6.78f
+* \nohyperref added to support custom entries in style files
+  of MakeIndex (delim_r, suffix_*), see README.
+</ENTRY>
+
+<ENTRY date="2008-07-23" version="6.78e" by="&HO;">
+* 6.78e
+* Driver hdvipdfm.def: Missing code for option `setpagesize' added.
+* README: Entry for package geometry/dvipdfm added.
+</ENTRY>
+
+<ENTRY date="2008-07-17" version="6.78d" by="&HO;">
+* 6.78d
+* Bug fix in disabled onclick field for PDF/A (Radhakrishnan CV).
+</ENTRY>
+
+<ENTRY date="2008-07-16" version="6.78c" by="&HO;">
+* 6.78c
+* \HyperDestNameFilter added.
+  (Feature request by Matthias Franz.)
+* htex4ht.cfg: \MP corrected.
+</ENTRY>
+
+<ENTRY date="2008-07-15" version="6.78b" by="&HO;">
+* 6.78b
+* Option `colorlinks': border properties are not cleared immediately,
+  but at evaluation time in \AtBeginDocument. This allows a setting
+  of colorlinks in hyperref.cfg and using colorlinks=false in the
+  document without getting lost of the link borders.
+  (Problem reported by Axel Berger.)
+</ENTRY>
+
+<ENTRY date="2008-07-12" version="6.78a" by="&HO;">
+* 6.78a
+* Driver options: Algorithm for finding the driver is changed:
+  * Code for detecting the driver is more robust
+    (not confused by \newcount\pdfoutput, solves a problem with beamer).
+  * Driver hpdftex.def is used/forced if and only if pdfTeX is running
+    in PDF mode. Thus hyperref now behaves like the other packages that
+    do not change PDF mode.
+  * Also some other driver options are checked.
+* Driver hpdftex.def:
+  * Setting of \pdfcompresslevel is removed.
+  * \PassOptionsToPackage{pdftex}{color} is removed.
+* Option dvipdf with driver hdvipdf.def is removed.
+  (Nobody missed it since 2006-08-01 v6.75a.)
+</ENTRY>
+
+<ENTRY date="2008-07-05" version="6.77v" by="&HO;">
+* 6.77v
+* Fix: Use normal meaning of babel's shorthand characters in
+  markup text of links. (Bug found by Ign\'acio Fernandez Galv\'an.)
+</ENTRY>
+
+<ENTRY date="2008-04-24" version="6.77u" by="&HO;">
+* 6.77u
+* Fix in action code for PDF/A, introduced in 6.77p (e.g. \PushButton).
+</ENTRY>
+
+<ENTRY date="2008-04-22" version="6.77t" by="&HO;">
+* 6.77t
+* Fix: \nameref in bookmarks.
+* Fix for dvipsone: unknown `?pdfmark'.
+</ENTRY>
+
+<ENTRY date="2008-04-20" version="6.77s" by="&HO;">
+* 6.77s
+* Additions to PU encoding: \textzerosuperior, ..., \textninesuperior,
+  \textzeroinferior, ..., \textnineinferior
+</ENTRY>
+
+<ENTRY date="2008-04-19" version="6.77r" by="&HO;">
+* 6.77r
+* Option pdfa: pdf version is set to 1.4.
+* Experimental option `ocgcolorlinks': Same as `colorlinks',
+  but prints without color. Optional Color Groups of PDF 1.5
+  are used. Main disadvantage: the links cannot be wrapped
+  across lines, because they are put in an \hbox. Currently
+  only drivers `pdftex' and `dvipdfm' are supported.
+</ENTRY>
+
+<ENTRY date="2008-04-17" version="6.77q" by="&HO;">
+* 6.77q
+* Fix for small problem with XeLaTeX (\string^^f4).
+</ENTRY>
+
+<ENTRY date="2008-04-16" version="6.77p" by="&HO;">
+* 6.77p
+* Patch for missing anchor settings with amsmath (multline) by
+  Ross Moore.
+* New option `pdfa' to improve compatibility with PDF/A,
+  see README.
+</ENTRY>
+
+<ENTRY date="2008-04-15" version="6.77o" by="&HO;">
+* 6.77o
+* Babel 2008/03/16 v3.8j disables shorthands for bookmarks.
+  This reduces the probability of warnings, but at the cost
+  of ugly bookmarks. Therefore hyperref tries to undo this.
+  See LaTeX bug-report `babel/4017'.
+* Fix for bulgarian.ldf's \@Alph and \@alph for \hyper@makecurrent.
+* Patch for missing anchor settings with amsmath (multline) by
+  Ross Moore.
+</ENTRY>
+
+<ENTRY date="2008-04-13" version="6.77n" by="&HO;">
+* 6.77n
+* New option `linktoc' added, see README.
+</ENTRY>
+
+<ENTRY date="2008-04-12" version="6.77m" by="&HO;">
+* 6.77m
+* Surrogate support for bookmarks (utf8.def, including utf8
+  sequences starting with ^^f4).
+* Fix: unicode disabled for pdfmoddate and pdfcreationdate.
+* Fix for footnote support of fancyvrb (Manuel P\'egouri\'e-Gonnard).
+* Fix for anchor name settings inside numbered lists.
+* Russian update with comments (Olga Lapko).
+</ENTRY>
+
+<ENTRY date="2008-04-05" version="6.77l" by="&HO;">
+* 6.77l
+* \CheckSum fixed.
+* hyperref-tds.zip renamed to hyperref.tds.zip.
+</ENTRY>
+
+<ENTRY date="2008-04-02" version="6.77k" by="&HO;">
+* 6.77k
+* Macro \SliTeX supported by \pdfstringdef.
+</ENTRY>
+
+<ENTRY date="2008-02-06" version="6.77j" by="&HO;">
+* 6.77j
+* Bug (typo) in \PushButton fixed (inserted in 6.77a).
+* Bug (typo) in hdviwindo.def fixed (Fran\c cois Charette).
+</ENTRY>
+
+<ENTRY date="2008-01-09" version="6.77i" by="&HO;">
+* 6.77i
+* Russian names for \autoref added (Olga Lapko).
+</ENTRY>
+
+<ENTRY date="2007-12-16" version="6.77h" by="&HO;">
+* 6.77h
+* \Hy@pstringdef(baseurl, ...) with \edef~{\string~}
+</ENTRY>
+
+<ENTRY date="2007-11-20" version="6.77g" by="&HO;">
+* 6.77g
+* Forms: /MK suppressed if empty.
+</ENTRY>
+
+<ENTRY date="2007-11-17" version="6.77f" by="&HO;">
+* 6.77f
+* Bug fix for dviwindo: misspelled \Hy@DisableOption (Philip Ratcliffe).
+</ENTRY>
+
+<ENTRY date="2007-11-12" version="6.77e" by="&HO;">
+* 6.77e
+* LuaTeX: Package `pdftexcmds' for \pdfescapestring.
+* Default producer setting recognices XeTeX and LuaTeX.
+</ENTRY>
+
+<ENTRY date="2007-11-08" version="6.77d" by="&HO;">
+* 6.77d
+* If `pdfstartpage' or `pdfstartview' is empty,
+  the catalog key /OpenAction is omitted.
+</ENTRY>
+
+<ENTRY date="2007-11-05" version="6.77c" by="&HO;">
+* 6.77c
+* Fix for memoir: \stockwith -&gt; \stockwidth.
+</ENTRY>
+
+<ENTRY date="2007-10-30" version="6.77b" by="&HO;">
+* 6.77b
+* Option `pdfnewwindow': setting to `true' or `false' sets the
+  entry /NewWindow in the action object. The entry is absent,
+  if the `pdfnewwindow' is not used or its value is empty
+  (then the user preference is used).
+</ENTRY>
+
+<ENTRY date="2007-10-29" version="6.77a" by="&HO;">
+* 6.77a
+* New PDF form field options for flag setting, see README.
+* The ugly hooking in \@begindvi is removed in favor of
+  using package `atbegshi'.
+  * \@hyperfixhead don't exist anymore.
+  * Patch of fancybox is obsolete.
+  * \AtBeginDvi replaced by \AtBeginShipoutFirst
+* Obscure \HYPERPAGEANCHOR is removed.
+* If \paperwidth and \paperheight contain invalid values, then
+  \special{papersize=...} is suppressed and a warning is given.
+* revtex4/driver pdftex: pdfpagelabels uses \clear@document as hook
+    instead of LaTeX's \AtEndDocument. This avoids \clearpage that
+    confuses revtex4's balancing of the last page.
+* revtex4: Fix for setting label `LastPage'.
+* Fix for package float's \restylefloat* by Axel Sommerfeldt.
+* Bug fix (debian 351260) in 6.75a breaks `hypertexnames=false'.
+  Fixed (Axel Sommerfeldt).
+* Bug fix: The scope of \HyperRaiseLinkLength is limited to
+  \HyperRaiseLinkHook.
+* Bug fix: broken \autoref if option `draft' is given.
+* Bug fix: longtable + hypertexnames=false (bug found by Axel Sommerfeldt).
+* \pdfstringdef: \@mkboth disabled.
+* Definition of \pagenumbering removed.
+* Fix of problem with babel's shorthands in bibliography.
+* Hungarian names for \autoref added (Miglinszki P\'eter).
+* Fix for form field's multiline (old bug, introduced in v6.73h):
+  The default height for multiline entries was calculated before
+  the option was evaluated. The default height of multiline entries
+  can be configured by \DefaultHeightofTextMultiline.
+  Default is 4\baselineskip.
+* \nolinkurl supports escaped characters the same way as \url
+  (Joseph Wright).
+* backref 1.28: Avoids duplicate \newwrite calls.
+</ENTRY>
+
+<ENTRY date="2007-06-14" version="6.76i" by="&HO;">
+* 6.76i
+* `pdfencoding=auto' a little more efficient.
+</ENTRY>
+
+<ENTRY date="2007-06-12" version="6.76h" by="&HO;">
+* 6.76h
+* Fix for default of \theHequation (class `foils'
+  do not know counter `section').
+* New option `pdfencoding' added (uses package `stringenc').
+</ENTRY>
+
+<ENTRY date="2007-05-29" version="6.76g" by="&HO;">
+* 6.76g
+* The color of launch annotations are set by options
+  `runcolor' and `runbordercolor'. (Previously `filecolor'
+   was used.)
+* Support for package `showkeys' added for \autoref.
+* Fix for line breaks right after \url or \href.
+* nameref 2.31: Support for caption of package `listings'.
+* nameref 2.31: Some fixes in \NR@@vpageref.
+</ENTRY>
+
+<ENTRY date="2007-05-09" version="6.76f" by="&HO;">
+* 6.76f
+* Use of package `etexcmds' for \unexpanded.
+</ENTRY>
+
+<ENTRY date="2007-05-03" version="6.76e" by="&HO;">
+* 6.76e
+* hyperref: ConTeXt's base/syst-gen.tex redefines e-TeX's \unexpanded.
+* Some support for amsmath's environment `subequations'.
+* nameref 2.30: \label is supported after longtable's \caption.
+</ENTRY>
+
+<ENTRY date="2007-04-25" version="6.76d" by="&HO;">
+* 6.76d
+* Option dvipdfmx-outline-open/\SpecialDvipdfmxOutlineOpen
+  adjusted to new CVS version of dvipdfmx.
+</ENTRY>
+
+<ENTRY date="2007-04-18" version="6.76c" by="&HO;">
+* 6.76c
+* Fix for star forms of \ref commands.
+* Fixes for \autopageref.
+</ENTRY>
+
+<ENTRY date="2007-04-11" version="6.76b" by="&HO;">
+* 6.76b
+* Line end cleanup, removal of spaces.
+* Minor fixes in form part.
+</ENTRY>
+
+<ENTRY date="2007-04-09" version="6.76a" by="&HO;">
+* 6.76a
+* Color options implemented by package `hycolor'.
+* pdfborder: Patch for ghostscript added to remove resolution
+  dependency. Unclear is the behaviour of Acrobat Distiller,
+  dvipsone, and textures.
+    The values for pdfborder should be specified in the way
+  they should appear in the PDF file. Default: pdborder={0 0 1}
+* \autopageref added.
+* New field option `rotation' added.
+* Field options bordercolor and backgroundcolor:
+  * An empty value is permitted.
+  * If the value does not start with a number ('0', '1', '.'),
+    then it is processed as xcolor specification.
+* Fix for drivers dvipdfm/pdfmark: launch annotation now uses
+  `runbordercolor' instead of `filebordercolor'.
+* PD1 encoding: Replacements for older AR versions removed:
+  \l, \L, \v z, \v Z, \i, \textfractionmark, \textfi, \textfl
+* \pdfstringdef: a little faster.
+* \href followed by `%' and line break works now.
+* Option dvipdfmx-outline-open or \chardef\SpecialDvipdfmxOutlineOpen=1
+  enables support for open outline entries
+  (dvipdfmx, since cvs version 2007-03-29).
+  Caution: this feature is experimental and can change.
+* Italian translation of \autoref names added (Cristian Battaglia).
+* Support for \greeknumeral and \Greeknumeral in Bookmarks
+  (with option unicode).
+* Replacement for \greeknumeral and \Greeknumeral in anchor names.
+* pdfmark: Destinations without rectangle (D.P.Story)
+* Fixes for fancybox.
+* Fixes for chapterbib (Donald Arsenau).
+* Some support for Spanish shorthands in bookmarks added.
+* varioref (hyperref + nameref):
+  * Support for \Ref and \Vref.
+  * \vref puts the whole reference text in a link.
+  * Fix for babel shorthand characters.
+  * Small fixes for undefined references.
+* tex4ht: \hyperlinkfileprefix{} added (Eitan Gurari).
+* Some support for hypcap added (idea of Axel Sommerfeldt).
+* Unused form field option `fillcolor' removed.
+* Unused option `pagecolor' removed.
+* Practically unused option `pagebordercolor' removed.
+* \PDFPage removed, because it's undocumented, is not
+  free from errors and is not supported by all drivers.
+* nameref 2.29: beamer support added.
+</ENTRY>
+
+<ENTRY date="2007-02-27" version="6.75t" by="&HO;">
+* 6.75t
+* Suppressing links with empty link area.
+  (Avoids invalid PDF files in case of pdfmark drivers,
+  bug found by Thorsten Schwander.)
+</ENTRY>
+
+<ENTRY date="2007-02-16" version="6.75s" by="&HO;">
+* 6.75s
+* Fix for \autoref in bookmarks that was broken since the
+  star form support of 6.75g. (Bug found by Matthias Franz.)
+</ENTRY>
+
+<ENTRY date="2007-02-07" version="6.75r" by="&HO;">
+* 6.75r
+* dvipdfm, option pdfview: Parameters of XYZ fixed (Jin-Hwan Cho).
+* dvipdfm, option pdfview: The implementation was very poor.
+  Now XYZ, Fit{,B,H,BH,V,BV} are supported. FitR and parameters
+  remain unsupported.
+</ENTRY>
+
+<ENTRY date="2007-01-25" version="6.75q" by="&HO;">
+* 6.75q
+* If colorlinks is set to true, pdfborder is set to suppress
+  the border. Now also pdfborderstyle is cleared.
+</ENTRY>
+
+<ENTRY date="2007-01-23" version="6.75p" by="&HO;">
+* 6.75p
+* Bug fix: disable pdfpagelabels if \thepage is undefined.
+* Forms: color specifications can also be given by color names,
+  if package xcolor is loaded.
+</ENTRY>
+
+<ENTRY date="2007-01-18" version="6.75o" by="&HO;">
+* 6.75o
+* XeTeX: new option added and default driver detection extended.
+</ENTRY>
+
+<ENTRY date="2007-01-17" version="6.75n" by="&HO;">
+* 6.75n
+* ChoiceMenu fix: parameter value is now used if given.
+</ENTRY>
+
+<ENTRY date="2007-01-14" version="6.75m" by="&HO;">
+* 6.75m
+* \autoref uses the name for appendix if it references sections
+  that follow \appendix in classes without \chapter.
+* Support for beyond-BMP characters in unicode bookmarks
+  (Dohyun Kim &lt;nomosnomos@gmail.com&gt;)
+</ENTRY>
+
+<ENTRY date="2007-01-06" version="6.75l" by="&HO;">
+* 6.75l
+* Updated default value of option pdfproducer for pdfTeX 1.40.0.
+</ENTRY>
+
+<ENTRY date="2006-12-30" version="6.75k" by="&HO;">
+* 6.75k
+* puarenc.def: Additions to PU encoding for Arabi by Youssef Jabri.
+* New option arabic that loads puarenc.def.
+</ENTRY>
+
+<ENTRY date="2006-12-27" by="&HO;">
+* nameref 2.28: \protected@edef isn't robust enough for removing
+  \label in name strings. Now \label is disabled during referencing.
+</ENTRY>
+
+<ENTRY date="2006-12-21" version="6.75j" by="&HO;">
+* 6.75j
+* Fix for bug in \Hy@safe@actives..., introduced in 6.75g.
+* nameref 2.27: now \label uses \protected@edef for the nameref
+  to remove \label commands while writing into the .aux file.
+</ENTRY>
+
+<ENTRY date="2006-12-21" version="6.75i" by="&HO;">
+* 6.75i
+* Fix: \unichar in bookmarks with Unicode encoding.
+</ENTRY>
+
+<ENTRY date="2006-11-30" version="6.75h" by="&HO;">
+* New options for pdf viewer preferences:
+    pdfdirection, pdfviewarea, pdfviewclip,
+    pdfprintarea, pdfprintclip, pdfduplex, pdfpicktraybypdfsize,
+    pdfprintpagerange, pdfnumcopies.
+  New option for pdf catalog:
+    pdflang (except VTeX)
+* Internal change: \pdf@pagelayout renamed to \@pdfpagelayout.
+* Internal change: \@pdfpagemode without slash.
+</ENTRY>
+
+<ENTRY date="2006-11-15" version="6.75g" by="&HO;">
+* New option pdfprintscaling.
+* Star version of \autoref* analogous to \ref*.
+* Support of memoir: package memhfixc is automatically loaded.
+</ENTRY>
+
+<ENTRY date="2006-10-06" by="&HO;">
+* backref 1.27: fix for \backrefspanish.
+</ENTRY>
+
+<ENTRY date="2006-09-12" version="6.75f" by="&HO;">
+* 6.75f
+* Documentation fix: options pdfdisplaydoctitle and
+  pdfnonfullscreenpagemode
+</ENTRY>
+
+<ENTRY date="2006-09-06" version="6.75e" by="&HO;">
+* 6.75e
+* dvipdfm: \leavevmode for links added.
+* dvipdfm: option dvipdfmx added (alias for dvipdfm).
+* pdfmark.def: Bug fix, clash with \Hy@temp.
+</ENTRY>
+
+<ENTRY date="2006-08-29" version="6.75d" by="&HO;">
+* 6.75d
+* Fix: If option unicode option is given, page anchors
+  are wrong. Fixed by disabling unicode for page anchor names.
+* Listing(s) support: \providecommand instead of \def.
+</ENTRY>
+
+<ENTRY date="2006-08-16" version="6.75c" by="&HO;">
+* 6.75c
+* Supporting both options "vietnamese" and "vietnam".
+</ENTRY>
+
+<ENTRY date="2006-08-15" version="6.75b" by="&HO;">
+* 6.75b
+* VnTeX support by Han The Thanh. New option: vietam.
+* Fix for bug with varioref, introduced in 6.75a.
+* Entry "algorithm" updated in README.
+* nameref 2.26: required date added for package refcount.
+</ENTRY>
+
+<ENTRY date="2006-08-01" version="6.75a" by="&HO;">
+* 6.75a
+* hyperref-tds.zip provided with files sorted in a TDS tree.
+* New option defaults:
+  * plainpages=false
+  * pdfpagelabels=true
+* Package kvoptions defines \ProcessOptionsWithKV under
+  the name \ProcessKeyvalOptions. It replaces
+  hyperref's macro \ProcessOptionsWithKV.
+* Some code for extracting reference information is put
+  into package refcount that is now loaded by nameref
+  and hyperref.
+* Option bookmarksdepth: The depth of the outline entries
+  can now set separatly from counter "tocdepth",
+  see README.
+* New option: pdfescapeform, see README.
+* \hyper@normalise for action attribute in forms.
+* \ProcessOptionsWithKV: \let\CurrentOption\@empty added.
+* "bordercolor" options now support package xcolor (&gt;=1.11).
+* "color" options also support the optional argument (color
+   model) of \color.
+* New option "pdfborderstyle" that allows the setting of the
+  border style dictionary. (Be aware that the support of this
+  feature by PDF viewers is limited.)
+  Example: underlined links can be obtained by
+      pdfborderstyle={/S/U}
+* Direct low level bookmark support for \usepackage[utf8]{inputenc}
+  and "uftf8x" of package "ucs". Byte sequences until three
+  bytes are supported and e-TeX is required.
+  (No support for surrogates).
+* Fix in \addcontentsline, if option verbose is set.
+* Better bookmark support for FrenchPro package
+  by use of \if@mid@expandable (Bernard Gaulle &lt;gaulle@idris.fr&gt;).
+* Options "pdfcreationdate" and "pdfmoddate" added.
+* README: Section "Limitations" added with "Broken Link Support".
+* Default driver setting: added missed code of corresponding
+  options (Thanks for Arnaud Giersch &lt;arnauld.giersch at free.fr&gt;).
+* \penalty10000 added in \Hy@raisedlink to cancel the
+  effect of \smash in preventing hyphenation, e.g. a footnote
+  after a word.
+* \@classoptionslist can be \relax (see psnfss/3773).
+* \new@ifnextchar also disabled for bookmarks and
+  constructs such as \let\if...\if{true,false} are catched,
+  see latex/3662.
+* Bug fix: The case "\part without number by counter secnumdepth"
+  was forgotten for the bookmarks (thanks to Rachel Elizabeth Dillon).
+* Bug fix: \vpageref defines undefined references with
+  empty anchor name that breaks \autoref.
+* Fix: Wrong message about setting of draft fixed,
+  if option final is used.
+* Pdfmark driver: better removal of pdfmark stuff,
+  especially generated by forms, if the postscript
+  application does not define pdfmark, e.g. because the
+  output is not pdf (gs &gt;= 8.0).
+* New version numbering scheme of pdfTeX &gt;= 1.30.
+* Fix for \hyper@normalise, if &amp; is used inside \href
+  in tabular environments.
+* Fix: Setting pdfproducer in \usepackage's option part
+  did'nt have an effect, because it was overwritten by
+  the default setting.
+* Fix: pageanchor=false disabled \@hyperfixhead and thus
+  many other features unrelated to pageanchor itself.
+  (Thanks to Hendri Adriaens for report and analysis.)
+  Now pageanchor can be changed during the document, too.
+* Protection of strings that are written as PS/PDF strings.
+* Hook \Hy@setouterhbox for package setouterhbox.
+* Option plainpages: \thepage is run through \pdfstringdef.
+  Helps in the case of spanish roman numbers.
+* Deprecate warning for option 'dvipdf'.
+* \ding replaced by its code for dropping the dependency on
+  package pifont and a compatibility problem with package
+  pinyin (Werner Lemberg).
+* \hyper@normalise: "\\" is escape for "\" (\href, ...).
+* Bug fix (debian 351260) in float support by Braun Gabor.
+* Fix: Write register for bookmarks is only allocated if needed.
+* Empty Unicode strings without Unicode header bytes.
+* Fix for pdfmark+unicode+pdfpagelabels.
+* Bug fix for empty destination names of pdfmark based drivers.
+* Documentation: option hyperfootnotes added.
+* French texts (\HyLang@french) provided by Marc-Antoine Parent.
+* README: compatibility entries for packages ellipsis, verse.
+* \hyper@normalize: support of active dollar.
+* puenc.def: some fixes, reported by Ralf Stubner.
+* Makefile no longer provided.
+* nameref 2.25, backref 1.26: Documenation fix: \HyperrefOverview
+  is undefined if bmhydoc.sty is not loaded.
+* nameref 2.24: Patch for ifthen moved from hyperref to nameref.
+* nameref 2.24: Definitions of \filedate and \fileversion removed.
+* nameref 2.23: Support for captions added.
+* nameref 2.22:
+  Fix: \@safe@activestrue limited to label name.
+* backref 1.25: New feature \ifbackrefparscan/\backrefprint
+* backref 1.25: Definitions of \filedate and \fileversion removed.
+* backref 1.24: [#1] --&gt; [{#1}]
+* Documentation: README.pdf and ChangeLog.pdf added.
+</ENTRY>
+
+<ENTRY date="2003-12-03" by="&HO;">
+* nameref 2.21
+* \ref and \pageref are defined at any case, if hyperref
+  is not loaded.
+</ENTRY>
+
+<ENTRY date="2003-11-30" version="6.74m" by="&HO;">
+* 6.74m
+* \textcolor disabled in bookmarks.
+</ENTRY>
+
+<ENTRY date="2003-11-15" version="6.74l" by="&HO;">
+* 6.74l
+* Typo fixed by Werner Lemberg: s/CJK@punktcharx/CJK@punctcharx/
+</ENTRY>
+
+<ENTRY date="2003-10-30" by="&HO;">
+* nameref 2.20: titlesec support added.
+</ENTRY>
+
+<ENTRY date="2003-10-12" version="6.74k" by="&HO;">
+* 6.74k
+* Fix for more than one footnote in longtable's
+  columns of type "p".
+</ENTRY>
+
+<ENTRY date="2003-10-06" version="6.74j" by="&HO;">
+* 6.74j
+* Bug fix: automatic link type detection failed for
+  url field in references (eg. imported labels by xr-hyper).
+</ENTRY>
+
+<ENTRY date="2003-09-15" version="6.74i" by="&HO;">
+* 6.74i
+* Bug fix (\if-commands after \ifx of 6.74h's "fleqn" detection).
+</ENTRY>
+
+<ENTRY date="2003-07-27" version="6.74h" by="&HO;">
+* 6.74h
+* The lost source for the manual is rewritten by Steve Peter
+  and updated by Karl Berry.
+* Bug fix of 6.74f does not work for amsmath's option "fleqn",
+  the \label does not detect the equation number, therefore
+  the fix is disabled, if "fleqn" is detected.
+</ENTRY>
+
+<ENTRY date="2003-07-22" version="6.74g" by="&HO;">
+* 6.74g
+* Bug fixed in pdfmark.def: definition of \strip@pt@and@otherjunk
+  moved before \endinput by implicit=false.
+</ENTRY>
+
+<ENTRY date="2003-07-10" version="6.74f" by="&HO;">
+* 6.74f
+* Fix for wrong vertical spacing between amsmath's
+  equation environments (Dmitri Chubarov &lt;chubarik@gorodok.net&gt;).
+</ENTRY>
+
+<ENTRY date="2003-06-01" version="6.74e" by="&HO;">
+* 6.74e
+* README: Hint for hypcap added.
+* pdfmark.def: "cvn" added for named GoToR destination
+  (Reinhard Jahraus).
+</ENTRY>
+
+<ENTRY date="2003-05-12" version="6.74d" by="&HO;">
+* 6.74d
+* An empty dictionary /ViewerPreferences is now suppressed.
+</ENTRY>
+
+<ENTRY date="2003-05-12" version="6.74c" by="&HO;">
+* 6.74c
+* \@addtoreset: \edef replaced by \xdef.
+</ENTRY>
+
+<ENTRY date="2003-04-28" version="6.74b" by="&HO;">
+* 6.74b
+* Patch for float.sty compatibility (Anselm Lingnau/Marco Kuhlmann).
+* Tried better anchor setting for floats that are controlled
+  by float.sty. Several captions inside one float are not supported.
+</ENTRY>
+
+<ENTRY date="2003-04-27" version="6.74a" by="&HO;">
+* 6.74a
+* \newcounter{foo}[bar]: using \theHbar, if available.
+</ENTRY>
+
+<ENTRY date="2003-04-14" version="6.73z" by="&HO;">
+* 6.73z
+* New option "pdfdisplaydoctitle" (PDF 1.4).
+* New option "pdfnonfullscreenpagemode".
+</ENTRY>
+
+<ENTRY date="2003-03-31" version="6.73y" by="&HO;">
+* 6.73y
+* Also the KOMA-Script classes redefine \LT@array, therefore
+  longtable fix extended.
+</ENTRY>
+
+<ENTRY date="2003-03-25" version="6.73x" by="&HO;">
+* 6.73x
+* Behaviour of warning "bookmark level for unknown ..." changed:
+  * The missing \toclevel@... command is globally defined
+    to avoid further warnings.
+  * If this entry is not used for the bookmarks, the
+    warning is changed into a \PackageInfo.
+* Language support for Afrikaans added.
+</ENTRY>
+
+<ENTRY date="2003-03-21" version="6.73w" by="&HO;">
+* 6.73w
+* Errors corrected in documentation part.
+</ENTRY>
+
+<ENTRY date="2003-03-21" version="6.73v" by="&HO;">
+* 6.73v
+* \hyperpage now ignores spaces and empty arguments.
+</ENTRY>
+
+<ENTRY date="2003-03-21" version="6.73u" by="&HO;">
+* 6.73u
+* Option "encap", other encap character for use with hyperindex
+  can be given.
+</ENTRY>
+
+<ENTRY date="2003-03-20" version="6.73t" by="&HO;">
+* 6.73t
+* hyperref now uses the same method for language support as
+  backref 1.23.
+* Change from \captions&lt;lang&gt; to \extras&lt;lang&gt;.
+* backref 1.23
+  Babel support for language strings added
+  (suggestion of Danie Els).
+</ENTRY>
+
+<ENTRY date="2003-03-20" version="6.73s" by="&HO;">
+* 6.73s
+* Default for \itemautorefname added.
+* backref 1.22
+  Bug fixes and additions of Danie Els &lt;dnjels@sun.ac.za&gt;:
+  * Typo fixed in \backreflastsep.
+  * Package natbib support, if hyperref is not loaded.
+  * Language Afrikaans added.
+* hyperref.ins:
+  hyperref.drv and hycheck.tex are put outside the scope
+  of \usedir.
+</ENTRY>
+
+<ENTRY date="2003-03-19" version="6.73r" by="&HO;">
+* 6.73r
+* \hyper@link@: \@safe@activestrue used for internal name
+* backref 1.21:
+  * Continued with inserting of \@safe@activestrue.
+  * \backrefxxxdupe added for comparision and detection
+    of dupes.
+  * \backrefalt added with more powerful interface with macros
+    \backrefsep, \backreftwosep, and \backreflastsep.
+  * Language options added.
+  * More documentation.
+</ENTRY>
+
+<ENTRY date="2003-03-18" version="6.73q" by="&HO;">
+* 6.73q
+* Suppressing /URI entry if \@baseurl is empty (hpdftex, hdvipsone).
+* /URI moved to Cataloge (hdvipsone).
+* Some locations of "file:" replaced by \Hy@linkfileprefix.
+</ENTRY>
+
+<ENTRY date="2003-03-18" version="6.73p" by="&HO;">
+* 6.73p
+* Patch for longtable added (problem reported by Thomas Beuthe).
+</ENTRY>
+
+<ENTRY date="2003-02-11" version="6.73o" by="&HO;">
+* 6.73o
+* Support for babel's shorthands in \autoref fixed.
+* Support for \autoref in bookmarks added.
+* Option final added similar to graphics.sty, article.cls, ...
+* \hyperref[#1] does now use babel's \@safe@activestrue.
+</ENTRY>
+
+<ENTRY date="2003-01-22" version="6.73n" by="&HO;">
+* 6.73n
+* Unsafe key value pair: Action=&lt;&lt;...#2...#3...&gt;&gt;
+  replaced by: Action={&lt;&lt;...#2...#3...&gt;&gt;}
+  because it breaks, if #2 or #3 contain a comma.
+</ENTRY>
+
+<ENTRY date="2003-01-22" version="6.73m" by="&HO;">
+* 6.73m
+* Support for \@makecaption of class IEEEtran with
+  three arguments removed, because version V1.6b uses
+  the standard LaTeX interface with two arguments.
+</ENTRY>
+
+<ENTRY date="2003-01-20" version="6.73l" by="&HO;">
+* 6.73l
+* Footnote fix: Initialization of \Hy@footnote@currentHref
+  added (Thorsten Schwander &lt;schwander@horse.lanl.gov&gt;).
+</ENTRY>
+
+<ENTRY date="2003-01-17" version="6.73k" by="&HO;">
+* 6.73k
+* Footnote fix: \label commands inside \footnote do
+  not need nameref support (\@currentlabelname).
+</ENTRY>
+
+<ENTRY date="2003-01-17" version="6.73j" by="&HO;">
+* 6.73j
+* Fix for footnote code: a \label after \footnote
+  commands refers to the previous section or similar
+  and not to the footnote.
+</ENTRY>
+
+<ENTRY date="2002-12-15" version="6.73i" by="&HO;">
+* 6.73i
+* \texteuro fixed for PU encoding,
+  Maksym Polyakov &lt;polyama@myrealbox.com&gt;.
+</ENTRY>
+
+<ENTRY date="2002-12-10" version="6.73h" by="&HO;">
+* 6.73h
+* Bugreport of Michael W Daniels &lt;daniels@ling.ohio-state.edu&gt;:
+  height in \TextField is not respected, if multiline is set.
+  * Fixed by moving the height setting code in the default
+    section.
+  * Also "4\DefaultHeightofText" replaced by a more robust
+    construct.
+</ENTRY>
+
+<ENTRY date="2002-12-05" version="6.73g" by="&HO;">
+* 6.73g
+* \edef instead of \def for comparison with value of option
+  bookmarkstype (in \@@writetorep), the following should
+  work: bookmarkstype=lof
+</ENTRY>
+
+<ENTRY date="2002-12-03" version="6.73f" by="&HO;">
+* 6.73f
+* Option "setpagesize" added also for VTeX's \mediawidth/height.
+* VTeX: \mediawidth/height is only set with positive dimen values.
+</ENTRY>
+
+<ENTRY date="2002-11-29" version="6.73e" by="&HO;">
+* 6.73e
+* Option "setpagesize" added.
+</ENTRY>
+
+<ENTRY date="2002-11-14" version="6.73d" by="&HO;">
+* 6.73d
+* Support for \@addtoreset added, similar to
+  \numberwithin (idea of Markus Kohm in
+  de.comp.text.tex).
+</ENTRY>
+
+<ENTRY date="2002-11-07" version="6.73c" by="&HO;">
+* 6.73c
+* Added "hyperpage" also after "closing range"
+  (\index{...|)hyperpage}), because it is allowed
+  for makeindex and necessary for XIndy.
+</ENTRY>
+
+<ENTRY date="2002-11-01" version="6.73b" by="&HO;">
+* 6.73b
+* \Hy@raisedlink for caption without option nesting.
+* Support for \@makecaption of class IEEEtran that
+  uses three arguments.
+</ENTRY>
+
+<ENTRY date="2002-10-24" version="6.73a" by="&HO;">
+* 6.73a
+* vtexpdfmark: pdfborder={0 0 1} (Walter Schmidt).
+</ENTRY>
+
+<ENTRY date="2002-10-22" version="6.72z" by="&HO;">
+* 6.72z
+* A small remainder of option 4 removed.
+* options.tex: option pdfpagelabels added,
+               option 4 removed.
+</ENTRY>
+
+<ENTRY date="2002-09-12" version="6.72y" by="&HO;">
+* 6.72y
+* Addition to \hyper@normalise: \_, \textunderscore,
+  \textasciitilde.
+</ENTRY>
+
+<ENTRY date="2002-09-04" version="6.72x" by="&HO;">
+* 6.72x
+* \ReadBookmarks is disabled if bookmarks=false is given.
+* \Hy@raisedlink introduced into \hyper@natanchorstart
+  (Thanks to Macro Kuhlmann &lt;mk@mcqm.net&gt;).
+</ENTRY>
+
+<ENTRY date="2002-08-24" version="6.72w" by="&HO;">
+* 6.72w
+* "\let\pdfoutput\@undefined" removed.
+* Bug fix: option bookmarksnumbered is now respected,
+  if package slidesec is used.
+</ENTRY>
+
+<ENTRY date="2002-08-04" version="6.72v" by="&HO;">
+* 6.72v
+* Koma classes: optional argument for \maketitle.
+</ENTRY>
+
+<ENTRY date="2002-08-03" version="6.72u" by="&HO;">
+* 6.72u
+* \appendix: \Hy@org@appendix moved to the end
+  and renamed to \HyOrg@appendix.
+</ENTRY>
+
+<ENTRY date="2002-07-25" version="6.72t" by="&HO;">
+* 6.72t
+* Support for footnotes in p-columns of longtables.
+</ENTRY>
+
+<ENTRY date="2002-06-06" version="6.72s" by="&HO;">
+* 6.72s
+* \Hy@defaultdriver used, so that "hypertex" can
+  be redefined in hyperref.cfg (eg. "dvips").
+</ENTRY>
+
+<ENTRY date="2002-06-05" by="&HO;">
+* backref 1.20
+* Babel's \@safe@activestrue inserted to bibitem commands.
+  But problems with \cite remains (frenchb.ldf).
+</ENTRY>
+
+<ENTRY date="2002-05-27" version="6.72r" by="&HO;">
+* 6.72r
+* Problem with varioref's \vref@pagenum fixed
+  (Thanks to Felix Neubauer &lt;felix.neubauer@gmx.net&gt;).
+</ENTRY>
+
+<ENTRY date="2002-05-10" version="6.72q" by="&HO;">
+* 6.72q
+* Some spaces in PDF output of driver pdftex removed.
+</ENTRY>
+
+<ENTRY date="2002-05-09" version="6.72p" by="&HO;">
+* 6.72p
+* Option `pdfusetitle' now correctly disabled.
+</ENTRY>
+
+<ENTRY date="2002-04-20" version="6.72o" by="&HO;">
+* 6.72o
+* Bug fix of 6.72n is wrong:
+  Octal escape sequences (\000) are not detected by the method
+  with \meaning. Now another method, based on \dospecials, is
+  used to protect active characters while reading the .out file.
+</ENTRY>
+
+<ENTRY date="2002-04-19" version="6.72n" by="&HO;">
+* 6.72n
+* Bug fixed in \ReadBookmarks of driver vtex:
+  the text arguments in the .out file are
+  now protected.
+</ENTRY>
+
+<ENTRY date="2002-04-15" version="6.72m" by="&HO;">
+* 6.72m
+* Adaption to subfigure 2002/03/26 v2.1.2. It uses
+  \AtBeginDocument{...\newcommand{\toclevel@subfigure}...}.
+</ENTRY>
+
+<ENTRY date="2002-04-12" version="6.72l" by="&HO;">
+* 6.72l
+* Fix from Werner Lemberg &lt;wl@gnu.org&gt; for
+  bookmarks with Big5 encoded strings,
+  preprocessed by package cjk.
+</ENTRY>
+
+<ENTRY date="2002-04-09" version="6.72k" by="&HO;">
+* 6.72k
+* \protected@edef instead of \edef in \hyper@link@.
+</ENTRY>
+
+<ENTRY date="2002-03-27" version="6.72j" by="&HO;">
+* 6.72j
+* Tried to fix the problem that links to
+  bibliography points to baseline if pdfTeX is
+  used by inserting \Hy@raisedlink.
+* \Hy@raisedlink disabled for pdfmark drivers,
+  because they use a PostScript method.
+</ENTRY>
+
+<ENTRY date="2002-03-15" version="6.72i" by="&HO;">
+* 6.72i
+* \toclevel@subfigure and \toclevel@subtable fixed.
+</ENTRY>
+
+<ENTRY date="2002-03-15" version="6.72h" by="&HO;">
+* 6.72h
+* New structure on tug server.
+* Makefile: target "distrib" removed.
+* Textures update by Ross Moore &lt;ross@maths.mq.edu.au&gt;.
+</ENTRY>
+
+<ENTRY date="2002-03-14" version="6.72g" by="&HO;">
+* 6.72g
+* Added fix for subfigure 2002/02/14 v2.1.
+  Loading order: nameref, subfigure, hyperref.
+</ENTRY>
+
+<ENTRY date="2002-03-08" version="6.72f" by="&HO;">
+* 6.72f
+* dvipdfm: pdfstartpage and pdfstartview fixed
+  (Akira Kakuto &lt;kakuto@fuk.kindai.ac.jp&gt;).
+</ENTRY>
+
+<ENTRY date="2002-02-16" version="6.72e" by="&HO;">
+* 6.72e
+* \pdfstringdef: \cyr disabled for russian.ldf
+* \pdfstringdef: shorthands for macedonian.ldf
+* VTeX 7.54: pdfnewwindow supported in \hyper@linkfile.
+</ENTRY>
+
+<ENTRY date="2002-01-14" version="6.72d" by="&HO;">
+* 6.72d
+* Bug fix: \Hy@title, \Hy@author.
+</ENTRY>
+
+<ENTRY date="2002-01-08" version="6.72c" by="&HO;">
+* 6.72c
+* pdfmark.def: /URI moved from /DOCVIEW to {Catalog}.
+* pdfmark.def: Unused \@dobaseurl removed.
+</ENTRY>
+
+<ENTRY date="2002-01-07" version="6.72b" by="&HO;">
+* 6.72b
+* Support of \stockwidth and \stockheight (memoir class).
+</ENTRY>
+
+<ENTRY date="2002-01-06" version="6.72a" by="&HO;">
+* 6.72a
+* Annotation's additinal-actions dictionary for form fields:
+  Supported: keystroke (/K), validate (/V), format (/F)
+  and now added: onfocus (/Fo), onblur (/Bl),
+  onmousedown (/D), onmouseup (/U),
+  onenter (/E), onexit(/X)
+* Additional-actions dictionary added in \PDFForm@List and
+  \PDFForm@Radio.
+* \PDFForm@Text: "/Ff 1" added, if only \ifFld@readonly is set.
+</ENTRY>
+
+<ENTRY date="2001-12-23" version="6.71z" by="&HO;">
+* 6.71z
+* Some \providecommand replaced by \providecommand*.
+* Babel's \@number of file lrbabel.def inserts
+  unexpandable tokens into the expansion of \arabic.
+  At some places dummy for \@number inserted, where
+  anchor and link names are expanded.
+</ENTRY>
+
+<ENTRY date="2001-12-21" version="6.71y" by="&HO;">
+* 6.71y
+* Support for chapterbib added, provided by
+  Julian Gilbey &lt;J.D.Gilbey@qmul.ac.uk&gt;.
+</ENTRY>
+
+<ENTRY date="2001-12-06" version="6.71x" by="&HO;">
+* 6.71x
+* Added fix by Denis Girou for pst-key.tex (1998,
+  derived from old keyval.dtx). Any initial brace group
+  in the value field is removed.
+</ENTRY>
+
+<ENTRY date="2001-11-14" version="6.71w" by="&HO;">
+* 6.71w
+* Added suggestion of Didier Verna &lt;didier@lrde.epita.fr&gt;:
+  The fix for multind is also applied for package index.
+</ENTRY>
+
+<ENTRY date="2001-11-12" version="6.71v" by="&HO;">
+* 6.71v
+* The feature of 6.71r with automatic detection of
+  title and author can be enabled by option
+  pdfusetitle. The default is disabled.
+* If pdfusetitle is enabled, an optional argument
+  is detected for \title and \author (amsart class).
+</ENTRY>
+
+<ENTRY date="2001-11-05" version="6.71u" by="&HO;">
+* 6.71u
+* \literalps@out for dviwindo (D.P. Story).
+</ENTRY>
+
+<ENTRY date="2001-11-04" version="6.71t" by="&HO;">
+* 6.71t
+* The patch for harvard is delayed by \AtBeginDocument
+  to solve a problem with the package load order, if
+  html.sty is present (Command \harvarditem already
+  defined).
+* The fix for the Adobe bug introduced in 6.71n
+  is changed completely, because Adobe's suggestion
+  generates an extra empty page at the end.
+  (\literalps@out for dviwindo is currently only a dummy.)
+</ENTRY>
+
+<ENTRY date="2001-10-30" version="6.71s" by="&HO;">
+* 6.71s
+* If "\\" or "\newline" are used in \title or
+  \author and reused for the pdf information
+  entries, then they are replaced by a space
+  or a comma and space, see hyperref.dtx.
+</ENTRY>
+
+<ENTRY date="2001-10-11" version="6.71r" by="&HO;">
+* 6.71r
+* Detection of \author and \title added for
+  defaults of pdf information entries.
+</ENTRY>
+
+<ENTRY date="2001-09-20" version="6.71q" by="&HO;">
+* 6.71q
+* Fix for Adobe bug of 6.71n:
+  * VTeX in PS mode with GeX: \immediate\special{!=...}
+</ENTRY>
+
+<ENTRY date="2001-09-18" version="6.71p" by="&HO;">
+* 6.71p
+* Fix for Adobe bug of 6.71n improved:
+  * Support for dviwindo added (D.P. Story).
+  * Check for product added (product is level 2).
+</ENTRY>
+
+<ENTRY date="2001-09-18" version="6.71o" by="&HO;">
+* 6.71o
+* Warning, if \hypercalcbp is used without
+  package calc or e-TeX.
+* Use of \hypercalcbp removed to avoid the above warning.
+* \usepackage{calc} added in testams.tex.
+</ENTRY>
+
+<ENTRY date="2001-09-18" version="6.71n" by="&HO;">
+* 6.71n
+* If package tex4ht is loaded, option tex4ht
+  is added to hyperref's option list
+  (Eitan Gurari &lt;gurari@cis.ohio-state.edu&gt;).
+* Bug fix added for Adobe Distiller 5
+  (Adobe bug number 466320, thanks to
+  D.P. Story and M. Vulis).
+* testams.tex fixed.
+</ENTRY>
+
+<ENTRY date="2001-08-19" version="6.71m" by="&HO;">
+* 6.71m
+* VTeX's \OpMode=3 is accepted the same way as 1 and 2.
+</ENTRY>
+
+<ENTRY date="2001-08-19" version="6.71l" by="&HO;">
+* 6.71l
+* OS part in VTeX's /Producer default corrected.
+</ENTRY>
+
+<ENTRY date="2001-08-19" version="6.71k" by="&HO;">
+* 6.71k
+* Default of /Producer string:
+  * updated for pdfTeX &gt;= 1.00a,
+  * pdfeTeX detection added,
+  * \VTeXOS added for VTeX &gt;= 7.45.
+</ENTRY>
+
+<ENTRY date="2001-08-16" version="6.71j" by="&HO;">
+* 6.71j
+* Translation of \autoref names to brazil/portuges by
+  Willie Dresler Leiva &lt;dreslerleiva@hotmail.com&gt;.
+* test/test0.dvi removed.
+* test/test7.tex: \usepackage{times} to get smaller test7.pdf.
+* Makefile: targets clean and distrib updated, $(RM) introduced.
+</ENTRY>
+
+<ENTRY date="2001-08-10" version="6.71i" by="&HO;">
+* 6.71i
+* Compatibility problem with xypic, introduced by
+  version 6.71g, fixed.
+</ENTRY>
+
+<ENTRY date="2001-07-03" by="&HO;">
+* Two small fixes of Makefile, provided by
+  Martin Maechler &lt;maechler@stat.math.ethz.ch&gt;.
+</ENTRY>
+
+<ENTRY date="2001-06-18" version="6.71h" by="&HO;">
+* 6.71h
+* Option pdfpagemode with empty argument sets
+  default behaviour (an alternative would be "UseNone")
+  in order to avoid the wrong name "/".
+</ENTRY>
+
+<ENTRY date="2001-05-26" version="6.71g" by="&HO;">
+* 6.71g
+* Contributions by Ross Moore &lt;ross@ics.mq.edu.au&gt; and
+  Daniel Steffen:
+  a. patch to  htexture.def  that adjusts the PDF@SetupDoc
+     so that it includes the setup information from  pdfmark.def
+     as well as the tokens needed by Textures itself.
+  b. changes to the \AtBeginDocument usage to implement
+     compatibility with the  ldump.sty  package.
+* Bug fix in multind support (forgotten backslash).
+* Fix for driver pdftex: \pdfpagewidth and \pdfpageheight
+  are not set, if \paperwidth or \paperheight are zero,
+  because it is likely that the settings of pdftex.cfg
+  are better than the heuristics of pdfTeX, if the dimen
+  lengths are zero.
+</ENTRY>
+
+<ENTRY date="2001-04-13" version="6.71f" by="&HO;">
+* 6.71f
+* Feature request of Jens-Uwe Morawski &lt;morawski@gmx.net&gt;:
+  \thispdfpagelabel introduced.
+</ENTRY>
+
+<ENTRY date="2001-04-05" version="6.71e" by="&HO;">
+* 6.71e
+* \@begindvi changed:
+  * \Hy@begindvi for hyperref stuff in \@begindvi introduced,
+  * small bug fix (first page with options
+    pdfpagelabels + pageanchor=false).
+</ENTRY>
+
+<ENTRY date="2001-04-05" version="6.71d" by="&HO;">
+* 6.71d
+* Fix for \@@Radio in hdvipdfm.def for AR5, provided
+  by D. P. Story &lt;story@uakron.edu&gt;.
+* Spell error corrected (\Hy@captionsspanish).
+* The fix of 6.71b for VTeX paper size was introduced
+  to solve problem with prosper, but because of new problem
+  with pdfscreen, the fix is redone.
+</ENTRY>
+
+<ENTRY date="2001-02-20" version="6.71c" by="&HO;">
+* 6.71c
+* Bug fix, introduced in 6.71b.
+</ENTRY>
+
+<ENTRY date="2001-02-20" version="6.71b" by="&HO;">
+* 6.71b
+* Fixes by Markus Kohm:
+  * Applying the \@addchap hack for scrreprt.
+  * Disabling the \@addchap hack for komascript
+    versions since 2001/01/01, because these
+    versions contain hyperref support.
+  * The \@ssect, \@schapter, ... hacks are also applied
+    to driver hypertex.
+* Fixes by Alex (VTeX):
+  * Correction of paper size setting.
+  * /Replace transition supported.
+</ENTRY>
+
+<ENTRY date="2001-01-27" by="&HO;">
+* nameref 2.19:
+  option final of showkeys now detected.
+</ENTRY>
+
+<ENTRY date="2000-11-05" version="6.71a" by="&HO;">
+* 6.71a
+* Two errorneous garbage lines removed, they cause
+  an infinite loop with \autoref{&lt;equation|footnote&gt;}.
+</ENTRY>
+
+<ENTRY date="2000-10-04" version="6.71" by="&SR;">
+* 6.71 CTAN release
+</ENTRY>
+
+<ENTRY date="2000-09-29" version="6.70y" by="&HO;">
+* 6.70y
+* Check of empty /Dest and /DestAnchor values
+  improved (\pdfmark).
+</ENTRY>
+
+<ENTRY date="2000-09-22" version="6.70x" by="&HO;">
+* 6.70x
+* Next typo fixed (option american).
+</ENTRY>
+
+<ENTRY date="2000-09-22" version="6.70w" by="&HO;">
+* 6.70w
+* \DeclareRobustCommand: \href, \url, \hyperimage,
+                         \hyperref
+* Typo fixed (option american).
+</ENTRY>
+
+<ENTRY date="2000-09-07" version="6.70v" by="&HO;">
+* 6.70v
+* Fix for option CJKbookmarks.
+</ENTRY>
+
+<ENTRY date="2000-09-06" version="6.70u" by="&HO;">
+* 6.70u
+* Fix of \pdf@rect and \@hyperfixhead for seminar
+* Default for \special@paper with values for
+  packages typearea or geometry.
+* Fix for seminar: true values for \pdf{h,v}origin
+  and \pdfpage{width,height} (Thanks to
+  Stephan Lehmke).
+* File `test/seminar.con' replaced by environment
+  `filecontents' in file `testslide.tex'.
+</ENTRY>
+
+<ENTRY date="2000-09-05" version="6.70t" by="&HO;">
+* 6.70t
+* Fixes for packages listings and listing.
+* Some \setbox...=\hbox replaced by color safer
+  constructs.
+* Patch for bookmarks with package cjk, enabled
+  with option `CJKbookmarks'.
+</ENTRY>
+
+<ENTRY date="2000-08-31" version="6.70s" by="&HO;">
+* 6.70s
+* URLs, broken by bibTeX, work now:
+    \url{%
+      http://www.%
+      dante.de/%
+    }
+  ("%^^M" are detected and removed, thanks
+  Stefan Ulrich &lt;ulrich@cis.uni-muenchen.de&gt;
+  for his suggestion.)
+* Checks added to hycheck.tex
+* \caption checks whether \@captype is defined.
+</ENTRY>
+
+<ENTRY date="2000-08-30" version="6.70r" by="&HO;">
+* 6.70r
+* Shorter PostScript names (/H.X) for drivers of dvips type.
+* Bug fix (hvpdfmark.def): /pdf@voff
+* New test file `hycheck.tex'.
+* Bug fix: latex/2318 fix added to \@caption.
+* Bug fix: \numberwithin
+</ENTRY>
+
+<ENTRY date="2000-07-30" version="6.70q" by="&HO;">
+* 6.70q
+* VTeX: further fixes.
+</ENTRY>
+
+<ENTRY date="2000-07-17" version="6.70p" by="&HO;">
+* 6.70p
+* \test@reftype fixed (used for \autoref).
+* autorefnames: german fixed, spanish added.
+* VTeX: additions and fixes from Alex Kostin.
+</ENTRY>
+
+<ENTRY date="2000-07-04" version="6.70o" by="&HO;">
+* 6.70o
+* Test files testbm{oe,sc,zc,yi,l}.tex merged to testbma.tex.
+* Added correct \@hyper@launch for hvtex.def (Alex Kostin).
+</ENTRY>
+
+<ENTRY date="2000-07-03" version="6.70n" by="&HO;">
+* 6.70n
+* Default for \Hy@pageheight changed from A4 to
+  setting via \hypercalcbp and \paperheight.
+</ENTRY>
+
+<ENTRY date="2000-07-02" version="6.70m" by="&HO;">
+* 6.70m
+* Feature added: \hypercalcbp (see hyperref.dtx).
+</ENTRY>
+
+<ENTRY date="2000-07-02" version="6.70l" by="&HO;">
+* 6.70l
+* Bugfix in onopen of 6.70k undoned. It will
+  be fixed in VTeX itself.
+</ENTRY>
+
+<ENTRY date="2000-07-01" version="6.70k" by="&HO;">
+* 6.70k
+* Own section for vtexpdfmark driver and
+  PostScript code fixed.
+* Bug in hvtex.def fixed: missing space in onopen special.
+</ENTRY>
+
+<ENTRY date="2000-07-01" version="6.70j" by="&HO;">
+* 6.70j
+* hyperref.ins for vtexpdfmark corrected.
+</ENTRY>
+
+<ENTRY date="2000-07-01" version="6.70i" by="&HO;">
+* 6.70i
+* Start of new VTeX driver that support pdfmark specials.
+  Option `vtexpdfmark', file `vtexmrk.def'
+  (contributed by Michael Vulis).
+* hyperref.ins: hvtexmrk.def added.
+</ENTRY>
+
+<ENTRY date="2000-06-30" version="6.70h" by="&HO;">
+* 6.70h
+* nohyperref: \hyperpage disabled.
+* Defaults for \autoref's names only define \...autorefname.
+* Problem with \hyper@hash fixed.
+* \nolinkurl added (variant of \url, that does not make
+   a link, eg. for use in the second argument of \href).
+* Problem fixed, that warning ``Label(s) may have changed.''
+  always appears with `babel' and `\bibcite'.
+* Update of htextures.def by Ross Moore &lt;ross@ics.mq.edu.au&gt;:
+  * the blue rectangles no longer appear with `colorlinks',
+  * pdfmark support,
+  * the built-in support for hypertex specials is
+    utilised.
+* Update of hvtex.def by Michael Vulis
+  &lt;support@micropress-inc.com&gt;:
+  * Bug in \Acrobatmenu fixed.
+  * Transition effects added (written by Alex Kostin).
+* pdfmark.def: Character slash `/' now works
+  in destination names (eg: "cite.OMG:formal/98-12-01").
+</ENTRY>
+
+<ENTRY date="2000-05-08" version="6.70g" by="&HO;">
+* 6.70g
+* \autoref names: To solve the uppercase problem,
+  first the names \...autorefname are used in \autoref.
+  Language options added for english and german languages.
+</ENTRY>
+
+<ENTRY date="2000-05-08" version="6.70f" by="&HO;">
+* 6.70f, nameref: 2.18
+* Anchor of foonotes raised.
+* showkey support (nameref.dtx: \label, \ref, \pageref, \nameref,
+  not checked and tested is \cite).
+* \@xfootnotetext calls \H@@mpfootnotetext, if called in minipage.
+* Bug \href{foo.pdf#bar} fixed, introduced in 6.70c.
+* Bug harvard/backref fixed ({\thepage}{\current@label}).
+</ENTRY>
+
+<ENTRY date="2000-04-12" version="6.70e" by="&HO;">
+* 6.70e
+* Empty reference causes crash of distiller, therefore
+  empty references replaced by UNDEFINED
+  (pdftex, pdfmark, dvips, vtex, dvipdfm).
+</ENTRY>
+
+<ENTRY date="2000-04-11" version="6.70d" by="&HO;">
+* 6.70d
+* hvtexhtm detected as default driver.
+* Bug fix (undefined \pageref within \ifthenelse).
+</ENTRY>
+
+<ENTRY date="2000-03-31" version="6.70c" by="&HO;">
+* 6.70c
+* \hyper@normalise: %, \%, #, \# expands to catcode `other'
+  characters, \url{http://foo.bar/%2e_~#hash} should work.
+* \pdfBorderAttrs removed and replaced by
+  "/Border [\@pdfborder]".
+  If option colorlinks is set, the border is set to zero
+  immediately, not \AtBeginDocument (for people who
+  want to have both borders and colored links).
+</ENTRY>
+
+<ENTRY date="2000-03-31" version="6.70b" by="&HO;">
+* 6.70b
+* Definition of \x remains unchanged (bug introduced in 6.67g).
+* Packages titlesec and titletoc support by Javier Bezos
+  &lt;jbezos@arrakis.es&gt;.
+* \MP added (\pdfbookmarkstring, htex4ht.cfg).
+* All files of hyperref.dtx now identify themselves
+  by \Provides{File,Package}.
+* Start with nohyperref.sty (SR), toc-level addtions by HO.
+* Updated: testbm{gl,u}.tex
+</ENTRY>
+
+<ENTRY date="2000-03-23" version="6.70a" by="&HO;">
+* 6.70a
+* New option: pdfpageduration for the /Dur key
+  in the pdf page object, the value is empty or
+  contains the length in seconds (real).
+  Supported drivers: pdftex, pdfmark.
+* New option: pdfpagehidden for the /Hid key
+  in the pdf page object, the value is a boolean.
+  Supported drivers: pdftex, pdfmark.
+</ENTRY>
+
+<ENTRY date="2000-03-22" version="6.70" by="&SR;">
+* 6.70 CTAN release (TeX Live 5)
+</ENTRY>
+
+<ENTRY date="2000-03-22" version="6.69f" by="&HO;">
+* 6.69f
+* \@ifundefined{thechapter} changed to \@ifundefined{chapter}
+  because of compatibility with french.sty.
+* xr-hyper.sty: \xdef changed to \protected@xdef
+  (Stephan Lehmke &lt;Stephan.Lehmke@cs.uni-dortmund.de&gt;).
+* hvtex.def: default for pdfview changed to xyz.
+</ENTRY>
+
+<ENTRY date="2000-03-07" version="6.69e" by="&HO;">
+* 6.69e
+* Fix for babel/3174 (\@save@activestrue in \hyper@normalise).
+</ENTRY>
+
+<ENTRY date="2000-03-02" version="6.69d" by="&HO;">
+* 6.69d
+* Fix for \texttilde with babel's spanish, estonian, galician
+* Expandable versions without link of \ref and \pageref:
+  \hypergetref and \hypergetpageref.
+* \ifthenelse: \ref and \pageref use the \hyperget... variants.
+* \hyper@chars added in \hyper@anchor of drivers
+  hypertex, vtexhtml, and vtex.
+* Forms: checkboxsymbol introduced (Michael Wiedmann
+  &lt;michael.wiedmann@detewe.de&gt;).
+* Redefinitions in \appendix are made globally
+  (Tim J Harding &lt;Tim.Harding@quadstone.com&gt;).
+* If \chapter is undefined, it remains now undefined.
+</ENTRY>
+
+<ENTRY date="2000-01-22" version="6.69c" by="&HO;">
+* 6.69c
+* D. P. Story &lt;story@uakron.edu&gt; has adapted forms
+  part of pdfTeX to dvipdfm.
+</ENTRY>
+
+<ENTRY date="2000-01-21" version="6.69b" by="&HO;">
+* 6.69b
+* \@writetorep: destination and level check added.
+* \addcontentsline: \phantomsection added, if no destination.
+</ENTRY>
+
+<ENTRY date="2000-01-19" version="6.69a" by="&HO;">
+* 6.69a
+* Bug fixed: tabularx+\maketitle+\footnote.
+* LPPL 1.2, manifest.txt updated.
+</ENTRY>
+
+<ENTRY date="2000-01-18" version="6.69" by="&SR;">
+* 6.69 CTAN release
+* Missing test files added.
+</ENTRY>
+
+<ENTRY date="2000-01-17" version="6.68a" by="&HO;">
+* 6.68a
+* pdfpagescrop works now with dvipdfm (D. P. Story
+  &lt;story@uakron.edu&gt;).
+</ENTRY>
+
+<ENTRY date="2000-01-13" version="6.68" by="&SR;">
+* 6.68 CTAN release
+</ENTRY>
+
+<ENTRY date="2000-01-11" version="6.67h" by="&HO;">
+* 6.67h
+* pdfpagemode: /None corrected to /UseNone.
+* \pdfstringdef: \halign disabled (because of errors by #).
+* Option draft: bookmarks are disabled (thanks to Michael Vulis).
+* Outdated bookmark documentation removed.
+* hvtex.def: \media{width,height} supported.
+* Space after \@pdfhighlight inserted (hpdftex.def).
+* Bug fixed in redefinition of \@chapter.
+* Small bug fixed in \Hy@boolkey.
+</ENTRY>
+
+<ENTRY date="1999-12-01" version="6.67g" by="&HO;">
+* 6.67g
+* test/phys332-{1,2}.jpg renamed to test/phys{1,2}.jpg
+* Improved \catcode check and settings at the beginning
+  of hyperref.sty.
+* [#1]-Bug fixed by [{#1}] in the definition of \htmlref
+  and \@newctr and in many uses of \pdfmark.
+</ENTRY>
+
+<ENTRY date="1999-11-24" version="6.67f" by="&HO;">
+* 6.67f
+* Test files checked by Sebastian Rahtz.
+* Unwanted spaces removed (dviwindo, outline).
+* Redone: \def\texorpdfstring to \newcommand*
+* Other implementation of \HyPSD@tocsection by Michael Downes.
+* ps2pdf: Default for pdfborder: 0 0 1
+* \belowpdfbookmark added (setting bookmark below current
+  level without changing it).
+* \@ChoiceMenu: coiled "{\if}\fi" cleared to "{\if\fi}".
+* Fix for \citeN and \shortciteN of package chicago.
+</ENTRY>
+
+<ENTRY date="1999-11-09" version="6.67e" by="&HO;">
+* 6.67e
+* Detection of VTeX PS mode (OpMode=2).
+* Added \tocsection fix for AMS classes
+  (thanks to Michael Downes/Tom Kacvinsky).
+* Changed \newcommand*{\texorpdfstring} to \def\texorpdfstring
+  (a wish of Tom Kacvinsky).
+* INSTALLDIRVAR added to makefile (default: TEXMFMAIN).
+</ENTRY>
+
+<ENTRY date="1999-11-09" version="6.67d" by="&HO;">
+* 6.67d
+* Unwanted space removed in \hyper@linkstart (hvtex.def).
+* &lt;hvtex,hvtexhtml&gt; renamed to &lt;vtex,vtexhtml&gt;
+* If no driver is given, VTeX in PDF mode is now detected.
+</ENTRY>
+
+<ENTRY date="1999-11-08" version="6.67c" by="&HO;">
+* 6.67c
+* hog.{eps,pdf} added for test0.tex
+* Bug in \Acrobatmenu of hvtex.def fixed.
+</ENTRY>
+
+<ENTRY date="1999-11-04" version="6.67b" by="&HO;">
+* 6.67b
+* New feature: With option `pdfpagelabels' the
+  /PageLabels entry in the /Catalog object of PDF 1.3
+  is supported.
+  With `pdftex' and `vtex' one TeX run suffices,
+  other pdf driver, that work via \special, need
+  two TeX runs.
+* Option `4' removed, because it is not used.
+</ENTRY>
+
+<ENTRY date="1999-10-23" version="6.67a" by="&HO;">
+* 6.67a
+* \Hy@boolkey with optional argument for option name, if it
+  is different.
+* hpdftex.def: \pdfrefform\OBJ@acroform, ... added.
+</ENTRY>
+
+<ENTRY date="1999-10-18" version="6.67" by="&HO;">
+* 6.67 public release on CTAN
+</ENTRY>
+
+<ENTRY date="1999-10-14" version="6.66m" by="&HO;">
+* 6.66m
+* makefile fixes.
+</ENTRY>
+
+<ENTRY date="1999-10-13" version="6.66l" by="&HO;">
+* 6.66l
+* dvipdfm driver updated by Sebastian Rahtz.
+* LPPL 1.1, manifest.txt added.
+* \hyperlinkfileprefix for Ross Moore.
+* Option baseurl disabled after first use.
+* Option debug = verbose.
+* Used global options are removed from the unused option list.
+* \pdfstringdef: \leavevmode disabled,
+  \guill@spacing (frenchb.ldf) properly defined.
+* Directory structure: test/ and doc/
+* Slides and paper of Heiko's talk at EuroTeX'99 added in doc/.
+</ENTRY>
+
+<ENTRY date="1999-10-07" version="6.66k" by="&HO;">
+* 6.66k
+* hyperref.ins: eight times faster by \generate (docstrip 2.4)
+  (Suggestion by Werner Lemberg &lt;wl@gnu.org&gt;).
+* backref.dtx 1.19:
+  * \backcite ignores entries that are already present.
+  * Some cosmetic clean up.
+* nameref.dtx 2.17: Some cosmetic clean up.
+* \Hy@boolkey with error checking.
+* Code for options backref and pagebackref rewritten.
+* Options are disabled after use.
+</ENTRY>
+
+<ENTRY date="1999-10-05" version="6.66j" by="&HO;">
+* 6.66j
+* foiltex: \ext@table, \ext@figure defined.
+</ENTRY>
+
+<ENTRY date="1999-10-05" version="6.66i" by="&HO;">
+* 6.66i
+* \pdfstringdef: support of shorthands of some babel
+  languages added.
+* \ij, \IJ added in PD1 and PU encoding for Dutch.
+</ENTRY>
+
+<ENTRY date="1999-10-05" version="6.66h" by="&HO;">
+* 6.66h
+* Making destination for \addcontentsline in
+  \@chapter, if \c@secnumdepth&lt;0, \frontmatter, or \backmatter.
+* `(' and `)' added to \Hy@{Set,Restore}Catcodes.
+</ENTRY>
+
+<ENTRY date="1999-10-01" version="6.66g" by="&HO;">
+* 6.66g
+* \index{test|(} supported.
+</ENTRY>
+
+<ENTRY date="1999-09-28" version="6.66f" by="&HO;">
+* 6.66f
+* options.tex with bookmarkstype
+* Bug in \autoref fixed: chapter/appendix detection
+* \\ and \newline produces a warning in \pdfstringdef
+* draft=false should work.
+</ENTRY>
+
+<ENTRY date="1999-09-14" version="6.66e" by="&HO;">
+* 6.66e
+* Unwanted space in \HyPsd@LetUnexpandableSpace removed.
+</ENTRY>
+
+<ENTRY date="1999-09-13" version="6.66d" by="&HO;">
+* 6.66d
+* \@footnotemark is also disabled, if package
+  tabularx is loaded.
+</ENTRY>
+
+<ENTRY date="1999-09-10" version="6.66c" by="&HO;">
+* 6.66c
+* Bug fix: Definition of \Hy@SaveLastSkip is moved before \MaybeStopEarly.
+</ENTRY>
+
+<ENTRY date="1999-09-10" version="6.66b" by="&HO;">
+* 6.66b
+* Starting with option warnings, if the option is
+  set at a wrong place.
+* Support for package multind.
+* \textnumero added to testbmu.tex.
+</ENTRY>
+
+<ENTRY date="1999-09-08" version="6.66a" by="&HO;">
+* 6.66a
+* Catcodes are set at begin of package and restored at the end.
+  (Bug fix: ltxdoc.cls makes '|' active...)
+</ENTRY>
+
+<ENTRY date="1999-09-08" version="6.66" by="&SR;">
+* Release 6.66
+</ENTRY>
+
+<ENTRY date="1999-09-01" version="6.65e" by="&HO;">
+* 6.65e
+* Test for \XR@addURL instead of the package name, because
+  they exist different versions of xr and xr-hyper.
+</ENTRY>
+
+<ENTRY date="1999-08-31" version="6.65d" by="&HO;">
+* 6.65d
+* Bug fixed (use of \renewcommand in \pdfstringdefDisableCommands)
+* Weak support for \ref and \pageref in bookmarks added.
+* Made bookmark code less slow (testbmu.tex compiles 20% faster):
+  \HyPsd@ConvertToUnicode rewritten, \HyPsd@string introduced, ...
+* Bug detected by Ian Bruce: hyperref has a different spacing
+  with theorem environments.
+  Cause: The \lastskip value is destroyd by the specials that
+  set the anchor.
+  Fix: Saving the \lastskip value before the specials, and after
+  setting \nobreak\{h,v}skip-\lastskip\{h,v}skip\lastskip.
+  See \Hy@SaveLastskip - \Hy@RestoreLastskip.
+  (most drivers: \hyper@anchor, \hyper@anchorstart - \hyper@anchorend;
+  pdftex: \new@pdflink; dvipdfm: \@pdfm@dest)
+* \CYRCHDSC and \cyrchdsc corrected to \CYRCHRDSC and \cyrchrdsc
+  (Thanks to Vladimir Volovich &lt;vvv@vvv.vsu.ru&gt;)
+* Bug fixed: \HAR@checkcitations redefined to add \hyper@@link.
+  Without this the "Changed labels" warning would always appear.
+</ENTRY>
+
+<ENTRY date="1999-08-24" version="6.65c" by="&HO;">
+* 6.65c
+* Unicode bookmark support 0x0000..0x04FF.
+* testbmu.tex: detailed test file for Unicode bookmarks.
+* Default setting of \@pdfborder with \providecommand,
+  so package option `pdfborder' does work now.
+* \hv@pdf@char: support of octal codes with VTeX
+  versions greater or equal 6.50.
+* Typo in option 'vtex' corrected.
+* Again backref 1.18.
+* Various drivers (dviwindo, hypertex, ...): \leavevmode in
+  \hyper@linkurl, \hyper@linkfile, ... added where missing.
+* testform2.tex renamed to testfor2.tex (8+3 file name).
+</ENTRY>
+
+<ENTRY date="1999-08-17" version="6.65b" by="&HO;">
+* 6.65b
+* Unicode bookmark support, starting with Cyrillic.
+</ENTRY>
+
+<ENTRY date="1999-08-14" version="6.65a" by="&HO;">
+* 6.65a
+* Module pdfstringdef: bug (\space) and typo fixed.
+</ENTRY>
+
+<ENTRY date="1999-08-12" version="6.65" by="&SR;">
+* RELEASE 6.65
+</ENTRY>
+
+<ENTRY date="1999-08-10" version="6.64h" by="&SR;">
+* 6.64h
+* Moved some sections to before \MaybeStopEarly. Otherwise
+   implicit=false mode never saw some important stuff.
+* hyperref.dtx: added \href to list of ignored commands in
+  bookmarks. cleaned up VTEX stuff as per diagnosis by Heiko
+</ENTRY>
+
+<ENTRY date="1999-08-06" version="6.64g" by="&SR;">
+* 6.64g
+* hyperref.dtx: typos and little fixes from Heiko
+* added another special thing for typexml
+</ENTRY>
+
+<ENTRY date="1999-07-29" by="&SR;">
+* version 6.64c. hyperref.dtx: some typos corrected, and form
+  primitives of pdftex
+</ENTRY>
+
+<ENTRY date="1999-07-28" by="&SR;">
+* cut out any footnote work if tabularx is
+  loaded. add some form stuff from D P Story
+</ENTRY>
+
+<ENTRY date="1999-07-28" by="&SR;">
+* version 6.64b
+* hyperref.dtx:
+Changes from Heiko:
+Module pdfstringdef:
+* Small bug in \HyPsd@ProtectSpaces/HyPsd@RemoveMask fixed.
+* \@ifnextchar because of \futurelet disabled.
+* Disabling of \@ifstar removed, because it calls \@ifnextchar.
+* \@protected@testopt disabled to show the problematic macro in
+  the warning message (commands with an optional argument).
+* \pdfstringdefWarn#1 prints a warning message with token #1,
+  it can be used in code that disables macros by the user.
+* \pdfstringdefDisableCommands#1 is a easier interface for
+  the hook \pdfstringdefPreHook. It appends its argument to the
+  meaning of \pdfstringdefPreHook. The character @ can be used
+  in command names.
+* \penalty is removed silently.
+* \kern and \hskip are detected with a warning:
+  * At the beginning or, if the value is less than 1ex,
+    they are removed.
+  * Else they are replaced by a space.
+
+Fix for \pdfpage(s)attr:
+* Setting the /CropBox with \pdfpagesattr:
+  The old meaning of \pdfpagesattr is appended.
+* Initial value of \@pdfpagestransition is \relax
+  to differentiate between a unused or empty option.
+* \hyper@pagetransition (hpdftex):
+  * The old entry /Trans is removed from \pdfpageattr.
+  * The remaining old meaning retains and
+  * the new /Trans is appended.
+* \hyper@pagetransition (pdfmark):
+  * \if-switch for \relax added to get the old behaviour.
+  ? (1) Need to delete an old entry?
+  ? If 1=yes, how to delete?
+</ENTRY>
+
+<ENTRY date="1999-07-21" by="&SR;">
+* version 6.64a, corrected typos in VTEX stuff
+</ENTRY>
+
+<ENTRY date="1999-07-19" version="6.64" by="&SR;">
+* RELEASE 6.64
+* hyperref.dtx: support pdftex &gt; 0.14 with new primitive names
+* hyperref.dtx: bookmark patches from Stephan Haller, to allow
+  local changes of open status
+* hyperref.dtx: small patche for \seteqlabel. obscure problem in
+  amstex compatibility mode, found by Michael Downes.
+* hyperref.dtx: patches to VTEX bookmark processing, from Taco
+  Hoekwater, following patches by Denis Girou.
+</ENTRY>
+
+<ENTRY date="1999-07-08" version="6.63" by="&SR;">
+* RELEASE 6.63
+* hyperref.dtx: added "typexml" option for typexml package
+* Some cleanups from Heiko
+</ENTRY>
+
+<ENTRY date="1999-06-29" version="6.62" by="&SR;">
+* RELEASE 6.62
+* hyperref.dtx: (from Heiko), gobble \discretionary in bookmarks
+</ENTRY>
+
+<ENTRY date="1999-06-27" version="6.61" by="&SR;">
+* RELEASE 6.61
+* hyperref.dtx: for Babel compatibility, use its  \@safe@actives
+  switch in cross-refs (also in nameref.dtx), plus be nicer about
+* in \pdfstringdef (from Heiko). Move \phantomsection to main package.
+</ENTRY>
+
+<ENTRY date="1999-06-11" version="6.60" by="&SR;">
+* RELEASE 6.60
+* nameref.dtx: changed \Sectionformat to a \providecommand, as it
+  now comes \AtBeginDocument
+</ENTRY>
+
+<ENTRY date="1999-06-10" by="&SR;">
+* hyperref.dtx: * Increment of version letter to 6.58f
+* hyperref.dtx: add \phantomsection, to make a section-like anchor
+  Missing {} after \@ifpackageloaded{subfigure}
+* nameref.dtx define \section@level for pdfscreen
+From Heiko:
+* lastpage fix (added page anchor name, ...).
+* documentation for lastpage support added.
+* \pdfstringdef: \Generic{Error,Warn,Info} disabled while
+  expanding.
+* \pdfstringdef: french fix changed to get rid of hard coded
+  numbers for the guillemets.
+</ENTRY>
+
+<ENTRY date="1999-06-09" by="&SR;">
+* hyperref.dtx: * Increment of version letter to 6.58b
+Loads of cleanups by Heiko:
+ * \def\@pdfpagecrop{} removed, because it isn't used further
+ * Loading of \Hy@driver part replaced (see previous email)
+ * Old name \Hy@PDFDef found, replaced by \pdfstringdef
+ * Module \pdfstringdef: Use of prefix "\HyPsd@" (it's shorter
+  and easier to read than "\Hy@psd@".
+ * \let\add@accent\HyPsd@add@accent instead of the definition
+   in \pdfstringdef (saving run time).
+ * Corrected to \begin{macro}{\HyPsd@ITALCORR}.
+ * old ifbookmark replaced by texorpdfstring in description.
+ * Missing lines added in pd1enc.def (\",\r,\v,\.,\c)
+ * Bugs in  \define@key{Field}{maxlen}{\Fld@maxlen=#1}
+        and  \define@key{Field}{menulength}{%
+ * Changed \orig@appendix to \Hy@orig@appendix.
+     \orig@maketitle to \Hy@orig@maketitle.
+ * Replaced \global\def --&gt; \gdef
+ * Replaced \global\edef --&gt; \xdef
+ * Starting with identing (length 2) and checking the line length.
+</ENTRY>
+
+<ENTRY date="1999-06-08" by="&SR;">
+* hyperref.dtx. make "subfigure" force hypertexnames=false; remove
+  exactdef option (obsolete), and set default of 0 for bookmark
+  level of unknown objects (\toclevel@...)
+* a lot of cleaning up of code layout, requested by Heiko, and bug
+  fixing related to \addcontentsline
+</ENTRY>
+
+<ENTRY date="1999-05-30" by="&SR;">
+* backref.dtx: added debugging/verbose  output
+* hyperref.dtx: considerable reworking of \addcontentsline, with
+  wide-reaching effects
+* Some more PD1 fixes from Heiko. Stop using \@foo, too common a
+  choice by others
+* Some fixes for TeX4ht, from Eitan Gurari
+</ENTRY>
+
+<ENTRY date="1999-05-19" version="6.57" by="&SR;">
+* RELEASE 6.57
+* hyperref.dtx: a good many missing or extra spaces in and around
+  line endings were found by Heiko and corrected.
+</ENTRY>
+
+<ENTRY date="1999-05-18" by="&SR;">
+* hyperref.dtx: fixes to \textLF etc from Heiko
+</ENTRY>
+
+<ENTRY date="1999-05-17" by="&SR;">
+* hyperref.dtx: Raise equation anchors by \baselineskip;
+     dangerous, but its the only hope for XYZ views
+* Some fixes for tex4ht from Eitan Gurari
+* stop defaulting papersize \special
+* make bookmarks use tocdepth not secnumdepth
+* Some fixes for AMS equations, will probably break something!
+* some characters changed, and some added, in PD1
+  encoding, to allow for silly behaviour of Acrobat, and to help
+  Poles (via Wojciech A. Myszka &lt;W.Myszka@immt.pwr.wroc.pl&gt;)
+
+* backref.dtx: added support for chicago.sty (requested by Alan Reese)
+</ENTRY>
+
+<ENTRY date="1999-05-14" by="&SR;">
+* hyperref.dtx: added new option hypertexnames. if it is *false*,
+  unique arbitrary names are given for anchors and links, to avoid
+  any conflict caused by counters being redefined etc. Long overdue.
+* Guillemet fix from Heiko.
+</ENTRY>
+
+<ENTRY date="1999-04-13" version="6.56" by="&SR;">
+* RELEASE 6.56
+* hyperref.dtx: missed a \if@filesw (Heiko spotted), and removed
+  the &lt;repere&gt; section
+</ENTRY>
+
+<ENTRY date="1999-04-12" version="6.55" by="&SR;">
+* RELEASE 6.55
+* hyperref.dtx: when the run: type of URL is used, a \relax creeps
+  into the output with pdfmark drivers. corrected.
+* Add some missing \if@filesw code (from Heiko)
+* Proper dummy initialisation of \pdfbookmark
+* Correct serious error over detecting whether seminar is being used
+  (added new test, and defined \ifhy@seminarslides)
+* If implicit=false is used, ensure that \PDF@FinishDoc (to add
+  DOCINFO stuff) is still done, \AtBeginDocument (it was tied to the
+  redefinition of \@thehead)
+</ENTRY>
+
+<ENTRY date="1999-03-31" version="6.54" by="&SR;">
+* RELEASE 6.54
+* hyperref.dtx: fixes from Heiko in pdf doc encoding stuff
+</ENTRY>
+
+<ENTRY date="1999-03-30" version="6.53" by="&SR;">
+* RELEASE 6.53
+* hyperref.dtx: complete replacement of Heiko's part by nicely
+  documented dtx....
+
+Name changes:
+\newif\ifPDFbookmark ==&gt; \newif\ifHy@pdfstring (internal name)
+\ifbookmark          ==&gt; \texorpdfstring (user command)
+\Hy@PDFDef           ==&gt; \pdfstringdef (user or package command)
+
+Heiko summarizes the features of this \Hy@PDFDef:
+* PD1 encoding
+* Unknown glyphs don't cause an infinite error loop now (see
+  bug report few weeks ago in pdftex@tug.org).
+* Grouping characters can be used, they are removed silently,
+  so things like "\TeX{}" can be written.
+* With this version of \Hy@PDFDef the option exactdef can be
+  removed now because of the warning messages.
+* All non-expandible commands like unknown glyphs or stomach
+  commands are catched by this version: a comprehensive
+  warning message is produced and the tokens are removed.
+* xspace support.
+* Support for unbalanced parentheses, hyparen.sty is now obsolete.
+</ENTRY>
+
+<ENTRY date="1999-03-26" version="6.52" by="&SR;">
+* RELEASE 6.52
+* hyperref.dtx: Wherever "naturalnames" is used, disable
+  \textlatin (from Babel 3.6k). Thanks to Felix Neubauer
+  &lt;Felix.Neubauer@gmx.net&gt;
+* Fixes for seminar (Denis Girou &lt;denis.girou@idris.fr&gt;)
+</ENTRY>
+
+<ENTRY date="1999-03-12" version="6.51" by="&SR;">
+* RELEASE 6.51 (unreleased)
+* hyperref.dtx: yet more bookmark magic from Heiko Oberdiek!
+</ENTRY>
+
+<ENTRY date="1999-02-21" by="&SR;">
+* hyperref.dtx: trap a URL type of "run:" and attempt to use it to
+  launch an application. In dvips, dvipdfm and pdftex drivers; it
+  seems to work in Windows. By default it translates to file:
+</ENTRY>
+
+<ENTRY date="1999-02-17" by="&SR;">
+* Changed the copyright notice
+* hyperref.dtx: some (more) corrections from Heiko
+</ENTRY>
+
+<ENTRY date="1999-02-16" version="6.50" by="&SR;">
+* RELEASE 6.50
+* hyperref.dtx: some corrections from Heiko
+</ENTRY>
+
+<ENTRY date="1999-02-14" version="6.49" by="&SR;">
+* RELEASE 6.49
+* hyperref.dtx: remove grouping around PDF@SetupDoc, allowing
+  \pdfpagesttr in pdftex to work properly (ie CropBox)
+  move PD@FinishDoc to happen at start of dvi (in page header);
+  this allows for documents ending in \clearpage in which case the
+  stuff never happened. sigh.
+</ENTRY>
+
+<ENTRY date="1999-02-06" version="6.48" by="&SR;">
+* RELEASE 6.48
+* hyperref.dtx: add option "naturalnames", which makes hyperref use
+  eg \thesection instead of \theHsection. may help some people.
+* Add option "verbose" to provide a debugging hook.
+* Set some more commands to no-op in bookmarks.
+* Remove all pdfinfo from PDF@SetupDoc, and transfer to new
+  PDF@FinishDoc, which happens \AtEndDocument. This allows
+  \maketitle to do \hypersetup{pdftitle=\@title} etc
+* Rearranged some lines of code.
+</ENTRY>
+
+<ENTRY date="1999-02-01" version="6.47" by="&SR;">
+* RELEASE 6.47
+* hyperref.dtx: removed code from dvipdfm by mistake. restored.
+</ENTRY>
+
+<ENTRY date="1999-01-27" version="6.46" by="&SR;">
+* RELEASE 6.46
+* hyperref.dtx: add support for colorlinks to dvipdfm driver
+(missed out by mistake before), and \AcrobatMenu
+</ENTRY>
+
+<ENTRY date="1999-01-20" by="&SR;">
+* hyperref.dtx:  changed \texttilde to \textasciitilde; removed
+  \textbeta
+</ENTRY>
+
+<ENTRY date="1998-12-17" version="6.45" by="&SR;">
+* RELEASE 6.45
+* hyperref.dtx: make \footnotemark and \footnotetext use original
+  non-hyper definitions. from pzezza@facec.cce.unifi.it.
+</ENTRY>
+
+<ENTRY date="1998-12-07" version="6.44" by="&SR;">
+* RELEASE 6.44
+* hyperref.dtx: corrected bookmark writing errors. again...
+  removed some spurious \makeat s. removed a spurious { in tex4ht
+</ENTRY>
+
+<ENTRY date="1998-12-01" version="6.43" by="&SR;">
+* RELEASE 6.43
+* hyperref.dtx: fixes for \addcontentsline from
+  kevin@rodin.wustl.edu (Kevin Ruland)
+- make \EndOfPackage things happen \AtBeginDocument instead, for
+  consistency
+- fixes to hy@temp from Heiko
+- added optional first parameter to \BOOKMARK in order to provide
+  dvipdfm with what it wants
+</ENTRY>
+
+<ENTRY date="1998-11-27" by="&SR;">
+* hyperref.dtx: added dvipdfm driver from
+  Mark Wicks &lt;mwicks@kettering.edu&gt;.
+  cleaned up more bookmark code (from Heiko)
+</ENTRY>
+
+<ENTRY date="1998-11-11" version="6.42" by="&SR;">
+* RELEASE 6.42
+* hyperref.dtx: replaced bookmark and docinfo writing with new code
+  from Heiko Oberdiek which seems to do a better job
+* Support for lastpage package.
+</ENTRY>
+
+<ENTRY date="1998-11-03" version="6.41" by="&SR;">
+* RELEASE 6.41
+* hyperref.dtx:  cleaned up test for existence of pdftex again, to
+  avoid trampling on other packages. Thomas Esser and David Carlisle
+  pointed out the mess.
+</ENTRY>
+
+<ENTRY date="1998-11-01" version="6.40" by="&SR;">
+* RELEASE 6.40
+* hyperref.dtx:  checked various drivers, and had to introduce mew
+  docstrip guards to add some pdfmark to dviwindo. dvipdf broken, so
+  removed from hyperref.ins. Thanks to Thomas Esser for testing so
+  quickly.
+</ENTRY>
+
+<ENTRY date="1998-10-30" version="6.39" by="&SR;">
+* RELEASE 6.39
+* hyperref.dtx: serious error in where colorlinks and frenchlinks
+  were checked. now all at EndOfPackage, after driver load.
+</ENTRY>
+
+<ENTRY date="1998-10-23" version="6.38" by="&SR;">
+* RELEASE 6.38
+* hyperref.dtx:  rework handling of driver options so that driver
+  is only loaded at the end, with whatever is the latest name given
+  in config file, document etc. (Thanks to Thomas Esser for suggestion)
+</ENTRY>
+
+<ENTRY date="1998-10-17" version="6.37" by="&SR;">
+* RELEASE 6.37
+* hyperref.dtx: back out change of link to use Action dictionary,
+  it seems to break some Distiller setups, and Ghostscript
+</ENTRY>
+
+<ENTRY date="1998-10-06" by="&SR;">
+* hyperref.dtx: make all eqnarray stop being an anchor, as it may
+  break over pages.
+* Whoops. PDF@SetupDoc was after \MayBeStopEarly...
+</ENTRY>
+
+<ENTRY date="1998-09-24" version="6.36" by="&SR;">
+* RELEASE 6.36
+* hyperref.dtx: even if bookmark writing disable, \pdfbookmark still
+  needs to make anchors
+</ENTRY>
+
+<ENTRY date="1998-09-22" by="&SR;">
+* hyperref.dtx: xdef not edef in \@writetorep (thanks to Christian
+  Kumpf &lt;kumpf@igd.fhg.de&gt;)
+</ENTRY>
+
+<ENTRY date="1998-09-12" by="&SR;">
+* hyperref.dtx: added option pdfnumberbookmarks to include section
+  numbers in PDF bookmarks
+</ENTRY>
+
+<ENTRY date="1998-09-07" version="6.35" by="&SR;">
+* RELEASE 6.35
+* hyperref.dtx: added DOCVIEW stuff to dviwindo driver
+  better check for playing in head, means no more overfull hbox
+  messages
+</ENTRY>
+
+<ENTRY date="1998-09-04" by="&SR;">
+* hyperref.dtx: added DOCVIEW stuff to dvipsone driver (pointed
+  out by D P Story)
+</ENTRY>
+
+<ENTRY date="1998-09-03" by="&SR;">
+* hyperref.dtx:
+  a) added new option linktocpage to make TOC have links on page
+     numbers
+  b) rewrote or checked all uses of \colorlink, so that they
+     have a corresponding \hy@endcolorlink (was \hyper@resetcolor),
+     and so are in a \begingroup ... \endgroup group (requested by
+     Patrick Daly, for consistency if nothing else). Renamed
+     \colorlink to \hy@colorlink
+</ENTRY>
+
+<ENTRY date="1998-09-02" version="6.34" by="&SR;">
+* RELEASE 6.34
+* hyperref.dtx: chivvied around pdfview so that it worked, and did
+  not override hyperref.cfg. concept of \@pdfviewparam for size
+  parameters
+</ENTRY>
+
+<ENTRY date="1998-08-11" version="6.33" by="&SR;">
+* RELEASE 6.33
+* hyperref.dtx: fix up some forms problems for Laurent Guillope
+</ENTRY>
+
+<ENTRY date="1998-08-08" by="&SR;">
+* hyperref.dtx: add option `implicit' to allow (with value of
+false) for no redefinition of LaTeX internals. Re-ordered some
+code sections to allow for this.
+</ENTRY>
+
+<ENTRY date="1998-08-02" by="&SR;">
+* hyperref.dtx: corrected some typos and mistakes in form support
+</ENTRY>
+
+<ENTRY date="1998-07-20" by="&SR;">
+* hyperref.dtx: change check of empty head (from test by Denis
+  Roegel)
+</ENTRY>
+
+<ENTRY date="1998-07-06" version="6.32" by="&SR;">
+* RELEASE 6.32
+* backref.dtx: better test for natbib-like styles
+* hyperref.dtx: add natbib link break macro
+* dvipsone: use same pdfsetup as dviwindo
+</ENTRY>
+
+<ENTRY date="1998-06-27" version="6.31" by="&SR;">
+* RELEASE 6.31
+* hyperref.dtx: correct order of part and writetorep
+* hyperref.dtx: more fixes from MicroPress for their driver. zero
+  width hidden fields -&gt; width of 1sp. Piet van Oostrum's additions
+  to bookmark writing code.
+* add support for "pdfstartview={}", to get `default'
+  magnification. hyper@linkfile for pdftex always does a user action
+  now
+* Patrick Daly's addition of \ifvmode\nobreak\fi in pdftex start
+  anchor fixes his section problems, but is not entirely general.
+</ENTRY>
+
+<ENTRY date="1998-06-25" by="&SR;">
+* hyperref.dtx: fix NoHyper bug *properly* this time.
+</ENTRY>
+
+<ENTRY date="1998-06-25" version="6.30" by="&SR;">
+* RELEASE 6.30
+* hyperref.dtx: zero width hidden fields. support pdfstartview of
+  {}. allow NewWindow false with pdfnewwindow option. correct bug in
+  default value of centerwindow and fitwindow. fix bug in NoHyper.
+  fix bug in \pageref*.
+* Add \autoref macro to generate tagged references.
+</ENTRY>
+
+<ENTRY date="1998-06-24" version="6.29" by="&SR;">
+* RELEASE 6.29
+* hyperref.dtx: add \ref* and \pageref* to produce unlinked
+  references, and fix bug in label@hyperref.
+  add page transitions for pdftex driver
+</ENTRY>
+
+<ENTRY date="1998-06-23" by="&SR;">
+* hyperref.dtx: add support for page transitions in pdfmark driver
+* hyperref.dtx: add key pdfpagelayout
+* hyperref.dtx: revise form lists, now support Display=Value syntax
+* hyperref.dtx: change test for whether natbib-like code is
+  present (if NAT@parse is defined), since things like aguplus dont
+  load natbib per se, but use the same code.
+</ENTRY>
+
+<ENTRY date="1998-06-21" by="&SR;">
+* hyperref.dtx: if form list value starts with a [, its assumed to
+  be an array of two strings, display and use values.
+* hyperref.dtx: add `readonly' key for pdf forms, and hidden for
+  HTML
+* hyperref.dtx: restructure form drivers to isolate common code
+  for pdftex and pdfmark.
+</ENTRY>
+
+<ENTRY date="1998-06-20" by="&SR;">
+* hyperref.dtx: add `hidden' key for forms
+</ENTRY>
+
+<ENTRY date="1998-06-19" version="6.28" by="&SR;">
+* RELEASE 6.28
+* hyperref.dtx: use pdftex version and revision numbers
+* hyperref.dtx: corrected stupid error which meant that the
+  bookmark file was not being opened.
+</ENTRY>
+
+<ENTRY date="1998-06-16" version="6.27" by="&SR;">
+* RELEASE 6.27
+* hyperref.dtx: finished pdftex forms, and reworked several
+  aspects of forms in general.
+</ENTRY>
+
+<ENTRY date="1998-06-15" by="&SR;">
+* hyperref.dtx: use \filename@parse to decide whether a file: URL
+  is a local open or a URL. makes ../../xxx work.
+* VTEX drivers driven by single `vtex' option which checks
+  \OpMode
+</ENTRY>
+
+<ENTRY date="1998-06-13" by="&SR;">
+* hyperref.dtx: merge in material from MicroPress to provide support
+  for VTEX's two new modes of operation, PDF and HTML. Drivers hvtex
+  and hvtexhtml.
+</ENTRY>
+
+<ENTRY date="1998-06-12" version="6.26" by="&SR;">
+* (private) RELEASE 6.26
+  addition from DPC to provide better support for encoding in
+  .out files (must use inputenc)
+* (private) RELEASE 6.25
+* hyperref.dtx:
+  removed quotes from names in dviwindo (DP Story)
+  comma after file destination in dviwindo (DP Story)
+  rejig parsing of file: to cope with ../foo/bar, at the
+  cost of files having to be at least two characters long. ../..
+  doesn't work either :-}
+</ENTRY>
+
+<ENTRY date="1998-06-05" version="6.24" by="&SR;">
+* (private) RELEASE 6.24
+* hyperref.dtx: unset \@tempa at start of ProcessKVOptions (David
+  Carlisle)
+* hyperref.dtx: pdftex base url syntax wrong; and if baseurl
+   provided, need to strip file: from URL (corrections by
+   daly@linpwd.mpae.gwdg.de (P.W.Daly, MPAe, Lindau, Germany)
+</ENTRY>
+
+<ENTRY date="1998-05-27" version="6.23" by="&SR;">
+* (private) RELEASE 6.23
+* hyperref.dtx: remove spurious space in pdfview in pdftex driver
+</ENTRY>
+
+<ENTRY date="1998-05-16" version="6.22" by="&SR;">
+* (private) RELEASE 6.22
+* hyperref.dtx: in draft mode, need fifth and secondoffive to be
+  really secondoffive
+</ENTRY>
+
+<ENTRY date="1998-05-08" version="6.21" by="&SR;">
+* (private) RELEASE 6.21
+* hyperref.dtx: added new key "pdfhighlight" to set Acrobat
+  behaviour when a link is pressed. Make destinations use the Action
+  dictionary. Added first cut at forms support.
+</ENTRY>
+
+<ENTRY date="1998-03-25" version="6.20" by="&SR;">
+* (private) RELEASE 6.20
+* RELEASE 6.19
+* pdftex seems to have changed, added goto page for openaction
+* hyperref.dtx: put / in front of pdfstartview
+  still changing textures driver
+</ENTRY>
+
+<ENTRY date="1998-03-22" version="6.18" by="&SR;">
+* RELEASE 6.18
+</ENTRY>
+
+<ENTRY date="1998-03-21" by="&SR;">
+* hyperref.dtx: add conditional code for fancyvrb, to stop
+   links being made to fancyvrb lines.
+* experimental textures driver
+* pdftex as 0.12 the default; use guard pdftexold to select 0.11
+  behaviour
+</ENTRY>
+
+<ENTRY date="1998-03-07" version="6.17" by="&SR;">
+* RELEASE 6.17
+* hyperref.dtx: patches from Piotr Krysiuk
+  &lt;pkrysiuk@mimuw.edu.pl&gt; to make it run under LaTeX 209
+  compatibility mode
+</ENTRY>
+
+<ENTRY date="1998-03-05" by="&SR;">
+* hyperref.dtx: put braces around URL in pdfmark driver, to stop
+  keyval splitting at an = sign within the URL (bug report from Ahmed
+  Hindawi &lt;hindawi@ephouse.com&gt;)
+</ENTRY>
+
+<ENTRY date="1998-03-03" by="&SR;">
+* hyperref.dtx: add first cut at tex4ht driver
+* hyperref.dtx: changes for pdftex 0.12 driver (syntax changes)
+</ENTRY>
+
+<ENTRY date="1998-02-28" version="6.16" by="&SR;">
+* (private) RELEASE 6.16
+* hyperref.dtx: AMSLaTeX does everything twice; pdftex actually
+  *executes* the hyper code twice, so that destinations are defined
+  twice. Make use of \ifmeasuring@ to avoid this.
+</ENTRY>
+
+<ENTRY date="1998-02-25" version="6.15" by="&SR;">
+* RELEASE 6.15
+* Sigh. Messed up counters again. Fixed. It had better be right
+  this time.
+* RELEASE 6.14
+* hyperref.dtx: added key bookmarksopen to dictate whether or not
+  the bookmark tree is expanded (from Brian Ripley)
+* cleaned up the *horrible* mess created by me over items, which
+  mean that I had turned off the incrementing....
+* typo in \pdfbookmark corrected
+</ENTRY>
+
+<ENTRY date="1998-02-23" version="6.13" by="&SR;">
+* RELEASE 6.13
+ * changes to \item had totally wrecked natbib :-}
+* added keys for PDF creator and producer
+* re-fix \@footnotemark in \maketitle
+* reverse parameters of \htmladdnormallink
+</ENTRY>
+
+<ENTRY date="1998-02-20" version="6.12" by="&SR;">
+* RELEASE 6.12
+* RELEASE 6.11
+* hyperref.dtx: play around with items again for Tanmoy. ugh, all
+  sorts of changes to stop bibitems getting 3 destinations defined.
+</ENTRY>
+
+<ENTRY date="1998-01-26" by="&SR;">
+* hyperref.dtx: define \@makefnmark instead of \@footnotemark, to
+  take advantage of white space and hyphenation fudges (from DPC)
+* backref.dtx: remove white space in for loop of \backcite
+</ENTRY>
+
+<ENTRY date="1998-01-22" version="6.10" by="&SR;">
+* RELEASE 6.10
+* more dealing with \url, allowing for _
+</ENTRY>
+
+<ENTRY date="1998-01-21" version="6.9" by="&SR;">
+* release 6.9
+* fixed some small bugs (though more remain) and added
+  \Acrobatmenu command.
+</ENTRY>
+
+<ENTRY date="1997-12-11" by="&SR;">
+* hyperref.dtx: altered algorithm of tocdepth for pdf bookmarks;
+  rewrote nesting again. still concerned about global allocation
+  of `current' tokens, and lack of nesting in PS file.
+</ENTRY>
+
+<ENTRY date="1997-12-09" by="&SR;">
+* hyperref.dtx: rewrote handling of (non) nesting. the innards of
+  an anchor are now processing inside {\stop@hyper...} which
+  hopefully makes all hyper commands no-ops. ripley@stats.ox.ac.uk
+  (Prof Brian Ripley) found several things which forced me to do
+  *something* (ie a \cite inside a \caption gave the destination of
+  the cite to the caption)
+* Daniel T. Cobra &lt;cobra@gyron.acate.com.br&gt; gave me a new
+  incompatibility with ps2pdf
+</ENTRY>
+
+<ENTRY date="1997-11-24" version="6.7" by="&SR;">
+* RELEASE 6.7
+* started hyperref ChangeLog. cleanup of copyright for Debian inclusion
+</ENTRY>
+</CHANGELOG>

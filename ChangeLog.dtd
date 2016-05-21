@@ -1,0 +1,7 @@
+<!ELEMENT CHANGELOG (ENTRY*)>
+<!ELEMENT ENTRY     (#PCDATA)>
+<!ATTLIST ENTRY     date    CDATA #REQUIRED
+                    by      CDATA #REQUIRED
+                    version CDATA #IMPLIED>
+<!ENTITY SR "Sebastian Rahtz">
+<!ENTITY HO "Heiko Oberdiek">

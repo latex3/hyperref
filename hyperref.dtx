@@ -3,6 +3,7 @@
 %% with portions written by David Carlisle and Heiko Oberdiek,
 %% 2001-2012 Heiko Oberdiek.
 %% 2016 Oberdiek Package Suport Group
+%%      https://github.com/ho-tex/hyperref/issues
 %%
 %% This file is part of the `Hyperref Bundle'.
 %% -------------------------------------------
@@ -47,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2016/05/18 v6.83o %
+%<!none>  [2016/05/21 v6.83p %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -115,12 +116,11 @@
   %
   % title
   %
-  \GetFileInfo{hyperref.drv}%
+  \GetFileInfo{hyperref.sty}%
   \title{Hypertext marks in \LaTeX}%
-  \author{Sebastian Rahtz\\%
-    Email: \texttt{sebastian.rahtz at oucs.ox.ac.uk}\\[1.5ex]%
+  \author{Sebastian Rahtz (deceased)\\%
     Heiko Oberdiek (maintainer)\\%
-    Email: \texttt{heiko.oberdiek at googlemail.com}}%
+    \texttt{https://github.com/ho-tex/hyperref/issues}}%
   % \date{processed \today}%
   \date{\filedate\space\fileversion}%
   \maketitle

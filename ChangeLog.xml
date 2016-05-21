@@ -2,8 +2,25 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
-<ENTRY date="2012-12-08" version="6.83n" by="&HO;">
+<ENTRY date="2016-05-21" version="6.83p" by="&DC;">
+* 6.83p, nameref 2.44, backref 1.39
+* document github support
+</ENTRY>
+
+<ENTRY date="2016-05-18" version="6.83o" by="&DC;">
+* 6.83o
+* merge pull request from H. Yamashita pass driver options to color package.
+* replace call to luatex85 package by new luatex back end option
+* Catalan autoref translation contributed in issue #4
+</ENTRY>
+
+<ENTRY date="2016-05-05" version="6.83n" by="&DC;">
 * 6.83n
+* Load luatex85 package for luatex compatibility
+</ENTRY>
+  
+<ENTRY date="2012-12-08" version="6.83n-" by="&HO;">
+* 6.83n (not released to ctan, to be merged)
 * Support for \texorpdfstring inside counter values (used for
   anchor names).
 * Validation for option `pdfstartpage' added.

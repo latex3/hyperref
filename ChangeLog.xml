@@ -18,9 +18,11 @@
 * 6.83n
 * Load luatex85 package for luatex compatibility
 </ENTRY>
-  
+
+<!--
 <ENTRY date="2012-12-08" version="6.83n-" by="&HO;">
 * 6.83n (not released to ctan, to be merged)
+* http://svn.gnu.org.ua/viewvc/hyperref/trunk/hyperref.dtx?revision=1453
 * Support for \texorpdfstring inside counter values (used for
   anchor names).
 * Validation for option `pdfstartpage' added.
@@ -28,6 +30,7 @@
 * pdfmark drivers: support for nested annotations added.
 * Some fixes for babel shorthands (bug introduced in v6.83d).
 </ENTRY>
+-->
 
 <ENTRY date="2012-11-06" version="6.83m" by="&HO;">
 * 6.83m

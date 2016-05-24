@@ -19964,12 +19964,22 @@
   >>%
   /DA(/ZaDb \strip@pt\Fld@charsize\space Tf%
       \ifx\Fld@color\@empty\else\space\Fld@color\fi)%
-  \ifx\@currValue\Fld@default
-    /V/\Fld@default
-    /DV/\Fld@default
-  \else
+%    \end{macrocode}
+%^^A  \ifx\@currValue\Fld@default %old code
+%^^A    /V/\Fld@default
+%^^A    /DV/\Fld@default
+%^^A  \else
+%^^A    /V/Off%
+%^^A    /DV/Off%
+%^^A  \fi
+% New code, the default value is used for all buttons
+%    \begin{macrocode}
+  \ifx\Fld@default\@empty
     /V/Off%
     /DV/Off%
+  \else
+   /V/\Fld@default
+   /DV/\Fld@default
   \fi
   \Fld@additionalactions
 }

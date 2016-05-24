@@ -1549,12 +1549,12 @@
   >>%
   /DA(/ZaDb \strip@pt\Fld@charsize\space Tf%
       \ifx\Fld@color\@empty\else\space\Fld@color\fi)%
-  \ifx\@currValue\Fld@default
-    /V/\Fld@default
-    /DV/\Fld@default
-  \else
+  \ifx\Fld@default\@empty
     /V/Off%
     /DV/Off%
+  \else
+   /V/\Fld@default
+   /DV/\Fld@default
   \fi
   \Fld@additionalactions
 }

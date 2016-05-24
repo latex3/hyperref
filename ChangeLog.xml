@@ -6,6 +6,7 @@
 * 6.83p, nameref 2.44, backref 1.39
 * document github support
 * escape Field values (issue #5, thanks to Ulrike Fischer for fix).
+* fix to checkbox code (issue #6, thanks to Ulrike Fischer for fix).
 </ENTRY>
 
 <ENTRY date="2016-05-18" version="6.83o" by="&DC;">

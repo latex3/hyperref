@@ -15049,10 +15049,12 @@
   \Hy@DisableOption{ocgcolorlinks}%
 \fi
 %    \end{macrocode}
+% Use primitive counter arithmetic here to avoid amsmath
+% redefining |\stepcounter| (github issue/13)
 %    \begin{macrocode}
 \def\Hy@BeginAnnot#1{%
-  \stepcounter{Hy@AnnotLevel}%
-  \ifnum\value{Hy@AnnotLevel}=\@ne
+  \global\advance\c@Hy@AnnotLevel\@ne
+  \ifnum\c@Hy@AnnotLevel=\@ne
     #1%
   \fi
 }
@@ -15061,7 +15063,7 @@
     \Hy@endcolorlink
     \@pdfm@mark{eann}%
   \fi
-  \addtocounter{Hy@AnnotLevel}\m@ne
+  \global\advance\c@Hy@AnnotLevel\m@ne
 }
 %    \end{macrocode}
 %    \begin{macrocode}

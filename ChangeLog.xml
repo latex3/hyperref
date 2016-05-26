@@ -8,6 +8,7 @@
 * escape Field values (issue #5, thanks to Ulrike Fischer for fix).
 * fix to checkbox/Radio code (issue #6, thanks to Ulrike Fischer for fix).
 * Fix for links in amsmath \text (issue #13)
+* Fix white space at end of line before a theorem (issue #11)
 </ENTRY>
 
 <ENTRY date="2016-05-18" version="6.83o" by="&DC;">

@@ -11367,6 +11367,7 @@
 %
 % Support for package \texttt{amsthm} (Daniel M\"ullner):
 %    \begin{macrocode}
+\Hy@AtBeginDocument{%
 \@ifpackageloaded{amsthm}{%
 %    \end{macrocode}
 % Class amsbook uses a different definition of \cs{@thm},
@@ -11498,7 +11499,16 @@
       \clubpenalty\@clubpenalty \everypar{}%
     \fi
   }%
-}{}
+}%
+%    \end{macrocode}
+% non \texttt{amsthm} case, remove final space on line before a theorem
+% for githib issue 11.
+%    \begin{macrocode}
+{%
+\let\Hy@savedthm\@thm
+\def\@thm{\ifhmode\unskip\fi\Hy@savedthm}%
+}%
+}
 %    \end{macrocode}
 %
 % \section{Footnotes}\label{footnotes}

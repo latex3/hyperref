@@ -2,6 +2,11 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
+<ENTRY date="2016-06-24" version="6.83q" by="&DC;">
+* 6.83q
+* cleverref support
+</ENTRY>
+
 <ENTRY date="2016-05-21" version="6.83p" by="&DC;">
 * 6.83p, nameref 2.44, backref 1.39
 * document github support

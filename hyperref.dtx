@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2016/05/21 v6.83p %
+%<!none>  [2016/06/24 v6.83q %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -11366,8 +11366,14 @@
 %    \end{macrocode}
 %
 % Support for package \texttt{amsthm} (Daniel M\"ullner):
+% also \texttt{cleveref}.
 %    \begin{macrocode}
 \Hy@AtBeginDocument{%
+\@ifpackageloaded{cleveref}{%
+% cleverref
+\let\Hy@savedthm\@thm
+\def\@thm{\ifhmode\unskip\fi\Hy@savedthm}%
+}{%
 \@ifpackageloaded{amsthm}{%
 %    \end{macrocode}
 % Class amsbook uses a different definition of \cs{@thm},
@@ -11507,6 +11513,7 @@
 {%
 \let\Hy@savedthm\@thm
 \def\@thm{\ifhmode\unskip\fi\Hy@savedthm}%
+}%
 }%
 }
 %    \end{macrocode}

@@ -32,6 +32,15 @@ saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
 lualatex ChangeLog.tex
 lualatex ChangeLog.tex
 
+cp bmhydoc.sty doc
+cd doc
+pdflatex manual
+pdflatex manual
+
+htlatex manual
+
+cd ..
+
 mkdir hyperref-tds/doc
 mkdir hyperref-tds/doc/latex
 mkdir hyperref-tds/doc/latex/hyperref
@@ -69,4 +78,4 @@ mv hyperref.tds.zip ../..
 cd ../..
 echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc,hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,test,xr-hyper.sty}
+zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,test,xr-hyper.sty}

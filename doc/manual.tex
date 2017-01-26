@@ -22,10 +22,6 @@
 \ifx\directlua\undefinded
 \documentclass[pdftex]{article}
 \else
-\makeatletter
-\ifx\l@nohyphenation\@undefined
-\newlanguage\l@nohyphenation
-\fi
 \documentclass[luatex]{article}
 \fi
 \else
@@ -48,6 +44,12 @@
 
 % from doc.sty
 \makeatletter
+\ifx\l@nohyphenation\@undefined
+\newlanguage\l@nohyphenation
+\fi
+\ifx\l@nohyphenation\@undefined
+  \newlanguage\l@nohyphenation
+\fi
 \DeclareRobustCommand\meta[1]{%
   \ensuremath\langle
   \ifmmode \expandafter \nfss@text \fi

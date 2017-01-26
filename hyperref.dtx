@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2016/06/24 v6.83q %
+%<!none>  [2017/01/26 v6.84a %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -7328,7 +7328,11 @@
 %    \begin{macrocode}
   \ifx\Hy@driver\@empty
   \else
-    \def\Hy@temp{hpdftex}%
+     \ifx\pdfextension\@undefined
+       \def\Hy@temp{hpdftex}%
+     \else
+       \def\Hy@temp{hluatex}%
+     \fi
     \ifpdf
       \ifx\Hy@driver\Hy@temp
       \else

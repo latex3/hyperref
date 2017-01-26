@@ -12,13 +12,22 @@
 % Manual updates:
 % * Steve Peter and Karl Berry, 7/03.
 % * Heiko Oberdiek, 2006-2012.
+% * HO-support 2017
 %
 
-\def\mydate{November 2012}
+\def\mydate{January 2017}
 
 \RequirePackage{ifpdf}
 \ifpdf % We are running pdfTeX in pdf mode
+\ifx\directlua\undefinded
 \documentclass[pdftex]{article}
+\else
+\makeatletter
+\ifx\l@nohyphenation\@undefined
+\newlanguage\l@nohyphenation
+\fi
+\documentclass[luatex]{article}
+\fi
 \else
 \documentclass{article}
 \fi
@@ -142,7 +151,7 @@
 
 \ifpdf
   \usepackage[%
-    pdftex,%
+%    pdftex,% might be luatex, just allow automatic default
     colorlinks,%
     hyperindex,%
     plainpages=false,%

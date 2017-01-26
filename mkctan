@@ -32,13 +32,18 @@ saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
 lualatex ChangeLog.tex
 lualatex ChangeLog.tex
 
-cp bmhydoc.sty doc
+cp bmhydoc.sty hyperref.sty doc
 cd doc
-pdflatex manual
-pdflatex manual
+lualatex manual
+lualatex manual
 
 htlatex manual
 
+lualatex options
+lualatex options
+
+luatex paper
+luatex paper
 cd ..
 
 mkdir hyperref-tds/doc

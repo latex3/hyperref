@@ -5,7 +5,10 @@
 
 
 
+# unpack sources
 tex hyperref.ins
+
+# documented code
 lualatex hyperref.dtx
 makeindex -s gind.ist hyperref.idx
 lualatex hyperref.dtx
@@ -19,21 +22,26 @@ makeindex -s gind.ist backref.dtx
 lualatex backref.dtx
 
 
+# clean directory to build TDS tree
 rm -rf hyperref-tds
 mkdir hyperref-tds
 
+# xslt, you can also probaly use xsltproc
 saxon9  -versionmsg:off README.xml README_txt.xsl > README
 saxon9  -versionmsg:off README.xml README_tex.xsl > README.tex
 lualatex README.tex
 lualatex README.tex
 
+# xslt, you can also probaly use xsltproc
 saxon9  -versionmsg:off ChangeLog.xml ChangeLog_txt.xsl > ChangeLog
 saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
 lualatex ChangeLog.tex
 lualatex ChangeLog.tex
 
+# move current package to doc directory
 cp *.sty *.def doc
 cd doc
+# process manual as pdf and html
 lualatex manual
 lualatex manual
 
@@ -43,6 +51,7 @@ lualatex options
 lualatex options
 
 
+# Build TDS tree
 cd ..
 
 mkdir hyperref-tds/doc

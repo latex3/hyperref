@@ -6781,14 +6781,26 @@
     \hypercalcbpdef\@pdfremotestartview{#1}%
     \edef\@pdfremotestartview{\@pdfremotestartview}%
     \Hy@Match\@pdfremotestartview{}{%
-      ^(XYZ -?(null|\HyPat@NonNegativeReal/) %
-            -?(null|\HyPat@NonNegativeReal/) %
-            (null|\HyPat@NonNegativeReal/)|%
-        Fit(|B|%
-         (H|V|BH|BV) (null|\HyPat@NonNegativeReal/)|%
-         R \HyPat@NonNegativeReal/ \HyPat@NonNegativeReal/ %
-           \HyPat@NonNegativeReal/ \HyPat@NonNegativeReal/%
-      ))$%
+      ^(XYZ(%
+            ()| %
+            (null|-?\HyPat@NonNegativeReal/) %
+            (null|-?\HyPat@NonNegativeReal/) %
+            (null|\HyPat@NonNegativeReal/)%
+          )|% end of "XYZ"
+        Fit(%
+            ()|%
+            B|%
+            (H|V|BH|BV)(%
+                ()| %
+                (null|\HyPat@NonNegativeReal/)%
+              )|%
+            R %
+                \HyPat@NonNegativeReal/ %
+                \HyPat@NonNegativeReal/ %
+                \HyPat@NonNegativeReal/ %
+                \HyPat@NonNegativeReal/%
+          )% end of "Fit"
+      )$%
     }{}{%
       \Hy@Warning{%
          Invalid value `\@pdfremotestartview'\MessageBreak

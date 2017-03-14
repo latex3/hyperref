@@ -5,8 +5,10 @@
 <ENTRY date="2017-03-14" version="6.85a" by="&DC;">
 * 6.85a
 * Declare \newtie in PU encoding (composites with \newtie are
-  already declared).  Declaring composites with undeclared accent does
-  not work and will be flagged as an error in the next LaTeX release.  
+  already declared).  Declaring composites with an undeclared accent does
+  not work and will be flagged as an error in the next LaTeX release.
+* Modify the regex in pdfremotestartview for github issue 28
+  https://github.com/ho-tex/hyperref/issues/28
 </ENTRY>
 
 <ENTRY date="2017-01-26" version="6.84a" by="&DC;">

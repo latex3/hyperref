@@ -1,7 +1,7 @@
 % \iffalse
 %% Source File: hluatex.dtx
 %% Copyright 2016 Oberdiek Package Support Group
-%% 
+%%
 %%
 %% Derived from hpdftex.def
 %%
@@ -362,10 +362,7 @@
   \Hy@StartlinkName{%
     \ifHy@pdfa /F 4\fi
     \Hy@setpdfborder
-    \ifx\@pdfhighlight\@empty
-    \else
-      /H\@pdfhighlight
-    \fi
+    \Hy@setpdfhighlight
     \ifx\CurrentBorderColor\relax
     \else
       /C[\CurrentBorderColor]%
@@ -421,10 +418,7 @@
     \pdfstartlink
       attr{%
         \Hy@setpdfborder
-        \ifx\@pdfhightlight\@empty
-        \else
-          /H\@pdfhighlight
-        \fi
+        \Hy@setpdfhighlight
         \ifx\@urlbordercolor\relax
         \else
           /C[\@urlbordercolor]%
@@ -459,10 +453,7 @@
     \pdfstartlink
       attr{%
         \Hy@setpdfborder
-        \ifx\@pdfhighlight\@empty
-        \else
-          /H\@pdfhighlight
-        \fi
+        \Hy@setpdfhighlight
         \ifx\@filebordercolor\relax
         \else
           /C[\@filebordercolor]%
@@ -496,10 +487,7 @@
     \pdfstartlink
       attr{%
         \Hy@setpdfborder
-        \ifx\@pdfhighlight\@empty
-        \else
-          /H\@pdfhighlight
-        \fi
+        \Hy@setpdfhighlight
         \ifx\@runbordercolor\relax
         \else
           /C[\@runbordercolor]%
@@ -781,10 +769,7 @@
     \pdfstartlink
       attr{%
         \Hy@setpdfborder
-        \ifx\@pdfhighlight\@empty
-        \else
-          /H\@pdfhighlight
-        \fi
+        \Hy@setpdfhighlight
         \ifx\@menubordercolor\relax
         \else
           /C[\@menubordercolor]%

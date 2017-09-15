@@ -7182,7 +7182,9 @@
 %
 %    \begin{macrocode}
 \ifHy@pdfa
+  \ifnum \Hy@pdfversion < 4
   \kvsetkeys{Hyp}{pdfversion=1.4}%
+  \fi
   \Hy@DisableOption{pdfversion}%
   \def\Hy@Acrobatmenu#1#2{%
     \leavevmode

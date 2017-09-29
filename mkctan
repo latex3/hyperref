@@ -32,7 +32,7 @@ saxon9  -versionmsg:off README.xml README_tex.xsl > README.tex
 lualatex README.tex
 lualatex README.tex
 
-# xslt, you can also probaly use xsltproc
+# xslt, you can also probably use xsltproc
 saxon9  -versionmsg:off ChangeLog.xml ChangeLog_txt.xsl > ChangeLog
 saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
 lualatex ChangeLog.tex

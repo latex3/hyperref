@@ -2,6 +2,23 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
+<ENTRY date="2017-09-29" version="6.85a" by="&UF;">
+* 6.85a
+* don't define \noboundary as text command / issue 37 (#45)
+* changed default pdfversion from 2 to 5, along the default settings in the current tex systems
+* change with pdfa version to 4 only if the current version is smaller, see issue #38
+* removed \noboundary from puarenc.def, see issue #37
+* Issue #38: change version to 1.4 with pdfa only if it is smaller (#43)
+* changed default pdfversion from 2 to 5, along the default settings in the current tex systems
+* change with pdfa version to 4 only if the current version is smaller, see issue #38
+* issue #25, added  \HyPsd@EscapeTeX#1% to correctly escape non-ascii in heading (#42)
+* code to amend issue #40 (missing pdfhighlight option for xetex/dvipdfmx) (#41)
+* corrected typo in hpdftex.def
+* exchanged code for pdfhighlight by \Hy@setpdfhighlight in hpdftex.def
+* exchanged code for pdfhighlight by \Hy@setpdfhighlight in hluatex.def
+* added \Hy@setpdfhighlight to hdvipdfm/hxetex.def
+</ENTRY>
+
 <ENTRY date="2017-03-14" version="6.85a" by="&DC;">
 * 6.85a
 * Declare \newtie in PU encoding (composites with \newtie are

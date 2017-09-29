@@ -1,54 +1,18 @@
-2017/09/29 v6.86a
-
-commit b312fe2176a4ec2c4b036ae8c04f489dfc82b6bb
-Author: u-fischer 
-Date:   Fri Sep 29 22:24:43 2017 +0200
-
-    don't define \noboundary as text command / issue 37 (#45)
-    
+2017-09-29  6.85a  Ulrike Fischer
+    * 6.85a
+    * don't define \noboundary as text command / issue 37 (#45)
     * changed default pdfversion from 2 to 5, along the default settings in the current tex systems
-    
     * change with pdfa version to 4 only if the current version is smaller, see issue #38
-    
     * removed \noboundary from puarenc.def, see issue #37
-    
-    * spurious space, hope nobody notice it ...
-
-commit 347850e28c55e710dd1669978e18db6472073323
-Author: u-fischer 
-Date:   Thu Sep 28 22:47:43 2017 +0200
-
-    Issue #38: change version to 1.4 with pdfa only if it is smaller (#43)
-    
+    * Issue #38: change version to 1.4 with pdfa only if it is smaller (#43)
     * changed default pdfversion from 2 to 5, along the default settings in the current tex systems
-    
     * change with pdfa version to 4 only if the current version is smaller, see issue #38
-
-commit 801665807d3fba0567646a9c91cc3aa6d695b2ce
-Author: u-fischer 
-Date:   Fri Sep 15 21:22:18 2017 +0200
-
-    issue #25, added  \HyPsd@EscapeTeX#1% to correctly escape non-ascii in heading (#42)
-
-commit ac9b729d36dfc9444b924fac3eb38168de4836a5
-Author: u-fischer 
-Date:   Fri Sep 15 20:16:55 2017 +0200
-
-    code to amend issue #40 (missing pdfhighlight option for xetex/dvipdfmx) (#41)
-    
+    * issue #25, added  \HyPsd@EscapeTeX#1% to correctly escape non-ascii in heading (#42)
+    * code to amend issue #40 (missing pdfhighlight option for xetex/dvipdfmx) (#41)
     * corrected typo in hpdftex.def
-    
     * exchanged code for pdfhighlight by \Hy@setpdfhighlight in hpdftex.def
-    
     * exchanged code for pdfhighlight by \Hy@setpdfhighlight in hluatex.def
-    
     * added \Hy@setpdfhighlight to hdvipdfm/hxetex.def
-
-commit 1418a8cd1d07ae6e4ec1327f3e9ba955e1c681d7
-Author: David Carlisle 
-Date:   Tue Mar 14 23:53:28 2017 +0000
-
-    modify regex in pdfremotestartview for issue #28
 
 2017-03-14  6.85a  David Carlisle
     * 6.85a

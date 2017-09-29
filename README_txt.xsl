@@ -8,7 +8,7 @@
 <!ENTITY uc "ABCDEFGHIJKLMNOPQRSTUVWXYZ">
 ]>
 <xsl:stylesheet
-  version="1.0"
+  version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:output method="text" encoding="us-ascii"/>
@@ -50,7 +50,7 @@
     <xsl:text> </xsl:text>
     <xsl:value-of select="translate(., '&lc;', '&uc;')"/>
     <xsl:text>&nl;</xsl:text>
-    <xsl:value-of select="translate(translate($num, '&secA;', '&secB;'), &quot;'&quot;, '=')"/>
+    <xsl:value-of select="translate(translate(string($num), '&secA;', '&secB;'), &quot;'&quot;, '=')"/>
     <xsl:text>=</xsl:text>
     <xsl:value-of select="translate(translate(., '&secA;', '&secB;'), &quot;'&quot;, '=')"/>
     <xsl:text>&nl;</xsl:text>

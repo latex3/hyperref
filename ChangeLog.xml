@@ -2,6 +2,11 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
+<ENTRY date="2017-09-29" version="6.85a" by="&DC;">
+* 6.85a
+* Make driver autodetext info not message (so just log not terminal) issue #9
+</ENTRY>
+
 <ENTRY date="2017-09-29" version="6.85a" by="&UF;">
 * 6.85a
 * don't define \noboundary as text command / issue 37 (#45)

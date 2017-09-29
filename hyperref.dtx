@@ -1231,6 +1231,9 @@
 %    There are several commands that prints characters in the
 %    printable ASCII area that don't obey the NFSS, so they have
 %    to be redefined here.
+%    UF 29.09.2017: added a mapping for \noboundary, see issue #37
+%    https://github.com/ho-tex/hyperref/issues/37
+%    No test for PU, if some definition for PD1 is added it will work too.
 %    \begin{macrocode}
     \let\{\textbraceleft
     \let\}\textbraceright
@@ -1244,6 +1247,8 @@
     \let\P\textparagraph
     \let\ldots\textellipsis
     \let\dots\textellipsis
+    \ltx@IfUndefined{textEncodingNoboundary}%
+      {}{\let\noboundary\textEncodingNoboundary}%
 %    \end{macrocode}
 %
 % \paragraph{Newline}
@@ -26419,7 +26424,7 @@
 % U+200C ZERO WIDTH NON-JOINER; afii61664
 \DeclareTextCommand{\ZWNJ}{PU}{\9040\014}% U+200C
 % U+200D ZERO WIDTH JOINER; afii301
-\DeclareTextCommand{\noboundary}{PU}{\9040\015}% U+200D
+\DeclareTextCommand{\textEncodingNoboundary}{PU}{\9040\015}% U+200D
 %    \end{macrocode}
 %    \begin{macrocode}
 %</puarenc>

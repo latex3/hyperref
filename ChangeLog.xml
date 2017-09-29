@@ -5,6 +5,7 @@
 <ENTRY date="2017-09-29" version="6.85a" by="&DC;">
 * 6.85a
 * Make driver autodetext info not message (so just log not terminal) issue #9
+* Make \and locally "; " while making pdf info string issue #44
 </ENTRY>
 
 <ENTRY date="2017-09-29" version="6.85a" by="&UF;">

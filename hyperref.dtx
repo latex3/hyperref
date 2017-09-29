@@ -10030,6 +10030,7 @@
       \pdfstringdefDisableCommands{%
         \expandafter\let\expandafter\\\csname Hy@newline@#1\endcsname
         \let\newline\\%
+        \def\and{; }%
       }%
       \expandafter\ifx\csname @pdf#1\endcsname\@empty
         \expandafter\pdfstringdef\csname @pdf#1\endcsname{%

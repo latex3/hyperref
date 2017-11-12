@@ -65,7 +65,8 @@ mkdir hyperref-tds/source/latex
 mkdir hyperref-tds/source/latex/hyperref
 mkdir hyperref-tds/source/latex/hyperref/doc
 cp doc/fdl.tex doc/manual.tex doc/options.tex \
-  hyperref-tds/source/latex/hyperref/doc
+   hyperref-tds/source/latex/hyperref/doc
+cp paperslides99.zip hyperref-tds/source/latex/hyperref/doc
 
 cp -r test \
   hyperref-tds/source/latex/hyperref

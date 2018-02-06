@@ -2,7 +2,7 @@
 %% File: hyperref.dtx Copyright 1995-2001 Sebastian Rahtz,
 %% with portions written by David Carlisle and Heiko Oberdiek,
 %% 2001-2012 Heiko Oberdiek.
-%% 2016-2017 Oberdiek Package Suport Group
+%% 2016-2018 Oberdiek Package Suport Group
 %%      https://github.com/ho-tex/hyperref/issues
 %%
 %% This file is part of the `Hyperref Bundle'.
@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2017/09/29 v6.86a %
+%<!none>  [2018/02/06 v6.86b %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -497,15 +497,6 @@
 %    \end{macrocode}
 % \section{Package options and setup}\label{options}
 %
-% \subsection{Lua\TeX\ compatibility}
-%
-% Until a Lua\TeX\ driver is writen, load |luatex85| so that
-% the |pdftex| driver continues to work with Lua\TeX.
-%    \begin{macrocode}
-%\ifx\directlua\@undefined\else
-%  \RequirePackage{luatex85}
-%\fi
-%    \end{macrocode}
 %
 % \subsection{Save catcodes}
 %    There are many packages that change the standard catcodes.

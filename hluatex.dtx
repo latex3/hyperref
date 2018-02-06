@@ -8,6 +8,22 @@
 %% This file may be distributed under the terms of the LPPL.
 %% See README for details.
 %
+%<*driver>
+\documentclass{ltxdoc}
+\ifx\Umathchardef\undefined\usepackage[T1]{fontenc}\fi
+\begin{document}
+   \GetFileInfo{hluatex.def}%
+   \title{hluatex.def}
+   \date{}%
+   \author{Oberdiek Package Support Group}
+   \maketitle
+  \DocInput{hluatex.dtx}%
+\end{document}
+%</driver>
+% \fi
+% \StopEventually{}
+%
+%    \begin{macrocode}
 %<*luatex>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % remains of luatex85 package
@@ -2023,10 +2039,9 @@
   }%
 }%
 \Hy@tempa
-\endinput
 %%
 %% End of file `hluatex.def'.
-
 %</luatex>
 %    \end{macrocode}
+\endinput
 %

@@ -2,6 +2,20 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
+<ENTRY date="2018-02-06" version="6.86b" by="&DC;">
+* 6.86b
+* Fix packageing of luatex.dtx (reported on tex.sx)
+</ENTRY>
+
+<ENTRY date="2017-09-29" version="6.86a" by="&DC;">
+* 6.86a
+* bump version and fix documentation markup
+* fixes to xsl and other minor build adjustments
+* send driver message just to log, issue #9
+* add \and to the list of commands locally made safe in pdf title info, issue #44
+* for issue #50 add pdf source zip from texmf-dist/doc/latex/hyperref-docsrc
+</ENTRY>
+
 <ENTRY date="2017-09-29" version="6.85a" by="&DC;">
 * 6.85a
 * Make driver autodetext info not message (so just log not terminal) issue #9

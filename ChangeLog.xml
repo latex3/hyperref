@@ -4,7 +4,7 @@
 
 <ENTRY date="2018-02-06" version="6.86b" by="&DC;">
 * 6.86b
-* Fix packageing of luatex.dtx (reported on tex.sx)
+* Fix packaging of luatex.dtx (reported on tex.sx)
 </ENTRY>
 
 <ENTRY date="2017-09-29" version="6.86a" by="&DC;">
@@ -18,7 +18,7 @@
 
 <ENTRY date="2017-09-29" version="6.85a" by="&DC;">
 * 6.85a
-* Make driver autodetext info not message (so just log not terminal) issue #9
+* Make driver auto detect info not message (so just log not terminal) issue #9
 * Make \and locally "; " while making pdf info string issue #44
 </ENTRY>
 

@@ -68,9 +68,6 @@ cp doc/fdl.tex doc/manual.tex doc/options.tex \
    hyperref-tds/source/latex/hyperref/doc
 cp paperslides99.zip hyperref-tds/source/latex/hyperref/doc
 
-cp -r test \
-  hyperref-tds/source/latex/hyperref
-
 cp backref.dtx bmhydoc.sty hyperref.dtx hyperref.ins nameref.dtx hluatex.dtx psdmapshortnames.pl \
   hyperref-tds/source/latex/hyperref
 
@@ -84,6 +81,7 @@ cp  backref.sty hdvipdfm.def hdvips.def hdvipson.def hdviwind.def hpdftex.def ht
 
 cd hyperref-tds
 echo making tds zip
+rm -r hyperref.tds.zip
 zip -r hyperref.tds.zip  doc source tex
 mv hyperref.tds.zip ../..
 
@@ -92,4 +90,4 @@ mv hyperref.tds.zip ../..
 cd ../..
 echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,test,xr-hyper.sty}
+zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,xr-hyper.sty}

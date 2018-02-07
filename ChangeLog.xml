@@ -5,6 +5,7 @@
 <ENTRY date="2018-02-06" version="6.86b" by="&DC;">
 * 6.86b
 * Fix packaging of luatex.dtx (reported on tex.sx)
+* Don't include test directory on ctan (still on github)
 </ENTRY>
 
 <ENTRY date="2017-09-29" version="6.86a" by="&DC;">

@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2018/02/06 v6.86b %
+%<!none>  [2018/04/02 v6.87a %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -1378,6 +1378,7 @@
     \let\foreignlanguage\@secondoftwo
     \let\textlatin\@firstofone
     \ltx@IfUndefined{language@group}{}{%
+      \let\bbl@info\@gobble
       \csname HyPsd@babel@\language@group\endcsname
     }%
     \HyPsd@GreekPatch

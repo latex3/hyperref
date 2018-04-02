@@ -26,7 +26,7 @@ lualatex backref.dtx
 rm -rf hyperref-tds
 mkdir hyperref-tds
 
-# xslt, you can also probaly use xsltproc
+# xslt, you can also probably use xsltproc
 saxon9  -versionmsg:off README.xml README_txt.xsl > README
 saxon9  -versionmsg:off README.xml README_tex.xsl > README.tex
 lualatex README.tex
@@ -91,3 +91,4 @@ cd ../..
 echo making main zip
 rm -f hyperref.zip
 zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README,README.pdf,xr-hyper.sty}
+mv hyperref*.zip hyperref

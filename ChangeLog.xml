@@ -2,6 +2,11 @@
 <!DOCTYPE CHANGELOG SYSTEM "ChangeLog.dtd">
 <CHANGELOG>
 
+<ENTRY date="2018-04-02" version="6.87a" by="&DC;">
+* 6.87a
+* Silence babel messages in pdfstringdef issue #59
+</ENTRY>
+
 <ENTRY date="2018-02-06" version="6.86b" by="&DC;">
 * 6.86b
 * Fix packaging of luatex.dtx (reported on tex.sx)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <!DOCTYPE readme SYSTEM "README.dtd">
 <readme>
-  <date>2018/02/06</date>
+  <date>2018/04/02</date>
   <section>
     <title>Introduction</title>
     <p>This package is used to emend cross-referencing commands in LaTeX to

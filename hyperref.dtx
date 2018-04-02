@@ -5983,6 +5983,27 @@
   \def\pageautorefname{Trang}%
 }
 %    \end{macrocode}
+% Greek, see github issue 52
+%    \begin{macrocode}
+\def\HyLang@greek{%
+    \def\equationautorefname{\textEpsilon\textxi\acctonos\textiota\textsigma\textomega\textsigma\texteta}%
+    \def\footnoteautorefname{\textupsilon\textpi\textomicron\textsigma\texteta\textmu\textepsilon\acctonos\textiota\textomega\textsigma\texteta}%
+    \def\itemautorefname{\textalpha\textnu\texttau\textiota\textkappa\textepsilon\acctonos\textiota\textmu\textepsilon\textnu\textomicron}%
+    \def\figureautorefname{\textSigma\textchi\acctonos\texteta\textmu\textalpha}%
+    \def\tableautorefname{\textPi\acctonos\textiota\textnu\textalpha\textkappa\textalpha}%
+    \def\partautorefname{\textMu\acctonos\textepsilon\textrho\textomicron\textvarsigma}%
+    \def\appendixautorefname{\textPi\textalpha\textrho\acctonos\textalpha\textrho\texttau\texteta\textmu\textalpha}%
+    \def\chapterautorefname{\textkappa\textepsilon\textphi\acctonos\textalpha\textlambda\textalpha\textiota\textomicron}%
+    \def\sectionautorefname{\textepsilon\textnu\acctonos\textomicron\texttau\texteta\texttau\textalpha}%
+    \def\subsectionautorefname{\textupsilon\textpi\textomicron\textepsilon\textnu\acctonos\textomicron\texttau\texteta\texttau\textalpha}%
+    \def\subsubsectionautorefname{\textupsilon\textpi\textomicron-\textupsilon\textpi\textomicron\textepsilon\textnu\acctonos\textomicron\texttau\texteta\texttau\textalpha}%
+    \def\paragraphautorefname{\textpi\textalpha\textrho\acctonos\textalpha\textgamma\textrho\textalpha\textphi\textomicron\textvarsigma}%
+    \def\subparagraphautorefname{\textupsilon\textpi\textomicron\textpi\textalpha\textrho\acctonos\textalpha\textgamma\textrho\textalpha\textphi\textomicron\textvarsigma}%
+    \def\FancyVerbLineautorefname{\textgamma\textrho\textalpha\textmu\textmu\acctonos\texteta}%
+    \def\theoremautorefname{\textTheta\textepsilon\acctonos\textomega\textrho\texteta\textmu\textalpha}%
+    \def\pageautorefname{\textsigma\textepsilon\textlambda\acctonos\textiota\textdelta\textalpha}%
+}
+%    \end{macrocode}
 %
 %    Instead of package babel's definition of \cmd{\addto} the
 %    implementation of package varioref is used. Additionally
@@ -6058,6 +6079,7 @@
 \HyLang@DeclareLang{italian}{italian}{}
 \HyLang@DeclareLang{magyar}{magyar}{}
 \HyLang@DeclareLang{hungarian}{magyar}{}
+\HyLang@DeclareLang{greek}{greek}{}
 %    \end{macrocode}
 %    More work is needed in case of options |vietnamese| and |vietnam|.
 %    \begin{macrocode}

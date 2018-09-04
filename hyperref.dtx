@@ -9970,7 +9970,7 @@
 %
 %    If options |pdftitle| and |pdfauthor| are not used,
 %    these informations for the pdf information dictionary
-%    can be extracted by the \title and \author.
+%    can be extracted by the \cmd{\title} and \cmd{\author}.
 %    \begin{macrocode}
 \ifHy@pdfusetitle
   \let\HyOrg@title\title
@@ -9995,9 +9995,9 @@
   }%
 %    \end{macrocode}
 %
-%    The case, that \title, or \author are given before
+%    The case, that \cmd{\title}, or \cmd{\author} are given before
 %    hyperref is loaded, is much more complicate, because
-%    LaTeX initializes the macros \@title and \@author with
+%    LaTeX initializes the macros \cmd{\@title} and \cmd{\@author} with
 %    LaTeX error and warning messages.
 %    \begin{macrocode}
   \begingroup

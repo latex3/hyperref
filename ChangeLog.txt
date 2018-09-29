@@ -1,3 +1,8 @@
+2018-09-30 6.88a  David Carlisle
+    * Reorganise README and ChangeLog moving most of README into the manual
+      and maintaining README.md as markdown and ChangeLog.txt as text	
+    *  hyperref.dtx: Add \protected@file@percent for github issue 70
+
 2018-04-02  6.87a  David Carlisle
     * 6.87a
     * Silence babel messages in pdfstringdef issue #59

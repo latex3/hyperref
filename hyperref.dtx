@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2018/04/02 v6.87a %
+%<!none>  [2018/09/30 v6.88a %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -12483,6 +12483,13 @@
 % destination is empty. But if `the most recent destination' is not
 % what you expect, you will be in trouble.
 %    \begin{macrocode}
+% In newer \LaTeX\ releases this is defined to put a \verb|%| at the end of the
+% line in the \textt{toc}file.
+%    \begin{macrocode}
+\ProvideCommand\protected@file@percent{}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \def\addcontentsline#1#2#3{% toc extension, type, tag
   \begingroup
     \let\label\@gobble
@@ -12529,7 +12536,7 @@
       \endgroup
     \fi
     \addtocontents{#1}{%
-      \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}%
+      \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}\protected@file@percent
     }%
   \endgroup
 }

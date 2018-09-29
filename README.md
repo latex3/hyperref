@@ -14,10 +14,11 @@ backends.
 
 Included are:
 
- 1. `backref' a package by David Carlisle to provide links back from
+ 1. `hyperef' The main hyperlinking functionality.
+ 2. `backref' a package by David Carlisle to provide links back from
     bibliography to the main text; these are hypertext links after using
     hyperref.
- 2. nameref' a package to allow reference to the *names* of sections rather
+ 3. nameref' a package to allow reference to the *names* of sections rather
     than their numbers.
 
 ## DOWNLOAD

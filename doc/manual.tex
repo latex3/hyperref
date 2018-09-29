@@ -15,7 +15,7 @@
 % * HO-support 2017
 %
 
-\def\mydate{January 2017}
+\def\mydate{September 2018}
 
 \RequirePackage{ifpdf}
 \ifpdf % We are running pdfTeX in pdf mode
@@ -28,7 +28,6 @@
 \documentclass{article}
 \fi
 
-\usepackage{etex}% for \eTeX
 
 \usepackage{pifont}
 \usepackage{calc}
@@ -162,7 +161,6 @@
     pdfusetitle,%
   ]{hyperref}
   %%?? \def\pdfBorderAttrs{/Border [0 0 0] } % No border arround Links
-  \usepackage{thumbpdf}
 \else
   \usepackage{hyperref}
 \fi
@@ -254,6 +252,7 @@ the \textsf{-z} option), \textsf{\OzTeX}, and \textsf{Textures})
 PDF writer; this is basically the same as that for \textsf{dvips}, but a few variations remained before version 5.21
 \item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}
 \item[pdftex] pdf\TeX, \Hanh{}'s \TeX{} variant that writes PDF directly
+\item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly
 \item[dvipdfm] produces \verb|\special| commands for Mark Wicks' DVI to PDF driver \textsf{dvipdfm}
 \item[dvipdfmx] produces \verb|\special| commands for driver
      \textsf{dvipdfmx}, a successor of \textsf{dvipdfm}
@@ -1363,6 +1362,777 @@ of \cs{documentclass} and \cs{usepackage}, because
 package \xpackage{hyperref} is not yet loaded and an undefined control
 sequence error would arise.
 
+\section[New Features]{New Features%
+\footnote{This section moved from the README file, needs more integration into the manual}}
+
+
+\subsection{Option `pdflinkmargin'}
+
+ Option `pdflinkmargin' is an experimental option for specifying
+  a link margin, if the driver supports this. Default is 1 pt for
+  supporting drivers.
+
+
+\begin{description}
+\item[pdfTeX]
+\begin{itemize}
+ \item The link area also depends on the surrounding box.
+ \item Settings have local effect.
+ \item When a page is shipped out, pdfTeX uses the current setting
+    of the link margin for all links on the page.
+\end{itemize}
+
+\item[pdfmark]
+\begin{itemize}
+ \item Settings have global effect.
+\end{itemize}
+
+\item[Other drivers]
+ Unsupported.
+\end{description}
+
+
+\subsection{Field option `calculatesortkey'}
+
+ Fields with calculated values are calculated in document order
+  by default. If calculated field values depend on other calculated
+  fields that appear later in the document, then the correct calculation
+  order can be specified with option `calculatesortkey'. Its value is
+  used as key to lexicographically sort the calculated fields.
+  The sort key do not need to be unique. Fields that share the same
+  key are sorted in document order.
+
+
+
+ Currently the field option `calculatesortkey' is only supported by
+  the driver for pdfTeX.
+
+
+\subsection{Option `localanchorname'}
+
+ When an anchor is set (e.g. via \verb|\refstepcounter|, then the
+  anchor name is globally set to the current anchor name.
+
+
+ For example:
+\begin{verbatim}
+    \section{Foobar}
+    \begin{equation}\end{equation}
+    \label{sec:foobar}
+\end{verbatim}
+  With the default global setting (localanchorname=false)
+  a reference to `sec:foobar' jumps to the equation before.
+  With option `localanchorname' the anchor of the equation
+  is forgotten after the environment and the reference
+  `sec:foobar' jumps to the section title.
+
+
+ Option `localanchorname' is an experimental option, there
+  might be situations, where the anchor name is not available
+  as expected.
+
+
+\subsection{Option `customdriver'}
+
+ The value of option `customdriver' is the name of an external
+  driver file without extension `.def'. The file must have
+  \verb|\ProvidesFile| with a version date and number that match the
+  date and number of `hyperref', otherwise a warning is given.
+
+ Because the interface, what needs to be defined in the driver,
+  is not well defined and quite messy, the option is mainly intended
+  to ease developing, testing, debugging the driver part.
+
+
+\subsection{Option `psdextra'}
+
+ LaTeX's NFSS is used to assist the conversion of arbitrary
+  TeX strings to PDF strings (bookmarks, PDF information entries).
+  Many math command names (\verb|\geq|, \verb|\notin|, ...) are not in control
+  of NFSS, therefore they are defined with prefix `text'
+  (\verb|\textgeq|, \verb|\textnotin|, ...). They can be mapped to short names
+  during the processing to PDF strings. The disadvantage is that
+  they are many hundreds macros that need to be redefined for
+  each PDF string conversion. Therefore this can be enabled or
+  disabled as option `psdextra'. On default the option is turned
+  off (set to `false'). Turning the option on means
+  that the short names are available. Then \verb|\geq| can directly
+  be used instead of \verb|\textgeq|.
+
+
+\subsection{\textbackslash XeTeXLinkBox}
+
+ When XeTeX generates a link annotation, it does not look
+  at the boxes (as the other drivers), but only at the character
+  glyphs. If there are no glyphs (images, rules, ...), then
+  it does not generate a link annotation. Macro \verb|\XeTeXLinkBox|
+  puts its argument in a box and adds spaces at the lower left
+  and upper right corners. An additional margin can be specified
+  by setting it to the dimen register \verb|\XeTeXLinkMargin|. The default
+  is 2pt.
+
+ Example:
+
+
+\begin{verbatim}
+    % xelatex
+    \documentclass{article}
+    \usepackage{hyperref}
+    \setlength{\XeTeXLinkMargin}{1pt}
+    \begin{document}
+    \section{Hello World}
+    \newpage
+    \label{sec:hello}
+    \hyperref[sec:hello]{%
+      \XeTeXLinkBox{\rule{10mm}{10mm}}%
+    }
+    \end{document}
+\end{verbatim}
+
+\subsection{\textbackslash IfHyperBooleanExists and \textbackslash IfHyperBoolean}
+\begin{verbatim}
+ \IfHyperBooleanExists{OPTION}{YES}{NO}
+\end{verbatim}
+  If a hyperref OPTION is a boolean, that means it takes values
+  `true' or `false', then \verb|\IfHyperBooleanExists| calls YES, otherwise NO.
+
+
+\begin{verbatim}
+ \IfHyperBoolean{OPTION}{YES}{NO}
+\end{verbatim}
+  Macro \verb|\IfHyperBoolean| calls YES, if OPTION exists as boolean and is
+  enabled. Otherwise NO is executed.
+
+
+
+ Both macros are expandable. Additionally option `stoppedearly' is
+  available. It is enabled if \verb|\MaybeStopEarly| or \verb|\MaybeStopNow|
+  end hyperref prematurely.
+
+
+\subsection{\textbackslash unichar}
+
+ If a Unicode character is not supported by puenc.def, it can
+  be given by using \verb|\unichar|. Its name and syntax is inherited
+  from package `ucs'. However it is defined independently for
+  use in hyperref's \verb|\pdfstringdef| (that converts arbitrary
+  TeX code to PDF strings or tries to do this).
+
+
+
+ Macro \verb|\unichar| takes a TeX number as argument,
+  examples for U+263A (WHITE SMILING FACE):
+\begin{verbatim}
+    \unichar{"263A}% hexadecimal notation
+    \unichar{9786}% decimal notation
+\end{verbatim}
+  `"' must not be a babel shorthand character or otherwise
+  active. Otherwise prefix it with \verb|\string|:
+\begin{verbatim}
+    \unichar{\string"263A}% converts `"' to `"' with catcode 12 (other)
+\end{verbatim}
+  Users of (n)german packages or babel options may use \verb|\dq| instead:
+\begin{verbatim}
+    \unichar{\dq 263A}% \dq is double quote with catcode 12 (other)
+\end{verbatim}
+
+
+\subsection{\textbackslash ifpdfstringunicode}
+
+ Some features of the PDF specification needs PDF strings.
+  Examples are bookmarks or the entries in the information dictionary.
+  The PDF specification allows two encodings `PDFDocEncoding'
+  (8-bit encoding) and `Unicode' (UTF-16). The user can help
+  using \verb|\texorpdfstring| to replace complicate TeX constructs
+  by a representation for the PDF string. However \verb|\texorpdfstring|
+  does not distinguish the two encodings. This gap closes
+  \verb|\ifpdfstringunicode|. It is only allowed in the second argument
+  of \verb|\texorpdfstring| and takes two arguments, the first allows
+  the full range of Unicode. The second is limited to the
+  characters available in PDFDocEncoding.
+
+
+
+ As example we take a macro definition for the Vietnamese
+  name of Han The Thanh. Correctly written it needs some
+  accented characters, one character even with a double accent.
+  Class `tugboat.cls' defines a macro for the typesetted name:
+\begin{verbatim}
+    \def\Thanh{%
+      H\`an~%
+      Th\^e\llap{\raise 0.5ex\hbox{\'{}}}%
+      ~Th\`anh%
+    }
+\end{verbatim}
+  It's not entirely correct, the second accent over the `e' is not
+  an acute, but a hook. However standard LaTeX does not provide
+  such an accent.
+
+    Now we can extend the defintion to support hyperref.
+  The first and the last word are already supported automatically.
+  Characters with two or more accents are a difficult business in
+  LaTeX, because the NFSS2 macros of the LaTeX kernel do not support
+  more than one accent. Therefore also puenc.def misses support for
+  them. But we can provide it using \verb|\unichar|. The character
+  in question is:
+\begin{verbatim}
+    % U+1EC3 LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
+\end{verbatim}
+  Thus we can put this together:
+\begin{verbatim}
+    \def\Thanh{%
+      H\`an~%
+      \texorpdfstring{Th\^e\llap{\raise 0.5ex\hbox{\'{}}}}%
+      {\ifpdfstringunicode{Th\unichar{"1EC3}}{Th\^e}}%
+      ~Th\`anh%
+    }
+\end{verbatim}
+  For PDFDocEncoding (PD1) the variant above has dropped the
+  second accent. Alternatively we could provide a representation
+  without accents instead of wrong accents:
+\begin{verbatim}
+    \def\Thanh{%
+      \texorpdfstring{%
+        H\`an~%
+        Th\^e\llap{\raise 0.5ex\hbox{\'{}}}}%
+        ~Th\`anh%
+      }{%
+        \ifpdfstringunicode{%
+          H\`an Th\unichar{"1EC3} Th\`anh%
+        }{%
+          Han The Thanh%
+        }%
+      }%
+    }
+\end{verbatim}
+
+\subsection{Customizing index style file with \textbackslash nohyperpage}
+
+ Since version 2008/08/14 v6.78f.
+
+
+
+ For hyperlink support in the index, hyperref inserts \verb|\hyperpage|
+  into the index macros. After processing with Makeindex, \verb|\hyperpage|
+  analyzes its argument to detect page ranges and page comma lists.
+  However, only the standard settings are supported directly:
+\begin{verbatim}
+    delim_r "--"
+    delim_n ", "
+\end{verbatim}
+  (See manual page/documentation of Makeindex that explains
+  the keys that can be used in style files for Makeindex.)
+  Customized versions of
+    \verb|delim_r, delim_n, suffix_2p, suffix_3p, suffix_mp|
+  needs markup that \verb|\hyperpage| can detect and knows that
+  this stuff does not belong to a page number. Makro
+  \nohyperpage serves as this markup. Put the customized
+  code for these keys inside \verb|\nohyperpage|, e.g.:
+\begin{verbatim}
+    suffix_2p "\\nohyperpage{f.}"
+    suffix_3p "\\nohyperpage{ff.}"
+\end{verbatim}
+  (Depending on the typesetting tradition some space "\verb|\\|," or "\verb|~|"
+  should be put before the first f inside \verb|\nohyperpage|.)
+
+
+\subsection{Experimental option `ocgcolorlinks'}
+
+ The idea are colored links, when viewed, but printed without colors.
+  This new experimental option `ocgcolorlinks' uses Optional Content
+  Groups, a feature introduced in PDF 1.5.
+\begin{itemize}
+ \item The option must be given for package loading:
+      \verb|\usepackage[ocgcolorlinks]{hyperref}|
+ \item Main disadvantage: Links cannot be broken across lines.
+    PDF reference 1.7: 4.10.2 "Making Graphical Content Optional":
+      Graphics state operations, such as setting the color, ...,
+      are still applied.
+    Therefore the link text is put in a box and set twice, with and
+    without color.
+ \item The feature can be switched of by \verb|\hypersetup{ocgcolorlinks=false}|
+    inside the document.
+ \item Supported drivers: pdftex, dvipdfm
+ \item The PDF version should be at least 1.5. It is automatically
+    set for pdfTeX. Users of dvipdfmx set the version on the command
+    line: dvipdfmx -V 5
+\end{itemize}
+
+\subsection{Option `pdfa'}
+
+ The new option `pdfa' tries to avoid violations of PDF/A in code
+  generated by hyperref. However, the result is usually not in PDF/A,
+  because many features aren't controlled by hyperref (XMP metadata,
+  fonts, colors, driver dependend low level stuff, ...).
+
+
+
+ Currently, option `pdfa' sets and disables the following items:
+\begin{itemize}
+ \item Enabled annotation flags: Print, NoZoom, NoRotate [PDF/A 6.5.3].
+ \item Disabled annotation flags: Hidden, Invisible, NoView [PDF/A 6.5.3].
+ \item Disabled: Launch action (\href{run:...} [PDF/A 6.6.1].
+ \item Restricted: Named actions (\Acrobatmenu: NextPage, PrevPage,
+    FirstPage, LastPage) [PDF/A 6.6.1].
+ \item Many things are disabled in PDF formulars:
+  \begin{itemize}
+   \item JavaScript actions [PDF/A 6.6.1]
+   \item Trigger events (additional actions) [PDF/A 6.6.2]
+   \item Push button (because of JavaScript)
+   \item Interactive Forms: Flag NeedAppearances is the default `false'
+      (Because of this, hyperref's implementation of Forms looks ugly).
+      [PDF/A 6.9]
+  \end{itemize}
+\end{itemize}
+
+
+
+ The default value of the new option `pdfa' is `false'. It influences
+  the loading of the package and cannot be changed after hyperref is
+  loaded (\verb|\usepackage{hyperref}|).
+
+
+
+\subsection{Option `linktoc' added}
+
+ The new option `linktoc' allows more control which part
+  of an entry in the table of contents is made into a link:
+\begin{itemize}
+ \item `linktoc=none'    (no links)
+ \item `linktoc=section' (default behaviour, same as `linktocpage=false')
+ \item `linktoc=page'    (same as `linktocpage=true')
+ \item `linktoc=all'     (both the section and page part are links)
+\end{itemize}
+
+\subsection{Option `pdfnewwindow' changed}
+
+ Before 6.77b:
+\begin{itemize}
+ \item pdfnewwindow=true --> /NewWindow true
+ \item pdfnewwindow=false --> (absent)
+ \item unused pdfnewwindow --> (absent)
+\end{itemize}
+  Since 6.77b:
+\begin{itemize}
+ \item pdfnewwindow=true --> /NewWindow true
+ \item pdfnewwindow=false --> /NewWindow false
+ \item pdfnewwindow={} --> (absent)
+ \item unused pdfnewwindow --> (absent)
+\end{itemize}
+
+
+
+ Rationale: There is a difference between setting to `false'
+  and an absent entry. In the former case the new document
+  replaces the old one, in the latter case the PDF viewer
+  application should respect the user preference.
+
+
+\subsection{Flag options for PDF forms}
+
+ PDF form field macros (\verb|\TextField|, \verb|\CheckBox|, ...) support
+  boolean flag options. The option name is the lowercase
+  version of the names in the PDF specification (1.7):
+
+    \url{http://www.adobe.com/devnet/pdf/pdf_reference.html}
+
+    \url{http://www.adobe.com/devnet/acrobat/pdfs/pdf_reference.pdf}
+
+  Options (convert to lowercase) except flags in square brackets:
+
+\begin{itemize}
+ \item Table 8.16 Annotation flags (page 608):
+
+{\obeylines
+    1 Invisible
+    2 Hidden (PDF 1.2)
+    3 Print (PDF 1.2)
+    4 NoZoom (PDF 1.3)
+    5 NoRotate (PDF 1.3)
+    6 NoView (PDF 1.3)
+    [7 ReadOnly (PDF 1.3)] ignored for widget annotations, see table 8.70
+    8 Locked (PDF 1.4)
+    9 ToggleNoView (PDF 1.5)
+    10 LockedContents (PDF 1.7)
+}
+ \item Table 8.70 Field flags common to all field types (page 676):
+
+{\obeylines
+    1 ReadOnly
+    2 Required
+    3 NoExport
+}
+ \item Table 8.75 Field flags specific to button fields (page 686):
+
+{\obeylines
+    15 NoToggleToOff (Radio buttons only)
+    16 Radio (set: radio buttons, clear: check box, pushbutton: clear)
+    17 Pushbutton
+    26 RadiosInUniso (PDF 1.5)
+}
+ \item Table 8.77 Field flags specific to text fields (page 691):
+
+{\obeylines
+    13 Multiline
+    14 Password
+    21 FileSelect (PDF 1.4)
+    23 DoNotSpellCheck (PDF 1.4)
+    24 DoNotScroll (PDF 1.4)
+    25 Comb (PDF 1.5)
+    26 RichText (PDF 1.5)
+}
+ \item Table 8.79 Field flags specific to choice fields (page 693):
+
+{\obeylines
+    18 Combo (set: combo box, clear: list box)
+    19 Edit (only useful if Combo is set)
+    20 (Sort) for authoring tools, not PDF viewers
+    22 MultiSelect (PDF 1.4)
+    23 DoNotSpellCheck (PDF 1.4) (only useful if Combo and Edit are set)
+    27 CommitOnSelChange (PDF 1.5)
+}
+ \item Table 8.86 Flags for submit-form actions (page 704):
+
+{\obeylines
+    [1 Include/Exclude] unsupported, use `noexport' (table 8.70) instead
+    2 IncludeNoValueFields
+    [3 ExportFormat] handled by option `export'
+    4 GetMethod
+    5 SubmitCoordinates
+    [6 XFDF (PDF 1.4)] handled by option `export'
+    7 IncludeAppendSaves (PDF 1.4)
+    8 IncludeAnnotations (PDF 1.4)
+    [9 SubmitPDF (PDF 1.4)] handled by option `export'
+    10 CanonicalFormat (PDF 1.4)
+    11 ExclNonUserAnnots (PDF 1.4)
+    12 ExclFKey (PDF 1.4)
+    14 EmbedForm (PDF 1.5)
+}
+\end{itemize}
+
+ New option `export' sets the export format of a submit action.
+  Valid values are (upper- or lowercase):
+\begin{itemize}
+ \item FDF
+ \item HTML
+ \item XFDF
+ \item PDF (not supported by Acrobat Reader)
+\end{itemize}
+
+\subsection{Option `pdfversion'}
+
+ This is an experimental option. It notifies `hyperref' about
+  the intended PDF version. Currently this is used in code for
+  PDF forms (implementation notes 116 and 122 of PDF spec 1.7).
+
+
+
+ Values: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7. Values below 1.2 are not
+  supported, because most drivers expect higher PDF versions.
+
+
+
+ The option must be used early, not after \verb|\usepackage{hyperref}|.
+
+
+ In theory this option should also set the PDF version,
+  but this is not generally supported.
+\begin{itemize}
+ \item pdfTeX below 1.10a: unsupported.
+    pdfTeX >= 1.10a and < 1.30: \verb|\pdfoptionpdfminorversion|
+    pdfTeX >= 1.30: \verb|\pdfminorversion|
+ \item dvipdfm: configuration file, example:
+    TeX Live 2007, texmf/dvipdfm/config/config, entry `V 2'.
+ \item dvipdfmx: configuration file, example:
+    TeX Live 2007, texmf/dvipdfm/dvipdfmx.cfg, entry `V 4'.
+ \item Ghostscript: option -dCompatibilityLevel (this is set in
+    `ps2pdf12', `ps2pdf13', `ps2pdf14').
+\end{itemize}
+
+
+ The current PDF version is used as default if this version
+  can be detected (only pdfTeX >= 1.10a). Otherwise the lowest
+  version 1.2 is assumed. Thus `hyperref' tries to avoid PDF code
+  that breaks this version, but is free to use ignorable higher PDF
+  features.
+
+
+\subsection{Field option `name'}
+
+ Many form objects uses the label argument
+  for several purposes:
+\begin{itemize}
+ \item Layouted label.
+ \item As name in HTML structures.
+\end{itemize}
+  Code that is suitable for layouting with TeX can
+  break in the structures of the output format.
+  If option `name' is given, then its value is used
+  as name in the different output structures. Thus
+  the value should consist of letters only.
+
+
+\subsection{Option `pdfencoding'}
+
+ The PDF format allows two encodings for bookmarks and entries
+  in the information dictionary: PDFDocEncoding and Unicode
+  as UTF-16BE. Option "pdfencoding" selects between these encodings:
+\begin{itemize}
+ \item "pdfdoc" uses PDFDocEncoding. It uses just one byte per character,
+     but the supported characters are limited (244 in PDF-1.7).
+ \item "unicode" sets Unicode. It is encoded as UTF-16BE. Two bytes
+    are used for most characters, surrogates need four bytes.
+ \item "auto" PDFDocEncoding if the string does not contain characters
+    outside the encoding and Unicode otherwise.
+\end{itemize}
+
+\subsection{Color options/package hycolor}
+
+ See documentation of package `hycolor'.
+
+
+\subsection{Option pdfusetitle}
+
+ If option pdfusetitle is set then hyperref tries to
+  derive the values for pdftitle and pdfauthor from
+  \verb|\title| and \verb|\author|. An optional argument for \verb|\title| and
+  \verb|\author| is supported (class amsart).
+
+
+\subsection{Starred form of \textbackslash autoref}
+
+ \verb|\autoref*| generates a reference without link as \verb|\ref*| or \verb|\pageref*|.
+
+
+\subsection{Link border style}
+
+ Links can be underlined instead of the default rectangle or
+  options "colorlinks", "frenchlinks". This is done by option
+      \verb|pdfborderstyle={/S/U/W 1}|
+
+  Some remarks:
+
+\begin{itemize}
+ \item AR7/Linux seems to have a bug, that don't use the default
+    value "1" for the width, but zero, thus that the underline
+    is not visible without "/W 1". The same applies for
+    dashed boxes, eg.:
+      pdfborderstyle={/S/D/D[3 2]/W 1}
+
+ \item The syntax is described in the PDF specification, look for
+    "border style", eg.
+    Table 8.13 "Entries in a border style dictionary"
+    (specification for version 1.6)
+
+ \item The border style is removed by
+      pdfborderstyle={}
+    This is automatically done if option colorlinks is enabled.
+
+ \item Be aware that not all PDF viewers support this feature, not
+    even Acrobat Reader itself:
+
+    Some support:
+   \begin{itemize}
+   \item AR7/Linux: "underline" and "dashed", but the border width
+      must be given.
+   \item xpdf 3.00: "underline" and "dashed"
+   \end{itemize}
+
+    Unsupported:
+   \begin{itemize}
+   \item AR5/Linux
+   \item ghostscript 8.50
+   \end{itemize}
+\end{itemize}
+
+\subsection{Option "bookmarksdepth"}
+
+ The depth of the bookmarks can be controlled by the new
+  option "bookmarksdepth".  The option acts globally and
+  distinguishes three cases:
+\begin{itemize}
+ \item "bookmarksdepth" without value
+     Then hyperref uses the current value of counter "tocdepth".
+     This is the compatible behaviour and the default.
+ \item "bookmarksdepth=<number>", the value is number (also negative):
+    The depth for the bookmarks are set to this number.
+ \item "bookmarksdepth=<name>"
+    The <name> is a document division name (part, chapter, ...).
+    It must not start with a digit or minus to avoid mixing up
+    with the number case. Internally hyperref uses the value
+    of macro "\verb|\toclevel@<name>|".
+  Examples:
+\begin{verbatim}
+    \hypersetup{bookmarksdepth=paragraph}
+    \hypersetup{bookmarksdepth=4} % same as before
+    \hypersetup{bookmarksdepth} % counter "tocdepth" is used
+\end{verbatim}
+\end{itemize}
+
+\subsection{Option "pdfescapeform"}
+
+ There are many places where arbitrary strings end up as
+  PS or PDF strings. The PS/PDF strings in parentheses form
+  require the protection of some characters, e.g. unmatched
+  left or right parentheses need escaping or the escape
+  character itself (backslash).
+    Since 2006/02/12 v6.75a the PS/PDF driver should do
+  this automatically. However I assume a problem with
+  compatibility, especially regarding the form part where
+  larger amounts of JavaScript code can be present.
+  It would be a pain to remove all the escaping, because
+  an additional escaping layer can falsify the code.
+
+  Therefore a new option pdfescapeform was introduced:
+\begin{itemize}
+ \item pdfescapeform=false
+    Escaping for the formulars are disabled, this is
+    the compatibility behaviour, therefore this is the default.
+ \item pdfescapeform=true
+    Then the PS/PDF drivers do all the necessary escaping.
+    This is the logical choice and the recommended setting.
+    For example, the user writes JavaScript as JavaScript
+    and do not care about escaping characters for PS/PDF
+    output.
+\end{itemize}
+
+\subsection{Default driver setting}
+
+ (hyperref >= 6.72s)
+  If no driver is given, hyperref tries its best to guess the
+  most suitable driver. Thus it loads "hpdftex", if pdfTeX is
+  detected running in PDF mode. Or it loads the corresponding
+  VTeX driver for VTeX's working modes.
+    Unhappily many driver programs run after the TeX compiler,
+  so hyperref does not have a chance (dvips, dvipdfm, ...).
+  In this case driver "hypertex" is loaded that supports the
+  HyperTeX features that are recognized by xdvi for example.
+  This behaviour, however, can easily be changed in the configuration
+  file "hyperref.cfg":
+\begin{verbatim}
+    \providecommand*{\Hy@defaultdriver}{hdvips}
+\end{verbatim}
+  for dvips, or
+\begin{verbatim}
+    \providecommand*{\Hy@defaultdriver}{hypertex}
+\end{verbatim}
+  for the default behaviour of hyperref.
+
+ See also the new option `driverfallback'.
+
+\subsection{Backref entries}
+
+ Alternative interface for formatting of backref entries, example:
+
+\begin{verbatim}
+\documentclass[12pt,UKenglish]{article}
+
+\usepackage{babel}
+\usepackage[pagebackref]{hyperref}
+
+% Some language options are detected by package backref.
+% This affects the following macros:
+%   \backrefpagesname
+%   \backrefsectionsname
+%   \backrefsep
+%   \backreftwosep
+%   \backreflastsep
+
+\renewcommand*{\backref}[1]{
+  % default interface
+  % #1: backref list
+  %
+  % We want to use the alternative interface,
+  % therefore the definition is empty here.
+}
+\renewcommand*{\backrefalt}[4]{%
+  % alternative interface
+  % #1: number of distinct back references
+  % #2: backref list with distinct entries
+  % #3: number of back references including duplicates
+  % #4: backref list including duplicates
+  \par
+  #3 citation(s) on #1 page(s): #2,\par
+  \ifnum#1=1 %
+    \ifnum#3=1 %
+      1 citation on page %
+    \else
+      #3 citations on page %
+    \fi
+  \else
+    #3 citations on #1 pages %
+  \fi
+  #2,\par
+  \ifnum#3=1 %
+    1 citation located at page %
+  \else
+    #3 citations located at pages %
+  \fi
+  #4.\par
+}
+
+% The list of distinct entries can be further refined:
+\renewcommand*{\backrefentrycount}[2]{%
+  % #1: the original backref entry
+  % #2: the count of citations of this entry,
+  %     in case of duplicates greater than one
+  #1%
+  \ifnum#2>1 %
+    ~(#2)%
+  \fi
+}
+
+\begin{document}
+
+  \section{Hello}
+    \cite{ref1, ref2, ref3, ref4}
+  \section{World}
+    \cite{ref1, ref3}
+  \newpage
+
+  \section{Next section}
+    \cite{ref1}
+  \newpage
+
+  \section{Last section}
+    \cite{ref1, ref2}
+  \newpage
+
+  \pdfbookmark[1]{Bibliography}{bib}
+  \begin{thebibliography}{99}
+    \bibitem{ref1} Dummy entry one.
+
+    \bibitem{ref2} Dummy entry two.
+
+    \bibitem{ref3} Dummy entry three.
+
+    \bibitem{ref4} Dummy entry four.
+
+  \end{thebibliography}
+
+\end{document}
+\end{verbatim}
+
+\subsection{\textbackslash phantomsection}
+
+Set an anchor at this location.  It is often used in conjunction
+with \verb|\addcontentsline| for sectionlike things (index, bibliography,
+preface). \verb|\addcontentsline| refers to the latest previous location
+where an anchor is set.
+
+\begin{verbatim}
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+\end{verbatim}
+
+Now the entry in the table of contents (and bookmarks) for the
+index points to the start of the index page, not to a location
+before this page.
+
+
+
 \section{Acrobat-specific behavior}
 If you want to access the menu options of Acrobat Reader or Exchange, the following
 macro is provided in the appropriate drivers:
@@ -1581,7 +2351,7 @@ A hyperref driver has to provide definitions for eight macros:
 \smallskip
 
 The draft option defines the macros as follows
-\qquad\begin{verbatim}
+\begin{verbatim}
 \let\hyper@@anchor\@gobble
 \gdef\hyper@link##1##2##3{##3}%
 \def\hyper@linkurl##1##2{##1}%
@@ -1619,6 +2389,564 @@ packages designed to work especially well with it. These are \xpackage{xr}
 and \xpackage{minitoc}, which support crossdocument links using \hologo{LaTeX}'s
 normal \cs{label}/\cs{ref} mechanisms and per-chapter tables of contents,
 respectively.
+
+
+\subsection{Package Compatibility}
+
+Currently only package loading orders are available:
+
+
+
+Note: hyperref loads package "nameref" at \verb|\begin{document}|.
+Sometimes this is too late, thus this package must be loaded
+earlier.
+
+
+\subsubsection{algorithm}
+\begin{verbatim}
+ \usepackage{float}
+  \usepackage{hyperref}
+  \usepackage[chapter]{algorithm}% eg.
+\end{verbatim}
+
+\subsubsection{amsmath}
+
+ The environments equation and eqnarray are not supported too well.
+  For example, there might be spacing problems (eqnarray isn't recommended
+  anyway, see CTAN:info/l2tabu/, the situation for equation is unclear,
+  because nobody is interested in investigating). Consider using the
+  environments that package amsmath provide, e.g. gather for equation.
+  The environment equation can even redefined to use gather:
+
+\begin{verbatim}
+  \usepackage{amsmath}
+  \let\equation\gather
+  \let\endequation\endgather
+\end{verbatim}
+
+\subsubsection{amsrefs}
+
+ Package loading order:
+
+\begin{verbatim}
+  \usepackage{hyperref}
+  \usepackage{amsrefs}
+\end{verbatim}
+
+\subsubsection{arydshln, longtable}
+
+ Package longtable must be put before hyperref and arydshln,
+  hyperref after arydshln generates an error, thus the
+  resulting package order is then:
+
+\begin{verbatim}
+  \usepackage{longtable}
+  \usepacakge{hyperref}
+  \usepackage{arydshln}
+\end{verbatim}
+
+\subsubsection{babel/magyar.ldf}
+
+ The old version 2005/03/30 v1.4j will not work.
+  You need at least version 1.5, maintained by P\'eter Szab\'o,
+  see CTAN:language/hungarian/babel/.
+
+
+\subsubsection{babel/spanish.ldf}
+
+ Babel's spanish.ldf redefines `\verb|\.|' to support `\verb|\...|'.
+  In bookmarks (\verb|\pdfstringdef|) only `\verb|\.|' is supported.
+  If `\verb|\...|' is needed,
+    \verb|\texorpdfstring{\...}{\dots}|
+  can be used instead.
+
+
+\subsubsection{bibentry}
+
+ Workaround:
+
+\begin{verbatim}
+  \makeatletter
+  \let\saved@bibitem\@bibitem
+  \makeatother
+
+  \usepackage{bibentry}
+  \usepackage{hyperref}
+
+  \begin{document}
+
+  \begingroup
+    \makeatletter
+    \let\@bibitem\saved@bibitem
+    \nobibliography{database}
+  \endgroup
+\end{verbatim}
+
+\subsubsection{bigfoot}
+
+ Hyperref does not support package `bigfoot'. And package
+  `bigfoot' does not support hyperref's footnotes and disables
+  them (hyperfootnotes=false).
+
+
+\subsubsection{chappg}
+
+ Package `chappg' uses \verb|\@addtoreset| that is redefined by `hyperref'.
+  The package order is therefore:
+
+\begin{verbatim}
+  \usepackage{hyperref}
+  \usepackage{chappg}
+\end{verbatim}
+
+\subsubsection{cite}
+
+ This is from Mike Shell:
+ cite.sty cannot currently be used with hyperref.
+ However, I can do a workaround via:
+
+\begin{verbatim}
+ \makeatletter
+ \def\NAT@parse{\typeout{This is a fake Natbib command to fool Hyperref.}}
+ \makeatother
+
+ \usepackage[hypertex]{hyperref}
+\end{verbatim}
+
+ so that hyperref will not redefine any of the biblabel stuff - so cite.sty
+ will work as normal - although the citations will not be hyperlinked, of
+ course (But this may not be an issue for many people).
+
+
+\subsubsection{count1to}
+
+ Package `count1to' adds several \verb|\@addtoreset| commands that confuse
+  `hyperref'. Therefore \verb|\theH<...>| has to be fixed:
+
+\begin{verbatim}
+  \usepackage{count1to}
+  \AtBeginDocument{% *after* \usepackage{count1to}
+    \renewcommand*{\theHsection}{\theHchapter.\arabic{section}}%
+    \renewcommand*{\theHsubsection}{\theHsection.\arabic{subsection}}%
+    \renewcommand*{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}%
+    \renewcommand*{\theHparagraph}{\theHsubsubsection.\arabic{paragraph}}%
+    \renewcommand*{\theHsubparagraph}{\theHparagraph.\arabic{subparagraph}}%
+  }
+\end{verbatim}
+
+\subsubsection{dblaccnt}
+
+ pd1enc.def or puenc.def should be loaded before:
+\begin{verbatim}
+  \usepackage{hyperref}
+  \usepackage{dblaccnt}
+\end{verbatim}
+  or see entry for "vietnam".
+
+
+\subsubsection{easyeqn}
+ Not compatible, breaks.
+
+
+\subsubsection{ellipsis}
+
+ This packages redefines \verb|\textellipsis|
+  after package hyperref (pd1enc.def/puenc.def should be loaded before):
+\begin{verbatim}
+  \usepackage{hyperref}
+  \usepackage{ellipsis}
+\end{verbatim}
+
+\subsubsection{float}
+\begin{verbatim}
+ \usepackage{float}
+  \usepackage{hyperref}
+\end{verbatim}
+\begin{itemize}
+  \item Several \verb|\caption| commands are not supported inside one float object.
+  \item Anchor are set at top of the float object, if its style is controlled
+    by float.sty.
+\end{itemize}
+
+\subsubsection{endnotes}
+ Unsupported.
+
+\subsubsection{foiltex}
+ Update to version 2008/01/28 v2.1.4b:
+  Since version 6.77a hyperref does not hack into \verb|\@begindvi|,
+  it uses package `atbegshi' instead, that hooks into \verb|\shipout|.
+  Thus the patch of `foils.cls' regarding hyperref is now obsolete
+  and causes an undefined error message about \verb|\@hyperfixhead|.
+  This is fixed in FoilTeX 2.1.4b.
+
+
+\subsubsection{footnote}
+
+ This package is not supported, you have to disable hyperref's footnote
+  support by using option "hyperfootnotes=false".
+
+
+\subsubsection{geometry}
+
+ Driver `dvipdfm' and program `dvipdfm' might generate a warning:
+      Sorry.  Too late to change page size
+  Then prefer the program `dvipdfmx' or use one of the following
+  workarounds to move the \verb|\special| of geometry to an earlier
+  location:
+
+\begin{verbatim}
+    \documentclass[dvipdfm]{article}% or other classes
+    \usepackage{atbegshi}
+    \AtBeginDocument{%
+      \let\OrgAtBeginDvi\AtBeginDvi
+      \let\AtBeginDvi\AtBeginShipoutFirst
+    }
+    \usepackage[
+      paperwidth=170mm,
+      paperheight=240mm
+    ]{geometry}
+    \AtBeginDocument{%
+      \let\AtBeginDvi\OrgAtBeginDvi
+    }
+    \usepackage{hyperref}
+
+  or
+
+    \documentclass[dvipdfm]{article}% or other classes
+    \usepackage{atbegshi}
+    \let\AtBeginDvi\AtBeginShipoutFirst
+    \usepackage[
+      paperwidth=170mm,
+      paperheight=240mm
+    ]{geometry}
+    \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{IEEEtran.cls}
+
+ version >= V1.6b (because of \verb|\@makecaption|, see ChangeLog)
+
+
+\subsubsection{index}
+
+ version >= 1995/09/28 v4.1 (because of \verb|\addcontentsline| redefinition)
+
+
+\subsubsection{lastpage}
+
+ Compatible.
+
+
+\subsubsection{linguex}
+\begin{verbatim}
+ \usepackage{hyperref}
+  \usepackage{linguex}
+\end{verbatim}
+
+\subsubsection{ltabptch}
+\begin{verbatim}
+ \usepackage{longtable}
+  \usepackage{ltabptch}
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{mathenv}
+
+ Unsupported.
+
+
+
+ Both `mathenv' and `hyperref' messes around with
+  environment `eqnarray'. You can load `mathenv' after
+  `hyperref' to avoid an error message. But \verb|\label|
+  will not work inside environment `eqnarray' properly,
+  for example.
+
+
+\subsubsection{minitoc-hyper}
+
+ This package is obsolete, use the uptodate original
+  package minitoc instead.
+
+
+\subsubsection{multind}
+\begin{verbatim}
+ \usepackage{multind}
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{natbib}
+\begin{verbatim}
+ \usepackage{natbib}
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{nomencl}
+Example for introducing links for the page numbers:
+\begin{verbatim}
+      \renewcommand*{\pagedeclaration}[1]{\unskip, \hyperpage{#1}}
+\end{verbatim}
+
+
+For equations the following might work:
+\begin{verbatim}
+      \renewcommand*{\eqdeclaration}[1]{%
+        \hyperlink{equation.#1}{(Equation~#1)}%
+      }
+    But the mapping from the equation number to the anchor name
+    is not available in general.
+\end{verbatim}
+
+\subsubsection{parskip}
+\begin{verbatim}
+ \usepackage{parskip}
+  \usepackage{hyperref}[2012/08/20]
+\end{verbatim}
+
+
+ Both packages want to redefine \verb|\@starttoc|.
+
+
+\subsubsection{prettyref}
+\begin{verbatim}
+%%% example for prettyref %%%
+\documentclass{article}
+\usepackage{prettyref}
+\usepackage[pdftex]{hyperref}
+
+%\newrefformat{FIG}{Figure~\ref{#1}}% without hyperref
+\newrefformat{FIG}{\hyperref[{#1}]{Figure~\ref*{#1}}}
+
+\begin{document}
+  This is a reference to \prettyref{FIG:ONE}.
+  \newpage
+  \begin{figure}
+    \caption{This is my figure}
+    \label{FIG:ONE}
+  \end{figure}
+\end{document}
+%%% example for prettyref %%%
+      \end{verbatim}
+
+\subsubsection{ntheorem}
+\begin{verbatim}
+ ntheorem-hyper.sty is an old patched version of ntheorem.sty.
+  Newer versions of ntheorem know the option hyperref:
+    \usepackage{hyperref}
+    \usepackage[hyperref]{ntheorem}
+  But there are still unsolved problems (options thref, ...).
+\end{verbatim}
+
+\subsubsection{setspace}
+\begin{verbatim}
+ \usepackage{setspace}
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{sidecap}
+\begin{verbatim}
+ Before 2002/05/24 v1.5h:
+    \usepackage{nameref}
+    \usepackage{hyperref}
+    \usepackage{sidecap}
+\end{verbatim}
+
+\subsubsection{subfigure}
+\begin{verbatim}
+ 1995/03/06 v2.0:
+    \usepackage{subfigure}
+    \usepackage{hyperref}
+    % hypertexnames is set to false.
+  v2.1:
+    \usepackage{nameref}
+    \usepackage{subfigure}
+    \usepackage{hyperref}
+    or
+    \usepackage{hyperref}
+    \usepackage{subfigure}
+  v2.1.2:
+    please update
+  v2.1.3:
+    \usepackage{hyperref}
+    \usepackage{subfigure}
+    or vice versa?
+\end{verbatim}
+
+\subsubsection{titleref}
+\begin{verbatim}
+ \usepackage{nameref}
+  \usepackage{titleref}% without usetoc
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{tabularx}
+
+ Linked footnotes are not supported inside environment `tabularx',
+  because they uses the optional argument of \verb|\footnotetext|, see
+  section `Limitations'. Before version 2011/09/28 6.82i
+  hyperref had disabled footnotes entirely by `hyperfootnotes=false'.
+
+
+\subsubsection{titlesec}
+
+ "nameref" supports titlesec, but hyperref does not
+  (unsolved is the anchor setting, missing with unnumbered
+  section, perhaps problems with page breaks with numbered ones).
+
+
+\subsubsection{ucs/utf8x.def}
+
+ The first time a multibyte UTF8 sequence is called, it
+  does some calculations and stores the result in a macro
+  for speeding up the next calls of that UTF8 sequence.
+  However this makes the first call non-expandable and
+  will break if used in information entries or bookmarks.
+  Package "ucs" offers \verb|\PrerenderUnicode| or \verb|\PreloadUnicodePage|
+  to solve this:
+\begin{verbatim}
+    \usepackage{ucs}
+    \usepackage[utf8x]{inputenc}
+    \usepackage{hyperref}% or with option unicode
+    \PrerenderUnicode{^^c3^^b6}% or \PrerenderUnicodePage{1}
+    \hypersetup{pdftitle={Umlaut example: ^^c3^^b6}}
+\end{verbatim}
+  The notation with two carets avoids trouble with 8-bit bytes
+  for the README file, you can use the characters directly.
+
+
+\subsubsection{varioref}
+ There are too many problems with varioref. Nobody has time to
+  sort them out. Therefore this package is now unsupported.
+
+
+ Perhaps you are lucky and some of the features of varioref works
+  with the following loading order:
+\begin{verbatim}
+    \usepackage{nameref}
+    \usepackage{varioref}
+    \usepackage{hyperref}
+\end{verbatim}
+
+
+ Also some babel versions can be problematic. For exmample,
+  2005/05/21 v3.8g contains a patch for varioref that breaks
+  the hyperref support for varioref.
+
+
+
+ Also unsupported:
+\begin{itemize}
+\item   \verb|\Ref|, \verb|\Vref| do not uppercase the first letter.
+\item \verb|\vpageref[]{...}|
+    On the same page a previous space is not suppressed.
+\end{itemize}
+
+\subsubsection{verse}
+
+ Version 2005/08/22 v2.22 contains support for hyperref.
+
+  For older versions see example from
+  de.comp.text.tex (2005/08/11, slightly modified):
+
+\begin{verbatim}
+  \documentclass{article}
+
+  % package order does not matter
+  \usepackage{verse}
+  \usepackage{hyperref}
+
+  \makeatletter
+  % make unique poemline anchors
+  \newcounter{verse@env}
+  \setcounter{verse@env}{0}
+  \let\org@verse\verse
+  \def\verse{%
+    \stepcounter{verse@env}%
+    \org@verse
+  }
+  \def\theHpoemline{\arabic{verse@env}.\thepoemline}
+
+  % add anchor for before \addcontentsline in \@vsptitle
+  \let\org@vsptitle\@vsptitle
+  \def\@vsptitle{%
+    \phantomsection
+    \org@vsptitle
+  }
+  \makeatother
+
+  \begin{document}
+
+  \poemtitle{Poem 1}
+  \begin{verse}
+  An one-liner.
+  \end{verse}
+
+  \newpage
+
+  \poemtitle{Poem 2}
+  \begin{verse}
+  Another one-liner.
+  \end{verse}
+
+  \end{document}
+\end{verbatim}
+
+\subsubsection{vietnam}
+\begin{verbatim}
+ % pd1enc.def should be loaded before package dblaccnt:
+  \usepackage[PD1,OT1]{fontenc}
+  \usepackage{vietnam}
+  \usepackage{hyperref}
+\end{verbatim}
+
+\subsubsection{XeTeX}
+
+ Default for the encoding of bookmarks is `pdfencoding=auto'.
+  That means the strings are always treated as unicode strings.
+  Only if the string restricts to the printable ASCII set,
+  it is written as ASCII string. The reason is that the
+  \verb|\special| does not support PDFDocEncoding.
+
+
+
+ XeTeX uses the program xdvipdfmx for PDF output generation.
+  This program behaves a little different from dvipdfm, because
+  of the supported Unicode characters. Strings for bookmarks
+  or information entries can be output directly. The
+  big chars (char code > 255) are written in UTF-8 and
+  xdvipdfmx tries to convert them to UTF-16BE. However
+  hyperref already provides PDF strings encoded in UTF-16BE,
+  thus the result is a warning
+
+    "Failed to convert input string to UTF16..."
+
+  The best way would be, if xdvipdfm could detect the
+  byte order marker (\verb|\376\377|) and skips the conversion
+  if that marker is present.
+
+    For the time being I added the following to hyperref,
+  when option `pdfencoding=auto' is set (default for XeTeX):
+  The string is converted back to big characters thus that the
+  string is written as UTF-8. But I am very unhappy with this
+  solution. Main disadvantage:
+  Two versions of \verb|\pdfstringdef| are needed:
+
+  a) The string is converted back to big characters for
+     the "tainted keys" of xdvipdfmx (\verb|spc_pdfm.c: default_taintkeys|).
+     The subset hyperref uses is /Title, /Author, /Subject,
+     /Keywords, /Creator, /Producer, /T. Any changes of this
+     set in xdvipdfmx cannot be detected by hyperref.
+
+  b) Without conversion for the other strings , providing UTF16be
+     directly. Examples: Prefix of page labels, some elements
+     of formulars.
+
+  Thus \textbf{each} application that uses \verb|\pdfstringdef| now must
+  check, if it defines a string for some of the tained keys.
+  If yes, then the call of \verb|\pdfstringdef| should be preceded
+  by "\verb|\csname HyPsd@XeTeXBigCharstrue\endcsname|".
+  Example: package bookmark.
+
 
 \section{History and acknowledgments}
 

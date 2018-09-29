@@ -581,7 +581,7 @@ define \cs{Hy@defaultdriver} with \texttt{hdvips}. This is recommended
 because driver \textsf{dvips} provides much more features than
 \textsf{hypertex} for PDF generation.
 
-\noindent\begin{longtable}{>{\ttfamily}lp{.8\hsize}}
+\begin{longtable}{@{}>{\ttfamily}lp{.8\hsize}@{}}
 driverfallback & Its value is used as driver option\\
             & if the driver is not given or autodetected.\\
 dvipdfm     & Sets up \textsf{hyperref} for use with the \textsf{dvipdfm} driver.\\
@@ -618,7 +618,7 @@ Explorer might add something like this to hyperref.cfg:
 \end{verbatim}
 
 \subsection{Extension options}
-\noindent\begin{longtable}{>{\ttfamily}ll>{\itshape}lp{6cm}}
+\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{5.5cm}@{}}
 extension      & text    &         & Set the file extension (e.g.\ \textsf{dvi}) which will be appended to file links
                                      created if you use the \xpackage{xr} package. \\
 hyperfigures   & boolean &         & \\
@@ -659,7 +659,7 @@ Note that all color names must be defined before use, following the
 normal system of the standard \LaTeX\ \xpackage{color} package.
 
 \subsection{PDF-specific display options}
-\noindent\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{7.5cm}@{}}
+\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{7.5cm}@{}}
 bookmarks          & boolean   & true   & A set of Acrobat bookmarks are written, in a manner similar to the
                                            table of contents, requiring two passes of \LaTeX. Some postprocessing
                                            of the bookmark file (file extension \texttt{.out}) may be needed to
@@ -718,7 +718,7 @@ next \TeX\ run if it is edited to contain the line
 \end{verbatim}
 
 \subsection{PDF display and information options}
-\noindent\begin{longtable}{@{}>{\ttfamily}l>{\raggedright}p{\widthof{key value}}>{\itshape}lp{7cm}@{}}
+\begin{longtable}{@{}>{\ttfamily}l>{\raggedright}p{\widthof{key value}}>{\itshape}lp{7cm}@{}}
 baseurl            & URL     &       & Sets the base URL of the PDF document \\
 pdfpagemode        & text    & empty & Determines how the file is opening in Acrobat; the possibilities are
                                        \texttt{UseNone}, \texttt{UseThumbs} (show thumbnails), \texttt{UseOutlines}
@@ -787,7 +787,7 @@ a value of -32768, which causes Acrobat to set (usually) sensible
 defaults. The following are possible values for the \texttt{pdfview},
 \texttt{pdfstartview} and \texttt{pdfremotestartview} parameters.
 
-\noindent\begin{longtable}{>{\ttfamily}l>{\itshape}lp{7cm}}
+\begin{longtable}{@{}>{\ttfamily}l>{\itshape}lp{7cm}@{}}
 XYZ   & left top zoom         & Sets a coordinate and a zoom factor. If any one is null, the source link value is used.
                                 \textit{null null null} will give the same values as the current page. \\
 Fit   &                       & Fits the page to the window. \\
@@ -801,7 +801,7 @@ FitBV & left                  & Fits the height of the page bounding box to the 
 
 The \texttt{pdfpagelayout} can be one of the following values.
 
-\noindent\begin{longtable}{>{\ttfamily}lp{10cm}}
+\begin{longtable}{@{}>{\ttfamily}lp{10cm}@{}}
 SinglePage     & Displays a single page; advancing flips the page \\
 OneColumn      & Displays the document in one column; continuous scrolling. \\
 TwoColumnLeft  & Displays the document in two columns, odd-numbered pages to the left. \\
@@ -817,7 +817,7 @@ generally in 90$^{\circ}$\ steps, \textit{/Dm} is a horizontal
 /Dm /V}), and \textit{/M} is for motion, either in (\texttt{/I}) or out
 (\texttt{/O}).
 
-\noindent\begin{longtable}{>{\ttfamily}llp{8.5cm}}
+\begin{longtable}{@{}>{\ttfamily}llp{8.5cm}@{}}
 Blinds   & /Dm    & Multiple lines distributed evenly across the screen sweep in the same direction to reveal the new
                     page. \\
 Box      & /M     & A box sweeps in or out. \\
@@ -856,7 +856,7 @@ Example:
 The following is a complete listing of available options for
 \textsf{hyperref}, arranged alphabetically.
 
-\noindent\begin{longtable}{@{}>{\ttfamily}llp{7cm}@{}}
+\begin{longtable}{@{}>{\ttfamily}llp{7cm}@{}}
 anchorcolor        & \textit{black}         & set color of anchors \\
 backref            & \textit{false}         & do bibliographical back references \\
 baseurl            & \textit{empty}         & set base URL for document \\
@@ -1112,7 +1112,7 @@ For each macro below, \textsf{hyperref} checks \ci{*autorefname} before
 \ci{*name}.  For instance, it looks for \ci{figureautorefname} before
 \ci{figurename}.
 
-\noindent\begin{longtable}{lp{10cm}}
+\begin{longtable}{@{}lp{10cm}@{}}
 \textit{Macro}         & \textit{Default} \\
 \ci{figurename}        & Figure \\
 \ci{tablename}         & Table \\
@@ -2151,7 +2151,7 @@ macro is provided in the appropriate drivers:
 \noindent The \emph{text} is used to create a button which activates the appropriate \emph{menuoption}. The following table lists the option names you can use---comparison of this with the menus in Acrobat Reader or Exchange will show what they do. Obviously some are only appropriate to Exchange.
 
 \medskip
-\noindent\begin{longtable}{lp{9cm}}
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{9cm}@{}}
 File                          & Open, Close, Scan, Save, SaveAs, Optimizer:SaveAsOpt, Print, PageSetup, Quit \\
 File$\rightarrow$Import       & ImportImage, ImportNotes, AcroForm:ImportFDF \\
 File$\rightarrow$Export       & ExportNotes, AcroForm:ExportFDF \\
@@ -2265,7 +2265,8 @@ You may also want to redefine the following macros:
 
 \subsection{Forms environment parameters}
 
-\smallskip\noindent\begin{longtable}{>{\ttfamily}l>{\itshape}lp{9cm}}
+\smallskip
+\begin{longtable}{@{}>{\ttfamily}l>{\itshape}lp{9cm}@{}}
 action   & URL  & The URL that will receive the form data if a \textsf{Submit} button is included in the form \\
 encoding & name & The encoding for the string set to the URL; FDF-encoding is usual, and \texttt{html} is the only
                   valid value \\
@@ -2276,7 +2277,8 @@ method   & name & Used only when generating HTML; values can be \texttt{post} or
 Note that all colors must be expressed as RGB triples, in the range 0..1 (i.e.\ \texttt{color=0 0
 0.5})
 
-\smallskip\noindent\begin{longtable}{>{\ttfamily}ll>{\itshape}ll}
+\smallskip
+\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}ll@{}}
 accesskey       & key     &       & (as per HTML) \\
 align           & number  & 0     & alignment within text field; 0 is left-aligned,\\*
                 &         &       & 1 is centered, 2 is right-aligned. \\

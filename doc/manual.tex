@@ -12,7 +12,7 @@
 % Manual updates:
 % * Steve Peter and Karl Berry, 7/03.
 % * Heiko Oberdiek, 2006-2012.
-% * HO-support 2017
+% * HO-support 2017-2018
 %
 
 \def\mydate{September 2018}
@@ -328,6 +328,10 @@ to the \cs{usepackage} command, or using the \cs{hypersetup}
 macro. When the package is loaded, a file \texttt{hyperref.cfg} is read
 if it can be found, and this is a convenient place to set options on a
 site-wide basis.
+
+Note however that some options (for example \texttt{unicode}) can only be used as
+packge options, and not in \verb|\hypersetup| as the option settings are processed
+as the package is read.
 
 As an example, the behavior of a particular file could be controlled by:
 \begin{itemize}

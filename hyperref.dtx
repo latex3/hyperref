@@ -8084,7 +8084,10 @@
 %    \end{macrocode}
 % We also have a need to give a \LaTeX\ \emph{label} to a
 % hyper reference, to ease the pain of referring to it later.
+% \verb|\hyperrefundefinedlink| may be redefined by a user
+% to add colour or other formatting.
 %    \begin{macrocode}
+\let\hyperrefundefinedlink\@firstofone
 \def\label@hyperref[#1]{%
   \expandafter\label@@hyperref\csname r@#1\endcsname{#1}%
 }%
@@ -8095,7 +8098,7 @@
       Hyper reference `#2' on page \thepage \space undefined%
     }%
     \begingroup
-      #3%
+      \hyperrefundefinedlink{#3}%
     \endgroup
   \else
     \hyper@@link{\expandafter\@fifthoffive#1}%

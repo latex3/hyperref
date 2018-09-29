@@ -27,12 +27,6 @@ rm -rf hyperref-tds
 mkdir hyperref-tds
 
 
-# xslt, you can also probably use xsltproc
-saxon9  -versionmsg:off ChangeLog.xml ChangeLog_txt.xsl > ChangeLog
-saxon9  -versionmsg:off ChangeLog.xml ChangeLog_tex.xsl > ChangeLog.tex
-lualatex ChangeLog.tex
-lualatex ChangeLog.tex
-
 # move current package to doc directory
 cp *.sty *.def doc
 cd doc
@@ -52,7 +46,7 @@ cd ..
 mkdir hyperref-tds/doc
 mkdir hyperref-tds/doc/latex
 mkdir hyperref-tds/doc/latex/hyperref
-cp ChangeLog ChangeLog.pdf README.md  nameref.pdf backref.pdf doc/*.gif doc/manual{.css,.html,.pdf,2.html,3.html} doc/options.pdf doc/paper.pdf doc/slides.pdf \
+cp ChangeLog.txt README.md  nameref.pdf backref.pdf doc/*.gif doc/manual{.css,.html,.pdf,2.html,3.html} doc/options.pdf doc/paper.pdf doc/slides.pdf \
   hyperref-tds/doc/latex/hyperref
 
 mkdir hyperref-tds/source
@@ -85,5 +79,5 @@ mv hyperref.tds.zip ../..
 cd ../..
 echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog,ChangeLog.pdf,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README.md,xr-hyper.sty}
+zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog.txt,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README.md,xr-hyper.sty}
 mv hyperref*.zip hyperref

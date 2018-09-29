@@ -712,8 +712,7 @@ The bookmark commands are stored in a file called
 \textit{jobname}\texttt{.out}. The files is not processed by \LaTeX\ so
 any markup is passed through. You can postprocess this file as needed;
 as an aid for this, the \texttt{.out} file is not overwritten on the
-next \TeX\ run if it is edited to contain the line \\
-
+next \TeX\ run if it is edited to contain the line
 \begin{verbatim}
 \let\WriteBookmarks\relax
 \end{verbatim}
@@ -2947,6 +2946,312 @@ For equations the following might work:
   by "\verb|\csname HyPsd@XeTeXBigCharstrue\endcsname|".
   Example: package bookmark.
 
+
+\section[Limitiations]{Limitations%
+\footnote{This section moved from the README file, needs more integration into the manual}}
+\subsection{Wrapped/broken link support}
+
+ Only few drivers support automatically wrapped/broken links,
+  e.g. pdftex, dvipdfm, hypertex. Other drivers lack this
+  feature, e.g. dvips, dvipsone.
+
+  Workarounds:
+\begin{itemize}
+\item For long section or caption titles in the table of contents
+    or list of figures/tables option "linktocpage" can be used.
+    Then the page number will be a link, and the overlong section
+    title is not forced into an one line link with overfull \verb|\hbox|
+    warning.
+\item "\verb|\url|"s are caught by package "breakurl".
+\item  The option "breaklinks" is intended for internal use. But it
+    can be used to force link wrapping, e.g. when printing a
+    document. However, when such a document is converted to PDF
+    and viewed with a PDF viewer, the active link area will be
+    misplaced.
+
+      Another limitation: some penalties are "optimized" by TeX,
+    thus there are missing break points, especially within
+    \verb|\url|. (See thread "hyperref.sty, breaklinks and url.sty 3.2"
+    in comp.text.tex 2005-09).
+\end{itemize}
+
+\subsection{Links across pages}
+
+ In general they have problems:
+\begin{itemize}
+  \item Some driver doesn't support them at all (see above).
+  \item The driver allows it, but the link result might include
+    the footer and/or header, or an error message can
+    occur sometimes.
+\end{itemize}
+
+\subsection{Footnotes}
+
+ LaTeX allows the separation of the footnote mark and the
+  footnote text (\verb|\footnotemark|, \verb|\footnotetext|). This interface
+  might be enough for visual typesetting. But the relation between
+  \verb|\footnotemark| to \verb|\footnotetext| is not as strong as \verb|\ref| to \verb|\label|.
+  Therefore it is not clear in general which \verb|\footnotemark| references
+  which \verb|\footnotetext|. But that is necessary to implement hyperlinking.
+  Thus the implementation of hyperref does not support the optional
+  argument of \verb|\footnotemark\verb| and \verb|\footnotetext|.
+
+
+\section[Hints]{Hints%
+\footnote{This section moved from the README file, needs more integration into the manual}}
+
+\subsection{Spaces in option values}
+
+ Unhappily LaTeX strips spaces from options if they are given
+  in \verb|\documentclass| or \verb|\usepackage| (or \verb|\RequirePackage|), e.g.:
+\begin{verbatim}
+    \usepackage[pdfborder=0 0 1]{hyperref}
+\end{verbatim}
+  Package hyperref now gets
+\begin{verbatim}
+    pdfborder=001
+\end{verbatim}
+  and the result is an invalid PDF file.
+  As workaround braces can be used:
+\begin{verbatim}
+    \usepackage[pdfborder={0 0 1}]{hyperref}
+\end{verbatim}
+  Some options can also be given in \begin{verbatim}\hypersetup|
+\begin{verbatim}
+    \hypersetup{pdfborder=0 0 1}
+\end{verbatim}
+  In \verb|\hypersetup| the options are directly processed as key value
+  options (see package keyval) without space stripping in the value part.
+
+
+
+ Alternatively, LaTeX's option handling system can be adapted
+  to key value options by one of the packages "kvoptions-patch"
+  (from project "kvoptions") or "xkvltxp" (from project "xsetkeys").
+
+
+\subsection{Index with makeindex}
+\begin{itemize}
+ \item Package hyperref adds \verb|\hyperpage| commands by the encap
+    mechanism (see documentation of Makeindex),
+    if option hyperindex is set (default).
+    \verb|\hyperpage| uses the page anchors that are set by
+    hyperref at each page (default). However in the
+    default case page numbers are used in anchor names
+    in arabic form. If the page numbers in other formats
+    are used (book class with \verb|\frontmatter|, \verb|\romannumbering|, ...),
+    then the page anchors are not unique. Therefore option
+    "plainpages=false" is recommended.
+ \item The encap mechanism of Makeindex allows to use one command only
+    (see documentation of Makeindex).
+    If the user sets such a command, hyperref suppresses its
+    \verb|\hyperpage| command. With logical markup this situation
+    can easily be solved:
+\begin{verbatim}
+      \usepackage{makeidx}
+      \makeindex
+      \usepackage[hyperindex]{hyperref}
+      \newcommand*{\main}[1]{\textbf{\hyperpage{#1}}}
+      ...
+      \index{Some example|main}
+\end{verbatim}
+  \item Scientic Word/Scientific WorkPlace users can use
+    package robustindex with hyperindex=false.
+  \item Other encap characters can be set by option "encap".
+    Example for use of "?":
+\begin{verbatim}
+      \usepackage[encap=?]{hyperref}
+\end{verbatim}
+  \item An other possibility is the insertion of \verb|\hyperpage| by
+    a style file for makeindex. For this case, hyperref's
+    insertion will be disabled by "hyperindex=false".
+    \verb|\hyperpage| will be defined regardless of setting of hyperindex.
+\begin{verbatim}
+%%% cut %%% hyperindex.ist %%% cut %%%
+delim_0 ", \\hyperpage{"
+delim_1 ", \\hyperpage{"
+delim_2 ", \\hyperpage{"
+delim_n "}, \\hyperpage{"
+delim_t "}"
+encap_prefix "}\\"
+encap_infix "{\\hyperpage{"
+encap_suffix "}"
+%%% cut %%% hyperindex.ist %%% cut %%%
+\end{verbatim}
+\end{itemize}
+
+\subsection{Warning "bookmark level for unknown <foobar> defaults to 0"}
+
+ Getting rid of it:
+\begin{verbatim}
+\makeatletter
+\providecommand*{\toclevel@<foobar>}{0}
+\makeatother
+\end{verbatim}
+
+\subsection{Link anchors in figures}
+
+ The caption command increments the counter and here is the
+  place where hyperref set the corresponding anchor. Unhappily
+  the caption is set below the figure, so the figure is not
+  visible if a link jumps to a figure.
+    In this case, try package "hypcap.sty" that implements
+  a method to circumvent the problem.
+
+
+\subsection{Additional unicode characters in bookmarks and pdf information entries:}
+\begin{verbatim}
+\documentclass[pdftex]{article}
+\usepackage[unicode]{hyperref}
+\end{verbatim}
+
+Support for additional unicode characters:
+
+ Example: \verb|\.{a}| and \verb|\d{a}|
+
+ 1. Get a list with unicode data, eg:
+
+    http://www.unicode.org/Public/UNIDATA/UnicodeData.txt
+
+ 2. Identify the characters (\verb|\.{a}|, \verb|\d{a}|):
+\begin{verbatim}
+    0227;LATIN SMALL LETTER A WITH DOT ABOVE;...
+    1EA1;LATIN SMALL LETTER A WITH DOT BELOW;...
+\end{verbatim}
+
+ 3. Calculate the octal code:
+
+    The first characters of the line in the file are
+    hex values, convert each byte and prepend them
+    with a backslash. (This will go into the PDF file.)
+
+\begin{verbatim}
+    0227 -> \002\047
+    1EA1 -> \036\241
+\end{verbatim}
+
+ 4. Transform into a form understood by hyperref:
+
+    Hyperref must know where the first byte starts,
+    this is marked by "9" (8 and 9 cannot occur in
+    octal numbers):
+
+\begin{verbatim}
+    \002\047 -> \9002\047
+    \036\241 -> \9036\241
+\end{verbatim}
+
+    Optional: "8" is used for abbreviations:
+
+\begin{verbatim}
+    \900 = \80, \901 = \81, \902 = \82, ...
+
+    \9002\047 -> \82\047
+\end{verbatim}
+
+ 5. Declare the character with LaTeX:
+
+\begin{verbatim}
+\DeclareTextCompositeCommand{\.}{PU}{a}{\82\047}
+\DeclareTextCompositeCommand{\d}{PU}{a}{\9036\241}
+
+\begin{document}
+\section{\={a}, \d{a}, \'{a}, \.{a}}
+\end{document}
+      \end{verbatim}
+
+\subsection{Footnotes}
+
+ The footnote support is rather limited. It is beyond the scope
+  to use \verb|\footnotemark| and \verb|\footnotetext| out of order or reusing
+  \verb|\footnotemark|. Here you can either disable hyperref's footnote
+  support by "hyperfootnotes=false" or fiddle with internal macros,
+  nasty examples:
+
+\begin{verbatim}
+\documentclass{article}
+\usepackage{hyperref}
+\begin{document}
+Hello%
+\footnote{The first footnote}
+World%
+\addtocounter{footnote}{-1}%
+\addtocounter{Hfootnote}{-1}%
+\footnotemark.
+\end{document}
+
+  or
+
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\makeatletter
+
+A%
+  \footnotemark
+  \let\saved@Href@A\Hy@footnote@currentHref
+  % remember link name
+B%
+  \footnotemark
+  \let\saved@Href@B\Hy@footnote@currentHref
+b%
+  \addtocounter{footnote}{-1}%
+  \addtocounter{Hfootnote}{-1}% generate the same anchor
+  \footnotemark
+C%
+  \footnotemark
+  \let\saved@Href@C\Hy@footnote@currentHref
+
+  \addtocounter{footnote}{-2}%
+  \let\Hy@footnote@currentHref\saved@Href@A
+\footnotetext{AAAA}%
+  \addtocounter{footnote}{1}%
+  \let\Hy@footnote@currentHref\saved@Href@B
+\footnotetext{BBBBB}%
+  \addtocounter{footnote}{1}%
+  \let\Hy@footnote@currentHref\saved@Href@C
+\footnotetext{CCCC}%
+
+\end{document}
+\end{verbatim}
+
+\subsection{Subordinate counters}
+
+ Some counters do not have unique values and require the value
+  of other counters to be unique. For example, sections or figures
+  might be numbered within chapters or \verb|\newtheorem| is used with
+  an optional counter argument. Internally LaTeX uses \verb|\@addtoreset|
+  to reset a counter in dependency to another counter. Package
+  hyperref hooks into \verb|\@addtoreset| to catch this situation.
+  Also \verb|\numberwithin| of package amsmath is caught by hyperref.
+
+
+
+ However, if the definition of subordinate counters take place
+  before hyperref is loaded, the old meaning of \verb|\@addtoreset| is
+  called without hyperref's additions. Then the companion counter
+  macro \verb|\theH<counter>| can be redefined accordingly. Or move the
+  definition of subordinate counters after hyperref is loaded.
+
+ Example for \verb|\newtheorem|, problematic case:
+\begin{verbatim}
+    \newtheorem{corA}{CorollaryA}[section]
+    \usepackage{hyperref}
+\end{verbatim}
+  Solution a)
+\begin{verbatim}
+    \usepackage{hyperref}
+    \newtheorem{corA}{CorollaryA}[section}
+\end{verbatim}
+  Solution b)
+\begin{verbatim}
+    \newtheorem{corA}{CorollaryA}[section]
+    \usepackage{hyperref}
+    \newcommand*{\theHcorA}{\theHsection.\number\value{corA}}
+\end{verbatim}
 
 \section{History and acknowledgments}
 

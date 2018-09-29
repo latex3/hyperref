@@ -1,6 +1,0 @@
-<!ELEMENT readme     (date, section+)>
-<!ELEMENT date       (#PCDATA)>
-<!ELEMENT section    (title, (subsection | p)*)>
-<!ELEMENT subsection (title, p*)>
-<!ELEMENT title      (#PCDATA)>
-<!ELEMENT p          (#PCDATA)>

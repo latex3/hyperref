@@ -1240,6 +1240,15 @@ In addition, parentheses are protected to avoid the danger of unsafe
 unbalanced parentheses in the PDF string. For further details, see Heiko
 Oberdiek's Euro\TeX\ paper distributed with \textsf{hyperref}.
 
+\begin{cmdsyntax}
+\ci{begin}\verb|{NoHyper{|\ldots\ci{end}\verb|{NoHyper}|
+\end{cmdsyntax}
+ Sometimes we just don't want the wretched package interfering
+ with us. Define an environment we can put in manually, or include
+ in a style file, which stops the hypertext functions doing anything.
+ This is used, for instance, in the Elsevier classes, to stop
+ \verb|hyperref| playing havoc in the front matter.
+
 \subsection{Bookmark macros}
 
 \subsubsection{Setting bookmarks}
@@ -1625,7 +1634,7 @@ sequence error would arise.
     \verb|delim_r, delim_n, suffix_2p, suffix_3p, suffix_mp|
   needs markup that \verb|\hyperpage| can detect and knows that
   this stuff does not belong to a page number. Makro
-  \nohyperpage serves as this markup. Put the customized
+  \verb|\nohyperpage| serves as this markup. Put the customized
   code for these keys inside \verb|\nohyperpage|, e.g.:
 \begin{verbatim}
     suffix_2p "\\nohyperpage{f.}"

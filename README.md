@@ -14,11 +14,11 @@ backends.
 
 Included are:
 
-a) `backref' a package by David Carlisle to provide links back from
-   bibliography to the main text; these are hypertext links after using
-   hyperref.
-b) nameref' a package to allow reference to the *names* of sections rather
-   than their numbers.
+ 1. `backref' a package by David Carlisle to provide links back from
+    bibliography to the main text; these are hypertext links after using
+    hyperref.
+ 2. nameref' a package to allow reference to the *names* of sections rather
+    than their numbers.
 
 ## DOWNLOAD
 
@@ -59,22 +59,22 @@ Example:
 
 ### Manual installation
 
- a) Download the hyperref files from CTAN or the TUG server.
+ 1. Download the hyperref files from CTAN or the TUG server.
     If necessary, unpack them.
- b) If directory `beta' exists, replace the files by the counterparts
+ 2. If directory `beta' exists, replace the files by the counterparts
     in this directory, if you want to use the latest versions.
- c) Generate the package and driver files:
+ 3. Generate the package and driver files:
       tex hyperref.ins
- d) Install the files `*.sty', `*.def', and `*.cfg' in your TDS tree:
+ 4. Install the files `*.sty', `*.def', and `*.cfg' in your TDS tree:
       cp *.sty *.def *.cfg TDS:tex/latex/hyperref/
     Replace `TDS:' by the prefix of your TDS tree (texmf directory).
     The exception is bmhydoc.sty, it belongs to the source files
     (TDS:source/latex/hyperref/).
- e) Copy the documentation files to "TDS:doc/latex/hyperref/":
+ 5. Copy the documentation files to "TDS:doc/latex/hyperref/":
     manual.pdf, README, README.pdf, ChangeLog, ChangeLog.pdf,
     slides.pdf, paper.pdf, options.pdf, hyperref.pdf, backref.pdf,
     nameref.pdf (Also the HTML version of the manual can be put there.)
- f) Update the databases if necessary, eg. for teTeX:
+ 6. Update the databases if necessary, eg. for teTeX:
       mktexlsr .../texmf
       
 ## AUTHORS/MAINTAINERS

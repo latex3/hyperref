@@ -6604,6 +6604,12 @@
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfcreator{#1}%
 }
+\define@key{Hyp}{addtopdfcreator}{%
+ \HyXeTeX@CheckUnicode
+ \HyPsd@XeTeXBigCharstrue
+ \HyPsd@PrerenderUnicode{#1}%
+ \pdfstringdef\@pdfcreator{\@pdfcreator, #1}%
+}
 \define@key{Hyp}{pdfcreationdate}{%
   \begingroup
     \Hy@unicodefalse
@@ -7032,7 +7038,7 @@
 \let\@pdftitle\ltx@empty
 \let\@pdfauthor\ltx@empty
 \let\@pdfproducer\relax
-\def\@pdfcreator{LaTeX with hyperref package}
+\def\@pdfcreator{LaTeX with hyperref}
 \let\@pdfcreationdate\ltx@empty
 \let\@pdfmoddate\ltx@empty
 \let\@pdfsubject\ltx@empty
@@ -14191,6 +14197,7 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%
@@ -14823,6 +14830,8 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
+  \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%
@@ -15338,6 +15347,8 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
+  \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%
@@ -16265,6 +16276,8 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
+  \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%
@@ -16602,6 +16615,8 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
+  \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%
@@ -17745,6 +17760,8 @@
   \Hy@DisableOption{pdftitle}%
   \Hy@DisableOption{pdfsubject}%
   \Hy@DisableOption{pdfcreator}%
+  \Hy@DisableOption{addtopdfcreator}%
+  \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfcreationdate}%
   \Hy@DisableOption{pdfmoddate}%
   \Hy@DisableOption{pdfproducer}%

@@ -1,0 +1,76 @@
+%%
+%% This file will generate fast loadable files and documentation
+%% driver files from the doc files in this package when run through
+%% LaTeX or TeX.
+%%
+%% Copyright 1999-2006 D. P. Story
+%%
+%% This file is part of the `AcroTeX eDucation Bundle'.
+%% -------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% --------------- start of docstrip commands ------------------
+%%
+\def\filedate{2001/05/26}
+\def\batchfile{web.ins}
+
+\input docstrip
+\ifx\generate\undefined
+  \Msg{**********************************************}
+  \Msg{*}
+  \Msg{* This installation requires docstrip}
+  \Msg{* version 2.4 or later.}
+  \Msg{*}
+  \Msg{* An older version of docstrip has been input}
+  \Msg{*}
+  \Msg{**********************************************}
+  \errhelp{Move or rename old docstrip.tex and get a newer one.}
+  \errmessage{Old docstrip in input path}
+  \batchmode
+  \csname @@end\endcsname\end
+\fi
+
+\keepsilent
+\askforoverwritefalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preamble
+\endpreamble
+
+\generate
+{%
+    \file{web.sty}{\from{web.dtx}{copyright,package}}
+    \file{websec.def}{\from{web.dtx}{copyright,websectioning}}
+    \file{webpro.def}{\from{web.dtx}{copyright,webpro}}
+}
+
+% Additional files for compiling DTX files with changes and index
+% Uncomment lines below and compile web.ins to obtain the formatting
+% definitions contained in aebdocfmt.doc and aebdonotindex.def.
+%\usepreamble\@empty
+
+%\usepostamble\empty
+\usepreamble\empty
+
+\generate
+{%
+    \file{aebdocfmt.def}{\from{web.dtx}{copyright,docdefs}}
+    \file{aebdonotindex.def}{\from{web.dtx}{dnidefs}}
+}
+
+\Msg{***************************************************************}
+\Msg{*}
+\Msg{* \space To finish the installation you have to copy the files }
+\Msg{*}
+\Msg{* \space *.sty, *.cfg and *.def into a directory searched by TeX}
+\Msg{*}
+\Msg{***************************************************************}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\endinput

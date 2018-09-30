@@ -5,7 +5,8 @@
     *  hyperref.dtx: Add \protected@file@percent for github issue 70
     * Adjust default pdfcreator and add addtopdfcreator key for githb issue 53
     * Use \scdefault not always sc as font shape for frenchlinks, github issue 64.
-
+    * Greek Autoref support, issue #52
+    
 2018-04-02  6.87a  David Carlisle
     * 6.87a
     * Silence babel messages in pdfstringdef issue #59

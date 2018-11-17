@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2018/09/30 v6.88a %
+%<!none>  [2018/11/17 v6.88b %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -14084,7 +14084,7 @@
       \advance\count@ by \luatexversion
       \edef\x{\endgroup
         \def\noexpand\@pdfproducer{%
-          LuaTeX-\x.\the\count@.\luatexrevision
+          LuaTeX-\x.\two@digits\count@.\luatexrevision
         }%
       }%
     \x

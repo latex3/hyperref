@@ -1,3 +1,6 @@
+2018-11-17 6.88b  David Carlisle
+   * Ensure Producer field in PDF shows LuaTeX version with two digits (Ulrike Fischer)
+   
 2018-09-30 6.88a  David Carlisle
     * Reorganise README and ChangeLog moving most of README into the manual
       and maintaining README.md as markdown and ChangeLog.txt as text

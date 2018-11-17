@@ -537,7 +537,7 @@
       \advance\count@ by \luatexversion
       \edef\x{\endgroup
         \def\noexpand\@pdfproducer{%
-          LuaTeX-\x.\the\count@.\luatexrevision
+          LuaTeX-\x.\two@digits\count@.\luatexrevision
         }%
       }%
     \x

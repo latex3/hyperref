@@ -1,6 +1,9 @@
-2018-11-17 6.88b  David Carlisle
+2018-11-22 6.88c Ulrike Fischer
+   * Added support for pdflinkmargin for xetex
+
+2018-11-17 6.88b David Carlisle
    * Ensure Producer field in PDF shows LuaTeX version with two digits (Ulrike Fischer)
-   
+
 2018-09-30 6.88a  David Carlisle
     * Reorganise README and ChangeLog moving most of README into the manual
       and maintaining README.md as markdown and ChangeLog.txt as text
@@ -9,7 +12,7 @@
     * Adjust default pdfcreator and add addtopdfcreator key for githb issue 53
     * Use \scdefault not always sc as font shape for frenchlinks, github issue 64.
     * Greek Autoref support, issue #52
-    
+
 2018-04-02  6.87a  David Carlisle
     * 6.87a
     * Silence babel messages in pdfstringdef issue #59
@@ -2488,7 +2491,7 @@
       * At the beginning or, if the value is less than 1ex,
         they are removed.
       * Else they are replaced by a space.
-    
+
     Fix for \pdfpage(s)attr:
     * Setting the /CropBox with \pdfpagesattr:
       The old meaning of \pdfpagesattr is appended.
@@ -2603,7 +2606,7 @@
     * some characters changed, and some added, in PD1
       encoding, to allow for silly behaviour of Acrobat, and to help
       Poles (via Wojciech A. Myszka <W.Myszka@immt.pwr.wroc.pl>)
-    
+
     * backref.dtx: added support for chicago.sty (requested by Alan Reese)
 
 1999-05-14  Sebastian Rahtz
@@ -2637,12 +2640,12 @@
     * RELEASE 6.53
     * hyperref.dtx: complete replacement of Heiko's part by nicely
       documented dtx....
-    
+
     Name changes:
     \newif\ifPDFbookmark ==> \newif\ifHy@pdfstring (internal name)
     \ifbookmark          ==> \texorpdfstring (user command)
     \Hy@PDFDef           ==> \pdfstringdef (user or package command)
-    
+
     Heiko summarizes the features of this \Hy@PDFDef:
     * PD1 encoding
     * Unknown glyphs don't cause an infinite error loop now (see
@@ -3038,4 +3041,3 @@
 1997-11-24  6.7  Sebastian Rahtz
     * RELEASE 6.7
     * started hyperref ChangeLog. cleanup of copyright for Debian inclusion
-

@@ -1398,6 +1398,12 @@ sequence error would arise.
  \item Settings have global effect.
 \end{itemize}
 
+\item[xetex]
+\begin{itemize}
+ \item Settings must be done in the preamble or the first page and then have global effect.
+       The key inserts the new (x)dvipdfmx special \verb|\special{dvipdfmx:config g #1}| (with the unit removed).  
+\end{itemize}
+
 \item[Other drivers]
  Unsupported.
 \end{description}

@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2018/11/17 v6.88b %
+%<!none>  [2018/11/22 v6.88c %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -10528,6 +10528,15 @@
   \fi
 }
 \let\HyXeTeX@CheckUnicode\relax
+%    \end{macrocode}
+%    Since 2016 (x)dvipdfmx has a special to control the spacing of annotation borders.
+%    So let's make use of it:
+%    \begin{macrocode}
+\def\setpdflinkmargin#1{%
+  \begingroup
+    \setlength{\dimen@}{#1}%
+    \special{dvipdfmx:config g \strip@pt\dimen@}%
+  \endgroup}
 %</xetex>
 %    \end{macrocode}
 %

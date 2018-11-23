@@ -985,7 +985,7 @@ following low-level user macros are provided:
 \noindent The \emph{text} is made a hyperlink to the \emph{URL}; this
 must be a full URL (relative to the base URL, if that is defined). The
 special characters \# and \~{} do \emph{not} need to be escaped in any
-way.
+way (unless the command is used in the argument of another command).
 
 The optional argument \emph{options} recognizes the hyperref options
 \texttt{pdfremotestartview}, \texttt{pdfnewwindow} and the following
@@ -993,10 +993,10 @@ key value options:
 \begin{description}
 \item[\texttt{page}:] Specifies the start page number of remote
 PDF documents. First page is \verb|1|.
-\item[\texttt{ismap}:] Boolean key, if set to |true|, the
+\item[\texttt{ismap}:] Boolean key, if set to \verb|true|, the
 URL should appended by the coordinates as query parameters by
 the PDF viewer.
-\item[\texttt{nextactionraw}:] The value of key |/Next| of
+\item[\texttt{nextactionraw}:] The value of key \verb|/Next| of
 action dictionaries, see PDF specification.
 \end{description}
 
@@ -3030,7 +3030,7 @@ For equations the following might work:
 \begin{verbatim}
     \usepackage[pdfborder={0 0 1}]{hyperref}
 \end{verbatim}
-  Some options can also be given in \begin{verbatim}\hypersetup|
+  Some options can also be given in \verb|\hypersetup|
 \begin{verbatim}
     \hypersetup{pdfborder=0 0 1}
 \end{verbatim}

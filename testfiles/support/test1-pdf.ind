@@ -1,0 +1,41 @@
+\begin{theindex}
+
+  \item animals
+    \subitem cats, \hyperpage{3}
+
+  \indexspace
+
+  \item beer, \hyperindexformat{\boldindex}{14}
+
+  \indexspace
+
+  \item cats, \hyperpage{17}
+
+  \indexspace
+
+  \item gnus, \hyperpage{20--25}
+
+  \indexspace
+
+  \item lemons, \hyperindexformat{\boldindex}{14}
+
+  \indexspace
+
+  \item oranges, \hyperindexformat{\boldindex}{14}
+
+  \indexspace
+
+  \item PS pictures, \hyperpage{10}
+
+  \indexspace
+
+  \item rainbows, \hyperpage{7}
+
+  \indexspace
+
+  \item tables
+    \subitem long
+      \subsubitem longtables, \hyperpage{3}
+  \item title, \hyperpage{ii}
+
+\end{theindex}

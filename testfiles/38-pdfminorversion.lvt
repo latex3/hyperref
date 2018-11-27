@@ -1,0 +1,17 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+% test for issue 38, 
+\input{regression-test}
+\PassOptionsToPackage{pdfa}{hyperref}
+\documentclass{article}
+\usepackage[pdfversion=1.6]{hyperref}
+\usepackage{ifluatex}
+\begin{document}
+\START\showoutput 
+\ifluatex 
+ \the\pdfvariable minorversion
+\else
+ \the\pdfminorversion %
+\fi
+
+blub
+\end{document} 

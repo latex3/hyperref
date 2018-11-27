@@ -1,0 +1,16 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+\input{regression-test}
+\documentclass{article}
+\usepackage[pdfhighlight=/N]
+           {hyperref}
+
+\begin{document}
+\section{test}\label{test}
+
+\url{http://www.dante.de}
+
+\ref{test}
+
+\Acrobatmenu{Print}{Print}
+
+\end{document} 

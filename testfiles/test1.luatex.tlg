@@ -1,0 +1,1637 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Package hyperref Info: Anchor `tit.0' on input line ....
+Package hyperref Info: Anchor `page.1' on input line ....
+[1
+]
+Package hyperref Info: Anchor `page.2' on input line ....
+[2
+]
+Package hyperref Info: Anchor `chapter*.1' on input line ....
+(test1.toc
+Package hyperref Info: Reference (link) `chapter*.3' on input line ....
+Package hyperref Info: Reference (link) `chapter.4' on input line ....
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: Reference (link) `section.7' on input line ....
+Package hyperref Info: Reference (link) `section.11' on input line ....
+Package hyperref Info: Reference (link) `chapter.14' on input line ....
+Package hyperref Info: Reference (link) `section.15' on input line ....
+Package hyperref Info: Reference (link) `section.19' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (link) `section.28' on input line ....
+Package hyperref Info: Reference (link) `section.31' on input line ....
+Package hyperref Info: Reference (link) `section.32' on input line ....
+Package hyperref Info: Reference (link) `chapter*.47' on input line ....
+)
+\tf@toc=\write...
+Package hyperref Info: Anchor `page.3' on input line ....
+[3
+Package `hyperref' Info: End of reference (link) `chapter*.3', line 1.
+Package `hyperref' Info: End of reference (link) `chapter.4', line 2.
+Package `hyperref' Info: End of reference (link) `section.5', line 3.
+Package `hyperref' Info: End of reference (link) `section.6', line 4.
+Package `hyperref' Info: End of reference (link) `section.7', line 5.
+Package `hyperref' Info: End of reference (link) `section.11', line 7.
+Package `hyperref' Info: End of reference (link) `chapter.14', line 10.
+Package `hyperref' Info: End of reference (link) `section.15', line 11.
+Package `hyperref' Info: End of reference (link) `section.19', line 14.
+Package `hyperref' Info: End of reference (link) `section.22', line 17.
+Package `hyperref' Info: End of reference (link) `section.25', line 20.
+Package `hyperref' Info: End of reference (link) `section.28', line 23.
+Package `hyperref' Info: End of reference (link) `section.31', line 24.
+Package `hyperref' Info: End of reference (link) `section.32', line 25.
+Package `hyperref' Info: End of reference (link) `chapter*.47', line 26.
+]
+Package hyperref Info: Anchor `page.4' on input line ....
+[4
+]
+Package hyperref Info: Anchor `chapter*.2' on input line ....
+(test1.lot
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `table.46' on input line ....
+)
+\tf@lot=\write...
+Package hyperref Info: Anchor `page.5' on input line ....
+[5
+Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 3.
+Package `hyperref' Info: End of reference (link) `section.22', line 3.
+Package `hyperref' Info: End of reference (link) `table.46', line 3.
+]
+Package hyperref Info: Anchor `page.6' on input line ....
+[6
+]
+Package hyperref Info: Anchor `chapter*.3' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {0}
+(hyperref)             text {\protect \numberline {}LIST OF FIGURES}
+(hyperref)             reference {chapter*.3}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+(test1.lof
+Package hyperref Info: Reference (link) `figure.29' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `figure.30' on input line ....
+)
+\tf@lof=\write...
+\c@Argument=\count...
+Package hyperref Info: Anchor `page.7' on input line ....
+[1
+Package `hyperref' Info: End of reference (link) `figure.29', line 3.
+Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 4.
+Package `hyperref' Info: End of reference (link) `figure.30', line 4.
+]
+Package hyperref Info: Anchor `page.8' on input line ....
+[2
+]
+Package hyperref Info: Anchor `chapter.4' on input line ....
+Chapter 1.
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1}
+(hyperref)             text {\protect \numberline {\thechapter }First part}
+(hyperref)             reference {chapter.4}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Anchor `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Test section}
+(hyperref)             reference {section.5}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Anchor `section.6' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section One --- cats}
+(hyperref)             reference {section.6}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.15' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `section.7' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi one.1 -- can we see}
+(hyperref)             reference {section.7}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `Hfootnote.8' on input line ....
+Package hyperref Info: Anchor `Hfootnote.8' on input line ....
+Package hyperref Info: Reference (link) `Hfootnote.9' on input line ....
+Package hyperref Info: Anchor `Hfootnote.9' on input line ....
+Package hyperref Info: Reference (link) `table.46' on input line ....
+Package hyperref Info: Anchor `subsection.10' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi one.2}
+(hyperref)             reference {subsection.10}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+LaTeX Warning: Reference `ss:first' on page 3 undefined on input line ....
+Package hyperref Info: Anchor `page.9' on input line ....
+[3
+Package `hyperref' Info: End of reference (link) `section.5', line 50.
+Package `hyperref' Info: End of reference (link) `section.6', line 53.
+Package `hyperref' Info: End of reference (link) `section.5', line 54.
+Package `hyperref' Info: End of reference (link) `section.5', line 54.
+Package `hyperref' Info: End of reference (link) `section.15', line 57.
+Package `hyperref' Info: End of reference (cite) `cite.Barcelo:1992:caa', line 59.
+Package `hyperref' Info: End of reference (link) `Hfootnote.8', line 62.
+Package `hyperref' Info: End of reference (link) `Hfootnote.9', line 64.
+Package `hyperref' Info: End of reference (link) `table.46', line 69.
+Package `hyperref' Info: End of reference (link) `Hfootnote.9', line 64.
+Package `hyperref' Info: End of reference (link) `Hfootnote.9', line 64.
+]
+Package hyperref Info: Anchor `page.10' on input line ....
+[4
+Package `hyperref' Info: End of reference (link) `Hfootnote.9', line 64.
+Package `hyperref' Info: End of reference (link) `Hfootnote.9', line 64.
+]
+Package hyperref Info: Anchor `section.11' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Two --- \TeX \ is a dog}
+(hyperref)             reference {section.11}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.12' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi two.1}
+(hyperref)             reference {subsection.12}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.13' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi two.2}
+(hyperref)             reference {subsection.13}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.11' on input line ....
+[5]
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `page.12' on input line ....
+[6
+Package `hyperref' Info: End of reference (cite) `cite.Barcelo:1992:caa', line 92.
+]
+Package hyperref Info: Anchor `chapter.14' on input line ....
+Chapter 2.
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2}
+(hyperref)             text {\protect \numberline {\thechapter }Second part}
+(hyperref)             reference {chapter.14}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `section.15' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Three --- Camels}
+(hyperref)             reference {section.15}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: Anchor `subsection.16' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {I -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi three.1}
+(hyperref)             reference {subsection.16}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `Hfootnote.17' on input line ....
+Package hyperref Info: Anchor `Hfootnote.17' on input line ....
+Package hyperref Info: Anchor `subsection.18' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {I -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi three.2}
+(hyperref)             reference {subsection.18}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.13' on input line ....
+[7
+Package `hyperref' Info: End of reference (link) `section.6', line 96.
+Package `hyperref' Info: End of reference (link) `Hfootnote.17', line 98.
+]
+Package hyperref Info: Anchor `section.19' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Four --- Butterflies}
+(hyperref)             reference {section.19}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.20' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {II -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi four.1}
+(hyperref)             reference {subsection.20}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.21' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {II -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi four.2}
+(hyperref)             reference {subsection.21}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `test.test1' on input line ....
+Package hyperref Info: Anchor `page.14' on input line ....
+[8
+Package `hyperref' Info: End of reference (link) `test.test1', line 107.
+]
+Package hyperref Info: Anchor `section.22' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Introduction}
+(hyperref)             reference {section.22}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.23' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi subsec}
+(hyperref)             reference {subsection.23}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.15' on input line ....
+[9]
+Package hyperref Info: Anchor `subsection.24' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi subsec}
+(hyperref)             reference {subsection.24}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `test.test1' on input line ....
+Package hyperref Info: Reference (link) `testpiccy' on input line ....
+<picture.png, id=207, 170.67764pt x 223.7961pt>
+File: picture.png Graphic file (type png)
+<use picture.png>
+Package luatex.def Info: picture.png  used on input line ....
+(luatex.def)             Requested size: 55.11798pt x 72.26999pt.
+File: picture.png Graphic file (type png)
+<use picture.png>
+Package luatex.def Info: picture.png  used on input line ....
+(luatex.def)             Requested size: 55.11798pt x 72.26999pt.
+Package hyperref Info: Anchor `page.16' on input line ....
+[10
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+<./picture.png>]
+Package hyperref Info: Anchor `section.25' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi two}
+(hyperref)             reference {section.25}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.26' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi Subsection 2}
+(hyperref)             reference {subsection.26}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.27' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi Subsection 3}
+(hyperref)             reference {subsection.27}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.17' on input line ....
+[11]
+Package hyperref Info: Anchor `section.28' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.5}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi three}
+(hyperref)             reference {section.28}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `subsection.24' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Anchor `testpiccy' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\protect \numberline {\csname the\@captype \endcsname }{\ignorespaces {A cat}}}
+(hyperref)             reference {figure.29}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `figure.29' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.2}
+(hyperref)             text {\protect \numberline {\csname the\@captype \endcsname }{\ignorespaces Another cat with a link inside it, so see \cite {Dallas:aia} xxxx \label {fig2}}}
+(hyperref)             reference {figure.30}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `figure.30' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `equation.33' on input line ....
+Package hyperref Info: Anchor `section.31' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.6}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Some URLs}
+(hyperref)             reference {section.31}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+[][][]$\TU/lmtt/m/n/10.95 http://www.aw.
+\hbox(7.5993+2.4309)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://www.aw.com/cp/tlgc.htm\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+\TU/lmtt/m/n/10.95 com/cp/tlgc.html#
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 c
+.\TU/lmtt/m/n/10.95 o
+.\TU/lmtt/m/n/10.95 m
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 c
+.\TU/lmtt/m/n/10.95 p
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 l
+.\TU/lmtt/m/n/10.95 g
+.\TU/lmtt/m/n/10.95 c
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 m
+.\TU/lmtt/m/n/10.95 l
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 #
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+[][][]$\TU/lmtt/m/n/10.95 http://nsi.net.
+\hbox(7.5993+2.4309)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://nsi.net.kiae.su/latex/\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 i
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 t
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+\TU/lmtt/m/n/10.95 kiae.su/latex/
+\hbox(7.5993+0.90884)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 k
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 e
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 u
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 l
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 x
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[][][]$\TU/lmtt/m/n/10.95 http://www.lehigh.
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://www.lehigh.edu/~dlj0/L\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 l
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 g
+.\TU/lmtt/m/n/10.95 h
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+\TU/lmtt/m/n/10.95 edu/~dlj0/LyriX.
+\hbox(7.5993+2.4966)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 d
+.\TU/lmtt/m/n/10.95 u
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 ~
+.\TU/lmtt/m/n/10.95 d
+.\TU/lmtt/m/n/10.95 l
+.\TU/lmtt/m/n/10.95 j
+.\TU/lmtt/m/n/10.95 0
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 L
+.\TU/lmtt/m/n/10.95 y
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 X
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+[][][]$\TU/lmtt/m/n/10.95 http://www.cs.
+\hbox(7.5993+2.4309)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://www.cs.wisc.edu/~ghost\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 c
+.\TU/lmtt/m/n/10.95 s
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\TU/lmtt/m/n/10.95 wisc.edu/~ghost/
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 c
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 d
+.\TU/lmtt/m/n/10.95 u
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 ~
+.\TU/lmtt/m/n/10.95 g
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 o
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 t
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[][][]$\TU/lmtt/m/n/10.95 http://www.win.
+\hbox(7.5993+2.4309)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://www.win.tue.nl/win/mat\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 n
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+\TU/lmtt/m/n/10.95 tue.nl/win/math/
+\hbox(7.5993+0.90884)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 u
+.\TU/lmtt/m/n/10.95 e
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 l
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 n
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 m
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 h
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+\TU/lmtt/m/n/10.95 dw/personalpages/
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 d
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 p
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 o
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 l
+.\TU/lmtt/m/n/10.95 p
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 g
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 s
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+[][][]$\TU/lmtt/m/n/10.95 http://www.tug.
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(http://www.tug.org/interest.h\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\TU/lmtt/m/n/10.95 w
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 u
+.\TU/lmtt/m/n/10.95 g
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+\TU/lmtt/m/n/10.95 org/interest.html#
+\hbox(7.5993+2.50755)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 o
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 g
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 t
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 m
+.\TU/lmtt/m/n/10.95 l
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 #
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+[][][]$\TU/lmtt/m/n/10.95 ftp://ftp.cbr.dit.
+\hbox(7.5993+2.4309)x108.405, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 1]} action user{/Subtype/Li
+nk/A<</Type/Action/S/URI/URI(ftp://ftp.cbr.dit.csiro.au/st\ETC.}
+.\pdfcolorstack 0 push {0 1 0 0 k 0 1 0 0 K}
+.\mathon
+.\TU/lmtt/m/n/10.95 f
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 :
+.\penalty 500
+.\glue(\thickmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 f
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 p
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 c
+.\TU/lmtt/m/n/10.95 b
+.\TU/lmtt/m/n/10.95 r
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 d
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 t
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+\TU/lmtt/m/n/10.95 csiro.au/staff/
+\hbox(7.5993+0.90884)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 c
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 i
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 o
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 u
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 f
+.\TU/lmtt/m/n/10.95 f
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+\TU/lmtt/m/n/10.95 //srahtz/attend.
+\hbox(7.5993+0.90884)x108.405, direction TLT
+.\TU/lmtt/m/n/10.95 /
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 s
+.\TU/lmtt/m/n/10.95 r
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 h
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 z
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 /
+.\penalty 700
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 a
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 t
+.\TU/lmtt/m/n/10.95 e
+.\TU/lmtt/m/n/10.95 n
+.\TU/lmtt/m/n/10.95 d
+.\glue(\medmuskip) 0.0
+.\TU/lmtt/m/n/10.95 .
+.\penalty 700
+.\glue(\rightskip) 0.0
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(541.40024+0.0)x360.0, glue set 47.62671, direction TLT
+.\vbox(71.37518+0.0)x360.0, direction TLT
+..\pdfcolorstack 0 push {0 g 0 G}
+..\vbox(71.37518+0.0)x360.0, direction TLT
+...\hbox(4.71945+0.0)x360.0, glue set 336.8736fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\pdfdest name{testpiccy} xyz
+...\penalty 10000
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 6.18686
+...\hbox(7.41315+2.1243)x360.0, glue set 302.4249fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 T
+....\kern-0.90884 (font)
+....\TU/lmr/m/n/10.95 e
+....\TU/lmr/m/n/10.95 s
+....\TU/lmr/m/n/10.95 t
+....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+....\TU/lmr/m/n/10.95 p
+....\TU/lmr/m/n/10.95 i
+....\TU/lmr/m/n/10.95 c
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10.95 -
+....\TU/lmr/m/n/10.95 t
+....\TU/lmr/m/n/10.95 u
+....\TU/lmr/m/n/10.95 r
+....\TU/lmr/m/n/10.95 e
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 6.75626
+...\hbox(4.71945+0.0)x360.0, glue set 331.09198fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 8.88055
+...\hbox(4.71945+0.0)x360.0, glue set 331.09198fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberlin
+e \ETC.}
+...\glue 10.0
+...\glue(\baselineskip) 5.75981
+...\hbox(7.8402+2.2557)x360.0, glue set 138.5433fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(7.8402+2.2557)x82.9134, direction TLT
+.....\pdfcolorstack 0 push {0 g 0 G}
+.....\TU/lmr/m/n/10.95 F
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 g
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10.95 -
+.....\TU/lmr/m/n/10.95 u
+.....\TU/lmr/m/n/10.95 r
+.....\TU/lmr/m/n/10.95 e
+.....\penalty 10000
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 2
+.....\TU/lmr/m/n/10.95 .
+.....\TU/lmr/m/n/10.95 1
+.....\TU/lmr/m/n/10.95 :
+.....\glue(\spaceskip) 4.8618 plus 3.64636 minus 0.60773
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0, direction TLT
+......\hbox(0.0+0.0)x0.0, shifted -13.6, direction TLT
+.......\pdfdest name{figure.29} xyz
+.......\penalty 10000
+.....\TU/lmr/m/n/10.95 A
+.....\glue(\spaceskip) 3.64635 plus 1.82135 minus 1.21666
+.....\TU/lmr/m/n/10.95 c
+.....\TU/lmr/m/n/10.95 a
+.....\TU/lmr/m/n/10.95 t
+.....\pdfcolorstack 0 pop
+....\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\write1{\newlabel{fig1}{{2.1}{\thepage }{A cat}{figure.29}{}}}
+...\glue 0.0
+..\pdfcolorstack 0 pop
+.\glue 12.0 plus 2.0 minus 2.0
+.\vbox(44.65697+0.0)x360.0, direction TLT
+..\pdfcolorstack 0 push {0 g 0 G}
+..\vbox(44.65697+0.0)x360.0, direction TLT
+...\hbox(4.71945+0.0)x360.0, glue set 336.8736fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 8.88055
+...\hbox(4.71945+0.0)x360.0, glue set 331.09198fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\TU/lmr/m/n/10.95 x
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberlin
+e \ETC.}
+...\glue 10.0
+...\glue(\baselineskip) 5.38751
+...\hbox(8.2125+2.7375)x360.0, glue set 9.36615fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(8.2125+2.7375)x341.2677, direction TLT
+.....\pdfcolorstack 0 push {0 g 0 G}
+.....\TU/lmr/m/n/10.95 F
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 g
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10.95 -
+.....\TU/lmr/m/n/10.95 u
+.....\TU/lmr/m/n/10.95 r
+.....\TU/lmr/m/n/10.95 e
+.....\penalty 10000
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 2
+.....\TU/lmr/m/n/10.95 .
+.....\TU/lmr/m/n/10.95 2
+.....\TU/lmr/m/n/10.95 :
+.....\glue(\spaceskip) 4.8618 plus 3.64636 minus 0.60773
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0, direction TLT
+......\hbox(0.0+0.0)x0.0, shifted -13.6, direction TLT
+.......\pdfdest name{figure.30} xyz
+.......\penalty 10000
+.....\TU/lmr/m/n/10.95 A
+.....\TU/lmr/m/n/10.95 n
+.....\TU/lmr/m/n/10.95 o
+.....\TU/lmr/m/n/10.95 t
+.....\TU/lmr/m/n/10.95 h
+.....\TU/lmr/m/n/10.95 e
+.....\TU/lmr/m/n/10.95 r
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 c
+.....\TU/lmr/m/n/10.95 a
+.....\TU/lmr/m/n/10.95 t
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 w
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 t
+.....\TU/lmr/m/n/10.95 h
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 a
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 l
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 n
+.....\TU/lmr/m/n/10.95 k
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 n
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10.95 -
+.....\TU/lmr/m/n/10.95 s
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 d
+.....\TU/lmr/m/n/10.95 e
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 i
+.....\TU/lmr/m/n/10.95 t
+.....\TU/lmr/m/n/10.95 ,
+.....\glue(\spaceskip) 3.64635 plus 2.27898 minus 0.97235
+.....\TU/lmr/m/n/10.95 s
+.....\TU/lmr/m/n/10.95 o
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 s
+.....\TU/lmr/m/n/10.95 e
+.....\TU/lmr/m/n/10.95 e
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 [
+.....\hbox(7.5993+0.2409)x55.26468, direction TLT
+......\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{c
+ite.Dallas:aia}
+......\pdfcolorstack 0 push {0 1 0 rg 0 1 0 RG}
+......\TU/lmr/m/n/10.95 D
+......\TU/lmr/m/n/10.95 a
+......\TU/lmr/m/n/10.95 l
+......\discretionary (penalty 50)
+.......< \TU/lmr/m/n/10.95 -
+......\TU/lmr/m/n/10.95 l
+......\TU/lmr/m/n/10.95 a
+......\TU/lmr/m/n/10.95 s
+......\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+......\TU/lmr/m/n/10.95 1
+......\TU/lmr/m/n/10.95 9
+......\TU/lmr/m/n/10.95 9
+......\TU/lmr/m/n/10.95 2
+......\pdfcolorstack 0 pop
+......\write-{Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia
+', l\ETC.}
+......\pdfendlink
+.....\TU/lmr/m/n/10.95 ]
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\TU/lmr/m/n/10.95 x
+.....\TU/lmr/m/n/10.95 x
+.....\TU/lmr/m/n/10.95 x
+.....\TU/lmr/m/n/10.95 x
+.....\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+.....\write1{\newlabel{fig2}{{2.2}{\thepage }{Another cat with a link inside it
+, s\ETC.}
+.....\penalty 10000
+.....\glue 0.0
+.....\pdfcolorstack 0 pop
+....\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0
+..\pdfcolorstack 0 pop
+.\glue 12.0 plus 2.0 minus 2.0
+.\glue -12.0 plus -2.0 minus -2.0
+.\glue 20.0 plus 2.0 minus 4.0
+.\pdfdest name{section.28} xyz
+.\glue(\topskip) 1.00641
+.\hbox(9.99359+0.1728)x360.0, glue set 288.17285fil, direction TLT
+..\localpar
+...\localinterlinepenalty=0
+...\localbrokenpenalty=0
+...\localleftbox=null
+...\localrightbox=null
+..\hbox(9.4464+0.1728)x35.12158, direction TLT
+...\glue 0.0
+...\TU/lmr/bx/n/14.4 2
+...\TU/lmr/bx/n/14.4 .
+...\TU/lmr/bx/n/14.4 5
+...\glue 14.4
+..\TU/lmr/bx/n/14.4 t
+..\TU/lmr/bx/n/14.4 h
+..\TU/lmr/bx/n/14.4 r
+..\TU/lmr/bx/n/14.4 e
+..\TU/lmr/bx/n/14.4 e
+..\penalty 10000
+..\glue(\parfillskip) 0.0 plus 1.0fil
+..\glue(\rightskip) 0.0
+.\mark{{\protect \MakeUppercase  {Chapter\ 2. \ Second part}}{\protect \MakeUpp
+ercase  \ETC.}
+.\write4{\protect \BOOKMARK [1][-]{section.28}{2.5 three}{chapter.14}% 13}
+.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline
+ \ETC.}
+.\penalty 10000
+.\glue 10.85475 plus 0.94386
+.\glue(\parskip) 0.0 plus 1.0
+.\glue(\baselineskip) 5.2147
+.\hbox(8.2125+2.7375)x360.0, glue set 0.16263, direction TLT
+..\localpar
+...\localinterlinepenalty=0
+...\localbrokenpenalty=0
+...\localleftbox=null
+...\localrightbox=null
+..\TU/lmr/m/n/10.95 T
+..\TU/lmr/m/n/10.95 h
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 s
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 s
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 a
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 r
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 f
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 r
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 n
+..\TU/lmr/m/n/10.95 c
+..\TU/lmr/m/n/10.95 e
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 o
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 1
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 (
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{secti
+on.22}
+..\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\penalty 10000
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 2
+..\TU/lmr/m/n/10.95 .
+..\TU/lmr/m/n/10.95 3
+..\hbox(0.0+0.0)x0.0, direction TLT
+..\pdfcolorstack 0 pop
+..\write-{Package `hyperref' Info: End of reference (link) `section.22', line 1
+\ETC.}
+..\pdfendlink
+..\TU/lmr/m/n/10.95 )
+..\TU/lmr/m/n/10.95 ,
+..\glue(\spaceskip) 3.64635 plus 2.27898 minus 0.97235
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 u
+..\TU/lmr/m/n/10.95 b
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 1
+..\TU/lmr/m/n/10.95 .
+..\TU/lmr/m/n/10.95 2
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 (
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{subse
+ction.24}
+..\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 u
+..\TU/lmr/m/n/10.95 b
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\penalty 10000
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 I
+..\kern0.3066 (font)
+..\TU/lmr/m/n/10.95 I
+..\kern0.3066 (font)
+..\TU/lmr/m/n/10.95 I
+..\glue(\rightskip) 0.0
+.\penalty 10150
+.\glue(\baselineskip) 2.65001
+.\hbox(8.2125+2.7375)x360.0, glue set 59.55385fil, direction TLT
+..\TU/lmr/m/n/10.95 – (ligature --)
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 2
+..\hbox(0.0+0.0)x0.0, direction TLT
+..\pdfcolorstack 0 pop
+..\write-{Package `hyperref' Info: End of reference (link) `subsection.24', lin
+\ETC.}
+..\pdfendlink
+..\TU/lmr/m/n/10.95 )
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 a
+..\TU/lmr/m/n/10.95 n
+..\TU/lmr/m/n/10.95 d
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 2
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 (
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{secti
+on.25}
+..\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
+..\TU/lmr/m/n/10.95 s
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 c
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 i
+..\TU/lmr/m/n/10.95 o
+..\TU/lmr/m/n/10.95 n
+..\penalty 10000
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 2
+..\TU/lmr/m/n/10.95 .
+..\TU/lmr/m/n/10.95 4
+..\hbox(0.0+0.0)x0.0, direction TLT
+..\pdfcolorstack 0 pop
+..\write-{Package `hyperref' Info: End of reference (link) `section.25', line 1
+\ETC.}
+..\pdfendlink
+..\TU/lmr/m/n/10.95 )
+..\TU/lmr/m/n/10.95 .
+..\glue(\spaceskip) 4.8618 plus 5.46954 minus 0.40515
+..\TU/lmr/m/n/10.95 R
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 f
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 r
+..\discretionary (penalty 50)
+...< \TU/lmr/m/n/10.95 -
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 n
+..\TU/lmr/m/n/10.95 c
+..\TU/lmr/m/n/10.95 e
+..\TU/lmr/m/n/10.95 s
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 t
+..\TU/lmr/m/n/10.95 o
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\TU/lmr/m/n/10.95 [
+..\hbox(7.2927+0.0)x5.475, direction TLT
+...\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite
+.Barcelo:1992:caa}
+...\pdfcolorstack 0 push {0 1 0 rg 0 1 0 RG}
+...\TU/lmr/m/n/10.95 1
+...\pdfcolorstack 0 pop
+...\write-{Package `hyperref' Info: End of reference (cite) `cite.Barcelo:1992:
+c\ETC.}
+...\pdfendlink
+..\TU/lmr/m/n/10.95 ,
+..\penalty 1000
+..\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+..\hbox(7.5993+0.2409)x55.26468, direction TLT
+...\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite
+.Dallas:aia}
+...\pdfcolorstack 0 push {0 1 0 rg 0 1 0 RG}
+...\TU/lmr/m/n/10.95 D
+...\TU/lmr/m/n/10.95 a
+...\TU/lmr/m/n/10.95 l
+...\discretionary (penalty 50)
+....< \TU/lmr/m/n/10.95 -
+...\TU/lmr/m/n/10.95 l
+...\TU/lmr/m/n/10.95 a
+...\TU/lmr/m/n/10.95 s
+...\glue(\spaceskip) 3.64635 plus 1.82318 minus 1.21545
+...\TU/lmr/m/n/10.95 1
+...\TU/lmr/m/n/10.95 9
+...\TU/lmr/m/n/10.95 9
+...\TU/lmr/m/n/10.95 2
+...\pdfcolorstack 0 pop
+...\write-{Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', 
+l\ETC.}
+...\pdfendlink
+..\TU/lmr/m/n/10.95 ]
+..\TU/lmr/m/n/10.95 .
+..\penalty 10000
+..\glue(\parfillskip) 0.0 plus 1.0fil
+..\glue(\rightskip) 0.0
+.\penalty 0
+.\penalty 10000
+.\penalty 0
+.\penalty 10000
+.\glue(\parskip) 0.0 plus 1.0
+.\glue(\baselineskip) 4.0516
+.\hbox(6.8109+2.4309)x360.0, glue set 199.28128fil, direction TLT
+..\localpar
+...\localinterlinepenalty=0
+...\localbrokenpenalty=0
+...\localleftbox=null
+...\localrightbox=null
+..\hbox(0.0+0.0)x17.0, direction TLT
+..\TU/lmtt/m/n/10.95 <
+..\TU/lmtt/m/n/10.95 <
+..\TU/lmtt/m/n/10.95 w
+..\TU/lmtt/m/n/10.95 h
+..\TU/lmtt/m/n/10.95 e
+..\TU/lmtt/m/n/10.95 r
+..\TU/lmtt/m/n/10.95 e
+..\glue(\spaceskip) 5.74875
+..\TU/lmtt/m/n/10.95 i
+..\TU/lmtt/m/n/10.95 s
+..\glue(\spaceskip) 5.74875
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{equat
+ion.33}
+..\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
+..\TU/lmtt/m/n/10.95 E
+..\TU/lmtt/m/n/10.95 q
+..\TU/lmtt/m/n/10.95 u
+..\TU/lmtt/m/n/10.95 a
+..\TU/lmtt/m/n/10.95 t
+..\TU/lmtt/m/n/10.95 i
+..\TU/lmtt/m/n/10.95 o
+..\TU/lmtt/m/n/10.95 n
+..\penalty 10000
+..\glue(\spaceskip) 5.74875
+..\TU/lmtt/m/n/10.95 2
+..\TU/lmtt/m/n/10.95 .
+..\TU/lmtt/m/n/10.95 1
+..\hbox(0.0+0.0)x0.0, direction TLT
+..\pdfcolorstack 0 pop
+..\write-{Package `hyperref' Info: End of reference (link) `equation.33', line 
+\ETC.}
+..\pdfendlink
+..\TU/lmtt/m/n/10.95 >
+..\TU/lmtt/m/n/10.95 >
+..\kern0.0 (italic)
+..\penalty 10000
+..\glue(\parfillskip) 0.0 plus 1.0fil
+..\glue(\rightskip) 0.0
+.\glue -2.4309
+Package hyperref Info: Anchor `page.18' on input line ....
+[12
+Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 149.
+Package `hyperref' Info: End of reference (link) `section.22', line 125.
+Package `hyperref' Info: End of reference (link) `subsection.24', line 126.
+Package `hyperref' Info: End of reference (link) `section.25', line 126.
+Package `hyperref' Info: End of reference (cite) `cite.Barcelo:1992:caa', line 127.
+Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 127.
+Package `hyperref' Info: End of reference (link) `equation.33', line 152.
+]
+Package hyperref Info: Anchor `page.19' on input line ....
+[13
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
+]
+Package hyperref Info: Anchor `section.32' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.7}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Back to math}
+(hyperref)             reference {section.32}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `equation.33' on input line ....
+Package hyperref Info: Anchor `equation.33' on input line ....
+Package hyperref Info: Anchor `equation.33' on input line ....
+Package hyperref Info: Anchor `equation.33' on input line ....
+Package hyperref Info: Anchor `equation.34' on input line ....
+Package hyperref Info: Anchor `equation.34' on input line ....
+Package hyperref Info: Anchor `equation.34' on input line ....
+Package hyperref Info: Anchor `equation.34' on input line ....
+Package hyperref Info: Anchor `equation.35' on input line ....
+Package hyperref Info: Anchor `equation.35' on input line ....
+Package hyperref Info: Anchor `equation.35' on input line ....
+Package hyperref Info: Anchor `equation.35' on input line ....
+Package hyperref Info: Anchor `Item.36' on input line ....
+Package hyperref Info: Anchor `Item.37' on input line ....
+Package hyperref Info: Anchor `Item.38' on input line ....
+Package hyperref Info: Anchor `Item.39' on input line ....
+Package hyperref Info: Anchor `Item.40' on input line ....
+Package hyperref Info: Anchor `Item.41' on input line ....
+Package hyperref Info: Anchor `Item.42' on input line ....
+Package hyperref Info: Anchor `Item.43' on input line ....
+Package hyperref Info: Anchor `Item.44' on input line ....
+Package hyperref Info: Anchor `Item.45' on input line ....
+Package hyperref Info: Anchor `page.20' on input line ....
+[14]
+Package hyperref Info: Reference (link) `Item.41' on input line ....
+Package hyperref Info: Reference (link) `Item.42' on input line ....
+Package hyperref Info: Reference (link) `Item.44' on input line ....
+Package hyperref Info: Reference (link) `Item.45' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (link) `equation.33' on input line ....
+Package hyperref Info: Reference (link) `figure.29' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `page.21' on input line ....
+[15
+Package `hyperref' Info: End of reference (link) `Item.41', line 219.
+Package `hyperref' Info: End of reference (link) `Item.42', line 219.
+Package `hyperref' Info: End of reference (link) `Item.44', line 219.
+Package `hyperref' Info: End of reference (link) `Item.45', line 220.
+Package `hyperref' Info: End of reference (link) `section.22', line 224.
+Package `hyperref' Info: End of reference (link) `section.25', line 225.
+Package `hyperref' Info: End of reference (link) `equation.33', line 226.
+Package `hyperref' Info: End of reference (link) `figure.29', line 227.
+Package `hyperref' Info: End of reference (cite) `cite.Barcelo:1992:caa', line 228.
+]
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\protect \numberline {\thetable }{A test long table (see \protect \cite {Dallas:aia} and section \protect \ref {sec1}}}
+(hyperref)             reference {table.46}
+(hyperref)             toclevel {0}
+(hyperref)             type {lot}.
+Package hyperref Info: Anchor `table.46' on input line ....
+Package hyperref Info: Anchor `page.22' on input line ....
+[16
+Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 232.
+Package `hyperref' Info: End of reference (link) `section.22', line 232.
+]
+Package hyperref Info: Reference (link) `equation.2.2' on input line ....
+Package hyperref Info: Reference (link) `equation.35' on input line ....
+Package hyperref Info: Anchor `page.23' on input line ....
+[17
+Package `hyperref' Info: End of reference (link) `equation.2.2', line 290.
+Package `hyperref' Info: End of reference (link) `equation.35', line 292.
+]
+Package hyperref Info: Anchor `page.24' on input line ....
+[18
+]
+Package hyperref Info: Anchor `chapter*.47' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2}
+(hyperref)             text {Bibliography}
+(hyperref)             reference {chapter*.47}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `cite.Dallas:aia' on input line ....
+Package hyperref Info: Anchor `cite.stankovic:88' on input line ....
+Package hyperref Info: Anchor `page.25' on input line ....
+[19]
+Package hyperref Info: Anchor `page.26' on input line ....
+[20
+]
+Package hyperref Info: Anchor `page.27' on input line ....
+[21
+]
+Package hyperref Info: Anchor `page.28' on input line ....
+[22
+]
+Package hyperref Info: Anchor `page.29' on input line ....
+[23
+]
+Package hyperref Info: Anchor `page.30' on input line ....
+[24
+]
+Package hyperref Info: Anchor `page.31' on input line ....
+[25
+]
+Package hyperref Info: Anchor `page.32' on input line ....
+[26
+]
+Package hyperref Info: Anchor `chapter*.48' on input line ....
+(test1.ind
+Package hyperref Info: Anchor `page.33' on input line ....
+[27]
+Package hyperref Info: Reference (link) `page.3' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.17' on input line ....
+Package hyperref Info: Reference (link) `page.20' on input line ....
+Package hyperref Info: Reference (link) `page.25' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.10' on input line ....
+Package hyperref Info: Reference (link) `page.7' on input line ....
+Package hyperref Info: Reference (link) `page.3' on input line ....
+Package hyperref Info: Reference (link) `page.ii' on input line ....
+Package hyperref Info: Anchor `page.34' on input line ....
+[28
+Package `hyperref' Info: End of reference (link) `page.3', line 4.
+Package `hyperref' Info: End of reference (link) `page.14', line 8.
+Package `hyperref' Info: End of reference (link) `page.17', line 12.
+Package `hyperref' Info: End of reference (link) `page.20', line 16.
+Package `hyperref' Info: End of reference (link) `page.25', line 16.
+Package `hyperref' Info: End of reference (link) `page.14', line 20.
+Package `hyperref' Info: End of reference (link) `page.14', line 24.
+Package `hyperref' Info: End of reference (link) `page.10', line 28.
+Package `hyperref' Info: End of reference (link) `page.7', line 32.
+Package `hyperref' Info: End of reference (link) `page.3', line 38.
+Package `hyperref' Info: End of reference (link) `page.ii', line 39.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line ....
+Package atveryend Info: Empty hook `AfterLastShipout' on input line ....
+(test1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line ....
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line ....
+Package rerunfilecheck Info: File `test1.out' has not changed.
+(rerunfilecheck)             Checksum: 9AF3283C405D2E836D70ED8FD0F0758A;956.
+LaTeX Warning: There were undefined references.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line ....

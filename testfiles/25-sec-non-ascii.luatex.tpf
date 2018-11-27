@@ -1,0 +1,210 @@
+%PDF-1.5
+%ÐÔÅØ
+1 0 obj
+<</S/GoTo/D (section.1)>>
+endobj
+4 0 obj
+(\376\377\000\045\000\341)
+endobj
+5 0 obj
+<</S/GoTo/D[6 0 R /Fit]>>
+endobj
+8 0 obj
+<</Length 128       >>
+stream
+BT
+/F17 14.3462 Tf 1 0 0 1 133.768 656.438 Tm [<0052>-1000<00570080>]TJ
+/F15 9.96264 Tf 1 0 0 1 303.133 89.365 Tm [<0052>]TJ
+ET
+endstream
+endobj
+6 0 obj
+<</Type/Page/Contents 8 0 R/Resources 7 0 R/MediaBox[0 0 612 792]/Parent 13 0 R>>
+endobj
+9 0 obj
+<</D[6 0 R/XYZ 132.768 705.06 null]>>
+endobj
+10 0 obj
+<</D[6 0 R/XYZ 133.768 667.198 null]>>
+endobj
+2 0 obj
+<</D[6 0 R/XYZ 133.768 667.198 null]>>
+endobj
+7 0 obj
+<</Font<</F17 11 0 R/F15 12 0 R>>/ProcSet[/PDF/Text]>>
+endobj
+14 0 obj
+[82[500]]
+endobj
+15 0 obj
+<</Length 11        >>
+[BINARY STREAM]
+endobj
+16 0 obj
+<</Subtype/CIDFontType0C/Length 574       >>
+[BINARY STREAM]
+endobj
+17 0 obj
+<</Type/FontDescriptor/FontName/JFRMQG+LMRoman10-Regular/Flags 4/FontBBox[-430 -290 1417 1127]/Ascent 1127/CapHeight 683/Descent -290/ItalicAngle 0/StemV 93/XHeight 431/FontFile3 16 0 R/CIDSet 15 0 R>>
+endobj
+18 0 obj
+<</Length 692       >>
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-JFRMQG-LMRoman10-Regular-0)
+%%Title: (TeX-JFRMQG-LMRoman10-Regular-0 TeX JFRMQG-LMRoman10-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (JFRMQG-LMRoman10-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-JFRMQG-LMRoman10-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+1 beginbfchar
+<0052> <0031>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+12 0 obj
+<</Type/Font/Subtype/Type0/Encoding/Identity-H/BaseFont/JFRMQG+LMRoman10-Regular/DescendantFonts[19 0 R]/ToUnicode 18 0 R>>
+endobj
+19 0 obj
+<</Type/Font/Subtype/CIDFontType0/BaseFont/JFRMQG+LMRoman10-Regular/FontDescriptor 17 0 R/W 14 0 R/CIDSystemInfo<</Registry (Adobe)/Ordering (Identity)/Supplement 0>>>>
+endobj
+20 0 obj
+[82[563]87[938]128[547]]
+endobj
+21 0 obj
+<</Length 17        >>
+[BINARY STREAM]
+endobj
+22 0 obj
+<</Subtype/CIDFontType0C/Length 922       >>
+[BINARY STREAM]
+endobj
+23 0 obj
+<</Type/FontDescriptor/FontName/KBSYPL+LMRoman12-Bold/Flags 4/FontBBox[-476 -289 1577 1137]/Ascent 1137/CapHeight 686/Descent -289/ItalicAngle 0/StemV 104/XHeight 444/FontFile3 22 0 R/CIDSet 21 0 R>>
+endobj
+24 0 obj
+<</Length 705       >>
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-KBSYPL-LMRoman12-Bold-0)
+%%Title: (TeX-KBSYPL-LMRoman12-Bold-0 TeX KBSYPL-LMRoman12-Bold 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (KBSYPL-LMRoman12-Bold)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-KBSYPL-LMRoman12-Bold def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+3 beginbfchar
+<0052> <0031>
+<0057> <0025>
+<0080> <00E1>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+11 0 obj
+<</Type/Font/Subtype/Type0/Encoding/Identity-H/BaseFont/KBSYPL+LMRoman12-Bold/DescendantFonts[25 0 R]/ToUnicode 24 0 R>>
+endobj
+25 0 obj
+<</Type/Font/Subtype/CIDFontType0/BaseFont/KBSYPL+LMRoman12-Bold/FontDescriptor 23 0 R/W 20 0 R/CIDSystemInfo<</Registry (Adobe)/Ordering (Identity)/Supplement 0>>>>
+endobj
+13 0 obj
+<</Type/Pages /Count 1/Kids[6 0 R]>>
+endobj
+26 0 obj
+<</Type/Outlines/First 3 0 R/Last 3 0 R/Count 1>>
+endobj
+3 0 obj
+<</Title 4 0 R/A 1 0 R/Parent 26 0 R>>
+endobj
+27 0 obj
+<</Names[(Doc-Start) 10 0 R (page.1) 9 0 R (section.1) 2 0 R]/Limits[(Doc-Start) (section.1)]>>
+endobj
+28 0 obj
+<</Dests 27 0 R>>
+endobj
+29 0 obj
+<</Type/Catalog/Pages 13 0 R/Outlines 26 0 R/Names 28 0 R /PageMode/UseOutlines/OpenAction 5 0 R>>
+endobj
+30 0 obj
+<<
+/Producer (LuaTeX)/Author()/Title()/Subject()/Creator(LaTeX with hyperref)/Producer(LuaTeX-1.07.0)/Keywords()
+/Trapped/False>>
+endobj
+xref
+0 31
+0000000000 65535 f 
+0000000015 00000 n 
+0000000529 00000 n 
+0000005224 00000 n 
+0000000056 00000 n 
+0000000099 00000 n 
+0000000324 00000 n 
+0000000583 00000 n 
+0000000140 00000 n 
+0000000421 00000 n 
+0000000474 00000 n 
+0000004786 00000 n 
+0000002367 00000 n 
+0000005105 00000 n 
+0000000653 00000 n 
+0000000679 00000 n 
+0000000747 00000 n 
+0000001400 00000 n 
+0000001618 00000 n 
+0000002507 00000 n 
+0000002692 00000 n 
+0000002733 00000 n 
+0000002807 00000 n 
+0000003808 00000 n 
+0000004024 00000 n 
+0000004923 00000 n 
+0000005158 00000 n 
+0000005278 00000 n 
+0000005390 00000 n 
+0000005424 00000 n 
+0000005539 00000 n 
+trailer
+<</Size 31/Root 29 0 R/Info 30 0 R>>
+startxref
+5685
+%%EOF

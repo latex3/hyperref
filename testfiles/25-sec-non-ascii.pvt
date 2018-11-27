@@ -1,0 +1,12 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+\input{regression-test}
+\documentclass{article}
+\usepackage{ifluatex}
+\ifluatex
+\usepackage[unicode]{hyperref}
+\else
+\usepackage{hyperref}
+\fi
+\begin{document}
+\section{\%á}
+\end{document}

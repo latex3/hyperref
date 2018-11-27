@@ -1,65 +1,563 @@
 %PDF-1.5
 %ÐÔÅØ
+1 0 obj
+<< /S /GoTo /D (section.1) >>
+endobj
+4 0 obj
+(I'm closed \(default\))
+endobj
+5 0 obj
+<< /S /GoTo /D (subsection.1.1) >>
+endobj
+8 0 obj
+(x)
+endobj
+9 0 obj
+<< /S /GoTo /D (section.2) >>
+endobj
+12 0 obj
+(I'm open,)
+endobj
+13 0 obj
+<< /S /GoTo /D (subsection.2.1) >>
+endobj
+16 0 obj
+(and so)
+endobj
+17 0 obj
+<< /S /GoTo /D (subsection.2.2) >>
+endobj
+20 0 obj
+(are my)
+endobj
+21 0 obj
+<< /S /GoTo /D (subsubsection.2.2.1) >>
+endobj
+24 0 obj
+(children)
+endobj
+25 0 obj
+<< /S /GoTo /D (section.3) >>
+endobj
+28 0 obj
+(I'm closed,)
+endobj
+29 0 obj
+<< /S /GoTo /D (subsection.3.1) >>
+endobj
+32 0 obj
+(but my)
+endobj
+33 0 obj
+<< /S /GoTo /D (subsubsection.3.1.1) >>
+endobj
+36 0 obj
+(children)
+endobj
+37 0 obj
+<< /S /GoTo /D (subsection.3.2) >>
+endobj
+40 0 obj
+(are)
+endobj
+41 0 obj
+<< /S /GoTo /D (subsubsection.3.2.1) >>
+endobj
+44 0 obj
+(open)
+endobj
+45 0 obj
+<< /S /GoTo /D (section.4) >>
+endobj
+48 0 obj
+(level is two now)
+endobj
+49 0 obj
+<< /S /GoTo /D (subsection.4.1) >>
+endobj
+52 0 obj
+(so this is closed)
+endobj
+53 0 obj
+<< /S /GoTo /D (subsubsection.4.1.1) >>
+endobj
+56 0 obj
+(y)
+endobj
+57 0 obj
+<< /S /GoTo /D [58 0 R /Fit] >>
+endobj
+60 0 obj
+<<
+/Length 885       
+>>
+stream
+BT
+/F21 14.3462 Tf 133.768 657.235 Td [(1)-1000(I'm)-250(closed)-250(\050default\051)]TJ/F21 11.9552 Tf 0 -24.259 Td [(1.1)-1000(x)]TJ/F21 14.3462 Tf 0 -24.657 Td [(2)-1000(I'm)-250(open,)]TJ/F21 11.9552 Tf 0 -24.259 Td [(2.1)-1000(and)-250(so)]TJ 0 -20.673 Td [(2.2)-1000(ar)18(e)-250(my)]TJ/F21 9.9626 Tf 0 -18.68 Td [(2.2.1)-1000(childr)18(en)]TJ/F21 14.3462 Tf 0 -24.657 Td [(3)-1000(I'm)-250(closed,)]TJ/F21 11.9552 Tf 0 -24.259 Td [(3.1)-1000(b)20(ut)-250(my)]TJ/F21 9.9626 Tf 0 -18.68 Td [(3.1.1)-1000(childr)18(en)]TJ/F21 11.9552 Tf 0 -20.672 Td [(3.2)-1000(ar)18(e)]TJ/F21 9.9626 Tf 0 -18.68 Td [(3.2.1)-1000(open)]TJ/F21 14.3462 Tf 0 -24.658 Td [(4)-1000(le)15(v)10(el)-250(is)-250(tw)10(o)-250(no)10(w)]TJ/F21 11.9552 Tf 0 -24.259 Td [(4.1)-1000(so)-250(this)-250(is)-250(closed)]TJ/F21 9.9626 Tf 0 -18.68 Td [(4.1.1)-1000(y)]TJ/F24 9.9626 Tf 169.365 -280.797 Td [(1)]TJ
+ET
+endstream
+endobj
+58 0 obj
+<<
+/Type /Page
+/Contents 60 0 R
+/Resources 59 0 R
+/MediaBox [0 0 612 792]
+/Parent 65 0 R
+>>
+endobj
 61 0 obj
 <<
-/Length 298       
-/Filter /FlateDecode
+/D [58 0 R /XYZ 132.768 705.06 null]
+>>
+endobj
+62 0 obj
+<<
+/D [58 0 R /XYZ 133.768 667.198 null]
+>>
+endobj
+2 0 obj
+<<
+/D [58 0 R /XYZ 133.768 667.198 null]
+>>
+endobj
+6 0 obj
+<<
+/D [58 0 R /XYZ 133.768 644.514 null]
+>>
+endobj
+10 0 obj
+<<
+/D [58 0 R /XYZ 133.768 626.084 null]
+>>
+endobj
+14 0 obj
+<<
+/D [58 0 R /XYZ 133.768 595.088 null]
+>>
+endobj
+18 0 obj
+<<
+/D [58 0 R /XYZ 133.768 577.168 null]
+>>
+endobj
+22 0 obj
+<<
+/D [58 0 R /XYZ 133.768 554.23 null]
+>>
+endobj
+26 0 obj
+<<
+/D [58 0 R /XYZ 133.768 537.843 null]
+>>
+endobj
+30 0 obj
+<<
+/D [58 0 R /XYZ 133.768 507.185 null]
+>>
+endobj
+34 0 obj
+<<
+/D [58 0 R /XYZ 133.768 486.633 null]
+>>
+endobj
+38 0 obj
+<<
+/D [58 0 R /XYZ 133.768 470.247 null]
+>>
+endobj
+42 0 obj
+<<
+/D [58 0 R /XYZ 133.768 449.547 null]
+>>
+endobj
+46 0 obj
+<<
+/D [58 0 R /XYZ 133.768 429.007 null]
+>>
+endobj
+50 0 obj
+<<
+/D [58 0 R /XYZ 133.768 402.589 null]
+>>
+endobj
+54 0 obj
+<<
+/D [58 0 R /XYZ 133.768 381.95 null]
+>>
+endobj
+59 0 obj
+<<
+/Font << /F21 63 0 R /F24 64 0 R >>
+/ProcSet [ /PDF /Text ]
+>>
+endobj
+67 0 obj
+[500]
+endobj
+68 0 obj
+[333 333 333 500 570 250 333 250 278 500 500 500 500 500 500 500 500 500 500 333 333 570 570 570 500 930 722 667 722 722 667 611 778 778 389 500 778 667 944 722 778 611 778 722 556 667 722 722 1000 722 722 667 333 278 333 581 500 333 500 556 444 556 444 333 500 556 278 333 556 278 833 556 500 556 556 444 389 333 556 500 722 500 500]
+endobj
+69 0 obj
+<<
+/Length1 1626
+/Length2 9956
+/Length3 0
+/Length 11582     
 >>
 [BINARY STREAM]
 endobj
 70 0 obj
 <<
-/Length1 1626
-/Length2 9956
+/Type /FontDescriptor
+/FontName /FZETGW+NimbusRomNo9L-Medi
+/Flags 4
+/FontBBox [-168 -341 1000 960]
+/Ascent 690
+/CapHeight 690
+/Descent -209
+/ItalicAngle 0
+/StemV 140
+/XHeight 461
+/CharSet (/I/a/b/c/comma/d/e/f/four/h/i/l/m/n/o/one/p/parenleft/parenright/period/quoteright/r/s/t/three/two/u/v/w/x/y)
+/FontFile 69 0 R
+>>
+endobj
+71 0 obj
+<<
+/Length1 1630
+/Length2 1394
 /Length3 0
-/Length 10791     
-/Filter /FlateDecode
+/Length 3024      
 >>
 [BINARY STREAM]
 endobj
 72 0 obj
 <<
-/Length1 1630
-/Length2 1394
-/Length3 0
-/Length 2166      
-/Filter /FlateDecode
+/Type /FontDescriptor
+/FontName /JWOGWQ+NimbusRomNo9L-Regu
+/Flags 4
+/FontBBox [-168 -281 1000 924]
+/Ascent 678
+/CapHeight 651
+/Descent -216
+/ItalicAngle 0
+/StemV 85
+/XHeight 450
+/CharSet (/one)
+/FontFile 71 0 R
 >>
-[BINARY STREAM]
 endobj
-81 0 obj
+66 0 obj
 <<
-/Author()/Title()/Subject()/Creator(LaTeX with hyperref)/Producer(pdfTeX-1.40.19)/Keywords()
-/CreationDate (D:20160520090000Z)
-/ModDate (D:20160520090000Z)
+/Type /Encoding
+/Differences [39/quoteright/parenleft/parenright 44/comma 46/period 49/one/two/three/four 73/I 97/a/b/c/d/e/f 104/h/i 108/l/m/n/o/p 114/r/s/t/u/v/w/x/y]
+>>
+endobj
+63 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /FZETGW+NimbusRomNo9L-Medi
+/FontDescriptor 70 0 R
+/FirstChar 39
+/LastChar 121
+/Widths 68 0 R
+/Encoding 66 0 R
+>>
+endobj
+64 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /JWOGWQ+NimbusRomNo9L-Regu
+/FontDescriptor 72 0 R
+/FirstChar 49
+/LastChar 49
+/Widths 67 0 R
+/Encoding 66 0 R
+>>
+endobj
+65 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [58 0 R]
+>>
+endobj
+73 0 obj
+<<
+/Type /Outlines
+/First 3 0 R
+/Last 47 0 R
+/Count 8
+>>
+endobj
+55 0 obj
+<<
+/Title 56 0 R
+/A 53 0 R
+/Parent 51 0 R
+>>
+endobj
+51 0 obj
+<<
+/Title 52 0 R
+/A 49 0 R
+/Parent 47 0 R
+/First 55 0 R
+/Last 55 0 R
+/Count -1
+>>
+endobj
+47 0 obj
+<<
+/Title 48 0 R
+/A 45 0 R
+/Parent 73 0 R
+/Prev 27 0 R
+/First 51 0 R
+/Last 51 0 R
+/Count 1
+>>
+endobj
+43 0 obj
+<<
+/Title 44 0 R
+/A 41 0 R
+/Parent 39 0 R
+>>
+endobj
+39 0 obj
+<<
+/Title 40 0 R
+/A 37 0 R
+/Parent 27 0 R
+/Prev 31 0 R
+/First 43 0 R
+/Last 43 0 R
+/Count 1
+>>
+endobj
+35 0 obj
+<<
+/Title 36 0 R
+/A 33 0 R
+/Parent 31 0 R
+>>
+endobj
+31 0 obj
+<<
+/Title 32 0 R
+/A 29 0 R
+/Parent 27 0 R
+/Next 39 0 R
+/First 35 0 R
+/Last 35 0 R
+/Count 1
+>>
+endobj
+27 0 obj
+<<
+/Title 28 0 R
+/A 25 0 R
+/Parent 73 0 R
+/Prev 11 0 R
+/Next 47 0 R
+/First 31 0 R
+/Last 39 0 R
+/Count -4
+>>
+endobj
+23 0 obj
+<<
+/Title 24 0 R
+/A 21 0 R
+/Parent 19 0 R
+>>
+endobj
+19 0 obj
+<<
+/Title 20 0 R
+/A 17 0 R
+/Parent 11 0 R
+/Prev 15 0 R
+/First 23 0 R
+/Last 23 0 R
+/Count 1
+>>
+endobj
+15 0 obj
+<<
+/Title 16 0 R
+/A 13 0 R
+/Parent 11 0 R
+/Next 19 0 R
+>>
+endobj
+11 0 obj
+<<
+/Title 12 0 R
+/A 9 0 R
+/Parent 73 0 R
+/Prev 3 0 R
+/Next 27 0 R
+/First 15 0 R
+/Last 19 0 R
+/Count 3
+>>
+endobj
+7 0 obj
+<<
+/Title 8 0 R
+/A 5 0 R
+/Parent 3 0 R
+>>
+endobj
+3 0 obj
+<<
+/Title 4 0 R
+/A 1 0 R
+/Parent 73 0 R
+/Next 11 0 R
+/First 7 0 R
+/Last 7 0 R
+/Count -1
+>>
+endobj
+74 0 obj
+<<
+/Names [(Doc-Start) 62 0 R (page.1) 61 0 R (section.1) 2 0 R (section.2) 10 0 R (section.3) 26 0 R (section.4) 46 0 R]
+/Limits [(Doc-Start) (section.4)]
+>>
+endobj
+75 0 obj
+<<
+/Names [(subsection.1.1) 6 0 R (subsection.2.1) 14 0 R (subsection.2.2) 18 0 R (subsection.3.1) 30 0 R (subsection.3.2) 38 0 R (subsection.4.1) 50 0 R]
+/Limits [(subsection.1.1) (subsection.4.1)]
+>>
+endobj
+76 0 obj
+<<
+/Names [(subsubsection.2.2.1) 22 0 R (subsubsection.3.1.1) 34 0 R (subsubsection.3.2.1) 42 0 R (subsubsection.4.1.1) 54 0 R]
+/Limits [(subsubsection.2.2.1) (subsubsection.4.1.1)]
+>>
+endobj
+77 0 obj
+<<
+/Kids [74 0 R 75 0 R 76 0 R]
+/Limits [(Doc-Start) (subsubsection.4.1.1)]
+>>
+endobj
+78 0 obj
+<<
+/Dests 77 0 R
+>>
+endobj
+79 0 obj
+<<
+/Type /Catalog
+/Pages 65 0 R
+/Outlines 73 0 R
+/Names 78 0 R
+/PageMode/UseOutlines
+/OpenAction 57 0 R
+>>
+endobj
+80 0 obj
+<<
+/Producer (pdfTeX)/Author()/Title()/Subject()/Creator(LaTeX with hyperref)/Producer(pdfTeX-1.40.19)/Keywords()
 /Trapped /False
-/PTEX.Fullbanner (This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) kpathsea version 6.3.0)
 >>
 endobj
-2 0 obj
-<<
-/Type /ObjStm
-/N 76
-/First 558
-/Length 1722      
-/Filter /FlateDecode
->>
-[BINARY STREAM]
-endobj
-82 0 obj
-<<
-/Type /XRef
-/Index [0 83]
-/Size 83
-/W [1 2 1]
-/Root 80 0 R
-/Info 81 0 R
-/ID [<407A8785A30386151599DC8D93C056E8> <407A8785A30386151599DC8D93C056E8>]
-/Length 160       
-/Filter /FlateDecode
->>
-[BINARY STREAM]
-endobj
+xref
+0 81
+0000000000 65535 f 
+0000000015 00000 n 
+0000002327 00000 n 
+0000020811 00000 n 
+0000000060 00000 n 
+0000000100 00000 n 
+0000002386 00000 n 
+0000020754 00000 n 
+0000000150 00000 n 
+0000000169 00000 n 
+0000002445 00000 n 
+0000020633 00000 n 
+0000000214 00000 n 
+0000000242 00000 n 
+0000002505 00000 n 
+0000020559 00000 n 
+0000000293 00000 n 
+0000000318 00000 n 
+0000002565 00000 n 
+0000020449 00000 n 
+0000000369 00000 n 
+0000000394 00000 n 
+0000002625 00000 n 
+0000020388 00000 n 
+0000000450 00000 n 
+0000000477 00000 n 
+0000002684 00000 n 
+0000020264 00000 n 
+0000000523 00000 n 
+0000000553 00000 n 
+0000002744 00000 n 
+0000020154 00000 n 
+0000000604 00000 n 
+0000000629 00000 n 
+0000002804 00000 n 
+0000020093 00000 n 
+0000000685 00000 n 
+0000000712 00000 n 
+0000002864 00000 n 
+0000019983 00000 n 
+0000000763 00000 n 
+0000000785 00000 n 
+0000002924 00000 n 
+0000019922 00000 n 
+0000000841 00000 n 
+0000000864 00000 n 
+0000002984 00000 n 
+0000019812 00000 n 
+0000000910 00000 n 
+0000000945 00000 n 
+0000003044 00000 n 
+0000019714 00000 n 
+0000000996 00000 n 
+0000001032 00000 n 
+0000003104 00000 n 
+0000019653 00000 n 
+0000001088 00000 n 
+0000001108 00000 n 
+0000002100 00000 n 
+0000003163 00000 n 
+0000001156 00000 n 
+0000002208 00000 n 
+0000002267 00000 n 
+0000019182 00000 n 
+0000019352 00000 n 
+0000019521 00000 n 
+0000018991 00000 n 
+0000003245 00000 n 
+0000003267 00000 n 
+0000003618 00000 n 
+0000015298 00000 n 
+0000015636 00000 n 
+0000018758 00000 n 
+0000019580 00000 n 
+0000020917 00000 n 
+0000021092 00000 n 
+0000021310 00000 n 
+0000021511 00000 n 
+0000021606 00000 n 
+0000021642 00000 n 
+0000021765 00000 n 
+trailer
+<< /Size 81
+/Root 79 0 R
+/Info 80 0 R
+ >>
 startxref
-15726
+21914
 %%EOF

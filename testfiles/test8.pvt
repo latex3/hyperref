@@ -1,6 +1,6 @@
 % Test file from Stephan Haller <stk@snafu.de> that shows how
 % bookmark open levels can vary during the document.
-
+\input{regression-test}
 \documentclass{article}
 
 \usepackage{times}

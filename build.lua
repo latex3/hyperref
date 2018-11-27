@@ -5,7 +5,7 @@ module = "hyperref"
 --sourcefiles = {'*.dtx'}
 installfiles = {'*.def','*.sty'}
 
-checkconfigs = {"build","config-3"}
+checkconfigs = {"build","config-3","config-xetex"}
 checkengines = {"pdftex","luatex"}
 checkruns = 2
 

@@ -1,5 +1,9 @@
+2018-11-27 6.88d Ulrike Fischer
+   * removed wrong producer warning for xetex and (x)dvipdfm(x)
+     (issue 76)
+
 2018-11-22 6.88c Ulrike Fischer
-   * Added support for pdflinkmargin for xetex
+   * Added support for pdflinkmargin for xetex (issue 15)
 
 2018-11-17 6.88b David Carlisle
    * Ensure Producer field in PDF shows LuaTeX version with two digits (Ulrike Fischer)

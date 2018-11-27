@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2018/11/22 v6.88c %
+%<!none>  [2018/11/27 v6.88d %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -6581,22 +6581,6 @@
   \HyPsd@XeTeXBigCharstrue
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfproducer{#1}%
-  \ifxetex
-    \Hy@Warning{%
-      pdfproducer: %
-      xdvipdfmx will use its own setting\MessageBreak
-      instead of the value given%
-    }%
-  \else
-    \def\Hy@temp{hdvipdfm}%
-    \ifx\Hy@driver\Hy@temp
-      \Hy@Warning{%
-        pdfproducer: %
-        dvipdfm(x) will use its own setting\MessageBreak
-        instead of the value given%
-      }%
-    \fi
-  \fi
 }
 \define@key{Hyp}{pdfcreator}{%
   \HyXeTeX@CheckUnicode

@@ -1,0 +1,8 @@
+\documentclass{article}
+\usepackage{hyperref}
+\hypersetup{pdfproducer={whatever}}
+
+
+\begin{document}
+abc
+\end{document}

@@ -11605,13 +11605,13 @@
       {%
         \expandafter\hyper@@anchor\expandafter{%
           \Hy@footnote@currentHref
-         }{#1}%
+         }{\ignorespaces #1}%
       }{%
         \Hy@raisedlink{%
           \expandafter\hyper@@anchor\expandafter{%
             \Hy@footnote@currentHref
           }{\relax}%
-        }#1%
+        }\ignorespaces #1%
       }%
     }%
   }%
@@ -11625,7 +11625,7 @@
       {%
         \expandafter\hyper@@anchor\expandafter{%
           \Hy@footnote@currentHref
-        }{#1}%
+        }{\ignorespaces #1}%
       }{%
         \Hy@raisedlink{%
           \expandafter\hyper@@anchor\expandafter{%
@@ -11634,7 +11634,7 @@
         }%
         \let\@currentHref\Hy@footnote@currentHref
         \let\@currentlabelname\@empty
-        #1%
+        \ignorespaces #1%
       }%
     }%
   }%

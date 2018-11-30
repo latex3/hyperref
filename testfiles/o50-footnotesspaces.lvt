@@ -1,0 +1,17 @@
+\input{regression-test}
+\documentclass{article}
+
+\RequirePackage{hyperref}
+
+\begin{document}
+\START \showoutput
+
+\begin{minipage}{5cm}
+abc\footnote{blblbl}
+abc\footnote{ blblbl}
+\end{minipage}
+
+\footnote{with hyperref}
+\footnote{ with hyperref}
+
+\end{document}

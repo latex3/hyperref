@@ -1,3 +1,7 @@
+2018-11-30 6.88e Ulrike Fischer
+   * added ignorespaces to footnotetext to address
+     https://github.com/ho-tex/oberdiek/issues/50
+
 2018-11-27 6.88d Ulrike Fischer
    * removed wrong producer warning for xetex and (x)dvipdfm(x)
      (issue 76)

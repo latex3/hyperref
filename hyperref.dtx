@@ -6004,6 +6004,26 @@
     \def\pageautorefname{\textsigma\textepsilon\textlambda\acctonos\textiota\textdelta\textalpha}%
 }
 %    \end{macrocode}
+%    \begin{macrocode}
+\def\HyLang@dutch{%
+    \def\equationautorefname{Vergelijking}%
+    \def\footnoteautorefname{voetnoot}%
+    \def\itemautorefname{punt}%
+    \def\figureautorefname{Figuur}%
+    \def\tableautorefname{Tabel}%
+    \def\partautorefname{Deel}%
+    \def\appendixautorefname{Bijlage}%
+    \def\chapterautorefname{hoofdstuk}%
+    \def\sectionautorefname{paragraaf}%
+    \def\subsectionautorefname{deelparagraaf}%
+    \def\subsubsectionautorefname{deeldeelparagraaf}%
+    \def\paragraphautorefname{alinea}%
+    \def\subparagraphautorefname{deelalinea}%
+    \def\FancyVerbLineautorefname{lijn}%
+    \def\theoremautorefname{Stelling}%
+    \def\pageautorefname{pagina}%
+}
+%    \end{macrocode}
 %
 %    Instead of package babel's definition of \cmd{\addto} the
 %    implementation of package varioref is used. Additionally
@@ -6080,6 +6100,7 @@
 \HyLang@DeclareLang{magyar}{magyar}{}
 \HyLang@DeclareLang{hungarian}{magyar}{}
 \HyLang@DeclareLang{greek}{greek}{}
+\HyLang@DeclareLang{dutch}{dutch}{}
 %    \end{macrocode}
 %    More work is needed in case of options |vietnamese| and |vietnam|.
 %    \begin{macrocode}

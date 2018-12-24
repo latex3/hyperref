@@ -1,3 +1,7 @@
+2018-12-24 6.88f Ulrike Fischer
+   * gobble \thanks in pdftitle
+     https://github.com/ho-tex/hyperref/issues/81
+
 2018-11-30 6.88e Ulrike Fischer
    * added ignorespaces to footnotetext to address
      https://github.com/ho-tex/oberdiek/issues/50

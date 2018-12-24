@@ -1,0 +1,10 @@
+\input{regression-test}
+
+\documentclass{article}
+\usepackage[pdfusetitle]{hyperref}
+
+\begin{document}
+\START
+\title{The title\thanks{Thanks}}
+Hello.
+\end{document}

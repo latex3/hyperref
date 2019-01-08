@@ -72,7 +72,7 @@ Example:
     The exception is bmhydoc.sty, it belongs to the source files
     (TDS:source/latex/hyperref/).
  5. Copy the documentation files to "TDS:doc/latex/hyperref/":
-    manual.pdf, README, README.pdf, ChangeLog, ChangeLog.pdf,
+    manual.pdf, README.md, ChangeLog.txt,
     slides.pdf, paper.pdf, options.pdf, hyperref.pdf, backref.pdf,
     nameref.pdf (Also the HTML version of the manual can be put there.)
  6. Update the databases if necessary, eg. for teTeX:

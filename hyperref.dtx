@@ -15260,18 +15260,7 @@
     \Hy@EndAnnot
   }%
 }
-\ifx\@pdfproducer\relax
-  \def\@pdfproducer{dvipdfm}%
-%    \end{macrocode}
-%    Detect Xe\TeX. However, but \textsf{xdvipdfmx} will overwrite it
-%    in the final PDF file.
-%    \begin{macrocode}
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname XeTeXversion\endcsname\relax
-  \else
-    \edef\@pdfproducer{XeTeX \the\XeTeXversion\XeTeXrevision}%
-  \fi
-\fi
+
 \def\PDF@FinishDoc{%
   \Hy@UseMaketitleInfos
   \HyInfo@GenerateAddons

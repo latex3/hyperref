@@ -528,19 +528,6 @@
     \close@pdflink
   \endgroup
 }
-    \begingroup
-      \count@=\luatexversion
-      \divide\count@ by 100 %
-      \edef\x{\the\count@}%
-      \count@=-\x\relax
-      \multiply\count@ by 100 %
-      \advance\count@ by \luatexversion
-      \edef\x{\endgroup
-        \def\noexpand\@pdfproducer{%
-          LuaTeX-\x.\two@digits\count@.\luatexrevision
-        }%
-      }%
-    \x
 
 
 \def\PDF@SetupDoc{%

@@ -17679,9 +17679,6 @@
 \def\literalps@out#1{\special{ps:#1}}%
 \def\headerps@out#1{\special{headertext=#1}}%
 \input{pdfmark.def}%
-\ifx\@pdfproducer\relax
-  \def\@pdfproducer{dvipsone + Distiller}%
-\fi
 \HyInfo@AddonUnsupportedtrue
 \def\PDF@FinishDoc{%
   \Hy@UseMaketitleInfos

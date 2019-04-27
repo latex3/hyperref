@@ -14047,68 +14047,6 @@
   \endgroup
 }
 %    \end{macrocode}
-%    \begin{macro}{\@pdfproducer}
-%    \begin{macrocode}
-\ifx\@pdfproducer\relax
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname luatexversion\endcsname\relax
-    \def\@pdfproducer{pdfTeX}%
-    \ifx\eTeXversion\@undefined
-    \else
-      \ifx\eTeXversion\relax
-      \else
-        \ifnum\eTeXversion>0 %
-          \def\@pdfproducer{pdfeTeX}%
-        \fi
-      \fi
-    \fi
-    \ifx\pdftexversion\@undefined
-    \else
-      \ifnum\pdftexversion<100 %
-        \edef\@pdfproducer{%
-          \@pdfproducer
-          \the\pdftexversion.\pdftexrevision
-        }%
-      \else
-        \ifnum\pdftexversion<130 %
-          \edef\@pdfproducer{%
-            \@pdfproducer-%
-            \expandafter\@car\the\pdftexversion\@empty\@nil.%
-            \expandafter\@cdr\the\pdftexversion\@empty\@nil
-            \pdftexrevision
-          }%
-        \else
-          \ifnum\pdftexversion<140 %
-          \else
-            \def\@pdfproducer{pdfTeX}%
-          \fi
-          \edef\@pdfproducer{%
-            \@pdfproducer-%
-            \expandafter\@car\the\pdftexversion\@empty\@nil.%
-            \expandafter\@cdr\the\pdftexversion\@empty\@nil.%
-            \pdftexrevision
-          }%
-        \fi
-      \fi
-    \fi
-  \else
-    \begingroup
-      \count@=\luatexversion
-      \divide\count@ by 100 %
-      \edef\x{\the\count@}%
-      \count@=-\x\relax
-      \multiply\count@ by 100 %
-      \advance\count@ by \luatexversion
-      \edef\x{\endgroup
-        \def\noexpand\@pdfproducer{%
-          LuaTeX-\x.\two@digits\count@.\luatexrevision
-        }%
-      }%
-    \x
-  \fi
-\fi
-%    \end{macrocode}
-%    \end{macro}
 %    \begin{macro}{\PDF@SetupDox}
 %    \begin{macrocode}
 \def\PDF@SetupDoc{%

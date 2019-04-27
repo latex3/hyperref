@@ -30,7 +30,7 @@ Completed box being shipped out [1]
 ....\write1{\babel@aux{german}{}}
 ....\pdfdest name{Doc-Start} xyz
 ....\glue(\topskip) 2.95
-....\hbox(7.05+2.06)x345.0, glue set - 0.83583, direction TLT
+....\hbox(7.05+2.06)x345.0, glue set - 0.16316, direction TLT
 .....\localpar
 ......\localinterlinepenalty=0
 ......\localbrokenpenalty=0
@@ -67,7 +67,9 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 o
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 y
-.....\TU/lmr/m/n/10 — (ligature ---)
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10 — (ligature ---)
+......= \TU/lmr/m/n/10 — (ligature ---)
 .....\TU/lmr/m/n/10 t
 .....\TU/lmr/m/n/10 h
 .....\TU/lmr/m/n/10 a
@@ -125,12 +127,14 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 — (ligature ---)
+.....\discretionary (penalty 50)
+.....\glue(\rightskip) 0.0
+....\penalty 250
+....\glue(\baselineskip) 2.44
+....\hbox(7.5+2.5)x345.0, glue set - 0.06532, direction TLT
 .....\TU/lmr/m/n/10 i
 .....\TU/lmr/m/n/10 s
-.....\glue(\rightskip) 0.0
-....\penalty 150
-....\glue(\baselineskip) 2.44
-....\hbox(7.5+2.5)x345.0, glue set 0.50124, direction TLT
+.....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 o
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 e

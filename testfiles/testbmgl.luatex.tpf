@@ -4495,7 +4495,7 @@ endobj
 endobj
 1427 0 obj
 <<
-/Producer (LuaTeX)/Author(Heiko Oberdiek)/Title(Test bookmark glyphs \(HO\))/Subject(testbmgl.tex [2008/09/11 v1.3])/Creator(LaTeX with hyperref)/Producer(LuaTeX-1.07.0)/Keywords(bookmarks hyperref PDFDocEncoding glyph slot)
+/Producer (LuaTeX)/Author(Heiko Oberdiek)/Title(Test bookmark glyphs \(HO\))/Subject(testbmgl.tex [2008/09/11 v1.3])/Creator(LaTeX with hyperref)/Keywords(bookmarks hyperref PDFDocEncoding glyph slot)
 /Trapped/False>>
 endobj
 xref
@@ -5931,5 +5931,5 @@ xref
 trailer
 <</Size 1428/Root 1426 0 R/Info 1427 0 R>>
 startxref
-117819
+117795
 %%EOF

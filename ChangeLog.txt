@@ -1,3 +1,10 @@
+2019-04-27 6.88g Ulrike Fischer
+   * added \mu to psdextra.def
+     https://github.com/ho-tex/hyperref/pull/90
+   * removed setting of /Producer from all drivers
+     https://github.com/ho-tex/hyperref/issues/91
+
+
 2018-12-24 6.88f Ulrike Fischer
    * gobble \thanks in pdftitle
      https://github.com/ho-tex/hyperref/issues/81

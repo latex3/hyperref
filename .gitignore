@@ -2,3 +2,4 @@ local-files
 *~
 changes
 build/
+*.bat

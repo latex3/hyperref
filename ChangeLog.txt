@@ -1,3 +1,7 @@
+2019-06-12 6.88h Ulrike Fischer
+   * added code to allow \Hy@DisableOption to escape groups
+     https://github.com/ho-tex/hyperref/issues/97
+
 2019-04-27 6.88g Ulrike Fischer
    * added \mu to psdextra.def
      https://github.com/ho-tex/hyperref/pull/90

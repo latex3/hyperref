@@ -4929,7 +4929,7 @@
 %
 %    \begin{macro}{\Hy@DisableOption}
 %    \begin{macrocode}
-\def\Hy@DisableOption#1{%
+\def\Hy@realDisableOption#1{%
   \ltx@ifundefined{KV@Hyp@#1@default}{%
     \define@key{Hyp}{#1}%
   }{%
@@ -4937,6 +4937,18 @@
   }%
   {\Hy@WarnOptionDisabled{#1}}%
 }
+
+\def\Hy@DisableOption#1{%
+  \ifnum\currentgrouplevel>0
+   \expandafter\@firstoftwo
+  \else
+   \expandafter\@secondoftwo
+  \fi
+  {%
+   \expandafter\gdef\csname Hy@smuggleout#1\endcsname{\Hy@DisableOption{#1}}%
+   \expandafter\aftergroup\csname Hy@smuggleout#1\endcsname
+  }
+  {\Hy@realDisableOption{#1}}}
 %    \end{macrocode}
 %    \end{macro}
 %

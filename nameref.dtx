@@ -32,7 +32,7 @@
 %<driver>\ProvidesFile{nameref.drv}
 % \fi
 % \ProvidesFile{nameref.dtx}
-  [2016/05/21 v2.44 Cross-referencing by name of section]%
+  [2019/09/12 v2.45 Cross-referencing by name of section]%
 %
 % \CheckSum{714}
 %
@@ -752,10 +752,13 @@
 %
 % [This section was derived by Corey Minyard \texttt{minyard@acm.org}
 % from the \xpackage{varioref} package]
+% Changed in 2019-09-12 by Frank Mittelbach to adapt to changes in
+% varioref
 %    \begin{macrocode}
 \AtBeginDocument{%
   \ifx\csname @@vpageref\endcsname\relax
   \else
+    \let\NR@@vpageref\@@vpageref
     \def\@@vpageref#1[#2]#3{%
       \begingroup
         \csname @safe@activestrue\endcsname
@@ -768,88 +771,6 @@
           \the\toks@{\x}%
         }%
       \x
-    }%
-    \def\NR@@vpageref#1[#2]#3{%
-      \leavevmode\unskip
-      \global\advance\c@vrcnt\@ne
-      \@ifundefined{r@\the\c@vrcnt @vr}%
-        {\@namedef{r@\the\c@vrcnt @vr}{{??}{??}{}{}{}}}{}%
-      \edef\@tempa{%
-        \expandafter\expandafter\expandafter
-        \@secondoffive\csname r@\the\c@vrcnt @vr\endcsname
-      }%
-      \@ifundefined{r@\the\c@vrcnt @xvr}%
-        {\@namedef{r@\the\c@vrcnt @xvr}{{??}{??}{}{}{}}}{}%
-      \edef\@tempb{%
-        \expandafter\expandafter\expandafter
-        \@secondoffive\csname r@\the\c@vrcnt @xvr\endcsname
-      }%
-      {%
-        \let\@currentlabel\@empty
-        \expandafter\label\expandafter{\the\c@vrcnt @xvr}%
-      }%
-      \ifx\@tempa\@tempb
-      \else
-        \vref@err{%
-          \noexpand\vref at page boundary %
-          \@tempb-\@tempa\space (may loop)%
-        }%
-      \fi
-      \@ifundefined{r@#3}{\@namedef{r@#3}{{??}{??}{}{}{}}}{}%
-      \edef\thevpagerefnum{%
-        \expandafter\expandafter\expandafter
-        \@secondoffive\csname r@#3\endcsname
-      }%
-      \ifx\vref@space\@undefined
-        \space
-      \else
-        \vref@space
-      \fi
-      \ifx\@tempa\thevpagerefnum
-        #1%
-      \else
-        #2%
-        \is@pos@number\thevpagerefnum{%
-          \is@pos@number\@tempa{%
-            \@tempcnta\@tempa
-            \advance\@tempcnta\@ne
-          }{%
-            \@tempcnta\maxdimen
-          }%
-          \ifnum \thevpagerefnum =\@tempcnta
-            \ifodd\@tempcnta
-              \if@twoside
-                \reftextfaceafter
-              \else
-                \reftextafter
-              \fi
-            \else
-              \reftextafter
-            \fi
-          \else
-            \advance\@tempcnta-2 %
-            \ifnum \thevpagerefnum =\@tempcnta
-              \ifodd\@tempcnta
-                \reftextbefore
-              \else
-                \if@twoside
-                  \reftextfacebefore
-                \else
-                  \reftextbefore
-                \fi
-              \fi
-            \else
-              \reftextfaraway{#3}%
-            \fi
-          \fi
-        }{%
-          \reftextfaraway{#3}%
-        }%
-      \fi
-      {%
-        \let\@currentlabel\@empty
-        \expandafter\label\expandafter{\the\c@vrcnt @vr}%
-      }%
     }%
     \DeclareRobustCommand\vnameref[1]{%
       \unskip~\nameref{#1}%

@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2019/06/12 v6.88h %
+%<!none>  [2019/09/12 v6.88i %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -11198,6 +11198,7 @@
 %    Package nameref uses five arguments for the ref system.
 %    Fix provided by Felix Neubauer (\Email{felix.neubauer@gmx.net}).
 %    \begin{macrocode}
+\AtBeginDocument{%
 \def\Hy@varioref@undefined{{??}{??}{}{}{}}
 \@ifpackageloaded{varioref}{%
   \def\vref@pagenum#1#2{%
@@ -11218,7 +11219,6 @@
     \csname p@#1\expandafter\endcsname\csname the#1\endcsname
   }%
 }
-\AtBeginDocument{%
   \ifx\refstepcounter\Hy@varioref@refstepcounter
     \let\H@refstepcounter\refstepcounter
     \let\refstepcounter\Hy@saved@refstepcounter
@@ -13314,6 +13314,7 @@
 \def\@namerefstar#1{%
   \HyRef@StarSetRef{#1}\@thirdoffive
 }
+
 \Hy@AtBeginDocument{%
   \@ifpackageloaded{varioref}{%
     \def\@Refstar#1{%
@@ -13328,26 +13329,43 @@
     \def\HyRef@Ref#1{%
       \hyperref[{#1}]{\Ref*{#1}}%
     }%
-    \def\Vr@f#1{%
-      \leavevmode\unskip\vref@space
-      \hyperref[{#1}]{%
-        \Ref*{#1}%
-        \let\vref@space\nobreakspace
-        \@vpageref[\unskip]{#1}%
-      }%
-    }%
-    \def\vr@f#1{%
-      \leavevmode\unskip\vref@space
+   \providecommand\Vref@star{}%
+   \renewcommand\Vref@star[2][]{%
+     \begingroup
+       \let\T@pageref\@pagerefstar
+       \Ref*{#2}
+       \vpageref[#1]{#2}%
+     \endgroup
+   }%
+   \renewcommand\Vr@f[2][]{%
+     \begingroup
+       \let\T@pageref\@pagerefstar
+       \hyperref[{#2}]{%
+         \Ref*{#2}
+         \vpageref[#1]{#2}%
+       }%
+     \endgroup
+   }%
+    \renewcommand\vr@f[2][]{%
       \begingroup
         \let\T@pageref\@pagerefstar
-        \hyperref[{#1}]{%
-          \ref*{#1}%
-          \vpageref[\unskip]{#1}%
+        \hyperref[{#2}]{%
+          \ref*{#2}
+          \vpageref[#1]{#2}%
         }%
-      \endgroup
+       \endgroup
+    }%
+    \providecommand\vref@star{}%
+    \renewcommand\vref@star[2][]{%
+      \begingroup
+        \let\T@pageref\@pagerefstar
+        \ref*{#2}
+        \vpageref[#1]{#2}%
+       \endgroup
     }%
   }{}%
 }
+
 \DeclareRobustCommand*{\autopageref}{%
   \@ifstar{%
     \HyRef@autopagerefname\pageref*%

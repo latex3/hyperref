@@ -79,5 +79,5 @@ mv hyperref.tds.zip ../..
 cd ../..
 echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog.txt,paperslides99.zip,doc/*.{gif,pdf,html,dict,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README.md,xr-hyper.sty}
+zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog.txt,paperslides99.zip,doc/*.{gif,pdf,html,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README.md,xr-hyper.sty}
 mv hyperref*.zip hyperref

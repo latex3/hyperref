@@ -76,7 +76,7 @@ psdextra.def
 
 manual.pdf
         Manual, but a little out of date.
-manual.html, manual2.html, manual3.html, manual.css,
+manual.html, manual[2-6].html, manual.css,
 cmsy10-21.gif, cmmi10-22.gif
         HTML version of the manual.
 options.tex, options.pdf

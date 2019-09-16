@@ -646,7 +646,7 @@ colorlinks     & boolean & false   & Colors the text of links and anchors. The c
                                      Unlike colored boxes, the colored
                                      text remains when printing.\\
 linkcolor      & color   & red     & Color for normal internal links. \\
-anchorcolor    & color   & black   & Color for anchor text. \\
+anchorcolor    & color   & black   & Color for anchor text. Ignored by most drivers. \\
 citecolor      & color   & green   & Color for bibliographical citations in text. \\
 filecolor      & color   & cyan    & Color for URLs which open local files. \\
 menucolor      & color   & red     & Color for Acrobat menu items. \\
@@ -859,7 +859,7 @@ The following is a complete listing of available options for
 \textsf{hyperref}, arranged alphabetically.
 
 \begin{longtable}{@{}>{\ttfamily}llp{7cm}@{}}
-anchorcolor        & \textit{black}         & set color of anchors \\
+anchorcolor        & \textit{black}         & set color of anchors, ignored by most drivers. \\
 backref            & \textit{false}         & do bibliographical back references \\
 baseurl            & \textit{empty}         & set base URL for document \\
 bookmarks          & \textit{true}          & make bookmarks \\
@@ -1399,7 +1399,7 @@ sequence error would arise.
 \item[xetex]
 \begin{itemize}
  \item Settings must be done in the preamble or the first page and then have global effect.
-       The key inserts the new (x)dvipdfmx special \verb|\special{dvipdfmx:config g #1}| (with the unit removed).  
+       The key inserts the new (x)dvipdfmx special \verb|\special{dvipdfmx:config g #1}| (with the unit removed).
 \end{itemize}
 
 \item[Other drivers]
@@ -1652,10 +1652,13 @@ sequence error would arise.
 
 
 \subsection{Experimental option `ocgcolorlinks'}
-
+ 
  The idea are colored links, when viewed, but printed without colors.
   This new experimental option `ocgcolorlinks' uses Optional Content
   Groups, a feature introduced in PDF 1.5.
+  
+  A better implementation which hasn't the disadvantage to prevent line breaks is
+  in the ocgx2 package. Check its documentation for details how to use it.
 \begin{itemize}
  \item The option must be given for package loading:
       \verb|\usepackage[ocgcolorlinks]{hyperref}|

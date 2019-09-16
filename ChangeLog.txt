@@ -1,3 +1,6 @@
+2019-09-16 6.88j Ulrike Fischer
+   * corrected default values of fields with non-ascii, issue #49
+
 2019-09-16 nameref 2.46 Ulrike Fischer
    * added missing test else branch of varioref code.
 

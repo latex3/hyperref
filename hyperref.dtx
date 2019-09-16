@@ -48,7 +48,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2019/09/12 v6.88i %
+%<!none>  [2019/09/16 v6.88j %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -9369,6 +9369,7 @@
   \else
     \def\@currValue{#2}%
   \fi
+  \expandafter\Hy@pdfstringdef\expandafter\@currValue\expandafter{\@currValue}%
 }
 \define@key{Field}{loc}{%
   \def\Fld@loc{#1}%
@@ -9478,7 +9479,7 @@
   \def\Fld@bordersep{#1}%
 }
 \define@key{Field}{default}{%
-  \def\Fld@default{#1}%
+  \Hy@pdfstringdef\Fld@default{#1}%
 }
 \define@key{Field}{align}{%
   \def\Fld@align{#1}%

@@ -1,0 +1,12 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[unicode=true]{hyperref}
+
+\begin{document}
+\begin{Form}
+  % 'Yes' is checked (as expected)
+  \ChoiceMenu[radio,name=testdefault,default=Yes]{TeX User?}{Yes,No}\\[1ex]
+  \TextField[name=textfield1,value=Köln]{Address} \\[1ex]
+  \TextField[name=textfield2,default=München]{Address} \\[1ex]
+\end{Form}
+\end{document}

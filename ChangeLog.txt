@@ -1,3 +1,6 @@
+2019-09-16 nameref 2.46 Ulrike Fischer
+   * added missing test else branch of varioref code.
+
 2019-09-12 6.88i Ulrike Fischer
    * adapted code to new varioref version (suggestions from
      Frank Mittelback

@@ -1,7 +1,9 @@
-2019-09-16 6.88j Ulrike Fischer
+2019-09-27 6.88j Ulrike Fischer
    * corrected default values of fields with non-ascii, issue #49
    * changed default height/width of formfields to
    \normalbaselineskip (issue #84)
+   * added definitions for starred \ref,\pageref,\nameref if
+     implicit=false is used (issue #100).
 
 2019-09-16 nameref 2.46 Ulrike Fischer
    * added missing test else branch of varioref code.

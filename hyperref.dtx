@@ -7756,6 +7756,12 @@
       \@ifstar\@namerefstar\T@nameref
     }%
 %  }%
+ \ifHy@implicit
+ \else
+   \let \@pagerefstar\T@pageref
+   \let \@refstar\T@ref
+   \let \@namerefstar\T@nameref
+ \fi
 }
 \Hy@AtBeginDocument{%
   \ifHy@texht

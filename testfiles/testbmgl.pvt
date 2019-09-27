@@ -36,6 +36,9 @@
   bookmarks,
   colorlinks,
 ]{hyperref}[1999/08/31]% v6.65d or later
+\hypersetup{unicode=false,pdfdocencoding=auto} %force for luatex, test is not suitable
+% for the new unicode default ....
+
 \pdfstringdefDisableCommands{\let\\\textbackslash}
 \IfFileExists{times.sty}{\usepackage{times}}{}
 \pagestyle{empty}

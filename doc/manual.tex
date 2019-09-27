@@ -192,6 +192,9 @@ the functionality of all the \hologo{LaTeX} cross-referencing commands
 it also provides new commands to allow the user to write \emph{ad hoc}
 hypertext links, including those to external documents and URLs.
 
+The package is currently maintained at \url{https://github.com/ho-tex/hyperref/} and issues should
+be reported there. 
+
 This manual provides a brief overview of the \xpackage{hyperref}
 package. For more details, you should read the additional documentation
 distributed with the package, as well as the complete documentation by
@@ -963,7 +966,7 @@ runcolor           & \textit{filecolor}     & color of `run' links\\
 setpagesize        & \textit{true}          & set page size by special driver commands \\
 tex4ht             &                        & use \textsf{\TeX4ht} backend \\
 textures           &                        & use \textsf{Textures} backend \\
-unicode            & \textit{false}         & Unicode encoded pdf strings \\
+unicode            & \textit{false}         & Unicode encoded pdf strings, by defaut true with \textsf{Xe\TeX} and \textsf{Lu\TeX} \\
 urlbordercolor     & \textit{0 1 1}         & color of border around URL links \\
 urlcolor           & \textit{magenta}       & color of URL links \\
 verbose            & \textit{false}         & be chatty \\
@@ -1583,7 +1586,7 @@ sequence error would arise.
   an acute, but a hook. However standard LaTeX does not provide
   such an accent.
 
-    Now we can extend the defintion to support hyperref.
+    Now we can extend the definition to support hyperref.
   The first and the last word are already supported automatically.
   Characters with two or more accents are a difficult business in
   LaTeX, because the NFSS2 macros of the LaTeX kernel do not support
@@ -1652,11 +1655,11 @@ sequence error would arise.
 
 
 \subsection{Experimental option `ocgcolorlinks'}
- 
+
  The idea are colored links, when viewed, but printed without colors.
   This new experimental option `ocgcolorlinks' uses Optional Content
   Groups, a feature introduced in PDF 1.5.
-  
+
   A better implementation which hasn't the disadvantage to prevent line breaks is
   in the ocgx2 package. Check its documentation for details how to use it.
 \begin{itemize}
@@ -1672,8 +1675,7 @@ sequence error would arise.
     inside the document.
  \item Supported drivers: pdftex, dvipdfm
  \item The PDF version should be at least 1.5. It is automatically
-    set for pdfTeX. Users of dvipdfmx set the version on the command
-    line: dvipdfmx -V 5
+    set for pdfTeX, LuaTeX and dvipdfmx.
 \end{itemize}
 
 \subsection{Option `pdfa'}
@@ -1903,6 +1905,9 @@ sequence error would arise.
  \item "auto" PDFDocEncoding if the string does not contain characters
     outside the encoding and Unicode otherwise.
 \end{itemize}
+
+ The luatex driver uses "unicode" by default. If another encoding should be forced,
+ it should be done in \verb|hypersetup|.
 
 \subsection{Color options/package hycolor}
 

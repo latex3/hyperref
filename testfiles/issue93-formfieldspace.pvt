@@ -1,0 +1,20 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{showframe}
+
+\begin{document}
+
+\START
+
+\begin{Form}
+
+\noindent\TextField[name=a1,width=2cm,charsize=8pt, height=.5cm]{}
+sometext \TextField[name=a2,width=2cm,charsize=8pt, height=.5cm]{}
+\vspace{4ex}
+
+\noindent\TextField[name=a3,width=2cm,charsize=8pt, height=.5cm]{xxx}
+sometext \TextField[name=a4,width=2cm,charsize=8pt, height=.5cm]{yyy}
+
+\end{Form}
+\end{document}

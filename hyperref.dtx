@@ -9652,13 +9652,28 @@
   \@ifnextchar[{\@Reset}{\@Reset[]}%
 }
 \def\LayoutTextField#1#2{% label, field
-  #1 #2%
+  \def\Hy@temp{#1}%
+  \ifx\Hy@temp\@empty
+    #2%
+  \else
+    #1 #2%
+  \fi
 }
 \def\LayoutChoiceField#1#2{% label, field
-  #1 #2%
+  \def\Hy@temp{#1}%
+  \ifx\Hy@temp\@empty
+    #2%
+  \else
+    #1 #2%
+  \fi
 }
 \def\LayoutCheckField#1#2{% label, field
-  #1 #2%
+  \def\Hy@temp{#1}%
+  \ifx\Hy@temp\@empty
+    #2%
+  \else
+    #1 #2%
+  \fi
 }
 \def\LayoutPushButtonField#1{% button
   #1%

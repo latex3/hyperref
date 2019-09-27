@@ -25,6 +25,12 @@
 %
 %    \begin{macrocode}
 %<*luatex>
+%% 2019-09-17,v 6.88j force unicode encoding, see issue #101
+%% code mostly copied from hxetex.def
+\HyPsd@LoadUnicode
+\Hy@unicodetrue
+\let\HyPsd@pdfencoding\HyPsd@pdfencoding@unicode
+\HyPsd@LoadStringEnc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % remains of luatex85 package
 \protected\def\pdfcatalog        {\pdfextension catalog }

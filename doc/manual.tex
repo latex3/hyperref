@@ -193,7 +193,7 @@ it also provides new commands to allow the user to write \emph{ad hoc}
 hypertext links, including those to external documents and URLs.
 
 The package is currently maintained at \url{https://github.com/ho-tex/hyperref/} and issues should
-be reported there. 
+be reported there.
 
 This manual provides a brief overview of the \xpackage{hyperref}
 package. For more details, you should read the additional documentation
@@ -1194,7 +1194,8 @@ the page reference. First \ci{pageautorefname} is checked before
 \ci{pagename}.
 
 For instances where you want a reference to use the correct counter, but
-not to create a link, there are starred forms:
+not to create a link, there are starred forms (these starred forms exist even if 
+hyperref has been loaded with \verb|implicit=false|):
 
 \begin{cmdsyntax}
 \ci{ref*}\verb|{|\emph{label}\verb|}|

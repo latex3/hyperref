@@ -1,5 +1,5 @@
 2019-09-28 David Carlisle
-   * repository moved to https://github.com/ho-tex/hyperref
+   * repository moved to https://github.com/latex3/hyperref
 
 2019-09-27 6.88j Ulrike Fischer
    * corrected default values of fields with non-ascii, issue #49

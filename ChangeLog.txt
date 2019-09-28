@@ -1,3 +1,6 @@
+2019-09-28 6.88j Ulrike Fischer
+   * reverted fix for issue #97 to solve issue #103
+
 2019-09-28 David Carlisle
    * repository moved to https://github.com/ho-tex/hyperref
 

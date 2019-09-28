@@ -11,7 +11,7 @@ checkruns = 2
 
 -- start at getting cyan build organised, not complete yet (mkctan script still used)
 sourcefiles        = {"*.dtx", "*.ins", "bmhydoc.sty","*-hyper.sty","paperslides99.zip","psdmapshortnames.pl","doc/*.???"}
-typesetfiles={"doc/manual.tex","doc/options.tex","backref.dtx","hyperref.dtx","nameref.dtx"
+typesetfiles={"doc/manual.tex","doc/options.tex","backref.dtx","hyperref.dtx","nameref.dtx"}
 
 flatten = false
 

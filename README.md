@@ -75,14 +75,14 @@ Example:
     manual.pdf, README.md, ChangeLog.txt,
     slides.pdf, paper.pdf, options.pdf, hyperref.pdf, backref.pdf,
     nameref.pdf (Also the HTML version of the manual can be put there.)
- 6. Update the databases if necessary, eg. for teTeX:
+ 6. Update the databases if necessary, eg. for texlive:
       mktexlsr .../texmf
       
 ## AUTHORS/MAINTAINERS
 
 
  * Sebastian Rahtz (died 2016)
- * Heiko Oberdiek
+ * Heiko Oberdiek  (inactive)
  * The LaTeX3 Project
 
 
@@ -152,7 +152,7 @@ Responsible for the additions to PU encoding for Arabi is
  * more for PDF forms
    * per object setting
    * vary gap between text and box
- * PostScript driver: the current implementation doesn't relly support
+ * PostScript driver: the current implementation doesn't really support
    nested links. The start positions should be remembered in a stack,
    but there are complications with page breaks.
  * ...

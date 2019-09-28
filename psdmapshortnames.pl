@@ -19,7 +19,7 @@ $^W=1;
 #
 # This work has the LPPL maintenance status `maintained'.
 #
-# The Current Maintainer of this work is Heiko Oberdiek.
+# The Current Maintainer of this work is The LaTeX3 Project.
 #
 # The list of all files belonging to the `Hyperref Bundle' is
 # given in the file `manifest.txt'.

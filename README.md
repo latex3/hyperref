@@ -1,5 +1,5 @@
 # README for hyperref bundle
-2019-09-12
+2019-09-30
 
 
 ## INTRODUCTION
@@ -25,7 +25,7 @@ Included are:
 
 
 `hyperref' is available on CTAN:
-  CTAN:macros/latex/contrib/hyperref/
+  https://ctan.org/pkg/hyperref
     
 Also a ZIP file is provided that contains the files, already sorted
 in a TDS tree:
@@ -36,7 +36,7 @@ nodes or one of its mirrors.  This is explained in
   https://texfaq.org/FAQ-archives
     
 The main repository of hyperref is located at github
-       https://github.com/ho-tex/hyperref
+       https://github.com/latex3/hyperref
     
 
 ## INSTALLATION
@@ -83,7 +83,7 @@ Example:
 
  * Sebastian Rahtz (died 2016)
  * Heiko Oberdiek
- * David Carlisle (via GitHub ho-tex origanisation)
+ * The LaTeX3 Project
 
 
 ## BUG REPORTS
@@ -109,10 +109,8 @@ A bug report should contain:
 ## Bug address
 
 A bug tracker is available at github:
-    https://github.com/ho-tex/oberdiek/issues
+    https://github.com/latex3/hyperref/issues
 
-Alternatively bug reports can be send to the support group public email list:
- <ho-tex [at] tug [dot] org>
       
 ## Vietnamese part
 
@@ -159,24 +157,3 @@ Responsible for the additions to PU encoding for Arabi is
    but there are complications with page breaks.
  * ...
     
-
-## VERSIONS IN TEX DISTRIBUTIONS
-
-| TeX Live | hyperref | comment |
-| -------- | -------- | ------- |
-| TL 2016 |      2016/05/05 v6.83n | (at time of first release) |
-| TL 2011 |      2011/04/17 v6.82g | (at time of first release) |
-| TL 2010 |      2010/06/18 v6.81g | (at time of first release) |
-| TL 2009 |      2009/10/09 v6.79a | (at time of first release) |
-| TL 2008 |      2008/08/14 v6.78f | (at time of first release) |
-| TL 2007 |      2007/02/07 v6.75r | |
-| TL 2005 |      2003/11/30 v6.74m | |
-| TL 2004 |      2003/11/30 v6.74m | |
-| TL 2003 |      2003/09/15 v6.74i | |
-| TL 7  (2002) | 2002/05/27 v6.72r | |
-| TL 6b (2001) | 2001/05/26 v6.71g | |
-| TL 5d (2000) | 2000/07/02 v6.70m | |
-| TL 5c (2000) | 2000/05/08 v6.70f | |
-| TL 4  (1999) | 1999/04/13 v6.56 | |
-| TL 3  (1998) | 1998/03/25 v6.19 | |
-      

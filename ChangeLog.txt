@@ -1,3 +1,6 @@
+2019-09-28 David Carlisle
+   * repository moved to https://github.com/ho-tex/hyperref
+
 2019-09-27 6.88j Ulrike Fischer
    * corrected default values of fields with non-ascii, issue #49
    * changed default height/width of formfields to
@@ -18,22 +21,22 @@
 
 2019-06-12 6.88h Ulrike Fischer
    * added code to allow \Hy@DisableOption to escape groups
-     https://github.com/ho-tex/hyperref/issues/97
+     https://github.com/latex3/hyperref/issues/97
 
 2019-04-27 6.88g Ulrike Fischer
    * added \mu to psdextra.def
-     https://github.com/ho-tex/hyperref/pull/90
+     https://github.com/latex3/hyperref/pull/90
    * removed setting of /Producer from all drivers
-     https://github.com/ho-tex/hyperref/issues/91
+     https://github.com/latex3/hyperref/issues/91
 
 
 2018-12-24 6.88f Ulrike Fischer
    * gobble \thanks in pdftitle
-     https://github.com/ho-tex/hyperref/issues/81
+     https://github.com/latex3/hyperref/issues/81
 
 2018-11-30 6.88e Ulrike Fischer
    * added ignorespaces to footnotetext to address
-     https://github.com/ho-tex/oberdiek/issues/50
+     https://github.com/latex3/oberdiek/issues/50
 
 2018-11-27 6.88d Ulrike Fischer
    * removed wrong producer warning for xetex and (x)dvipdfm(x)
@@ -98,7 +101,7 @@
       already declared).  Declaring composites with an undeclared accent does
       not work and will be flagged as an error in the next LaTeX release.
     * Modify the regex in pdfremotestartview for github issue 28
-      https://github.com/ho-tex/hyperref/issues/28
+      https://github.com/latex3/hyperref/issues/28
 
 2017-01-26  6.84a  David Carlisle
     * 6.84a

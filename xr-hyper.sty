@@ -9,7 +9,7 @@
 %% If no problems are reported the version in the tools distribution
 %% will be updated to match this at the next LaTeX release.
 
-%% \externaldocument[prefix]{document}[URL]
+%% \externaldocument[prefix][nocite]{document}[URL]
 
 %% The `document' referred to by the main argument is the file
 %% document.aux
@@ -40,6 +40,25 @@
 %% remote directory, which is then explicitly prepended to the names of
 %% any included aux files.
 %%
+%%
+%% Version 6.1 incorporates linking to citations in external documents
+%% (originally from xcite package and now included in xr.
+%%
+%% Many packages have variant citation commands (natbib,
+%% biblatex,....) and the external document may or may not have used
+%% hyperref. Because of these differences the citation linking may not
+%% always work, it can be disabled by specifying [nocite] after the
+%% prefix:
+%%
+%%  \externaldocument[][nocite]{somefile}
+%%
+%% In the case of \ref, if the external document has not used
+%% hyperref, this package will work like xr and produce the correct
+%% text, but can not produce a well formed link as the target document
+%% is not set up. In this case you may prefer to use \ref* rather than
+%% \ref to avoid generating a hyperlink.
+%%
+%%
 %% History
 %%
 %% 1997/10/06 v6.00beta2
@@ -50,28 +69,44 @@
 %% 2000/03/22 v6.00beta4
 %%   \xdef changed to \protected@xdef.
 %%
+%% 2019/10/03 v6.1
+%%   Incorporate updates to xr (including citation support)
+%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{xr-hyper}
-         [2000/03/22 v6.00beta4 eXternal References (DPC)]
+         [2019/10/03 v6.1 eXternal References (DPC)]
 
-\def\externaldocument{\@testopt\XR@{}}
-\def\XR@[#1]#2{\@testopt{\XR@@{#1}{#2}}{#2.\XR@ext}}
+\def\externaldocument{\@testopt\XR@cite{}}
+\let\externalcitedocument\externaldocument
+\def\XR@cite[#1]{\@testopt{\XR@[#1]}{}}
+\def\XR@[#1][#2]#3{\@testopt{\XR@@{#1}{#2}{#3}}{#3.\XR@ext}}
 
-\def\XR@@#1#2[#3]{{%
+\def\XR@@#1#2#3[#4]{{%
   \makeatletter
   \def\XR@prefix{#1}%
-  \def\XR@URL{#3}%
-  \filename@parse{#2}%
-  \XR@next#2.aux\relax\\}}
+   \def\XR@nocite{#2}%
+   \ifx\XR@nocite\XR@@nocite
+     \let\XR@bibcite\vadjust
+   \else
+     \let\XR@bibcite\bibcite
+   \fi
+  \def\XR@URL{#4}%
+  \filename@parse{#3}%
+  \XR@next#3.aux\relax\\}}
+\def\XR@@nocite{nocite}
 \def\XR@next#1\relax#2\\{%
   \edef\XR@list{#2}%
   \XR@loop{#1}}
 \def\XR@aux{%
   \ifx\XR@list\@empty\else\expandafter\XR@explist\fi}
 
+\long\def\@gobblethree  #1#2#3{}
+\long\def\@firstofthree #1#2#3{#1}
+\long\def\@secondofthree#1#2#3{#2}
+\long\def\@thirdofthree #1#2#3{#3}
+
 \def\XR@explist{\expandafter\XR@next\XR@list\\}
 \def\XR@loop#1{%
-\def\f{#1}%\show\f
 \openin\@inputcheck#1\relax
   \ifeof\@inputcheck
     \PackageWarning{xr}{^^JNo file #1^^JLABELS NOT IMPORTED.^^J}%
@@ -82,13 +117,20 @@
 \def\XR@read{%
   \read\@inputcheck to\XR@line
   \expandafter\XR@test\XR@line...\XR@}
+% 2019 update to match xr
 \long\def\XR@test#1#2#3#4\XR@{%
+  \let\XR@tempa\@gobblethree
   \ifx#1\newlabel
-     \expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname
-       {\XR@addURL{#3}}%
+    \let\XR@tempa\@firstofthree
+  \else\ifx#1\XR@bibcite
+    \let\XR@tempa\@secondofthree
   \else\ifx#1\@input
-     \edef\XR@list{\XR@list\filename@area#2\relax}%
-  \fi\fi
+     \let\XR@tempa\@thirdofthree
+  \fi\fi\fi
+   \XR@tempa
+    {\expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}{}{}{}}}%
+    {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
+    {\edef\XR@list{\XR@list\filename@area#2\relax}}%
   \ifeof\@inputcheck\expandafter\XR@aux
   \else\expandafter\XR@read\fi}
 

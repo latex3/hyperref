@@ -49,7 +49,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2019/09/28 v7.00a %
+%<!none>  [2019/11/06 v7.00b %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -90,13 +90,12 @@
 %<psdextra>  Hyperref: Additions to PDF string support]
 %<*driver>
 \documentclass{ltxdoc}
-\usepackage{array}
-\usepackage{ifluatex,ifxetex}
-\ifnum 0\ifluatex 1\else\ifxetex 1\fi\fi=0 %
-  \usepackage[T1]{fontenc}%
+\usepackage{array,iftex}
+\iftutex
+  \usepackage{fontspec}%
   \renewcommand*{\ttdefault}{lmvtt}%
 \else
-  \usepackage{fontspec}%
+  \usepackage[T1]{fontenc}%
   \renewcommand*{\ttdefault}{lmvtt}%
 \fi
 \usepackage[%
@@ -587,20 +586,9 @@
 \Hy@SetCatcodes
 %    \end{macrocode}
 %
-% It needs the December 95 release of \LaTeX, because it uses
-% |\protected@write|, and it defines commands in options; and the page
-% setup internal code changed at that point. It'll probably break
-% with the later releases!
-%
-% Use package |hobsub-hyperref| for faster package loading.
-%    \begin{macrocode}
-\IfFileExists{hobsub-hyperref.sty}{%
-  \RequirePackage{hobsub-hyperref}[2011/01/30]%
-}{}
-%    \end{macrocode}
 %    \begin{macrocode}
 \RequirePackage{ltxcmds}[2010/11/12]
-\RequirePackage{ifpdf}[2006/02/20]
+\RequirePackage{ifvtex}[2019/10/24]
 \RequirePackage{pdftexcmds}[2009/04/10]
 \@ifpackagelater{pdftexcmds}{2010/11/04}{}{%
   \ltx@IfUndefined{pdfdraftmode}{%
@@ -626,8 +614,6 @@
 \RequirePackage{kvsetkeys}[2007/09/29]
 \RequirePackage{kvdefinekeys}[2011/04/07]
 \RequirePackage{pdfescape}[2007/11/11]
-\RequirePackage{ifvtex}
-\RequirePackage{ifxetex}[2006/08/21]
 \RequirePackage{hycolor}
 \RequirePackage{letltxmacro}[2008/06/13]
 \RequirePackage{auxhook}[2009/12/14]

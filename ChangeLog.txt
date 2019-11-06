@@ -1,3 +1,7 @@
+2019-11-06  David Carlisle
+   * don't load hobsub-hyperref,ifpdf,ifluatex,ifxetex,
+     do load new iftex based ifvtex
+
 2019-10-03  David Carlisle
    * xr-hyper update to match xr
 

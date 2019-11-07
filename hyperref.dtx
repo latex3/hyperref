@@ -588,7 +588,7 @@
 %
 %    \begin{macrocode}
 \RequirePackage{ltxcmds}[2010/11/12]
-\RequirePackage{ifvtex}[2019/10/24]
+\RequirePackage{iftex}[2019/10/24]
 \RequirePackage{pdftexcmds}[2009/04/10]
 \@ifpackagelater{pdftexcmds}{2010/11/04}{}{%
   \ltx@IfUndefined{pdfdraftmode}{%
@@ -5310,7 +5310,7 @@
     \def\Hy@DviErrMsg{XeTeX is running}%
   \else
     \ifvtex
-      \ifvtexdvi
+      \ifnum\OpMode=\z@
         \Hy@DviModetrue
       \else
         \def\Hy@DviErrMsg{VTeX is running, but not in DVI mode}%
@@ -7415,7 +7415,7 @@
   \ifx\Hy@driver\@empty
   \else
     \def\Hy@temp{hvtexhtm}%
-    \ifvtexhtml
+    \ifnum\OpMode=10 %
       \ifx\Hy@driver\Hy@temp
       \else
         \Hy@WarningNoLine{%
@@ -7455,7 +7455,7 @@
         \ifxetex
           \def\Hy@driver{hxetex}%
         \else
-          \ifvtexhtml
+          \ifnum\OpMode=10 %
             \def\Hy@driver{hvtexhtm}%
             \def\MaybeStopEarly{%
               \Hy@Message{Stopped early}%
@@ -7466,10 +7466,10 @@
               \endinput
             }%
           \else
-            \ifvtexpdf
+            \ifnum\OpMode=\@ne
               \def\Hy@driver{hvtex}%
             \else
-              \ifvtexps
+              \ifnum\OpMode=\tw@
                 \def\Hy@driver{hvtex}%
               \else
                 \ifx\HyOpt@DriverFallback\ltx@empty

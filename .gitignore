@@ -1,5 +1,3 @@
-local-files
-*~
-changes
-build/
-*.bat
+build
+hyperref-ctan.zip
+*.pdf

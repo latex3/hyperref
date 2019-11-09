@@ -15,6 +15,8 @@ typesetfiles={"doc/manual.tex","doc/options.tex","backref.dtx","hyperref.dtx","n
 
 flatten = false
 
+bundlectan= {error('Use ./mkctan for now')}
+
 kpse.set_program_name ("kpsewhich")
 if not release_date then
  dofile ( kpse.lookup ("l3build.lua"))

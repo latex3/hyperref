@@ -7415,26 +7415,24 @@
   \ifx\Hy@driver\@empty
   \else
     \def\Hy@temp{hvtexhtm}%
-    \ifvtex
-      \ifnum\OpMode=10 %
-        \ifx\Hy@driver\Hy@temp
-        \else
-          \Hy@WarningNoLine{%
-            Wrong driver `\Hy@driver.def';\MessageBreak
-            VTeX is running in HTML mode.\MessageBreak
-            Forcing driver `\Hy@temp.def'%
-          }%
-          \let\Hy@driver\Hy@temp
-        \fi
+    \ifnum\ifvtex\OpMode\else\m@ne\fi=10 %
+      \ifx\Hy@driver\Hy@temp
       \else
-        \ifx\Hy@driver\Hy@temp
-          \Hy@WarningNoLine{%
-            Wrong driver `\Hy@driver.def';\MessageBreak
-            VTeX is not running in HTML mode.\MessageBreak
-            Using default driver%
-          }%
-          \let\Hy@driver\@empty
-        \fi
+        \Hy@WarningNoLine{%
+          Wrong driver `\Hy@driver.def';\MessageBreak
+          VTeX is running in HTML mode.\MessageBreak
+          Forcing driver `\Hy@temp.def'%
+        }%
+        \let\Hy@driver\Hy@temp
+      \fi
+    \else
+      \ifx\Hy@driver\Hy@temp
+        \Hy@WarningNoLine{%
+          Wrong driver `\Hy@driver.def';\MessageBreak
+          VTeX is not running in HTML mode.\MessageBreak
+          Using default driver%
+        }%
+        \let\Hy@driver\@empty
       \fi
     \fi
   \fi

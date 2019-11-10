@@ -1,3 +1,6 @@
+2019-11-10  David Carlisle
+   * adjust vtex guards for issue #108
+
 2019-11-06  David Carlisle
    * don't load hobsub-hyperref,ifpdf,ifluatex,ifxetex,ifvtex
      do load new iftex

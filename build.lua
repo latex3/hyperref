@@ -5,8 +5,8 @@ module = "hyperref"
 
 installfiles = {'*.def','*.sty'}
 
-checkconfigs = {"build","config-3","config-xetex"}
-checkengines = {"pdftex","luatex"}
+checkconfigs = {"build","config-pvt","config-3","config-xetex"}
+checkengines = {"pdftex","etex","luatex"}
 checkruns = 2
 
 -- start at getting cyan build organised, not complete yet (mkctan script still used)
@@ -15,7 +15,7 @@ typesetfiles={"doc/manual.tex","doc/options.tex","backref.dtx","hyperref.dtx","n
 
 flatten = false
 
-bundlectan= {error('Use ./mkctan for now')}
+-- bundlectan= {error('Use ./mkctan for now')}
 
 kpse.set_program_name ("kpsewhich")
 if not release_date then

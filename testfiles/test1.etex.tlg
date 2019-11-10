@@ -1,0 +1,1176 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Package hyperref Info: Anchor `tit.0' on input line ....
+Package hyperref Info: Anchor `page.1' on input line ....
+[1
+]
+Package hyperref Info: Anchor `page.2' on input line ....
+[2
+]
+Package hyperref Info: Anchor `chapter*.1' on input line ....
+(test1.toc
+Package hyperref Info: Reference (link) `chapter*.3' on input line ....
+Package hyperref Info: Reference (link) `chapter.4' on input line ....
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: Reference (link) `section.7' on input line ....
+Package hyperref Info: Reference (link) `section.11' on input line ....
+Package hyperref Info: Reference (link) `chapter.14' on input line ....
+Package hyperref Info: Reference (link) `section.15' on input line ....
+Package hyperref Info: Reference (link) `section.19' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (link) `section.28' on input line ....
+Package hyperref Info: Reference (link) `section.31' on input line ....
+Package hyperref Info: Reference (link) `section.32' on input line ....
+Package hyperref Info: Reference (link) `chapter*.47' on input line ....
+)
+\tf@toc=\write...
+Package hyperref Info: Anchor `page.3' on input line ....
+[3]
+Package hyperref Info: Anchor `page.4' on input line ....
+[4
+]
+Package hyperref Info: Anchor `chapter*.2' on input line ....
+(test1.lot
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `table.46' on input line ....
+)
+\tf@lot=\write...
+Package hyperref Info: Anchor `page.5' on input line ....
+[5]
+Package hyperref Info: Anchor `page.6' on input line ....
+[6
+]
+Package hyperref Info: Anchor `chapter*.3' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {0}
+(hyperref)             text {\protect \numberline {}LIST OF FIGURES}
+(hyperref)             reference {chapter*.3}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+(test1.lof
+Package hyperref Info: Reference (link) `figure.29' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `figure.30' on input line ....
+)
+\tf@lof=\write...
+\c@Argument=\count...
+Package hyperref Info: Anchor `page.7' on input line ....
+[1]
+Package hyperref Info: Anchor `page.8' on input line ....
+[2
+]
+Package hyperref Info: Anchor `chapter.4' on input line ....
+Chapter 1.
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1}
+(hyperref)             text {\protect \numberline {\thechapter }First part}
+(hyperref)             reference {chapter.4}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Anchor `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Test section}
+(hyperref)             reference {section.5}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Reference (link) `section.5' on input line ....
+Package hyperref Info: Anchor `section.6' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section One --- cats}
+(hyperref)             reference {section.6}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.15' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `section.7' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi one.1 -- can we see}
+(hyperref)             reference {section.7}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `Hfootnote.8' on input line ....
+Package hyperref Info: Anchor `Hfootnote.8' on input line ....
+Package hyperref Info: Reference (link) `Hfootnote.9' on input line ....
+Package hyperref Info: Anchor `Hfootnote.9' on input line ....
+Package hyperref Info: Reference (link) `table.46' on input line ....
+Package hyperref Info: Anchor `subsection.10' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi one.2}
+(hyperref)             reference {subsection.10}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+LaTeX Warning: Reference `ss:first' on page 3 undefined on input line ....
+Package hyperref Info: Anchor `page.9' on input line ....
+[3]
+Package hyperref Info: Anchor `page.10' on input line ....
+[4]
+Package hyperref Info: Anchor `section.11' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {1.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Two --- \TeX \ is a dog}
+(hyperref)             reference {section.11}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.12' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi two.1}
+(hyperref)             reference {subsection.12}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.13' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi two.2}
+(hyperref)             reference {subsection.13}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.11' on input line ....
+[5]
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `page.12' on input line ....
+[6]
+Package hyperref Info: Anchor `chapter.14' on input line ....
+Chapter 2.
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2}
+(hyperref)             text {\protect \numberline {\thechapter }Second part}
+(hyperref)             reference {chapter.14}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `section.15' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Three --- Camels}
+(hyperref)             reference {section.15}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.6' on input line ....
+Package hyperref Info: Anchor `subsection.16' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {I -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi three.1}
+(hyperref)             reference {subsection.16}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `Hfootnote.17' on input line ....
+Package hyperref Info: Anchor `Hfootnote.17' on input line ....
+Package hyperref Info: Anchor `subsection.18' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {I -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi three.2}
+(hyperref)             reference {subsection.18}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.13' on input line ....
+[7
+]
+Package hyperref Info: Anchor `section.19' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Section Four --- Butterflies}
+(hyperref)             reference {section.19}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.20' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {II -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi four.1}
+(hyperref)             reference {subsection.20}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.21' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {II -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi four.2}
+(hyperref)             reference {subsection.21}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `test.test1' on input line ....
+Package hyperref Info: Anchor `page.14' on input line ....
+[8]
+Package hyperref Info: Anchor `section.22' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Introduction}
+(hyperref)             reference {section.22}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.23' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi subsec}
+(hyperref)             reference {subsection.23}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.15' on input line ....
+[9]
+Package hyperref Info: Anchor `subsection.24' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {III -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi subsec}
+(hyperref)             reference {subsection.24}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `test.test1' on input line ....
+Package hyperref Info: Reference (link) `testpiccy' on input line ....
+File: picture.eps Graphic file (type eps)
+ <picture.eps>
+File: picture.eps Graphic file (type eps)
+ <picture.eps>
+Package hyperref Info: Anchor `page.16' on input line ....
+[10]
+Package hyperref Info: Anchor `section.25' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi two}
+(hyperref)             reference {section.25}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.26' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi Subsection 2}
+(hyperref)             reference {subsection.26}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.27' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {IV -- 2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline {\csname thesubsection\endcsname }\fi Subsection 3}
+(hyperref)             reference {subsection.27}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.17' on input line ....
+[11]
+Package hyperref Info: Anchor `section.28' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.5}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi three}
+(hyperref)             reference {section.28}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `subsection.24' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Overfull \hbox (7.00789pt too wide) in paragraph at lines 125--128
+\OT1/cmr/m/n/10.95 This is a ref-er-ence to sec-tion 1 ([][][][][][]), sub-sec-tion 1.2 ([][][][][][])
+\hbox(8.2125+2.73749)x360.0, glue set - 1.0
+.\OT1/cmr/m/n/10.95 T
+.\OT1/cmr/m/n/10.95 h
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 s
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 s
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 a
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 r
+.\OT1/cmr/m/n/10.95 e
+.\OT1/cmr/m/n/10.95 f
+.\discretionary
+..\OT1/cmr/m/n/10.95 -
+.\OT1/cmr/m/n/10.95 e
+.\OT1/cmr/m/n/10.95 r
+.\discretionary
+..\OT1/cmr/m/n/10.95 -
+.\OT1/cmr/m/n/10.95 e
+.\OT1/cmr/m/n/10.95 n
+.\OT1/cmr/m/n/10.95 c
+.\OT1/cmr/m/n/10.95 e
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 t
+.\OT1/cmr/m/n/10.95 o
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 s
+.\OT1/cmr/m/n/10.95 e
+.\OT1/cmr/m/n/10.95 c
+.\discretionary
+..\OT1/cmr/m/n/10.95 -
+.\OT1/cmr/m/n/10.95 t
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 o
+.\OT1/cmr/m/n/10.95 n
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 1
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 (
+.\special{color push rgb 1 0 0}
+.\special{ps:SDict begin H.S end}
+.\hbox(7.31305+0.0)x50.55255
+..\special{color push rgb 1 0 0}
+..\OT1/cmr/m/n/10.95 s
+..\OT1/cmr/m/n/10.95 e
+..\OT1/cmr/m/n/10.95 c
+..\OT1/cmr/m/n/10.95 t
+..\OT1/cmr/m/n/10.95 i
+..\OT1/cmr/m/n/10.95 o
+..\OT1/cmr/m/n/10.95 n
+..\penalty 10000
+..\glue 3.65 plus 1.825 minus 1.21666
+..\OT1/cmr/m/n/10.95 2
+..\OT1/cmr/m/n/10.95 .
+..\OT1/cmr/m/n/10.95 3
+..\hbox(0.0+0.0)x0.0
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.31305
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Su\ETC.}
+.\special{color pop}
+.\OT1/cmr/m/n/10.95 )
+.\OT1/cmr/m/n/10.95 ,
+.\glue 3.65 plus 2.28123 minus 0.97333
+.\OT1/cmr/m/n/10.95 s
+.\OT1/cmr/m/n/10.95 u
+.\OT1/cmr/m/n/10.95 b
+.\discretionary
+..\OT1/cmr/m/n/10.95 -
+.\OT1/cmr/m/n/10.95 s
+.\OT1/cmr/m/n/10.95 e
+.\OT1/cmr/m/n/10.95 c
+.\discretionary
+..\OT1/cmr/m/n/10.95 -
+.\OT1/cmr/m/n/10.95 t
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 o
+.\OT1/cmr/m/n/10.95 n
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 1
+.\OT1/cmr/m/n/10.95 .
+.\OT1/cmr/m/n/10.95 2
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 (
+.\special{color push rgb 1 0 0}
+.\special{ps:SDict begin H.S end}
+.\hbox(7.60416+0.0)x83.76755
+..\special{color push rgb 1 0 0}
+..\OT1/cmr/m/n/10.95 s
+..\OT1/cmr/m/n/10.95 u
+..\OT1/cmr/m/n/10.95 b
+..\OT1/cmr/m/n/10.95 s
+..\OT1/cmr/m/n/10.95 e
+..\OT1/cmr/m/n/10.95 c
+..\OT1/cmr/m/n/10.95 t
+..\OT1/cmr/m/n/10.95 i
+..\OT1/cmr/m/n/10.95 o
+..\OT1/cmr/m/n/10.95 n
+..\penalty 10000
+..\glue 3.65 plus 1.825 minus 1.21666
+..\OT1/cmr/m/n/10.95 I
+..\kern0.30417
+..\OT1/cmr/m/n/10.95 I
+..\kern0.30417
+..\OT1/cmr/m/n/10.95 I
+..\glue 3.65 plus 1.82317 minus 1.21786
+..\OT1/cmr/m/n/10.95 { (ligature --)
+..\glue 3.65 plus 1.825 minus 1.21666
+..\OT1/cmr/m/n/10.95 2
+..\hbox(0.0+0.0)x0.0
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Su\ETC.}
+.\special{color pop}
+.\OT1/cmr/m/n/10.95 )
+.\glue(\rightskip) 0.0
+Package hyperref Info: Anchor `testpiccy' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\protect \numberline {\csname the\@captype \endcsname }{\ignorespaces {A cat}}}
+(hyperref)             reference {figure.29}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `figure.29' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.2}
+(hyperref)             text {\protect \numberline {\csname the\@captype \endcsname }{\ignorespaces Another cat with a link inside it, so see \cite {Dallas:aia} xxxx \label {fig2}}}
+(hyperref)             reference {figure.30}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `figure.30' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `equation.33' on input line ....
+Package hyperref Info: Anchor `section.31' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.6}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Some URLs}
+(hyperref)             reference {section.31}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Overfull \hbox (115.79382pt too wide) in paragraph at lines 157--158
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x224.19882
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 o
+..\OT1/cmtt/m/n/10.95 m
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 g
+..\OT1/cmtt/m/n/10.95 c
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 #
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 D
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 b
+..\OT1/cmtt/m/n/10.95 e
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (127.2912pt too wide) in paragraph at lines 159--160
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x235.6962
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 i
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 t
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 k
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 e
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 u
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 x
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 x
+..\OT1/cmtt/m/n/10.95 2
+..\OT1/cmtt/m/n/10.95 e
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (110.04514pt too wide) in paragraph at lines 161--162
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x218.45013
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 g
+..\OT1/cmtt/m/n/10.95 h
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 u
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\hbox(6.69167+0.0)x5.74869, shifted 2.12154
+...\mathon
+...\OT1/cmtt/m/n/10.95 ~
+...\mathoff
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 j
+..\OT1/cmtt/m/n/10.95 0
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 L
+..\OT1/cmtt/m/n/10.95 y
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 X
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (121.54251pt too wide) in paragraph at lines 163--164
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x229.94751
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 s
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 c
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 u
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\hbox(6.69167+0.0)x5.74869, shifted 2.12154
+...\mathon
+...\OT1/cmtt/m/n/10.95 ~
+...\mathoff
+..\OT1/cmtt/m/n/10.95 g
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 o
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 t
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 x
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (236.51627pt too wide) in paragraph at lines 165--166
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x344.92126
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 n
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 u
+..\OT1/cmtt/m/n/10.95 e
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 l
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 n
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 h
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 p
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 o
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 l
+..\OT1/cmtt/m/n/10.95 p
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 g
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 s
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 k
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 e
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 v
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 /
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (127.2912pt too wide) in paragraph at lines 167--168
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x235.6962
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 u
+..\OT1/cmtt/m/n/10.95 g
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 o
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 g
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 t
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 #
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 p
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 o
+..\OT1/cmtt/m/n/10.95 j
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 s
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Overfull \hbox (173.2807pt too wide) in paragraph at lines 169--170
+[][][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\hbox(0.0+0.0)x0.0
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x281.6857
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 f
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 f
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 b
+..\OT1/cmtt/m/n/10.95 r
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 d
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 t
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 c
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 o
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 u
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 f
+..\OT1/cmtt/m/n/10.95 f
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 g
+..\OT1/cmtt/m/n/10.95 j
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\OT1/cmtt/m/n/10.95 w
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 x
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+[]\OT1/cmr/m/n/10.95 This is a URL:
+\hbox(7.60416+0.0)x108.405, glue set 6.77779
+.\hbox(0.0+0.0)x0.0
+.\OT1/cmr/m/n/10.95 T
+.\OT1/cmr/m/n/10.95 h
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 s
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 i
+.\OT1/cmr/m/n/10.95 s
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 a
+.\glue 3.65 plus 1.825 minus 1.21666
+.\OT1/cmr/m/n/10.95 U
+.\OT1/cmr/m/n/10.95 R
+.\OT1/cmr/m/n/10.95 L
+.\OT1/cmr/m/n/10.95 :
+.\glue(\rightskip) 0.0
+Overfull \hbox (92.79907pt too wide) in paragraph at lines 172--173
+[][][][][][] 
+\hbox(7.60416+2.43333)x108.405
+.\special{color push cmyk 0 1 0 0}
+.\hbox(0.0+0.0)x0.0, shifted 2.43333
+..\special{ps:SDict begin H.S end}
+.\hbox(7.60416+2.43333)x201.20407
+..\special{color push cmyk 0 1 0 0}
+..\mathon
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 p
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 :
+..\glue(\thickmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 r
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 z
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 /
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 n
+..\OT1/cmtt/m/n/10.95 d
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 .
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 h
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 m
+..\OT1/cmtt/m/n/10.95 l
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 #
+..\glue(\medmuskip) 0.0
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 e
+..\OT1/cmtt/m/n/10.95 b
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 s
+..\OT1/cmtt/m/n/10.95 t
+..\OT1/cmtt/m/n/10.95 i
+..\OT1/cmtt/m/n/10.95 a
+..\OT1/cmtt/m/n/10.95 n
+..\mathoff
+..\special{color pop}
+.\hbox(0.0+0.0)x0.0, shifted -7.60416
+..\special{ps:SDict begin H.R end}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{color pop}
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+Package hyperref Info: Anchor `page.18' on input line ....
+[12]
+Package hyperref Info: Anchor `section.32' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.7}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline {\csname thesection\endcsname }\fi Back to math}
+(hyperref)             reference {section.32}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `equation.33' on input line ....
+Package hyperref Info: Anchor `equation.34' on input line ....
+Package hyperref Info: Anchor `equation.35' on input line ....
+Package hyperref Info: Anchor `Item.36' on input line ....
+Package hyperref Info: Anchor `Item.37' on input line ....
+Package hyperref Info: Anchor `Item.38' on input line ....
+Package hyperref Info: Anchor `Item.39' on input line ....
+Package hyperref Info: Anchor `Item.40' on input line ....
+Package hyperref Info: Anchor `Item.41' on input line ....
+Package hyperref Info: Anchor `Item.42' on input line ....
+Package hyperref Info: Anchor `Item.43' on input line ....
+Package hyperref Info: Anchor `Item.44' on input line ....
+Package hyperref Info: Anchor `Item.45' on input line ....
+Package hyperref Info: Anchor `page.19' on input line ....
+[13]
+Package hyperref Info: Reference (link) `Item.41' on input line ....
+Package hyperref Info: Reference (link) `Item.42' on input line ....
+Package hyperref Info: Reference (link) `Item.44' on input line ....
+Package hyperref Info: Reference (link) `Item.45' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (link) `section.25' on input line ....
+Package hyperref Info: Reference (link) `equation.33' on input line ....
+Package hyperref Info: Reference (link) `figure.29' on input line ....
+Package hyperref Info: Reference (cite) `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `page.20' on input line ....
+[14
+]
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
+Package hyperref Info: Reference (link) `section.22' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2.1}
+(hyperref)             text {\protect \numberline {\thetable }{A test long table (see \protect \cite {Dallas:aia} and section \protect \ref {sec1}}}
+(hyperref)             reference {table.46}
+(hyperref)             toclevel {0}
+(hyperref)             type {lot}.
+Package hyperref Info: Anchor `table.46' on input line ....
+Package hyperref Info: Anchor `page.21' on input line ....
+[15
+]
+Package hyperref Info: Reference (link) `equation.2.2' on input line ....
+Package hyperref Info: Reference (link) `equation.35' on input line ....
+Package hyperref Info: Anchor `page.22' on input line ....
+[16]
+Package hyperref Info: Anchor `chapter*.47' on input line ....
+Package hyperref Info: bookmark on input line ...:
+(hyperref)             thecounter {2}
+(hyperref)             text {Bibliography}
+(hyperref)             reference {chapter*.47}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `cite.Barcelo:1992:caa' on input line ....
+Package hyperref Info: Anchor `cite.Dallas:aia' on input line ....
+Package hyperref Info: Anchor `cite.stankovic:88' on input line ....
+Package hyperref Info: Anchor `page.23' on input line ....
+[17
+]
+Package hyperref Info: Anchor `page.24' on input line ....
+[18
+]
+Package hyperref Info: Anchor `page.25' on input line ....
+[19
+]
+Package hyperref Info: Anchor `page.26' on input line ....
+[20
+]
+Package hyperref Info: Anchor `page.27' on input line ....
+[21
+]
+Package hyperref Info: Anchor `page.28' on input line ....
+[22
+]
+Package hyperref Info: Anchor `page.29' on input line ....
+[23
+]
+Package hyperref Info: Anchor `page.30' on input line ....
+[24
+]
+Package hyperref Info: Anchor `chapter*.48' on input line ....
+(test1.ind
+Package hyperref Info: Anchor `page.31' on input line ....
+[25]
+Package hyperref Info: Reference (link) `page.3' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.17' on input line ....
+Package hyperref Info: Reference (link) `page.20' on input line ....
+Package hyperref Info: Reference (link) `page.25' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.14' on input line ....
+Package hyperref Info: Reference (link) `page.10' on input line ....
+Package hyperref Info: Reference (link) `page.7' on input line ....
+Package hyperref Info: Reference (link) `page.3' on input line ....
+Package hyperref Info: Reference (link) `page.ii' on input line ....
+Package hyperref Info: Anchor `page.32' on input line ....
+[26
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line ....
+Package atveryend Info: Empty hook `AfterLastShipout' on input line ....
+(test1.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line ....
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line ....
+Package rerunfilecheck Info: File `test1.out' has not changed.
+(rerunfilecheck)             Checksum: 9AF3283C405D2E836D70ED8FD0F0758A;956.
+LaTeX Warning: There were undefined references.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line ....

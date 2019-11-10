@@ -49,7 +49,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2019/11/06 v7.00b %
+%<!none>  [2019/11/10 v7.00c %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -7457,7 +7457,7 @@
         \ifxetex
           \def\Hy@driver{hxetex}%
         \else
-          \ifnum\OpMode=10 %
+          \ifnum\ifvtex\OpMode\else\m@ne\fi=10 %
             \def\Hy@driver{hvtexhtm}%
             \def\MaybeStopEarly{%
               \Hy@Message{Stopped early}%
@@ -7468,10 +7468,10 @@
               \endinput
             }%
           \else
-            \ifnum\OpMode=\@ne
+            \ifnum\ifvtex\OpMode\else\m@ne\fi=\@ne
               \def\Hy@driver{hvtex}%
             \else
-              \ifnum\OpMode=\tw@
+              \ifnum\ifvtex\OpMode\else\m@ne\fi=\tw@
                 \def\Hy@driver{hvtex}%
               \else
                 \ifx\HyOpt@DriverFallback\ltx@empty

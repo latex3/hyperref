@@ -391,7 +391,7 @@ as they default to the value true if used. These are the ones classed as
 Firstly, the options to specify general behavior and page size.
 
 \medskip
-\noindent\begin{longtable}{>{\ttfamily}ll>{\itshape}ll}
+\begin{longtable}{>{\ttfamily}ll>{\itshape}ll}
 draft          & boolean & false & all hypertext options are turned off \\
 final          & boolean & true  & all hypertext options are turned on \\
 debug          & boolean & false & extra diagnostic messages are printed in \\
@@ -540,7 +540,7 @@ if the destination is not yet renamed:
 Hint: Anchors can also be named and set by \cs{hypertarget}.
 
 \medskip
-\noindent\begin{longtable}{>{\ttfamily}ll>{\itshape}ll}
+\begin{longtable}{>{\ttfamily}ll>{\itshape}ll}
 destlabel      & boolean & false & destinations are named by first \cs{label}\\
                &         &       & after anchor creation\\
 hypertexnames  & boolean & true  & use guessable names for links \\
@@ -551,7 +551,7 @@ plainpages     & boolean & false & Forces page anchors to be named by the Arabic
 
 \subsection{Configuration options}
 
-\noindent\begin{longtable}{>{\ttfamily}ll>{\itshape}lp{7cm}}
+\begin{longtable}{>{\ttfamily}ll>{\itshape}lp{9cm}}
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
                                simply the base line of contained text; this options forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
@@ -608,7 +608,7 @@ textures    & For use with \textsf{Textures} \\
 vtex        & For use with MicroPress' \textsf{VTeX}; the PDF
                        and HTML backends are detected automatically. \\
 vtexpdfmark & For use with \textsf{VTeX}'s PostScript backend. \\
-xetex       & For use with Xe\TeX (using backend for dvipdfm).
+xetex       & For use with Xe\TeX\ (using backend for dvipdfm).
 \end{longtable}
 \smallskip
 
@@ -624,7 +624,7 @@ Explorer might add something like this to hyperref.cfg:
 \end{verbatim}
 
 \subsection{Extension options}
-\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{5.5cm}@{}}
+\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{8cm}@{}}
 extension      & text    &         & Set the file extension (e.g.\ \textsf{dvi}) which will be appended to file links
                                      created if you use the \xpackage{xr} package. \\
 hyperfigures   & boolean &         & \\
@@ -635,7 +635,7 @@ backref        & text    & false   & Adds `backlink' text to the end of each ite
 pagebackref    & boolean & false   & Adds `backlink' text to the end of each item in the bibliography, as a list of page
                                      numbers. \\
 hyperindex     & boolean & true    & Makes the page numbers of index entries into hyperlinks. Relays on unique
-                                     page anchors (\verb|pageanchor|, \ldots)\\
+                                     page anchors (\verb|pageanchor|, \ldots)
                                      \verb|pageanchors| and \verb|plainpages=false|. \\
 hyperfootnotes & boolean & true    & Makes the footnote marks into hyperlinks to the footnote text.
                                      Easily broken \ldots\\
@@ -665,7 +665,7 @@ Note that all color names must be defined before use, following the
 normal system of the standard \LaTeX\ \xpackage{color} package.
 
 \subsection{PDF-specific display options}
-\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{7.5cm}@{}}
+\begin{longtable}{@{}>{\ttfamily}ll>{\itshape}lp{7.6cm}@{}}
 bookmarks          & boolean   & true   & A set of Acrobat bookmarks are written, in a manner similar to the
                                            table of contents, requiring two passes of \LaTeX. Some postprocessing
                                            of the bookmark file (file extension \texttt{.out}) may be needed to
@@ -726,57 +726,83 @@ next \TeX\ run if it is edited to contain the line
 \subsection{PDF display and information options}
 \begin{longtable}{@{}>{\ttfamily}l>{\raggedright}p{\widthof{key value}}>{\itshape}lp{7cm}@{}}
 baseurl            & URL     &       & Sets the base URL of the PDF document \\
-pdfpagemode        & text    & empty & Determines how the file is opening in Acrobat; the possibilities are
-                                       \texttt{UseNone}, \texttt{UseThumbs} (show thumbnails), \texttt{UseOutlines}
-                                       (show bookmarks), \texttt{FullScreen}, \texttt{UseOC} (PDF 1.5),
-                                       and \texttt{UseAttachments} (PDF 1.6). If no mode if explicitly chosen, but the
-                                       bookmarks option is set, \texttt{UseOutlines} is used. \\
+pdfpagemode        & name    & empty & Determines how the file is opening in Acrobat; the possibilities are
+                                       \verb|UseNone|, \verb|UseThumbs| (show thumbnails), \verb|UseOutlines|
+                                       (show bookmarks), \verb|FullScreen|, \verb|UseOC| (PDF 1.5),
+                                       and \verb|UseAttachments| (PDF 1.6). If no mode if explicitly chosen, but the
+                                       bookmarks option is set, \verb|UseOutlines| is used. \\
 pdftitle           & text    &       & Sets the document information Title field \\
 pdfauthor          & text    &       & Sets the document information Author field \\
 pdfsubject         & text    &       & Sets the document information Subject field \\
 pdfcreator         & text    &       & Sets the document information Creator field \\
 addtopdfproducer   & text    &       & Adds additional text to the document information Producer field \\
 pdfkeywords        & text    &       & Sets the document information Keywords field \\
-pdftrapped         & text    & empty & Sets the document information Trapped entry.\\
-&&& Possible values are \texttt{True}, \texttt{False} and \texttt{Unknown}.\\
-&&& An empty value means, the entry is not set.\\
-pdfinfo            & key value list & empty & Alternative interface for setting the
-                                              document information.\\
-pdfview            & text    & XYZ   & Sets the default PDF `view' for each link \\
-pdfstartpage       & text    & 1     & Determines on which page the PDF file is opened. \\
-pdfstartview       & text    & Fit   & Set the startup page view \\
-pdfremotestartview & text    & Fit   & Set the startup page view of remote PDF files \\
+pdftrapped         & name    & empty & Sets the document information Trapped entry. Possible values are \verb|True|, \verb|False| and \verb|Unknown|.
+                                       An empty value means, the entry is not set.\\
+%
+pdfinfo            & key value list  & empty & Alternative interface for setting the
+                                       document information.\\
+pdfview            & name    & XYZ   & Sets the default PDF `view' for each link \\
+pdfstartpage       & integer & 1     & Determines on which page the PDF file is opened. \\
+pdfstartview       & name    & Fit   & Set the startup page view \\
+pdfremotestartview & name    & Fit   & Set the startup page view of remote PDF files \\
 pdfpagescrop       & n n n n &       & Sets the default PDF crop box for pages. This should be a set of four numbers \\
 pdfcenterwindow    & boolean & false & position the document window in the center of the screen \\
-pdfdirection       & text    & empty & direction setting \\
-pdfdisplaydoctitle & boolean & false & display document title instead of
-                                       file name in title bar\\
-pdfduplex          & text    & empty & paper handling option for print dialog\\
+pdfdirection       & name    & empty & direction setting. Possible values:  \verb|L2R| (left to right) and
+                                       \verb|R2L| (right to left)\\
+pdfdisplaydoctitle & boolean & false & display document title instead of file name in title bar\\
+pdfduplex          & name    & empty & paper handling option for print dialog. Possible vatues are:
+                                       \verb|Simplex| (print single-sided),
+                                       \verb|DuplexFlipShortEdge| (duplex and flip on the short edge of the sheet),
+                                       \verb|DuplexFlipLongEdge| (duplex and flip on the long edge of the sheet)\\
+
 pdffitwindow       & boolean & false & resize document window to fit document size \\
-pdflang            & text    & relax & PDF language identifier (RFC 3066)\\
+pdflang            & name    & relax & PDF language identifier (RFC 3066)\\
 pdfmenubar         & boolean & true  & make PDF viewer's menu bar visible \\
 pdfnewwindow       & boolean & false & make links that open another PDF file start a new window \\
 pdfnonfullscreenpagemode
-                   & text & empty & page mode setting on exiting
-                                       full-screen mode\\
+                   & name    & empty & page mode setting on exiting full-screen mode. Possible values are
+                                       \verb|UseNone|, \verb|UseOutlines|, \verb|UseThumbs|, and \verb|UseOC|\\
 pdfnumcopies       & integer & empty & number of printed copies \\
-pdfpagelayout      & text    & empty & set layout of PDF pages \\
+pdfpagelayout      & name    & empty & set layout of PDF pages.  Possible values:
+                                       \verb|SinglePage|, \verb|OneColumn|,
+                                       \verb|TwoColumnLeft|, \verb|TwoColumnRight|,
+                                       \verb|TwoPageLeft|, and \verb|TwoPageRight| \\
 pdfpagelabels      & boolean & true  & set PDF page labels \\
-pdfpagetransition  & text    & empty & set PDF page transition style \\
-pdfpicktraybypdfsize & text & empty & set option for print dialog \\
-pdfprintarea       & text    & empty & set /PrintArea of viewer preferences \\
-pdfprintclip       & text    & empty & set /PrintClip of viewer preferences \\
+pdfpagetransition  & name    & empty & set PDF page transition style. Possible values are
+                                       \verb|Split|, \verb|Blinds|, \verb|Box|, \verb|Wipe|,
+                                       \verb|Dissolve|, \verb|Glitter|, \verb|R|,
+                                       \verb|Fly|, \verb|Push|,
+                                       \verb|Cover|, \verb|Uncover|,
+                                       \verb|Fade|.
+                                       The default according to the PDF~Reference is \verb|R|,
+                                       which simply replaces the old page with the new one. \\
+pdfpicktraybypdfsize
+                   & boolean & false & specify whether PDF page size is used to select input paper tray in print dialog \\
+pdfprintarea       & name    & empty & set /PrintArea of viewer preferences.  Possible values are
+                                       \verb|MediaBox|, \verb|CropBox|,
+                                       \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
+                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+pdfprintclip       & name    & empty & set /PrintClip of viewer preferences.  Possible values are
+                                       \verb|MediaBox|, \verb|CropBox|,
+                                       \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
+                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
 pdfprintpagerange  & n n (n n)*
-                             & empty & set /PrintPageRange of viewer
-                                       preferences\\
-pdfprintscaling    & text    & empty & page scaling option for print dialog
+                             & empty & set /PrintPageRange of viewer preferences\\
+pdfprintscaling    & name    & empty & page scaling option for print dialog
                                        (option /PrintScaling of viewer
                                        preferences, PDF 1.6);
-                                       valid values are \texttt{None} and
-                                       \texttt{AppDefault} \\
+                                       valid values are \verb|None| and
+                                       \verb|AppDefault| \\
 pdftoolbar         & boolean & true  & make PDF toolbar visible \\
-pdfviewarea        & text    & empty & set /ViewArea of viewer preferences \\
-pdfviewclip        & text    & empty & set /ViewClip of viewer preferences \\
+pdfviewarea        & name    & empty & set /ViewArea of viewer preferences. Possible values are
+                                       \verb|MediaBox|, \verb|CropBox|,
+                                       \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
+                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+pdfviewclip        & name    & empty & set /ViewClip of viewer preferences Possible values are
+                                       \verb|MediaBox|, \verb|CropBox|,
+                                       \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
+                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
 pdfwindowui        & boolean & true  & make PDF user interface elements visible \\
 unicode            & boolean & false & Unicode encoded PDF strings
 \end{longtable}
@@ -830,7 +856,21 @@ Box      & /M     & A box sweeps in or out. \\
 Dissolve &        & The page image dissolves in a piecemeal fashion to reveal the new page. \\
 Glitter  & /Di    & Similar to Dissolve, except the effect sweeps across the screen. \\
 Split    & /Dm /M & Two lines sweep across the screen to reveal the new page. \\
-Wipe     & /Di    & A single line sweeps across the screen to reveal the new page.
+Wipe     & /Di    & A single line sweeps across the screen to reveal the new page. \\
+R        &        & Simply replaces the old page with the new one. \\
+Fly      & /Di /M & Changes are flown out or in (as specified by /M), in the direction
+                    specified by /Di, to or from a location that is
+                    offscreen except when /Di is None. \\
+Push     & /Di    & The old page slides off the screen while the new page slides in,
+                    pushing the old page out in the direction
+                    specified by /Di. \\ 
+Cover    & /Di    & The new page slides on to the screen in the direction specified
+                    by /Di, covering the old page. \\
+Uncover  & /Di    & The old page slides off the screen in the direction specified by
+                    /Di, uncovering the new page in the direction
+                    specified by /Di. \\
+Fade     &        & The new page gradually becomes visible through the old one.
+
 \end{longtable}
 
 \subsection{Option \texttt{pdfinfo}}
@@ -1730,16 +1770,16 @@ sequence error would arise.
 
  Before 6.77b:
 \begin{itemize}
- \item pdfnewwindow=true --> /NewWindow true
- \item pdfnewwindow=false --> (absent)
- \item unused pdfnewwindow --> (absent)
+ \item pdfnewwindow=true $\rightarrow$ /NewWindow true
+ \item pdfnewwindow=false $\rightarrow$ (absent)
+ \item unused pdfnewwindow $\rightarrow$ (absent)
 \end{itemize}
   Since 6.77b:
 \begin{itemize}
- \item pdfnewwindow=true --> /NewWindow true
- \item pdfnewwindow=false --> /NewWindow false
- \item pdfnewwindow={} --> (absent)
- \item unused pdfnewwindow --> (absent)
+ \item pdfnewwindow=true $\rightarrow$ /NewWindow true
+ \item pdfnewwindow=false $\rightarrow$ /NewWindow false
+ \item pdfnewwindow={} $\rightarrow$ (absent)
+ \item unused pdfnewwindow $\rightarrow$ (absent)
 \end{itemize}
 
 
@@ -1861,8 +1901,8 @@ sequence error would arise.
   but this is not generally supported.
 \begin{itemize}
  \item pdfTeX below 1.10a: unsupported.
-    pdfTeX >= 1.10a and < 1.30: \verb|\pdfoptionpdfminorversion|
-    pdfTeX >= 1.30: \verb|\pdfminorversion|
+    pdfTeX $\ge$ 1.10a and < 1.30: \verb|\pdfoptionpdfminorversion|
+    pdfTeX $\ge$ 1.30: \verb|\pdfminorversion|
  \item dvipdfm: configuration file, example:
     TeX Live 2007, texmf/dvipdfm/config/config, entry `V 2'.
  \item dvipdfmx: configuration file, example:
@@ -1873,7 +1913,7 @@ sequence error would arise.
 
 
  The current PDF version is used as default if this version
-  can be detected (only pdfTeX >= 1.10a). Otherwise the lowest
+  can be detected (only pdfTeX $\ge$ 1.10a). Otherwise the lowest
   version 1.2 is assumed. Thus `hyperref' tries to avoid PDF code
   that breaks this version, but is free to use ignorable higher PDF
   features.
@@ -2023,7 +2063,7 @@ sequence error would arise.
 
 \subsection{Default driver setting}
 
- (hyperref >= 6.72s)
+ (hyperref $\ge$ 6.72s)
   If no driver is given, hyperref tries its best to guess the
   most suitable driver. Thus it loads "hpdftex", if pdfTeX is
   detected running in PDF mode. Or it loads the corresponding
@@ -2651,12 +2691,12 @@ earlier.
 
 \subsubsection{IEEEtran.cls}
 
- version >= V1.6b (because of \verb|\@makecaption|, see ChangeLog)
+ version $\ge$ V1.6b (because of \verb|\@makecaption|, see ChangeLog)
 
 
 \subsubsection{index}
 
- version >= 1995/09/28 v4.1 (because of \verb|\addcontentsline| redefinition)
+ version $\ge$ 1995/09/28 v4.1 (because of \verb|\addcontentsline| redefinition)
 
 
 \subsubsection{lastpage}

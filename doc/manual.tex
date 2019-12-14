@@ -39,6 +39,7 @@
   \texttt{\textbackslash #1}%
 }
 \newcommand*{\xpackage}[1]{\textsf{#1}}
+\newcommand*{\xoption}[1]{\textsf{#1}}
 
 % from doc.sty
 \makeatletter
@@ -1692,7 +1693,7 @@ sequence error would arise.
     suffix_2p "\\nohyperpage{f.}"
     suffix_3p "\\nohyperpage{ff.}"
 \end{verbatim}
-  (Depending on the typesetting tradition some space "\verb|\\|," or "\verb|~|"
+  (Depending on the typesetting tradition some space ``\verb|\\|,'' or ``\verb|~|''
   should be put before the first f inside \verb|\nohyperpage|.)
 
 
@@ -1708,7 +1709,7 @@ sequence error would arise.
  \item The option must be given for package loading:
       \verb|\usepackage[ocgcolorlinks]{hyperref}|
  \item Main disadvantage: Links cannot be broken across lines.
-    PDF reference 1.7: 4.10.2 "Making Graphical Content Optional":
+    PDF reference 1.7: 4.10.2 ``Making Graphical Content Optional'':
       Graphics state operations, such as setting the color, ...,
       are still applied.
     Therefore the link text is put in a box and set twice, with and
@@ -1938,17 +1939,17 @@ sequence error would arise.
 
  The PDF format allows two encodings for bookmarks and entries
   in the information dictionary: PDFDocEncoding and Unicode
-  as UTF-16BE. Option "pdfencoding" selects between these encodings:
+  as UTF-16BE. Option \xoption{pdfencoding} selects between these encodings:
 \begin{itemize}
- \item "pdfdoc" uses PDFDocEncoding. It uses just one byte per character,
+ \item \xoption{pdfdoc} uses PDFDocEncoding. It uses just one byte per character,
      but the supported characters are limited (244 in PDF-1.7).
- \item "unicode" sets Unicode. It is encoded as UTF-16BE. Two bytes
+ \item \xoption{unicode} sets Unicode. It is encoded as UTF-16BE. Two bytes
     are used for most characters, surrogates need four bytes.
- \item "auto" PDFDocEncoding if the string does not contain characters
+ \item \xoption{auto} PDFDocEncoding if the string does not contain characters
     outside the encoding and Unicode otherwise.
 \end{itemize}
 
- The luatex driver uses "unicode" by default. If another encoding should be forced,
+ The luatex driver uses \xoption{unicode} by default. If another encoding should be forced,
  it should be done in \verb|hypersetup|.
 
 \subsection{Color options/package hycolor}
@@ -1972,7 +1973,7 @@ sequence error would arise.
 \subsection{Link border style}
 
  Links can be underlined instead of the default rectangle or
-  options "colorlinks", "frenchlinks". This is done by option
+  options \xoption{colorlinks}, \xoption{frenchlinks}. This is done by option
       \verb|pdfborderstyle={/S/U/W 1}|
 
   Some remarks:
@@ -1985,8 +1986,8 @@ sequence error would arise.
       pdfborderstyle={/S/D/D[3 2]/W 1}
 
  \item The syntax is described in the PDF specification, look for
-    "border style", eg.
-    Table 8.13 "Entries in a border style dictionary"
+    ``border style'', eg.
+    Table 8.13 ``Entries in a border style dictionary''
     (specification for version 1.6)
 
  \item The border style is removed by
@@ -1998,9 +1999,9 @@ sequence error would arise.
 
     Some support:
    \begin{itemize}
-   \item AR7/Linux: "underline" and "dashed", but the border width
+   \item AR7/Linux: \xoption{underline} and \xoption{dashed}, but the border width
       must be given.
-   \item xpdf 3.00: "underline" and "dashed"
+   \item xpdf 3.00: \xoption{underline} and \xoption{dashed}
    \end{itemize}
 
     Unsupported:
@@ -2010,22 +2011,22 @@ sequence error would arise.
    \end{itemize}
 \end{itemize}
 
-\subsection{Option "bookmarksdepth"}
+\subsection{Option \xoption{bookmarksdepth}}
 
  The depth of the bookmarks can be controlled by the new
-  option "bookmarksdepth".  The option acts globally and
+  option \xoption{bookmarksdepth}.  The option acts globally and
   distinguishes three cases:
 \begin{itemize}
- \item "bookmarksdepth" without value
-     Then hyperref uses the current value of counter "tocdepth".
+ \item \xoption{bookmarksdepth} without value
+     Then hyperref uses the current value of counter \xoption{tocdepth}.
      This is the compatible behaviour and the default.
- \item "bookmarksdepth=<number>", the value is number (also negative):
+ \item \verb"bookmarksdepth=<number>", the value is number (also negative):
     The depth for the bookmarks are set to this number.
- \item "bookmarksdepth=<name>"
+ \item \verb"bookmarksdepth=<name>"
     The <name> is a document division name (part, chapter, ...).
     It must not start with a digit or minus to avoid mixing up
     with the number case. Internally hyperref uses the value
-    of macro "\verb|\toclevel@<name>|".
+    of macro \verb|\toclevel@<name>|.
   Examples:
 \begin{verbatim}
     \hypersetup{bookmarksdepth=paragraph}
@@ -2034,7 +2035,7 @@ sequence error would arise.
 \end{verbatim}
 \end{itemize}
 
-\subsection{Option "pdfescapeform"}
+\subsection{Option \xoption{pdfescapeform}}
 
  There are many places where arbitrary strings end up as
   PS or PDF strings. The PS/PDF strings in parentheses form
@@ -2065,12 +2066,12 @@ sequence error would arise.
 
  (hyperref $\ge$ 6.72s)
   If no driver is given, hyperref tries its best to guess the
-  most suitable driver. Thus it loads "hpdftex", if pdfTeX is
+  most suitable driver. Thus it loads \xoption{hpdftex}, if pdfTeX is
   detected running in PDF mode. Or it loads the corresponding
   VTeX driver for VTeX's working modes.
     Unhappily many driver programs run after the TeX compiler,
   so hyperref does not have a chance (dvips, dvipdfm, ...).
-  In this case driver "hypertex" is loaded that supports the
+  In this case driver \xoption{hypertex} is loaded that supports the
   HyperTeX features that are recognized by xdvi for example.
   This behaviour, however, can easily be changed in the configuration
   file "hyperref.cfg":
@@ -2464,7 +2465,7 @@ Currently only package loading orders are available:
 
 
 
-Note: hyperref loads package "nameref" at \verb|\begin{document}|.
+Note: hyperref loads package \xpackage{nameref} at \verb|\begin{document}|.
 Sometimes this is too late, thus this package must be loaded
 earlier.
 
@@ -2608,7 +2609,7 @@ earlier.
   \usepackage{hyperref}
   \usepackage{dblaccnt}
 \end{verbatim}
-  or see entry for "vietnam".
+  or see entry for \xoption{vietnam}.
 
 
 \subsubsection{easyeqn}
@@ -2856,7 +2857,7 @@ For equations the following might work:
 
 \subsubsection{titlesec}
 
- "nameref" supports titlesec, but hyperref does not
+ \xpackage{nameref} supports titlesec, but hyperref does not
   (unsolved is the anchor setting, missing with unnumbered
   section, perhaps problems with page breaks with numbered ones).
 
@@ -2868,7 +2869,7 @@ For equations the following might work:
   for speeding up the next calls of that UTF8 sequence.
   However this makes the first call non-expandable and
   will break if used in information entries or bookmarks.
-  Package "ucs" offers \verb|\PrerenderUnicode| or \verb|\PreloadUnicodePage|
+  Package \xpackage{ucs} offers \verb|\PrerenderUnicode| or \verb|\PreloadUnicodePage|
   to solve this:
 \begin{verbatim}
     \usepackage{ucs}
@@ -2999,7 +3000,7 @@ For equations the following might work:
   Two versions of \verb|\pdfstringdef| are needed:
 
   a) The string is converted back to big characters for
-     the "tainted keys" of xdvipdfmx (\verb|spc_pdfm.c: default_taintkeys|).
+     the ``tainted key'' of xdvipdfmx (\verb|spc_pdfm.c: default_taintkeys|).
      The subset hyperref uses is /Title, /Author, /Subject,
      /Keywords, /Creator, /Producer, /T. Any changes of this
      set in xdvipdfmx cannot be detected by hyperref.
@@ -3026,18 +3027,18 @@ For equations the following might work:
   Workarounds:
 \begin{itemize}
 \item For long section or caption titles in the table of contents
-    or list of figures/tables option "linktocpage" can be used.
+    or list of figures/tables option \xoption{linktocpage} can be used.
     Then the page number will be a link, and the overlong section
     title is not forced into an one line link with overfull \verb|\hbox|
     warning.
-\item "\verb|\url|"s are caught by package "breakurl".
-\item  The option "breaklinks" is intended for internal use. But it
+\item ``\verb|\url|''s are caught by package \xpackage{breakurl}.
+\item  The option \xoption{breaklinks} is intended for internal use. But it
     can be used to force link wrapping, e.g. when printing a
     document. However, when such a document is converted to PDF
     and viewed with a PDF viewer, the active link area will be
     misplaced.
 
-      Another limitation: some penalties are "optimized" by TeX,
+      Another limitation: some penalties are ``optimized'' by TeX,
     thus there are missing break points, especially within
     \verb|\url|. (See thread "hyperref.sty, breaklinks and url.sty 3.2"
     in comp.text.tex 2005-09).
@@ -3095,7 +3096,7 @@ For equations the following might work:
 
  Alternatively, LaTeX's option handling system can be adapted
   to key value options by one of the packages "kvoptions-patch"
-  (from project "kvoptions") or "xkvltxp" (from project "xsetkeys").
+  (from project \xpackage{kvoptions}) or \xpackage{xkvltxp} (from project \xpackage{xsetkeys}).
 
 
 \subsection{Index with makeindex}
@@ -3109,7 +3110,7 @@ For equations the following might work:
     in arabic form. If the page numbers in other formats
     are used (book class with \verb|\frontmatter|, \verb|\romannumbering|, ...),
     then the page anchors are not unique. Therefore option
-    "plainpages=false" is recommended.
+    \verb"plainpages=false" is recommended.
  \item The encap mechanism of Makeindex allows to use one command only
     (see documentation of Makeindex).
     If the user sets such a command, hyperref suppresses its
@@ -3125,14 +3126,14 @@ For equations the following might work:
 \end{verbatim}
   \item Scientic Word/Scientific WorkPlace users can use
     package robustindex with hyperindex=false.
-  \item Other encap characters can be set by option "encap".
+  \item Other encap characters can be set by option \xoption{encap}.
     Example for use of "?":
 \begin{verbatim}
       \usepackage[encap=?]{hyperref}
 \end{verbatim}
   \item An other possibility is the insertion of \verb|\hyperpage| by
     a style file for makeindex. For this case, hyperref's
-    insertion will be disabled by "hyperindex=false".
+    insertion will be disabled by \verb"hyperindex=false".
     \verb|\hyperpage| will be defined regardless of setting of hyperindex.
 \begin{verbatim}
 %%% cut %%% hyperindex.ist %%% cut %%%
@@ -3148,7 +3149,7 @@ encap_suffix "}"
 \end{verbatim}
 \end{itemize}
 
-\subsection{Warning "bookmark level for unknown <foobar> defaults to 0"}
+\subsection{Warning \texttt{"bookmark level for unknown <foobar> defaults to 0"}}
 
  Getting rid of it:
 \begin{verbatim}

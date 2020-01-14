@@ -1,4 +1,8 @@
-2019-11-10  David Carlisle
+2020-01-14 7.00d  David Carlisle
+    * Test for newer GhostScript releases in dvips output
+      https://tex.stackexchange.com/a/524163/1090
+
+2019-11-10  7,00c David Carlisle
    * adjust vtex guards for issue #108
 
 2019-11-06  David Carlisle

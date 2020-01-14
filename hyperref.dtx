@@ -3,7 +3,7 @@
 %% with portions written by David Carlisle and Heiko Oberdiek,
 %% 2001-2012 Heiko Oberdiek.
 %% 2016-2019 Oberdiek Package Suport Group
-%% 2019 LaTeX3 Project
+%% 2019-2020 LaTeX3 Project
 %%      https://github.com/latex3/hyperref/issues
 %%
 %% This file is part of the `Hyperref Bundle'.
@@ -49,7 +49,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2019/11/10 v7.00c %
+%<!none>  [2020/01/14 v7.00d %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -17218,18 +17218,31 @@
 %    \begin{macrocode}
     /DvipsToPDF{72.27 mul Resolution div} def%
     /PDFToDvips{72.27 div Resolution mul} def%
-    /BPToDvips{72 div Resolution mul}def%
+    /BPToDvips{72 div Resolution mul}def
 %    \end{macrocode}
-% The values inside the /Boder array are not taken literally, but
+% The values inside the /Border array are not taken literally, but
 % interpreted by ghostscript using the resolution of the dvi driver.
 % I don't know how other distiller programs behaves in this manner.
+%
+% Note GhostScript changed its behaviour here and later versions do
+% not need this scaling, so test the PostScript interpreter is GhostScript
+% and if so check its version.
+%
+% If using gs and release $>$ 9.27 no-op, otherwise patch.
 %    \begin{macrocode}
-    /BorderArrayPatch{%
-      [exch{%
-        dup dup type/integertype eq exch type/realtype eq or%
-        {BPToDvips}if%
-      }forall]%
-    }def%
+    product (Ghostscript) search {pop pop pop revision 927 gt}%
+    {pop false} ifelse%
+    {%
+      /BorderArrayPatch{} def%
+    }%
+    {%
+      /BorderArrayPatch{%
+        [exch{%
+          dup dup type/integertype eq exch type/realtype eq or%
+          {BPToDvips}if%
+        }forall]%
+      }def%
+    } ifelse
 %    \end{macrocode}
 % The rectangle around the links starts off
 % \emph{exactly} the size of the box;

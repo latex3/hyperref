@@ -20,7 +20,7 @@ checkruns = 2
 
 -- start at getting ctan build organised, not complete yet (mkctan script still used)
 sourcefiles        = {"*.dtx", "*.ins", "bmhydoc.sty","*-hyper.sty","paperslides99.zip","psdmapshortnames.pl","doc/*.???"}
-typesetfiles={"doc/manual.tex","doc/options.tex","backref.dtx","hyperref.dtx","nameref.dtx"}
+typesetfiles={"doc/manual.tex","backref.dtx","hyperref.dtx","nameref.dtx"}
 
 
 function docinit_hook ()
@@ -57,7 +57,6 @@ ctanlocations={
 "hyperref/doc/manual4.html",
 "hyperref/doc/manual5.html",
 "hyperref/doc/manual6.html",
-"hyperref/doc/options.pdf",
 "hyperref/doc/paper.pdf",
 "hyperref/doc/slides.pdf",
 "hyperref/hluatex.dtx",
@@ -94,14 +93,12 @@ tdslocations={
 "doc/latex/hyperref/manual5.html",
 "doc/latex/hyperref/manual6.html",
 "doc/latex/hyperref/nameref.pdf",
-"doc/latex/hyperref/options.pdf",
 "doc/latex/hyperref/paper.pdf",
 "doc/latex/hyperref/slides.pdf",
 "source/latex/hyperref/backref.dtx",
 "source/latex/hyperref/bmhydoc.sty",
 "source/latex/hyperref/doc/fdl.tex",
 "source/latex/hyperref/doc/manual.tex",
-"source/latex/hyperref/doc/options.tex",
 "source/latex/hyperref/doc/paperslides99.zip",
 "source/latex/hyperref/hluatex.dtx",
 "source/latex/hyperref/hyperref.dtx",

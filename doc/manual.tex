@@ -4,7 +4,7 @@
 % Copyright (C) 2003 Steve Peter and Karl Berry
 % Copyright (C) 2006-2012 Heiko Oberdiek.
 % Copyright (C) 2017-2019 David Carlisle Ulrike Fischer
-% Copyright (C) 2019-     The LaTeX3 Project
+% Copyright (C) 2019-2020 The LaTeX3 Project
 %
 % Permission is granted to copy, distribute and/or modify this document
 % under the terms of the GNU Free Documentation License, Version 1.1 or
@@ -14,9 +14,9 @@
 % ``GNU Free Documentation License.''
 %
 
-\def\mydate{September 2019}
+\def\mydate{January 2020}
 
-\RequirePackage{ifpdf}
+\RequirePackage{iftex}
 \ifpdf % We are running pdfTeX in pdf mode
 \ifx\directlua\undefinded
 \documentclass[pdftex]{article}
@@ -173,7 +173,9 @@
 \makeatother
 
 \title{Hypertext marks in \hologo{LaTeX}: a manual for \xpackage{hyperref}}
-\author{Sebastian Rahtz \and  Heiko Oberdiek}
+\author{Sebastian Rahtz\thanks{deceased}\and
+       Heiko Oberdiek\thanks{inactive}\and
+       The \LaTeX3 Project\thanks{\url{https://github.com/latex3/hyperref/issues}}}
 \date{\mydate}
 
 \begin{document}
@@ -187,7 +189,7 @@
 \section{Introduction}
 
 The package derives from, and builds on, the work of the Hyper\hologo{TeX}
-project, described at \url{http://xxx.lanl.gov/hypertex/}. It extends
+project, described at \texttt{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
 the functionality of all the \hologo{LaTeX} cross-referencing commands
 (including the table of contents, bibliographies etc) to produce
 \cs{special} commands which a driver can turn into hypertext links;

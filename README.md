@@ -18,7 +18,7 @@ Included are:
  2. `backref` a package by David Carlisle to provide links back from
     bibliography to the main text; these are hypertext links after using
     hyperref.
- 3. nameref` a package to allow reference to the *names* of sections rather
+ 3. `nameref` a package to allow reference to the *names* of sections rather
     than their numbers.
 
 ## DOWNLOAD
@@ -48,12 +48,15 @@ The ZIP file `hyperref.tds.zip` contains the files sorted
 in a TDS tree. Thus you can directly unpack the ZIP file
 inside a TDS tree. (See CTAN:tds.zip for an explanation of TDS.)
 Example:
+
 ```
   cd /...somewhere.../texmf
   unzip /...downloadpath.../hyperref.tds.zip
 ```
+
 Do not forget to refresh the file name database of this TDS tree,
 Example:
+
 ```
   texhash /...somewhere.../texmf
 ```

@@ -36,9 +36,6 @@ lualatex manual
 
 htlatex manual
 
-lualatex options
-lualatex options
-
 
 # Build TDS tree
 cd ..

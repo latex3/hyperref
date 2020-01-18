@@ -143,13 +143,15 @@
 }
 
 \edef\Hy@pdfminorversion{\pdfvariable minorversion}%
-  \ifHy@ocgcolorlinks
-    \ifnum\Hy@pdfminorversion<5 %
+\edef\Hy@pdfmajorversion{\pdfvariable majorversion}%
+
+\ifHy@ocgcolorlinks
+    \ifnum\Hy@pdfmajorminor@version<105 %
       \kvsetkeys{Hyp}{pdfversion=1.5}%
     \fi
   \fi
   \ifHy@setpdfversion
-    \ifnum\Hy@pdfversion<5 %
+    \ifnum\Hy@pdf@majorminor@version<105 %
       \ltx@IfUndefined{pdfobjcompresslevel}{%
       }{%
         \ifHy@verbose
@@ -157,13 +159,13 @@
             PDF object streams are disabled, because they are%
             \MessageBreak
             not supported in requested PDF version %
-            1.\Hy@pdfversion
+            \Hy@pdf@majorversion.\Hy@pdf@minorversion
           }%
         \fi
         \pdfobjcompresslevel=\ltx@zero
       }%
     \fi
-    \ifnum\Hy@pdfminorversion=\Hy@pdfversion\relax
+    \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
     \else
       \let\Hy@temp\ltx@empty
       \def\Hy@temp@A#1#2{%
@@ -186,10 +188,11 @@
          \Hy@temp@A\pdflastlink{link}%
       }%
       \ifx\Hy@temp\ltx@empty
-        \Hy@pdfminorversion=\Hy@pdfversion\relax
+        \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
+        \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
       \else
         \let\Hy@temp@A\ltx@empty
-        \ifnum\Hy@pdfversion=4 %
+        \ifnum\Hy@pdf@majorminor@version=104 %
           \IfFileExists{pdf14.sty}{%
             \def\Hy@temp@A{%
               \MessageBreak
@@ -207,9 +210,10 @@
           The version should be set as early as possible:%
           \MessageBreak
           \space\space
-          \expandafter\string\Hy@pdfminorversion=\Hy@pdfversion
+          \expandafter\string\Hy@pdfmajorversion=\Hy@pdf@majorversion, %
+          \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
           \string\relax
-          \ifnum\Hy@pdfversion<5 %
+          \ifnum\Hy@pdf@majorminor@version<105 %
             \ltx@ifundefined{pdfobjcompresslevel}{%
             }{%
               \MessageBreak
@@ -222,11 +226,13 @@
       \fi
     \fi
     \PackageInfo{hyperref}{%
+      \expandafter\string\Hy@pdfmajorversion.%
       \expandafter\string\Hy@pdfminorversion
-      :=\number\Hy@pdfversion\space
+      :=\number\Hy@pdf@majorversion.\number\Hy@pdf@minorversion\space
     }%
   \fi
-  \edef\Hy@pdfversion{\number\Hy@pdfminorversion}%
+  \edef\Hy@pdf@majorversion{\number\Hy@pdfmajorversion}%
+  \edef\Hy@pdf@minorversion{\number\Hy@pdfminorversion}%
 
 \Hy@DisableOption{pdfversion}%
 \ifHy@ocgcolorlinks
@@ -1353,7 +1359,7 @@
 }
 \def\PDFForm@@Name#1{%
   \begingroup
-    \ifnum\Hy@pdfversion<5 % implementation note 117, PDF spec 1.7
+    \ifnum\Hy@pdf@majorminor@version<105 % implementation note 117, PDF spec 1.7
       \ifHy@unicode
         \Hy@unicodefalse
       \fi

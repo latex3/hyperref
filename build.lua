@@ -30,6 +30,15 @@ flatten = false
 packtdszip  = true
 
 
+function no_ctan()
+error("use mkctan script")
+end
+
+target_list.ctan={
+bundle_func=no_ctan,
+desc="CTAN packaging disabled",
+func=no_ctan
+}
 
 
 

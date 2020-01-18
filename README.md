@@ -14,7 +14,7 @@ backends.
 
 Included are:
 
- 1. `hyperef` The main hyperlinking functionality.
+ 1. `hyperref` The main hyperlinking functionality.
  2. `backref` a package by David Carlisle to provide links back from
     bibliography to the main text; these are hypertext links after using
     hyperref.

@@ -14,24 +14,24 @@ backends.
 
 Included are:
 
- 1. `hyperef' The main hyperlinking functionality.
- 2. `backref' a package by David Carlisle to provide links back from
+ 1. `hyperef` The main hyperlinking functionality.
+ 2. `backref` a package by David Carlisle to provide links back from
     bibliography to the main text; these are hypertext links after using
     hyperref.
- 3. nameref' a package to allow reference to the *names* of sections rather
+ 3. nameref` a package to allow reference to the *names* of sections rather
     than their numbers.
 
 ## DOWNLOAD
 
 
-`hyperref' is available on CTAN:
+`hyperref` is available on CTAN:
   https://ctan.org/pkg/hyperref
     
 Also a ZIP file is provided that contains the files, already sorted
 in a TDS tree:
   CTAN:install/macros/latex/contrib/hyperref.tds.zip
     
-"CTAN:" means one of the `Comprehensive TeX Archive Network'
+"CTAN:" means one of the 'Comprehensive TeX Archive Network'
 nodes or one of its mirrors.  This is explained in
   https://texfaq.org/FAQ-archives
     
@@ -44,7 +44,7 @@ The main repository of hyperref is located at github
 
 ### Installation with ZIP file in TDS format
 
-The ZIP file `hyperref.tds.zip' contains the files sorted
+The ZIP file `hyperref.tds.zip` contains the files sorted
 in a TDS tree. Thus you can directly unpack the ZIP file
 inside a TDS tree. (See CTAN:tds.zip for an explanation of TDS.)
 Example:
@@ -62,20 +62,18 @@ Example:
 
  1. Download the hyperref files from CTAN or the TUG server.
     If necessary, unpack them.
- 2. If directory `beta' exists, replace the files by the counterparts
-    in this directory, if you want to use the latest versions.
- 3. Generate the package and driver files:
+ 2. Generate the package and driver files:
       tex hyperref.ins
- 4. Install the files `*.sty', `*.def', and `*.cfg' in your TDS tree:
+ 3. Install the files `*.sty`, `*.def`, and `*.cfg` in your TDS tree:
       cp *.sty *.def *.cfg TDS:tex/latex/hyperref/
-    Replace `TDS:' by the prefix of your TDS tree (texmf directory).
+    Replace `TDS:` by the prefix of your TDS tree (texmf directory).
     The exception is bmhydoc.sty, it belongs to the source files
     (TDS:source/latex/hyperref/).
- 5. Copy the documentation files to "TDS:doc/latex/hyperref/":
+ 4. Copy the documentation files to "TDS:doc/latex/hyperref/":
     manual.pdf, README.md, ChangeLog.txt,
-    slides.pdf, paper.pdf, options.pdf, hyperref.pdf, backref.pdf,
+    slides.pdf, paper.pdf, hyperref.pdf, backref.pdf,
     nameref.pdf (Also the HTML version of the manual can be put there.)
- 6. Update the databases if necessary, eg. for texlive:
+ 5. Update the databases if necessary, eg. for texlive:
       mktexlsr .../texmf
       
 ## AUTHORS/MAINTAINERS
@@ -93,8 +91,8 @@ A bug report should contain:
 
  * Comprehensive problem description. This includes error or
    warning messages.
-   * \errorcontextlines=\maxdimen can be added in the TeX code
-     to get more informations in TeX error messages.
+   * `\errorcontextlines=\maxdimen` can be added in the TeX code
+     to get more information in TeX error messages.
  * Minimal test file that shows the problem, but does not
    contain any unnecessary packages and code.
  * Used drivers/programs.

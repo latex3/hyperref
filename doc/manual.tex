@@ -1989,8 +1989,8 @@ sequence error would arise.
 
 \begin{itemize}
  \item AR7/Linux seems to have a bug, that don't use the default
-    value "1" for the width, but zero, thus that the underline
-    is not visible without "/W 1". The same applies for
+    value \verb"1" for the width, but zero, thus that the underline
+    is not visible without \verb"/W 1". The same applies for
     dashed boxes, eg.:
       pdfborderstyle={/S/D/D[3 2]/W 1}
 
@@ -2083,7 +2083,7 @@ sequence error would arise.
   In this case driver \xoption{hypertex} is loaded that supports the
   HyperTeX features that are recognized by xdvi for example.
   This behaviour, however, can easily be changed in the configuration
-  file "hyperref.cfg":
+  file \verb"hyperref.cfg":
 \begin{verbatim}
     \providecommand*{\Hy@defaultdriver}{hdvips}
 \end{verbatim}
@@ -2660,7 +2660,7 @@ earlier.
 \subsubsection{footnote}
 
  This package is not supported, you have to disable hyperref's footnote
-  support by using option "hyperfootnotes=false".
+  support by using option \verb"hyperfootnotes=false".
 
 
 \subsubsection{geometry}
@@ -2995,7 +2995,7 @@ For equations the following might work:
   hyperref already provides PDF strings encoded in UTF-16BE,
   thus the result is a warning
 
-    "Failed to convert input string to UTF16..."
+    \verb"Failed to convert input string to UTF16..."
 
   The best way would be, if xdvipdfm could detect the
   byte order marker (\verb|\376\377|) and skips the conversion
@@ -3021,7 +3021,7 @@ For equations the following might work:
   Thus \textbf{each} application that uses \verb|\pdfstringdef| now must
   check, if it defines a string for some of the tained keys.
   If yes, then the call of \verb|\pdfstringdef| should be preceded
-  by "\verb|\csname HyPsd@XeTeXBigCharstrue\endcsname|".
+  by \verb|\csname HyPsd@XeTeXBigCharstrue\endcsname|.
   Example: package bookmark.
 
 
@@ -3049,7 +3049,7 @@ For equations the following might work:
 
       Another limitation: some penalties are ``optimized'' by TeX,
     thus there are missing break points, especially within
-    \verb|\url|. (See thread "hyperref.sty, breaklinks and url.sty 3.2"
+    \verb|\url|. (See thread ``hyperref.sty, breaklinks and url.sty 3.2''
     in comp.text.tex 2005-09).
 \end{itemize}
 
@@ -3104,7 +3104,7 @@ For equations the following might work:
 
 
  Alternatively, LaTeX's option handling system can be adapted
-  to key value options by one of the packages "kvoptions-patch"
+  to key value options by one of the packages \xpackage{kvoptions-patch}
   (from project \xpackage{kvoptions}) or \xpackage{xkvltxp} (from project \xpackage{xsetkeys}).
 
 
@@ -3136,11 +3136,11 @@ For equations the following might work:
   \item Scientic Word/Scientific WorkPlace users can use
     package robustindex with hyperindex=false.
   \item Other encap characters can be set by option \xoption{encap}.
-    Example for use of "?":
+    Example for use of ``?'':
 \begin{verbatim}
       \usepackage[encap=?]{hyperref}
 \end{verbatim}
-  \item An other possibility is the insertion of \verb|\hyperpage| by
+  \item Another possibility is the insertion of \verb|\hyperpage| by
     a style file for makeindex. For this case, hyperref's
     insertion will be disabled by \verb"hyperindex=false".
     \verb|\hyperpage| will be defined regardless of setting of hyperindex.
@@ -3173,7 +3173,7 @@ encap_suffix "}"
   place where hyperref set the corresponding anchor. Unhappily
   the caption is set below the figure, so the figure is not
   visible if a link jumps to a figure.
-    In this case, try package "hypcap.sty" that implements
+    In this case, try package \xpackage{hypcap} that implements
   a method to circumvent the problem.
 
 
@@ -3211,7 +3211,7 @@ Support for additional unicode characters:
  4. Transform into a form understood by hyperref:
 
     Hyperref must know where the first byte starts,
-    this is marked by "9" (8 and 9 cannot occur in
+    this is marked by \verb"9" (8 and 9 cannot occur in
     octal numbers):
 
 \begin{verbatim}
@@ -3219,7 +3219,7 @@ Support for additional unicode characters:
     \036\241 -> \9036\241
 \end{verbatim}
 
-    Optional: "8" is used for abbreviations:
+    Optional: \verb"8" is used for abbreviations:
 
 \begin{verbatim}
     \900 = \80, \901 = \81, \902 = \82, ...
@@ -3243,7 +3243,7 @@ Support for additional unicode characters:
  The footnote support is rather limited. It is beyond the scope
   to use \verb|\footnotemark| and \verb|\footnotetext| out of order or reusing
   \verb|\footnotemark|. Here you can either disable hyperref's footnote
-  support by "hyperfootnotes=false" or fiddle with internal macros,
+  support by \verb"hyperfootnotes=false" or fiddle with internal macros,
   nasty examples:
 
 \begin{verbatim}

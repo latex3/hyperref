@@ -57,14 +57,14 @@ cp doc/fdl.tex doc/manual.tex \
    hyperref-tds/source/latex/hyperref/doc
 cp paperslides99.zip hyperref-tds/source/latex/hyperref/doc
 
-cp backref.dtx bmhydoc.sty hyperref.dtx hyperref.ins nameref.dtx hluatex.dtx psdmapshortnames.pl \
+cp backref.dtx bmhydoc.sty hyperref.dtx hyperref.ins nameref.dtx hluatex.dtx \
   hyperref-tds/source/latex/hyperref
 
 mkdir hyperref-tds/tex
 mkdir hyperref-tds/tex/latex
 mkdir hyperref-tds/tex/latex/hyperref
 
-cp  backref.sty hdvipdfm.def hdvips.def hdvipson.def hdviwind.def hpdftex.def htex4ht.cfg htex4ht.def htexture.def hvtex.def hvtexhtm.def hvtexmrk.def hxetex.def hylatex.ltx hyperref.sty hypertex.def minitoc-hyper.sty nameref.sty nohyperref.sty ntheorem-hyper.sty pd1enc.def pdfmark.def psdextra.def puarenc.def puenc.def puvnenc.def xr-hyper.sty \
+cp  backref.sty hdvipdfm.def hdvips.def hdvipson.def hdviwind.def hpdftex.def htex4ht.cfg htex4ht.def htexture.def hvtex.def hvtexhtm.def hvtexmrk.def hxetex.def hyperref.sty hypertex.def minitoc-hyper.sty nameref.sty nohyperref.sty ntheorem-hyper.sty pd1enc.def pdfmark.def psdextra.def puarenc.def puenc.def puvnenc.def xr-hyper.sty \
   hluatex.def \
   hyperref-tds/tex/latex/hyperref
 
@@ -79,5 +79,5 @@ mv hyperref.tds.zip ../..
 cd ../..
 echo making main zip
 rm -f hyperref.zip
-zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog.txt,paperslides99.zip,doc/*.{gif,pdf,html,css},hylatex.ltx,hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,psdmapshortnames.pl,README.md,xr-hyper.sty}
+zip -r hyperref.zip hyperref.tds.zip hyperref/{backref.dtx,backref.pdf,bmhydoc.sty,ChangeLog.txt,paperslides99.zip,doc/*.{gif,pdf,html,css},hyperref.dtx,hyperref.ins,hluatex.dtx,hyperref.pdf,manifest.txt,minitoc-hyper.sty,nameref.dtx,nameref.pdf,ntheorem-hyper.sty,README.md,xr-hyper.sty}
 mv hyperref*.zip hyperref

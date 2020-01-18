@@ -24,9 +24,6 @@ xr-hyper.sty
 bmhydoc.sty
 	Help package for generating the documentation.
 
-psdmapshortnames.pl
-	Helper script for generating psdextra.def.
-
 ChangeLog.txt
         History of versions
 hylatex.ltx
@@ -79,44 +76,9 @@ manual.pdf
 manual.html, manual[2-6].html, manual.css,
 cmsy10-21.gif, cmmi10-22.gif
         HTML version of the manual.
-options.tex, options.pdf
-        Short description of options from package `hyperref'.
 paper.pdf
         Online version of paper for Heiko Oberdiek's talk
         at EuroTeX'99.
 slides.pdf
         Slides for Heiko Oberdiek's talk at EuroTeX'99.
 
-% Directory test/
-% ==============
-
-test0.tex, test0.dvi, hog.eps, hog.pdf
-test1.tex
-test2.tex
-test3.tex, phys1.jpg, phys2.jpg
-test4.tex, bit.tex
-test5.tex
-test6.tex
-test7.tex
-test8.tex
-testams.tex
-testbib.tex, testbib.bib, testbib.bbl
-testbookmark.tex
-testfor2.tex
-testform.tex
-testnb.tex
-testoz.tex
-testslide.tex, seminar.con
-testurl.tex, testurl.bib, testurl.bbl
-picture.eps, picture.pdf, picture.png
-        Used in `test0.tex' and `test1.tex'.
-
-testbmgl.tex
-        Test file that produces all glyphs of PDFDocEncoding
-        in the bookmarks and shows the commands to produce them.
-testbmu.tex
-        Test file that produces glyphs 0x0000 until 0x04FF
-        of Unicode in the bookmarks and the commands.
-        (Caution: large pool size needed.)
-
-test-bm-pu-licr.tex

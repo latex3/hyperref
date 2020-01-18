@@ -1,6 +1,13 @@
+%% Copyright
+%% 1995-2015 Heiko Oberdiek
+%% 2016-2019 Oberdiek Package Support Group
+%% 2019-2020 LaTeX3 Project
+%%      https://github.com/latex3/hyperref/issues
+%%
+%% This file is part of the `Hyperref Bundle'.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{bmhydoc}
-  [2019/01/08 Bookmark section with hyperref documentation (HO)]
+  [2020/01/14 Bookmark section with hyperref documentation (HO)]
 
 % This package adds bookmark entries that are added at the end
 % and lists and links the PDF files of the hyperref documentation.
@@ -43,9 +50,6 @@
 }
 \AtEndDocument{%
   \@bmhydoc[open=false]{0}{manual.pdf}{Hyperref manual}
-%  \@bmhydoc{1}{README.pdf}{README}
-%  \@bmhydoc{1}{ChangeLog.pdf}{ChangeLog}
-  \@bmhydoc{1}{options.pdf}{Options}
   \@bmhydoc{1}{slides.pdf}{Bookmark talk, slides}
   \@bmhydoc{2}{paper.pdf}{Bookmark talk, paper}
   \@bmhydoc{1}{hyperref.pdf}{Sources: hyperref.dtx}
@@ -77,10 +81,7 @@
       \entry{manual.pdf}{\textbf{Manual}}
         The \textbf{USER MANUAL} (also available as HTML).
       \entry{ChangeLog.txt}{ChangeLog}
-        This file records the version history
-        (also available as text file).
-      \entry{options.pdf}{Options}
-        This file provides a short option summary.
+        This file records the version history.
       \entry{slides.pdf}{Bookmark talk, slides}
         Slides for the talk ``PDF information and navigation elements with
         hyperref, pdfTeX and thumbpdf'' at Euro\TeX~1999.

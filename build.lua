@@ -1,6 +1,5 @@
 -- Build script for hyperref
 
--- Build script for hyperref
 module = "hyperref"
 
 docfiledir="doc"
@@ -19,7 +18,7 @@ checkengines = {"pdftex","etex","luatex"}
 checkruns = 2
 
 -- start at getting ctan build organised, not complete yet (mkctan script still used)
-sourcefiles        = {"*.dtx", "*.ins", "bmhydoc.sty","*-hyper.sty","paperslides99.zip","psdmapshortnames.pl","doc/*.???"}
+sourcefiles        = {"*.dtx", "*.ins", "bmhydoc.sty","*-hyper.sty","paperslides99.zip","doc/*.???"}
 typesetfiles={"doc/manual.tex","backref.dtx","hyperref.dtx","nameref.dtx"}
 
 
@@ -60,7 +59,6 @@ ctanlocations={
 "hyperref/doc/paper.pdf",
 "hyperref/doc/slides.pdf",
 "hyperref/hluatex.dtx",
-"hyperref/hylatex.ltx",
 "hyperref/hyperref.dtx",
 "hyperref/hyperref.ins",
 "hyperref/hyperref.pdf",
@@ -70,7 +68,6 @@ ctanlocations={
 "hyperref/nameref.pdf",
 "hyperref/ntheorem-hyper.sty",
 "hyperref/paperslides99.zip",
-"hyperref/psdmapshortnames.pl",
 "hyperref/xr-hyper.sty"
 }
 
@@ -104,7 +101,6 @@ tdslocations={
 "source/latex/hyperref/hyperref.dtx",
 "source/latex/hyperref/hyperref.ins",
 "source/latex/hyperref/nameref.dtx",
-"source/latex/hyperref/psdmapshortnames.pl",
 "tex/latex/hyperref/backref.sty",
 "tex/latex/hyperref/hdvipdfm.def",
 "tex/latex/hyperref/hdvips.def",
@@ -119,7 +115,6 @@ tdslocations={
 "tex/latex/hyperref/hvtexhtm.def",
 "tex/latex/hyperref/hvtexmrk.def",
 "tex/latex/hyperref/hxetex.def",
-"tex/latex/hyperref/hylatex.ltx",
 "tex/latex/hyperref/hyperref.sty",
 "tex/latex/hyperref/hypertex.def",
 "tex/latex/hyperref/minitoc-hyper.sty",

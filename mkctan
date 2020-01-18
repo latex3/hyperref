@@ -46,14 +46,14 @@ cd ..
 mkdir hyperref-tds/doc
 mkdir hyperref-tds/doc/latex
 mkdir hyperref-tds/doc/latex/hyperref
-cp ChangeLog.txt manifest.txt README.md  nameref.pdf hyperref.pdf backref.pdf doc/*.gif doc/manual{.css,.html,.pdf,[0-9].html} doc/options.pdf doc/paper.pdf doc/slides.pdf \
+cp ChangeLog.txt manifest.txt README.md  nameref.pdf hyperref.pdf backref.pdf doc/*.gif doc/manual{.css,.html,.pdf,[0-9].html} doc/paper.pdf doc/slides.pdf \
   hyperref-tds/doc/latex/hyperref
 
 mkdir hyperref-tds/source
 mkdir hyperref-tds/source/latex
 mkdir hyperref-tds/source/latex/hyperref
 mkdir hyperref-tds/source/latex/hyperref/doc
-cp doc/fdl.tex doc/manual.tex doc/options.tex \
+cp doc/fdl.tex doc/manual.tex \
    hyperref-tds/source/latex/hyperref/doc
 cp paperslides99.zip hyperref-tds/source/latex/hyperref/doc
 

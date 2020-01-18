@@ -907,6 +907,8 @@ The following is a complete listing of available options for
 \textsf{hyperref}, arranged alphabetically.
 
 \begin{longtable}{@{}>{\ttfamily}llp{7cm}@{}}
+allbordercolors    &                        & Set all border color options\\
+allcolors          &                        & Set all color options (without border and field options)\\
 anchorcolor        & \textit{black}         & set color of anchors, ignored by most drivers. \\
 backref            & \textit{false}         & do bibliographical back references \\
 baseurl            & \textit{empty}         & set base URL for document \\
@@ -924,6 +926,7 @@ colorlinks         & \textit{false}         & color links \\
 debug              & \textit{false}         & provide details of anchors defined; same as verbose \\
 destlabel          & \textit{false}         & destinations are named by the first \verb|\label| after the anchor creation \\
 draft              & \textit{false}         & do not do any hyperlinking \\
+driverfallback     &                        & default if no driver specified or detected\\
 dvipdfm            &                        & use \textsf{dvipdfm} backend \\
 dvipdfmx           &                        & use \textsf{dvipdfmx} backend \\
 dvips              &                        & use \textsf{dvips} backend \\
@@ -935,6 +938,7 @@ filebordercolor    & \textit{0 .5 .5}       & color of border around file links 
 filecolor          & \textit{cyan}          & color of file links \\
 final              & \textit{true}          & opposite of option draft \\
 frenchlinks        & \textit{false}         & use small caps instead of color for links \\
+hidelinks          &                        & Hide links (removing color and border) \\
 hyperfigures       & \textit{false}         & make figures hyper links \\
 hyperfootnotes     & \textit{true}          & set up hyperlinked footnotes \\
 hyperindex         & \textit{true}          & set up hyperlinked indices \\
@@ -956,6 +960,7 @@ pagebackref        & \textit{false}         & backreference by page number \\
 pdfauthor          & \textit{empty}         & text for PDF Author field \\
 pdfborder          & \textit{0 0 1}         & width of PDF link border \\
                    & \textit{0 0 0}         & (\texttt{colorlinks)} \\
+pdfborderstyle     &                        & border style for links \\
 pdfcenterwindow    & \textit{false}         & position the document window in the center of the screen \\
 pdfcreator         & \textit{LaTeX with}    & text for PDF Creator field \\
                    & \textit{hyperref}      & \\
@@ -977,9 +982,9 @@ pdfnonfullscreenpagemode
                    & \textit{empty}         & page mode setting on exiting
                                               full-screen mode\\
 pdfnumcopies       & \textit{empty}         & number of printed copies\\
+pdfpagelabels      & \textit{true}          & set PDF page labels \\
 pdfpagelayout      & \textit{empty}         & set layout of PDF pages \\
 pdfpagemode        & \textit{empty}         & set default mode of PDF display \\
-pdfpagelabels      & \textit{true}          & set PDF page labels \\
 pdfpagescrop       & \textit{empty}         & set crop size of PDF document \\
 pdfpagetransition  & \textit{empty}         & set PDF page transition style \\
 pdfpicktraybypdfsize
@@ -1005,6 +1010,7 @@ pdfviewclip        & \textit{empty}         & set /ViewClip of viewer preference
 pdfwindowui        & \textit{true}          & make PDF user interface elements visible \\
 plainpages         & \textit{false}         & do page number anchors as plain Arabic \\
 ps2pdf             &                        & use \textsf{ps2pdf} backend \\
+psdextra           & \textit{false}         & define more short names for PDF string commands \\
 raiselinks         & \textit{false}         & raise up links (for \textsf{Hyper\TeX} backend) \\
 runbordercolor     & \textit{0 .7 .7}       & color of border around `run' links \\
 runcolor           & \textit{filecolor}     & color of `run' links\\

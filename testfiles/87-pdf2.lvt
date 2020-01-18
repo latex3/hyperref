@@ -1,0 +1,35 @@
+\ifx\pdfvariable\undefined
+\else
+\pdfvariable majorversion 2
+\pdfvariable minorversion 0
+\pdfvariable compresslevel=0
+\fi
+\ifx\pdfmajorversion\undefined
+\else
+\pdfmajorversion 2
+\pdfminorversion 0
+\pdfcompresslevel=0
+\fi
+
+\documentclass{article}
+\usepackage[ocgcolorlinks]{hyperref}
+\show\ifluatex
+\input{regression-test}
+\begin{document}
+
+\START
+\ifluatex 
+ \the\pdfvariable majorversion
+ \expandafter\showthe\pdfvariable majorversion
+ \the\pdfvariable minorversion
+ \expandafter\showthe\pdfvariable minorversion
+\else
+ \the\pdfmajorversion %
+ \showthe\pdfmajorversion %
+ \the\pdfminorversion %
+ \showthe\pdfminorversion %
+\fi
+\END
+
+blub
+\end{document} 

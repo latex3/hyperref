@@ -3,6 +3,8 @@
       https://tex.stackexchange.com/a/524163/1090
     * Delete doc/options.pdf
     * Add start of support for setting pdfversion to 2.0
+    * Make the default driver be  hdvips not hypertex
+      (matching configuration used in miktex/texlive since at least 2002).
 
 2019-11-10  7,00c David Carlisle
    * adjust vtex guards for issue #108

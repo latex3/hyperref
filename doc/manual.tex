@@ -747,7 +747,7 @@ pdftrapped         & name    & empty & Sets the document information Trapped ent
 pdfinfo            & key value list  & empty & Alternative interface for setting the
                                        document information.\\
 pdfview            & name    & XYZ   & Sets the default PDF `view' for each link \\
-pdfstartpage       & integer & 1     & Determines on which page the PDF file is opened. \\
+pdfstartpage       & integer & 1     & Determines on which page the PDF file is opened. An empty value means, the entry is not set.\\
 pdfstartview       & name    & Fit   & Set the startup page view \\
 pdfremotestartview & name    & Fit   & Set the startup page view of remote PDF files \\
 pdfpagescrop       & n n n n &       & Sets the default PDF crop box for pages. This should be a set of four numbers \\
@@ -867,7 +867,7 @@ Fly      & /Di /M & Changes are flown out or in (as specified by /M), in the dir
                     offscreen except when /Di is None. \\
 Push     & /Di    & The old page slides off the screen while the new page slides in,
                     pushing the old page out in the direction
-                    specified by /Di. \\ 
+                    specified by /Di. \\
 Cover    & /Di    & The new page slides on to the screen in the direction specified
                     by /Di, covering the old page. \\
 Uncover  & /Di    & The old page slides off the screen in the direction specified by
@@ -1245,7 +1245,7 @@ the page reference. First \ci{pageautorefname} is checked before
 \ci{pagename}.
 
 For instances where you want a reference to use the correct counter, but
-not to create a link, there are starred forms (these starred forms exist even if 
+not to create a link, there are starred forms (these starred forms exist even if
 hyperref has been loaded with \verb|implicit=false|):
 
 \begin{cmdsyntax}

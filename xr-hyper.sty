@@ -1,6 +1,6 @@
-%% xr package (beta release)
+%% xr-hyper package (beta release)
 
-%% Copyright (C) 1993-2019 David Carlisle
+%% Copyright (C) 1993-2020 David Carlisle
 
 %% This is a modified version of the xr package from the Standard LaTeX
 %% tools distribution. It has some internal changes to cooperate with
@@ -72,6 +72,10 @@
 %% 2019/10/03 v6.1
 %%   Incorporate updates to xr (including citation support)
 %%
+%% 2020/04/28 v6.2
+%%   add additional braces to \r@ only if hyperref is not detected in the aux
+%%   of the source document (https://github.com/latex3/hyperref/issues/118)
+%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{xr-hyper}
          [2019/10/03 v6.1 eXternal References (DPC)]
@@ -118,8 +122,14 @@
   \read\@inputcheck to\XR@line
   \expandafter\XR@test\XR@line...\XR@}
 % 2019 update to match xr
+% 2020 don't extend r@-arguments if hyperref has been detected in the source
+% newlabel has already the right number of arguments
+\def\XR@HYPcompargs{{}{}{}}
 \long\def\XR@test#1#2#3#4\XR@{%
   \let\XR@tempa\@gobblethree
+  \ifx#1\HyperFirstAtBeginDocument
+    \def\XR@HYPcompargs{}%
+  \fi
   \ifx#1\newlabel
     \let\XR@tempa\@firstofthree
   \else\ifx#1\XR@bibcite
@@ -128,7 +138,7 @@
      \let\XR@tempa\@thirdofthree
   \fi\fi\fi
    \XR@tempa
-    {\expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}{}{}{}}}%
+    {\expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}\XR@HYPcompargs}}%
     {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
     {\edef\XR@list{\XR@list\filename@area#2\relax}}%
   \ifeof\@inputcheck\expandafter\XR@aux
@@ -157,6 +167,4 @@
 
 \endinput
 %%
-%% End of file `xr.sty'.
-
-
+%% End of file `xr-hyper.sty'.

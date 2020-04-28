@@ -64,8 +64,8 @@ tdslocations = {
 }
 
 
--- checkconfigs = {"build","config-pvt","config-3","config-xetex"}
--- checkengines = {"pdftex","etex","luatex"}
+checkconfigs = {"build","config-pvt","config-3","config-xetex"}
+checkengines = {"pdftex","etex","luatex"}
 
 -- temp settings disable checks while testing ctan build
 -- testfiledir= "disabled"

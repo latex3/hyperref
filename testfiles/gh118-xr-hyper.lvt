@@ -1,0 +1,15 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{xr-hyper}
+\usepackage{hyperref}
+\externaldocument{test-xr-hyper}
+\externaldocument{test-xr-nohyper}
+\begin{document}
+\START
+\showoutput
+\hyperref[sec-no-hyper]{section~\ref*{sec-no-hyper}}
+\hyperref[sec-hyper]{section~\ref*{sec-hyper}}
+
+\expandafter\show\csname r@sec-no-hyper\endcsname
+\expandafter\show\csname r@sec-hyper\endcsname
+\end{document} 

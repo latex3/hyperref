@@ -1,0 +1,20 @@
+\input{regression-test}
+\documentclass{article}
+% this will will break when unicode is the default.
+% without unicode option xetex currently use auto
+% and so /Title(abc)
+% pdftex will loose the unicode and show only Grüße
+% luatex already uses unicode. 
+\usepackage{hyperref}
+
+\hypersetup{pdfauthor=Grüße早餐🦆,pdftitle={abc}}
+\begin{document}
+
+\section{\texorpdfstring{abc}{Grüße早餐🦆}}
+
+abc
+
+\begin{Form}
+\TextField[name=grüße早餐🦆,width=3cm]{}
+\end{Form}
+\end{document}

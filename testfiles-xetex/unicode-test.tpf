@@ -1,0 +1,216 @@
+%PDF-1.5
+%дрнш
+15 0 obj
+<</Length 196>>
+stream
+ q 1 0 0 1 72 720 cm BT /F1 14.3462 Tf 61.768 -62.765 Td[<0052>-1000<001c0023>-31<002b>]TJ /F2 9.9626 Tf 0 -21.831 Td[<001c0023>-28<002b>]TJ ET BT /F2 9.9626 Tf 231.133 -630.635 Td[<0052>]TJ ET Q
+endstream
+endobj
+16 0 obj
+<</Font<</F1 5 0 R/F2 7 0 R>>/ProcSet[/PDF/Text/ImageC/ImageB/ImageI]>>
+endobj
+10 0 obj
+<</Type/Font/Subtype/Type1/Name/ZaDb/BaseFont/ZapfDingbats>>
+endobj
+14 0 obj
+<</Subtype/Widget/F 4/P 3 0 R/T<feff0067007200fc00df006565e99910d83edd86>/FT/Tx/Q
+0/BS<</W 1/S/S>>/MK<</BC[1 0 0]/BG[1 1 1]>>/DA(/Helv 10 Tf 0 0 0 rg)/DV()/V()/Rect[148.712
+622.343 233.752 634.298]>>
+endobj
+8 0 obj
+<</Type/Encoding/Differences[24/breve/caron/circumflex/dotaccent/hungarumlaut/ogonek/ring/tilde
+39/quotesingle 96/grave 128/bullet/dagger/daggerdbl/ellipsis/emdash/endash/florin/fraction/guilsinglleft/guilsinglright/minus/perthousand/quotedblbase/quotedblleft/quotedblright/quoteleft/quoteright/quotesinglbase/trademark/fi/fl/Lslash/OE/Scaron/Ydieresis/Zcaron/dotlessi/lslash/oe/scaron/zcaron
+164/currency 166/brokenbar 168/dieresis/copyright/ordfeminine 172/logicalnot/.notdef/registered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu
+183/periodcentered/cedilla/onesuperior/ordmasculine 188/onequarter/onehalf/threequarters
+192/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>
+endobj
+11 0 obj
+<</Type/Font/Subtype/Type1/Name/Helv/BaseFont/Helvetica/Encoding 8 0 R>>
+endobj
+9 0 obj
+[14 0 R]
+endobj
+12 0 obj
+[]
+endobj
+13 0 obj
+<</Fields 9 0 R/DR<</Font<</ZaDb 10 0 R/Helv 11 0 R>>>>/DA(/Helv 10 Tf 0 g)/CO 12 0 R/NeedAppearances
+true>>
+endobj
+18 0 obj
+<</Names[(0)17 0 R]>>
+endobj
+17 0 obj
+[3 0 R/XYZ 133.77 667.2 null]
+endobj
+19 0 obj
+<</Dests 18 0 R>>
+endobj
+21 0 obj
+<</Title<feff0047007200fc00df006565e99910d83edd86>/A<</S/GoTo/D(0)>>/Parent 20 0 R>>
+endobj
+20 0 obj
+<</First 21 0 R/Last 21 0 R/Count 1>>
+endobj
+23 0 obj
+[14 0 R]
+endobj
+3 0 obj
+<</Resources 16 0 R/Type/Page/Parent 22 0 R/Contents[15 0 R]/Annots 23 0 R>>
+endobj
+22 0 obj
+<</Type/Pages/Count 1/Kids[3 0 R]/MediaBox[0 0 612 792]>>
+endobj
+2 0 obj
+<</Creator(TeX)/Title(abc)/Author<feff0047007200fc00df006565e99910d83edd86>/Producer(xdvipdfmx)/CreationDate(D:20160520090000-00'00')>>
+endobj
+1 0 obj
+<</OpenAction[3 0 R/Fit]/PageMode/UseOutlines/AcroForm 13 0 R/Names 19 0 R/Outlines
+20 0 R/Pages 22 0 R/Type/Catalog>>
+endobj
+24 0 obj
+<</Length 395>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CMapName /EXQIVM+LMRoman12-Bold-UTF16 def
+/CMapType 2 def
+/CIDSystemInfo <<
+  /Registry (Adobe)
+  /Ordering (UCS)
+  /Supplement 0
+>> def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+4 beginbfchar
+<001C> <0061>
+<0023> <0062>
+<002B> <0063>
+<0052> <0031>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+25 0 obj
+<</Length 398>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CMapName /XUUPUX+LMRoman10-Regular-UTF16 def
+/CMapType 2 def
+/CIDSystemInfo <<
+  /Registry (Adobe)
+  /Ordering (UCS)
+  /Supplement 0
+>> def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+4 beginbfchar
+<001C> <0061>
+<0023> <0062>
+<002B> <0063>
+<0052> <0031>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+27 0 obj
+<</Subtype/CIDFontType0C/Length 880>>
+[BINARY STREAM]
+endobj
+28 0 obj
+[28[547]35[625]43[500]82[563]]
+endobj
+29 0 obj
+<</Length 11>>
+[BINARY STREAM]
+endobj
+4 0 obj
+<</Type/Font/Subtype/CIDFontType0/BaseFont/EXQIVM+LMRoman12-Bold/CIDSystemInfo<</Registry(Adobe)/Ordering(Identity)/Supplement
+0>>/FontDescriptor 26 0 R/DW 280/W 28 0 R>>
+endobj
+26 0 obj
+<</Type/FontDescriptor/Ascent 806/Descent -194/StemV 109/CapHeight 806/AvgWidth 618/FontBBox[-476
+-289 1577 1137]/ItalicAngle 0/Flags 262150/Style<</Panose<000000000800000000000000>>>/FontName/EXQIVM+LMRoman12-Bold/FontFile3
+27 0 R/CIDSet 29 0 R>>
+endobj
+31 0 obj
+<</Subtype/CIDFontType0C/Length 929>>
+[BINARY STREAM]
+endobj
+32 0 obj
+[28[500]35[556]43[444]82[500]]
+endobj
+33 0 obj
+<</Length 11>>
+[BINARY STREAM]
+endobj
+6 0 obj
+<</Type/Font/Subtype/CIDFontType0/BaseFont/XUUPUX+LMRoman10-Regular/CIDSystemInfo<</Registry(Adobe)/Ordering(Identity)/Supplement
+0>>/FontDescriptor 30 0 R/DW 280/W 32 0 R>>
+endobj
+30 0 obj
+<</Type/FontDescriptor/Ascent 806/Descent -194/StemV 69/CapHeight 806/AvgWidth 549/FontBBox[-430
+-290 1417 1127]/ItalicAngle 0/Flags 6/Style<</Panose<000000000500000000000000>>>/FontName/XUUPUX+LMRoman10-Regular/FontFile3
+31 0 R/CIDSet 33 0 R>>
+endobj
+5 0 obj
+<</Type/Font/Subtype/Type0/BaseFont/EXQIVM+LMRoman12-Bold-Identity-H/Encoding/Identity-H/DescendantFonts[4 0 R]/ToUnicode
+24 0 R>>
+endobj
+7 0 obj
+<</Type/Font/Subtype/Type0/BaseFont/XUUPUX+LMRoman10-Regular-Identity-H/Encoding/Identity-H/DescendantFonts[6 0 R]/ToUnicode
+25 0 R>>
+endobj
+xref
+0 34
+0000000000 65535 f 
+0000002696 00000 n 
+0000002545 00000 n 
+0000002379 00000 n 
+0000004782 00000 n 
+0000006790 00000 n 
+0000006340 00000 n 
+0000006936 00000 n 
+0000000642 00000 n 
+0000001913 00000 n 
+0000000349 00000 n 
+0000001824 00000 n 
+0000001937 00000 n 
+0000001956 00000 n 
+0000000426 00000 n 
+0000000015 00000 n 
+0000000261 00000 n 
+0000002119 00000 n 
+0000002081 00000 n 
+0000002165 00000 n 
+0000002300 00000 n 
+0000002199 00000 n 
+0000002471 00000 n 
+0000002354 00000 n 
+0000002830 00000 n 
+0000003275 00000 n 
+0000004968 00000 n 
+0000003723 00000 n 
+0000004675 00000 n 
+0000004722 00000 n 
+0000006529 00000 n 
+0000005232 00000 n 
+0000006233 00000 n 
+0000006280 00000 n 
+trailer
+<</Root 1 0 R/Info 2 0 R/ID[<ID-STRING><ID-STRING>]/Size
+34>>
+startxref
+7085
+%%EOF

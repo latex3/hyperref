@@ -2979,50 +2979,20 @@ For equations the following might work:
 \subsubsection{XeTeX}
 
  Default for the encoding of bookmarks is `pdfencoding=auto'.
-  That means the strings are always treated as unicode strings.
-  Only if the string restricts to the printable ASCII set,
+ That means the strings are always treated as unicode strings.
+ Only if the string restricts to the printable ASCII set,
   it is written as ASCII string. The reason is that the
   \verb|\special| does not support PDFDocEncoding.
 
-
-
- XeTeX uses the program xdvipdfmx for PDF output generation.
-  This program behaves a little different from dvipdfm, because
-  of the supported Unicode characters. Strings for bookmarks
-  or information entries can be output directly. The
-  big chars (char code > 255) are written in UTF-8 and
-  xdvipdfmx tries to convert them to UTF-16BE. However
-  hyperref already provides PDF strings encoded in UTF-16BE,
-  thus the result is a warning
-
-    \verb"Failed to convert input string to UTF16..."
-
-  The best way would be, if xdvipdfm could detect the
-  byte order marker (\verb|\376\377|) and skips the conversion
-  if that marker is present.
-
-    For the time being I added the following to hyperref,
-  when option `pdfencoding=auto' is set (default for XeTeX):
-  The string is converted back to big characters thus that the
-  string is written as UTF-8. But I am very unhappy with this
-  solution. Main disadvantage:
-  Two versions of \verb|\pdfstringdef| are needed:
-
-  a) The string is converted back to big characters for
-     the ``tainted key'' of xdvipdfmx (\verb|spc_pdfm.c: default_taintkeys|).
-     The subset hyperref uses is /Title, /Author, /Subject,
-     /Keywords, /Creator, /Producer, /T. Any changes of this
-     set in xdvipdfmx cannot be detected by hyperref.
-
-  b) Without conversion for the other strings , providing UTF16be
-     directly. Examples: Prefix of page labels, some elements
-     of formulars.
-
-  Thus \textbf{each} application that uses \verb|\pdfstringdef| now must
-  check, if it defines a string for some of the tained keys.
-  If yes, then the call of \verb|\pdfstringdef| should be preceded
-  by \verb|\csname HyPsd@XeTeXBigCharstrue\endcsname|.
-  Example: package bookmark.
+ In older versions hyperref contained special conversion code from
+ UTF-16BE back to UTF-8 in a number of places for
+ xetex to avoid the xdvipdfmx warning 
+ 
+   \verb"Failed to convert input string to UTF16..."
+   
+ This is no longer needed with a current xdvipdfmx, so this code has
+ been removed. \verb|\csname HyPsd@XeTeXBigCharstrue\endcsname| should no
+ longer be used.    
 
 
 \section[Limitations]{Limitations%

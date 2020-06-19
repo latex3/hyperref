@@ -1,4 +1,7 @@
-2020-01-14 7.00d  David Carlisle
+2020-06-20 Ulrike Fischer
+    * added Euro to encoding of form field font (issue 145)
+
+2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output
       https://tex.stackexchange.com/a/524163/1090
     * Delete doc/options.pdf

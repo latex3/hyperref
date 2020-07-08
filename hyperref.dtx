@@ -2312,6 +2312,12 @@
     \declare@shorthand{danish}{"~}{-}%
   }%
 }
+\ltx@IfUndefined{norsk@sh@"@sel}{}{%
+  \def\HyPsd@babel@norsk{%
+    \declare@shorthand{norsk}{"|}{}%
+    \declare@shorthand{norsk}{"~}{-}%
+  }%
+}
 \ltx@IfUndefined{dutch@sh@"@sel}{}{%
   \def\HyPsd@babel@dutch{%
     \declare@shorthand{dutch}{"|}{}%
@@ -5958,6 +5964,24 @@
     \def\theoremautorefname{Stelling}%
     \def\pageautorefname{pagina}%
 }
+\def\HyLang@norsk{%
+    \def\equationautorefname{Ligning}%
+    \def\footnoteautorefname{fotnote}%
+    \def\itemautorefname{element}%
+    \def\figureautorefname{Figur}%
+    \def\tableautorefname{Tabell}%
+    \def\partautorefname{Del}%
+    \def\appendixautorefname{Tillegg}%
+    \def\chapterautorefname{kapittel}%
+    \def\sectionautorefname{seksjon}%
+    \def\subsectionautorefname{underseksjon}%
+    \def\subsubsectionautorefname{under-underseksjon}%
+    \def\paragraphautorefname{avsnitt}%
+    \def\subparagraphautorefname{underavsnitt}%
+    \def\FancyVerbLineautorefname{Linje}%
+    \def\theoremautorefname{Teorem}%
+    \def\pageautorefname{side}%
+}
 %    \end{macrocode}
 %
 %    Instead of package babel's definition of \cmd{\addto} the
@@ -6036,6 +6060,8 @@
 \HyLang@DeclareLang{hungarian}{magyar}{}
 \HyLang@DeclareLang{greek}{greek}{}
 \HyLang@DeclareLang{dutch}{dutch}{}
+\HyLang@DeclareLang{norsk}{norsk}{}
+\HyLang@DeclareLang{norwegian}{norsk}{}
 %    \end{macrocode}
 %    More work is needed in case of options |vietnamese| and |vietnam|.
 %    \begin{macrocode}

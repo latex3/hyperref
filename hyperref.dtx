@@ -586,28 +586,12 @@
 %    \begin{macrocode}
 \Hy@SetCatcodes
 %    \end{macrocode}
-%
+% change 2020-07-24: require newer pdftexcmds and remove fallback code
+% for version older than 2010.
 %    \begin{macrocode}
 \RequirePackage{ltxcmds}[2010/11/12]
 \RequirePackage{iftex}[2019/10/24]
-\RequirePackage{pdftexcmds}[2009/04/10]
-\@ifpackagelater{pdftexcmds}{2010/11/04}{}{%
-  \ltx@IfUndefined{pdfdraftmode}{%
-    \let\pdf@ifdraftmode\ltx@secondoftwo
-  }{%
-    \ifpdf
-      \def\pdf@ifdraftmode{%
-        \ifnum\pdfdraftmode=\ltx@one
-          \expandafter\ltx@firstoftwo
-        \else
-          \expandafter\ltx@secondoftwo
-        \fi
-      }%
-    \else
-      \let\pdf@ifdraftmode\ltx@secondoftwo
-    \fi
-  }%
-}
+\RequirePackage{pdftexcmds}[2018/09/10]
 %    \end{macrocode}
 %    \begin{macrocode}
 \RequirePackage{infwarerr}[2010/04/08]
@@ -2306,6 +2290,8 @@
 %
 %    Nothing to do for english.
 %    change 2020/07/16: removed patch for french. No longer needed.
+%    change 2020/07/21: removed patches for german, ngerman. Will be done by
+%    the language package. https://github.com/jspitz/babel-german/issues/4
 %    \begin{macrocode}
 \ltx@IfUndefined{danish@sh@"@sel}{}{%
   \def\HyPsd@babel@danish{%
@@ -2324,25 +2310,12 @@
     \declare@shorthand{finnish}{"|}{}%
   }%
 }
-\ltx@IfUndefined{german@sh@"@sel}{}{%
-  \def\HyPsd@babel@german{%
-    \declare@shorthand{german}{"f}{f}%
-    \declare@shorthand{german}{"|}{}%
-    \declare@shorthand{german}{"~}{-}%
-  }%
-}
 \ltx@IfUndefined{macedonian@sh@"@sel}{}{%
   \def\HyPsd@babel@macedonian{%
     \declare@shorthand{macedonian}{"|}{}%
     \declare@shorthand{macedonian}{"~}{-}%
   }%
 }{}
-\ltx@IfUndefined{ngerman@sh@"@sel}{}{%
-  \def\HyPsd@babel@ngerman{%
-    \declare@shorthand{ngerman}{"|}{}%
-    \declare@shorthand{ngerman}{"~}{-}%
-  }%
-}
 \ltx@IfUndefined{portuges@sh@"@sel}{}{%
   \def\HyPsd@babel@portuges{%
     \declare@shorthand{portuges}{"|}{}%

@@ -177,7 +177,7 @@
 }
 \makeatother
 \title{Hypertext marks in \hologo{LaTeX}: a manual for \xpackage{hyperref}}
-\date{2020-05-15 v7.00e}
+\date{2020-08-14 v7.00f}
 
 \begin{document}
 
@@ -336,7 +336,7 @@ if it can be found, and this is a convenient place to set options on a
 site-wide basis.
 
 Note however that some options (for example \texttt{unicode}) can only be used as
-packge options, and not in \verb|\hypersetup| as the option settings are processed
+package options, and not in \verb|\hypersetup| as the option settings are processed
 as the package is read.
 
 As an example, the behavior of a particular file could be controlled by:
@@ -808,7 +808,7 @@ pdfviewclip        & name    & empty & set /ViewClip of viewer preferences Possi
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
                                        The dafault according to the PDF~Refence is \verb|CropBox| \\
 pdfwindowui        & boolean & true  & make PDF user interface elements visible \\
-unicode            & boolean & false & Unicode encoded PDF strings
+unicode            & boolean & true & Unicode encoded PDF strings
 \end{longtable}
 
 Each link in Acrobat carries its own magnification level, which is set
@@ -1017,7 +1017,7 @@ runcolor           & \textit{filecolor}     & color of `run' links\\
 setpagesize        & \textit{true}          & set page size by special driver commands \\
 tex4ht             &                        & use \textsf{\TeX4ht} backend \\
 textures           &                        & use \textsf{Textures} backend \\
-unicode            & \textit{false}         & Unicode encoded pdf strings, by defaut true with \textsf{Xe\TeX} and \textsf{Lu\TeX} \\
+unicode            & \textit{true}          & Unicode encoded pdf strings, starting with version  2020-08-14 v7.00f set by default to true for all engines. \\
 urlbordercolor     & \textit{0 1 1}         & color of border around URL links \\
 urlcolor           & \textit{magenta}       & color of URL links \\
 verbose            & \textit{false}         & be chatty \\
@@ -2986,13 +2986,13 @@ For equations the following might work:
 
  In older versions hyperref contained special conversion code from
  UTF-16BE back to UTF-8 in a number of places for
- xetex to avoid the xdvipdfmx warning 
- 
+ xetex to avoid the xdvipdfmx warning
+
    \verb"Failed to convert input string to UTF16..."
-   
+
  This is no longer needed with a current xdvipdfmx, so this code has
  been removed. \verb|\csname HyPsd@XeTeXBigCharstrue\endcsname| should no
- longer be used.    
+ longer be used.
 
 
 \section[Limitations]{Limitations%

@@ -50,7 +50,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2020-05-15 v7.00e %
+%<!none>  [2020-08-14 v7.00f %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -891,7 +891,7 @@
 \Hy@psdextrafalse
 \Hy@pdftoolbartrue
 \Hy@typexmlfalse
-\Hy@unicodefalse
+\Hy@unicodetrue
 \Hy@pdfusetitlefalse
 \Hy@verbosefalse
 \Hy@pdfwindowuitrue
@@ -2047,6 +2047,9 @@
 %    \LaTeX's NFSS. Because of large memory requirements the
 %    encoding file for Unicode support is only loaded, if option
 %    |unicode| is specified as package option.
+%    change 2020-08-14: Starting with version
+%     v7.00f the file is always loaded and unicode is the
+%     default option.
 %    \begin{macro}{\HyPsd@LoadUnicode}
 %    Because the file |puenc.def| takes a lot of memory, the loading
 %    is defined in the macro \cs{HyPsd@LoadUnicode} called by
@@ -5138,7 +5141,11 @@
 \def\HyPsd@pdfencoding@auto{auto}
 \def\HyPsd@pdfencoding@pdfdoc{pdfdoc}
 \def\HyPsd@pdfencoding@unicode{unicode}
-\let\HyPsd@pdfencoding\Hy@pdfencoding@pdfdoc
+%    \end{macrocode}
+% change 2020-08-14, use unicode by default:
+%    \begin{macrocode}
+\let\HyPsd@pdfencoding\Hy@pdfencoding@unicode
+\HyPsd@LoadUnicode
 \def\HyPsd@LoadStringEnc{%
   \RequirePackage{stringenc}[2009/12/15]%
   \let\HyPsd@LoadStringEnc\relax

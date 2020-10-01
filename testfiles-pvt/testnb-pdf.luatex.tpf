@@ -340,7 +340,7 @@ endobj
 << /Type /Catalog /Pages 16 0 R /Names 37 0 R /PageMode/UseThumbs /OpenAction 1 0 R >>
 endobj
 39 0 obj
-<< /Producer (LuaTeX)/Author(SPQR and PWD)/Title(Testing natbib and hyperref)/Subject(Dummy stuff)/Creator(LaTeX with hyperref)/Keywords(Luhmann) /Trapped /False >>
+<< /Producer (LuaTeX)/Author(\376\377\000S\000P\000Q\000R\000\040\000a\000n\000d\000\040\000P\000W\000D)/Title(\376\377\000T\000e\000s\000t\000i\000n\000g\000\040\000n\000a\000t\000b\000i\000b\000\040\000a\000n\000d\000\040\000h\000y\000p\000e\000r\000r\000e\000f)/Subject(\376\377\000D\000u\000m\000m\000y\000\040\000s\000t\000u\000f\000f)/Creator(LaTeX with hyperref)/Keywords(\376\377\000L\000u\000h\000m\000a\000n\000n) /Trapped /False >>
 endobj
 xref
 0 40
@@ -387,5 +387,5 @@ xref
 trailer
 << /Size 40 /Root 38 0 R /Info 39 0 R >>
 startxref
-25098
+25376
 %%EOF

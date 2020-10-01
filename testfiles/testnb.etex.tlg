@@ -5,7 +5,7 @@ Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0
 .\hbox(0.0+0.0)x0.0
 ..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
-..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title (Testing natbib a\ETC.}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title (\376\377\000T\00\ETC.}
 ..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
 .\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
 .\vbox(0.0+0.0)x0.0, glue set - 14.99626fil

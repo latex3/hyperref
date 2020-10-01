@@ -1090,7 +1090,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
 .\mark{{\protect \MakeUppercase  {Chapter\ 2. \ Second part}}{\protect \MakeUppercase  \ETC.}
-.\write4{\protect \BOOKMARK [1][-]{section.28}{2.5 three}{chapter.14}% 13}
+.\write4{\protect \BOOKMARK [1][-]{section.28}{\376\377\0002\000.\0005\000\040\ETC.}
 .\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
 .\penalty 10000
 .\glue 10.84352 plus 0.94289
@@ -1497,6 +1497,6 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line ....
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line ....
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line ....
 Package rerunfilecheck Info: File `test1.out' has not changed.
-(rerunfilecheck)             Checksum: 9AF3283C405D2E836D70ED8FD0F0758A;956.
+(rerunfilecheck)             Checksum: 907CDCA8E0E854E44300BE3D4C6716D9;2267.
 LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line ....

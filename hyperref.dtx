@@ -2260,19 +2260,6 @@
     }%
   }%
 \fi
-\def\Hy@temp{%
-  \@ifpackageloaded{babel}{%
-    \@ifpackagelater{babel}{2008/03/16}{%
-      \let\Hy@temp\@empty
-    }{%
-      \def\HyPsd@BabelPatch{%
-        \let\HyOrg@languageshorthands\languageshorthands
-      }%
-    }%
-  }{}%
-}
-\Hy@temp
-\expandafter\Hy@AtBeginDocument\expandafter{\Hy@temp}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

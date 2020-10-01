@@ -6,6 +6,7 @@
     * set unicode to true by default for all engines.
     * removed outdated code to fix the first page boxlevel.
     * removed outdated code to fix old ltxcmds code
+    * removed outdated code to fix fancyvrb
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

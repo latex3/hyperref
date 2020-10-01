@@ -10928,17 +10928,6 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    \begin{macrocode}
-\@ifpackageloaded{fancyvrb}{%
-  \@ifpackagelater{fancyvrb}{1998/05/20}{}{%
-    \def\FV@StepLineNo{%
-      \FV@SetLineNo
-      \def\FV@StepLineNo{\H@refstepcounter{FancyVerbLine}}%
-      \FV@StepLineNo
-    }%
-  }%
-}{}
-%    \end{macrocode}
 %
 % \section{Package lastpage support}
 %    Package lastpage directly writes the |\newlabel| command to the

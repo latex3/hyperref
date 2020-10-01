@@ -1,9 +1,10 @@
-2020-08-14 Ulrike Fischer
+2020-10-01 Ulrike Fischer
     * added Euro to encoding of form field font (issue 145)
     * removed patches for ngerman/german: these are now in babel-german
     * removed patches for french, unneeded according the
     babel-french maintainer.
     * set unicode to true by default for all engines.
+    * removed outdated code to fix the first page boxlevel.
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

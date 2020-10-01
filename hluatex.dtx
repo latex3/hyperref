@@ -811,17 +811,6 @@
     \close@pdflink
   }%
 }
-\def\Hy@FixNotFirstPage{%
-  \gdef\Hy@FixNotFirstPage{%
-    \setbox\AtBeginShipoutBox=\hbox{%
-      \copy\AtBeginShipoutBox
-    }%
-  }%
-}
-\ltx@ifpackagelater{atbegshi}{2011/10/05}{%
-}{%
-  \AtBeginShipout{\Hy@FixNotFirstPage}%
-}
 \def\@Gauge[#1]#2#3#4{% parameters, label, minimum, maximum
   \Hy@Message{Sorry, pdftex does not support FORM gauges}%
 }

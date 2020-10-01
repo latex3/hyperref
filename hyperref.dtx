@@ -14382,19 +14382,8 @@
 %
 %    Since version 2011/10/05 v1.16 of package `atbegshi'
 %    \cs{AtBeginShipoutFirst} does not add a additional box layer.
-%    \begin{macrocode}
-\def\Hy@FixNotFirstPage{%
-  \gdef\Hy@FixNotFirstPage{%
-    \setbox\AtBeginShipoutBox=\hbox{%
-      \copy\AtBeginShipoutBox
-    }%
-  }%
-}
-\ltx@ifpackagelater{atbegshi}{2011/10/05}{%
-}{%
-  \AtBeginShipout{\Hy@FixNotFirstPage}%
-}
-%    \end{macrocode}
+%
+%    change 2020-10-01: the code has been removed as outdated.
 %
 %    \begin{macrocode}
 %</pdftex>

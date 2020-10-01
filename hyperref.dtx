@@ -717,18 +717,6 @@
       \expandafter\ltx@firstoftwo
     \fi
   }%
-  \ltx@ifpackagelater{ltxcmds}{2010/09/11}{}{%
-    \begingroup
-      \lccode`0=`\{\relax
-    \lowercase{\endgroup
-      \def\ltx@leftbracechar{0}%
-    }%
-    \begingroup
-      \lccode`0=`\}\relax
-    \lowercase{\endgroup
-      \def\ltx@rightbracechar{0}%
-    }%
-  }%
 }
 %    \end{macrocode}
 %

@@ -9,7 +9,6 @@
     * removed outdated code to fix the first page boxlevel.
     * removed outdated code to fix old ltxcmds code
     * removed outdated code to fix fancyvrb
-    * removed outdated code to fix caption from nameref
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

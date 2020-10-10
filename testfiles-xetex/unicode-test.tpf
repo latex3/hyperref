@@ -1,13 +1,13 @@
 %PDF-1.5
 %дрнш
 15 0 obj
-<</Length 196>>
+<</Length 204>>
 stream
- q 1 0 0 1 72 720 cm BT /F1 14.3462 Tf 61.768 -62.765 Td[<0052>-1000<001c0023>-31<002b>]TJ /F2 9.9626 Tf 0 -21.831 Td[<001c0023>-28<002b>]TJ ET BT /F2 9.9626 Tf 231.133 -630.635 Td[<0052>]TJ ET Q
+ q 1 0 0 1 72 720 cm 0 G 0 g BT /F1 14.3462 Tf 61.768 -62.765 Td[<0052>-1000<001c0023>-31<002b>]TJ /F3 9.9626 Tf 0 -21.831 Td[<001c0023>-28<002b>]TJ ET BT /F3 9.9626 Tf 231.133 -630.635 Td[<0052>]TJ ET Q
 endstream
 endobj
 16 0 obj
-<</Font<</F1 5 0 R/F2 7 0 R>>/ProcSet[/PDF/Text/ImageC/ImageB/ImageI]>>
+<</Font<</F1 4 0 R/F3 6 0 R>>/ProcSet[/PDF/Text/ImageC/ImageB/ImageI]>>
 endobj
 10 0 obj
 <</Type/Font/Subtype/Type1/Name/ZaDb/BaseFont/ZapfDingbats>>
@@ -131,86 +131,76 @@ endobj
 28 0 obj
 [28[547]35[625]43[500]82[563]]
 endobj
-29 0 obj
-<</Length 11>>
+30 0 obj
+<</Subtype/CIDFontType0C/Length 929>>
 [BINARY STREAM]
 endobj
-4 0 obj
+31 0 obj
+[28[500]35[556]43[444]82[500]]
+endobj
+5 0 obj
 <</Type/Font/Subtype/CIDFontType0/BaseFont/EXQIVM+LMRoman12-Bold/CIDSystemInfo<</Registry(Adobe)/Ordering(Identity)/Supplement
 0>>/FontDescriptor 26 0 R/DW 280/W 28 0 R>>
 endobj
 26 0 obj
 <</Type/FontDescriptor/Ascent 806/Descent -194/StemV 109/CapHeight 806/AvgWidth 618/FontBBox[-476
 -289 1577 1137]/ItalicAngle 0/Flags 262150/Style<</Panose<000000000800000000000000>>>/FontName/EXQIVM+LMRoman12-Bold/FontFile3
-27 0 R/CIDSet 29 0 R>>
+27 0 R>>
 endobj
-31 0 obj
-<</Subtype/CIDFontType0C/Length 929>>
-[BINARY STREAM]
-endobj
-32 0 obj
-[28[500]35[556]43[444]82[500]]
-endobj
-33 0 obj
-<</Length 11>>
-[BINARY STREAM]
-endobj
-6 0 obj
-<</Type/Font/Subtype/CIDFontType0/BaseFont/XUUPUX+LMRoman10-Regular/CIDSystemInfo<</Registry(Adobe)/Ordering(Identity)/Supplement
-0>>/FontDescriptor 30 0 R/DW 280/W 32 0 R>>
-endobj
-30 0 obj
-<</Type/FontDescriptor/Ascent 806/Descent -194/StemV 69/CapHeight 806/AvgWidth 549/FontBBox[-430
--290 1417 1127]/ItalicAngle 0/Flags 6/Style<</Panose<000000000500000000000000>>>/FontName/XUUPUX+LMRoman10-Regular/FontFile3
-31 0 R/CIDSet 33 0 R>>
-endobj
-5 0 obj
-<</Type/Font/Subtype/Type0/BaseFont/EXQIVM+LMRoman12-Bold-Identity-H/Encoding/Identity-H/DescendantFonts[4 0 R]/ToUnicode
+4 0 obj
+<</Type/Font/Subtype/Type0/BaseFont/EXQIVM+LMRoman12-Bold-Identity-H/Encoding/Identity-H/DescendantFonts[5 0 R]/ToUnicode
 24 0 R>>
 endobj
 7 0 obj
-<</Type/Font/Subtype/Type0/BaseFont/XUUPUX+LMRoman10-Regular-Identity-H/Encoding/Identity-H/DescendantFonts[6 0 R]/ToUnicode
+<</Type/Font/Subtype/CIDFontType0/BaseFont/XUUPUX+LMRoman10-Regular/CIDSystemInfo<</Registry(Adobe)/Ordering(Identity)/Supplement
+0>>/FontDescriptor 29 0 R/DW 280/W 31 0 R>>
+endobj
+29 0 obj
+<</Type/FontDescriptor/Ascent 806/Descent -194/StemV 69/CapHeight 806/AvgWidth 549/FontBBox[-430
+-290 1417 1127]/ItalicAngle 0/Flags 6/Style<</Panose<000000000500000000000000>>>/FontName/XUUPUX+LMRoman10-Regular/FontFile3
+30 0 R>>
+endobj
+6 0 obj
+<</Type/Font/Subtype/Type0/BaseFont/XUUPUX+LMRoman10-Regular-Identity-H/Encoding/Identity-H/DescendantFonts[7 0 R]/ToUnicode
 25 0 R>>
 endobj
 xref
-0 34
+0 32
 0000000000 65535 f 
-0000002705 00000 n 
-0000002554 00000 n 
-0000002388 00000 n 
-0000004791 00000 n 
-0000006799 00000 n 
-0000006349 00000 n 
-0000006945 00000 n 
-0000000642 00000 n 
-0000001922 00000 n 
-0000000349 00000 n 
-0000001833 00000 n 
-0000001946 00000 n 
-0000001965 00000 n 
-0000000426 00000 n 
+0000002713 00000 n 
+0000002562 00000 n 
+0000002396 00000 n 
+0000006223 00000 n 
+0000005787 00000 n 
+0000006805 00000 n 
+0000006369 00000 n 
+0000000650 00000 n 
+0000001930 00000 n 
+0000000357 00000 n 
+0000001841 00000 n 
+0000001954 00000 n 
+0000001973 00000 n 
+0000000434 00000 n 
 0000000015 00000 n 
-0000000261 00000 n 
-0000002128 00000 n 
-0000002090 00000 n 
-0000002174 00000 n 
-0000002309 00000 n 
-0000002208 00000 n 
-0000002480 00000 n 
-0000002363 00000 n 
-0000002839 00000 n 
-0000003284 00000 n 
-0000004977 00000 n 
-0000003732 00000 n 
-0000004684 00000 n 
-0000004731 00000 n 
-0000006538 00000 n 
-0000005241 00000 n 
-0000006242 00000 n 
-0000006289 00000 n 
+0000000269 00000 n 
+0000002136 00000 n 
+0000002098 00000 n 
+0000002182 00000 n 
+0000002317 00000 n 
+0000002216 00000 n 
+0000002488 00000 n 
+0000002371 00000 n 
+0000002847 00000 n 
+0000003292 00000 n 
+0000005973 00000 n 
+0000003740 00000 n 
+0000004692 00000 n 
+0000006558 00000 n 
+0000004739 00000 n 
+0000005740 00000 n 
 trailer
-<</Root 1 0 R/Info 2 0 R/ID[<ID-STRING><ID-STRING>]/Size
-34>>
+<</ID[<ID-STRING><ID-STRING>]/Root
+1 0 R/Info 2 0 R/Size 32>>
 startxref
-7094
+6954
 %%EOF

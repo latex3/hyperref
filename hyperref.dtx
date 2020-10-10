@@ -7117,15 +7117,10 @@
 %    so the NFSS2 definitions of PD1 or PU encoding is not
 %    compatible. To fix this, \cmd{\texttilde} is defined
 %    in babel manner.
-%    \begin{macrocode}
-\Hy@nextfalse
-\ltx@IfUndefined{spanish@sh@"@sel}{}{\Hy@nexttrue}
-\ltx@IfUndefined{galician@sh@"@sel}{}{\Hy@nexttrue}
-\ltx@IfUndefined{estonian@sh@"@sel}{}{\Hy@nexttrue}
-\ifHy@next
-  \let\texttilde\~%
-\fi
-%    \end{macrocode}
+%
+%    change 2020-10-10: no trace of \cs{texttilde} can be found in the
+%    three languages spanish, galician and estonian so the patch has been removed
+%    as outdated.
 %
 %    \begin{macrocode}
 \def\Hy@wrapper@babel#1#2{%

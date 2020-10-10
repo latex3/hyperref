@@ -1,4 +1,6 @@
 2020-10-01 Ulrike Fischer
+    * removed \HyPsd@BabelPatch and the related code as no longer
+    needed with a current babel.
     * added Euro to encoding of form field font (issue 145)
     * removed patches for ngerman/german: these are now in babel-german
     * removed patches for french, unneeded according the

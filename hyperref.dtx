@@ -1346,9 +1346,6 @@
     \HyPsd@SpanishPatch
     \HyPsd@RussianPatch
 %    \end{macrocode}
-%    \begin{macrocode}
-    \HyPsd@BabelPatch
-%    \end{macrocode}
 %
 %    \begin{macrocode}
     \let\@safe@activestrue\relax
@@ -2216,7 +2213,7 @@
 %
 % \subsubsection{Babel languages}
 %
-% Since version 2008/03/16 v3.8j babel uses inside \cs{AtBeginDocument}:
+% Since version 2008/03/16 v3.8j babel used inside \cs{AtBeginDocument}:
 %\begin{quote}
 %\begin{verbatim}
 %\pdfstringdefDisableCommands{%
@@ -2224,43 +2221,9 @@
 %}
 %\end{verbatim}
 %\end{quote}
-%    As consequence the shorthands are shown in the bookmarks,
-%    not its result. Therefore \cs{languageshorthands} is
-%    disabled before the user hook. If there is a need to
-%    use the command, then \cs{HyOrg@languageshorthands}
-%    can be used inside \cs{pdfstringdefDisableCommands}.
-%    \begin{macrocode}
-\def\HyPsd@BabelPatch{%
-  \let\HyOrg@languageshorthands\languageshorthands
-  \let\languageshorthands\HyPsd@LanguageShorthands
-}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdf@strcmp\endcsname\relax
-  \let\HyPsd@langshort@system\@empty
-  \def\HyPsd@LanguageShorthands#1{%
-    \expandafter\ifx\csname HyPsd@langshort@#1\endcsname
-                    \HyPsd@langshort@system
-      \expandafter\@gobble
-    \else
-      \expandafter\@firstofone
-    \fi
-    {%
-      \HyOrg@languageshorthands{#1}%
-    }%
-  }%
-\else
-  \def\HyPsd@LanguageShorthands#1{%
-    \ifnum\pdf@strcmp{#1}{system}=\z@
-      \expandafter\@gobble
-    \else
-      \expandafter\@firstofone
-    \fi
-    {%
-      \HyOrg@languageshorthands{#1}%
-    }%
-  }%
-\fi
-%    \end{macrocode}
+%    As consequence the shorthands were shown in the bookmarks, and required
+%    a hyperref patch. In version 3.48 babel removed this unneeded code
+%    and so the patch could be removed.
 %
 %    \begin{macrocode}
 \newif\ifHy@next

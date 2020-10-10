@@ -2236,24 +2236,9 @@
 %    change 2020/07/16: removed patch for french. No longer needed.
 %    change 2020/07/21: removed patches for german, ngerman. Will be done by
 %    the language package. https://github.com/jspitz/babel-german/issues/4
+%    change 2020/10/10: removed patches for danish, dutch, finnish. see
+%    https://github.com/latex3/babel/issues/84
 %    \begin{macrocode}
-\ltx@IfUndefined{danish@sh@"@sel}{}{%
-  \def\HyPsd@babel@danish{%
-    \declare@shorthand{danish}{"|}{}%
-    \declare@shorthand{danish}{"~}{-}%
-  }%
-}
-\ltx@IfUndefined{dutch@sh@"@sel}{}{%
-  \def\HyPsd@babel@dutch{%
-    \declare@shorthand{dutch}{"|}{}%
-    \declare@shorthand{dutch}{"~}{-}%
-  }%
-}
-\ltx@IfUndefined{finnish@sh@"@sel}{}{%
-  \def\HyPsd@babel@finnish{%
-    \declare@shorthand{finnish}{"|}{}%
-  }%
-}
 \ltx@IfUndefined{macedonian@sh@"@sel}{}{%
   \def\HyPsd@babel@macedonian{%
     \declare@shorthand{macedonian}{"|}{}%

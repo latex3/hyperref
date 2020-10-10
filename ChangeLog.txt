@@ -1,4 +1,9 @@
 2020-10-01 Ulrike Fischer
+    * removed patches for danish, dutch, finnish. This doesn't
+    affect the output, but can give warnings in the log until
+    the languages files adapt their definitions.
+    * removed a outdated patch for \texttilde
+    * moved language patches to a extra file for easier handling
     * removed \HyPsd@BabelPatch and the related code as no longer
     needed with a current babel.
     * added Euro to encoding of form field font (issue 145)

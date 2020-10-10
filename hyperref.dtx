@@ -50,6 +50,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
+%<lang>\ProvidesFile{hyperref-langpatches.def}
 %<!none>  [2020-08-14 v7.00f %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
@@ -89,6 +90,7 @@
 %<puvnenc>  Hyperref: Additions to puenc.def for VnTeX]
 %<puarenc>  Hyperref: Additions to puenc.def for Arabi]
 %<psdextra>  Hyperref: Additions to PDF string support]
+%<lang> Hyperref: patches for babel languages]
 %<*driver>
 \documentclass{ltxdoc}
 \usepackage{array,iftex}
@@ -2210,8 +2212,15 @@
 \x
 %    \end{macrocode}
 %    \end{macro}
-%
 % \subsubsection{Babel languages}
+% change 2020-10-10: moved language patches to its own file as a first step
+% toward removing them completly.
+%    \begin{macrocode}
+\newif\ifHy@next
+\input{hyperref-langpatches.def}
+%</package>
+%<*lang>
+%    \end{macrocode}
 %
 % Since version 2008/03/16 v3.8j babel used inside \cs{AtBeginDocument}:
 %\begin{quote}
@@ -2224,10 +2233,6 @@
 %    As consequence the shorthands were shown in the bookmarks, and required
 %    a hyperref patch. In version 3.48 babel removed this unneeded code
 %    and so the patch could be removed.
-%
-%    \begin{macrocode}
-\newif\ifHy@next
-%    \end{macrocode}
 %
 %    Nothing to do for english.
 %    change 2020/07/16: removed patch for french. No longer needed.
@@ -2462,6 +2467,10 @@
     \@namedef{russian@sh@"@-@}{-}%
   }%
 }
+%    \end{macrocode}
+%    \begin{macrocode}
+%</lang>
+%<*package>
 %    \end{macrocode}
 %
 % \subsubsection{CJK patch}

@@ -2239,18 +2239,13 @@
 %    change 2020/07/21: removed patches for german, ngerman. Will be done by
 %    the language package. https://github.com/jspitz/babel-german/issues/4
 %    change 2020/10/10: removed patches for danish, dutch, finnish, portugues,
-%    swedish, usorbian, see https://github.com/latex3/babel/issues/84
+%    swedish, usorbian, slovene see https://github.com/latex3/babel/issues/84
 %    change 2020/10/10: removed patch for macedonian, ukrainian; maintainers notified.
 %    \begin{macrocode}
 \ltx@IfUndefined{russian@sh@"@sel}{}{%
   \def\HyPsd@babel@russian{%
     \declare@shorthand{russian}{"|}{}%
     \declare@shorthand{russian}{"~}{-}%
-  }%
-}
-\ltx@IfUndefined{slovene@sh@"@sel}{}{%
-  \def\HyPsd@babel@slovene{%
-    \declare@shorthand{slovene}{"|}{}%
   }%
 }
 %    \end{macrocode}

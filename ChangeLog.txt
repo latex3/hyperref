@@ -1,5 +1,6 @@
 2020-10-01 Ulrike Fischer
-    * removed patches for danish, dutch, finnish, portugues, usorbian, swedish.
+    * removed patches for danish, dutch, finnish, portugues, usorbian,
+    swedish, macedonian.
     This doesn't affect the output, but can give warnings in the log until
     the languages files adapt their definitions.
     * removed a outdated patch for \texttilde

@@ -1346,7 +1346,6 @@
     }%
     \HyPsd@GreekPatch
     \HyPsd@SpanishPatch
-    \HyPsd@RussianPatch
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -2241,15 +2240,10 @@
 %    change 2020/10/10: removed patches for danish, dutch, finnish, portugues,
 %    swedish, usorbian, slovene see https://github.com/latex3/babel/issues/84
 %    change 2020/10/10: removed patch for macedonian, ukrainian; maintainers notified.
-%    \begin{macrocode}
-\ltx@IfUndefined{russian@sh@"@sel}{}{%
-  \def\HyPsd@babel@russian{%
-    \declare@shorthand{russian}{"|}{}%
-    \declare@shorthand{russian}{"~}{-}%
-  }%
-}
-%    \end{macrocode}
-%    Nested quoting environments are not supported (|<<|, |>>|).
+%    change 2020/10/11: removed patch for russian, has been merged into babel-russian
+%    see https://github.com/kia999/babel-russian/pull/3
+%
+%    spanish: Nested quoting environments are not supported (|<<|, |>>|).
 %    \begin{macrocode}
 \ltx@IfUndefined{spanish@sh@>@sel}{}{%
   \def\HyPsd@babel@spanish{%
@@ -2407,16 +2401,6 @@
   \ltx@IfUndefined{es@save@dot}{%
   }{%
     \let\.\es@save@dot
-  }%
-}
-%    \end{macrocode}
-%    Shorthand |"-| of `russianb.ldf' is not expandable,
-%    therefore it is disabled and replaced by |-|.
-%    \begin{macrocode}
-\def\HyPsd@RussianPatch{%
-  \ltx@IfUndefined{russian@sh@"@-@}{%
-  }{%
-    \@namedef{russian@sh@"@-@}{-}%
   }%
 }
 %    \end{macrocode}

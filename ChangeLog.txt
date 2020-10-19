@@ -1,4 +1,6 @@
 2020-10-01 Ulrike Fischer
+    * corrected the definition of \begin/\end in \pdfstringdef
+    * removed patches for russian, new version is on ctan
     * removed patches for danish, dutch, finnish, portugues, usorbian,
     swedish, slovene, macedonian, ukrainian.
     This doesn't affect the output, but can give warnings in the log until

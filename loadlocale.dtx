@@ -1,0 +1,456 @@
+% \iffalse meta-comment
+%
+%% File: loadlocale.dtx
+%% (C) Copyright 2020 Ulrike Fischer & LaTeX Team
+%
+% It may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License (LPPL), either version 1.3c of this
+% license or (at your option) any later version.  The latest version
+% of this license is in the file
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% This file is part of the "hyperref bundle" (The Work in LPPL)
+% and all files in that bundle must be distributed together.
+%
+%<*driver>
+\documentclass[full]{l3doc}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \title{^^A
+%   The \pkg{loadlocale} package\thanks{\copyright\ \LaTeX\
+%    Project.}
+% }
+%
+% \author{^^A
+%  Ulrike Fischer\thanks
+%    {^^A
+%      E-mail:
+%        \href{mailto:latex-team@latex-project.org}
+%          {latex-team@latex-project.org}^^A
+%    }^^A
+% }
+%
+%
+% \date{Released XXXX-XX-XX}
+%
+% \maketitle
+% \begin{documentation}
+%
+%
+% \section{\pkg{loadlocale} documentation}
+% This small package defines a few commands to load language related definitions
+% stored in external files. The main goal is to reduce the number of language related
+% definitions in a package by only loading definitions actually needed by the languages of
+% the document.
+%
+% The package offer means to load in documents with \pkg{babel} files for every
+% language \emph{used} in the document. With \pkg{polyglossia} it will load the
+% files for every language in the list of \emph{babel} names of
+% the \emph{declared} languages. If no language package is used it will at least
+% load files for \cs{languagename} (which is normally english).
+% It expects the language definitions files to follow a specific naming scheme:
+%
+%  \begin{syntax}
+%   \meta{prefix}-\meta{bcp-tag}.\meta{extension}
+%  \end{syntax}
+%
+% \meta{prefix} and \meta{extension} can be freely choosen,
+% but one should avoid naming conflicts. E.g.
+% babel uses the prefix \texttt{babel} and the extension{ini} for its files with
+% the locale data, so this combination is taken.
+
+% The language should be given as \meta{bcp-tag}. The \meta{bcp-tag}
+% can be short e.g. \texttt{en} or longer \texttt{en-US}.
+% Longer bcp-tags, e.g. \texttt{ru-Cyrl-RU} are currently not supported, but
+% this will perhaps change.
+% The reason that the packages uses bcp-tags is that such tags can be split
+% easily at the hyphen,
+% and this make is possible to search for files using only sub parts of such a tag,
+% e.g. only \texttt{ru} or \texttt{en} and so facilates the handling language
+% variants.
+%
+% The mapping between the babel language name and the
+% \meta{bcp-tag} used to load the file is stored in a property.
+% New names can be added and existing
+% entries can be changed by setting a key-value:
+% \begin{verbatim}
+% \keys_set:nn { loadlocale / store-bcp }
+%   {
+%     english    = en,
+%     british    = en-GB,
+%   }
+% \end{verbatim}
+%
+%
+% The package predefines a number of mappings, mostly based on the languages
+% use by \pkg{hyperref} for \cs{autoref}, but it
+% will need to be extended in the future. Currently all languages have only at most
+% two bcp-parts (and russian is mapped to \texttt{ru}).
+%
+% Standard language names should be defined by the package and not changed locally.
+% But if with \pkg{babel} languages are loaded
+% through \cs{babelprovide} with unstandard language names it is possible to extend
+% the list in a document. Sadly, language names are quite messy and a number of
+% naming systems exists (beside \pkg{babel} and \pkg{polyglossia} the packages
+% \pkg{translator} and \pkg{translations} have their own system too).
+%
+% Given a language name, the code will try to load at first an file with the
+% full bcp-code as stored in the mapping; if this fails, it will split off
+% the language (the part until the first hyphen) and
+% try with this. So for british with the settings as shown above
+% \texttt{\meta{prefix}-en-GB.\meta{extension}} and
+% \texttt{\meta{prefix}-en.\meta{extension}}  is tried.
+%
+% \begin{function}
+%  {\loadlocale_register_file_processor:nN}
+%  \begin{syntax}
+%   \cs{loadlocale_register_file_processor:nN} \Arg{prefix} \meta{function}
+%  \end{syntax}
+%
+%  The content of the file is loaded with the standard document catcode table active
+%  (so babel shorthands will not work in such an file!) and stored in a tl-var.
+%  The package doesn't predefine how the content is then further processed.
+%
+%  For this a processor function must be defined for a prefix.
+%  This function should have the signature \texttt{nN}.
+%  It will receive as first argument the (babel) language name for which the
+%  file has been loaded (e.g. \texttt{english} or \texttt{ngerman}) and as second
+%  argument the tl-var with the content of the file. If no file has been found, the
+%  tl_var is \cs{q_no_value}. The processor function has to check for this case!
+%
+%  The reading of the files and the processing is done when the
+%  \texttt{aux}-file is read in at the begin of the document. This means the
+%  function shouldn't do any typesetting and it must be registered before.
+%  Also the \texttt{aux}-file is read in a group, so if needed settings
+%  should be done globally.
+% \end{function}
+%
+% \begin{function}
+%  {\loadlocale_register_prefix:nn}
+%  \begin{syntax}
+%   \cs{loadlocale_register_prefix:nn} \Arg{prefix} \Arg{extension}
+%  \end{syntax}
+%
+%  This activates the prefix \meta{prefix}, with it the code will start to
+%  look for files with extension \meta{extension} and load them.
+%  The activation should be done before
+%  the aux-file is read. As the code has to collect languages, it can
+%  take two compilations until everything is there.
+% \end{function}
+%
+% \begin{function}
+%  {\loadlocale_unregister_prefix:n}
+%  \begin{syntax}
+%   \cs{loadlocale_unregister_prefix:n} \Arg{prefix}
+%  \end{syntax}
+%
+%  This removes a prefix from the list again.
+% \end{function}
+% \begin{function}
+%  {\loadlocale_show_prefix:}
+%  \begin{syntax}
+%   \cs{loadlocale_show_prefix:}
+%  \end{syntax}
+%
+%  This shows the list of prefixes.
+% \end{function}
+%
+% \subsection{Suggestions for the files and the processor function}
+% As written above the code doesn't make many assumptions about the content
+% of the files. The main point is that it is read in with normal catcodes and
+% then stored in a macro. The content can be a list of \cs{renewcommand},
+% or a keyval list, or simple text. It is up-to the processor function to do
+% something sensible.
+%
+% A typical case would be to add some redefinitions to the commands \pkg{babel}
+% and \pkg{polyglossia} provide to switch language settings. For \pkg{babel} e.g.
+% \cs{captions}\meta{lang} or \cs{extras}\meta{lang}, for \pkg{polyglossia} (as the argument
+% of the processor is a babel language name) it is probably best to use
+% \cs{captions@bbl@}\meta{lang} and similar. To avoid too many problems if the
+% language setup of the document change, the existence of the commands should be tested.
+%
+% But it is also quite possible to define a processor function which load
+% some dictionary for a package like \pkg{translator} or \pkg{translations}
+% (perhaps after translating babel language name to the
+% naming scheme of the package).
+% \end{documentation}
+%
+% \begin{implementation}
+%
+% \section{\pkg{loadlocale} implementation}
+%
+%    \begin{macrocode}
+%<@@=loadlocale>
+%<*package>
+\ProvidesExplPackage {loadlocale} {2020-11-03} {0.1}
+  {Loadings language code from external files}
+%    \end{macrocode}
+% This small style allows to load language related code and
+% definitions in from files based on the languages used in a document.
+%
+% \subsection{Preparations}
+% With babel we have to collect the languages. We use a prop to get rid of
+% duplicates directly. We want to allow more than one package
+% to load ini-files in this way. The list of prefixes are stored in
+% in a sequence \cs{g_@@_prefix_seq}, their extensions in a property.
+% \begin{macro}{\l_@@_tmpa_tl,\l_@@_tmpa_seq}
+% \begin{macro}{\g_@@_languages_prop,\g_@@_prefix_seq,\g_@@_prefix_ext_prop}
+%    \begin{macrocode}
+\tl_new:N  \l_@@_tmpa_tl
+\seq_new:N \l_@@_tmpa_seq
+\prop_new:N\g_@@_languages_prop
+\seq_new:N \g_@@_prefix_seq
+\prop_new:N \g_@@_prefix_ext_prop
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% We need an message if the processor function is missing
+%    \begin{macrocode}
+\msg_new:nnn {loadlocale}{no-processor}
+ {
+   The~processor~function~\tl_to_str:n{#1}~is~not~defined\\
+   files~with~prefix~'#2'~will~not~be~processed!
+ }
+%    \end{macrocode}
+%
+% \subsection{Writing the list of languages to process}
+% The list of languages is written out at the end of the document.
+% Currently we need only the keys of the prop.
+% To avoid that the processing is duplicated when the aux-file is read in
+% again at the end of the document we clear the main command.
+% \begin{macro}{\@@_map_languages_prop:nn}
+%    \begin{macrocode}
+\cs_new:Npn\@@_map_languages_prop:nn #1#2{#1,}
+\AddToHook{enddocument/afterlastpage}
+  {
+    \iow_now:Nx\@mainaux
+      {
+        \tl_to_str:n{\providecommand\loadlocale@load@files[1]{}}
+        \iow_newline:
+        \tl_to_str:n{\loadlocale@load@files}
+          {
+            \prop_map_function:NN
+              \g_@@_languages_prop
+              \@@_map_languages_prop:nn
+          }
+      }
+    \cs_set_eq:NN\loadlocale@load@files \use_none:n
+  }
+%
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Collecting the languages}
+% With babel we use the \texttt{languagename} hook to collect the names.
+% With polyglossia one could use \cs{xpg@bloaded} directly in
+% the processing command, as polyglossia doesn't load languages
+% on the fly but perhaps it will do it in future and the code gets cleaner if
+% we use the prop for both.
+% Polyglossia has a good list of bcp tags, but with babel there is no easy way
+% to produce it if languages loaded by \texttt{ldf}-files are involved,
+% so we stick to babel languagenames for now.
+% We have to double check if babel is loaded as polyglossia interferes, see
+% https://github.com/reutenauer/polyglossia/issues/455
+%    \begin{macrocode}
+\AddToHook{begindocument/before}
+  {
+    \prop_gput:Nxx \g_@@_languages_prop {\languagename}{\languagename}
+    \@ifpackageloaded{babel}
+      {
+        \@ifundefined{AddBabelHook}%have to get around polyglossias fake
+          {}
+          {
+            \AddBabelHook
+              {loadlocale}
+              {languagename}
+              {\prop_gput:Nxx \g_@@_languages_prop {#1}{#2}}
+          }
+      }{}
+    \@ifpackageloaded{polyglossia}
+      {
+        \clist_map_inline:Nn \xpg@bloaded
+          {
+            \prop_gput:Nnn \g_@@_languages_prop {#1}{#1}
+          }
+      }{}
+  }
+%    \end{macrocode}
+%
+% \subsection{Mapping the language names to bcp codes}
+% The files are named by bcp-tags, so we need a mapping from language names
+% to such tags.
+% For now we don't try to get the bcp tags through methods of
+% the language packages: babel has better interfaces to get the info from the
+% language name, but it works only for languages loaded by ini files, polyglossia
+% only allows (with documented interfaces) to retrieve it for the current language.
+% So we set up out own property lists. We have one for a short
+% language code (e.g. de) and one for a long one. We do not try currently to
+% to some sophisticated wandering through various splits of
+% lang-script-region as babel does.
+%  \begin{macro}{\g_@@_bcp_langcodes_prop,\g_@@_bcp_fullcodes_prop}
+%    \begin{macrocode}
+\prop_new:N \g_@@_bcp_langcodes_prop
+\prop_new:N \g_@@_bcp_fullcodes_prop
+%    \end{macrocode}
+% \end{macro}
+% The properties are filled with a simple key-val. As the keys are unknown,
+% we use the unknown handler.
+% The key is then the (babel) language name, the value the wanted bcp:
+%    \begin{macrocode}
+\keys_define:nn { loadlocale / store-bcp }
+  {
+    unknown .code:n =
+      {
+        \exp_args:NNnx
+          \seq_set_split:Nnn
+            \l_@@_tmpa_seq
+            {-}
+            {\tl_to_str:n{#1}}
+        \prop_gput:NVx \g_@@_bcp_langcodes_prop
+           \l_keys_key_str
+           { \seq_item:Nn \l_@@_tmpa_seq {1} }
+        \prop_gput:NVx \g_@@_bcp_fullcodes_prop
+           \l_keys_key_str
+           { \tl_to_str:n{#1} }
+       }
+  }
+%    \end{macrocode}
+% We predefine the names currently handled by hyperref/autoref:
+%    \begin{macrocode}
+\keys_set:nn { loadlocale / store-bcp }
+ {
+   english    = en,
+   UKenglish  = en-GB,
+   british    = en-GB,
+   USenglish  = en-US,
+   american   = en-US,
+   german     = de,
+   ngerman    = de,
+   austrian   = de-AT,
+   naustrian  = de-AT,
+   russian    = ru,
+   brazil     = pt-BR,
+   brazilian  = pt-BR,
+   portuguese = pt,
+   portuges   = pt,
+   spanish    = es,
+   catalan    = ca,
+   afrikaans  = af,
+   french     = fr,
+   frenchb    = fr,
+   acadian    = fr,
+   canadian   = fr-CA,
+   italian    = it,
+   magyar     = hu,
+   hungarian  = hu,
+   greek      = gr,
+   dutch      = nl,
+   norsk      = nb,
+   danish     = da,
+   vietnamese = vi,
+   vietnam    = vi,
+ }
+%    \end{macrocode}
+%
+% \subsection{Processing the language list}
+% This is the main command. For every prefix stored in \cs{g_@@_prefix_seq}
+% and every language in the argument of \cs{loadlocale@load@files}
+% it tries to load at first <prefix>-<fullcode>.<ext>
+% and if this fails <prefix>-<langcode>.<ext>
+%    \begin{macrocode}
+\NewDocumentCommand \loadlocale@load@files { m }
+  {
+    \@@_map_languages:n { #1 }
+  }
+
+% #1 =  a list of language names as used in the keys in the bcp-props
+\cs_new_protected:Npn \@@_map_languages:n #1
+  {
+    \clist_map_inline:nn { #1 }
+     {
+       \@@_handle_language:n {##1}
+     }
+  }
+
+%#1 =  a language name
+%\l_@@_tmpa_tl can be no_value!
+\cs_new_protected:Npn \@@_handle_language:n #1
+  {
+    \seq_map_inline:Nn \g_@@_prefix_seq
+     {
+       \@@_load_file:nnN   {##1} {#1} \l_@@_tmpa_tl
+       \@@_process_file:nnN {##1} {#1} \l_@@_tmpa_tl
+     }
+  }
+
+%#1 = prefix (e.g. autoref) #2=language #3 tlvar
+\cs_new_protected:Npn \@@_load_file:nnN #1 #2 #3
+  {
+    \prop_get:NnN \g_@@_prefix_ext_prop {#1} \l_@@_tmpa_tl
+    \file_get:nnNF
+      {#1-\prop_item:Nn\g_@@_bcp_fullcodes_prop{#2}.\l_@@_tmpa_tl}
+      { \cctab_select:N\c_document_cctab }
+      #3
+      {
+        \file_get:nnN
+          {#1-\prop_item:Nn\g_@@_bcp_langcodes_prop{#2}.\l_@@_tmpa_tl}
+          { \cctab_select:N\c_document_cctab }
+          #3
+      }
+  }
+
+% #1 = prefix #2=languagename, #3= tl var with content of file (key-val)
+\cs_new_protected:Npn \@@_process_file:nnN #1 #2 #3
+  {
+    \cs_if_exist:cTF { @@_process_file_#1:nN }
+     {
+       \use:c { @@_process_file_#1:nN } {#2} #3
+     }
+     {
+       \msg_warning:nnnn {loadlocale}{no-processor}
+         { \@@_process_file_#1:nN }{#1}
+     }
+  }
+
+%#1 prefix, #2 function
+\cs_new_protected:Npn \loadlocale_register_file_processor:nN #1 #2
+  {
+    \cs_if_exist:NTF #2
+      {
+        \cs_set_eq:cN
+          { @@_process_file_#1:nN }
+          #2
+      }
+      {
+        \msg_warning:nnnn {loadlocale}{no-processor}{#2}{#1}
+      }
+  }
+
+\cs_new_protected:Npn \loadlocale_register_prefix:nn #1 #2
+ {
+   \seq_gput_right:Nn \g_@@_prefix_seq {#1}
+   \seq_remove_duplicates:N \g_@@_prefix_seq
+   \prop_gput:Nnn \g_@@_prefix_ext_prop {#1}{#2}
+ }
+
+\cs_new_protected:Npn \loadlocale_unregister_prefix:n #1
+ {
+   \seq_remove_all:Nn \g_@@_prefix_seq {#1}
+ }
+
+\cs_new_protected:Npn \loadlocale_show_prefix:
+ {
+   \seq_show:N \g_@@_prefix_seq
+ }
+
+
+%</package>
+%    \end{macrocode}
+%
+% \end{implementation}
+\endinput

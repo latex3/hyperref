@@ -1,0 +1,67 @@
+\iffalse meta-comment
+
+File: hyperref-autoref.ins
+
+Copyright (C) 2020 The LaTeX3 Project
+
+It may be distributed and/or modified under the conditions of the
+LaTeX Project Public License (LPPL), either version 1.3c of this
+license or (at your option) any later version.  The latest version
+of this license is in the file
+
+   http://www.latex-project.org/lppl.txt
+
+This file is part of the "hyperref bundle" (The Work in LPPL)
+and all files in that bundle must be distributed together.
+
+The released version of this bundle is available from CTAN.
+
+\fi
+
+\input l3docstrip.tex
+\askforoverwritefalse
+
+\preamble
+
+Copyright (C) 2020 The LaTeX3 Project
+
+It may be distributed and/or modified under the conditions of
+the LaTeX Project Public License (LPPL), either version 1.3c of
+this license or (at your option) any later version.  The latest
+version of this license is in the file:
+
+   http://www.latex-project.org/lppl.txt
+
+This file is part of the "hyperref bundle" (The Work in LPPL)
+and all files in that bundle must be distributed together.
+
+\endpreamble
+% stop docstrip adding \endinput
+\postamble
+\endpostamble
+
+\keepsilent
+
+\generate{
+   \file{hyperref-autoref.sty}{\from{hyperref-autoref.dtx}{package}}
+         }
+
+\generate{
+   \file{autoref-af.ini}{\from{hyperref-autoref.dtx}{af}}
+   \file{autoref-ca.ini}{\from{hyperref-autoref.dtx}{ca}}
+   \file{autoref-da.ini}{\from{hyperref-autoref.dtx}{da}}
+   \file{autoref-de.ini}{\from{hyperref-autoref.dtx}{de}}
+   \file{autoref-en.ini}{\from{hyperref-autoref.dtx}{en}}
+   \file{autoref-es.ini}{\from{hyperref-autoref.dtx}{es}}
+   \file{autoref-fr.ini}{\from{hyperref-autoref.dtx}{fr}}
+   \file{autoref-gr.ini}{\from{hyperref-autoref.dtx}{gr}}
+   \file{autoref-hu.ini}{\from{hyperref-autoref.dtx}{hu}}
+   \file{autoref-it.ini}{\from{hyperref-autoref.dtx}{it}}
+   \file{autoref-nb.ini}{\from{hyperref-autoref.dtx}{nb}}
+   \file{autoref-nl.ini}{\from{hyperref-autoref.dtx}{nl}}
+   \file{autoref-pt.ini}{\from{hyperref-autoref.dtx}{pt}}
+   \file{autoref-ru.ini}{\from{hyperref-autoref.dtx}{ru}}
+   \file{autoref-vi.ini}{\from{hyperref-autoref.dtx}{vi}}
+         }
+
+\endbatchfile

@@ -5,7 +5,7 @@ module = "hyperref"
 docfiledir   = "doc"
 docfiles     = {"paper.pdf", "slides.pdf", "*.gif", "*.html", "*.css"}
 textfiles    = {"*.md", "*.txt"}
-installfiles = {"*.def", "*.sty", "*.cfg"}
+installfiles = {"*.def", "*.sty", "*.cfg","*.ini"}
 tdslocations = {
   "doc/latex/hyperref/ChangeLog.txt",
   "doc/latex/hyperref/README.md",

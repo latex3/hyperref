@@ -1955,10 +1955,11 @@ sequence error would arise.
  \item \xoption{unicode} sets Unicode. It is encoded as UTF-16BE. Two bytes
     are used for most characters, surrogates need four bytes.
  \item \xoption{auto} PDFDocEncoding if the string does not contain characters
-    outside the encoding and Unicode otherwise.
+    outside the encoding (outside ascii if an unicode engine is used)
+    and Unicode otherwise. 
 \end{itemize}
 
- The luatex driver uses \xoption{unicode} by default. If another encoding should be forced,
+ All drivers use \xoption{unicode} by default now. If another encoding should be forced,
  it should be done in \verb|hypersetup|.
 
 \subsection{Color options/package hycolor}
@@ -2978,11 +2979,11 @@ For equations the following might work:
 
 \subsubsection{XeTeX}
 
- Default for the encoding of bookmarks is `pdfencoding=auto'.
+ Default for the encoding of bookmarks is \verb|pdfencoding=unicode|.
  That means the strings are always treated as unicode strings.
- Only if the string restricts to the printable ASCII set,
-  it is written as ASCII string. The reason is that the
-  \verb|\special| does not support PDFDocEncoding.
+ If \verb|auto| or \verb|pdfdoc| is forced it applies only
+ if the string restricts to the printable ASCII set,
+ The reason is that the \verb|\special| does not support PDFDocEncoding.
 
  In older versions hyperref contained special conversion code from
  UTF-16BE back to UTF-8 in a number of places for

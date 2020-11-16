@@ -1870,7 +1870,7 @@
         \ltx@IfUndefined{StringEncodingConvertTest}{%
         }{%
           \EdefUnescapeString\HyPsd@temp#1%
-          \ifxetex
+          \iftutex
             \let\HyPsd@UnescapedString\HyPsd@temp
             \StringEncodingConvertTest\HyPsd@temp\HyPsd@temp
                                       {utf16be}{ascii-print}{%
@@ -5025,7 +5025,7 @@
 %    \end{macrocode}
 % change 2020-08-14, use unicode by default:
 %    \begin{macrocode}
-\let\HyPsd@pdfencoding\Hy@pdfencoding@unicode
+\let\HyPsd@pdfencoding\HyPsd@pdfencoding@unicode
 \HyPsd@LoadUnicode
 \def\HyPsd@LoadStringEnc{%
   \RequirePackage{stringenc}[2009/12/15]%

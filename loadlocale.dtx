@@ -434,13 +434,13 @@
 \cs_new_protected:Npn \loadlocale_register_prefix:nn #1 #2
  {
    \seq_gput_right:Nn \g_@@_prefix_seq {#1}
-   \seq_remove_duplicates:N \g_@@_prefix_seq
+   \seq_gremove_duplicates:N \g_@@_prefix_seq
    \prop_gput:Nnn \g_@@_prefix_ext_prop {#1}{#2}
  }
 
 \cs_new_protected:Npn \loadlocale_unregister_prefix:n #1
  {
-   \seq_remove_all:Nn \g_@@_prefix_seq {#1}
+   \seq_gremove_all:Nn \g_@@_prefix_seq {#1}
  }
 
 \cs_new_protected:Npn \loadlocale_show_prefix:

@@ -41,9 +41,9 @@
 \cs_new_protected:Npn \_@@_autoref_process_ini:nN #1 #2
   {
      \tl_set:Nn   \l_@@_autoref_languagename_tl {#1}
-     \tl_if_exist:cF { l_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
+     \tl_if_exist:cF { g_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
        {
-         \tl_new:c { l_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
+         \tl_new:c { g_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
        }
 %    \end{macrocode}
 % We do nothing if no ini was found, that is consistent with the current
@@ -71,7 +71,7 @@
       {
         unknown .code:n =
          {
-           \tl_gput_right:cx { l_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
+           \tl_gput_right:cx { g_@@_autoref_captions\l_@@_autoref_languagename_tl _tl }
              {
                \exp_not:N \tl_set:cn { \l_keys_key_str autorefname }{\exp_not:n{#1}}
              }
@@ -82,11 +82,11 @@
      {
        unknown .code:n  =
          {
-           \tl_if_exist:cF { l_@@_autoref_captions\l_keys_key_str _tl }
+           \tl_if_exist:cF { g_@@_autoref_captions\l_keys_key_str _tl }
              {
-               \tl_new:c { l_@@_autoref_captions\l_keys_key_str _tl }
+               \tl_new:c { g_@@_autoref_captions\l_keys_key_str _tl }
              }
-           \tl_gput_right:cx { l_@@_autoref_captions\l_keys_key_str _tl }
+           \tl_gput_right:cx { g_@@_autoref_captions\l_keys_key_str _tl }
              {
                \exp_not:N \tl_set:cn { \l_@@_autoref_counter_tl autorefname }{\exp_not:n{#1}}
              }

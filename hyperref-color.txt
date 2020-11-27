@@ -1,0 +1,135 @@
+% collected from https://tex.stackexchange.com/questions/525261/better-default-colors-for-hyperref-links
+% cite color ignored, as it doesn't fit ... should be done by cite packages ?
+% Perhaps a setup with properties is better and more flexible?
+
+% linkcolor=
+%,filecolor=
+%,urlcolor=
+%,menucolor=
+%,runcolor=
+%,linkbordercolor=
+%,filebordercolor=
+%,urlbordercolor=
+%,menubordercolor=
+%,runbordercolor=
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_default_seq
+ {
+   {1,0,0}, %red
+   {0,1,1}, %cyan
+   {1,0,1}, %magenta
+   {1, 0, 0}, %red
+   {0,1,1}, %cyan
+ %-------------
+   {1, 0 ,0 },
+   {0, .5, .5},
+   {0, 1, 1},
+   {1, 0, 0},
+   {0, .7, .7}
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_daleif_seq
+ {
+   {0,0.2,0.6},
+   {0.8,0,0.8},
+   {0.8,0,0.8},
+   {0,0.2,0.6},
+   {0.8,0,0.8},
+%--------
+   {0,0.2,0.6},
+   {0.8,0,0.8},
+   {0.8,0,0.8},
+   {0,0.2,0.6},
+   {0.8,0,0.8}
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_julian_seq
+ { %two colors: intern/extern
+   {0.79216, 0, 0.12549},
+   {0.01961, 0.44314, 0.6902},
+   {0.01961, 0.44314, 0.6902},
+   {0.79216, 0, 0.12549 },
+   {0.01961, 0.44314, 0.6902 },
+%--------
+   {0.79216, 0, 0.12549},
+   {0.01961, 0.44314, 0.6902},
+   {0.01961, 0.44314, 0.6902},
+   {0.79216, 0, 0.12549 },
+   {0.01961, 0.44314, 0.6902 }
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_tivv_seq
+ { %all darkgray
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+%--------
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 },
+   {0.4 ,0.4 ,0.4 }
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_szabolcsA_seq
+ { %dvipsnam.def
+   {0.06, 0.46, 1}, %NavyBlue
+   {1, 0, 0}, %Red
+   {0.06, 0.46, 1}, %NavyBlue
+   {1, 0, 0}, %Red
+   {1, 0, 0}, %Red
+%------------------
+   {0.06, 0.46, 1}, %NavyBlue
+   {1, 0, 0}, %Red
+   {0.06, 0.46, 1}, %NavyBlue
+   {1, 0, 0}, %Red
+   {1, 0, 0} %Red
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_szabolcsB_seq
+ { %dvipsnam.def
+   {0.72, 0, 0}, %BrickRed
+   {0, 1, 0},    %Green
+   {0.64, 0.08, 0.98}, %Mulberry
+   {0.06, 0.46, 1}, %NavyBlue
+   {0.64, 0.08, 0.98}, %Mulberry
+%------------------
+   {0.72, 0, 0}, %BrickRed
+   {0, 1, 0},    %Green
+   {0.64, 0.08, 0.98}, %Mulberry
+   {0.06, 0.46, 1}, %NavyBlue
+   {0.64, 0.08, 0.98} %Mulberry
+ }
+
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_phelype_seq
+ {
+   {0.50196, 0, 0.02353},
+   {0.07451, 0.09412, 0.46667},
+   {0.54118, 0, 0.52941},
+   {0.44706, 0.45882, 0},
+   {0.07451, 0.46667, 0.46275},
+ %-------------
+   {0.701176, 0.4, 0.414118},
+   {0.444706, 0.456472, 0.680002},
+   {0.724708, 0.4, 0.717646},
+   {0.668236, 0.675292, 0.4},
+   {0.444706, 0.680002, 0.67765}
+ }
+
+\seq_const_from_clist:Nn \c__hyp_colorscheme_david_seq
+ {
+   {0,0,0},
+   {0,0,0},
+   {0,0,0},
+   {0,0,0},
+   {0,0,0},
+%--------
+   {0,0,0},
+   {0,0,0},
+   {0,0,0},
+   {0,0,0},
+   {0,0,0}
+ }

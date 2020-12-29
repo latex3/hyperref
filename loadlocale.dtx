@@ -259,7 +259,10 @@
 %    \begin{macrocode}
 \AddToHook{begindocument/before}
   {
-    \prop_gput:Nxx \g_@@_languages_prop {\languagename}{\languagename}
+    \tl_if_exist:NT \languagename
+      {
+        \prop_gput:Nxx \g_@@_languages_prop {\languagename}{\languagename}
+      }
     \@ifpackageloaded{babel}
       {
         \@ifundefined{AddBabelHook}%have to get around polyglossias fake

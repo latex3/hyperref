@@ -1392,6 +1392,19 @@ command names):
 }
 \end{verbatim}
 
+\subsection{Pagelabels}
+\begin{cmdsyntax}
+\ci{thispdfpagelabel}\verb|{|\emph{page number format}\verb|}|
+\end{cmdsyntax}
+
+This allows to change format of the page number shown in the tool bar of 
+a PDF viewer for a specific page, for example 
+
+\verb+\thispdfpagelabel{Empty Page-\roman{page}}+ 
+
+The command affects the page on which it is executed, so asynchronous page breaking
+should be taken into account. It should be used in places where for example \verb+\thispagestyle+ can be use too.
+
 \subsection{Utility macros}
 
 \label{hypercalcbp}

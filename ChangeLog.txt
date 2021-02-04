@@ -20,6 +20,9 @@
     * removed code related to /Hid - deprecated in PDF 1.2
     * removed patches for greeknumerals, the code is now in
     babel-greek.
+    * added norsk to autoref languages (PR 158)
+    * added danish to autoref language (PR 159)
+    * corrected french language (PR 160)
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

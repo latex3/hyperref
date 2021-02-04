@@ -827,7 +827,6 @@
 \newif\ifHy@ocgcolorlinks
 \newif\ifHy@pageanchor
 \newif\ifHy@pdfpagelabels
-\newif\ifHy@pdfpagehidden
 \newif\ifHy@pdfstring
 \newif\ifHy@plainpages
 \newif\ifHy@psize
@@ -872,7 +871,6 @@
 \Hy@pdfnewwindowfalse
 \Hy@pageanchortrue
 \Hy@pdfpagelabelstrue
-\Hy@pdfpagehiddenfalse
 \Hy@pdfstringfalse
 \Hy@plainpagesfalse
 \Hy@raiselinksfalse
@@ -6220,21 +6218,6 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    The entry for the |/Hid| key in the page object is
-%    only necessary, if it is used and set to true for
-%    at least one time. If it is always false, then
-%    the |/Hid| key is not written to the pdf page
-%    object in order not to enlarge the pdf file.
-%    \begin{macrocode}
-\newif\ifHy@useHidKey
-\Hy@useHidKeyfalse
-\define@key{Hyp}{pdfpagehidden}[true]{%
-  \Hy@boolkey{pdfpagehidden}{#1}%
-  \ifHy@pdfpagehidden
-    \global\Hy@useHidKeytrue
-  \fi
-}
-%    \end{macrocode}
 %
 %    The value of the |bordercolor| options are not processed
 %    by the color package. Therefore the value consists of
@@ -14158,55 +14141,12 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    \begin{macro}{\hyper@pagehidden}
-%    The boolean value of the key |/Hid| is stored in switch
-%    \cmd{\ifHy@pdfpagehidden}.
-%    First previous |/Hid| entries are removed, then the new
-%    one is appended, if the value is true (the PDF default
-%    is false).
-%    \begin{macrocode}
-\def\hyper@pagehidden{%
-  \ifHy@useHidKey
-    \expandafter
-    \Hy@RemoveHidPageAttr\the\pdfpageattr^^J/Hid{} \END
-    \ifHy@pdfpagehidden
-      \edef\@processme{%
-        \global\pdfpageattr{%
-          \the\pdfpageattr
-          ^^J/Hid true % SPACE
-        }%
-      }%
-      \@processme
-    \fi
-  \fi
-}
-%    \end{macrocode}
-%    \end{macro}
-%    \begin{macro}{\Hy@RemoveHidPageAttr}
-%    Macro \cmd{\Hy@RemoveHidPageAttr} removes a |/Hid|
-%    entry from \cmd{\pdfpageattr}. It is called with
-%    the end marker |^^J/Hid{} \END|. The trick is the
-%    empty group that does not appear in legal
-%    \cmd{\pdfpageattr} code. It appears in argument
-%    |#2| and shows, whether the parameter text
-%    catches a really |/Hid| object or the end marker.
-%    \begin{macrocode}
-\gdef\Hy@RemoveHidPageAttr#1^^J/Hid#2#3 #4\END{%
-  \ifx\\#2\\%
-    \global\pdfpageattr{#1}%
-  \else
-    \Hy@RemoveHidPageAttr#1#4\END
-  \fi
-}
-%    \end{macrocode}
-%    \end{macro}
 %
 %    \begin{macrocode}
 \pdf@ifdraftmode{}{%
   \g@addto@macro\Hy@EveryPageHook{%
     \hyper@pagetransition
     \hyper@pageduration
-    \hyper@pagehidden
   }%
 }
 %    \end{macrocode}
@@ -15292,22 +15232,10 @@
 }
 %    \end{macrocode}
 %    \end{macro}
-%    \begin{macro}{\hyper@pagehidden}
-%    \begin{macrocode}
-\def\hyper@pagehidden{%
-  \ifHy@useHidKey
-    \special{pdf:put @thispage %
-      <</Hid \ifHy@pdfpagehidden true\else false\fi>>%
-    }%
-  \fi
-}
-%    \end{macrocode}
-%    \end{macro}
 %    \begin{macrocode}
 \g@addto@macro\Hy@EveryPageBoxHook{%
   \hyper@pagetransition
   \hyper@pageduration
-  \hyper@pagehidden
 }
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -15950,15 +15878,9 @@
       \fi
     \fi
   }%
-  \def\hyper@pagehidden{%
-    \ifHy@useHidKey
-      \special{!hidden\ifHy@pdfpagehidden +\else -\fi}%
-    \fi
-  }%
   \g@addto@macro\Hy@EveryPageBoxHook{%
     \hyper@pagetransition
     \hyper@pageduration
-    \hyper@pagehidden
   }%
 \fi
 %    \end{macrocode}
@@ -16352,26 +16274,10 @@
 }
 %    \end{macrocode}
 %    \end{macro}
-%    \begin{macro}{\hyper@pagehidden}
-%    \begin{macrocode}
-\def\hyper@pagehidden{%
-  \ifHy@useHidKey
-    \pdfmark{%
-      pdfmark=/PUT,%
-      Raw={%
-        \string{ThisPage\string}%
-        <</Hid \ifHy@pdfpagehidden true\else false\fi>>%
-      }%
-    }%
-  \fi
-}
-%    \end{macrocode}
-%    \end{macro}
 %    \begin{macrocode}
 \g@addto@macro\Hy@EveryPageBoxHook{%
   \hyper@pagetransition
   \hyper@pageduration
-  \hyper@pagehidden
 }
 %    \end{macrocode}
 %    \begin{macrocode}

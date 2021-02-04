@@ -706,33 +706,10 @@
     \Hy@RemoveDurPageAttr#1#4\END
   \fi
 }
-\def\hyper@pagehidden{%
-  \ifHy@useHidKey
-    \expandafter
-    \Hy@RemoveHidPageAttr\the\pdfpageattr^^J/Hid{} \END
-    \ifHy@pdfpagehidden
-      \edef\@processme{%
-        \global\pdfpageattr{%
-          \the\pdfpageattr
-          ^^J/Hid true % SPACE
-        }%
-      }%
-      \@processme
-    \fi
-  \fi
-}
-\gdef\Hy@RemoveHidPageAttr#1^^J/Hid#2#3 #4\END{%
-  \ifx\\#2\\%
-    \global\pdfpageattr{#1}%
-  \else
-    \Hy@RemoveHidPageAttr#1#4\END
-  \fi
-}
 \pdf@ifdraftmode{}{%
   \g@addto@macro\Hy@EveryPageHook{%
     \hyper@pagetransition
     \hyper@pageduration
-    \hyper@pagehidden
   }%
 }
 \Hy@AtBeginDocument{%

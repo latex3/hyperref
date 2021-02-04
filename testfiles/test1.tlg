@@ -1491,6 +1491,6 @@ Package `hyperref' Info: End of reference (link) `page.7', line 32.
 Package `hyperref' Info: End of reference (link) `page.3', line 38.
 Package `hyperref' Info: End of reference (link) `page.ii', line 39.
 ]) (test1.aux)
+LaTeX Warning: There were undefined references.
 Package rerunfilecheck Info: File `test1.out' has not changed.
 (rerunfilecheck)             Checksum: 907CDCA8E0E854E44300BE3D4C6716D9;2267.
-LaTeX Warning: There were undefined references.

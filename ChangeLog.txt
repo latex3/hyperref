@@ -18,6 +18,8 @@
     * removed outdated code to fix old ltxcmds code
     * removed outdated code to fix fancyvrb
     * removed code related to /Hid - deprecated in PDF 1.2
+    * removed patches for greeknumerals, the code is now in
+    babel-greek.
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

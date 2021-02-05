@@ -114,7 +114,7 @@ packtdszip = true
 -- l3build tag auto increases final letter
 -- l3build tag AUTO increases .two-digit number and sets final letter to 'a'
 
-tagfiles={"README","*.dtx","doc/*.tex"}
+tagfiles={"README.md","xr-hyper.sty","*.dtx","doc/*.tex"}
 function update_tag(file,content,tagname,tagdate)
 
 local tagpattern="(%d%d%d%d[-/]%d%d[-/]%d%d) v(%d+[.])(%d+)(%l)"

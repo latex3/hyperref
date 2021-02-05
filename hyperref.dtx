@@ -92,6 +92,7 @@
 %<psdextra>  Hyperref: Additions to PDF string support]
 %<lang> Hyperref: patches for babel languages]
 %<*driver>
+\PassOptionsToPackage{numbered}{hypdoc}
 \documentclass{ltxdoc}
 \usepackage{array,iftex}
 \iftutex
@@ -1964,7 +1965,7 @@
     \catcode62 \the\catcode62\relax % >
     \catcode64 \the\catcode64\relax % @
     \catcode91 \the\catcode91\relax % [
-    \catcode92 \the\catcode92\relax % \
+    \catcode92 \the\catcode92\relax % (backslash)
     \catcode93 \the\catcode93\relax % ]
     \catcode123 \the\catcode123\relax % {
     \catcode124 \the\catcode124\relax % |
@@ -1984,7 +1985,7 @@
   \catcode61 12 % =
   \catcode62 12 % >
   \catcode91 12 % [
-  \catcode92 0 % \
+  \catcode92 0 % (backslash)
   \catcode93 12 % ]
   \catcode123 1 % {
   \catcode124 12 % |
@@ -5691,7 +5692,7 @@
     \def\FancyVerbLineautorefname{Linje}%
     \def\theoremautorefname{Teorem}%
     \def\pageautorefname{side}%
-}    
+}
 \def\HyLang@danish{%
   \def\equationautorefname{Ligning}%
   \def\footnoteautorefname{fodnote}%

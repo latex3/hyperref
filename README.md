@@ -1,6 +1,6 @@
 # README for hyperref bundle
 
-Version 2020-05-15 v7.00e
+Version 2021-02-04 v7.00g
 
 ## INTRODUCTION
 
@@ -36,6 +36,8 @@ The main repository of hyperref is located at github
   https://github.com/latex3/hyperref
 
 ## INSTALLATION
+
+The easiest is to use the package manager of the TeX System.
 
 ### Installation with ZIP file in TDS format
 
@@ -78,6 +80,10 @@ Example for TeXLive:
  * Sebastian Rahtz (died 2016)
  * Heiko Oberdiek  (inactive)
  * The LaTeX3 Project
+
+## LICENSE
+
+LATEX Project Public License, version 1.3c or later.
 
 ## BUG REPORTS
 
@@ -132,16 +138,4 @@ Responsible for the additions to PU encoding for Arabi is
       ```
  * ...
 
-## TODO
 
- * modules
- * bookmark organisation
- * documentation
- * PDF threads
- * more for PDF forms
-   * per object setting
-   * vary gap between text and box
- * PostScript driver: the current implementation doesn't really support
-   nested links. The start positions should be remembered in a stack,
-   but there are complications with page breaks.
- * ...

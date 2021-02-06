@@ -27,7 +27,6 @@ tdslocations = {
   "doc/latex/hyperref/slides.pdf",
   "source/latex/hyperref/backref.dtx",
   "source/latex/hyperref/bmhydoc.sty",
-  "source/latex/hyperref/doc/fdl.tex",
   "source/latex/hyperref/doc/manual.tex",
   "source/latex/hyperref/doc/paperslides99.zip",
   "source/latex/hyperref/hluatex.dtx",
@@ -68,9 +67,9 @@ checkconfigs = {"build","config-pvt","config-3","config-xetex"}
 checkengines = {"pdftex","etex","luatex"}
 
 -- temp settings disable checks while testing ctan build
--- testfiledir= "disabled"
--- checkconfigs={}
--- checkengines = {"pdftex"}
+ testfiledir= "disabled"
+ checkconfigs={}
+ checkengines = {"pdftex"}
 
 checkruns = 2
 
@@ -82,19 +81,21 @@ sourcefiles = {
   "*-hyper.sty",
   "bmhydoc.sty",
   "paperslides99.zip",
-  "doc/fdl.tex",
-  "doc/manual.tex"
+  "doc/*.tex",
 }
+
+excludefiles={"hyperref/manual.tex"}
 
 typesetfiles = {"manual.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
 
 local function type_manual()
-  print("Typesetting manual")
+  print("Special Typesetting manual")
   local file = jobname("doc/manual.tex")
   errorlevel = (runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("htlatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + cp("*.html", typesetdir, docfiledir) + cp("*.css", typesetdir, docfiledir))
+  + cp("*.pdf", typesetdir, docfiledir)
   if errorlevel ~= 0 then
     error("Error!!: Typesetting "..file..".tex")
     return errorlevel

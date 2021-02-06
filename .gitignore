@@ -1,11 +1,6 @@
 build
 hyperref-ctan.zip
 *.pdf
-manual.html
-manual2.html
-manual3.html
-manual4.html
-manual5.html
-manual6.html
-manual7.html
-manual.css
+*.html
+*.css
+

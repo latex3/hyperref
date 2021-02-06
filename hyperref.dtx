@@ -20966,7 +20966,9 @@
 \DeclareTextCommand{\v}{PU}[1]{#1\83\014}% U+030C
 % U+030F COMBINING DOUBLE GRAVE ACCENT; dblgravecmb
 \DeclareTextCommand{\G}{PU}[1]{#1\83\017}% U+030F
+\ifx\CYRDZE\@undefined \else
 \DeclareTextCommand{\C}{PU}[1]{#1\83\017}% U+030F
+\fi
 % U+0311 COMBINING INVERTED BREVE; breveinvertedcmb
 \DeclareTextCommand{\textinvbreve}{PU}[1]{#1\83\021}% U+0311
 \DeclareTextCommand{\newtie}{PU}[1]{#1\83\021}% U+0311
@@ -22305,8 +22307,9 @@
 %    \end{macrocode}
 %
 % \subsubsection{Greek and Coptic: U+0370 to U+03FF}
-%
+% Greek is only loaded if \cs{textBeta} is defined.
 %    \begin{macrocode}
+\ifx\textBeta\@undefined \else
 % U+0374 GREEK NUMERAL SIGN; numeralsigngreek
 \DeclareTextCommand{\textnumeralsigngreek}{PU}{\83\164}% U+0374
 \DeclareTextCommand{\textdexiakeraia}{PU}{\83\164}% U+0374
@@ -22488,13 +22491,16 @@
 % U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL;
 %   \backepsilon (AmS)
 \DeclareTextCommand{\textbackepsilon}{PU}{\83\366}% U+03F6
+\fi
 %    \end{macrocode}
 %
 % \subsubsection{Cyrillic: U+0400 to U+04FF}
 %
 %    Thanks to Vladimir Volovich (\Email{vvv@vvv.vsu.ru}) for
 %    the help with the Cyrillic glyph names.
+%    Cyrillic only loaded if \cs{CYRDZE} is defined.
 %    \begin{macrocode}
+\ifx\CYRDZE\@undefined \else
 % U+0400 CYRILLIC CAPITAL LETTER IE WITH GRAVE
 \DeclareTextCompositeCommand{\`}{PU}{\CYRE}{\84\000}% U+0400
 % U+0401 CYRILLIC CAPITAL LETTER IO; Iocyrillic, *afii10023
@@ -23030,6 +23036,7 @@
 \DeclareTextCommand{\CYRHHK}{PU}{\84\374}% U+04FC
 % U+04FD CYRILLIC SMALL LETTER HA WITH HOOK
 \DeclareTextCommand{\cyrhhk}{PU}{\84\375}% U+04FD
+\fi
 %    \end{macrocode}
 %    |\84\376|: U+04FE CYRILLIC CAPITAL LETTER HA WITH STROKE\\
 %    |\84\377|: U+04FF CYRILLIC SMALL LETTER HA WITH STROKE
@@ -23037,7 +23044,9 @@
 % \subsubsection{Hebrew: U+0590 to U+05FF}
 %
 %    Macro names are taken from \texttt{he8enc.def}.
+%    hebrew is only loaded if \cs{hebdalet} is defined
 %    \begin{macrocode}
+\ifx\hebdalet\@undefined\else
 % U+05C3 HEBREW PUNCTUATION SOF PASUQ
 \DeclareTextCommand{\sofpasuq}{PU}{\85\303}% U+05C3
 % U+05D0 HEBREW LETTER ALEF
@@ -23101,6 +23110,7 @@
 \DeclareTextCommand{\vavyod}{PU}{\85\361}% U+05F1
 % U+05F2 HEBREW LIGATURE YIDDISH DOUBLE YOD
 \DeclareTextCommand{\doubleyod}{PU}{\85\362}% U+05F2
+\fi
 %    \end{macrocode}
 %
 % \subsubsection{Thai: U+0E00 to U+0E7F}

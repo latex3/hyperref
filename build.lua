@@ -3,15 +3,13 @@
 module = "hyperref"
 
 docfiledir   = "doc"
-docfiles     = {"paper.pdf", "slides.pdf", "*.gif", "*.html", "*.css"}
+docfiles     = {"paper.pdf", "slides.pdf", "*.html", "*.css"}
 textfiles    = {"*.md", "*.txt"}
 installfiles = {"*.def", "*.sty", "*.cfg"}
 tdslocations = {
   "doc/latex/hyperref/ChangeLog.txt",
   "doc/latex/hyperref/README.md",
   "doc/latex/hyperref/backref.pdf",
-  "doc/latex/hyperref/cmmi10-22.gif",
-  "doc/latex/hyperref/cmsy10-21.gif",
   "doc/latex/hyperref/hyperref.pdf",
   "doc/latex/hyperref/manifest.txt",
   "doc/latex/hyperref/hyperref-doc.css",

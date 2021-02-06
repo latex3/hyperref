@@ -71,9 +71,9 @@ psdextra.def
 % Directory doc/
 % =============
 
-manual.pdf
-        Manual, but a little out of date.
-manual.html, manual[2-6].html, manual.css,
+hyperref-doc.pdf
+        Hyperref manual
+hyperref-doc.html, hyperref-doc[2-7].html, hyperref-doc.css,
 cmsy10-21.gif, cmmi10-22.gif
         HTML version of the manual.
 paper.pdf

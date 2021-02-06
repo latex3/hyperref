@@ -14,20 +14,20 @@ tdslocations = {
   "doc/latex/hyperref/cmsy10-21.gif",
   "doc/latex/hyperref/hyperref.pdf",
   "doc/latex/hyperref/manifest.txt",
-  "doc/latex/hyperref/manual.css",
-  "doc/latex/hyperref/manual.html",
-  "doc/latex/hyperref/manual.pdf",
-  "doc/latex/hyperref/manual2.html",
-  "doc/latex/hyperref/manual3.html",
-  "doc/latex/hyperref/manual4.html",
-  "doc/latex/hyperref/manual5.html",
-  "doc/latex/hyperref/manual6.html",
+  "doc/latex/hyperref/hyperref-doc.css",
+  "doc/latex/hyperref/hyperref-doc.html",
+  "doc/latex/hyperref/hyperref-doc.pdf",
+  "doc/latex/hyperref/hyperref-doc2.html",
+  "doc/latex/hyperref/hyperref-doc3.html",
+  "doc/latex/hyperref/hyperref-doc4.html",
+  "doc/latex/hyperref/hyperref-doc5.html",
+  "doc/latex/hyperref/hyperref-doc6.html",
   "doc/latex/hyperref/nameref.pdf",
   "doc/latex/hyperref/paper.pdf",
   "doc/latex/hyperref/slides.pdf",
   "source/latex/hyperref/backref.dtx",
   "source/latex/hyperref/bmhydoc.sty",
-  "source/latex/hyperref/doc/manual.tex",
+  "source/latex/hyperref/doc/hyperref-doc.tex",
   "source/latex/hyperref/doc/paperslides99.zip",
   "source/latex/hyperref/hluatex.dtx",
   "source/latex/hyperref/hyperref.dtx",
@@ -84,13 +84,13 @@ sourcefiles = {
   "doc/*.tex",
 }
 
-excludefiles={"hyperref/manual.tex"}
+excludefiles={"hyperref/hyperref-doc.tex"}
 
-typesetfiles = {"manual.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
+typesetfiles = {"hyperref-doc.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
 
 local function type_manual()
-  print("Special Typesetting manual")
-  local file = jobname("doc/manual.tex")
+  print("Special Typesetting hyperref-doc")
+  local file = jobname("doc/hyperref-doc.tex")
   errorlevel = (runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("htlatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
@@ -104,7 +104,7 @@ local function type_manual()
 end
 
 specialtypesetting = { }
-specialtypesetting["manual.tex"] = {func = type_manual}
+specialtypesetting["hyperref-doc.tex"] = {func = type_manual}
 
 cleanfiles = { "doc/*.html", "doc/*.css"}
 

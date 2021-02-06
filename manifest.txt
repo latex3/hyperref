@@ -3,6 +3,8 @@
 
 hyperref.dtx
         Main package with various drivers.
+hluatex.dtx
+        luatex back end for hyperref.
 backref.dtx
         Bibliographical back referencing.
 nameref.dtx
@@ -54,6 +56,7 @@ htexture.def
 hdvipson.def
 hdvips.def
 hpdftex.def
+hluatex.def
 hdviwind.def
 htex4ht.def
 hvtex.def
@@ -74,7 +77,6 @@ psdextra.def
 hyperref-doc.pdf
         Hyperref manual
 hyperref-doc.html, hyperref-doc[2-7].html, hyperref-doc.css,
-cmsy10-21.gif, cmmi10-22.gif
         HTML version of the manual.
 paper.pdf
         Online version of paper for Heiko Oberdiek's talk

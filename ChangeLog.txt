@@ -1,4 +1,4 @@
-2021-02-06 Ulrike Fischer/David Carlisle
+2021-02-07 Ulrike Fischer/David Carlisle
     * renamed the manual to hyperref-doc
     * moved the license of the documentation into the file
     * puenc.def defines cyrillic command, specially \C, only if
@@ -7,6 +7,8 @@
       \textBeta has been defined previously
     * puenc.def defines hebrew command only if
       \hebdalet has been defined previously
+    * ntheorem-hyper.sty made an obsolete stub
+      as ntheorem has been hyperref-compatible for some years.
 
 2021-02-04 Ulrike Fischer
     * corrected the definition of \begin/\end in \pdfstringdef

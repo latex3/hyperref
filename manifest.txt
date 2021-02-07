@@ -17,9 +17,9 @@ hyperref.ins
         Docstrip batch file.
 
 minitoc-hyper.sty
-        Patched version of `minitoc.sty' to work with `hyperref.sty'.
+        Obsolete, now just calls minitoc.
 ntheorem-hyper.sty
-        Patched version of `ntheorem.sty' to work with `hyperref.sty'.
+        Obsolete, now just calls ntheorem.
 xr-hyper.sty
         Patched version of `xr.sty' to work with `hyperref.sty'.
 

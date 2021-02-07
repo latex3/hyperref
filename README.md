@@ -79,7 +79,7 @@ Example for TeXLive:
 
  * Sebastian Rahtz (died 2016)
  * Heiko Oberdiek  (inactive)
- * The LaTeX3 Project
+ * The LaTeX Project
 
 ## LICENSE
 

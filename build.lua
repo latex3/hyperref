@@ -82,6 +82,25 @@ sourcefiles = {
   "doc/*.tex",
 }
 
+
+
+
+
+function checkinit_hook ()
+local dvipdfmxversion=0
+local pipe = io.popen'xdvipdfmx --version'
+for line in pipe:lines() do
+    if string.match(line,"xdvipdfmx Version") then
+      dvipdfmxversion=tonumber(string.match(line,"%d+"))
+     end
+end
+pipe:close()
+if (dvipdfmxversion <= 20200315) then
+excludetests={"unicode-test"}
+end
+end
+
+
 excludefiles={"hyperref/hyperref-doc.tex"}
 
 typesetfiles = {"hyperref-doc.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}

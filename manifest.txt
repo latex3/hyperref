@@ -66,6 +66,7 @@ hxetex.def
         Hyperref drivers.
 pd1enc.def
 puenc.def
+puenc-extra.def
 puvnenc.def
 puarenc.def
 psdextra.def
@@ -83,4 +84,3 @@ paper.pdf
         at EuroTeX'99.
 slides.pdf
         Slides for Heiko Oberdiek's talk at EuroTeX'99.
-

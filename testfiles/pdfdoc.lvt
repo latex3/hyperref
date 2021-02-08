@@ -1,0 +1,10 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[unicode=false]{hyperref}
+
+\begin{document}
+\START
+\show\textManFace
+
+blub
+\end{document}

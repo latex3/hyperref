@@ -47,6 +47,7 @@
 %<tex4htcfg>\ProvidesFile{htex4ht.cfg}
 %<pd1enc>\ProvidesFile{pd1enc.def}
 %<puenc>\ProvidesFile{puenc.def}
+%<puextra>\ProvidesFile{puencextra.def}
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
@@ -87,6 +88,7 @@
 %<tex4htcfg>  Hyperref configuration file for TeX4ht]
 %<pd1enc>  Hyperref: PDFDocEncoding definition (HO)]
 %<puenc>  Hyperref: PDF Unicode definition (HO)]
+%<puextra>  Hyperref: PDF Unicode extra definition (HO)]
 %<puvnenc>  Hyperref: Additions to puenc.def for VnTeX]
 %<puarenc>  Hyperref: Additions to puenc.def for Arabi]
 %<psdextra>  Hyperref: Additions to PDF string support]
@@ -20964,8 +20966,10 @@
 \DeclareTextCommand{\H}{PU}[1]{#1\83\013}% U+030B
 % U+030C COMBINING CARON; caroncmb
 \DeclareTextCommand{\v}{PU}[1]{#1\83\014}% U+030C
+%</puenc>
 % U+030F COMBINING DOUBLE GRAVE ACCENT; dblgravecmb
-\DeclareTextCommand{\G}{PU}[1]{#1\83\017}% U+030F
+%<puextra>\DeclareTextCommand{\G}{PU}[1]{#1\83\017}% U+030F
+%<*puenc>
 \ifx\CYRDZE\@undefined \else
 \DeclareTextCommand{\C}{PU}[1]{#1\83\017}% U+030F
 \fi
@@ -21016,7 +21020,9 @@
 \DeclareTextCompositeCommand{\.}{PU}{\@empty}{\textdotaccent}%
 \DeclareTextCompositeCommand{\c}{PU}{\@empty}{\textcedilla}%
 \DeclareTextCompositeCommand{\u}{PU}{\@empty}{\textasciibreve}%
-\DeclareTextCompositeCommand{\G}{PU}{\@empty}{\textdoublegrave}%
+%</puenc>
+%<puextra>\DeclareTextCompositeCommand{\G}{PU}{\@empty}{\textdoublegrave}%
+%<*puenc>
 \DeclareTextCompositeCommand{\=}{PU}{\@empty}{\textasciimacron}%
 \DeclareTextCompositeCommand{\H}{PU}{\@empty}{\texthungarumlaut}%
 \DeclareTextCompositeCommand{\k}{PU}{\@empty}{\textogonek}%
@@ -21045,7 +21051,9 @@
 \DeclareTextCompositeCommand{\.}{PU}{\ }{\textdotaccent}%
 \DeclareTextCompositeCommand{\c}{PU}{\ }{\textcedilla}%
 \DeclareTextCompositeCommand{\u}{PU}{\ }{\textasciibreve}%
-\DeclareTextCompositeCommand{\G}{PU}{\ }{\textdoublegrave}%
+%</puenc>
+%<puextra>\DeclareTextCompositeCommand{\G}{PU}{\ }{\textdoublegrave}%
+%<*puenc>
 \DeclareTextCompositeCommand{\=}{PU}{\ }{\textasciimacron}%
 \DeclareTextCompositeCommand{\H}{PU}{\ }{\texthungarumlaut}%
 \DeclareTextCompositeCommand{\k}{PU}{\ }{\textogonek}%
@@ -21841,6 +21849,8 @@
 % U+01FF LATIN SMALL LETTER O WITH STROKE AND ACUTE;
 %   *oslashacute, ostrokeacute
 \DeclareTextCompositeCommand{\'}{PU}{\o}{\81\377}% U+01FF
+%</puenc>
+%<*puextra>
 % U+0200 LATIN CAPITAL LETTER A WITH DOUBLE GRAVE; Adblgrave
 \DeclareTextCompositeCommand{\G}{PU}{A}{\82\000}% U+0200
 % U+0201 LATIN SMALL LETTER A WITH DOUBLE GRAVE; adblgrave
@@ -21849,28 +21859,40 @@
 \DeclareTextCompositeCommand{\G}{PU}{E}{\82\004}% U+0204
 % U+0205 LATIN SMALL LETTER E WITH DOUBLE GRAVE; edblgrave
 \DeclareTextCompositeCommand{\G}{PU}{e}{\82\005}% U+0205
+%</puextra>
+%<*puenc>
 % U+0206 LATIN CAPITAL LETTER E WITH INVERTED BREVE; Einvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{E}{\82\006}% U+0206
 % U+0207 LATIN SMALL LETTER E WITH INVERTED BREVE; einvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{e}{\82\007}% U+0207
+%</puenc>
+%<*puextra>
 % U+0208 LATIN CAPITAL LETTER I WITH DOUBLE GRAVE; Idblgrave
 \DeclareTextCompositeCommand{\G}{PU}{I}{\82\010}% U+0208
 % U+0209 LATIN SMALL LETTER I WITH DOUBLE GRAVE; idblgrave
 \DeclareTextCompositeCommand{\G}{PU}{\i}{\82\011}% U+0209
 \DeclareTextCompositeCommand{\G}{PU}{i}{\82\011}% U+0209
+%</puextra>
+%<*puenc>
 % U+020A LATIN CAPITAL LETTER I WITH INVERTED BREVE; Iinvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{I}{\82\012}% U+020A
 % U+020B LATIN SMALL LETTER I WITH INVERTED BREVE; iinvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{i}{\82\013}% U+020B
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{\i}{\82\013}% U+020B
+%</puenc>
+%<*puextra>
 % U+020C LATIN CAPITAL LETTER O WITH DOUBLE GRAVE; Odblgrave
 \DeclareTextCompositeCommand{\G}{PU}{O}{\82\014}% U+020C
 % U+020D LATIN SMALL LETTER O WITH DOUBLE GRAVE; odblgrave
 \DeclareTextCompositeCommand{\G}{PU}{o}{\82\015}% U+020D
+%</puextra>
+%<*puenc>
 % U+020E LATIN CAPITAL LETTER O WITH INVERTED BREVE; Oinvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{O}{\82\016}% U+020E
 % U+020F LATIN SMALL LETTER O WITH INVERTED BREVE; oinvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{o}{\82\017}% U+020F
+%</puenc>
+%<*puextra>
 % U+0210 LATIN CAPITAL LETTER R WITH DOUBLE GRAVE; Rdblgrave
 \DeclareTextCompositeCommand{\G}{PU}{R}{\82\020}% U+0210
 % U+0211 LATIN SMALL LETTER R WITH DOUBLE GRAVE; rdblgrave
@@ -21879,6 +21901,8 @@
 \DeclareTextCompositeCommand{\G}{PU}{U}{\82\024}% U+0214
 % U+0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE; udblgrave
 \DeclareTextCompositeCommand{\G}{PU}{u}{\82\025}% U+0215
+%</puextra>
+%<*puenc>
 % U+0216 LATIN CAPITAL LETTER U WITH INVERTED BREVE; Uinvertedbreve
 \DeclareTextCompositeCommand{\textinvbreve}{PU}{U}{\82\026}% U+0216
 % U+0217 LATIN SMALL LETTER U WITH INVERTED BREVE; uinvertedbreve

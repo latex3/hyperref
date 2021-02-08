@@ -2815,7 +2815,7 @@
 %    \cs{HyPsd@hyspacetest} replaces the \cs{hspace} by a space, if
 %    the length is greater than zero.
 %    \begin{macrocode}
-\def\HyPsd@hspacetest#1{\ifdim#1>\z@\space\fi}
+\def\HyPsd@hspacetest#1{\ifdim\dimexpr#1\relax>\z@\space\fi}
 %    \end{macrocode}
 %    \end{macro}
 %

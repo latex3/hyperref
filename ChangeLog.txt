@@ -1,3 +1,11 @@
+2021-02-08 Ulrike Fischer/David Carlisle
+    * moved definitions for \G accent to an extra file
+      puenc-extra.def, which can be loaded manually
+    * moved the loading of puenc.def so that it can be suppressed
+    with pdflatex
+    * correct the hspace command in pdfstringdef, so that it
+    accepts some calc syntax.
+
 2021-02-07 Ulrike Fischer/David Carlisle
     * renamed the manual to hyperref-doc
     * moved the license of the documentation into the file

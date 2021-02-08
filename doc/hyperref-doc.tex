@@ -559,7 +559,7 @@ plainpages     & boolean & false & Forces page anchors to be named by the Arabic
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
                                simply the base line of contained text; this options forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
-breaklinks & boolean & both & This option is in hyperref only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package 
+breaklinks & boolean & both & This option is in hyperref only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
 checks the state of the boolean.\\
 pageanchor & boolean & true  & Determines whether every page is given an implicit anchor at the top left corner. If this
                                is turned off, \verb|\printindex| will not contain
@@ -1016,7 +1016,7 @@ runcolor           & \textit{filecolor}     & color of `run' links\\
 setpagesize        & \textit{true}          & set page size by special driver commands \\
 tex4ht             &                        & use \textsf{\TeX4ht} backend \\
 textures           &                        & use \textsf{Textures} backend \\
-unicode            & \textit{true}          & Unicode encoded pdf strings, starting with version  2021-02-07 v7.00h set by default to true for all engines. \\
+unicode            & \textit{true}          & Unicode encoded pdf strings, starting with version v7.00g set by default to true for all engines. It will load a number of definitions in puenc.def. It can be set to false for pdflatex, but this is not recommended.\\
 urlbordercolor     & \textit{0 1 1}         & color of border around URL links \\
 urlcolor           & \textit{magenta}       & color of URL links \\
 verbose            & \textit{false}         & be chatty \\
@@ -2218,6 +2218,24 @@ where an anchor is set.
 Now the entry in the table of contents (and bookmarks) for the
 index points to the start of the index page, not to a location
 before this page.
+
+\subsection{puenc encoding and puenc-extra.def}
+
+The \texttt{unicode} option loads for the bookmarks \texttt{puenc.def} which contains 
+quite a lot definitions of commands for the bookmarks. 
+As \texttt{unicode} is now true for all engines, this file is now also loaded 
+with pdflatex. Some of the definitions in \texttt{puenc.def} clash with other uses.
+To reduce the impact \xpackage{hyperref} uses two strategies.
+
+\begin{itemize}
+\item A number of command are only defined conditionally:
+The commands for the cyrillic block  if \cs{CYRDZE} is defined,
+greek if \cs{textBeta} is defined, and hebrew if \cs{hebdalet} is defined.
+
+\item Other commands are moved to an extra file \texttt{puenc-extra.def}
+which is not loaded automatically, but can be loaded in the preamble if needed.
+Currently this file contains all definitions for the accent \cs{G}.
+\end{itemize}
 
 
 

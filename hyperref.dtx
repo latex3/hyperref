@@ -1231,15 +1231,17 @@
 %    Because the box shifting
 %    used in the \TeX{} logo does not work while writing to a file,
 %    the standard \TeX{} logos are redefined.
+%    We use the direct PU code to avoid problems if
+%    \cs{textepsilon} is not defined.
 %    \begin{macrocode}
     \def\TeX{TeX}%
     \def\LaTeX{La\TeX}%
     \def\LaTeXe{%
       \LaTeX2%
-      \ifHy@unicode\textepsilon\else e\fi
+      \ifHy@unicode\83\265\else e\fi
     }%
     \def\eTeX{%
-      \ifHy@unicode\textepsilon\else e\fi
+      \ifHy@unicode\83\265\else e\fi
       -\TeX%
     }%
     \def\SliTeX{Sli\TeX}%

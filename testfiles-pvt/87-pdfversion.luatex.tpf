@@ -1,0 +1,122 @@
+%PDF-2.0
+%Ã’¡‘≈ÿ–ƒ∆
+1 0 obj
+<< /S /GoTo /D [ 2 0 R /Fit ] >>
+endobj
+4 0 obj
+<< /Length 109 >>        
+stream
+BT
+/F23 9.96264 Tf
+1 0 0 1 148.712 657.235 Tm [<00230048006D0023>]TJ
+1 0 0 1 303.133 89.365 Tm [<0052>]TJ
+ET
+endstream
+endobj
+2 0 obj
+<< /Type /Page /Contents 4 0 R /Resources 3 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R >>
+endobj
+5 0 obj
+<< /D [ 2 0 R /XYZ 132.768 705.06 null ] >>
+endobj
+6 0 obj
+<< /D [ 2 0 R /XYZ 133.768 667.198 null ] >>
+endobj
+3 0 obj
+<< /Font << /F23 7 0 R >> >>
+endobj
+9 0 obj
+[ 35 [ 556 ] 72 [ 278 ] 82 [ 500 ] 109 [ 556 ] ]
+endobj
+11 0 obj
+<< /Subtype /CIDFontType0C /Length 873 >>        
+[BINARY STREAM]
+endobj
+10 0 obj
+<< /Type /FontDescriptor /FontName /LREOIX+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 11 0 R >>
+endobj
+12 0 obj
+<< /Length 734 >>        
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-LREOIX-LMRoman10-Regular-0)
+%%Title: (TeX-LREOIX-LMRoman10-Regular-0 TeX LREOIX-LMRoman10-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (LREOIX-LMRoman10-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-LREOIX-LMRoman10-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+4 beginbfchar
+<0023> <0062>
+<0048> <006C>
+<0052> <0031>
+<006D> <0075>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /LREOIX+LMRoman10-Regular /DescendantFonts [ 13 0 R ] /ToUnicode 12 0 R >>
+endobj
+13 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /LREOIX+LMRoman10-Regular /FontDescriptor 10 0 R /W 9 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+8 0 obj
+<< /Type /Pages  /Count 1 /Kids [ 2 0 R ] >>
+endobj
+14 0 obj
+<< /Names [ (Doc-Start) 6 0 R (page.1) 5 0 R ] /Limits [ (Doc-Start) (page.1) ] >>
+endobj
+15 0 obj
+<< /Dests 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Catalog /Pages 8 0 R /Names 15 0 R /PageMode/UseOutlines /OpenAction 1 0 R >>
+endobj
+17 0 obj
+<< /Producer (LuaTeX)/Author()/Title()/Subject()/Creator(LaTeX with hyperref)/Keywords() /Trapped /False >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000020 00000 n 
+0000000236 00000 n 
+0000000461 00000 n 
+0000000068 00000 n 
+0000000342 00000 n 
+0000000401 00000 n 
+0000002541 00000 n 
+0000002893 00000 n 
+0000000505 00000 n 
+0000001526 00000 n 
+0000000569 00000 n 
+0000001747 00000 n 
+0000002694 00000 n 
+0000002953 00000 n 
+0000003052 00000 n 
+0000003088 00000 n 
+0000003192 00000 n 
+trailer
+<< /Size 18 /Root 16 0 R /Info 17 0 R >>
+startxref
+3316
+%%EOF

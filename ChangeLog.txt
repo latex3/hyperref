@@ -10,6 +10,8 @@
     package options.
     * added a \lastnodetype test to distinguish explict 0pt vskip from no skip
     in \Hy@SaveLastskip issue 167
+    * enable setting the pdfversion with the xetex/dvipdfm driver,
+    (related: issue 87)
 
 
 2021-02-08 Ulrike Fischer/David Carlisle

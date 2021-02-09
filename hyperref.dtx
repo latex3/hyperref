@@ -10246,7 +10246,13 @@
   \endgroup}
 %</xetex>
 %    \end{macrocode}
-%
+% set the pdf version
+%    \begin{macrocode}
+%<*dvipdfm|xetex>
+\special{pdf:majorversion \Hy@pdf@majorversion}
+\special{pdf:minorversion \Hy@pdf@minorversion}
+%</dvipdfm|xetex>
+%    \end{macrocode}
 % \subsubsection{pdfmarkbase, dvipdfm, xetex}
 %
 %    \begin{macrocode}

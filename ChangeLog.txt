@@ -5,7 +5,9 @@
     * added \special{dvipdfmx:config C 0x10} to the xetex and
     dvipdfmx driver to avoid problems with links to external files.
       See issue 118.
-    * if platex is detected unicode is set to false, issue #171  
+    * if platex is detected unicode is set to false, issue #171
+    * reverted the delayed loading of puenc.def as it breaks
+    package options. 
 
 
 2021-02-08 Ulrike Fischer/David Carlisle

@@ -14552,7 +14552,12 @@
 %    \end{macrocode}
 % \subsection{dvipdfm/xetex dvi to PDF converter}
 % Provided by Mark Wicks (mwicks@kettering.edu)
+%
+% (x)dvipdfmx replaces destination names by numbers. This makes it impossible
+% to link from an external document with xr-hyper, so from version 7.00j on
+% this is suppressed with a config special.
 %    \begin{macrocode}
+\special{dvipdfmx:config C 0x10}
 \providecommand*{\XR@ext}{pdf}
 \Hy@setbreaklinks{true}
 \def\HyPat@ObjRef{%

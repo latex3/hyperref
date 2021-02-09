@@ -1,3 +1,12 @@
+2021-02-XX Ulrike Fischer/David Carlisle
+    * moved definition for \U accent into the cyrillic block.
+      So it is only defined if \CYRDZE has been defined previously.
+    * Some clarifications in the manual.
+    * added \special{dvipdfmx:config C 0x10} to the xetex and
+    dvipdfmx driver to avoid problems with links to external files.
+      See issue 118.
+
+
 2021-02-08 Ulrike Fischer/David Carlisle
     * moved definitions for \G accent to an extra file
       puenc-extra.def, which can be loaded manually

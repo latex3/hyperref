@@ -904,7 +904,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
 ...\pdfdest name{testpiccy} xyz
-...\penalty 10000
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 6.18686
 ...\hbox(7.41315+2.1243)x360.0, glue set 302.4249fil, direction TLT

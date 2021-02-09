@@ -20962,7 +20962,9 @@
 \DeclareTextCommand{\=}{PU}[1]{#1\83\004}% U+0304
 % U+0306 COMBINING BREVE; brevecmb
 \DeclareTextCommand{\u}{PU}[1]{#1\83\006}% U+0306
+\ifx\CYRDZE\@undefined \else
 \DeclareTextCommand{\U}{PU}[1]{#1\83\006}% U+0306
+\fi
 % U+0307 COMBINING DOT ABOVE; dotaccentcmb
 \DeclareTextCommand{\.}{PU}[1]{#1\83\007}% U+0307
 % U+0308 COMBINING DIAERESIS; dieresiscmb

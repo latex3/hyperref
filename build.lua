@@ -56,6 +56,7 @@ tdslocations = {
   "tex/latex/hyperref/psdextra.def",
   "tex/latex/hyperref/puarenc.def",
   "tex/latex/hyperref/puenc.def",
+  "tex/latex/hyperref/puenc-extra.def",
   "tex/latex/hyperref/puvnenc.def",
   "tex/latex/hyperref/xr-hyper.sty"
 }

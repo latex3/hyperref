@@ -4896,6 +4896,7 @@
 % change 2020-08-14, use unicode by default:
 %    \begin{macrocode}
 \let\HyPsd@pdfencoding\HyPsd@pdfencoding@unicode
+\HyPsd@LoadUnicode
 \def\HyPsd@LoadStringEnc{%
   \RequirePackage{stringenc}[2009/12/15]%
   \let\HyPsd@LoadStringEnc\relax
@@ -6827,12 +6828,6 @@
 %    \end{macrocode}
 %
 %    After processing options.
-% \subsection{Load unicode support}
-%    \begin{macrocode}
-\ifHy@unicode
-  \HyPsd@LoadUnicode
-\fi
-%    \end{macrocode}
 %
 % \subsection{Package xspace support}
 %

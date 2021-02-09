@@ -2221,9 +2221,9 @@ before this page.
 
 \subsection{puenc encoding and puenc-extra.def}
 
-The \texttt{unicode} option loads for the bookmarks \texttt{puenc.def} which contains 
-quite a lot definitions of commands for the bookmarks. 
-As \texttt{unicode} is now true for all engines, this file is now also loaded 
+The \texttt{unicode} option loads for the bookmarks \texttt{puenc.def} which contains
+quite a lot definitions of commands for the bookmarks.
+As \texttt{unicode} is now true for all engines, this file is now also loaded
 with pdflatex. Some of the definitions in \texttt{puenc.def} clash with other uses.
 To reduce the impact \xpackage{hyperref} uses two strategies.
 
@@ -2281,7 +2281,9 @@ Help(Windows)                 & About
 \end{longtable}
 
 \section{PDF and HTML forms}
-You must put your fields inside a \texttt{Form} environment (only one per file).
+You must put your fields inside a \texttt{Form} environment.
+The environment does some general setups, so should be used only once in a document. 
+Using simply \cs{Form} at the begin of the document is possible too. 
 
 There are six macros to prepare fields:
 

@@ -7,7 +7,9 @@
       See issue 118.
     * if platex is detected unicode is set to false, issue #171
     * reverted the delayed loading of puenc.def as it breaks
-    package options. 
+    package options.
+    * added a \lastnodetype test to distinguish explict 0pt vskip from no skip
+    in \Hy@SaveLastskip issue 167
 
 
 2021-02-08 Ulrike Fischer/David Carlisle

@@ -1,0 +1,11 @@
+\input{regression-test}
+
+\documentclass{article}
+
+\usepackage[psdextra]{hyperref}
+
+\begin{document}
+\START 
+
+\section{Math shortnames in bookmarks \texorpdfstring{kappa}{\kappa}}
+\end{document}

@@ -2219,7 +2219,7 @@ Now the entry in the table of contents (and bookmarks) for the
 index points to the start of the index page, not to a location
 before this page.
 
-\subsection{puenc encoding and puenc-extra.def}
+\subsection{puenc encoding, puenc-greek.def and puenc-extra.def}
 
 The \texttt{unicode} option loads for the bookmarks \texttt{puenc.def} which contains
 quite a lot definitions of commands for the bookmarks.
@@ -2231,6 +2231,9 @@ To reduce the impact \xpackage{hyperref} uses two strategies.
 \item A number of command are only defined conditionally:
 The commands for the cyrillic block  if \cs{CYRDZE} is defined,
 greek if \cs{textBeta} is defined, and hebrew if \cs{hebdalet} is defined.
+
+The greek block is in an extra file, \texttt{puenc-greek.def}, which can
+be loaded manually if needed.
 
 \item Other commands are moved to an extra file \texttt{puenc-extra.def}
 which is not loaded automatically, but can be loaded in the preamble if needed.
@@ -2282,8 +2285,8 @@ Help(Windows)                 & About
 
 \section{PDF and HTML forms}
 You must put your fields inside a \texttt{Form} environment.
-The environment does some general setups, so should be used only once in a document. 
-Using simply \cs{Form} at the begin of the document is possible too. 
+The environment does some general setups, so should be used only once in a document.
+Using simply \cs{Form} at the begin of the document is possible too.
 
 There are six macros to prepare fields:
 

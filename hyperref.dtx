@@ -47,7 +47,8 @@
 %<tex4htcfg>\ProvidesFile{htex4ht.cfg}
 %<pd1enc>\ProvidesFile{pd1enc.def}
 %<puenc>\ProvidesFile{puenc.def}
-%<puextra>\ProvidesFile{puencextra.def}
+%<puextra>\ProvidesFile{puenc-extra.def}
+%<pugreek>\ProvidesFile{puenc-greek.def}
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
@@ -87,8 +88,9 @@
 %<tex4ht>\Hy@VersionCheck{htex4ht.def}
 %<tex4htcfg>  Hyperref configuration file for TeX4ht]
 %<pd1enc>  Hyperref: PDFDocEncoding definition (HO)]
-%<puenc>  Hyperref: PDF Unicode definition (HO)]
+%<puenc>      Hyperref: PDF Unicode definition (HO)]
 %<puextra>  Hyperref: PDF Unicode extra definition (HO)]
+%<pugreek>  Hyperref: PDF Unicode definition (greek block) (HO)]
 %<puvnenc>  Hyperref: Additions to puenc.def for VnTeX]
 %<puarenc>  Hyperref: Additions to puenc.def for Arabi]
 %<psdextra>  Hyperref: Additions to PDF string support]
@@ -2069,6 +2071,10 @@
 \def\HyPsd@LoadExtra{%
   \ifHy@psdextra
     \ltx@iffileloaded{puenc.def}{%
+      \ltx@iffileloaded{puenc-greek.def}{}{%
+       \Hy@SaveCatcodeSettings{pu}%
+       \input{puenc-greek.def}%
+       \Hy@RestoreCatcodeSettings{pu}}%
       \Hy@SaveCatcodeSettings{psdextra}%
       \input{psdextra.def}%
       \Hy@RestoreCatcodeSettings{psdextra}%
@@ -22359,6 +22365,10 @@
 % Greek is only loaded if \cs{textBeta} is defined.
 %    \begin{macrocode}
 \ifx\textBeta\@undefined \else
+\input{puenc-greek.def}
+\fi
+%</puenc>
+%<*pugreek>
 % U+0374 GREEK NUMERAL SIGN; numeralsigngreek
 \DeclareTextCommand{\textnumeralsigngreek}{PU}{\83\164}% U+0374
 \DeclareTextCommand{\textdexiakeraia}{PU}{\83\164}% U+0374
@@ -22540,7 +22550,7 @@
 % U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL;
 %   \backepsilon (AmS)
 \DeclareTextCommand{\textbackepsilon}{PU}{\83\366}% U+03F6
-\fi
+%</pugreek>
 %    \end{macrocode}
 %
 % \subsubsection{Cyrillic: U+0400 to U+04FF}
@@ -22549,6 +22559,7 @@
 %    the help with the Cyrillic glyph names.
 %    Cyrillic only loaded if \cs{CYRDZE} is defined.
 %    \begin{macrocode}
+%<*puenc>
 \ifx\CYRDZE\@undefined \else
 % U+0400 CYRILLIC CAPITAL LETTER IE WITH GRAVE
 \DeclareTextCompositeCommand{\`}{PU}{\CYRE}{\84\000}% U+0400

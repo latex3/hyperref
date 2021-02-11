@@ -1,4 +1,7 @@
 2021-02-09 Ulrike Fischer/David Carlisle
+    * moved the PU-declarations for greek to an extra file
+      puenc-greek.ldf and force loading if the options psdextra is
+      used.
     * moved definition for \U accent into the cyrillic block.
       So it is only defined if \CYRDZE has been defined previously.
     * Some clarifications in the manual.
@@ -7,7 +10,7 @@
       See issue #118.
     * if platex is detected unicode is set to false, issue #171
     * reverted the delayed loading of puenc.def as it breaks
-    package options.
+    package options issue #172
     * added a \lastnodetype test to distinguish explict 0pt vskip from no skip
     in \Hy@SaveLastskip issue #167
     * enable setting the pdfversion with the xetex/dvipdfm driver,

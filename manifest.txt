@@ -67,6 +67,7 @@ hxetex.def
 pd1enc.def
 puenc.def
 puenc-extra.def
+puenc-greek.def
 puvnenc.def
 puarenc.def
 psdextra.def

@@ -98,7 +98,7 @@ for line in pipe:lines() do
 end
 pipe:close()
 if (dvipdfmxversion <= 20200315) then
-excludetests={"unicode-test"}
+excludetests={"unicode-test","87-pdfversion"}
 end
 end
 

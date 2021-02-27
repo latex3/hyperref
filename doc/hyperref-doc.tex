@@ -17,14 +17,14 @@
 \def\mydate{January 2020}
 
 \RequirePackage{iftex}
-\ifpdf % We are running pdfTeX in pdf mode
-\ifx\directlua\undefinded
-\documentclass[pdftex]{article}
-\else
-\documentclass[luatex]{article}
-\fi
-\else
-\documentclass{article}
+\ifpdf % We are running in pdf mode
+  \ifLuaTeX
+    \documentclass[luatex]{article}
+  \else % what about others...
+    \documentclass[pdftex]{article}
+  \fi
+\else % not-PDF
+  \documentclass{article}
 \fi
 
 
@@ -33,7 +33,7 @@
 
 \usepackage{hologo}
 
-\def\OzTeX{O\kern-0.03em z\kern-0.15em \TeX}
+\def\OzTeX{\hologo{OzTeX}}
 
 \newcommand*{\cs}[1]{%
   \texttt{\textbackslash #1}%
@@ -136,18 +136,18 @@
 \makeatother
 
 \usepackage{array,longtable}
-\ifnum 0\ifluatex 1\else\ifxetex 1\fi\fi=0 %
+\ifTUTeX%
+  \usepackage{fontspec}%
+  \renewcommand*{\ttdefault}{lmvtt}%
+\else % not \XeTeX* nor \LuaTeX*
   \usepackage[T1]{fontenc}%
   \usepackage{lmodern}%
-  \renewcommand*{\ttdefault}{lmvtt}%
-\else
-  \usepackage{fontspec}%
   \renewcommand*{\ttdefault}{lmvtt}%
 \fi
 
 \newcommand*{\Quote}[1]{\textquotedblleft#1\textquotedblright}
 
-\def\Hanh{H\`an Th\^e\llap{\raise 0.5ex\hbox{\'{}}} Th\`anh}
+\def\Hanh{\hologo{HanTheThanh}}
 
 \ifpdf
   \usepackage[%
@@ -190,7 +190,7 @@
 \section{Introduction}
 
 The package derives from, and builds on, the work of the Hyper\hologo{TeX}
-project, described at \texttt{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
+project, described at \nolinkurl{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
 the functionality of all the \hologo{LaTeX} cross-referencing commands
 (including the table of contents, bibliographies etc) to produce
 \cs{special} commands which a driver can turn into hypertext links;
@@ -378,9 +378,6 @@ as package option. They are not necessary in \verb|\hypersetup|.
 \usepackage[pdfborder={0 0 0}]{hyperref}
 \hypersetup{pdfborder=0 0 0}
 \end{verbatim}
-
-Package `kvoptions-patch' patches \LaTeX\ to make it aware
-of key value options and to prevent premature value expansions.
 
 Some options can be given at any time, but many are restricted: before
 \verb|\begin{document}|, only in \verb|\usepackage[...]{hyperref}|,
@@ -710,10 +707,8 @@ pdfborder          &           & 0 0 1   & The style of box around links; defaul
                                            but the colorlinks option resets it to produce no border.
 \end{longtable}
 
-Note that the color of link borders can be specified \emph{only} as 3
-numbers in the range 0..1, giving an RGB color. You cannot use colors
-defined in \TeX. Since version 6.76a this is no longer true.
-Especially with the help of package \xpackage{xcolor} the usual
+The color of link borders used to be specified \emph{only} as 3
+numbers in the range 0..1, giving an RGB color. Since version 6.76a, the usual
 color specifications of package \xpackage{(x)color} can be used.
 For further information see description of package \xpackage{hycolor}.
 
@@ -1636,7 +1631,7 @@ sequence error would arise.
 
 
  As example we take a macro definition for the Vietnamese
-  name of Han The Thanh. Correctly written it needs some
+  name of \hologo{HanTheThanh}. Correctly written it needs some
   accented characters, one character even with a double accent.
   Class `tugboat.cls' defines a macro for the typesetted name:
 \begin{verbatim}
@@ -1968,7 +1963,7 @@ sequence error would arise.
     are used for most characters, surrogates need four bytes.
  \item \xoption{auto} PDFDocEncoding if the string does not contain characters
     outside the encoding (outside ascii if an unicode engine is used)
-    and Unicode otherwise. This option is normally no suited for the unicode engines.
+    and Unicode otherwise. This option is not intended for the unicode engines.
 \end{itemize}
 
  All drivers use \xoption{unicode} by default now. If another encoding should be forced,

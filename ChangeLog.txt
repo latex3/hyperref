@@ -1,3 +1,7 @@
+2021-02-27 Ulrike Fischer/David Carlisle
+    * rename puenc-greek.def to puenc-greekbasic.def to resolve
+      name conflict with a file in greek-fontenc, issue #177
+
 2021-02-10 Ulrike Fischer/David Carlisle
     * moved the PU-declarations for greek to an extra file
       puenc-greek.ldf and force loading if the options psdextra is

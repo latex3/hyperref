@@ -48,7 +48,7 @@
 %<pd1enc>\ProvidesFile{pd1enc.def}
 %<puenc>\ProvidesFile{puenc.def}
 %<puextra>\ProvidesFile{puenc-extra.def}
-%<pugreek>\ProvidesFile{puenc-greek.def}
+%<pugreek>\ProvidesFile{puenc-greekbasic.def}
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
@@ -2071,9 +2071,9 @@
 \def\HyPsd@LoadExtra{%
   \ifHy@psdextra
     \ltx@iffileloaded{puenc.def}{%
-      \ltx@iffileloaded{puenc-greek.def}{}{%
+      \ltx@iffileloaded{puenc-greekbasic.def}{}{%
        \Hy@SaveCatcodeSettings{pu}%
-       \input{puenc-greek.def}%
+       \input{puenc-greekbasic.def}%
        \Hy@RestoreCatcodeSettings{pu}}%
       \Hy@SaveCatcodeSettings{psdextra}%
       \input{psdextra.def}%
@@ -22365,7 +22365,7 @@
 % Greek is only loaded if \cs{textBeta} is defined.
 %    \begin{macrocode}
 \ifx\textBeta\@undefined \else
-\input{puenc-greek.def}
+\input{puenc-greekbasic.def}
 \fi
 %</puenc>
 %<*pugreek>

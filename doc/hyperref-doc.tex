@@ -17,23 +17,14 @@
 \def\mydate{January 2020}
 
 \RequirePackage{iftex}
-\ifpdf % We are running in pdf mode
-  \ifLuaTeX
-    \documentclass[luatex]{article}
-  \else % what about others...
-    \documentclass[pdftex]{article}
-  \fi
-\else % not-PDF
-  \documentclass{article}
-\fi
+
+\documentclass{article}
 
 
 \usepackage{pifont}
 \usepackage{calc}
 
 \usepackage{hologo}
-
-\def\OzTeX{\hologo{OzTeX}}
 
 \newcommand*{\cs}[1]{%
   \texttt{\textbackslash #1}%
@@ -147,8 +138,6 @@
 
 \newcommand*{\Quote}[1]{\textquotedblleft#1\textquotedblright}
 
-\def\Hanh{\hologo{HanTheThanh}}
-
 \ifpdf
   \usepackage[%
 %    pdftex,% might be luatex, just allow automatic default
@@ -251,13 +240,13 @@ at present, the following drivers are supported:
 
 \begin{description}
 \item[hypertex] DVI processors conforming to the Hyper\TeX\ guidelines (i.e.\ \textsf{xdvi}, \textsf{dvips} (with
-the \textsf{-z} option), \textsf{\OzTeX}, and \textsf{Textures})
+the \textsf{-z} option), \textsf{\hologo{OzTeX}}, and \textsf{Textures})
 \item[dvips] produces \verb|\special| commands tailored for \textsf{dvips}
 \item[dvipsone] produces \verb|\special| commands tailored for \textsf{dvipsone}
 \item[ps2pdf] a special case of output suitable for processing by earlier versions of Ghost\-script's
 PDF writer; this is basically the same as that for \textsf{dvips}, but a few variations remained before version 5.21
 \item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}
-\item[pdftex] pdf\TeX, \Hanh{}'s \TeX{} variant that writes PDF directly
+\item[pdftex] pdf\TeX, \hologo{HanTheThanh}'s \TeX{} variant that writes PDF directly
 \item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly
 \item[dvipdfm] produces \verb|\special| commands for Mark Wicks' DVI to PDF driver \textsf{dvipdfm}
 \item[dvipdfmx] produces \verb|\special| commands for driver
@@ -709,7 +698,8 @@ pdfborder          &           & 0 0 1   & The style of box around links; defaul
 
 The color of link borders used to be specified \emph{only} as 3
 numbers in the range 0..1, giving an RGB color. Since version 6.76a, the usual
-color specifications of package \xpackage{(x)color} can be used.
+color specifications of package \xpackage{(x)color} can be used if \xpackage{xcolor}
+has been loaded.
 For further information see description of package \xpackage{hycolor}.
 
 The bookmark commands are stored in a file called
@@ -3355,7 +3345,7 @@ insight into PDF.
 
 Berthold Horn provided help, encouragement and sponsorship for the
 \textsf{dvipsone} and \textsf{dviwindo} drivers. Sergey Lesenko provided
-the changes needed for \textsf{dvipdf}, and \Hanh{} supplied all the
+the changes needed for \textsf{dvipdf}, and \Hologo{HanTheThanh} supplied all the
 information needed for \textsf{pdftex}. Patrick Daly kindly updated his
 \xpackage{natbib} package to allow easy integration with
 \xpackage{hyperref}. Michael Mehlich's \xpackage{hyper} package (developed

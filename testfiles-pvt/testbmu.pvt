@@ -32,6 +32,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{testbmu.tex}[2008/09/11 v1.4 Test bookmark glyphs (HO)]
 \documentclass[12pt,a4paper]{article}
+\def\CYRDZE{}\def\hebdalet{}\def\textBeta{}
 \usepackage[
   unicode,
   bookmarks,

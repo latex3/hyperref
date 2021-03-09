@@ -450,7 +450,6 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:DoS) cvn /DEST pdfma\ETC.}
-.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N
@@ -607,7 +606,6 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.Luhm:Soc&int) cvn /DEST p\ETC.}
-.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N
@@ -986,7 +984,6 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:WrtdG) cvn /DEST pdf\ETC.}
-.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N

@@ -1,4 +1,56 @@
-2020-10-01 Ulrike Fischer
+2021-02-27 Ulrike Fischer/David Carlisle
+    * rename puenc-greek.def to puenc-greekbasic.def to resolve
+      name conflict with a file in greek-fontenc, issue #177
+    * some documentation improvements (PR #174)  
+
+2021-02-10 Ulrike Fischer/David Carlisle
+    * moved the PU-declarations for greek to an extra file
+      puenc-greek.ldf and force loading if the options psdextra is
+      used.
+    * moved definition for \U accent into the cyrillic block.
+      So it is only defined if \CYRDZE has been defined previously.
+    * Some clarifications in the manual.
+    * added \special{dvipdfmx:config C 0x10} to the xetex and
+    dvipdfmx driver to avoid problems with links to external files.
+      See issue #118.
+    * if platex is detected unicode is set to false, issue #171
+    * reverted the delayed loading of puenc.def as it breaks
+    package options issue #172
+    * added a \lastnodetype test to distinguish explict 0pt vskip from no skip
+    in \Hy@SaveLastskip issue #167
+    * enable setting the pdfversion with the xetex/dvipdfm driver,
+    (related: issue #87)
+
+
+2021-02-08 Ulrike Fischer/David Carlisle
+    * moved definitions for \G accent to an extra file
+      puenc-extra.def, which can be loaded manually
+    * moved the loading of puenc.def so that it can be suppressed
+    with pdflatex
+    * correct the hspace command in pdfstringdef, so that it
+    accepts some calc syntax.
+
+2021-02-07 Ulrike Fischer/David Carlisle
+    * renamed the manual to hyperref-doc
+    * moved the license of the documentation into the file
+    * puenc.def defines cyrillic command, specially \C, only if
+      \CYRDZE has been defined previously
+    * puenc.def defines greek commands only if
+      \textBeta has been defined previously
+    * puenc.def defines hebrew command only if
+      \hebdalet has been defined previously
+    * ntheorem-hyper.sty made an obsolete stub
+      as ntheorem has been hyperref-compatible for some years.
+
+2021-02-04 Ulrike Fischer
+    * corrected the definition of \begin/\end in \pdfstringdef
+    * removed patches for russian, new version is on ctan
+    * removed patches for danish, dutch, finnish, portugues, usorbian,
+    swedish, slovene, macedonian, ukrainian.
+    This doesn't affect the output, but can give warnings in the log until
+    the languages files adapt their definitions.
+    * removed a outdated patch for \texttilde
+    * moved language patches to a extra file for easier handling
     * removed \HyPsd@BabelPatch and the related code as no longer
     needed with a current babel.
     * added Euro to encoding of form field font (issue 145)
@@ -9,6 +61,12 @@
     * removed outdated code to fix the first page boxlevel.
     * removed outdated code to fix old ltxcmds code
     * removed outdated code to fix fancyvrb
+    * removed code related to /Hid - deprecated in PDF 1.2
+    * removed patches for greeknumerals, the code is now in
+    babel-greek.
+    * added norsk to autoref languages (PR 158)
+    * added danish to autoref language (PR 159)
+    * corrected french language (PR 160)
 
 2020-01-14 7.00d David Carlisle
     * Test for newer GhostScript releases in dvips output

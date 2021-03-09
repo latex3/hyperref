@@ -1,0 +1,23 @@
+\input{regression-test}
+\documentclass{article}
+
+\usepackage{hyperref}  %
+\textheight 3cm
+
+\begin{document}
+\begin{minipage}{5cm}
+\rule{1cm}{2cm}
+\end{minipage}
+
+%\refstepcounter{section}
+\makeatletter \Hy@SaveLastskip\Hy@RestoreLastskip\makeatother
+\begin{minipage}{5cm}
+\rule{1cm}{2cm}
+\end{minipage}
+
+\START
+\LONGTYPEOUT{no overfull box}
+
+\clearpage
+
+\stop

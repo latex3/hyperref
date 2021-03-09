@@ -3,32 +3,29 @@
 module = "hyperref"
 
 docfiledir   = "doc"
-docfiles     = {"paper.pdf", "slides.pdf", "*.gif", "*.html", "*.css"}
+docfiles     = {"paper.pdf", "slides.pdf", "*.html", "*.css"}
 textfiles    = {"*.md", "*.txt"}
 installfiles = {"*.def", "*.sty", "*.cfg"}
 tdslocations = {
   "doc/latex/hyperref/ChangeLog.txt",
   "doc/latex/hyperref/README.md",
   "doc/latex/hyperref/backref.pdf",
-  "doc/latex/hyperref/cmmi10-22.gif",
-  "doc/latex/hyperref/cmsy10-21.gif",
   "doc/latex/hyperref/hyperref.pdf",
   "doc/latex/hyperref/manifest.txt",
-  "doc/latex/hyperref/manual.css",
-  "doc/latex/hyperref/manual.html",
-  "doc/latex/hyperref/manual.pdf",
-  "doc/latex/hyperref/manual2.html",
-  "doc/latex/hyperref/manual3.html",
-  "doc/latex/hyperref/manual4.html",
-  "doc/latex/hyperref/manual5.html",
-  "doc/latex/hyperref/manual6.html",
+  "doc/latex/hyperref/hyperref-doc.css",
+  "doc/latex/hyperref/hyperref-doc.html",
+  "doc/latex/hyperref/hyperref-doc.pdf",
+  "doc/latex/hyperref/hyperref-doc2.html",
+  "doc/latex/hyperref/hyperref-doc3.html",
+  "doc/latex/hyperref/hyperref-doc4.html",
+  "doc/latex/hyperref/hyperref-doc5.html",
+  "doc/latex/hyperref/hyperref-doc6.html",
   "doc/latex/hyperref/nameref.pdf",
   "doc/latex/hyperref/paper.pdf",
   "doc/latex/hyperref/slides.pdf",
   "source/latex/hyperref/backref.dtx",
   "source/latex/hyperref/bmhydoc.sty",
-  "source/latex/hyperref/doc/fdl.tex",
-  "source/latex/hyperref/doc/manual.tex",
+  "source/latex/hyperref/doc/hyperref-doc.tex",
   "source/latex/hyperref/doc/paperslides99.zip",
   "source/latex/hyperref/hluatex.dtx",
   "source/latex/hyperref/hyperref.dtx",
@@ -59,6 +56,8 @@ tdslocations = {
   "tex/latex/hyperref/psdextra.def",
   "tex/latex/hyperref/puarenc.def",
   "tex/latex/hyperref/puenc.def",
+  "tex/latex/hyperref/puenc-extra.def",
+  "tex/latex/hyperref/puenc-greekbasic.def",
   "tex/latex/hyperref/puvnenc.def",
   "tex/latex/hyperref/xr-hyper.sty"
 }
@@ -82,19 +81,40 @@ sourcefiles = {
   "*-hyper.sty",
   "bmhydoc.sty",
   "paperslides99.zip",
-  "doc/fdl.tex",
-  "doc/manual.tex"
+  "doc/*.tex",
 }
 
-typesetfiles = {"manual.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
+
+
+
+
+function checkinit_hook ()
+local dvipdfmxversion=0
+local pipe = io.popen'xdvipdfmx --version'
+for line in pipe:lines() do
+    if string.match(line,"xdvipdfmx Version") then
+      dvipdfmxversion=tonumber(string.match(line,"%d+"))
+     end
+end
+pipe:close()
+if (dvipdfmxversion <= 20200315) then
+excludetests={"unicode-test","87-pdfversion"}
+end
+end
+
+
+excludefiles={"hyperref/hyperref-doc.tex"}
+
+typesetfiles = {"hyperref-doc.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
 
 local function type_manual()
-  print("Typesetting manual")
-  local file = jobname("doc/manual.tex")
+  print("Special Typesetting hyperref-doc")
+  local file = jobname("doc/hyperref-doc.tex")
   errorlevel = (runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("htlatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + cp("*.html", typesetdir, docfiledir) + cp("*.css", typesetdir, docfiledir))
+  + cp("*.pdf", typesetdir, docfiledir)
   if errorlevel ~= 0 then
     error("Error!!: Typesetting "..file..".tex")
     return errorlevel
@@ -103,7 +123,7 @@ local function type_manual()
 end
 
 specialtypesetting = { }
-specialtypesetting["manual.tex"] = {func = type_manual}
+specialtypesetting["hyperref-doc.tex"] = {func = type_manual}
 
 cleanfiles = { "doc/*.html", "doc/*.css"}
 
@@ -114,7 +134,7 @@ packtdszip = true
 -- l3build tag auto increases final letter
 -- l3build tag AUTO increases .two-digit number and sets final letter to 'a'
 
-tagfiles={"README","*.dtx","doc/*.tex"}
+tagfiles={"README.md","xr-hyper.sty","*.dtx","doc/*.tex"}
 function update_tag(file,content,tagname,tagdate)
 
 local tagpattern="(%d%d%d%d[-/]%d%d[-/]%d%d) v(%d+[.])(%d+)(%l)"

@@ -17,23 +17,14 @@
 \def\mydate{January 2020}
 
 \RequirePackage{iftex}
-\ifpdf % We are running pdfTeX in pdf mode
-\ifx\directlua\undefinded
-\documentclass[pdftex]{article}
-\else
-\documentclass[luatex]{article}
-\fi
-\else
+
 \documentclass{article}
-\fi
 
 
 \usepackage{pifont}
 \usepackage{calc}
 
 \usepackage{hologo}
-
-\def\OzTeX{O\kern-0.03em z\kern-0.15em \TeX}
 
 \newcommand*{\cs}[1]{%
   \texttt{\textbackslash #1}%
@@ -136,18 +127,16 @@
 \makeatother
 
 \usepackage{array,longtable}
-\ifnum 0\ifluatex 1\else\ifxetex 1\fi\fi=0 %
+\ifTUTeX%
+  \usepackage{fontspec}%
+  \renewcommand*{\ttdefault}{lmvtt}%
+\else % not \XeTeX* nor \LuaTeX*
   \usepackage[T1]{fontenc}%
   \usepackage{lmodern}%
-  \renewcommand*{\ttdefault}{lmvtt}%
-\else
-  \usepackage{fontspec}%
   \renewcommand*{\ttdefault}{lmvtt}%
 \fi
 
 \newcommand*{\Quote}[1]{\textquotedblleft#1\textquotedblright}
-
-\def\Hanh{H\`an Th\^e\llap{\raise 0.5ex\hbox{\'{}}} Th\`anh}
 
 \ifpdf
   \usepackage[%
@@ -177,7 +166,7 @@
 }
 \makeatother
 \title{Hypertext marks in \hologo{LaTeX}: a manual for \xpackage{hyperref}}
-\date{2020-08-14 v7.00f}
+\date{2021-02-27 v7.00k}
 
 \begin{document}
 
@@ -190,7 +179,7 @@
 \section{Introduction}
 
 The package derives from, and builds on, the work of the Hyper\hologo{TeX}
-project, described at \texttt{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
+project, described at \nolinkurl{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
 the functionality of all the \hologo{LaTeX} cross-referencing commands
 (including the table of contents, bibliographies etc) to produce
 \cs{special} commands which a driver can turn into hypertext links;
@@ -251,13 +240,13 @@ at present, the following drivers are supported:
 
 \begin{description}
 \item[hypertex] DVI processors conforming to the Hyper\TeX\ guidelines (i.e.\ \textsf{xdvi}, \textsf{dvips} (with
-the \textsf{-z} option), \textsf{\OzTeX}, and \textsf{Textures})
+the \textsf{-z} option), \textsf{\hologo{OzTeX}}, and \textsf{Textures})
 \item[dvips] produces \verb|\special| commands tailored for \textsf{dvips}
 \item[dvipsone] produces \verb|\special| commands tailored for \textsf{dvipsone}
 \item[ps2pdf] a special case of output suitable for processing by earlier versions of Ghost\-script's
 PDF writer; this is basically the same as that for \textsf{dvips}, but a few variations remained before version 5.21
 \item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}
-\item[pdftex] pdf\TeX, \Hanh{}'s \TeX{} variant that writes PDF directly
+\item[pdftex] pdf\TeX, \hologo{HanTheThanh}'s \TeX{} variant that writes PDF directly
 \item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly
 \item[dvipdfm] produces \verb|\special| commands for Mark Wicks' DVI to PDF driver \textsf{dvipdfm}
 \item[dvipdfmx] produces \verb|\special| commands for driver
@@ -378,9 +367,6 @@ as package option. They are not necessary in \verb|\hypersetup|.
 \usepackage[pdfborder={0 0 0}]{hyperref}
 \hypersetup{pdfborder=0 0 0}
 \end{verbatim}
-
-Package `kvoptions-patch' patches \LaTeX\ to make it aware
-of key value options and to prevent premature value expansions.
 
 Some options can be given at any time, but many are restricted: before
 \verb|\begin{document}|, only in \verb|\usepackage[...]{hyperref}|,
@@ -559,9 +545,8 @@ plainpages     & boolean & false & Forces page anchors to be named by the Arabic
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
                                simply the base line of contained text; this options forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
-breaklinks & boolean & false & Allows link text to break across lines; since this cannot be accommodated in PDF, it is
-                               only set true by default if the pdftex driver is used. This makes links on multiple lines
-                               into different PDF links to the same target. \\
+breaklinks & boolean & both & This option is in hyperref only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
+checks the state of the boolean.\\
 pageanchor & boolean & true  & Determines whether every page is given an implicit anchor at the top left corner. If this
                                is turned off, \verb|\printindex| will not contain
                                valid hyperlinks. \\
@@ -711,11 +696,10 @@ pdfborder          &           & 0 0 1   & The style of box around links; defaul
                                            but the colorlinks option resets it to produce no border.
 \end{longtable}
 
-Note that the color of link borders can be specified \emph{only} as 3
-numbers in the range 0..1, giving an RGB color. You cannot use colors
-defined in \TeX. Since version 6.76a this is no longer true.
-Especially with the help of package \xpackage{xcolor} the usual
-color specifications of package \xpackage{(x)color} can be used.
+The color of link borders used to be specified \emph{only} as 3
+numbers in the range 0..1, giving an RGB color. Since version 6.76a, the usual
+color specifications of package \xpackage{(x)color} can be used if \xpackage{xcolor}
+has been loaded.
 For further information see description of package \xpackage{hycolor}.
 
 The bookmark commands are stored in a file called
@@ -1017,7 +1001,7 @@ runcolor           & \textit{filecolor}     & color of `run' links\\
 setpagesize        & \textit{true}          & set page size by special driver commands \\
 tex4ht             &                        & use \textsf{\TeX4ht} backend \\
 textures           &                        & use \textsf{Textures} backend \\
-unicode            & \textit{true}          & Unicode encoded pdf strings, starting with version  2020-08-14 v7.00f set by default to true for all engines. \\
+unicode            & \textit{true}          & Unicode encoded pdf strings, starting with version v7.00g set by default to true for all engines. It will load a number of definitions in puenc.def. It can be set to false for pdflatex, but this is not recommended.\\
 urlbordercolor     & \textit{0 1 1}         & color of border around URL links \\
 urlcolor           & \textit{magenta}       & color of URL links \\
 verbose            & \textit{false}         & be chatty \\
@@ -1392,6 +1376,19 @@ command names):
 }
 \end{verbatim}
 
+\subsection{Pagelabels}
+\begin{cmdsyntax}
+\ci{thispdfpagelabel}\verb|{|\emph{page number format}\verb|}|
+\end{cmdsyntax}
+
+This allows to change format of the page number shown in the tool bar of
+a PDF viewer for a specific page, for example
+
+\verb+\thispdfpagelabel{Empty Page-\roman{page}}+
+
+The command affects the page on which it is executed, so asynchronous page breaking
+should be taken into account. It should be used in places where for example \verb+\thispagestyle+ can be use too.
+
 \subsection{Utility macros}
 
 \label{hypercalcbp}
@@ -1624,7 +1621,7 @@ sequence error would arise.
 
 
  As example we take a macro definition for the Vietnamese
-  name of Han The Thanh. Correctly written it needs some
+  name of \hologo{HanTheThanh}. Correctly written it needs some
   accented characters, one character even with a double accent.
   Class `tugboat.cls' defines a macro for the typesetted name:
 \begin{verbatim}
@@ -1955,10 +1952,11 @@ sequence error would arise.
  \item \xoption{unicode} sets Unicode. It is encoded as UTF-16BE. Two bytes
     are used for most characters, surrogates need four bytes.
  \item \xoption{auto} PDFDocEncoding if the string does not contain characters
-    outside the encoding and Unicode otherwise.
+    outside the encoding (outside ascii if an unicode engine is used)
+    and Unicode otherwise. This option is not intended for the unicode engines.
 \end{itemize}
 
- The luatex driver uses \xoption{unicode} by default. If another encoding should be forced,
+ All drivers use \xoption{unicode} by default now. If another encoding should be forced,
  it should be done in \verb|hypersetup|.
 
 \subsection{Color options/package hycolor}
@@ -2206,6 +2204,27 @@ Now the entry in the table of contents (and bookmarks) for the
 index points to the start of the index page, not to a location
 before this page.
 
+\subsection{puenc encoding, puenc-greek.def and puenc-extra.def}
+
+The \texttt{unicode} option loads for the bookmarks \texttt{puenc.def} which contains
+quite a lot definitions of commands for the bookmarks.
+As \texttt{unicode} is now true for all engines, this file is now also loaded
+with pdflatex. Some of the definitions in \texttt{puenc.def} clash with other uses.
+To reduce the impact \xpackage{hyperref} uses two strategies.
+
+\begin{itemize}
+\item A number of command are only defined conditionally:
+The commands for the cyrillic block  if \cs{CYRDZE} is defined,
+greek if \cs{textBeta} is defined, and hebrew if \cs{hebdalet} is defined.
+
+The greek block is in an extra file, \texttt{puenc-greek.def}, which can
+be loaded manually if needed.
+
+\item Other commands are moved to an extra file \texttt{puenc-extra.def}
+which is not loaded automatically, but can be loaded in the preamble if needed.
+Currently this file contains all definitions for the accent \cs{G}.
+\end{itemize}
+
 
 
 \section{Acrobat-specific behavior}
@@ -2250,7 +2269,9 @@ Help(Windows)                 & About
 \end{longtable}
 
 \section{PDF and HTML forms}
-You must put your fields inside a \texttt{Form} environment (only one per file).
+You must put your fields inside a \texttt{Form} environment.
+The environment does some general setups, so should be used only once in a document.
+Using simply \cs{Form} at the begin of the document is possible too.
 
 There are six macros to prepare fields:
 
@@ -2742,8 +2763,9 @@ earlier.
 
 \subsubsection{minitoc-hyper}
 
- This package is obsolete, use the uptodate original
+ This package is obsolete, use the up-to-date original
   package minitoc instead.
+
 
 
 \subsubsection{multind}
@@ -2763,6 +2785,11 @@ Example for introducing links for the page numbers:
 \begin{verbatim}
       \renewcommand*{\pagedeclaration}[1]{\unskip, \hyperpage{#1}}
 \end{verbatim}
+
+
+\subsubsection{ntheorem-hyper}
+ This package is obsolete, use the up-to-date original
+  package ntheorem instead.
 
 
 For equations the following might work:
@@ -2805,14 +2832,6 @@ For equations the following might work:
 %%% example for prettyref %%%
       \end{verbatim}
 
-\subsubsection{ntheorem}
-\begin{verbatim}
- ntheorem-hyper.sty is an old patched version of ntheorem.sty.
-  Newer versions of ntheorem know the option hyperref:
-    \usepackage{hyperref}
-    \usepackage[hyperref]{ntheorem}
-  But there are still unsolved problems (options thref, ...).
-\end{verbatim}
 
 \subsubsection{setspace}
 \begin{verbatim}
@@ -2905,7 +2924,7 @@ For equations the following might work:
 \end{verbatim}
 
 
- Also some babel versions can be problematic. For exmample,
+ Also some babel versions can be problematic. For example,
   2005/05/21 v3.8g contains a patch for varioref that breaks
   the hyperref support for varioref.
 
@@ -2978,11 +2997,11 @@ For equations the following might work:
 
 \subsubsection{XeTeX}
 
- Default for the encoding of bookmarks is `pdfencoding=auto'.
+ Default for the encoding of bookmarks is \verb|pdfencoding=unicode|.
  That means the strings are always treated as unicode strings.
- Only if the string restricts to the printable ASCII set,
-  it is written as ASCII string. The reason is that the
-  \verb|\special| does not support PDFDocEncoding.
+ If \verb|auto| or \verb|pdfdoc| is forced it applies only
+ if the string restricts to the printable ASCII set,
+ The reason is that the \verb|\special| does not support PDFDocEncoding.
 
  In older versions hyperref contained special conversion code from
  UTF-16BE back to UTF-8 in a number of places for
@@ -3326,7 +3345,7 @@ insight into PDF.
 
 Berthold Horn provided help, encouragement and sponsorship for the
 \textsf{dvipsone} and \textsf{dviwindo} drivers. Sergey Lesenko provided
-the changes needed for \textsf{dvipdf}, and \Hanh{} supplied all the
+the changes needed for \textsf{dvipdf}, and \Hologo{HanTheThanh} supplied all the
 information needed for \textsf{pdftex}. Patrick Daly kindly updated his
 \xpackage{natbib} package to allow easy integration with
 \xpackage{hyperref}. Michael Mehlich's \xpackage{hyper} package (developed
@@ -3377,7 +3396,429 @@ code, and for working on changes to the \xpackage{xr} package to suit
       }%
     \x
   }
-  \include{fdl}
+\clearpage
+
+
+\chapter{GNU Free Documentation License}
+
+Version 1.2, November 2002
+
+
+ Copyright \copyright\ 2000,2001,2002  Free Software Foundation, Inc.\\
+     59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\\
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+
+\section*{PREAMBLE}
+
+The purpose of this License is to make a manual, textbook, or other
+functional and useful document ``free'' in the sense of freedom: to
+assure everyone the effective freedom to copy and redistribute it,
+with or without modifying it, either commercially or noncommercially.
+Secondarily, this License preserves for the author and publisher a way
+to get credit for their work, while not being considered responsible
+for modifications made by others.
+
+This License is a kind of ``copyleft'', which means that derivative
+works of the document must themselves be free in the same sense.  It
+complements the GNU General Public License, which is a copyleft
+license designed for free software.
+
+We have designed this License in order to use it for manuals for free
+software, because free software needs free documentation: a free
+program should come with manuals providing the same freedoms that the
+software does.  But this License is not limited to software manuals;
+it can be used for any textual work, regardless of subject matter or
+whether it is published as a printed book.  We recommend this License
+principally for works whose purpose is instruction or reference.
+
+
+\section{APPLICABILITY AND DEFINITIONS}
+\label{applicability}
+
+This License applies to any manual or other work, in any medium, that
+contains a notice placed by the copyright holder saying it can be
+distributed under the terms of this License.  Such a notice grants a
+world-wide, royalty-free license, unlimited in duration, to use that
+work under the conditions stated herein.  The ``Document'', below,
+refers to any such manual or work.  Any member of the public is a
+licensee, and is addressed as ``you''.  You accept the license if you
+copy, modify or distribute the work in a way requiring permission
+under copyright law.
+
+A ``Modified Version'' of the Document means any work containing the
+Document or a portion of it, either copied verbatim, or with
+modifications and/or translated into another language.
+
+A ``Secondary Section'' is a named appendix or a front-matter section of
+the Document that deals exclusively with the relationship of the
+publishers or authors of the Document to the Document's overall subject
+(or to related matters) and contains nothing that could fall directly
+within that overall subject.  (Thus, if the Document is in part a
+textbook of mathematics, a Secondary Section may not explain any
+mathematics.)  The relationship could be a matter of historical
+connection with the subject or with related matters, or of legal,
+commercial, philosophical, ethical or political position regarding
+them.
+
+The ``Invariant Sections'' are certain Secondary Sections whose titles
+are designated, as being those of Invariant Sections, in the notice
+that says that the Document is released under this License.  If a
+section does not fit the above definition of Secondary then it is not
+allowed to be designated as Invariant.  The Document may contain zero
+Invariant Sections.  If the Document does not identify any Invariant
+Sections then there are none.
+
+The ``Cover Texts'' are certain short passages of text that are listed,
+as Front-Cover Texts or Back-Cover Texts, in the notice that says that
+the Document is released under this License.  A Front-Cover Text may
+be at most 5 words, and a Back-Cover Text may be at most 25 words.
+
+A ``Transparent'' copy of the Document means a machine-readable copy,
+represented in a format whose specification is available to the
+general public, that is suitable for revising the document
+straightforwardly with generic text editors or (for images composed of
+pixels) generic paint programs or (for drawings) some widely available
+drawing editor, and that is suitable for input to text formatters or
+for automatic translation to a variety of formats suitable for input
+to text formatters.  A copy made in an otherwise Transparent file
+format whose markup, or absence of markup, has been arranged to thwart
+or discourage subsequent modification by readers is not Transparent.
+An image format is not Transparent if used for any substantial amount
+of text.  A copy that is not ``Transparent'' is called ``Opaque''.
+
+Examples of suitable formats for Transparent copies include plain
+ASCII without markup, Texinfo input format, \LaTeX\ input format, SGML
+or XML using a publicly available DTD, and standard-conforming simple
+HTML, PostScript or PDF designed for human modification.  Examples of
+transparent image formats include PNG, XCF and JPG.  Opaque formats
+include proprietary formats that can be read and edited only by
+proprietary word processors, SGML or XML for which the DTD and/or
+processing tools are not generally available, and the
+machine-generated HTML, PostScript or PDF produced by some word
+processors for output purposes only.
+
+The ``Title Page'' means, for a printed book, the title page itself,
+plus such following pages as are needed to hold, legibly, the material
+this License requires to appear in the title page.  For works in
+formats which do not have any title page as such, ``Title Page'' means
+the text near the most prominent appearance of the work's title,
+preceding the beginning of the body of the text.
+
+A section ``Entitled XYZ'' means a named subunit of the Document whose
+title either is precisely XYZ or contains XYZ in parentheses following
+text that translates XYZ in another language.  (Here XYZ stands for a
+specific section name mentioned below, such as ``Acknowledgements'',
+``Dedications'', ``Endorsements'', or ``History''.)  To ``Preserve the Title''
+of such a section when you modify the Document means that it remains a
+section ``Entitled XYZ'' according to this definition.
+
+The Document may include Warranty Disclaimers next to the notice which
+states that this License applies to the Document.  These Warranty
+Disclaimers are considered to be included by reference in this
+License, but only as regards disclaiming warranties: any other
+implication that these Warranty Disclaimers may have is void and has
+no effect on the meaning of this License.
+
+
+\section{VERBATIM COPYING}
+\label{verbatim}
+
+You may copy and distribute the Document in any medium, either
+commercially or noncommercially, provided that this License, the
+copyright notices, and the license notice saying this License applies
+to the Document are reproduced in all copies, and that you add no other
+conditions whatsoever to those of this License.  You may not use
+technical measures to obstruct or control the reading or further
+copying of the copies you make or distribute.  However, you may accept
+compensation in exchange for copies.  If you distribute a large enough
+number of copies you must also follow the conditions in
+section~\ref{copying}.
+
+You may also lend copies, under the same conditions stated above, and
+you may publicly display copies.
+
+
+\section{COPYING IN QUANTITY}
+\label{copying}
+
+If you publish printed copies (or copies in media that commonly have
+printed covers) of the Document, numbering more than 100, and the
+Document's license notice requires Cover Texts, you must enclose the
+copies in covers that carry, clearly and legibly, all these Cover
+Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on
+the back cover.  Both covers must also clearly and legibly identify
+you as the publisher of these copies.  The front cover must present
+the full title with all words of the title equally prominent and
+visible.  You may add other material on the covers in addition.
+Copying with changes limited to the covers, as long as they preserve
+the title of the Document and satisfy these conditions, can be treated
+as verbatim copying in other respects.
+
+If the required texts for either cover are too voluminous to fit
+legibly, you should put the first ones listed (as many as fit
+reasonably) on the actual cover, and continue the rest onto adjacent
+pages.
+
+If you publish or distribute Opaque copies of the Document numbering
+more than 100, you must either include a machine-readable Transparent
+copy along with each Opaque copy, or state in or with each Opaque copy
+a computer-network location from which the general network-using
+public has access to download using public-standard network protocols
+a complete Transparent copy of the Document, free of added material.
+If you use the latter option, you must take reasonably prudent steps,
+when you begin distribution of Opaque copies in quantity, to ensure
+that this Transparent copy will remain thus accessible at the stated
+location until at least one year after the last time you distribute an
+Opaque copy (directly or through your agents or retailers) of that
+edition to the public.
+
+It is requested, but not required, that you contact the authors of the
+Document well before redistributing any large number of copies, to give
+them a chance to provide you with an updated version of the Document.
+
+
+\section{MODIFICATIONS}
+\label{modifications}
+
+You may copy and distribute a Modified Version of the Document under
+the conditions of sections~\ref{verbatim} and \ref{copying} above,
+provided that you release
+the Modified Version under precisely this License, with the Modified
+Version filling the role of the Document, thus licensing distribution
+and modification of the Modified Version to whoever possesses a copy
+of it.  In addition, you must do these things in the Modified Version:
+
+\renewcommand{\labelenumi}{\Alph{enumi}.}
+\begin{enumerate}
+\item Use in the Title Page (and on the covers, if any) a title distinct
+   from that of the Document, and from those of previous versions
+   (which should, if there were any, be listed in the History section
+   of the Document).  You may use the same title as a previous version
+   if the original publisher of that version gives permission.
+\item List on the Title Page, as authors, one or more persons or entities
+   responsible for authorship of the modifications in the Modified
+   Version, together with at least five of the principal authors of the
+   Document (all of its principal authors, if it has fewer than five),
+   unless they release you from this requirement.
+\item State on the Title page the name of the publisher of the
+   Modified Version, as the publisher.
+\item Preserve all the copyright notices of the Document.
+\item Add an appropriate copyright notice for your modifications
+   adjacent to the other copyright notices.
+\item Include, immediately after the copyright notices, a license notice
+   giving the public permission to use the Modified Version under the
+   terms of this License, in the form shown in the Addendum below.
+\item Preserve in that license notice the full lists of Invariant Sections
+   and required Cover Texts given in the Document's license notice.
+\item Include an unaltered copy of this License.
+\item Preserve the section Entitled ``History'', Preserve its Title, and add
+   to it an item stating at least the title, year, new authors, and
+   publisher of the Modified Version as given on the Title Page.  If
+   there is no section Entitled ``History'' in the Document, create one
+   stating the title, year, authors, and publisher of the Document as
+   given on its Title Page, then add an item describing the Modified
+   Version as stated in the previous sentence.
+\item Preserve the network location, if any, given in the Document for
+   public access to a Transparent copy of the Document, and likewise
+   the network locations given in the Document for previous versions
+   it was based on.  These may be placed in the ``History'' section.
+   You may omit a network location for a work that was published at
+   least four years before the Document itself, or if the original
+   publisher of the version it refers to gives permission.
+\item For any section Entitled ``Acknowledgements'' or ``Dedications'',
+   Preserve the Title of the section, and preserve in the section all
+   the substance and tone of each of the contributor acknowledgements
+   and/or dedications given therein.
+\item Preserve all the Invariant Sections of the Document,
+   unaltered in their text and in their titles.  Section numbers
+   or the equivalent are not considered part of the section titles.
+\item Delete any section Entitled ``Endorsements''.  Such a section
+   may not be included in the Modified Version.
+\item Do not retitle any existing section to be Entitled ``Endorsements''
+   or to conflict in title with any Invariant Section.
+\item Preserve any Warranty Disclaimers.
+
+\end{enumerate}
+
+If the Modified Version includes new front-matter sections or
+appendices that qualify as Secondary Sections and contain no material
+copied from the Document, you may at your option designate some or all
+of these sections as invariant.  To do this, add their titles to the
+list of Invariant Sections in the Modified Version's license notice.
+These titles must be distinct from any other section titles.
+
+You may add a section Entitled ``Endorsements'', provided it contains
+nothing but endorsements of your Modified Version by various
+parties--for example, statements of peer review or that the text has
+been approved by an organization as the authoritative definition of a
+standard.
+
+You may add a passage of up to five words as a Front-Cover Text, and a
+passage of up to 25 words as a Back-Cover Text, to the end of the list
+of Cover Texts in the Modified Version.  Only one passage of
+Front-Cover Text and one of Back-Cover Text may be added by (or
+through arrangements made by) any one entity.  If the Document already
+includes a cover text for the same cover, previously added by you or
+by arrangement made by the same entity you are acting on behalf of,
+you may not add another; but you may replace the old one, on explicit
+permission from the previous publisher that added the old one.
+
+The author(s) and publisher(s) of the Document do not by this License
+give permission to use their names for publicity for or to assert or
+imply endorsement of any Modified Version.
+
+
+\section{COMBINING DOCUMENTS}
+\label{combining}
+
+You may combine the Document with other documents released under this
+License, under the terms defined in section~\ref{modifications}
+above for modified
+versions, provided that you include in the combination all of the
+Invariant Sections of all of the original documents, unmodified, and
+list them all as Invariant Sections of your combined work in its
+license notice, and that you preserve all their Warranty Disclaimers.
+
+The combined work need only contain one copy of this License, and
+multiple identical Invariant Sections may be replaced with a single
+copy.  If there are multiple Invariant Sections with the same name but
+different contents, make the title of each such section unique by
+adding at the end of it, in parentheses, the name of the original
+author or publisher of that section if known, or else a unique number.
+Make the same adjustment to the section titles in the list of
+Invariant Sections in the license notice of the combined work.
+
+In the combination, you must combine any sections Entitled ``History''
+in the various original documents, forming one section Entitled
+``History''; likewise combine any sections Entitled ``Acknowledgements'',
+and any sections Entitled ``Dedications''.  You must delete all sections
+Entitled ``Endorsements''.
+
+
+\section{COLLECTIONS OF DOCUMENTS}
+\label{collections}
+
+You may make a collection consisting of the Document and other documents
+released under this License, and replace the individual copies of this
+License in the various documents with a single copy that is included in
+the collection, provided that you follow the rules of this License for
+verbatim copying of each of the documents in all other respects.
+
+You may extract a single document from such a collection, and distribute
+it individually under this License, provided you insert a copy of this
+License into the extracted document, and follow this License in all
+other respects regarding verbatim copying of that document.
+
+
+\section{AGGREGATION WITH INDEPENDENT WORKS}
+\label{aggregation}
+
+A compilation of the Document or its derivatives with other separate
+and independent documents or works, in or on a volume of a storage or
+distribution medium, is called an ``aggregate'' if the copyright
+resulting from the compilation is not used to limit the legal rights
+of the compilation's users beyond what the individual works permit.
+When the Document is included in an aggregate, this License does not
+apply to the other works in the aggregate which are not themselves
+derivative works of the Document.
+
+If the Cover Text requirement of section~\ref{copying} is applicable to
+these copies of the Document, then if the Document is less than one half
+of the entire aggregate, the Document's Cover Texts may be placed on
+covers that bracket the Document within the aggregate, or the
+electronic equivalent of covers if the Document is in electronic form.
+Otherwise they must appear on printed covers that bracket the whole
+aggregate.
+
+
+\section{TRANSLATION}
+\label{translation}
+
+Translation is considered a kind of modification, so you may
+distribute translations of the Document under the terms of
+section~\ref{modifications}.
+Replacing Invariant Sections with translations requires special
+permission from their copyright holders, but you may include
+translations of some or all Invariant Sections in addition to the
+original versions of these Invariant Sections.  You may include a
+translation of this License, and all the license notices in the
+Document, and any Warranty Disclaimers, provided that you also include
+the original English version of this License and the original versions
+of those notices and disclaimers.  In case of a disagreement between
+the translation and the original version of this License or a notice
+or disclaimer, the original version will prevail.
+
+If a section in the Document is Entitled ``Acknowledgements'',
+``Dedications'', or ``History'', the requirement
+(section~\ref{modifications}) to Preserve
+its Title (section~\ref{applicability}) will typically require
+changing the actual title.
+
+
+\section{TERMINATION}
+\label{termination}
+
+You may not copy, modify, sublicense, or distribute the Document except
+as expressly provided for under this License.  Any other attempt to
+copy, modify, sublicense or distribute the Document is void, and will
+automatically terminate your rights under this License.  However,
+parties who have received copies, or rights, from you under this
+License will not have their licenses terminated so long as such
+parties remain in full compliance.
+
+
+\section{FUTURE REVISIONS OF THIS LICENSE}
+\label{future}
+
+The Free Software Foundation may publish new, revised versions
+of the GNU Free Documentation License from time to time.  Such new
+versions will be similar in spirit to the present version, but may
+differ in detail to address new problems or concerns.  See
+http://www.gnu.org/copyleft/.
+
+Each version of the License is given a distinguishing version number.
+If the Document specifies that a particular numbered version of this
+License ``or any later version'' applies to it, you have the option of
+following the terms and conditions either of that specified version or
+of any later version that has been published (not as a draft) by the
+Free Software Foundation.  If the Document does not specify a version
+number of this License, you may choose any version ever published (not
+as a draft) by the Free Software Foundation.
+
+
+\section*{ADDENDUM: How to use this License for your documents}
+
+To use this License in a document you have written, include a copy of
+the License in the document and put the following copyright and
+license notices just after the title page:
+
+\begin{quote}
+    Copyright \copyright\ YEAR  YOUR NAME.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.2
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled ``GNU
+    Free Documentation License''.
+\end{quote}
+
+If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
+replace the ``with...Texts.'' line with this:
+
+    with the Invariant Sections being LIST THEIR TITLES, with the
+    Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+
+If you have Invariant Sections without Cover Texts, or some other
+combination of the three, merge those two alternatives to suit the
+situation.
+
+If your document contains nontrivial examples of program code, we
+recommend releasing these examples in parallel under your choice of
+free software license, such as the GNU General Public License,
+to permit their use in free software.
+
 \endgroup
 
 \end{document}

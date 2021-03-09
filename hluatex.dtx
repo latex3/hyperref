@@ -1,10 +1,10 @@
 % \iffalse
 % Source File: hluatex.dtx
-% 2020-08-14 v7.00f
+% 2021-02-27 v7.00k
 %
 % Copyright
 % 2016-2019 Oberdiek Package Support Group
-% 2019-2020 The LaTeX3 Project
+% 2019-2020 The LaTeX Project
 %      https://github.com/latex3/hyperref/issues%%
 %
 % Derived from hpdftex.def
@@ -19,7 +19,7 @@
    \GetFileInfo{hluatex.def}%
    \title{hluatex.def}
    \date{}%
-   \author{Maintained by The \LaTeX3 Project\\%
+   \author{Maintained by The \LaTeX\ Project\\%
     \texttt{https://github.com/latex3/hyperref/issues}%
 }
    \maketitle
@@ -31,7 +31,7 @@
 %
 %    \begin{macrocode}
 %<*luatex>
-%% 2020-08-14 v7.00f
+%% 2021-02-27 v7.00k
 %% force unicode encoding, see issue #101
 %% code mostly copied from hxetex.def
 \HyPsd@LoadUnicode
@@ -706,33 +706,10 @@
     \Hy@RemoveDurPageAttr#1#4\END
   \fi
 }
-\def\hyper@pagehidden{%
-  \ifHy@useHidKey
-    \expandafter
-    \Hy@RemoveHidPageAttr\the\pdfpageattr^^J/Hid{} \END
-    \ifHy@pdfpagehidden
-      \edef\@processme{%
-        \global\pdfpageattr{%
-          \the\pdfpageattr
-          ^^J/Hid true % SPACE
-        }%
-      }%
-      \@processme
-    \fi
-  \fi
-}
-\gdef\Hy@RemoveHidPageAttr#1^^J/Hid#2#3 #4\END{%
-  \ifx\\#2\\%
-    \global\pdfpageattr{#1}%
-  \else
-    \Hy@RemoveHidPageAttr#1#4\END
-  \fi
-}
 \pdf@ifdraftmode{}{%
   \g@addto@macro\Hy@EveryPageHook{%
     \hyper@pagetransition
     \hyper@pageduration
-    \hyper@pagehidden
   }%
 }
 \Hy@AtBeginDocument{%

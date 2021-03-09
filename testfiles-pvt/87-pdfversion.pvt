@@ -1,0 +1,6 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[pdfversion=2.0]{hyperref}
+\begin{document}
+blub
+\end{document}

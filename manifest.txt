@@ -3,6 +3,8 @@
 
 hyperref.dtx
         Main package with various drivers.
+hluatex.dtx
+        luatex back end for hyperref.
 backref.dtx
         Bibliographical back referencing.
 nameref.dtx
@@ -15,9 +17,9 @@ hyperref.ins
         Docstrip batch file.
 
 minitoc-hyper.sty
-        Patched version of `minitoc.sty' to work with `hyperref.sty'.
+        Obsolete, now just calls minitoc.
 ntheorem-hyper.sty
-        Patched version of `ntheorem.sty' to work with `hyperref.sty'.
+        Obsolete, now just calls ntheorem.
 xr-hyper.sty
         Patched version of `xr.sty' to work with `hyperref.sty'.
 
@@ -54,6 +56,7 @@ htexture.def
 hdvipson.def
 hdvips.def
 hpdftex.def
+hluatex.def
 hdviwind.def
 htex4ht.def
 hvtex.def
@@ -63,6 +66,8 @@ hxetex.def
         Hyperref drivers.
 pd1enc.def
 puenc.def
+puenc-extra.def
+puenc-greekbasic.def
 puvnenc.def
 puarenc.def
 psdextra.def
@@ -71,14 +76,12 @@ psdextra.def
 % Directory doc/
 % =============
 
-manual.pdf
-        Manual, but a little out of date.
-manual.html, manual[2-6].html, manual.css,
-cmsy10-21.gif, cmmi10-22.gif
+hyperref-doc.pdf
+        Hyperref manual
+hyperref-doc.html, hyperref-doc[2-7].html, hyperref-doc.css,
         HTML version of the manual.
 paper.pdf
         Online version of paper for Heiko Oberdiek's talk
         at EuroTeX'99.
 slides.pdf
         Slides for Heiko Oberdiek's talk at EuroTeX'99.
-

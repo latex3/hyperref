@@ -1165,6 +1165,6 @@ Package hyperref Info: Reference (link) `page.ii' on input line ....
 Package hyperref Info: Anchor `page.32' on input line ....
 [26
 ]) (test1.aux)
+LaTeX Warning: There were undefined references.
 Package rerunfilecheck Info: File `test1.out' has not changed.
 (rerunfilecheck)             Checksum: 907CDCA8E0E854E44300BE3D4C6716D9;2267.
-LaTeX Warning: There were undefined references.

@@ -1,6 +1,6 @@
 # README for hyperref bundle
 
-Version 2020-05-15 v7.00e
+Version 2021-02-27 v7.00k
 
 ## INTRODUCTION
 
@@ -37,6 +37,8 @@ The main repository of hyperref is located at github
 
 ## INSTALLATION
 
+The easiest is to use the package manager of the TeX System.
+
 ### Installation with ZIP file in TDS format
 
 The ZIP file [hyperref.tds.zip](http://mirrors.ctan.org/install/macros/latex/contrib/hyperref.tds.zip)
@@ -67,7 +69,7 @@ Example for TeXLive:
     The exception is `bmhydoc.sty`, it belongs to the source files
     (`TDS:source/latex/hyperref/`).
  4. Copy the documentation files to "`TDS:doc/latex/hyperref/`":
-    manual.pdf, README.md, ChangeLog.txt,
+    hyperref-doc.pdf, README.md, ChangeLog.txt,
     slides.pdf, paper.pdf, hyperref.pdf, backref.pdf,
     nameref.pdf (Also the HTML version of the manual can be put there).
  5. Update the databases if necessary, eg. for TeXLive:
@@ -77,7 +79,11 @@ Example for TeXLive:
 
  * Sebastian Rahtz (died 2016)
  * Heiko Oberdiek  (inactive)
- * The LaTeX3 Project
+ * The LaTeX Project
+
+## LICENSE
+
+LATEX Project Public License, version 1.3c or later.
 
 ## BUG REPORTS
 
@@ -132,16 +138,4 @@ Responsible for the additions to PU encoding for Arabi is
       ```
  * ...
 
-## TODO
 
- * modules
- * bookmark organisation
- * documentation
- * PDF threads
- * more for PDF forms
-   * per object setting
-   * vary gap between text and box
- * PostScript driver: the current implementation doesn't really support
-   nested links. The start positions should be remembered in a stack,
-   but there are complications with page breaks.
- * ...

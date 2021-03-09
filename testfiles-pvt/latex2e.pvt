@@ -1,0 +1,7 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+
+\begin{document}
+\section{LaTeXe}
+\end{document}

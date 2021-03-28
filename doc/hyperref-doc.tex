@@ -17,23 +17,14 @@
 \def\mydate{January 2020}
 
 \RequirePackage{iftex}
-\ifpdf % We are running pdfTeX in pdf mode
-\ifx\directlua\undefinded
-\documentclass[pdftex]{article}
-\else
-\documentclass[luatex]{article}
-\fi
-\else
+
 \documentclass{article}
-\fi
 
 
 \usepackage{pifont}
 \usepackage{calc}
 
 \usepackage{hologo}
-
-\def\OzTeX{O\kern-0.03em z\kern-0.15em \TeX}
 
 \newcommand*{\cs}[1]{%
   \texttt{\textbackslash #1}%
@@ -136,18 +127,16 @@
 \makeatother
 
 \usepackage{array,longtable}
-\ifnum 0\ifluatex 1\else\ifxetex 1\fi\fi=0 %
+\ifTUTeX%
+  \usepackage{fontspec}%
+  \renewcommand*{\ttdefault}{lmvtt}%
+\else % not \XeTeX* nor \LuaTeX*
   \usepackage[T1]{fontenc}%
   \usepackage{lmodern}%
-  \renewcommand*{\ttdefault}{lmvtt}%
-\else
-  \usepackage{fontspec}%
   \renewcommand*{\ttdefault}{lmvtt}%
 \fi
 
 \newcommand*{\Quote}[1]{\textquotedblleft#1\textquotedblright}
-
-\def\Hanh{H\`an Th\^e\llap{\raise 0.5ex\hbox{\'{}}} Th\`anh}
 
 \ifpdf
   \usepackage[%
@@ -177,7 +166,7 @@
 }
 \makeatother
 \title{Hypertext marks in \hologo{LaTeX}: a manual for \xpackage{hyperref}}
-\date{2021-02-10 v7.00j}
+\date{2021-02-27 v7.00k}
 
 \begin{document}
 
@@ -190,7 +179,7 @@
 \section{Introduction}
 
 The package derives from, and builds on, the work of the Hyper\hologo{TeX}
-project, described at \texttt{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
+project, described at \nolinkurl{http://xxx.lanl.gov/hypertex/}\footnote{Now: \url{https://ctan.org/tex-archive/support/hypertex/hypertex}}. It extends
 the functionality of all the \hologo{LaTeX} cross-referencing commands
 (including the table of contents, bibliographies etc) to produce
 \cs{special} commands which a driver can turn into hypertext links;
@@ -251,13 +240,13 @@ at present, the following drivers are supported:
 
 \begin{description}
 \item[hypertex] DVI processors conforming to the Hyper\TeX\ guidelines (i.e.\ \textsf{xdvi}, \textsf{dvips} (with
-the \textsf{-z} option), \textsf{\OzTeX}, and \textsf{Textures})
+the \textsf{-z} option), \textsf{\hologo{OzTeX}}, and \textsf{Textures})
 \item[dvips] produces \verb|\special| commands tailored for \textsf{dvips}
 \item[dvipsone] produces \verb|\special| commands tailored for \textsf{dvipsone}
 \item[ps2pdf] a special case of output suitable for processing by earlier versions of Ghost\-script's
 PDF writer; this is basically the same as that for \textsf{dvips}, but a few variations remained before version 5.21
 \item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}
-\item[pdftex] pdf\TeX, \Hanh{}'s \TeX{} variant that writes PDF directly
+\item[pdftex] pdf\TeX, \hologo{HanTheThanh}'s \TeX{} variant that writes PDF directly
 \item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly
 \item[dvipdfm] produces \verb|\special| commands for Mark Wicks' DVI to PDF driver \textsf{dvipdfm}
 \item[dvipdfmx] produces \verb|\special| commands for driver
@@ -378,9 +367,6 @@ as package option. They are not necessary in \verb|\hypersetup|.
 \usepackage[pdfborder={0 0 0}]{hyperref}
 \hypersetup{pdfborder=0 0 0}
 \end{verbatim}
-
-Package `kvoptions-patch' patches \LaTeX\ to make it aware
-of key value options and to prevent premature value expansions.
 
 Some options can be given at any time, but many are restricted: before
 \verb|\begin{document}|, only in \verb|\usepackage[...]{hyperref}|,
@@ -710,11 +696,10 @@ pdfborder          &           & 0 0 1   & The style of box around links; defaul
                                            but the colorlinks option resets it to produce no border.
 \end{longtable}
 
-Note that the color of link borders can be specified \emph{only} as 3
-numbers in the range 0..1, giving an RGB color. You cannot use colors
-defined in \TeX. Since version 6.76a this is no longer true.
-Especially with the help of package \xpackage{xcolor} the usual
-color specifications of package \xpackage{(x)color} can be used.
+The color of link borders used to be specified \emph{only} as 3
+numbers in the range 0..1, giving an RGB color. Since version 6.76a, the usual
+color specifications of package \xpackage{(x)color} can be used if \xpackage{xcolor}
+has been loaded.
 For further information see description of package \xpackage{hycolor}.
 
 The bookmark commands are stored in a file called
@@ -1636,7 +1621,7 @@ sequence error would arise.
 
 
  As example we take a macro definition for the Vietnamese
-  name of Han The Thanh. Correctly written it needs some
+  name of \hologo{HanTheThanh}. Correctly written it needs some
   accented characters, one character even with a double accent.
   Class `tugboat.cls' defines a macro for the typesetted name:
 \begin{verbatim}
@@ -1968,7 +1953,7 @@ sequence error would arise.
     are used for most characters, surrogates need four bytes.
  \item \xoption{auto} PDFDocEncoding if the string does not contain characters
     outside the encoding (outside ascii if an unicode engine is used)
-    and Unicode otherwise. This option is normally no suited for the unicode engines.
+    and Unicode otherwise. This option is not intended for the unicode engines.
 \end{itemize}
 
  All drivers use \xoption{unicode} by default now. If another encoding should be forced,
@@ -3360,7 +3345,7 @@ insight into PDF.
 
 Berthold Horn provided help, encouragement and sponsorship for the
 \textsf{dvipsone} and \textsf{dviwindo} drivers. Sergey Lesenko provided
-the changes needed for \textsf{dvipdf}, and \Hanh{} supplied all the
+the changes needed for \textsf{dvipdf}, and \Hologo{HanTheThanh} supplied all the
 information needed for \textsf{pdftex}. Patrick Daly kindly updated his
 \xpackage{natbib} package to allow easy integration with
 \xpackage{hyperref}. Michael Mehlich's \xpackage{hyper} package (developed

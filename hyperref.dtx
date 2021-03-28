@@ -7745,6 +7745,7 @@
 \def\Hy@babelnormalise#1[#2]{%
   \begingroup
     \Hy@safe@activestrue
+    \let\protect\@unexpandableprotect
     \edef\Hy@tempa{%
       \endgroup
       \noexpand#1[{#2}]%

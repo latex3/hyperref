@@ -1,0 +1,15 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section{Foo}\label{foé}
+\newpage 
+\START
+\hyperref[foé]{GO}.
+
+\END
+
+abc\newpage
+\end{document}

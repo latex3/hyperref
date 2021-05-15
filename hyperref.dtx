@@ -12980,6 +12980,7 @@
 \def\HyRef@StarSetRef#1{%
   \begingroup
     \Hy@safe@activestrue
+    \let\protect\@unexpandableprotect
     \edef\x{#1}%
     \@onelevel@sanitize\x
     \edef\x{\endgroup

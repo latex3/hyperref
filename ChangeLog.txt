@@ -1,7 +1,12 @@
+2021-XX-XX Ulrike Fischer/David Carlisle
+    * handle non-ascii labels, issue #185
+    * suppress break points after whatsits issue #187
+    * correct longtable check, issue #193
+
 2021-02-27 Ulrike Fischer/David Carlisle
     * rename puenc-greek.def to puenc-greekbasic.def to resolve
       name conflict with a file in greek-fontenc, issue #177
-    * some documentation improvements (PR #174)  
+    * some documentation improvements (PR #174)
 
 2021-02-10 Ulrike Fischer/David Carlisle
     * moved the PU-declarations for greek to an extra file

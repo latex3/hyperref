@@ -1,0 +1,16 @@
+\input{regression-test}
+\documentclass[12pt]{article}
+\usepackage{color,hyperref}
+
+\begin{document}
+\START \showoutput
+a\\[30\baselineskip]
+b
+
+\section{section}
+
+\color{red}% created unwanted breakpoint ...
+
+\section{quack}
+c
+\end{document}

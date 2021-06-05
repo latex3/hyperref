@@ -4451,10 +4451,10 @@
   \let\Hy@RestoreLastskip\relax
   \ifvmode
     \ifdim\lastskip=\z@
-      \ifnum\lastnodetype=11 %
-        \let\Hy@RestoreLastskip\nobreak
-      \else
+      \ifnum\lastnodetype=1 %
         \let\Hy@RestoreLastskip\relax
+      \else
+        \let\Hy@RestoreLastskip\nobreak
       \fi
     \else
       \begingroup

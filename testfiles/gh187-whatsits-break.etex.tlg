@@ -1,0 +1,174 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(632.5+0.0)x429.0
+.\hbox(0.0+0.0)x0.0
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Cre\ETC.}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 15.99626fil
+..\kern 0.0
+..\kern 17.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 37.99626fil
+...\kern 0.0
+...\kern 39.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.1) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(632.5+0.0)x429.0
+..\glue 17.0
+..\vbox(615.5+0.0)x390.0, shifted 39.0
+...\vbox(12.0+0.0)x390.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x390.0
+.....\special{color push  Black}
+.....\hbox(0.0+0.0)x390.0
+.....\special{color pop}
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(548.5+0.0)x390.0, glue set >20000.0fil
+....\write-{}
+....\special{ps:SDict begin [/Count -0/Dest (section.1) cvn/Title (\376\377\000s\0\ETC.}
+....\special{ps:SDict begin [/Count -0/Dest (section.2) cvn/Title (\376\377\000q\0\ETC.}
+....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pd\ETC.}
+....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 14.5 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\glue(\topskip) 6.83333
+....\hbox(5.16667+0.0)x390.0, glue set 366.50024fil
+.....\hbox(0.0+0.0)x17.62482
+.....\OT1/cmr/m/n/12 a
+.....\penalty 10000
+.....\glue 0.0 plus 1.0fil
+.....\penalty -10000
+.....\glue(\rightskip) 0.0
+....\glue 435.0
+....\penalty 300
+....\glue(\baselineskip) 6.16669
+....\hbox(8.33331+0.0)x390.0, glue set 383.47229fil
+.....\OT1/cmr/m/n/12 b
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 22.26668
+...\hbox(7.73332+0.0)x390.0
+....\special{color push  Black}
+....\hbox(7.73332+0.0)x390.0, glue set 192.06253fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/12 1
+.....\glue 0.0 plus 1.0fil
+....\special{color pop}
+.\kern 0.0
+Completed box being shipped out [2]
+\vbox(632.5+0.0)x429.0
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 15.99626fil
+..\kern 0.0
+..\kern 17.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 38.99626fil
+...\kern 0.0
+...\kern 40.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.2) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(632.5+0.0)x429.0
+..\glue 17.0
+..\vbox(615.5+0.0)x390.0, shifted 39.0
+...\vbox(12.0+0.0)x390.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x390.0
+.....\special{color push  Black}
+.....\hbox(0.0+0.0)x390.0
+.....\special{color pop}
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(548.5+0.0)x390.0, glue set 476.18245fil
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 14.5 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.1) cvn /DEST pdfmark e\ETC.}
+....\glue(\topskip) 0.00002
+....\hbox(11.99998+0.0)x390.0, glue set 302.18205fil
+.....\hbox(11.13599+0.0)x29.15997
+......\glue 0.0
+......\OT1/cmr/bx/n/17.28 1
+......\glue 19.43999
+.....\OT1/cmr/bx/n/17.28 s
+.....\OT1/cmr/bx/n/17.28 e
+.....\OT1/cmr/bx/n/17.28 c
+.....\OT1/cmr/bx/n/17.28 t
+.....\OT1/cmr/bx/n/17.28 i
+.....\OT1/cmr/bx/n/17.28 o
+.....\OT1/cmr/bx/n/17.28 n
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 11.88335 plus 1.03331
+....\special{color push rgb 1 0 0}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 14.5 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.2) cvn /DEST pdfmark e\ETC.}
+....\penalty 10000
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 10.00002
+....\hbox(11.99998+3.35999)x390.0, glue set 311.97006fil
+.....\hbox(11.13599+0.0)x29.15997
+......\glue 0.0
+......\OT1/cmr/bx/n/17.28 2
+......\glue 19.43999
+.....\OT1/cmr/bx/n/17.28 q
+.....\OT1/cmr/bx/n/17.28 u
+.....\OT1/cmr/bx/n/17.28 a
+.....\OT1/cmr/bx/n/17.28 c
+.....\kern-0.54001
+.....\OT1/cmr/bx/n/17.28 k
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000\ETC.}
+....\penalty 10000
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\penalty 10000
+....\glue 11.88335 plus 1.03331
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.97334
+....\hbox(5.16667+0.0)x390.0, glue set 384.77783fil
+.....\OT1/cmr/m/n/12 c
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 22.26668
+...\hbox(7.73332+0.0)x390.0
+....\special{color push  Black}
+....\hbox(7.73332+0.0)x390.0, glue set 192.06253fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/12 2
+.....\glue 0.0 plus 1.0fil
+....\special{color pop}
+(gh187-whatsits-break.aux)
+Package rerunfilecheck Info: File `gh187-whatsits-break.out' has not changed.
+(rerunfilecheck)             Checksum: 51FA36A382C4061322CB065C80DE5710;146.

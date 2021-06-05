@@ -1,0 +1,194 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(632.5+0.0)x429.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\vbox(0.0+0.0)x0.0, glue set - 15.99626fil, direction TLT
+..\kern0.0
+..\kern17.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 37.99626fil, direction TLT
+...\kern0.0
+...\kern39.0
+...\kern-1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(632.5+0.0)x429.0, direction TLT
+..\glue 17.0
+..\vbox(615.5+0.0)x390.0, shifted 39.0, direction TLT
+...\vbox(12.0+0.0)x390.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x390.0, direction TLT
+.....\pdfcolorstack 0 push {0 g 0 G}
+.....\hbox(0.0+0.0)x390.0, direction TLT
+.....\pdfcolorstack 0 pop
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(548.5+0.0)x390.0, glue set >20000.0fil, direction TLT
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\glue(\topskip) 6.648
+....\hbox(5.352+0.12)x390.0, glue set 366.12fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x18.0, direction TLT
+.....\TU/lmr/m/n/12 a
+.....\penalty 10000
+.....\glue 0.0 plus 1.0fil
+.....\penalty -10000
+.....\glue(\rightskip) 0.0
+....\glue 435.0
+....\penalty 300
+....\glue(\baselineskip) 6.052
+....\hbox(8.328+0.12)x390.0, glue set 383.47198fil, direction TLT
+.....\TU/lmr/m/n/12 b
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -0.12
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 22.02
+...\hbox(7.98+0.0)x390.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(7.98+0.0)x390.0, glue set 192.06fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/12 1
+.....\glue 0.0 plus 1.0fil
+....\pdfcolorstack 0 pop
+.\kern0.0
+.\kern0.0
+Completed box being shipped out [2]
+\vbox(632.5+0.0)x429.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\vbox(0.0+0.0)x0.0, glue set - 15.99626fil, direction TLT
+..\kern0.0
+..\kern17.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 38.99626fil, direction TLT
+...\kern0.0
+...\kern40.0
+...\kern-1.00374
+...\pdfdest name{page.2} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(632.5+0.0)x429.0, direction TLT
+..\glue 17.0
+..\vbox(615.5+0.0)x390.0, shifted 39.0, direction TLT
+...\vbox(12.0+0.0)x390.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x390.0, direction TLT
+.....\pdfcolorstack 0 push {0 g 0 G}
+.....\hbox(0.0+0.0)x390.0, direction TLT
+.....\pdfcolorstack 0 pop
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(548.5+0.0)x390.0, glue set 476.15793fil, direction TLT
+....\pdfdest name{section.1} xyz
+....\glue(\topskip) 0.2496
+....\hbox(11.7504+0.10368)x390.0, glue set 304.30847fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(11.33568+0.0)x27.00864, direction TLT
+......\glue 0.0
+......\TU/lmr/bx/n/17.28 1
+......\glue 17.28
+.....\TU/lmr/bx/n/17.28 s
+.....\TU/lmr/bx/n/17.28 e
+.....\TU/lmr/bx/n/17.28 c
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/17.28 -
+.....\TU/lmr/bx/n/17.28 t
+.....\TU/lmr/bx/n/17.28 i
+.....\TU/lmr/bx/n/17.28 o
+.....\TU/lmr/bx/n/17.28 n
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 11.8956 plus 1.03438
+....\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
+....\pdfdest name{section.2} xyz
+....\penalty 10000
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.90399
+....\hbox(11.99232+3.35233)x390.0, glue set 314.10626fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(11.33568+0.0)x27.00864, direction TLT
+......\glue 0.0
+......\TU/lmr/bx/n/17.28 2
+......\glue 17.28
+.....\TU/lmr/bx/n/17.28 q
+.....\TU/lmr/bx/n/17.28 u
+.....\TU/lmr/bx/n/17.28 a
+.....\TU/lmr/bx/n/17.28 c
+.....\kern-0.53568 (font)
+.....\TU/lmr/bx/n/17.28 k
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000\ETC.}
+....\penalty 10000
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\penalty 10000
+....\glue 11.8956 plus 1.03438
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.79567
+....\hbox(5.352+0.12)x390.0, glue set 384.78fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\TU/lmr/m/n/12 c
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -0.12
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 22.02
+...\hbox(7.98+0.0)x390.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(7.98+0.0)x390.0, glue set 192.06fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/12 2
+.....\glue 0.0 plus 1.0fil
+....\pdfcolorstack 0 pop
+.\kern0.0
+(gh187-whatsits-break.aux)
+Package rerunfilecheck Info: File `gh187-whatsits-break.out' has not changed.
+(rerunfilecheck)             Checksum: 51FA36A382C4061322CB065C80DE5710;146.

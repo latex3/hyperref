@@ -1,4 +1,4 @@
-2021-XX-XX Ulrike Fischer/David Carlisle
+2021-06-05 Ulrike Fischer/David Carlisle
     * handle non-ascii labels, issue #185
     * suppress break points after whatsits issue #187
     * correct longtable check, issue #193

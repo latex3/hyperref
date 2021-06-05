@@ -11417,7 +11417,7 @@
 %    without valid anchor
 %    \begin{macrocode}
   \@ifpackageloaded{longtable}{%
-    \CheckCommand*{\LT@p@ftntext}[1]{%
+    \CheckCommand{\LT@p@ftntext}[1]{%
       \edef\@tempa{%
         \the\LT@p@ftn
         \noexpand\footnotetext[\the\c@footnote]%

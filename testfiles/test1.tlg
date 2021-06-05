@@ -864,6 +864,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\glue(\rightskip) 0.0
 ...\pdfdest name{testpiccy} xyz
 ...\glue(\parskip) 0.0
+...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 6.11752
 ...\hbox(7.48248+2.12917)x360.0, glue set 302.4212fil
 ....\hbox(0.0+0.0)x0.0
@@ -884,6 +885,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
 ...\glue(\parskip) 0.0
+...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 6.75627
 ...\hbox(4.71457+0.0)x360.0, glue set 331.10405fil
 ....\hbox(0.0+0.0)x0.0
@@ -895,6 +897,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 8.88544
 ...\hbox(4.71457+0.0)x360.0, glue set 331.10405fil
@@ -956,6 +959,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 8.88544
 ...\hbox(4.71457+0.0)x360.0, glue set 331.10405fil
@@ -1094,6 +1098,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\penalty 10000
 .\glue 10.84352 plus 0.94289
 .\glue(\parskip) 0.0 plus 1.0
+.\glue(\parskip) 0.0
 .\glue(\baselineskip) 5.38751
 .\hbox(8.2125+2.73749)x360.0, glue set 0.16
 ..\OT1/cmr/m/n/10.95 T
@@ -1288,6 +1293,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\penalty 0
 .\penalty 10000
 .\glue(\parskip) 0.0 plus 1.0
+.\glue(\parskip) 0.0
 .\glue(\baselineskip) 4.17085
 .\hbox(6.69167+2.43333)x360.0, glue set 199.2828fil
 ..\hbox(0.0+0.0)x17.0
@@ -1323,6 +1329,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\pdfendlink
 ..\OT1/cmtt/m/n/10.95 >
 ..\OT1/cmtt/m/n/10.95 >
+..\kern 0.0
 ..\kern 0.0
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil

@@ -28,6 +28,7 @@ Completed box being shipped out [1]
 ...\vbox(12.0+0.0)x345.0, glue set 12.0fil
 ....\glue 0.0 plus 1.0fil
 ....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
 ...\vbox(550.0+0.0)x345.0, glue set 336.99185fil
@@ -405,6 +406,7 @@ Completed box being shipped out [1]
 ....\penalty -300
 ....\glue 15.0694 plus 4.30554 minus 0.86108
 ....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 6.05557
 ....\hbox(9.99998+0.0)x345.0, glue set 280.66675fil
 .....\hbox(0.0+0.0)x0.0
@@ -433,6 +435,7 @@ Completed box being shipped out [1]
 ....\penalty 10000
 ....\glue 9.90276 plus 0.86108
 ....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 4.5
 ....\hbox(7.5+2.5)x329.44441, glue set - 0.14865, shifted 15.55559
 .....\hbox(7.5+2.5)x0.0
@@ -450,6 +453,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:DoS) cvn /DEST pdfma\ETC.}
+.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N
@@ -589,6 +593,7 @@ Completed box being shipped out [1]
 ....\penalty -51
 ....\glue 8.0 plus 4.0 minus 2.0
 ....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 2.55556
 ....\hbox(7.5+2.5)x329.44441, glue set 0.26616, shifted 15.55559
 .....\hbox(7.5+2.5)x0.0
@@ -606,6 +611,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.Luhm:Soc&int) cvn /DEST p\ETC.}
+.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N
@@ -967,6 +973,7 @@ Completed box being shipped out [1]
 ....\penalty -51
 ....\glue 8.0 plus 4.0 minus 2.0
 ....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 2.55556
 ....\hbox(7.5+2.5)x329.44441, glue set 0.90858, shifted 15.55559
 .....\hbox(7.5+2.5)x0.0
@@ -984,6 +991,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
 .......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:WrtdG) cvn /DEST pdf\ETC.}
+.......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
 .....\OT1/cmr/m/n/10 N
@@ -1088,10 +1096,11 @@ Completed box being shipped out [1]
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 23.55556
-...\hbox(6.44444+0.0)x345.0, glue set 170.0fil
-....\glue 0.0 plus 1.0fil
-....\OT1/cmr/m/n/10 1
-....\glue 0.0 plus 1.0fil
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
 .\kern 0.0
 (testnb.aux)
 Package rerunfilecheck Info: File `testnb.out' has not changed.

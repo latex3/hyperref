@@ -22,6 +22,7 @@ Completed box being shipped out [1]
 ...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
 ....\glue 0.0 plus 1.0fil
 ....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
 ...\vbox(550.0+0.0)x345.0, glue set 527.9436fil, direction TLT
@@ -40,6 +41,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 4.84
 ....\hbox(6.94+0.11)x345.0, glue set 310.54001fil, direction TLT
 .....\localpar
@@ -60,10 +62,11 @@ Completed box being shipped out [1]
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 23.34
-...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
-....\glue 0.0 plus 1.0fil
-....\TU/lmr/m/n/10 1
-....\glue 0.0 plus 1.0fil
+...\hbox(6.66+0.0)x345.0, direction TLT
+....\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
 .\kern0.0
 (38-pdfminorversion.aux)
 Package rerunfilecheck Info: File `38-pdfminorversion.out' has not changed.

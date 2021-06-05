@@ -31,6 +31,7 @@ Completed box being shipped out [1]
 ...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
 ....\glue 0.0 plus 1.0fil
 ....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
 ...\vbox(550.0+0.0)x345.0, glue set 539.94232fil, direction TLT
@@ -58,8 +59,7 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
-.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 .5 .5]} action user{/Subt
-ype/Link/A<</F(test-xr-hyper.pdf)/S/GoToR/D(section.1)>>}
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 .5 .5]} action user{/Subtype/Link/A<</F(test-xr-hyper.pdf)/S/GoToR/D(section.1)>>}
 .....\TU/lmr/m/n/10 s
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 c
@@ -74,6 +74,7 @@ ype/Link/A<</F(test-xr-hyper.pdf)/S/GoToR/D(section.1)>>}
 .....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
 .....\pdfendlink
+.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -82,10 +83,11 @@ ype/Link/A<</F(test-xr-hyper.pdf)/S/GoToR/D(section.1)>>}
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 23.34
-...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
-....\glue 0.0 plus 1.0fil
-....\TU/lmr/m/n/10 1
-....\glue 0.0 plus 1.0fil
+...\hbox(6.66+0.0)x345.0, direction TLT
+....\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
 .\kern0.0
 (gh118-xr-hyper.aux)
 Package rerunfilecheck Info: File `gh118-xr-hyper.out' has not changed.

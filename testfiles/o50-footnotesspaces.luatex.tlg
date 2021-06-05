@@ -30,6 +30,7 @@ Completed box being shipped out [1]
 ...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
 ....\glue 0.0 plus 1.0fil
 ....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
 ...\vbox(550.0+0.0)x345.0, glue set 478.24802fil, direction TLT
@@ -57,8 +58,7 @@ Completed box being shipped out [1]
 .......\kern0.28 (font)
 .......\TU/lmr/m/n/10 c
 .......\penalty 10000
-.......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{
-Hfootnote.1}
+.......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.1}
 .......\hbox(6.71593+0.0)x4.721, direction TLT
 ........\mathon
 ........\hbox(0.0+0.0)x0.0, direction TLT
@@ -72,8 +72,7 @@ Hfootnote.1}
 .......\kern0.28 (font)
 .......\TU/lmr/m/n/10 c
 .......\penalty 10000
-.......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{
-Hfootnote.2}
+.......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.2}
 .......\hbox(8.49393+0.0)x4.308, direction TLT
 ........\mathon
 ........\hbox(0.0+0.0)x0.0, direction TLT
@@ -81,6 +80,7 @@ Hfootnote.2}
 .........\TU/lmr/m/it/7 b
 ........\mathoff
 .......\pdfendlink
+.......\kern0.0
 .......\penalty 10000
 .......\glue(\parfillskip) 0.0 plus 1.0fil
 .......\glue(\rightskip) 0.0
@@ -117,9 +117,11 @@ Hfootnote.2}
 .......\TU/lmr/m/n/8 l
 .......\penalty 10000
 .......\rule(0.0+2.85002)x0.0
+.......\kern0.0
 .......\penalty 10000
 .......\glue(\parfillskip) 0.0 plus 1.0fil
 .......\glue(\rightskip) 0.0
+......\glue(\parskip) 0.0
 ......\glue(\parskip) 0.0
 ......\hbox(6.99333+2.85002)x142.26378, glue set 106.62375fil, direction TLT
 .......\localpar
@@ -150,14 +152,17 @@ Hfootnote.2}
 .......\TU/lmr/m/n/8 l
 .......\penalty 10000
 .......\rule(0.0+2.85002)x0.0
+.......\kern0.0
 .......\penalty 10000
 .......\glue(\parfillskip) 0.0 plus 1.0fil
 .......\glue(\rightskip) 0.0
 .....\mathoff
+.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
 ....\hbox(8.27692+0.0)x345.0, glue set 317.70398fil, direction TLT
 .....\localpar
@@ -167,8 +172,7 @@ Hfootnote.2}
 ......\localrightbox=null
 .....\hbox(0.0+0.0)x15.0, direction TLT
 .....\penalty 10000
-.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hf
-ootnote.3}
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.3}
 .....\hbox(8.27692+0.0)x4.483, direction TLT
 ......\mathon
 ......\hbox(0.0+0.0)x0.0, direction TLT
@@ -178,8 +182,7 @@ ootnote.3}
 .....\pdfendlink
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\penalty 10000
-.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hf
-ootnote.4}
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.4}
 .....\hbox(8.27692+0.0)x4.483, direction TLT
 ......\mathon
 ......\hbox(0.0+0.0)x0.0, direction TLT
@@ -187,6 +190,7 @@ ootnote.4}
 .......\TU/lmr/m/n/7 2
 ......\mathoff
 .....\pdfendlink
+.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -237,6 +241,7 @@ ootnote.4}
 .....\TU/lmr/m/n/8 f
 .....\penalty 10000
 .....\rule(0.0+2.85002)x0.0
+.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -282,16 +287,18 @@ ootnote.4}
 .....\TU/lmr/m/n/8 f
 .....\penalty 10000
 .....\rule(0.0+2.85002)x0.0
+.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\glue -2.85002
 ....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 23.34
-...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
-....\glue 0.0 plus 1.0fil
-....\TU/lmr/m/n/10 1
-....\glue 0.0 plus 1.0fil
+...\hbox(6.66+0.0)x345.0, direction TLT
+....\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
 .\kern0.0
 (o50-footnotesspaces.aux)
 Package rerunfilecheck Info: File `o50-footnotesspaces.out' has not changed.

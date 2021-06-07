@@ -1,3 +1,6 @@
+2021-06-07 Ulrike Fischer/David Carlisle
+    * fix colons in label, issue #194
+
 2021-06-05 Ulrike Fischer/David Carlisle
     * handle non-ascii labels, issue #185
     * suppress break points after whatsits issue #187

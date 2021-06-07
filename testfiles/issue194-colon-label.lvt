@@ -1,0 +1,16 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section{Foo}\label{fo:goo}
+\newpage
+\START
+\hyperref[fo:goo]{GO}.
+
+\END
+
+abc\newpage
+\end{document}

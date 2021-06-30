@@ -107,13 +107,26 @@
 % --Moved 2021-06-30--
 %
 % This provide two commands for the listing package which is from 1999.
-% Probably unneeded anyway, as this are the defaults
+% Probably unneeded anyway, as this are the defaults, at best they prevent some warnings.
 %
 % --End of move command--
 %    \begin{macrocode}
 \@ifpackageloaded{listing}{%
   \providecommand*\theHlisting{\thelisting}%
   \providecommand*\toclevel@listing{0}%
+}{}
+%    \end{macrocode}
+% \section{listings}
+% --Moved 2021-06-30--
+%
+% This provide two commands for the listing package which is from 1999.
+% Probably unneeded anyway, as this are the defaults, at best they prevent some warnings.
+%
+% --End of move command--
+%    \begin{macrocode}
+\@ifpackageloaded{listings}{%
+  \providecommand*\theHlstlisting{\thelstlisting}%
+  \providecommand*\toclevel@lstlisting{0}%
 }{}
 %    \end{macrocode}
 %    \begin{macrocode}

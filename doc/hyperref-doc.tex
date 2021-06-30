@@ -299,7 +299,9 @@ by specifying in the document preamble
 
 Make sure it comes \emph{last} of your loaded packages, to give it a
 fighting chance of not being over-written, since its job is to redefine
-many \LaTeX\ commands. Hopefully you will find that all cross-references
+many \LaTeX\ commands.\footnote{But work has started to reduce the 
+number of redefinition and so the dependencies on the loading order.}
+Hopefully you will find that all cross-references
 work correctly as hypertext. For example, \ci{section} commands will
 produce a bookmark and a link, whereas \ci{section*} commands will only
 show links when paired with a corresponding \ci{addcontentsline}
@@ -314,6 +316,7 @@ name well implies, colors the links instead of using boxes; this is the
 option used in this document.
 
 
+
 \section{Package options}
 
 All user-configurable aspects of \xpackage{hyperref} are set using a
@@ -326,7 +329,34 @@ site-wide basis.
 
 Note however that some options (for example \texttt{unicode}) can only be used as
 package options, and not in \verb|\hypersetup| as the option settings are processed
-as the package is read.
+as the package is read. The following tabular lists (hopefully all) these options. 
+Be aware that some of the option do nothing or have
+changed behaviour if the new pdfmanagement and so the new generic hyperref driver is used.
+
+\begin{tabular}{>{\ttfamily}l>{\raggedright\arraybackslash}p{5cm}}
+option     & remark
+all driver options, e.g. \texttt{pdftex} & often not needed, as detected automatically\\
+implicit   \\
+pdfa       & no-op with new pdfmanagement, set the standard in \cs{DeclareDocumentMetadata}.\\
+unicode    & is the default now anyway\\
+pdfversion & no-op with new pdfmanagement, set the version in \cs{DeclareDocumentMetadata}.\\
+bookmarks  & this will probably change at some time. \\
+backref &\\
+pagebackref & \\
+destlabel  &\\
+pdfusetitle &\\
+pdfpagelabels &\\
+hyperfootnotes &\\
+hyperfigures&\\
+hyperindex &\\
+encap &\\
+typexml & \\
+CJKbookmarks & only with the new pdfmanagement, in other cases it can be used in \cs{hypersetup}\\
+psdextra     & only with the new pdfmanagement, in other cases it can be used in \cs{hypersetup}\\
+nesting      & only with the new pdfmanagement, in other cases it can be used in \cs{hypersetup} (but
+               is quite unclear if it has any use)\\
+               
+\end{tabular}
 
 As an example, the behavior of a particular file could be controlled by:
 \begin{itemize}

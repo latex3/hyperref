@@ -103,8 +103,19 @@
   \providecommand*\ext@figure{lof}%
 }{}
 %    \end{macrocode}
+% \section{listing}
+% --Moved 2021-06-30--
 %
+% This provide two commands for the listing package which is from 1999.
+% Probably unneeded anyway, as this are the defaults
 %
+% --End of move command--
+%    \begin{macrocode}
+\@ifpackageloaded{listing}{%
+  \providecommand*\theHlisting{\thelisting}%
+  \providecommand*\toclevel@listing{0}%
+}{}
+%    \end{macrocode}
 %    \begin{macrocode}
 %</package>
 %    \end{macrocode}

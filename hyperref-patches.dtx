@@ -1,0 +1,110 @@
+% \iffalse meta-comment
+% \iffalse
+%% File: hyperref-patches.dtx
+%% Copyright
+%% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
+%% 2001-2015 Heiko Oberdiek.
+%% 2016-2019 Oberdiek Package Support Group
+%% 2019-2021 LaTeX Project
+%%      https://github.com/latex3/hyperref/issues
+%%
+%% This file is part of the `Hyperref Bundle'.
+%% -------------------------------------------
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is the LaTeX Project.
+%%
+%% The list of all files belonging to the `Hyperref Bundle' is
+%% given in the file `manifest.txt'.
+%
+%<*driver>
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{pdfstandard=A-2b}
+\makeatletter
+\declare@file@substitution{doc.sty}{doc-v3beta.sty}
+\makeatother
+\documentclass[full]{l3doc}
+\usepackage{array,booktabs,hyperxmp}
+\hypersetup{pdfauthor=The LaTeX Project,pdftitle=hyperref patches}
+\usepackage{caption}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \title{^^A
+%   Old hyperref patches
+% }
+%
+% \author{^^A
+%  The \LaTeX{} Project\thanks
+%    {^^A
+%      E-mail:
+%        \href{mailto:latex-team@latex-project.org}
+%          {latex-team@latex-project.org}^^A
+%    }^^A
+% }
+%
+% \date{Version 0.9, released 2021-06-29}
+%
+% \maketitle
+% \begin{documentation}
+%
+% \section{\pkg{hyperref-patches} documentation}
+%
+% \pkg{hyperref} has included over the years a rather large number of
+% patches and correction for external packages to make them compatible with
+% hyperlinks.
+%
+% Some of these patches are now unnessary, either because the external
+% package is no longer used or because the package was fixed or extended to
+% supports hyperlinks.
+%
+% This small package contains patches were it is not sure if they can be removed
+% completly so that if needed that can be added manually, either by loading
+% this package or by copying the code.
+%
+% \end{documentation}
+
+% \begin{implementation}
+%
+% \section{\pkg{hyperref-patches} documentation}
+%
+%    \begin{macrocode}
+%<*package>
+\ProvidesPackage{hyperref-patches}[2021-06-29 v0.9 old hyperref patches]
+%    \end{macrocode}
+% \section{Compatibility with foiltex}
+% foils.cls redefine figure, table and caption as it doesn't want them to float
+% and also thinks that list of figures and tables are unnecessary. This
+% means that \cs{ext@table} and \cs{ext@figure} are missing too which
+% are needed by the definitions of hyperref.
+%
+% foiltex is not part of the standard tex systems and hasn't been update the last
+% time in 2008. So the patch is removed from hyperref.
+%
+%    \begin{macrocode}
+\@ifclassloaded{foils}{%
+  \providecommand*\ext@table{lot}%
+  \providecommand*\ext@figure{lof}%
+}{}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \end{implementation}
+%
+% \PrintIndex

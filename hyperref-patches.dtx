@@ -85,6 +85,8 @@
 \ProvidesPackage{hyperref-patches}[2021-06-29 v0.9 old hyperref patches]
 %    \end{macrocode}
 % \section{Compatibility with foiltex}
+% --Moved 2021-06-30--
+%
 % foils.cls redefine figure, table and caption as it doesn't want them to float
 % and also thinks that list of figures and tables are unnecessary. This
 % means that \cs{ext@table} and \cs{ext@figure} are missing too which
@@ -93,6 +95,8 @@
 % foiltex is not part of the standard tex systems and hasn't been update the last
 % time in 2008. So the patch is removed from hyperref.
 %
+% --End of move command--
+%
 %    \begin{macrocode}
 \@ifclassloaded{foils}{%
   \providecommand*\ext@table{lot}%
@@ -100,6 +104,209 @@
 }{}
 %    \end{macrocode}
 %
+% \section{Compatibility with seminar slide package}\label{seminar}
+% --Moved 2021-06-30--
+%
+% seminar.cls is currently (june 2021) not compatible with LaTeX as it redefines
+% \cs{document}. It will perhaps be roughly fixed and then the following patches
+% will be included too. If this happens, this section will be removed for good.
+%
+% --End of move command--
+%
+%    This requires \texttt{seminar.bg2}, version 1.6 or later.
+%    Contributions by Denis Girou (\Email{denis.girou@idris.fr}).
+%    \begin{macrocode}
+\@ifclassloaded{seminar}{%
+  \Hy@seminarslidestrue
+  \providecommand\theHslide{\arabic{slide}}%
+}{%
+  \Hy@seminarslidesfalse
+}
+\@ifpackageloaded{slidesec}{%
+  \providecommand\theHslidesection   {\arabic{slidesection}}%
+  \providecommand\theHslidesubsection{%
+    \theHslidesection.\arabic{slidesubsection}%
+  }%
+  \def\slide@heading[#1]#2{%
+    \H@refstepcounter{slidesection}%
+    \@addtoreset{slidesubsection}{slidesection}%
+    \addtocontents{los}{%
+      \protect\l@slide{\the\c@slidesection}{\ignorespaces#1}%
+        {\@SCTR}{slideheading.\theslidesection}%
+    }%
+    \def\Hy@tempa{#2}%
+    \ifx\Hy@tempa\@empty
+    \else
+      {%
+        \edef\@currentlabel{%
+          \csname p@slidesection\endcsname\theslidesection
+        }%
+        \makeslideheading{#2}%
+      }%
+    \fi
+    \gdef\theslideheading{#1}%
+    \gdef\theslidesubheading{}%
+    \ifHy@bookmarksnumbered
+      \def\Hy@slidetitle{\theslidesection\space #1}%
+    \else
+      \def\Hy@slidetitle{#1}%
+    \fi
+    \ifHy@hypertexnames
+       \ifHy@naturalnames
+         \hyper@@anchor{slideheading.\theslidesection}{\relax}%
+         \Hy@writebookmark
+           {\theslidesection}%
+           {\Hy@slidetitle}%
+           {slideheading.\theslidesection}%
+           {1}%
+           {toc}%
+       \else
+         \hyper@@anchor{slideheading.\theHslidesection}{\relax}%
+         \Hy@writebookmark
+           {\theslidesection}%
+           {\Hy@slidetitle}%
+           {slideheading.\theHslidesection}%
+           {1}%
+           {toc}%
+       \fi
+    \else
+      \Hy@GlobalStepCount\Hy@linkcounter
+      \hyper@@anchor{slideheading.\the\Hy@linkcounter}{\relax}%
+      \Hy@writebookmark
+        {\theslidesection}%
+        {\Hy@slidetitle}%
+        {slideheading.\the\Hy@linkcounter}%
+        {1}%
+        {toc}%
+    \fi
+  }%
+  \def\slide@subheading[#1]#2{%
+    \H@refstepcounter{slidesubsection}%
+    \addtocontents{los}{%
+      \protect\l@subslide{\the\c@slidesubsection}{\ignorespaces#1}%
+        {\@SCTR}{slideheading.\theslidesubsection}%
+    }%
+    \def\Hy@tempa{#2}%
+    \ifx\Hy@tempa\@empty
+    \else
+      {%
+        \edef\@currentlabel{%
+          \csname p@slidesubsection\endcsname\theslidesubsection
+        }%
+        \makeslidesubheading{#2}%
+      }%
+    \fi
+    \gdef\theslidesubheading{#1}%
+    \ifHy@bookmarksnumbered
+      \def\Hy@slidetitle{\theslidesubsection\space #1}%
+    \else
+      \def\Hy@slidetitle{#1}%
+    \fi
+    \ifHy@hypertexnames
+      \ifHy@naturalnames
+        \hyper@@anchor{slideheading.\theslidesubsection}{\relax}%
+        \Hy@writebookmark
+          {\theslidesubsection}%
+          {\Hy@slidetitle}%
+          {slideheading.\theslidesubsection}%
+          {2}%
+          {toc}%
+      \else
+        \hyper@@anchor{slideheading.\theHslidesubsection}{\relax}%
+        \Hy@writebookmark
+          {\theslidesubsection}%
+          {\Hy@slidetitle}%
+          {slideheading.\theHslidesubsection}%
+          {2}%
+          {toc}%
+      \fi
+    \else
+      \Hy@GlobalStepCount\Hy@linkcounter
+      \hyper@@anchor{slideheading.\the\Hy@linkcounter}{\relax}%
+      \Hy@writebookmark
+        {\theslidesubsection}%
+        {\Hy@slidetitle}%
+        {slideheading.\the\Hy@linkcounter}%
+        {1}%
+        {toc}%
+    \fi
+  }%
+  \providecommand*{\listslidename}{List of Slides}%
+  \def\listofslides{%
+    \section*{%
+      \listslidename
+      \@mkboth{%
+        \expandafter\MakeUppercase\listslidename
+      }{%
+        \expandafter\MakeUppercase\listslidename
+      }%
+    }%
+    \def\l@slide##1##2##3##4{%
+      \slide@undottedcline{%
+        \slidenumberline{##3}{\hyperlink{##4}{##2}}%
+      }{}%
+    }%
+    \let\l@subslide\l@slide
+    \@startlos
+  }%
+  \def\slide@contents{%
+    \def\l@slide##1##2##3##4{%
+      \slide@cline{\slidenumberline{##3}{\hyperlink{##4}{##2}}}{##3}%
+    }%
+    \let\l@subslide\@gobblefour
+    \@startlos
+  }%
+  \def\Slide@contents{%
+    \def\l@slide##1##2##3##4{%
+      \ifcase\lslide@flag
+        \message{##1 ** \the\c@slidesection}%
+        \ifnum##1>\c@slidesection
+          \def\lslide@flag{1}%
+          {%
+            \large
+            \slide@cline{%
+              \slidenumberline{$\Rightarrow\bullet$}%
+                {\hyperlink{##4}{##2}}%
+            }{##3}%
+          }%
+        \else
+          {%
+            \large
+            \slide@cline{%
+              \slidenumberline{$\surd\;\bullet$}%
+                {\hyperlink{##4}{##2}}%
+            }{##3}%
+          }%
+        \fi
+      \or
+        \def\lslide@flag{2}%
+        {%
+          \large
+          \slide@cline{%
+            \slidenumberline{$\bullet$}%
+              {\hyperlink{##4}{##2}}%
+          }{##3}%
+        }%
+      \or
+        {%
+          \large
+          \slide@cline{%
+            \slidenumberline{$\bullet$}%
+             {\hyperlink{##4}{##2}}%
+          }{##3}%
+        }%
+      \fi
+    }%
+    \def\l@subslide##1##2##3##4{%
+      \ifnum\lslide@flag=1 %
+        \@undottedtocline{2}{3.8em}{3.2em}{\hyperlink{##4}{##2}}{}%
+      \fi
+    }%
+    \def\lslide@flag{0}%
+    \@startlos
+  }%
+}{}
+%    \end{macrocode}
 %
 %    \begin{macrocode}
 %</package>

@@ -10732,82 +10732,8 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%
-% \section{Package lastpage support}
-%    Package lastpage directly writes the |\newlabel| command to the
-%    aux file. Because package hyperref requires additional arguments,
-%    the internal command |\lastpage@putlabel| is redefined.
-%    The patch is deferred by |\AtBeginDocument|, because it is possible
-%    that package lastpage is loaded after package hyperref.
-%    The same algorithm (options hypertexnames and plainpages)
-%    is used to get the page anchor name as
-%    in |\Hy@EveryPageAnchor| (see sec. \ref{pagenum}).
-%    The link will not work if option pageanchor is set to false.
-%    \begin{macro}{\lastpage@putlabel}
-%    \begin{macrocode}
-\Hy@AtBeginDocument{%
-  \@ifclassloaded{revtex4}{%
-    \@namedef{ver@lastpage.sty}{1994/06/25}%
-  }{}%
-  \@ifpackageloaded{lastpage}{%
-    \ifHy@pageanchor
-    \else
-      \Hy@WarningNoLine{%
-        The \string\pageref{LastPage} link doesn't work\MessageBreak
-        with disabled option `pageanchor'%
-      }%
-    \fi
-    \def\lastpage@putlabel{%
-      \addtocounter{page}{-1}%
-      \if@filesw
-        \begingroup
-          \let\@number\@firstofone
-          \ifHy@pageanchor
-            \ifHy@hypertexnames
-              \ifHy@plainpages
-                \def\Hy@temp{\arabic{page}}%
-              \else
-                \Hy@unicodefalse
-                \pdfstringdef\Hy@temp{\thepage}%
-              \fi
-            \else
-              \def\Hy@temp{\the\Hy@pagecounter}%
-            \fi
-          \fi
-          \immediate\write\@auxout{%
-            \string\newlabel
-              {LastPage}{{}{\thepage}{}{%
-                \ifHy@pageanchor page.\Hy@temp\fi}{}}%
-          }%
-        \endgroup
-      \fi
-      \addtocounter{page}{1}%
-    }%
-    \@ifclassloaded{revtex4}{%
-      \begingroup
-        \toks@\expandafter{\lastpage@putlabel}%
-        \edef\x{\endgroup
-          \def\noexpand\lastpage@putlabel{%
-            \noexpand\stepcounter{page}%
-            \the\toks@
-            \noexpand\addtocounter{page}\noexpand\m@ne
-          }%
-        }%
-      \x
-    }{}%
-  }{}%
-}
 %</package>
-%<*check>
-\checkpackage{lastpage}[1994/06/25]
-\checkcommand\def\lastpage@putlabel{%
-  \addtocounter{page}{-1}%
-  \immediate\write\@auxout{%
-    \string\newlabel{LastPage}{{}{\thepage}}%
-  }%
-  \addtocounter{page}{1}%
-}
-%</check>
+
 %<*package>
 %    \end{macrocode}
 %    \end{macro}

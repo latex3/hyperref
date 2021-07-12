@@ -4,7 +4,9 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     * move (basically unneeded) listings patches to external
     package
     * remove patch for titletoc, is now done by titletoc itself.
-    
+    * remove lastpage patch, is no longer used as lastpage supports
+    hyperref directly.
+
 
 2021-06-07 Ulrike Fischer/David Carlisle
     * fix colons in label, issue #194

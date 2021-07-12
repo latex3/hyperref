@@ -1,3 +1,11 @@
+XXXX-XX-XX Ulrike Fischer/David Carlisle
+    * moved the patch for foiltex into an external package
+    * remove patch for seminar, this is now in the class itself
+    * move (basically unneeded) listings patches to external
+    package
+    * remove patch for titletoc, is now done by titletoc itself.
+    
+
 2021-06-07 Ulrike Fischer/David Carlisle
     * fix colons in label, issue #194
 

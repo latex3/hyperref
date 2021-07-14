@@ -9646,9 +9646,27 @@
 % with aux and toc written the standard way.
 %
 % If hyperref was used last time, do nothing. If it was not used,
-% redefine newlabel to cope with it.
+% or an old version of hyperref was used, don't use that TOC at all
+% but generate a warning. Not ideal, but better than failing
+% with pre-5.0 hyperref TOCs.
 %    \begin{macrocode}
   \ifx\hyper@last\@undefined
+    \def\@starttoc#1{%
+      \begingroup
+        \makeatletter
+        \ltx@ifpackageloaded{parskip}{\parskip\z@}{}%
+        \IfFileExists{\jobname.#1}{%
+          \Hy@WarningNoLine{%
+            old #1 file detected, not used; run LaTeX again%
+          }%
+        }{}%
+        \if@filesw
+          \expandafter\newwrite\csname tf@#1\endcsname
+          \immediate\openout\csname tf@#1\endcsname \jobname.#1\relax
+        \fi
+        \@nobreakfalse
+      \endgroup
+    }%
     \def\newlabel#1#2{\@newl@bel r{#1}{#2{}{}{}{}}}%
   \fi
 }

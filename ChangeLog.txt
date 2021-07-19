@@ -9,6 +9,7 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     * remove non-e-tex version of \hypercalcbp, e-tex is require
     for hyperref now, removed the now unneeded internal command
     \hypercalcbpdef.
+    * remove old, no longer needed fix for frenchb.ldf 2010/08/21 v2.5a
 
 
 2021-06-07 Ulrike Fischer/David Carlisle

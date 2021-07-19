@@ -2118,18 +2118,6 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    (Partial) fix for bug in \texttt{frenchb.ldf} 2010/08/21 v2.5a that
-%    destroys \cs{pdfstringdefDisableCommands} after usage
-%    in \cs{AtBeginDocument}.
-%    \begin{macrocode}
-\let\HyPsd@pdfstringdefDisableCommands\pdfstringdefDisableCommands
-\AtBeginDocument{%
-  \@ifundefined{pdfstringdefDisableCommands}{%
-    \let\pdfstringdefDisableCommands\HyPsd@pdfstringdefDisableCommands
-  }{}%
-}
-%    \end{macrocode}
-%
 %    \begin{macro}{\pdfstringdefWarn}
 %    The purpose of \cmd{\pdfstringdefWarn} is to produce
 %    a warning message, so the user can see, that something

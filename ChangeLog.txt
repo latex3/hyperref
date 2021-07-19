@@ -10,6 +10,9 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     for hyperref now, removed the now unneeded internal command
     \hypercalcbpdef.
     * remove old, no longer needed fix for frenchb.ldf 2010/08/21 v2.5a
+    * removed patches for spanish, they are now in spanish.ldf
+    * removed hyperref-langpatches.sty, it is now empty and
+    unneeded.
 
 
 2021-06-07 Ulrike Fischer/David Carlisle

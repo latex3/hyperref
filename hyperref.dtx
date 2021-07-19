@@ -2197,26 +2197,7 @@
 %    see https://github.com/kia999/babel-russian/pull/3
 %    change 2021/02/04: removed patches for greek numerals, code is now in babel-greek.
 %    spanish: Nested quoting environments are not supported (|<<|, |>>|).
-%    \begin{macrocode}
-\ltx@IfUndefined{spanish@sh@>@sel}{}{%
-  \def\HyPsd@babel@spanish{%
-    \declare@shorthand{spanish}{<<}{\guillemotleft}%
-    \declare@shorthand{spanish}{>>}{\guillemotright}%
-    \declare@shorthand{spanish}{"=}{-}%
-    \declare@shorthand{spanish}{"~}{-}%
-    \declare@shorthand{spanish}{"!}{\textexclamdown}%
-    \declare@shorthand{spanish}{"?}{\textquestiondown}%
-  }%
-}
-%    \end{macrocode}
-%    \begin{macrocode}
-\def\HyPsd@SpanishPatch{%
-  \ltx@IfUndefined{es@save@dot}{%
-  }{%
-    \let\.\es@save@dot
-  }%
-}
-%    \end{macrocode}
+%    change 2021/07/19: removed patches for spanish, code is now in babel-spanish.
 %    \begin{macrocode}
 %</lang>
 %<*package>

@@ -961,73 +961,24 @@
 %    LaTeX expands the options before package hyperref
 %    is loaded and \cmd{\hypercalcbp} is defined.
 %    \item
-%    With e-TeX extensions an expandable implementation
+%    With the now required e-TeX extensions an expandable implementation
 %    is very easy; \cmd{\hypercalcbp} can be used
 %    everywhere and is expanded at use.
-%    \item
-%    Without e-TeX's features \cmd{\hypercalcbp} cannot be
-%    implemented expandable (practically) and have to
-%    be supported by \cmd{\hypercalcbpdef}.
-%    Limitations:
-%      \begin{itemize}
-%      \item Works only in options that use \cmd{\hypercalcbpdef}
-%            (currently only |pdfstartview|).
-%      \item For calculations package |calc| has to be loaded.
-%      \item The expansion of the argument is done at definition time.
-%      \end{itemize}
 %    \end{itemize}
 %    Example (\TeX):
 %\begin{verbatim}
-%\usepackage{calc}
 %\usepackage[...]{hyperref}
 %\hypersetup{
 %  pdfstartview={FitBH \hypercalcbp{\paperheight-\topmargin-1in
-%    -\headheight-\headsep}
+%    -\headheight-\headsep}}
 %}
 %\end{verbatim}
 %    \begin{macro}{\hypercalcbp}
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname dimexpr\endcsname\relax
-  \def\hypercalcbpdef#1#2{%
-    \begingroup
-      \toks@{}%
-      \HyCal@scan#2\hypercalcbp\@nil
-    \expandafter\endgroup
-    \expandafter\def\expandafter#1\expandafter{\the\toks@}%
-  }%
-  \def\HyCal@scan#1\hypercalcbp#2\@nil{%
-    \toks@\expandafter{\the\toks@ #1}%
-    \ifx\\#2\\%
-    \else
-      \ltx@ReturnAfterFi{%
-        \HyCal@do#2\@nil
-      }%
-    \fi
-  }%
-  \def\HyCal@do#1#2\@nil{%
-    \@ifpackageloaded{calc}{}{%
-      \Hy@Warning{%
-        For calculations \string\hypercalcbp\space needs\MessageBreak
-        package calc or e-TeX%
-      }%
-    }%
-    \setlength{\dimen@}{#1}%
-    \setlength{\dimen@}{0.99626401\dimen@}%
-    \edef\x{%
-      \toks@{%
-        \the\toks@
-        \strip@pt\dimen@
-      }%
-    }\x
-    \HyCal@scan#2\@nil
-  }%
-\else
   \def\hypercalcbp#1{%
     \strip@pt\dimexpr 0.99626401\dimexpr(#1)\relax\relax
   }%
   \def\hypercalcbpdef{\def}%
-\fi
 %    \end{macrocode}
 %    \end{macro}
 %    \end{macro}
@@ -6485,7 +6436,7 @@
   \ifx\\#1\\%
     \let\@pdfstartview\ltx@empty
   \else
-    \hypercalcbpdef\@pdfstartview{/#1}%
+    \def\@pdfstartview{/#1}%
   \fi
 }
 \def\HyPat@NonNegativeReal/{%
@@ -6495,8 +6446,7 @@
   \ifx\\#1\\%
     \def\@pdfremotestartview{/Fit}%
   \else
-    \hypercalcbpdef\@pdfremotestartview{#1}%
-    \edef\@pdfremotestartview{\@pdfremotestartview}%
+    \edef\@pdfremotestartview{#1}%
     \Hy@Match\@pdfremotestartview{}{%
       ^(XYZ(%
             ()| %

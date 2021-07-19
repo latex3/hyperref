@@ -13,6 +13,8 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     * removed patches for spanish, they are now in spanish.ldf
     * removed hyperref-langpatches.sty, it is now empty and
     unneeded.
+    * removed a fix for varioref which is no longer needed since
+    2019.
 
 
 2021-06-07 Ulrike Fischer/David Carlisle

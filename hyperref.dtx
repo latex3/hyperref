@@ -10707,6 +10707,7 @@
 %
 %    Package nameref uses five arguments for the ref system.
 %    Fix provided by Felix Neubauer (\Email{felix.neubauer@gmx.net}).
+%    This fix will no longer be needed with latex 2021-11-15.
 %    \begin{macrocode}
 \AtBeginDocument{%
 \def\Hy@varioref@undefined{{??}{??}{}{}{}}
@@ -10718,21 +10719,6 @@
     \edef#1{\getpagerefnumber{#2}}%
   }%
 }{}
-%    \end{macrocode}
-%
-%    Package varioref redefines \cs{refstepcounter}, thus it needs
-%    fixing, if the package is loaded *after* hyperref.
-%    \begin{macrocode}
-\def\Hy@varioref@refstepcounter#1{%
-  \stepcounter{#1}%
-  \protected@edef\@currentlabel{%
-    \csname p@#1\expandafter\endcsname\csname the#1\endcsname
-  }%
-}
-  \ifx\refstepcounter\Hy@varioref@refstepcounter
-    \let\H@refstepcounter\refstepcounter
-    \let\refstepcounter\Hy@saved@refstepcounter
-  \fi
 }
 %    \end{macrocode}
 %

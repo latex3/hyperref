@@ -176,6 +176,28 @@
 \tableofcontents
 \setcounter{tocdepth}{2}% for bookmark levels
 
+\section{Preface---August 2021}
+As can be already seen in the following introduction, \xpackage{hyperref}
+has a long history and has seen many changes over time. The introduction 
+mentions workflows, drivers and problems which are no longer relevant, 
+or only in edge cases. The documentation reflect this varied history: changes
+and extensions and explanations were and are spread over various papers and sources and 
+only incorporated later and so are not always in a coherent order and in sync which each other.
+
+
+This history is continuing: If you are using the new \hologo{LaTeX} PDF management
+which is currently distributed as testphase package \xpackage{pdfmanagement-testphase}
+then \xpackage{hyperref} will for the PDF output use a new generic driver which 
+contains a number of changes and new features. The documentation of this driver 
+\texttt{hyperref-generic.pdf} 
+is currently a part of the \xpackage{pdfmanagement-testphase} documentation. 
+One important change of the new driver is
+that it removed the old \xpackage{hyperref} code for book marks and uses
+the \xpackage{bookmark} package instead. So to learn
+about options to extend the bookmarks you should consult the \xpackage{bookmark} documentation
+too. 
+
+
 \section{Introduction}
 
 The package derives from, and builds on, the work of the Hyper\hologo{TeX}
@@ -299,7 +321,7 @@ by specifying in the document preamble
 
 Make sure it comes \emph{last} of your loaded packages, to give it a
 fighting chance of not being over-written, since its job is to redefine
-many \LaTeX\ commands.\footnote{But work has started to reduce the 
+many \LaTeX\ commands.\footnote{But work has started to reduce the
 number of redefinition and so the dependencies on the loading order.}
 Hopefully you will find that all cross-references
 work correctly as hypertext. For example, \ci{section} commands will
@@ -317,15 +339,15 @@ option used in this document.
 
 \section{Interfaces for class and package authors}
 
-hyperlink feature are nowadays a common requirement. \xpackage{hyperref}
+hyperlink features are nowadays a common requirement. \xpackage{hyperref}
 patches quite a number of commands from the  \LaTeX{} core and from packages
-to add such features. But this is rather fragile and it add dependencies 
-on the loading order and can break if the external packages break. 
-It is therefore much better if packages add suitable support to their commands directly. 
+to add such features. But this is rather fragile and it add dependencies
+on the loading order and can break if the external packages break.
+It is therefore much better if packages add suitable support to their commands directly.
 Quite a lot packages actually did this, but due to missing documentation of the interface
 they often looked into the code and then used internal commands not meant as public command.
 
-The following tries to describe the existing variables and commands that 
+The following tries to describe the existing variables and commands that
 can be viewed as public interfaces or which should or can be set by packages
 to stay compatible with the \xpackage{hyperref} command. Documented user commands
 are naturally interfaces too, they are not explicitly mentioned here again.
@@ -333,20 +355,20 @@ are naturally interfaces too, they are not explicitly mentioned here again.
 This section is work in progress. Suggestions or comments are welcome.
 
 \subsection{Counters}
-Counters play an important part in the code. They are used to create destination names and 
-to define hierarchies like the bookmarks. To work correctly often they require some additional 
+Counters play an important part in the code. They are used to create destination names and
+to define hierarchies like the bookmarks. To work correctly often they require some additional
 setups.
 
 \begin{description}
 
-\item[\cs{theH<counter>}]  \xpackage{hyperref} creates destination names for 
+\item[\cs{theH<counter>}]  \xpackage{hyperref} creates destination names for
 link anchor typically out of the name of the counter and the \cs{the<counter>} value.
-This can fail, e.g. if \cs{the<counter>} is not unique through the document, 
+This can fail, e.g. if \cs{the<counter>} is not unique through the document,
 or if it is not expandable. In such cases \cs{theH<counter>} should be defined so that
-it gives a unique, expandable value. It doesn't harm to define it even if 
-\xpackage{hyperref} is not loaded. 
+it gives a unique, expandable value. It doesn't harm to define it even if
+\xpackage{hyperref} is not loaded.
 
-\item[\cs{toclevel@<counter>}] This is a variable which should contain a number. 
+\item[\cs{toclevel@<counter>}] This is a variable which should contain a number.
 It is used for the level in the bookmarks. It should be defined for all counters
 which are used in toc like lists and \cs{addcontentsline}. Typical values are
 
@@ -377,7 +399,7 @@ New drivers must provide this commands with similar arguments.
  \hyper@linkend                                        %GoTo
  \hyper@linkfile  {link text} {filename} {destname}    %GoToR
  \hyper@linkurl   {link text}{url}                     %URI
- \hyper@linklaunch{filename} {link text} {Parameters}  %Launch, only with new generic driver 
+ \hyper@linklaunch{filename} {link text} {Parameters}  %Launch, only with new generic driver
  \hyper@linknamed {action}{link text}                  %Named, only with new generic driver
 \end{verbatim}
 
@@ -394,7 +416,7 @@ site-wide basis.
 
 Note however that some options (for example \texttt{unicode}) can only be used as
 package options, and not in \verb|\hypersetup| as the option settings are processed
-as the package is read. The following tabular lists (hopefully all) these options. 
+as the package is read. The following tabular lists (hopefully all) these options.
 Be aware that some of the option do nothing or have
 changed behaviour if the new pdfmanagement and so the new generic hyperref driver is used.
 
@@ -420,7 +442,7 @@ CJKbookmarks & only with the new pdfmanagement, in other cases it can be used in
 psdextra     & only with the new pdfmanagement, in other cases it can be used in \cs{hypersetup}\\
 nesting      & only with the new pdfmanagement, in other cases it can be used in \cs{hypersetup} (but
                is quite unclear if it has any use)\\
-               
+
 \end{tabular}
 
 As an example, the behavior of a particular file could be controlled by:

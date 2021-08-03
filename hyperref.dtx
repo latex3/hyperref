@@ -10625,11 +10625,23 @@
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Hy@MakeCurrentHrefAuto}
+% This command is e.g. used to create destinations for unnumbered sections and
+% chapters. For new formats we add a (currently private) hook which allows
+% to change the name of the next destination. 
 %    \begin{macrocode}
-\def\Hy@MakeCurrentHrefAuto#1{%
-  \Hy@GlobalStepCount\Hy@linkcounter
-  \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}%
-}
+\@ifl@t@r\fmtversion{2020-10-01}
+ {
+   \NewHook{__hyp/dest/makeauto}
+   \def\Hy@MakeCurrentHrefAuto#1{%
+   \Hy@GlobalStepCount\Hy@linkcounter
+   \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}%
+   \UseHook{__hyp/dest/makeauto}}
+ }
+ {
+   \def\Hy@MakeCurrentHrefAuto#1{%
+   \Hy@GlobalStepCount\Hy@linkcounter
+   \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}}
+ }
 %    \end{macrocode}
 %    \end{macro}
 %

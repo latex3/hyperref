@@ -1,0 +1,17 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\renewcommand\HyperDestNameFilter[1]{xxx-#1}
+\begin{document}
+\showoutput
+abc
+\START
+\bookmark[dest=\hyperget{anchor}{sec}]{section}
+\bookmark[dest=\hyperget{pageanchor}{page}]{page}
+\newpage
+\section*{some section}\label{sec}
+\newpage
+some page \label{page}
+
+\end{document}

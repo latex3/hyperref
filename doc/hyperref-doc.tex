@@ -178,24 +178,24 @@
 
 \section{Preface---August 2021}
 As can be already seen in the following introduction, \xpackage{hyperref}
-has a long history and has seen many changes over time. The introduction 
-mentions workflows, drivers and problems which are no longer relevant, 
+has a long history and has seen many changes over time. The introduction
+mentions workflows, drivers and problems which are no longer relevant,
 or only in edge cases. The documentation reflect this varied history: changes
-and extensions and explanations were and are spread over various papers and sources and 
+and extensions and explanations were and are spread over various papers and sources and
 only incorporated later and so are not always in a coherent order and in sync which each other.
 
 
 This history is continuing: If you are using the new \hologo{LaTeX} PDF management
 which is currently distributed as testphase package \xpackage{pdfmanagement-testphase}
-then \xpackage{hyperref} will for the PDF output use a new generic driver which 
-contains a number of changes and new features. The documentation of this driver 
-\texttt{hyperref-generic.pdf} 
-is currently a part of the \xpackage{pdfmanagement-testphase} documentation. 
+then \xpackage{hyperref} will for the PDF output use a new generic driver which
+contains a number of changes and new features. The documentation of this driver
+\texttt{hyperref-generic.pdf}
+is currently a part of the \xpackage{pdfmanagement-testphase} documentation.
 One important change of the new driver is
 that it removed the old \xpackage{hyperref} code for book marks and uses
 the \xpackage{bookmark} package instead. So to learn
 about options to extend the bookmarks you should consult the \xpackage{bookmark} documentation
-too. 
+too.
 
 
 \section{Introduction}
@@ -1246,6 +1246,23 @@ where an anchor is set. Example:
 Now the entry in the table of contents (and bookmarks) for the
 index points to the start of the index page, not to a location
 before this page.
+
+\begin{cmdsyntax}
+\ci{hyperget}\verb|{|\emph{anchor}\verb|}{|\emph{label}\verb|}|
+\ci{hyperget}\verb|{|\emph{pageanchor}\verb|}{|\emph{label}\verb|}|
+\end{cmdsyntax}
+
+This retrieves the anchor or the page anchor from a label in an expandable way.
+It takes \verb|\HyperDestNameFilter| into account. It can e.g. be used with the
+\verb|\bookmark| from the bookmark package to set a destination to a label:
+
+\begin{verbatim}
+\bookmark[dest=\hyperget{anchor}{sec}]{section}
+\end{verbatim}
+
+As \emph{pageanchor} retrieves the page number from the label it can't be use together with
+the option \texttt{plainpages}.
+
 
 \begin{cmdsyntax}
 \ci{autoref}\verb|{|\emph{label}\verb|}|

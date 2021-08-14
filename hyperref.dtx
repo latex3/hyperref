@@ -593,7 +593,9 @@
 %    \end{macrocode}
 % change 2020-07-24: require newer pdftexcmds and remove fallback code
 % for version older than 2010.
+% change 2021-08-14: require expl3
 %    \begin{macrocode}
+\ifx\ExplSyntaxOn\undefined \RequirePackage{expl3}\fi
 \RequirePackage{ltxcmds}[2010/11/12]
 \RequirePackage{iftex}[2019/10/24]
 \RequirePackage{pdftexcmds}[2018/09/10]
@@ -7723,6 +7725,52 @@
 }
 %    \end{macrocode}
 %
+% \begin{macro}{\hyperget}
+% To create manually bookmarks one need the destination name.
+% If there is a label, the name can be retrieved with commands from refcount.
+% Such a destination name must take |\HyperDestNameFilter| into account
+% \begin{verbatim}
+% \HyperDestNameFilter{\getrefbykeydefault{label}{anchor}{Doc-Start}}
+% \end{verbatim}
+%
+% To make this easier, we define |\hyperget|
+%    \begin{macrocode}
+\ExplSyntaxOn
+\cs_new:Npn \hyperget #1 #2
+  {
+    \use:c { __hyp_get_#1:n } { #2}
+  }
+
+\cs_new:Npn \__hyp_get_anchor:n  #1
+  {
+    \HyperDestNameFilter
+     {
+       \cs_if_exist:cTF {r@#1}
+        {
+          \tl_item:cn {r@#1}{4}
+        }
+        {
+          Doc-Start
+        }
+     }
+  }
+\cs_new:Npn \__hyp_get_pageanchor:n  #1
+  {
+    \HyperDestNameFilter
+     {
+       \cs_if_exist:cTF {r@#1}
+        {
+          page. \tl_item:cn {r@#1}{2}
+        }
+        {
+          Doc-Start
+        }
+     }
+  }
+\ExplSyntaxOff
+%    \end{macrocode}
+% \end{macro}
+
 % \subsection{Link box support for XeTeX}
 %
 %    \begin{macrocode}
@@ -10627,7 +10675,7 @@
 %    \begin{macro}{\Hy@MakeCurrentHrefAuto}
 % This command is e.g. used to create destinations for unnumbered sections and
 % chapters. For new formats we add a (currently private) hook which allows
-% to change the name of the next destination. 
+% to change the name of the next destination.
 %    \begin{macrocode}
 \@ifl@t@r\fmtversion{2020-10-01}
  {

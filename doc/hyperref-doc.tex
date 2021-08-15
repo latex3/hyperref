@@ -1056,6 +1056,7 @@ menucolor          & \textit{red}           & color for menu links \\
 nativepdf          & \textit{false}         & an alias for \textsf{dvips} \\
 naturalnames       & \textit{false}         & use \LaTeX-computed names for links \\
 nesting            & \textit{false}         & allow nesting of links \\
+next-anchor        &                        & allow to set the name of the next anchor\\ 
 pageanchor         & \textit{true}          & put an anchor on every page \\
 pagebackref        & \textit{false}         & backreference by page number \\
 pdfauthor          & \textit{empty}         & text for PDF Author field \\
@@ -1262,6 +1263,13 @@ It takes \verb|\HyperDestNameFilter| into account. It can e.g. be used with the
 
 As \emph{pageanchor} retrieves the page number from the label it can't be use together with
 the option \texttt{plainpages}.
+
+\begin{cmdsyntax}
+\ci{hyperget}\verb|{|\emph{currentanchor}\verb|}{}|
+\end{cmdsyntax}
+
+This retrieves the last anchor that has been set. It too takes \verb|\HyperDestNameFilter| into account.
+
 
 
 \begin{cmdsyntax}
@@ -1608,6 +1616,16 @@ sequence error would arise.
  Currently the field option `calculatesortkey' is only supported by
   the driver for pdfTeX.
 
+\subsection{Option `next-anchor'}
+This option allows to overwrite the anchor name of the next anchor.
+This makes it possible to give for example the heading of the table of contents
+an anchor name which can be referenced with a bookmark command.
+
+\begin{verbatim}
+\hypersetup{next-anchor=toc}
+\tableofcontents
+\bookmark[dest=\HyperDestNameFilter{toc},level=section]{\contentsname}
+\end{verbatim}
 
 \subsection{Option `localanchorname'}
 

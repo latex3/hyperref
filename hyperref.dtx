@@ -7767,6 +7767,10 @@
         }
      }
   }
+\cs_new:Npn \__hyp_get_currentanchor:n  #1
+  {
+    \HyperDestNameFilter { \@currentHref }
+  }
 \ExplSyntaxOff
 %    \end{macrocode}
 % \end{macro}
@@ -10605,9 +10609,29 @@
 }
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\hyper@hook@dest@make}
+%   We define a hook to allow to overwrite the next destination name.  
+%    \begin{macrocode}
+\@ifl@t@r\fmtversion{2020-10-01}
+ {%
+   \NewHook{__hyp/dest/make }
+   \def\hyper@hook@dest@make
+    {\UseHook{__hyp/dest/make}}
+   \define@key{Hyp}{next-anchor}{%
+    \AddToHookNext{__hyp/dest/make}%
+       {\Hy@MakeCurrentHref{#1}}%
+   }
+ }
+ {
+   \def\hyper@hook@dest@make{}
+ }
+%    \end{macrocode}
+% \end{macro}
 %    \begin{macro}{\hyper@makecurrent}
 % Because of Babel mucking around, nullify |\textlatin| when making names.
 % And |\@number| because of babel's lrbabel.def.
+% change 2021-08-15: For new formats we add a hook which allows
+% to overwrite the name of the next destination.
 %    \begin{macrocode}
 \def\hyper@makecurrent#1{%
   \begingroup
@@ -10654,6 +10678,7 @@
   \else
     \global\let\@currentHref\HyperGlobalCurrentHref
   \fi
+  \hyper@hook@dest@make
 }
 %    \end{macrocode}
 %    \end{macro}
@@ -10674,22 +10699,13 @@
 %    \end{macro}
 %    \begin{macro}{\Hy@MakeCurrentHrefAuto}
 % This command is e.g. used to create destinations for unnumbered sections and
-% chapters. For new formats we add a (currently private) hook which allows
-% to change the name of the next destination.
+% chapters. For new formats we add a hook which allows
+% to overwrite the name of the next destination.
 %    \begin{macrocode}
-\@ifl@t@r\fmtversion{2020-10-01}
- {
-   \NewHook{__hyp/dest/makeauto}
    \def\Hy@MakeCurrentHrefAuto#1{%
    \Hy@GlobalStepCount\Hy@linkcounter
    \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}%
-   \UseHook{__hyp/dest/makeauto}}
- }
- {
-   \def\Hy@MakeCurrentHrefAuto#1{%
-   \Hy@GlobalStepCount\Hy@linkcounter
-   \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}}
- }
+   \hyper@hook@dest@make}
 %    \end{macrocode}
 %    \end{macro}
 %

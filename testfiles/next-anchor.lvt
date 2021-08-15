@@ -1,0 +1,30 @@
+\input{regression-test}
+\documentclass{article}
+
+\usepackage{bookmark}
+\renewcommand\HyperDestNameFilter[1]{abc-#1}
+\begin{document}
+x\newpage
+\START \showoutput
+\hypersetup{next-anchor=toc}
+\tableofcontents
+\bookmark[dest=\HyperDestNameFilter{toc},level=section]{\contentsname}
+
+
+\newpage
+\hypersetup{next-anchor=abc}
+\section*{abc}\label{label}
+\hyperget{currentanchor}{}
+
+\newpage
+\hypersetup{next-anchor=xxx}
+\section{xxx}\label{xxx}
+\hyperget{currentanchor}{}
+
+
+
+\bookmark[dest=\HyperDestNameFilter{abc}]{abc section}
+\bookmark[dest=\HyperDestNameFilter{xxx}]{xxx section}
+
+
+\end{document}

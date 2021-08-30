@@ -8234,43 +8234,6 @@
 }
 %    \end{macrocode}
 %
-% \section{Compatibility with the \emph{\LaTeX{}2html} package}\label{latex2html}
-%
-% Map our macro names on to Nikos', so that documents prepared
-% for that system will work without change.
-%
-% Note, however, that the whole complicated structure for
-% segmenting documents is not supported; it is assumed that the user
-% will load |html.sty| first, and then |hyperref.sty|, so that the
-% definitions in |html.sty| take effect, and are then overridden
-% in a few circumstances by this package.
-%    \begin{macrocode}
-\let\htmladdimg\hyperimage
-%    \end{macrocode}
-%
-%    \begin{macrocode}
-\def\htmladdnormallink#1#2{\href{#2}{#1}}
-\def\htmladdnormallinkfoot#1#2{\href{#2}{#1}\footnote{#2}}
-\def\htmlref#1#2{% anchor text, label
-  \label@hyperref[{#2}]{#1}%
-}
-%    \end{macrocode}
-% This is really too much. The \LaTeX2html package defines its own
-% |\hyperref| command, with a different syntax. Was this always here?
-% Its weird, anyway. We interpret it in the `printed' way, since
-% we are about fidelity to the page.
-%    \begin{macrocode}
-\def\@@latextohtmlX{%
-  \let\hhyperref\hyperref
-  \def\hyperref##1##2##3##4{% anchor text for HTML
-                     % text to print before label in print
-                     % label
-                     % post-label text in print
-    ##2\ref{##4}##3%
-  }%
-}
-%    \end{macrocode}
-%
 % \section{Forms creation}
 % Allow for creation of PDF or HTML forms. The effects here are
 % limited somewhat by the need to support both output formats,
@@ -10610,7 +10573,7 @@
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\hyper@hook@dest@make}
-%   We define a hook to allow to overwrite the next destination name.  
+%   We define a hook to allow to overwrite the next destination name.
 %    \begin{macrocode}
 \@ifl@t@r\fmtversion{2020-10-01}
  {%

@@ -29,8 +29,6 @@ Page 2; this is page 2\label{page2}
 \newpage
 \index{an item on page 3}
 
-\htmladdnormallink{A dummy URL}{http://www.tug.org/A-Fake_URL.html}
-
 \Acrobatmenu{Quit}{End Acrobat Reader}
 
 \Acrobatmenu{FullScreen}{Switch to full screen}

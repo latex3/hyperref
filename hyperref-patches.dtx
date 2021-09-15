@@ -66,13 +66,17 @@
 % patches and correction for external packages to make them compatible with
 % hyperlinks.
 %
-% Some of these patches are now unnessary, either because the external
+% Some of these patches are now (mostly) unnecessary, either because the external
 % package is no longer used or because the package was fixed or extended to
 % supports hyperlinks.
 %
-% This small package contains patches were it is not sure if they can be removed
-% completly so that if needed that can be added manually, either by loading
+% This small package contains patches where it is not sure if they can be removed
+% completely so that if needed that can be added manually, either by loading
 % this package or by copying the code.
+%
+% By default all patches are loaded, a patch can be disabled with a package option.
+% Currently the following options are available:
+% \texttt{nofoiltex}, \texttt{nolisting}, \texttt{nolistings}, \texttt{norevtex}.
 %
 % \end{documentation}
 
@@ -83,6 +87,23 @@
 %    \begin{macrocode}
 %<*package>
 \ProvidesPackage{hyperref-patches}[2021-06-29 v0.9 old hyperref patches]
+%    \end{macrocode}
+% \section{Package options to disable patches}
+%
+%    \begin{macrocode}
+\newif\ifHy@patches@foiltex
+\Hy@patches@foiltextrue
+\DeclareOption{nofoiltex}{\Hy@patches@foiltexfalse}
+\newif\ifHy@patches@listing
+\Hy@patches@listingtrue
+\DeclareOption{nolisting}{\Hy@patches@listingfalse}
+\newif\ifHy@patches@listings
+\Hy@patches@listingstrue
+\DeclareOption{nolistings}{\Hy@patches@listingsfalse}
+\newif\ifHy@patches@revtex
+\Hy@patches@revtextrue
+\DeclareOption{norevtex}{\Hy@patches@revtexfalse}
+\ProcessOptions
 %    \end{macrocode}
 % \section{Compatibility with foiltex}
 % --Moved 2021-06-30--
@@ -98,10 +119,12 @@
 % --End of move comment--
 %
 %    \begin{macrocode}
+\ifHy@patches@foiltex
 \@ifclassloaded{foils}{%
   \providecommand*\ext@table{lot}%
   \providecommand*\ext@figure{lof}%
 }{}
+\fi
 %    \end{macrocode}
 % \section{listing}
 % --Moved 2021-06-30--
@@ -111,10 +134,12 @@
 %
 % --End of move comment--
 %    \begin{macrocode}
+\ifHy@patches@listing
 \@ifpackageloaded{listing}{%
   \providecommand*\theHlisting{\thelisting}%
   \providecommand*\toclevel@listing{0}%
 }{}
+\fi
 %    \end{macrocode}
 % \section{listings}
 % --Moved 2021-06-30--
@@ -124,24 +149,27 @@
 %
 % --End of move comment--
 %    \begin{macrocode}
+\ifHy@patches@listings
 \@ifpackageloaded{listings}{%
   \providecommand*\theHlstlisting{\thelstlisting}%
   \providecommand*\toclevel@lstlisting{0}%
 }{}
+\fi
 %    \end{macrocode}
 %
 % \section{revtex}
 %
-%  --Moved 2021-09-02--
-% revtex.cls is obsolete and it no installed in texlive and miktex so the patch for it
+% --Moved 2021-09-02--
+% revtex.cls is obsolete and it is no installed in texlive and miktex so the patch for it
 % has been removed from hyperref.
-% -- End of move comment
-% 
+% --End of move comment--
+%
 % Revtex (bless its little heart) takes over |\bibcite| and looks
 % at the result to measure something. Make this a hypertext link
 % and it goes ape. Therefore, make an anodyne result first, call
 % its business, then go back to the real thing.
 %    \begin{macrocode}
+\ifHy@patches@revtex
 \@ifclassloaded{revtex}{%
   \Hy@Info{*** compatibility with revtex **** }%
   \def\revtex@checking#1#2{%
@@ -212,6 +240,7 @@
     }{#1}%
   }%
 }{}
+\fi
 %    \end{macrocode}
 %
 %    \begin{macrocode}

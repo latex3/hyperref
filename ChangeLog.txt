@@ -1,9 +1,10 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
+    * moved patches for revtex.cls to an external package
     * added a key next-anchor to set the next anchor name.
     * added a command \hyperget to retrieve anchor names.
     * moved the patch for foiltex into an external package
     * removed compability code for latex2html, this is now provided
-      by html.sty directly. 
+      by html.sty directly.
     * remove patch for seminar, this is now in the class itself
     * move (basically unneeded) listings patches to external
     package

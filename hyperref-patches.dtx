@@ -95,7 +95,7 @@
 % foiltex is not part of the standard tex systems and hasn't been update the last
 % time in 2008. So the patch is removed from hyperref.
 %
-% --End of move command--
+% --End of move comment--
 %
 %    \begin{macrocode}
 \@ifclassloaded{foils}{%
@@ -109,7 +109,7 @@
 % This provide two commands for the listing package which is from 1999.
 % Probably unneeded anyway, as this are the defaults, at best they prevent some warnings.
 %
-% --End of move command--
+% --End of move comment--
 %    \begin{macrocode}
 \@ifpackageloaded{listing}{%
   \providecommand*\theHlisting{\thelisting}%
@@ -122,13 +122,98 @@
 % This provide two commands for the listing package which is from 1999.
 % Probably unneeded anyway, as this are the defaults, at best they prevent some warnings.
 %
-% --End of move command--
+% --End of move comment--
 %    \begin{macrocode}
 \@ifpackageloaded{listings}{%
   \providecommand*\theHlstlisting{\thelstlisting}%
   \providecommand*\toclevel@lstlisting{0}%
 }{}
 %    \end{macrocode}
+%
+% \section{revtex}
+%
+%  --Moved 2021-09-02--
+% revtex.cls is obsolete and it no installed in texlive and miktex so the patch for it
+% has been removed from hyperref.
+% -- End of move comment
+% 
+% Revtex (bless its little heart) takes over |\bibcite| and looks
+% at the result to measure something. Make this a hypertext link
+% and it goes ape. Therefore, make an anodyne result first, call
+% its business, then go back to the real thing.
+%    \begin{macrocode}
+\@ifclassloaded{revtex}{%
+  \Hy@Info{*** compatibility with revtex **** }%
+  \def\revtex@checking#1#2{%
+    \expandafter\let\expandafter\T@temp\csname b@#1\endcsname
+    \expandafter\def\csname b@#1\endcsname{#2}%
+    \@SetMaxRnhefLabel{#1}%
+    \expandafter\let\csname b@#1\endcsname\T@temp
+  }%
+%    \end{macrocode}
+% Tanmoy provided this replacement for CITEX. Lord knows what it does.
+% For chapterbib added: \@extra@b@citeb
+%    \begin{macrocode}
+  \@ifundefined{@CITE}{\def\@CITE{\@cite}}{}%
+  \providecommand*{\@extra@b@citeb}{}%
+  \def\@CITEX[#1]#2{%
+    \let\@citea\@empty
+    \leavevmode
+    \unskip
+    $^{%
+      \scriptstyle
+      \@CITE{%
+        \@for\@citeb:=#2\do{%
+          \@citea
+          \def\@citea{,\penalty\@m\ }%
+          \edef\@citeb{\expandafter\@firstofone\@citeb}%
+          \if@filesw
+            \immediate\write\@auxout{\string\citation{\@citeb}}%
+          \fi
+          \@ifundefined{b@\@citeb\extra@b@citeb}{%
+            \mbox{\reset@font\bfseries ?}%
+            \G@refundefinedtrue
+            \@latex@warning{%
+              Citation `\@citeb' on page \thepage \space undefined%
+            }%
+          }{%
+            {\csname b@\@citeb\@extra@b@citeb\endcsname}%
+          }%
+        }%
+      }{#1}%
+    }$%
+  }%
+%    \end{macrocode}
+% No, life is too short. I am not going to understand the
+% Revtex |\@collapse| macro, I shall
+% just restore the original behaviour of |\@citex|;
+% sigh. This is SO vile.
+%    \begin{macrocode}
+  \def\@citex[#1]#2{%
+    \let\@citea\@empty
+    \@cite{%
+      \@for\@citeb:=#2\do{%
+        \@citea
+        \def\@citea{,\penalty\@m\ }%
+        \edef\@citeb{\expandafter\@firstofone\@citeb}%
+        \if@filesw
+          \immediate\write\@auxout{\string\citation{\@citeb}}%
+        \fi
+        \@ifundefined{b@\@citeb\@extra@b@citeb}{%
+          \mbox{\reset@font\bfseries ?}%
+          \G@refundefinedtrue
+          \@latex@warning{%
+            Citation `\@citeb' on page \thepage \space undefined%
+          }%
+        }{%
+          \hbox{\csname b@\@citeb\@extra@b@citeb\endcsname}%
+        }%
+      }%
+    }{#1}%
+  }%
+}{}
+%    \end{macrocode}
+%
 %    \begin{macrocode}
 %</package>
 %    \end{macrocode}

@@ -11182,6 +11182,17 @@
     \fi
     \@tempa
   }%
+  % CodeA: define  macro which puts hyperanchor.
+  \def\amsthm@@hyperanchor{%
+    \Hy@raisedlink{%
+          \hyper@anchorstart{%
+            \ltx@ifundefined{Hy@dth@currentHref}%
+            \@currentHref\Hy@dth@currentHref
+          }\hyper@anchorend
+        }%
+      }%
+   % CodeB: define macro which executes CodeA once
+    \def\amsthm@hyperanchor{\amsthm@@hyperanchor\let\amsthm@@hyperanchor\relax}%
   \ifx\Hy@temp\@thm
     \def\@thm#1#2#3{%
       \ifhmode
@@ -11240,6 +11251,8 @@
         \H@refstepcounter{#2}%
         \hyper@makecurrent{#2}%
         \let\Hy@dth@currentHref\@currentHref
+        % execute CodeB (will place CodeA)
+        \amsthm@hyperanchor
         \def\@tempa{%
           \@oparg{\@begintheorem{#3}{\csname the#2\endcsname}}[]%
         }%
@@ -11261,12 +11274,8 @@
       \endgroup
       \ifx\@empty\dth@counter
       \else
-        \Hy@raisedlink{%
-          \hyper@anchorstart{%
-            \ltx@ifundefined{Hy@dth@currentHref}%
-            \@currentHref\Hy@dth@currentHref
-          }\hyper@anchorend
-        }%
+        % execute CodeB (will place CodeA)
+        \amsthm@hyperanchor
       \fi
       \unhbox\@labels
     \fi

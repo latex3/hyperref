@@ -1,0 +1,28 @@
+\input regression-test\relax
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage[verbose=true]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\begin{document}
+
+\START
+
+\BEGINTEST{amsthm, theorem head + enumerate item inline}
+\begin{theorem}\label{th1}
+\begin{enumerate}
+\item
+\end{enumerate}
+\end{theorem}
+\ENDTEST
+
+\BEGINTEST{amsthm, theorem head + enumerate item on separate line}
+\begin{theorem}\label{th2} X
+\begin{enumerate}
+\item
+\end{enumerate}
+\end{theorem}
+\ENDTEST
+
+\END
+
+\end{document}

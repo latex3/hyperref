@@ -1,0 +1,27 @@
+\input regression-test\relax
+\documentclass{amsart}
+\usepackage[verbose=true]{hyperref}
+\newtheorem{example}{Example}
+
+\begin{document}
+
+\START
+
+\BEGINTEST{amsart, theorem head + itemize item inline}
+\begin{example}\label{ex}
+\begin{itemize}
+\item
+\end{itemize}
+\end{example}
+\ENDTEST
+
+\BEGINTEST{amsart, theorem head + itemize item on separate line}
+\begin{example}\label{ex2} X
+\begin{itemize}
+\item
+\end{itemize}
+\end{example}
+\ENDTEST
+
+\END
+\end{document}

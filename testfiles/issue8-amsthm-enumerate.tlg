@@ -1,0 +1,14 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+============================================================
+TEST 1: amsthm, theorem head + enumerate item inline
+============================================================
+Package hyperref Info: Anchor `theorem.0.1' on input line ....
+Package hyperref Info: Anchor `Item.1' on input line ....
+============================================================
+============================================================
+TEST 2: amsthm, theorem head + enumerate item on separate line
+============================================================
+Package hyperref Info: Anchor `theorem.0.2' on input line ....
+Package hyperref Info: Anchor `Item.2' on input line ....
+============================================================

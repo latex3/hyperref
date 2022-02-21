@@ -100,6 +100,7 @@ pipe:close()
 if (dvipdfmxversion <= 20200315) then
 excludetests={"unicode-test","87-pdfversion"}
 end
+return 0
 end
 
 

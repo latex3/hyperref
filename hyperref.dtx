@@ -3798,6 +3798,22 @@
   }%
 \fi
 %    \end{macrocode}
+% change 2022-02-21
+% For the case that utf8 chars are protected we need to expand them.
+% This works only is |\UTFviii@loop| is not defined in a group, which will be the
+% case in the new latex code, so we test for it.
+%    \begin{macrocode}
+\ifcsname UTFviii@loop\endcsname
+ \def\HyPsd@expand@utfvii{%
+    \count@"C2
+    \@tempcnta"F5
+    \def\UTFviii@tmp{\expandafter\def\expandafter~\expandafter{~}}%
+    \UTFviii@loop
+  }
+\else
+ \def\HyPsd@expand@utfvii{}
+\fi
+%    \end{macrocode}
 %    \end{macro}
 %
 % \subsubsection{Support for UTF-8 input encoding}
@@ -3825,6 +3841,7 @@
     \lccode`\~=`^^f4\relax
   \lowercase{\endgroup
     \def\HyPsd@UTFviii{%
+      \HyPsd@expand@utfvii
       \let\UTFviii@two@octets\HyPsd@UTFviii@two
       \let\UTFviii@three@octets\HyPsd@UTFviii@three
       \let\UTFviii@four@octets\HyPsd@UTFviii@four

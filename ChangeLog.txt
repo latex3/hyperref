@@ -1,4 +1,5 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
+    * expand utf8 chars even if they are protected
     * moved patches for revtex.cls to an external package
     * added a key next-anchor to set the next anchor name.
     * added a command \hyperget to retrieve anchor names.

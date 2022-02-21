@@ -5,16 +5,16 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     * moved the patch for foiltex into an external package
     * removed compability code for latex2html, this is now provided
       by html.sty directly.
-    * remove patch for seminar, this is now in the class itself
-    * move (basically unneeded) listings patches to external
+    * removed patch for seminar, this is now in the class itself
+    * moved (basically unneeded) listings patches to external
     package
-    * remove patch for titletoc, is now done by titletoc itself.
-    * remove lastpage patch, is no longer used as lastpage supports
+    * removed patch for titletoc, is now done by titletoc itself.
+    * removed lastpage patch, is no longer used as lastpage supports
     hyperref directly.
-    * remove non-e-tex version of \hypercalcbp, e-tex is require
+    * removed non-e-tex version of \hypercalcbp, e-tex is require
     for hyperref now, removed the now unneeded internal command
     \hypercalcbpdef.
-    * remove old, no longer needed fix for frenchb.ldf 2010/08/21 v2.5a
+    * removed old, no longer needed fix for frenchb.ldf 2010/08/21 v2.5a
     * removed patches for spanish, they are now in spanish.ldf
     * removed hyperref-langpatches.sty, it is now empty and
     unneeded.

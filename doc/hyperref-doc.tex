@@ -176,7 +176,7 @@
 \tableofcontents
 \setcounter{tocdepth}{2}% for bookmark levels
 
-\section{Preface---August 2021}
+\section{Preface---February 2022}
 As can be already seen in the following introduction, \xpackage{hyperref}
 has a long history and has seen many changes over time. The introduction
 mentions workflows, drivers and problems which are no longer relevant,
@@ -196,6 +196,15 @@ that it removed the old \xpackage{hyperref} code for book marks and uses
 the \xpackage{bookmark} package instead. So to learn
 about options to extend the bookmarks you should consult the \xpackage{bookmark} documentation
 too.
+
+\subsection{Restoring removed patches}
+
+\xpackage{hyperref} has over time patched quite a number of packages to resolve clashes and incompabilities.
+Quite a number are either no longer needed or should be done by by the original packages. 
+These patches are now slowly removed from \xpackage{hyperref}.  It should normally not lead to problems, but
+in case that the patches should be restored they can be loaded through the package \xpackage{hyperref-patches} which
+is a part of this bundle.
+
 
 
 \section{Introduction}

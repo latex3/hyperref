@@ -3798,6 +3798,22 @@
   }%
 \fi
 %    \end{macrocode}
+% change 2022-02-21
+% For the case that utf8 chars are protected we need to expand them.
+% This works only is |\UTFviii@loop| is not defined in a group, which will be the
+% case in the new latex code, so we test for it.
+%    \begin{macrocode}
+\ifcsname UTFviii@loop\endcsname
+ \def\HyPsd@expand@utfvii{%
+    \count@"C2
+    \@tempcnta"F5
+    \def\UTFviii@tmp{\expandafter\def\expandafter~\expandafter{~}}%
+    \UTFviii@loop
+  }
+\else
+ \def\HyPsd@expand@utfvii{}
+\fi
+%    \end{macrocode}
 %    \end{macro}
 %
 % \subsubsection{Support for UTF-8 input encoding}
@@ -3817,14 +3833,11 @@
 %      |\number\dimexpr.25\dimexpr 123sp\relax\relax|
 %    \end{quote}
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname numexpr\endcsname\relax
-  \let\HyPsd@UTFviii\relax
-\else
   \begingroup
     \lccode`\~=`^^f4\relax
   \lowercase{\endgroup
     \def\HyPsd@UTFviii{%
+      \HyPsd@expand@utfvii
       \let\UTFviii@two@octets\HyPsd@UTFviii@two
       \let\UTFviii@three@octets\HyPsd@UTFviii@three
       \let\UTFviii@four@octets\HyPsd@UTFviii@four
@@ -4019,9 +4032,6 @@
     \number\numexpr#1-8*\number\dimexpr.125\dimexpr#1sp%
     \relax\relax\relax
   }%
-%    \end{macrocode}
-%    \begin{macrocode}
-\fi
 %    \end{macrocode}
 %
 %    \begin{macro}{\HyPsd@utf@viii@undeferr}
@@ -5086,8 +5096,8 @@
   }%
 }
 \DeclareVoidOption{latex2html}{%
-  \HyOpt@CheckDvi{latex2html}{%
-    \Hy@AtBeginDocument{\@@latextohtmlX}%
+  \Hy@Warning{Option `latex2html` is obsolete. \MessageBreak
+   A current html.sty will do all necessary (re)definitions%
   }%
 }
 %    \end{macrocode}
@@ -6376,16 +6386,9 @@
     \def\@pdfviewparams{ #2}%
   \fi
 }
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname numexpr\endcsname\relax
-  \def\Hy@number#1{%
-    \expandafter\@firstofone\expandafter{\number#1}%
+\def\Hy@number#1{%
+  \the\numexpr#1\relax
   }%
-\else
-  \def\Hy@number#1{%
-    \the\numexpr#1\relax
-  }%
-\fi
 \define@key{Hyp}{pdfstartpage}{%
   \ifx\\#1\\%
     \let\@pdfstartpage\ltx@empty
@@ -9024,35 +9027,18 @@
   \afterassignment\Hy@defaultbpAux
   \dimen@=#2bp\relax{#1}{#2}%
 }
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname dimexpr\endcsname\relax
-  \def\Hy@defaultbpAux#1\relax#2#3{%
-    \ifx!#1!%
-      \endgroup
-      \def#2{#3}%
-    \else
-      \dimen@=.99626\dimen@
-      \edef\x{\endgroup
-        \def\noexpand#2{%
-          \strip@pt\dimen@
-        }%
-      }\x
-    \fi
-  }%
-\else
-  \def\Hy@defaultbpAux#1\relax#2#3{%
-    \ifx!#1!%
-      \endgroup
-      \def#2{#3}%
-    \else
-      \edef\x{\endgroup
-        \def\noexpand#2{%
-          \strip@pt\dimexpr\dimen@*800/803\relax
-        }%
-      }\x
-    \fi
-  }%
-\fi
+\def\Hy@defaultbpAux#1\relax#2#3{%
+  \ifx!#1!%
+    \endgroup
+    \def#2{#3}%
+  \else
+    \edef\x{\endgroup
+      \def\noexpand#2{%
+        \strip@pt\dimexpr\dimen@*800/803\relax
+      }%
+    }\x
+  \fi
+}%
 \define@key{Field}{borderstyle}{%
   \let\Hy@temp\Fld@borderstyle
   \def\Fld@borderstyle{#1}%
@@ -10680,12 +10666,6 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%</package>
-
-%<*package>
-%    \end{macrocode}
-%    \end{macro}
-%
 % \section{Package ifthen support}
 %
 %    Since version 6.75a this is done in package nameref.
@@ -11980,7 +11960,7 @@
 % destination is empty. But if `the most recent destination' is not
 % what you expect, you will be in trouble.
 % In newer \LaTeX\ releases this is defined to put a \verb|%| at the end of the
-% line in the \textt{toc}file.
+% line in the \texttt{toc}file.
 %    \begin{macrocode}
 \providecommand\protected@file@percent{}
 %    \end{macrocode}
@@ -12907,111 +12887,96 @@
 %    \item pdf\TeX\ 1.30, 2005-08-081: \cs{pdfminorversion}
 %    \end{itemize}
 %    \begin{macrocode}
-\let\Hy@pdfminorversion\relax
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdfminorversion\endcsname\relax
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname pdfoptionpdfminorversion\endcsname\relax
-  \else
-    \def\Hy@pdfminorversion{\pdfoptionpdfminorversion}%
+\def\Hy@pdfminorversion{\pdfoptionpdfminorversion}%
+\def\Hy@pdfminorversion{\pdfminorversion}%
+\ifHy@ocgcolorlinks
+  \ifnum\Hy@pdfmajorminor@version<105 %
+    \kvsetkeys{Hyp}{pdfversion=1.5}%
   \fi
-\else
-  \def\Hy@pdfminorversion{\pdfminorversion}%
 \fi
-\@ifundefined{Hy@pdfminorversion}{%
-  \PackageInfo{hyperref}{%
-    PDF version is not set, because pdfTeX is too old (<1.10a)%
-  }%
-}{%
-  \ifHy@ocgcolorlinks
-    \ifnum\Hy@pdfmajorminor@version<105 %
-      \kvsetkeys{Hyp}{pdfversion=1.5}%
-    \fi
-  \fi
-  \ifHy@setpdfversion
-    \ifnum\Hy@pdf@majorminor@version<105 %
-      \ltx@IfUndefined{pdfobjcompresslevel}{%
-      }{%
-        \ifHy@verbose
-          \Hy@InfoNoLine{%
-            PDF object streams are disabled, because they are%
-            \MessageBreak
-            not supported in requested PDF version %
-            \Hy@pdf@majorversion.\Hy@pdf@minorversion
-          }%
-        \fi
-        \pdfobjcompresslevel=\ltx@zero
-      }%
-    \fi
-    \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
-    \else
-      \let\Hy@temp\ltx@empty
-      \def\Hy@temp@A#1#2{%
-        \ifnum#1>\ltx@zero
-          \edef\Hy@temp{%
-            \Hy@temp
-            \space\space
-            \the#1\space #2%
-            \ifnum#1=\ltx@one\else s\fi
-            \MessageBreak
-          }%
-        \fi
-      }%
-      \Hy@temp@A\pdflastobj{PDF object}%
-      \Hy@temp@A\pdflastxform{form XObject}%
-      \Hy@temp@A\pdflastximage{image XObject}%
-      \Hy@temp@A\pdflastannot{annotation}%
-      \ltx@IfUndefined{pdflastlink}{%
-      }{%
-         \Hy@temp@A\pdflastlink{link}%
-      }%
-      \ifx\Hy@temp\ltx@empty
-        \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
-        \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
-      \else
-        \let\Hy@temp@A\ltx@empty
-        \ifnum\Hy@pdf@majorminor@version=104 %
-          \IfFileExists{pdf14.sty}{%
-            \def\Hy@temp@A{%
-              \MessageBreak
-              Or \string\RequirePackage{pdf14} can be used%
-              \MessageBreak
-              before \string\documentclass\space as shortcut%
-            }%
-          }{}%
-        \fi
-        \Hy@WarningNoLine{%
-          The PDF version number could not be set,\MessageBreak
-          because some PDF objects are already written:%
+\ifHy@setpdfversion
+  \ifnum\Hy@pdf@majorminor@version<105 %
+    \ltx@IfUndefined{pdfobjcompresslevel}{%
+    }{%
+      \ifHy@verbose
+        \Hy@InfoNoLine{%
+          PDF object streams are disabled, because they are%
           \MessageBreak
-          \Hy@temp
-          The version should be set as early as possible:%
-          \MessageBreak
-          \space\space
-          \expandafter\string\Hy@pdfmajorversion=\Hy@pdf@majorversion, %
-          \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
-          \string\relax
-          \ifnum\Hy@pdf@majorminor@version<105 %
-            \ltx@ifundefined{pdfobjcompresslevel}{%
-            }{%
-              \MessageBreak
-              \space\space
-              \string\pdfobjcompresslevel=0\string\relax
-            }%
-          \fi
-          \Hy@temp@A
+          not supported in requested PDF version %
+          \Hy@pdf@majorversion.\Hy@pdf@minorversion
         }%
       \fi
-    \fi
-    \PackageInfo{hyperref}{%
-      \expandafter\string\Hy@pdfmajorversion.%
-      \expandafter\string\Hy@pdfminorversion
-      :=\number\Hy@pdf@majorversion.\number\Hy@pdf@minorversion\space
+      \pdfobjcompresslevel=\ltx@zero
     }%
   \fi
-  \edef\Hy@pdf@majorversion{\number\Hy@pdfmajorversion}%
-  \edef\Hy@pdf@minorversion{\number\Hy@pdfminorversion}%
-}
+  \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
+  \else
+    \let\Hy@temp\ltx@empty
+    \def\Hy@temp@A#1#2{%
+      \ifnum#1>\ltx@zero
+        \edef\Hy@temp{%
+          \Hy@temp
+          \space\space
+          \the#1\space #2%
+          \ifnum#1=\ltx@one\else s\fi
+          \MessageBreak
+        }%
+      \fi
+    }%
+    \Hy@temp@A\pdflastobj{PDF object}%
+    \Hy@temp@A\pdflastxform{form XObject}%
+    \Hy@temp@A\pdflastximage{image XObject}%
+    \Hy@temp@A\pdflastannot{annotation}%
+    \ltx@IfUndefined{pdflastlink}{%
+    }{%
+       \Hy@temp@A\pdflastlink{link}%
+    }%
+    \ifx\Hy@temp\ltx@empty
+      \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
+      \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
+    \else
+      \let\Hy@temp@A\ltx@empty
+      \ifnum\Hy@pdf@majorminor@version=104 %
+        \IfFileExists{pdf14.sty}{%
+          \def\Hy@temp@A{%
+            \MessageBreak
+            Or \string\RequirePackage{pdf14} can be used%
+            \MessageBreak
+            before \string\documentclass\space as shortcut%
+          }%
+        }{}%
+      \fi
+      \Hy@WarningNoLine{%
+        The PDF version number could not be set,\MessageBreak
+        because some PDF objects are already written:%
+        \MessageBreak
+        \Hy@temp
+        The version should be set as early as possible:%
+        \MessageBreak
+        \space\space
+        \expandafter\string\Hy@pdfmajorversion=\Hy@pdf@majorversion, %
+        \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
+        \string\relax
+        \ifnum\Hy@pdf@majorminor@version<105 %
+          \ltx@ifundefined{pdfobjcompresslevel}{%
+          }{%
+            \MessageBreak
+            \space\space
+            \string\pdfobjcompresslevel=0\string\relax
+          }%
+        \fi
+        \Hy@temp@A
+      }%
+    \fi
+  \fi
+  \PackageInfo{hyperref}{%
+    \expandafter\string\Hy@pdfmajorversion.%
+    \expandafter\string\Hy@pdfminorversion
+    :=\number\Hy@pdf@majorversion.\number\Hy@pdf@minorversion\space
+  }%
+\fi
+\edef\Hy@pdf@majorversion{\number\Hy@pdfmajorversion}%
+\edef\Hy@pdf@minorversion{\number\Hy@pdfminorversion}%
 \Hy@DisableOption{pdfversion}%
 %    \end{macrocode}
 %
@@ -17931,8 +17896,8 @@
 }%
 \let\HyField@afields\ltx@empty
 \let\HyField@cofields\ltx@empty
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdflastlink\endcsname\relax
+\@ifundefined{pdflastlink}
+ {%
   \let\HyField@AddToFields\relax
   \PackageInfo{hyperref}{%
     You need pdfTeX 1.40.0 for setting the /Fields entry.%
@@ -17940,8 +17905,8 @@
     Adobe Reader/Acrobat accepts an empty /Field array,%
     \MessageBreak
     but other PDF viewers might complain%
-  }%
-\else
+  }}%
+ {%
   \let\HyField@AuxAddToFields\ltx@gobble
   \let\HyField@AuxAddToCoFields\ltx@gobbletwo
   \def\HyField@AfterAuxOpen{\Hy@AtBeginDocument}%
@@ -18036,7 +18001,7 @@
       \fi
     }%
   }%
-\fi
+ }
 \def\@Form[#1]{%
   \@ifundefined{textcolor}{\let\textcolor\@gobble}{}%
   \kvsetkeys{Form}{#1}%
@@ -18918,8 +18883,8 @@
 %
 %    \begin{macro}{\Hy@escapestring}
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdf@escapestring\endcsname\relax
+\@ifundefined{pdf@escapestring}
+ {%
   \let\Hy@escapestring\@firstofone
   \def\Hy@escapeform#1{%
     \ifHy@pdfescapeform
@@ -18950,7 +18915,7 @@
       }%
     \fi
   }%
-\else
+ }{%
   \def\Hy@escapeform#1{%
     \ifHy@pdfescapeform
       \let\Hy@escapestring\pdfescapestring
@@ -18959,7 +18924,7 @@
     \fi
   }%
   \Hy@escapeform{}%
-\fi
+ }
 %    \end{macrocode}
 %    \end{macro}
 %
@@ -19915,12 +19880,9 @@
 %    \end{macrocode}
 %    \begin{macrocode}
 \let\H@old@part\@part
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname chapter\endcsname\relax
-  \let\Hy@secnum@part\z@
-\else
-  \let\Hy@secnum@part\m@ne
-\fi
+\@ifundefined{chapter}
+  {\let\Hy@secnum@part\z@}
+  {\let\Hy@secnum@part\m@ne}
 \def\@part{%
   \ifnum\Hy@secnum@part>\c@secnumdepth
     \phantomsection

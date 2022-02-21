@@ -1,5 +1,8 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
-    * expand utf8 chars even if they are protected
+    * a pdftex version newer than 1.10 (from 2003) is assumed
+    * removed tests for numexpr/dimexpr: etex is now required
+    * expand utf8 chars even if they are protected (preparation for
+      changes in the format)
     * moved patches for revtex.cls to an external package
     * added a key next-anchor to set the next anchor name.
     * added a command \hyperget to retrieve anchor names.
@@ -12,7 +15,7 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
     * removed patch for titletoc, is now done by titletoc itself.
     * removed lastpage patch, is no longer used as lastpage supports
     hyperref directly.
-    * removed non-e-tex version of \hypercalcbp, e-tex is require
+    * removed non-e-tex version of \hypercalcbp, e-tex is required
     for hyperref now, removed the now unneeded internal command
     \hypercalcbpdef.
     * removed old, no longer needed fix for frenchb.ldf 2010/08/21 v2.5a

@@ -62,9 +62,19 @@ tdslocations = {
   "tex/latex/hyperref/xr-hyper.sty"
 }
 
+specialformats = specialformats or {}
+specialformats["latex"] = specialformats["latex"] or
+  {
+    luatexdev     = {binary="luahbtex",format = "lualatex-dev"},
+    pdftexdev     = {format = "pdflatex-dev"},
+  }
+
 
 checkconfigs = {"build","config-pvt","config-3","config-xetex"}
 checkengines = {"pdftex","etex","luatex"}
+
+-- for dev testing
+-- checkengines = {"pdftexdev","luatexdev"}
 
 -- temp settings disable checks while testing ctan build
 -- testfiledir= "disabled"

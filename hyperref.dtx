@@ -12892,111 +12892,96 @@
 %    \item pdf\TeX\ 1.30, 2005-08-081: \cs{pdfminorversion}
 %    \end{itemize}
 %    \begin{macrocode}
-\let\Hy@pdfminorversion\relax
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdfminorversion\endcsname\relax
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname pdfoptionpdfminorversion\endcsname\relax
-  \else
-    \def\Hy@pdfminorversion{\pdfoptionpdfminorversion}%
+\def\Hy@pdfminorversion{\pdfoptionpdfminorversion}%
+\def\Hy@pdfminorversion{\pdfminorversion}%
+\ifHy@ocgcolorlinks
+  \ifnum\Hy@pdfmajorminor@version<105 %
+    \kvsetkeys{Hyp}{pdfversion=1.5}%
   \fi
-\else
-  \def\Hy@pdfminorversion{\pdfminorversion}%
 \fi
-\@ifundefined{Hy@pdfminorversion}{%
-  \PackageInfo{hyperref}{%
-    PDF version is not set, because pdfTeX is too old (<1.10a)%
-  }%
-}{%
-  \ifHy@ocgcolorlinks
-    \ifnum\Hy@pdfmajorminor@version<105 %
-      \kvsetkeys{Hyp}{pdfversion=1.5}%
-    \fi
-  \fi
-  \ifHy@setpdfversion
-    \ifnum\Hy@pdf@majorminor@version<105 %
-      \ltx@IfUndefined{pdfobjcompresslevel}{%
-      }{%
-        \ifHy@verbose
-          \Hy@InfoNoLine{%
-            PDF object streams are disabled, because they are%
-            \MessageBreak
-            not supported in requested PDF version %
-            \Hy@pdf@majorversion.\Hy@pdf@minorversion
-          }%
-        \fi
-        \pdfobjcompresslevel=\ltx@zero
-      }%
-    \fi
-    \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
-    \else
-      \let\Hy@temp\ltx@empty
-      \def\Hy@temp@A#1#2{%
-        \ifnum#1>\ltx@zero
-          \edef\Hy@temp{%
-            \Hy@temp
-            \space\space
-            \the#1\space #2%
-            \ifnum#1=\ltx@one\else s\fi
-            \MessageBreak
-          }%
-        \fi
-      }%
-      \Hy@temp@A\pdflastobj{PDF object}%
-      \Hy@temp@A\pdflastxform{form XObject}%
-      \Hy@temp@A\pdflastximage{image XObject}%
-      \Hy@temp@A\pdflastannot{annotation}%
-      \ltx@IfUndefined{pdflastlink}{%
-      }{%
-         \Hy@temp@A\pdflastlink{link}%
-      }%
-      \ifx\Hy@temp\ltx@empty
-        \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
-        \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
-      \else
-        \let\Hy@temp@A\ltx@empty
-        \ifnum\Hy@pdf@majorminor@version=104 %
-          \IfFileExists{pdf14.sty}{%
-            \def\Hy@temp@A{%
-              \MessageBreak
-              Or \string\RequirePackage{pdf14} can be used%
-              \MessageBreak
-              before \string\documentclass\space as shortcut%
-            }%
-          }{}%
-        \fi
-        \Hy@WarningNoLine{%
-          The PDF version number could not be set,\MessageBreak
-          because some PDF objects are already written:%
+\ifHy@setpdfversion
+  \ifnum\Hy@pdf@majorminor@version<105 %
+    \ltx@IfUndefined{pdfobjcompresslevel}{%
+    }{%
+      \ifHy@verbose
+        \Hy@InfoNoLine{%
+          PDF object streams are disabled, because they are%
           \MessageBreak
-          \Hy@temp
-          The version should be set as early as possible:%
-          \MessageBreak
-          \space\space
-          \expandafter\string\Hy@pdfmajorversion=\Hy@pdf@majorversion, %
-          \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
-          \string\relax
-          \ifnum\Hy@pdf@majorminor@version<105 %
-            \ltx@ifundefined{pdfobjcompresslevel}{%
-            }{%
-              \MessageBreak
-              \space\space
-              \string\pdfobjcompresslevel=0\string\relax
-            }%
-          \fi
-          \Hy@temp@A
+          not supported in requested PDF version %
+          \Hy@pdf@majorversion.\Hy@pdf@minorversion
         }%
       \fi
-    \fi
-    \PackageInfo{hyperref}{%
-      \expandafter\string\Hy@pdfmajorversion.%
-      \expandafter\string\Hy@pdfminorversion
-      :=\number\Hy@pdf@majorversion.\number\Hy@pdf@minorversion\space
+      \pdfobjcompresslevel=\ltx@zero
     }%
   \fi
-  \edef\Hy@pdf@majorversion{\number\Hy@pdfmajorversion}%
-  \edef\Hy@pdf@minorversion{\number\Hy@pdfminorversion}%
-}
+  \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
+  \else
+    \let\Hy@temp\ltx@empty
+    \def\Hy@temp@A#1#2{%
+      \ifnum#1>\ltx@zero
+        \edef\Hy@temp{%
+          \Hy@temp
+          \space\space
+          \the#1\space #2%
+          \ifnum#1=\ltx@one\else s\fi
+          \MessageBreak
+        }%
+      \fi
+    }%
+    \Hy@temp@A\pdflastobj{PDF object}%
+    \Hy@temp@A\pdflastxform{form XObject}%
+    \Hy@temp@A\pdflastximage{image XObject}%
+    \Hy@temp@A\pdflastannot{annotation}%
+    \ltx@IfUndefined{pdflastlink}{%
+    }{%
+       \Hy@temp@A\pdflastlink{link}%
+    }%
+    \ifx\Hy@temp\ltx@empty
+      \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
+      \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
+    \else
+      \let\Hy@temp@A\ltx@empty
+      \ifnum\Hy@pdf@majorminor@version=104 %
+        \IfFileExists{pdf14.sty}{%
+          \def\Hy@temp@A{%
+            \MessageBreak
+            Or \string\RequirePackage{pdf14} can be used%
+            \MessageBreak
+            before \string\documentclass\space as shortcut%
+          }%
+        }{}%
+      \fi
+      \Hy@WarningNoLine{%
+        The PDF version number could not be set,\MessageBreak
+        because some PDF objects are already written:%
+        \MessageBreak
+        \Hy@temp
+        The version should be set as early as possible:%
+        \MessageBreak
+        \space\space
+        \expandafter\string\Hy@pdfmajorversion=\Hy@pdf@majorversion, %
+        \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
+        \string\relax
+        \ifnum\Hy@pdf@majorminor@version<105 %
+          \ltx@ifundefined{pdfobjcompresslevel}{%
+          }{%
+            \MessageBreak
+            \space\space
+            \string\pdfobjcompresslevel=0\string\relax
+          }%
+        \fi
+        \Hy@temp@A
+      }%
+    \fi
+  \fi
+  \PackageInfo{hyperref}{%
+    \expandafter\string\Hy@pdfmajorversion.%
+    \expandafter\string\Hy@pdfminorversion
+    :=\number\Hy@pdf@majorversion.\number\Hy@pdf@minorversion\space
+  }%
+\fi
+\edef\Hy@pdf@majorversion{\number\Hy@pdfmajorversion}%
+\edef\Hy@pdf@minorversion{\number\Hy@pdfminorversion}%
 \Hy@DisableOption{pdfversion}%
 %    \end{macrocode}
 %

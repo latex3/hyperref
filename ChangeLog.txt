@@ -1,4 +1,4 @@
-XXXX-XX-XX Ulrike Fischer/David Carlisle
+2022-02-21 Ulrike Fischer/David Carlisle
     * a pdftex version newer than 1.10 (from 2003) is assumed
     * removed tests for numexpr/dimexpr: etex is now required
     * expand utf8 chars even if they are protected (preparation for

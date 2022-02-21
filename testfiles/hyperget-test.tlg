@@ -37,7 +37,6 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/10 c
 .....\glue 3.33333 plus 1.66666 minus 1.11111
 .....\glue 3.33333 plus 1.66666 minus 1.11111
-.....\kern 0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -157,7 +156,6 @@ Completed box being shipped out [3]
 .....\glue 3.33333 plus 1.66666 minus 1.11111
 .....\write1{\newlabel{page}{{}{\thepage }{some section}{section*.1}{}}}
 .....\penalty 10000
-.....\kern 0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0

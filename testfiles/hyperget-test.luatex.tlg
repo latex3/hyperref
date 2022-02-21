@@ -42,7 +42,6 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 c
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
-.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -176,7 +175,6 @@ Completed box being shipped out [3]
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\write1{\newlabel{page}{{}{\thepage }{some section}{section*.1}{}}}
 .....\penalty 10000
-.....\kern0.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0

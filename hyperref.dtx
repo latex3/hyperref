@@ -17901,8 +17901,8 @@
 }%
 \let\HyField@afields\ltx@empty
 \let\HyField@cofields\ltx@empty
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdflastlink\endcsname\relax
+\@ifundefined{pdflastlink}
+ {%
   \let\HyField@AddToFields\relax
   \PackageInfo{hyperref}{%
     You need pdfTeX 1.40.0 for setting the /Fields entry.%
@@ -17910,8 +17910,8 @@
     Adobe Reader/Acrobat accepts an empty /Field array,%
     \MessageBreak
     but other PDF viewers might complain%
-  }%
-\else
+  }}%
+ {%
   \let\HyField@AuxAddToFields\ltx@gobble
   \let\HyField@AuxAddToCoFields\ltx@gobbletwo
   \def\HyField@AfterAuxOpen{\Hy@AtBeginDocument}%
@@ -18006,7 +18006,7 @@
       \fi
     }%
   }%
-\fi
+ }
 \def\@Form[#1]{%
   \@ifundefined{textcolor}{\let\textcolor\@gobble}{}%
   \kvsetkeys{Form}{#1}%
@@ -18888,8 +18888,8 @@
 %
 %    \begin{macro}{\Hy@escapestring}
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname pdf@escapestring\endcsname\relax
+\@ifundefined{pdf@escapestring}
+ {%
   \let\Hy@escapestring\@firstofone
   \def\Hy@escapeform#1{%
     \ifHy@pdfescapeform
@@ -18920,7 +18920,7 @@
       }%
     \fi
   }%
-\else
+ }{%
   \def\Hy@escapeform#1{%
     \ifHy@pdfescapeform
       \let\Hy@escapestring\pdfescapestring
@@ -18929,7 +18929,7 @@
     \fi
   }%
   \Hy@escapeform{}%
-\fi
+ }
 %    \end{macrocode}
 %    \end{macro}
 %
@@ -19885,12 +19885,9 @@
 %    \end{macrocode}
 %    \begin{macrocode}
 \let\H@old@part\@part
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname chapter\endcsname\relax
-  \let\Hy@secnum@part\z@
-\else
-  \let\Hy@secnum@part\m@ne
-\fi
+\@ifundefined{chapter}
+  {\let\Hy@secnum@part\z@}
+  {\let\Hy@secnum@part\m@ne}
 \def\@part{%
   \ifnum\Hy@secnum@part>\c@secnumdepth
     \phantomsection

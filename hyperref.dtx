@@ -3833,10 +3833,6 @@
 %      |\number\dimexpr.25\dimexpr 123sp\relax\relax|
 %    \end{quote}
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname numexpr\endcsname\relax
-  \let\HyPsd@UTFviii\relax
-\else
   \begingroup
     \lccode`\~=`^^f4\relax
   \lowercase{\endgroup
@@ -4036,9 +4032,6 @@
     \number\numexpr#1-8*\number\dimexpr.125\dimexpr#1sp%
     \relax\relax\relax
   }%
-%    \end{macrocode}
-%    \begin{macrocode}
-\fi
 %    \end{macrocode}
 %
 %    \begin{macro}{\HyPsd@utf@viii@undeferr}
@@ -6393,16 +6386,9 @@
     \def\@pdfviewparams{ #2}%
   \fi
 }
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname numexpr\endcsname\relax
-  \def\Hy@number#1{%
-    \expandafter\@firstofone\expandafter{\number#1}%
+\def\Hy@number#1{%
+  \the\numexpr#1\relax
   }%
-\else
-  \def\Hy@number#1{%
-    \the\numexpr#1\relax
-  }%
-\fi
 \define@key{Hyp}{pdfstartpage}{%
   \ifx\\#1\\%
     \let\@pdfstartpage\ltx@empty
@@ -9041,35 +9027,18 @@
   \afterassignment\Hy@defaultbpAux
   \dimen@=#2bp\relax{#1}{#2}%
 }
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname dimexpr\endcsname\relax
-  \def\Hy@defaultbpAux#1\relax#2#3{%
-    \ifx!#1!%
-      \endgroup
-      \def#2{#3}%
-    \else
-      \dimen@=.99626\dimen@
-      \edef\x{\endgroup
-        \def\noexpand#2{%
-          \strip@pt\dimen@
-        }%
-      }\x
-    \fi
-  }%
-\else
-  \def\Hy@defaultbpAux#1\relax#2#3{%
-    \ifx!#1!%
-      \endgroup
-      \def#2{#3}%
-    \else
-      \edef\x{\endgroup
-        \def\noexpand#2{%
-          \strip@pt\dimexpr\dimen@*800/803\relax
-        }%
-      }\x
-    \fi
-  }%
-\fi
+\def\Hy@defaultbpAux#1\relax#2#3{%
+  \ifx!#1!%
+    \endgroup
+    \def#2{#3}%
+  \else
+    \edef\x{\endgroup
+      \def\noexpand#2{%
+        \strip@pt\dimexpr\dimen@*800/803\relax
+      }%
+    }\x
+  \fi
+}%
 \define@key{Field}{borderstyle}{%
   \let\Hy@temp\Fld@borderstyle
   \def\Fld@borderstyle{#1}%

@@ -11297,7 +11297,8 @@
       \floatingpenalty \@MM
       \hsize\columnwidth
       \@parboxrestore
-      \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}%
+      \def\@currentcounter{footnote}%
+      \protected@edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}%
       \@makefntext{}%
       \rule{\z@}{\footnotesep}%
       \bgroup

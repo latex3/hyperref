@@ -1036,6 +1036,23 @@
 %          converted to the final form.
 %    \end{enumerate}
 %
+%    \cs{MakeUppercase} and \cs{MakeLowercase} do not work by expansion in
+%    legacy code but if the expl3 code is available we can handle them.
+%
+%    \begin{macro}{\MakeUppercaseUnsupportedInPdfStrings}
+%    \begin{macro}{\MakeLowercaseUnsupportedInPdfStrings}
+%    \begin{macrocode}
+\ExplSyntaxOn
+\@ifundefined{text_uppercase:n}{}
+ {
+   \def\MakeUppercaseUnsupportedInPdfStrings#1{\use:e {\text_uppercase:n {#1}}}
+   \def\MakeLowercaseUnsupportedInPdfStrings#1{\use:e {\text_lowercase:n {#1}}}
+ }
+\ExplSyntaxOff
+%    \end{macrocode}
+%    \end{macro}
+%    \end{macro}
+%
 %    \begin{macro}{\pdfstringdef}
 %    \cs{pdfstringdef} works on the tokens in |#2| and converts them to
 %    a PDF string as far as possible:

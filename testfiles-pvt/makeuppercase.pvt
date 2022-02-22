@@ -1,0 +1,7 @@
+\input{regression-test}
+\documentclass{book}
+\usepackage{hyperref}
+\begin{document}
+\tableofcontents
+\chapter{ÜBER die EINÖDE \MakeUppercase{Über die $a=b$ Einöde\oe \i \j \"a }}%
+\end{document}

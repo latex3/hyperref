@@ -3,7 +3,7 @@
 module = "hyperref"
 
 docfiledir   = "doc"
-docfiles     = {"paper.pdf", "slides.pdf", "*.html", "*.css"}
+docfiles     = {"paper.pdf", "slides.pdf", "*.html", "*.css","doc/*.tex"}
 textfiles    = {"*.md", "*.txt"}
 installfiles = {"*.def", "*.sty", "*.cfg"}
 tdslocations = {
@@ -23,14 +23,14 @@ tdslocations = {
   "doc/latex/hyperref/nameref.pdf",
   "doc/latex/hyperref/paper.pdf",
   "doc/latex/hyperref/slides.pdf",
+  "doc/latex/hyperref/hyperref-doc.tex",
   "source/latex/hyperref/backref.dtx",
   "source/latex/hyperref/bmhydoc.sty",
-  "source/latex/hyperref/doc/hyperref-doc.tex",
-  "source/latex/hyperref/doc/paperslides99.zip",
   "source/latex/hyperref/hluatex.dtx",
   "source/latex/hyperref/hyperref.dtx",
   "source/latex/hyperref/hyperref.ins",
   "source/latex/hyperref/nameref.dtx",
+  "source/latex/hyperref/doc/paperslides99.zip",  
   "tex/latex/hyperref/backref.sty",
   "tex/latex/hyperref/hdvipdfm.def",
   "tex/latex/hyperref/hdvips.def",
@@ -89,8 +89,7 @@ sourcefiles = {
   "*.ins",
   "*-hyper.sty",
   "bmhydoc.sty",
-  "paperslides99.zip",
-  "doc/*.tex",
+  "paperslides99.zip"
 }
 
 
@@ -114,7 +113,7 @@ end
 
 
 
-excludefiles={"hyperref/hyperref-doc.tex"}
+--excludefiles={"hyperref/hyperref-doc.tex"}
 
 typesetfiles = {"hyperref-doc.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
 

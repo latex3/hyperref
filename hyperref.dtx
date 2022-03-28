@@ -9525,10 +9525,10 @@
 % a document.
 %
 % Write some stuff into the aux file so if the next run is done
-% without hyperref, then |\contentsline| and |\newlabel| are defined
+% without hyperref, then  |\newlabel| is defined
 % to cope with the extra arguments.
-% change 2022-03-28: removed the code for contentsline, it is no
-% longer needed as contentsline has now always four arguments. 
+% change 2022-03-28: removed the code for |\contentsline|, it is no
+% longer needed as |\contentsline| has now always four arguments.
 %    \begin{macrocode}
   \if@filesw
     \ifHy@typexml
@@ -9574,11 +9574,9 @@
 % Now the code to deal with adding the hyperref package to a document
 % with aux and toc written the standard way.
 %
-% If hyperref was used last time, do nothing. If it was not used,
-% or an old version of hyperref was used, don't use that TOC at all
-% but generate a warning. Not ideal, but better than failing
-% with pre-5.0 hyperref TOCs.
-% change 2022-03-28: removed the test for an old toc. contentsline
+% If hyperref was used last time, do nothing.
+% change 2022-03-28: removed the test for an old toc.
+% |\contentsline|
 % has now always four arguments.
 %    \begin{macrocode}
   \ifx\hyper@last\@undefined

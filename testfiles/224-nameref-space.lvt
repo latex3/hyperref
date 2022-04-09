@@ -1,0 +1,39 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+% test for issue 224,
+\input{regression-test}
+\documentclass{article}
+\usepackage[nospace]{varioref}
+\usepackage{nameref}
+\begin{document}
+\START\showoutput
+\section{Title}
+\label{sec:section-1}
+
+See \vnameref{sec:section-1}.
+
+See \vnameref{sec:section-1} and also
+
+\clearpage{}
+
+See \vnameref{sec:section-1}.
+
+See \vnameref{sec:section-1} and also 
+
+\newpage 
+\makeatletter \@vrefhandlespacetrue \makeatother 
+
+\section{Title}
+\label{sec:section-2}
+
+See \vnameref{sec:section-2}.
+
+See \vnameref{sec:section-2} and also
+
+\clearpage{}
+
+See \vnameref{sec:section-2}.
+
+See \vnameref{sec:section-2} and also
+
+
+\end{document} 

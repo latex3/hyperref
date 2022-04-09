@@ -1,0 +1,504 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 506.03296fil, direction TLT
+...\write-{}
+...\glue(\topskip) 0.00641
+...\hbox(9.99359+0.0864)x345.0, glue set 288.52325fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(9.4464+0.0)x22.50719, direction TLT
+.....\glue 0.0
+.....\TU/lmr/bx/n/14.4 1
+.....\glue 14.4
+....\TU/lmr/bx/n/14.4 T
+....\TU/lmr/bx/n/14.4 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/bx/n/14.4 -
+....\TU/lmr/bx/n/14.4 t
+....\TU/lmr/bx/n/14.4 l
+....\TU/lmr/bx/n/14.4 e
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+...\penalty 10000
+...\glue 9.913 plus 0.86198
+...\write1{\newlabel{sec:section-1}{{1}{\thepage }{Title}{}{}}}
+...\penalty 10000
+...\penalty 10000
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.8636
+...\hbox(7.05+0.22)x345.0, glue set 303.34fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{1@xvr}{{}{\thepage }}}
+....\write1{\newlabel{1@vr}{{}{\thepage }}}
+....\TU/lmr/m/n/10 .
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.73
+...\hbox(7.05+0.22)x345.0, glue set 251.62fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{2@xvr}{{}{\thepage }}}
+....\write1{\newlabel{2@vr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 d
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 s
+....\TU/lmr/m/n/10 o
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -0.22
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.0)x345.0, direction TLT
+...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 1
+....\glue 0.0 plus 1.0fil
+Completed box being shipped out [2]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 527.9436fil, direction TLT
+...\write-{}
+...\glue(\topskip) 2.95
+...\hbox(7.05+2.06)x345.0, glue set 188.87fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{3@xvr}{{}{\thepage }}}
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 n
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 h
+....\TU/lmr/m/n/10 e
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 r
+....\TU/lmr/m/n/10 e
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 c
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 d
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 i
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 g
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 g
+....\TU/lmr/m/n/10 e
+....\write1{\newlabel{3@vr}{{}{\thepage }}}
+....\TU/lmr/m/n/10 .
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 2.89
+...\hbox(7.05+2.06)x345.0, glue set 157.37fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{4@xvr}{{}{\thepage }}}
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 n
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 h
+....\TU/lmr/m/n/10 e
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 r
+....\TU/lmr/m/n/10 e
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 v
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 u
+....\TU/lmr/m/n/10 s
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 g
+....\TU/lmr/m/n/10 e
+....\write1{\newlabel{4@vr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 d
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 s
+....\TU/lmr/m/n/10 o
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -2.06
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.0)x345.0, direction TLT
+...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 2
+....\glue 0.0 plus 1.0fil
+Completed box being shipped out [3]
+\vbox(633.0+0.22)x407.0, direction TLT
+.\glue 16.0
+.\vbox(617.0+0.22)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 506.03296fil, direction TLT
+...\glue(\topskip) 0.00641
+...\hbox(9.99359+0.0864)x345.0, glue set 288.52325fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(9.4464+0.0)x22.50719, direction TLT
+.....\glue 0.0
+.....\TU/lmr/bx/n/14.4 2
+.....\glue 14.4
+....\TU/lmr/bx/n/14.4 T
+....\TU/lmr/bx/n/14.4 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/bx/n/14.4 -
+....\TU/lmr/bx/n/14.4 t
+....\TU/lmr/bx/n/14.4 l
+....\TU/lmr/bx/n/14.4 e
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+...\penalty 10000
+...\glue 9.913 plus 0.86198
+...\write1{\newlabel{sec:section-2}{{2}{\thepage }{Title}{}{}}}
+...\penalty 10000
+...\penalty 10000
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.8636
+...\hbox(7.05+0.22)x345.0, glue set 303.34fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{5@xvr}{{}{\thepage }}}
+....\write1{\newlabel{5@vr}{{}{\thepage }}}
+....\TU/lmr/m/n/10 .
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.73
+...\hbox(7.05+0.22)x345.0, glue set 251.62fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{6@xvr}{{}{\thepage }}}
+....\write1{\newlabel{6@vr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 d
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 s
+....\TU/lmr/m/n/10 o
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -0.22
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.22)x345.0, direction TLT
+...\hbox(6.66+0.22)x345.0, glue set 170.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 3
+....\glue 0.0 plus 1.0fil
+Completed box being shipped out [4]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 527.9436fil, direction TLT
+...\write-{}
+...\glue(\topskip) 2.95
+...\hbox(7.05+2.06)x345.0, glue set 188.87fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{7@xvr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 n
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 h
+....\TU/lmr/m/n/10 e
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 r
+....\TU/lmr/m/n/10 e
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 c
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 d
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 i
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 g
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 g
+....\TU/lmr/m/n/10 e
+....\write1{\newlabel{7@vr}{{}{\thepage }}}
+....\TU/lmr/m/n/10 .
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 2.89
+...\hbox(7.05+2.06)x345.0, glue set 157.37fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 S
+....\TU/lmr/m/n/10 e
+....\TU/lmr/m/n/10 e
+....\penalty 10000
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 T
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 e
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\write1{\newlabel{8@xvr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 n
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 t
+....\TU/lmr/m/n/10 h
+....\TU/lmr/m/n/10 e
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 r
+....\TU/lmr/m/n/10 e
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 v
+....\TU/lmr/m/n/10 i
+....\discretionary (penalty 50)
+.....< \TU/lmr/m/n/10 -
+....\TU/lmr/m/n/10 o
+....\TU/lmr/m/n/10 u
+....\TU/lmr/m/n/10 s
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 p
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 g
+....\TU/lmr/m/n/10 e
+....\write1{\newlabel{8@vr}{{}{\thepage }}}
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 n
+....\TU/lmr/m/n/10 d
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 a
+....\TU/lmr/m/n/10 l
+....\TU/lmr/m/n/10 s
+....\TU/lmr/m/n/10 o
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -2.06
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.23
+..\hbox(6.77+0.0)x345.0, direction TLT
+...\hbox(6.77+0.0)x345.0, glue set 170.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 4
+....\glue 0.0 plus 1.0fil
+(224-nameref-space.aux)

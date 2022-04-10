@@ -12551,10 +12551,8 @@
 \Hy@AtBeginDocument{%
   \@ifpackageloaded{varioref}{%
 %    \end{macrocode}
-%    Test if we are running new 2019 varioref or old one:
+%    This requires a new varioref (after 2019-09)!
 %    \begin{macrocode}
-%FMi
-  \ifdefined\vp@gerefstar
    \renewcommand\Vref@star[2][]{%
      \begingroup
        \let\T@pageref\@pagerefstar
@@ -12587,33 +12585,10 @@
         \vpageref[#1]{#2}%
        \endgroup
     }%
-%    \end{macrocode}
-%    old varioref:
-%    \begin{macrocode}
- \else
-   \def\Vr@f#1{%
-     \leavevmode\unskip\vref@space
-     \hyperref[{#1}]{%
-       \Ref*{#1}%
-       \let\vref@space\nobreakspace
-       \@vpageref[\unskip]{#1}%
-     }%
-   }%
-   \def\vr@f#1{%
-     \leavevmode\unskip\vref@space
-     \begingroup
-       \let\T@pageref\@pagerefstar
-       \hyperref[{#1}]{%
-         \ref*{#1}%
-         \vpageref[\unskip]{#1}%
-       }%
-     \endgroup
-   }%
- \fi
-%FMi -end mod
   }{}%
 }
-
+%    \end{macrocode}
+%    \begin{macrocode}
 \DeclareRobustCommand*{\autopageref}{%
   \@ifstar{%
     \HyRef@autopagerefname\pageref*%

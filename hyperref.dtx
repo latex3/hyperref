@@ -7336,20 +7336,9 @@
   \DeclareRobustCommand\pageref{%
     \@ifstar\@pagerefstar\T@pageref
   }%
-%  \@ifclassloaded{memoir}{%
-%    \ltx@IfUndefined{@mem@titlerefnolink}\ltx@secondoftwo{%
-%      \ltx@IfUndefined{@mem@titleref}\ltx@secondoftwo\ltx@firstoftwo
-%    }%
-%  }\ltx@secondoftwo
-%  {%
-%    \DeclareRobustCommand*{\nameref}{%
-%      \@ifstar\@mem@titlerefnolink\@mem@titleref
-%    }%
-%  }{%
-    \DeclareRobustCommand*{\nameref}{%
+  \DeclareRobustCommand*{\nameref}{%
       \@ifstar\@namerefstar\T@nameref
-    }%
-%  }%
+   }%
  \ifHy@implicit
  \else
    \let \@pagerefstar\T@pageref

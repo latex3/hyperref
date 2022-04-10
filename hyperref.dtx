@@ -12536,21 +12536,20 @@
 \def\@namerefstar#1{%
   \HyRef@StarSetRef{#1}\@thirdoffive
 }
-
+\def\@Refstar#1{%
+  \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
+}%
+\def\HyRef@MakeUppercaseFirstOfFive#1#2#3#4#5{%
+  \MakeUppercase#1%
+}%
+\DeclareRobustCommand*{\Ref}{%
+  \@ifstar\@Refstar\HyRef@Ref
+}%
+\def\HyRef@Ref#1{%
+  \hyperref[{#1}]{\Ref*{#1}}%
+}%
 \Hy@AtBeginDocument{%
   \@ifpackageloaded{varioref}{%
-    \def\@Refstar#1{%
-      \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
-    }%
-    \def\HyRef@MakeUppercaseFirstOfFive#1#2#3#4#5{%
-      \MakeUppercase#1%
-    }%
-    \DeclareRobustCommand*{\Ref}{%
-      \@ifstar\@Refstar\HyRef@Ref
-    }%
-    \def\HyRef@Ref#1{%
-      \hyperref[{#1}]{\Ref*{#1}}%
-    }%
 %    \end{macrocode}
 %    Test if we are running new 2019 varioref or old one:
 %    \begin{macrocode}

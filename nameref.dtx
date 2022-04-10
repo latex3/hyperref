@@ -659,9 +659,19 @@
   \DeclareRobustCommand{\pageref}{\T@pageref}%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\Ref}
 %    \begin{macrocode}
+   \def\T@Ref#1{%
+       \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
+     }%
+   \def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
+       \MakeUppercase#1%
+     }%
+   \DeclareRobustCommand*{\Ref}{%
+     \@ifstar\T@Ref\T@Ref}%
 }
 %    \end{macrocode}
+%    \end{macro}
 %
 % \subsection{Usage and frontend}
 % Access the (third) name part with |\nameref|;
@@ -690,23 +700,12 @@
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macrocode}
-%\@ifclassloaded{memoir}{%
-%  \ltx@IfUndefined{@mem@titlerefnolink}\ltx@secondoftwo{%
-%    \ltx@IfUndefined{@mem@titleref}\ltx@secondoftwo\ltx@firstoftwo
-%  }%
-%}\ltx@secondoftwo
-%{%
-%  \DeclareRobustCommand*{\nameref}{%
-%    \@ifstar\@mem@titlerefnolink\@mem@titleref
-%  }%
-%}{%
 %    \end{macrocode}
 %    \begin{macro}{\nameref}
 %    \begin{macrocode}
   \DeclareRobustCommand*{\nameref}{%
     \@ifstar\T@nameref\T@nameref
   }%
-%}
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Nameref}
@@ -760,101 +759,11 @@
 \AtBeginDocument{%
   \ifx\csname @@vpageref\endcsname\relax
   \else
-%FMi
 %    \end{macrocode}
-%    Test if we are using the new varioref ...
+%    This requires a varioref newer than 2019-09-12
 %    \begin{macrocode}
-   \ifdefined\vp@gerefstar
    \let\NR@@vpageref\@@vpageref
-%    \end{macrocode}
-%    if not then old patching code
-%    \begin{macrocode}
-   \else
-      \def\NR@@vpageref#1[#2]#3{%
-        \leavevmode\unskip
-        \global\advance\c@vrcnt\@ne
-        \@ifundefined{r@\the\c@vrcnt @vr}%
-          {\@namedef{r@\the\c@vrcnt @vr}{{??}{??}{}{}{}}}{}%
-        \edef\@tempa{%
-          \expandafter\expandafter\expandafter
-          \@secondoffive\csname r@\the\c@vrcnt @vr\endcsname
-        }%
-        \@ifundefined{r@\the\c@vrcnt @xvr}%
-          {\@namedef{r@\the\c@vrcnt @xvr}{{??}{??}{}{}{}}}{}%
-        \edef\@tempb{%
-          \expandafter\expandafter\expandafter
-          \@secondoffive\csname r@\the\c@vrcnt @xvr\endcsname
-        }%
-        {%
-          \let\@currentlabel\@empty
-          \expandafter\label\expandafter{\the\c@vrcnt @xvr}%
-        }%
-        \ifx\@tempa\@tempb
-        \else
-          \vref@err{%
-            \noexpand\vref at page boundary %
-            \@tempb-\@tempa\space (may loop)%
-          }%
-        \fi
-        \@ifundefined{r@#3}{\@namedef{r@#3}{{??}{??}{}{}{}}}{}%
-        \edef\thevpagerefnum{%
-          \expandafter\expandafter\expandafter
-          \@secondoffive\csname r@#3\endcsname
-        }%
-        \ifx\vref@space\@undefined
-          \space
-        \else
-          \vref@space
-        \fi
-        \ifx\@tempa\thevpagerefnum
-          #1%
-        \else
-          #2%
-          \is@pos@number\thevpagerefnum{%
-            \is@pos@number\@tempa{%
-              \@tempcnta\@tempa
-              \advance\@tempcnta\@ne
-            }{%
-              \@tempcnta\maxdimen
-            }%
-            \ifnum \thevpagerefnum =\@tempcnta
-              \ifodd\@tempcnta
-                \if@twoside
-                  \reftextfaceafter
-                \else
-                  \reftextafter
-                \fi
-              \else
-                \reftextafter
-              \fi
-            \else
-              \advance\@tempcnta-2 %
-              \ifnum \thevpagerefnum =\@tempcnta
-                \ifodd\@tempcnta
-                  \reftextbefore
-                \else
-                  \if@twoside
-                    \reftextfacebefore
-                  \else
-                    \reftextbefore
-                  \fi
-                \fi
-              \else
-                \reftextfaraway{#3}%
-              \fi
-            \fi
-          }{%
-            \reftextfaraway{#3}%
-          }%
-        \fi
-        {%
-          \let\@currentlabel\@empty
-          \expandafter\label\expandafter{\the\c@vrcnt @vr}%
-        }%
-      }%
-    \fi
-%FM - end mod
-    \def\@@vpageref#1[#2]#3{%
+   \def\@@vpageref#1[#2]#3{%
       \begingroup
         \csname @safe@activestrue\endcsname
         \edef\x{#3}%
@@ -873,16 +782,6 @@
     }%
   \fi
 }
-%    \end{macrocode}
-%    \begin{macrocode}
-\def\T@Ref#1{%
-    \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
-  }%
-\def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
-    \MakeUppercase#1%
-  }%
-\DeclareRobustCommand*{\Ref}{%
-  \@ifstar\T@Ref\T@Ref}%
 %    \end{macrocode}
 %
 % \subsection{Support for package \xpackage{listings}}

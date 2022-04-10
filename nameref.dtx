@@ -646,6 +646,12 @@
 %    \xpackage{hyperref} or after
 %    \xpackage{hyperref}'s definitions in |\AtBeginDocument|.
 %    \begin{macrocode}
+\def\T@Ref#1{%
+    \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
+  }%
+\def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
+    \MakeUppercase#1%
+  }%
 \@ifpackageloaded{hyperref}{%
 }{%
 %    \end{macrocode}
@@ -661,12 +667,6 @@
 %    \end{macro}
 %    \begin{macro}{\Ref}
 %    \begin{macrocode}
-   \def\T@Ref#1{%
-       \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
-     }%
-   \def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
-       \MakeUppercase#1%
-     }%
    \DeclareRobustCommand*{\Ref}{%
      \@ifstar\T@Ref\T@Ref}%
 }

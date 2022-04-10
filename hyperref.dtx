@@ -7344,6 +7344,8 @@
    \let \@pagerefstar\T@pageref
    \let \@refstar\T@ref
    \let \@namerefstar\T@nameref
+   \let \@Refstar\T@Ref
+   \let \HyRef@Ref\T@Ref
  \fi
 }
 \Hy@AtBeginDocument{%
@@ -12551,8 +12553,13 @@
 \Hy@AtBeginDocument{%
   \@ifpackageloaded{varioref}{%
 %    \end{macrocode}
-%    This requires a new varioref (after 2019-09)!
+%    This are the patches for a varioref newer after 2019-09
+%    Older versions are no longer supported.
+%    If |\Hy@nopatch@varioref| is defined we don't patch but assume
+%    that varioref handles the hyperlinks.
 %    \begin{macrocode}
+  \@ifundefined{Hy@nopatch@varioref}
+   {
    \renewcommand\Vref@star[2][]{%
      \begingroup
        \let\T@pageref\@pagerefstar
@@ -12585,6 +12592,7 @@
         \vpageref[#1]{#2}%
        \endgroup
     }%
+   }{}%
   }{}%
 }
 %    \end{macrocode}

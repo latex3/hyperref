@@ -875,23 +875,14 @@
 }
 %    \end{macrocode}
 %    \begin{macrocode}
-\@ifundefined{@Refstar}{%
-  \def\T@Ref#1{%
+\def\T@Ref#1{%
     \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
   }%
-  \def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
+\def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
     \MakeUppercase#1%
   }%
-}{}%
-\AtBeginDocument{%
-  \@ifpackageloaded{varioref}{%
-    \@ifundefined{@Refstar}{%
-      \DeclareRobustCommand*{\Ref}[1]{%
-        \T@Ref{#1}%
-      }%
-    }{}%
-  }{}%
-}%
+\DeclareRobustCommand*{\Ref}{%
+  \@ifstar\T@Ref\T@Ref}%
 %    \end{macrocode}
 %
 % \subsection{Support for package \xpackage{listings}}

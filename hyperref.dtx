@@ -7330,25 +7330,29 @@
       }%
     \fi
   \fi
-  \DeclareRobustCommand\ref{%
-    \@ifstar\@refstar\T@ref
-  }%
-  \DeclareRobustCommand\pageref{%
-    \@ifstar\@pagerefstar\T@pageref
-  }%
-  \DeclareRobustCommand*{\nameref}{%
-      \@ifstar\@namerefstar\T@nameref
-  }%
-  \DeclareRobustCommand*{\Ref}{%
-  \@ifstar\@Refstar\T@Ref
-  }%
+%    \end{macrocode}
+%    With active links we have to redefine the starred versions
+%   to avoid that they get links from the include |\@setref|:
+%    \begin{macrocode}
  \ifHy@implicit
    \let \T@Ref\HyRef@Ref
+   \def\@refstar#1{%
+     \HyRef@StarSetRef{#1}\@firstoffive
+   }
+   \def\@pagerefstar#1{%
+     \HyRef@StarSetRef{#1}\@secondoffive
+   }
+   \def\@namerefstar#1{%
+     \HyRef@StarSetRef{#1}\@thirdoffive
+   }
+   \def\@Refstar#1{%
+     \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
+   }%
  \else
-   \let \@pagerefstar\T@pageref
-   \let \@refstar\T@ref
-   \let \@namerefstar\T@nameref
-   \let \@Refstar\T@Ref
+%   \let \@pagerefstar\T@pageref
+%   \let \@refstar\T@ref
+%   \let \@namerefstar\T@nameref
+%   \let \@Refstar\T@Ref
  \fi
 }
 \Hy@AtBeginDocument{%

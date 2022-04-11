@@ -9,7 +9,7 @@ l. ...\ShowCommand\ref
 > \Ref=robust macro:
 ->\protect \Ref  .
 > \Ref =macro:
-->\@ifstar \@Refstar \HyRef@Ref .
+->\@ifstar \@Refstar \T@Ref .
 <argument> \Ref  
 l. ...\ShowCommand\Ref
 > \pageref=robust macro:

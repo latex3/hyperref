@@ -1,0 +1,18 @@
+\input{regression-test}
+\documentclass{article}
+
+\usepackage[implicit=false]{hyperref}
+
+\begin{document}
+xxx
+\renewcommand\thesection{\alph{section}}
+\START \showoutput
+\ShowCommand\ref
+\ShowCommand\Ref
+\ShowCommand\pageref
+
+\section{Test}\label{sec:test}
+\ref{sec:test},\Ref{sec:test}, \pageref{sec:test}
+
+\ref*{sec:test},\Ref*{sec:test}, \pageref*{sec:test}
+\end{document}

@@ -7340,15 +7340,15 @@
       \@ifstar\@namerefstar\T@nameref
   }%
   \DeclareRobustCommand*{\Ref}{%
-  \@ifstar\@Refstar\HyRef@Ref
+  \@ifstar\@Refstar\T@Ref
   }%
  \ifHy@implicit
+   \let \T@Ref\HyRef@Ref
  \else
    \let \@pagerefstar\T@pageref
    \let \@refstar\T@ref
    \let \@namerefstar\T@nameref
    \let \@Refstar\T@Ref
-   \let \HyRef@Ref\T@Ref
  \fi
 }
 \Hy@AtBeginDocument{%

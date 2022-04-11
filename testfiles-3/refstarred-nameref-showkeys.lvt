@@ -1,0 +1,19 @@
+\input{regression-test}
+\documentclass{article}
+
+\usepackage{showkeys}
+\usepackage{nameref}
+
+\begin{document}
+xxx
+\renewcommand\thesection{\alph{section}}
+\START \showoutput
+\ShowCommand\ref
+\ShowCommand\Ref
+\ShowCommand\pageref
+
+\section{Test}\label{sec:test}
+\ref{sec:test},\qquad \Ref{sec:test}, \qquad\pageref{sec:test}
+
+\ref*{sec:test},\qquad \Ref*{sec:test}, \qquad \pageref*{sec:test}
+\end{document} 

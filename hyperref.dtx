@@ -7337,15 +7337,19 @@
  \ifHy@implicit
    \let \T@Ref\HyRef@Ref
    \def\@refstar#1{%
+     \NR@ref@showkeys{#1}%
      \HyRef@StarSetRef{#1}\@firstoffive
    }
    \def\@pagerefstar#1{%
+     \NR@ref@showkeys{#1}%
      \HyRef@StarSetRef{#1}\@secondoffive
    }
    \def\@namerefstar#1{%
+     \NR@ref@showkeys{#1}%
      \HyRef@StarSetRef{#1}\@thirdoffive
    }
    \def\@Refstar#1{%
+     \NR@ref@showkeys{#1}%
      \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
    }%
  \else

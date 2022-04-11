@@ -645,6 +645,16 @@
     }%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\T@Ref}%    
+%    \begin{macrocode}
+    \def\T@Ref#1{%
+      \@safe@activestrue
+      \SK@\SK@@ref{#1}%
+      \@safe@activesfalse
+      \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
+    }%
+%    \end{macrocode}
+%    \end{macro}
 %    \begin{macrocode}
   \fi
 \fi

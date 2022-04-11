@@ -7322,6 +7322,11 @@
       \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
       \Hy@safe@activesfalse
     }%
+    \def\T@Ref#1{%
+      \Hy@safe@activestrue
+      \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
+      \Hy@safe@activesfalse
+    }%
   \else
     \ifHy@typexml
     \else
@@ -7329,35 +7334,35 @@
         \RequirePackage{nameref}[2012/07/28]%
       }%
     \fi
-  \fi
 %    \end{macrocode}
 %    With active links we have to redefine the starred versions
 %   to avoid that they get links from the include |\@setref|:
 %    \begin{macrocode}
- \ifHy@implicit
-   \let \T@Ref\HyRef@Ref
-   \def\@refstar#1{%
-     \NR@ref@showkeys{#1}%
-     \HyRef@StarSetRef{#1}\@firstoffive
-   }
-   \def\@pagerefstar#1{%
-     \NR@ref@showkeys{#1}%
-     \HyRef@StarSetRef{#1}\@secondoffive
-   }
-   \def\@namerefstar#1{%
-     \NR@ref@showkeys{#1}%
-     \HyRef@StarSetRef{#1}\@thirdoffive
-   }
-   \def\@Refstar#1{%
-     \NR@ref@showkeys{#1}%
-     \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
-   }%
+    \ifHy@implicit
+      \let \T@Ref\HyRef@Ref
+      \def\@refstar#1{%
+        \NR@ref@showkeys{#1}%
+        \HyRef@StarSetRef{#1}\@firstoffive
+      }
+      \def\@pagerefstar#1{%
+        \NR@ref@showkeys{#1}%
+        \HyRef@StarSetRef{#1}\@secondoffive
+      }
+      \def\@namerefstar#1{%
+        \NR@ref@showkeys{#1}%
+        \HyRef@StarSetRef{#1}\@thirdoffive
+      }
+      \def\@Refstar#1{%
+        \NR@ref@showkeys{#1}%
+        \HyRef@StarSetRef{#1}\HyRef@MakeUppercaseFirstOfFive
+      }%
  \else
 %   \let \@pagerefstar\T@pageref
 %   \let \@refstar\T@ref
 %   \let \@namerefstar\T@nameref
 %   \let \@Refstar\T@Ref
  \fi
+  \fi
 }
 \Hy@AtBeginDocument{%
   \ifHy@texht

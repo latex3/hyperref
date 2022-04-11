@@ -402,9 +402,7 @@
 %
 %    \begin{macrocode}
 \AtBeginDocument{%
-  \@ifpackageloaded{hyperref}{%
-    \@ifpackagelater{hyperref}{2009/12/05}\@gobble\@firstofone
-  }\@firstofone
+  \@ifpackageloaded{hyperref}{}
   {%
     \let\NR@@caption\@caption
     \long\def\@caption#1[#2]{%

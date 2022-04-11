@@ -610,6 +610,16 @@
 }%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\T@Ref}
+%    \begin{macrocode}
+\def\T@Ref#1{%
+    \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
+  }%
+\def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
+    \MakeUppercase#1%
+  }%
+%    \end{macrocode}
+%    \end{macro}
 %    \begin{macrocode}
 \ifNR@showkeys
   \ifx\SK@ref\@empty
@@ -646,23 +656,17 @@
 %    \xpackage{hyperref} or after
 %    \xpackage{hyperref}'s definitions in |\AtBeginDocument|.
 %    \begin{macrocode}
-\def\T@Ref#1{%
-    \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
-  }%
-\def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
-    \MakeUppercase#1%
-  }%
 \@ifpackageloaded{hyperref}{%
 }{%
 %    \end{macrocode}
 %    \begin{macro}{\ref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\ref}{\T@ref}%
+  \DeclareRobustCommand{\ref}{\@ifstar\T@ref\T@ref}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\pageref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\pageref}{\T@pageref}%
+  \DeclareRobustCommand{\pageref}{\@ifstar\T@pageref\T@pageref}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Ref}

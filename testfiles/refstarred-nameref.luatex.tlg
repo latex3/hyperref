@@ -1,0 +1,130 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \ref=robust macro:
+->\protect \ref  .
+> \ref =\long macro:
+->\@ifstar \T@ref \T@ref .
+<argument> \ref  
+l. ...\ShowCommand\ref
+> \Ref=robust macro:
+->\protect \Ref  .
+> \Ref =macro:
+->\@ifstar \T@Ref \T@Ref .
+<argument> \Ref  
+l. ...\ShowCommand\Ref
+> \pageref=robust macro:
+->\protect \pageref  .
+> \pageref =\long macro:
+->\@ifstar \T@pageref \T@pageref .
+<argument> \pageref  
+l. ...\ShowCommand\pageref
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 472.9515fil, direction TLT
+...\write-{}
+...\glue(\topskip) 5.69
+...\hbox(4.31+0.0)x345.0, glue set 310.83002fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 x
+....\TU/lmr/m/n/10 x
+....\TU/lmr/m/n/10 x
+....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\penalty -300
+...\glue 15.08499 plus 4.31 minus 0.86198
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 8.2512
+...\hbox(9.7488+0.0864)x345.0, glue set 292.72803fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(6.5232+0.0864)x22.2768, direction TLT
+.....\glue 0.0
+.....\TU/lmr/bx/n/14.4 a
+.....\glue 14.4
+....\TU/lmr/bx/n/14.4 T
+....\kern-1.35359 (font)
+....\TU/lmr/bx/n/14.4 e
+....\TU/lmr/bx/n/14.4 s
+....\TU/lmr/bx/n/14.4 t
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+...\penalty 10000
+...\glue 9.913 plus 0.86198
+...\write1{\newlabel{sec:test}{{a}{\thepage }{Test}{}{}}}
+...\penalty 10000
+...\penalty 10000
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.7536
+...\hbox(7.16+1.93)x345.0, glue set 318.60999fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\TU/lmr/m/n/10 a
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10 ,
+....\TU/lmr/m/n/10 A
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10 ,
+....\glue(\spaceskip) 3.33 plus 2.08124 minus 0.888
+....\TU/lmr/m/n/10 1
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 2.91
+...\hbox(7.16+1.93)x345.0, glue set 303.60999fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x15.0, direction TLT
+....\TU/lmr/m/n/10 a
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10 ,
+....\TU/lmr/m/n/10 A
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/lmr/m/n/10 ,
+....\glue(\spaceskip) 3.33 plus 2.08124 minus 0.888
+....\TU/lmr/m/n/10 1
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -1.93
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.0)x345.0, direction TLT
+...\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 1
+....\glue 0.0 plus 1.0fil
+(refstarred-nameref.aux)

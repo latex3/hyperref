@@ -7339,6 +7339,9 @@
   \DeclareRobustCommand*{\nameref}{%
       \@ifstar\@namerefstar\T@nameref
   }%
+  \DeclareRobustCommand*{\Ref}{%
+  \@ifstar\@Refstar\HyRef@Ref
+  }%
  \ifHy@implicit
  \else
    \let \@pagerefstar\T@pageref
@@ -12543,9 +12546,6 @@
 }%
 \def\HyRef@MakeUppercaseFirstOfFive#1#2#3#4#5{%
   \MakeUppercase#1%
-}%
-\DeclareRobustCommand*{\Ref}{%
-  \@ifstar\@Refstar\HyRef@Ref
 }%
 \def\HyRef@Ref#1{%
   \hyperref[{#1}]{\Ref*{#1}}%

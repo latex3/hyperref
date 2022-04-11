@@ -1,0 +1,160 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \ref=robust macro:
+->\protect \ref  .
+> \ref =\long macro:
+->\@ifstar \@refstar \T@ref .
+<argument> \ref  
+l. ...\ShowCommand\ref
+> \Ref=robust macro:
+->\protect \Ref  .
+> \Ref =macro:
+->\@ifstar \@Refstar \HyRef@Ref .
+<argument> \Ref  
+l. ...\ShowCommand\Ref
+> \pageref=robust macro:
+->\protect \pageref  .
+> \pageref =\long macro:
+->\@ifstar \@pagerefstar \T@pageref .
+<argument> \pageref  
+l. ...\ShowCommand\pageref
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Cre\ETC.}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.1) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 472.97733fil
+....\write-{}
+....\special{ps:SDict begin [/Count -0/Dest (section.1) cvn/Title (\376\377\000T\0\ETC.}
+....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pd\ETC.}
+....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\glue(\topskip) 5.69446
+....\hbox(4.30554+0.0)x345.0, glue set 310.83327fil
+.....\hbox(0.0+0.0)x15.0
+.....\OT1/cmr/m/n/10 x
+.....\OT1/cmr/m/n/10 x
+.....\OT1/cmr/m/n/10 x
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -300
+....\glue 15.0694 plus 4.30554 minus 0.86108
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.1) cvn /DEST pdfmark e\ETC.}
+....\penalty 10000
+....\glue -15.0694 plus -4.30554 minus -0.86108
+....\glue 15.0694 plus 4.30554 minus 0.86108
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 8.12001
+....\hbox(9.87999+0.0)x345.0, glue set 290.92673fil
+.....\hbox(6.39998+0.0)x24.07497
+......\glue 0.0
+......\OT1/cmr/bx/n/14.4 a
+......\glue 16.19998
+.....\OT1/cmr/bx/n/14.4 T
+.....\kern-1.35
+.....\OT1/cmr/bx/n/14.4 e
+.....\OT1/cmr/bx/n/14.4 s
+.....\OT1/cmr/bx/n/14.4 t
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000T\000e\000s\000t}{}%\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 9.90276 plus 0.86108
+....\write1{\newlabel{sec:test}{{a}{\thepage }{Test}{section.1}{}}}
+....\penalty 10000
+....\penalty 10000
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.16669
+....\hbox(6.83331+1.94444)x345.0, glue set 318.61105fil
+.....\special{ps:SDict begin H.S end}
+.....\hbox(4.30554+0.0)x5.00002
+......\OT1/cmr/m/n/10 a
+.....\hbox(0.0+0.0)x0.0, shifted -4.30554
+......\special{ps:SDict begin H.R end}
+.....\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 1]BorderArrayPatch/Su\ETC.}
+.....\OT1/cmr/m/n/10 ,
+.....\special{ps:SDict begin H.S end}
+.....\hbox(6.83331+0.0)x7.50002
+......\OT1/cmr/m/n/10 A
+......\hbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0, shifted -6.83331
+......\special{ps:SDict begin H.R end}
+.....\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 1]BorderArrayPatch/Su\ETC.}
+.....\OT1/cmr/m/n/10 ,
+.....\glue 3.33333 plus 2.08331 minus 0.88889
+.....\special{ps:SDict begin H.S end}
+.....\hbox(6.44444+0.0)x5.00002
+......\OT1/cmr/m/n/10 1
+.....\hbox(0.0+0.0)x0.0, shifted -6.44444
+......\special{ps:SDict begin H.R end}
+.....\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 1]BorderArrayPatch/Su\ETC.}
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 3.22224
+....\hbox(6.83331+1.94444)x345.0, glue set 303.61105fil
+.....\hbox(0.0+0.0)x15.0
+.....\OT1/cmr/m/n/10 a
+.....\hbox(0.0+0.0)x0.0
+.....\OT1/cmr/m/n/10 ,
+.....\OT1/cmr/m/n/10 A
+.....\hbox(0.0+0.0)x0.0
+.....\OT1/cmr/m/n/10 ,
+.....\glue 3.33333 plus 2.08331 minus 0.88889
+.....\OT1/cmr/m/n/10 1
+.....\hbox(0.0+0.0)x0.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -1.94444
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(refstarred-hyperref.aux)
+Package rerunfilecheck Info: File `refstarred-hyperref.out' has not changed.
+(rerunfilecheck)             Checksum: FC90D1180BECD91AF9B24497E24BDAEA;63.

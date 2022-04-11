@@ -1,5 +1,9 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * unified reference commands, both nameref and hyperref now support
+      \ref, \pageref, \Ref, \nameref and \ref*, \pageref*, \Ref*, \nameref*
+    * removed older varioref code, a varioref newer than 2019 is now needed.
+    * improved support for showkeys.  
     * Removed the contentsline tests, no longer needed as contentsline
       has now four arguments also in latex.
     * \MakeUppercase and \MakeLowercase work now in bookmark if the expl3

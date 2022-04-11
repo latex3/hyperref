@@ -557,8 +557,10 @@
 \long\def\@fifthoffive#1#2#3#4#5{#5}
 %    \end{macrocode}
 %    \end{macro}
-% We have to redefine |\ref| and |\pageref| to know about extra
+% We have to redefine |\ref|, |\Ref| and |\pageref| to know about extra
 % reference elements. Make them robust, and compatible with Babel.
+% We also define starred versions so that it doesn't depend on hyperref
+% if they are defined or not. We use the same internal names as hyperref.
 % The Babel switch is mimicked if not already defined.
 % Some support for package \xpackage{showkeys} is implemented. If
 % option |notref| of that package is set, |\SK@ref| has the
@@ -571,6 +573,11 @@
 %    \begin{macro}{\@safe@activesfalse}
 %    \begin{macrocode}
 \providecommand*\@safe@activesfalse{}%
+%    \end{macrocode}
+%    \end{macro}
+%    \begin{macro}{\NR@ref@showkeys}
+%    \begin{macrocode}
+\newcommand\NR@ref@showkeys[1]{}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\NR@setref}
@@ -597,6 +604,15 @@
 %    \begin{macro}{\T@ref}
 %    \begin{macrocode}
 \def\T@ref#1{%
+  \NR@ref@showkeys{#1}%
+  \NR@setref{#1}\@firstoffive{#1}%
+}%
+%    \end{macrocode}
+%    \end{macro}
+%    \begin{macro}{\@refstar}
+%    \begin{macrocode}
+\def\@refstar#1{%
+  \NR@ref@showkeys{#1}%
   \NR@setref{#1}\@firstoffive{#1}%
 }%
 %    \end{macrocode}
@@ -604,13 +620,23 @@
 %    \begin{macro}{\T@pageref}
 %    \begin{macrocode}
 \def\T@pageref#1{%
+  \NR@ref@showkeys{#1}%
   \NR@setref{#1}\@secondoffive{#1}%
 }%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\@pagerefstar}
+%    \begin{macrocode}
+\def\@pagerefstar#1{%
+  \NR@ref@showkeys{#1}%
+  \NR@setref{#1}\@secondoffive{#1}%
+}%
+%    \end{macrocode}
+%    \end{macro}%
 %    \begin{macro}{\T@Ref}
 %    \begin{macrocode}
 \def\T@Ref#1{%
+    \NR@ref@showkeys{#1}%
     \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
   }%
 \def\NR@MakeUppercaseFirstOfFive#1#2#3#4#5{%
@@ -618,97 +644,82 @@
   }%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macro}{\@Refstar}
+%    \begin{macrocode}
+\def\@Refstar#1{%
+    \NR@ref@showkeys{#1}%
+    \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
+  }%
+%    \end{macrocode}
+%    \end{macro}%
 %    \begin{macrocode}
 \ifNR@showkeys
   \ifx\SK@ref\@empty
   \else
-%    \end{macrocode}
-%    \begin{macro}{\T@ref}
-%    \begin{macrocode}
-    \def\T@ref#1{%
-      \@safe@activestrue
-      \SK@\SK@@ref{#1}%
-      \@safe@activesfalse
-      \NR@setref{#1}\@firstoffive{#1}%
-    }%
-%    \end{macrocode}
-%    \end{macro}
-%    \begin{macro}{\T@pageref}
-%    \begin{macrocode}
-    \def\T@pageref#1{%
-      \@safe@activestrue
-      \SK@\SK@@ref{#1}%
-      \@safe@activesfalse
-      \NR@setref{#1}\@secondoffive{#1}%
-    }%
-%    \end{macrocode}
-%    \end{macro}
-%    \begin{macro}{\T@Ref}%
-%    \begin{macrocode}
-    \def\T@Ref#1{%
-      \@safe@activestrue
-      \SK@\SK@@ref{#1}%
-      \@safe@activesfalse
-      \NR@setref{#1}\NR@MakeUppercaseFirstOfFive{#1}%
-    }%
-%    \end{macrocode}
-%    \end{macro}
-%    \begin{macrocode}
+  \renewcommand\NR@ref@showkeys[1]{%
+    \@safe@activestrue
+    \SK@\SK@@ref{#1}%
+    \@safe@activesfalse}
   \fi
 \fi
 %    \end{macrocode}
-%    Package \xpackage{hyperref} uses its own definitions of |\ref| and
-%    |\pageref| because it extends the syntax by the star form.
+%    Package \xpackage{hyperref} uses the same
+%    definitions of |\ref|, |\Ref| and
+%    |\pageref| but has to redefine the non-starred command to
+%    add the hyperlink support.
 %    |\DeclareRobustCommand| is used by \xpackage{hyperref}.
 %    Package |nameref| can be loaded before, after
 %    \xpackage{hyperref} or after
 %    \xpackage{hyperref}'s definitions in |\AtBeginDocument|.
+%    We have to postpone the definition to |\AtBeginDocument| to
+%    avoid that showkeys overwrites them again.
 %    \begin{macrocode}
-\@ifpackageloaded{hyperref}{%
-}{%
+\AddToHook{begindocument}{%
 %    \end{macrocode}
 %    \begin{macro}{\ref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\ref}{\@ifstar\T@ref\T@ref}%
+  \DeclareRobustCommand{\ref}{\@ifstar\@refstar\T@ref}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\pageref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\pageref}{\@ifstar\T@pageref\T@pageref}%
+  \DeclareRobustCommand{\pageref}{\@ifstar\@pagerefstar\T@pageref}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Ref}
 %    \begin{macrocode}
    \DeclareRobustCommand*{\Ref}{%
-     \@ifstar\T@Ref\T@Ref}%
+     \@ifstar\@Refstar\T@Ref}%
 }
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macrocode}
+\DeclareHookRule{begindocument}{showkeys}{before}{nameref}
+%    \end{macrocode}
+%
 %
 % \subsection{Usage and frontend}
 % Access the (third) name part with |\nameref|;
 %    \begin{macro}{\T@nameref}
 %    \begin{macrocode}
 \def\T@nameref#1{%
+  \NR@ref@showkeys{#1}%
   \begingroup
     \let\label\@gobble
     \NR@setref{#1}\@thirdoffive{#1}%
   \endgroup
 }%
-\ifNR@showkeys
-  \ifx\SK@ref\@empty
-  \else
-    \def\T@nameref#1{%
-      \@safe@activestrue
-      \SK@\SK@@ref{#1}%
-      \@safe@activesfalse
-      \begingroup
-        \let\label\@gobble
-        \NR@setref{#1}\@thirdoffive{#1}%
-      \endgroup
-    }%
-  \fi
-\fi
+%    \end{macrocode}
+%    \end{macro}
+%    \begin{macro}{\@namerefstar}
+%    \begin{macrocode}
+\def\@namerefstar#1{%
+  \NR@ref@showkeys{#1}%
+  \begingroup
+    \let\label\@gobble
+    \NR@setref{#1}\@thirdoffive{#1}%
+  \endgroup
+}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macrocode}
@@ -716,7 +727,7 @@
 %    \begin{macro}{\nameref}
 %    \begin{macrocode}
   \DeclareRobustCommand*{\nameref}{%
-    \@ifstar\T@nameref\T@nameref
+    \@ifstar\@namerefstar\T@nameref
   }%
 %    \end{macrocode}
 %    \end{macro}

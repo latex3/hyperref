@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{hyperref}
+\begin{document}
+\renewcommand\thesection{\alph{section}}
+%\START \showoutput
+\ShowCommand\ref
+\ShowCommand\Ref
+\ShowCommand\pageref
+
+\section{Test}\label{sec:test}
+\ref{sec:test},%\qquad
+\Ref{sec:test},
+\pageref{sec:test}
+\ref*{sec:test},\qquad
+\Ref*{sec:test}, \qquad
+\pageref*{sec:test}
+
+\end{document} 

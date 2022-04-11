@@ -7327,6 +7327,11 @@
       \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
       \Hy@safe@activesfalse
     }%
+    \def\@Refstar#1{%
+      \Hy@safe@activestrue
+      \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
+      \Hy@safe@activesfalse
+    }%
   \else
     \ifHy@typexml
     \else

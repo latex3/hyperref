@@ -12638,10 +12638,9 @@
 %    \cs{leavevmode} is added to make package wrapfigure happy, if
 %    \cs{autoref} starts a paragraph.
 %    \begin{macrocode}
-\DeclareRobustCommand*{\autoref}{%
-  \leavevmode
-  \@ifstar{\HyRef@autoref\@gobbletwo}{\HyRef@autoref\hyper@@link}%
-}
+\NewDocumentCommand\autoref{s}
+   {\leavevmode
+    \IfBooleanTF{#1}{\HyRef@autoref\@gobbletwo}{\HyRef@autoref\hyper@@link}}
 \def\HyRef@autoref#1#2{%
   \begingroup
     \Hy@safe@activestrue

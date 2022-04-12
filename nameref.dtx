@@ -678,21 +678,25 @@
 %    \end{macrocode}
 %    \begin{macro}{\ref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\ref}{\@ifstar\@refstar\T@ref}%
+  \DeclareDocumentCommand\ref{s}
+   {\IfBooleanTF{#1}{\@refstar}{\T@ref}}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\pageref}
 %    \begin{macrocode}
-  \DeclareRobustCommand{\pageref}{\@ifstar\@pagerefstar\T@pageref}%
+  \DeclareDocumentCommand\pageref{s}
+   {\IfBooleanTF{#1}{\@pagerefstar}{\T@pageref}}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Ref}
 %    \begin{macrocode}
-   \DeclareRobustCommand*{\Ref}{%
-     \@ifstar\@Refstar\T@Ref}%
-}
+  \DeclareDocumentCommand\Ref{s}
+   {\IfBooleanTF{#1}{\@Refstar}{\T@Ref}}%
 %    \end{macrocode}
 %    \end{macro}
+%    \begin{macrocode}
+}
+%    \end{macrocode}
 %    \begin{macrocode}
 \DeclareHookRule{begindocument}{showkeys}{before}{nameref}
 %    \end{macrocode}
@@ -726,13 +730,14 @@
 %    \end{macrocode}
 %    \begin{macro}{\nameref}
 %    \begin{macrocode}
-  \DeclareRobustCommand*{\nameref}{%
-    \@ifstar\@namerefstar\T@nameref
-  }%
+\NewDocumentCommand\nameref{s}
+   {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Nameref}
 %    An extended form which gives title and page number.
+%    Not really useful, quotes are english, and no starred version.
+%    varioref can do that better. Remove??
 %    \begin{macrocode}
 \def\Nameref#1{`\nameref{#1}' on page~\pageref{#1}}
 %    \end{macrocode}

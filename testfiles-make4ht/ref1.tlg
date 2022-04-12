@@ -1,0 +1,360 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@refstar }{\T@ref }.
+> \Ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@Refstar }{\T@Ref }.
+> \pageref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@pagerefstar }{\T@pageref }.
+LaTeX Warning: Reference `*' on page 1 undefined on input line ....
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x345.0
+.\hbox(0.0+0.0)x0.0
+.\glue 16.0
+.\glue(\parskip) 0.0
+.\glue(\parskip) 0.0
+.\hbox(0.0+0.0)x345.0, glue set 345.0fil
+..\hbox(0.0+0.0)x0.0
+..\penalty 10000
+..\glue(\parfillskip) 0.0 plus 1.0fil
+..\glue(\rightskip) 0.0
+.\glue(\lineskip) 0.0
+.\vbox(617.0+0.0)x345.0
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0
+....\special{color push  Black}
+....\hbox(0.0+0.0)x345.0
+....\special{color pop}
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 458.88159fil
+...\write-{}
+...\special{t4ht@[}
+...\special{t4ht@]}
+...\special{t4ht.html}
+...\special{t4ht+@Css: p{margin-top:0;margin-bottom:0}}
+...\special{t4ht+@Css: p.indent{text-indent:0;}}
+...\special{t4ht+@Css: p + p{margin-top:1em;}}
+...\special{t4ht+@Css: p + div, p + pre {margin-top:1em;}}
+...\special{t4ht+@Css: div + p, pre + p {margin-top:1em;}}
+...\special{t4ht+@Css: a { overflow-wrap: break-word; word-wrap: break-word; word\ETC.}
+...\special{t4ht+@Css: @media print {div.crosslinks {visibility:hidden;}}}
+...\special{t4ht+@Css: table.tabular{border-collapse: collapse; border-spacing: 0\ETC.}
+...\special{t4ht+@Css: a img { border-top: 0; border-left: 0; border-right: 0; }}
+...\special{t4ht;|000+<span 
+class="+%s+-%s+x-x-%d++">+</span>+0}
+...\special{t4ht;|001+<img 
+src="+" alt="+" class="+%s+-%d+x-x-%x+" />+1}
+...\special{t4ht;|003+<img 
+src="+" alt="+" class="%s-+%s+-%d+x-x-%x+" style="text\ETC.}
+...\special{t4ht;|004+<span 
+class="+++++small-caps">+</span>+4}
+...\special{t4ht;|006+<u 
+class="+++++underline">+</u>+6}
+...\special{t4ht;|008+<sup class="htf">++++++</sup>+8}
+...\special{t4ht;|010+<span class="htf-cmbx">++++++</span>+10}
+...\special{t4ht;|012+<span 
+class="htf-calligraphy">++++++</span>+12}
+...\special{t4ht;|014+<span 
+class="htf-italic">++++++</span>+14}
+...\special{t4ht;|016+<span 
+class="htf-bold">++++++</span>+16}
+...\special{t4ht;|018+<span 
+class="htf-calligraphy-bold">++++++</span>+18}
+...\special{t4ht;|020+<span 
+class="htf-flip-hor">++++++</span>+20}
+...\special{t4ht;|022+<sub class="htf">++++++</sub>+22}
+...\special{t4ht;|024+<span 
+class="+++++small-caps">+</span>+24}
+...\special{t4ht+@Font_Css("4"): .small-caps{font-variant: small-caps; }}
+...\special{t4ht+@Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal\ETC.}
+...\special{t4ht+@Font_Css("12"): .htf-calligraphy {font-family:cursive}}
+...\special{t4ht+@Font_Css("14"): .htf-italic {font-style: italic;}}
+...\special{t4ht+@Font_Css("16"): .htf-bold {font-weight: bold;}}
+...\special{t4ht+@Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; fo\ETC.}
+...\special{t4ht+@Css: center { margin-top:1em; margin-bottom:1em; }}
+...\special{t4ht+@Css: td center { margin-top:0em; margin-bottom:0em; }}
+...\special{t4ht"*<span 
+class="Canvas">*X<span style="position:relative; 
+width:%.\ETC.}
+...\special{t4ht+@Css: .Canvas { position:relative; }}
+...\special{t4ht;|012+<!--span 
+class="htf-calligraphy"-->++++++<!--/span-->+12}
+...\special{t4ht+@Css: img.math{vertical-align:middle;}}
+...\special{t4ht+@Css: div.par-math-display, div.math-display{text-align:center;}}
+...\write3{\:CrossWord{)F1F-}{ref1.html}{\folio }\prcnt:ch }
+...\special{t4ht+@Css: li p.indent { text-indent: 0em }}
+...\special{t4ht+@Css: li p:first-child{ margin-top:0em; }}
+...\special{t4ht+@Css: li p:last-child, li div:last-child { margin-bottom:0.5em; \ETC.}
+...\special{t4ht+@Css: li p:first-child{ margin-bottom:0; }}
+...\special{t4ht+@Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5e\ETC.}
+...\special{t4ht+@Css: .enumerate1 {list-style-type:decimal;}}
+...\special{t4ht+@Css: .enumerate2 {list-style-type:lower-alpha;}}
+...\special{t4ht+@Css: .enumerate3 {list-style-type:lower-roman;}}
+...\special{t4ht+@Css: .enumerate4 {list-style-type:upper-alpha;}}
+...\special{t4ht+@Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}}
+...\special{t4ht+@Css: div.newtheorem .head{font-weight: bold;}}
+...\special{t4ht+@Css: .obeylines-h,.obeylines-v {white-space: nowrap; }}
+...\special{t4ht+@Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }}
+...\special{t4ht+@Css: .overline{ text-decoration:overline; }}
+...\special{t4ht+@Css: .overline img{ border-top: 1px solid black; }}
+...\special{t4ht+@Css: td.displaylines {text-align:center; white-space:nowrap;}}
+...\special{t4ht+@Css: .centerline {text-align:center;}}
+...\special{t4ht+@Css: .rightline {text-align:right;}}
+...\special{t4ht+@Css: pre.verbatim {font-family: monospace,monospace; text-align\ETC.}
+...\special{t4ht+@Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-inden\ETC.}
+...\special{t4ht+@Css: div.fbox {display:table}}
+...\special{t4ht+@Css: div.center div.fbox {text-align:center; clear:both; paddin\ETC.}
+...\special{t4ht+@Css: div.minipage{width:100%;}}
+...\special{t4ht+@Css: div.center, div.center div.center {text-align: center; mar\ETC.}
+...\special{t4ht+@Css: div.center div {text-align: left;}}
+...\special{t4ht+@Css: div.flushright, div.flushright div.flushright {text-align:\ETC.}
+...\special{t4ht+@Css: div.flushright div {text-align: left;}}
+...\special{t4ht+@Css: div.flushleft {text-align: left;}}
+...\special{t4ht+@Css: .underline{ text-decoration:underline; }}
+...\special{t4ht+@Css: .underline img{ border-bottom: 1px solid black; margin-bot\ETC.}
+...\special{t4ht+@Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt\ETC.}
+...\special{t4ht+@Css: .framebox-c {text-align:center;}}
+...\special{t4ht+@Css: .framebox-l {text-align:left;}}
+...\special{t4ht+@Css: .framebox-r {text-align:right;}}
+...\special{t4ht+@Css: span.thank-mark{ vertical-align: super }}
+...\special{t4ht+@Css: span.footnote-mark sup.textsuperscript, span.footnote-mark\ETC.}
+...\special{t4ht+@Css: div.tabular, div.center div.tabular {text-align: center; m\ETC.}
+...\special{t4ht+@Css: table.tabular td p{margin-top:0em;}}
+...\special{t4ht+@Css: table.tabular {margin-left: auto; margin-right: auto;}}
+...\special{t4ht+@Css: td p:first-child{ margin-top:0em; }}
+...\special{t4ht+@Css: td p:last-child{ margin-bottom:0em; }}
+...\special{t4ht+@Css: div.td00{ margin-left:0pt; margin-right:0pt; }}
+...\special{t4ht+@Css: div.td01{ margin-left:0pt; margin-right:5pt; }}
+...\special{t4ht+@Css: div.td10{ margin-left:5pt; margin-right:0pt; }}
+...\special{t4ht+@Css: div.td11{ margin-left:5pt; margin-right:5pt; }}
+...\special{t4ht+@Css: table[rules] {border-left:solid black 0.4pt; border-right:\ETC.}
+...\special{t4ht+@Css: td.td00{ padding-left:0pt; padding-right:0pt; }}
+...\special{t4ht+@Css: td.td01{ padding-left:0pt; padding-right:5pt; }}
+...\special{t4ht+@Css: td.td10{ padding-left:5pt; padding-right:0pt; }}
+...\special{t4ht+@Css: td.td11{ padding-left:5pt; padding-right:5pt; }}
+...\special{t4ht+@Css: table[rules] {border-left:solid black 0.4pt; border-right:\ETC.}
+...\special{t4ht+@Css: .hline hr, .cline hr{ height : 0px; margin:0px; }}
+...\special{t4ht+@Css: .hline td, .cline td{ padding: 0; }}
+...\special{t4ht+@Css: .hline hr, .cline hr{border:none;border-top:1px solid blac\ETC.}
+...\special{t4ht+@Css: .hline {border-top: 1px solid black;}}
+...\special{t4ht+@Css: .tabbing-right {text-align:right;}}
+...\special{t4ht+@Css: div.float, div.figure {margin-left: auto; margin-right: au\ETC.}
+...\special{t4ht+@Css: div.float img {text-align:center;}}
+...\special{t4ht+@Css: div.figure img {text-align:center;}}
+...\special{t4ht+@Css: .marginpar,.reversemarginpar {width:20%; float:right; text\ETC.}
+...\special{t4ht+@Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-\ETC.}
+...\special{t4ht+@Css: .reversemarginpar{float:left;}}
+...\special{t4ht+@Css: table.equation {width:100%;}}
+...\special{t4ht+@Css: .equation td{text-align:center; }}
+...\special{t4ht+@Css: td.equation { margin-top:1em; margin-bottom:1em; } }
+...\special{t4ht+@Css: td.equation-label { width:5%; text-align:center; }}
+...\special{t4ht+@Css: td.eqnarray4 { width:5%; white-space: normal; }}
+...\special{t4ht+@Css: td.eqnarray2 { width:5%; }}
+...\special{t4ht+@Css: table.eqnarray-star, table.eqnarray {width:100%;}}
+...\special{t4ht+@Css: div.eqnarray{text-align:center;}}
+...\special{t4ht+@Css: div.array {text-align:center;}}
+...\special{t4ht+@Css: div.pmatrix {text-align:center;}}
+...\special{t4ht+@Css: table.pmatrix {width:100%;}}
+...\special{t4ht+@Css: span.pmatrix img{vertical-align:middle;}}
+...\special{t4ht+@Css: div.pmatrix {text-align:center;}}
+...\special{t4ht+@Css: table.pmatrix {width:100%;}}
+...\special{t4ht+@Css: span.bar-css {text-decoration:overline;}}
+...\special{t4ht+@Css: img.cdots{vertical-align:middle;}}
+...\special{t4ht+@Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-h\ETC.}
+...\special{t4ht+@Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapte\ETC.}
+...\special{t4ht+@Css: .index-item, .index-subitem, .index-subsubitem {display:bl\ETC.}
+...\special{t4ht+@Css: div.caption {text-indent:-2em; margin-left:3em; margin-rig\ETC.}
+...\special{t4ht+@Css: div.caption span.id{font-weight: bold; white-space: nowrap\ETC.}
+...\special{t4ht+@Css: h1.partHead{text-align: center}}
+...\special{t4ht+@Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-to\ETC.}
+...\special{t4ht+@Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-t\ETC.}
+...\special{t4ht+@Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-\ETC.}
+...\special{t4ht+@Css: .subparagraphHead, .likesubparagraphHead { font-weight: bo\ETC.}
+...\special{t4ht+@Css: .verse{white-space:nowrap; margin-left:2em}}
+...\special{t4ht+@Css: div.maketitle {text-align:center;}}
+...\special{t4ht+@Css: h2.titleHead{text-align:center;}}
+...\special{t4ht+@Css: div.maketitle{ margin-bottom: 2em; }}
+...\special{t4ht+@Css: div.author, div.date {text-align:center;}}
+...\special{t4ht+@Css: div.thanks{text-align:left; margin-left:10%; font-size:85%\ETC.}
+...\special{t4ht+@Css: div.author{white-space: nowrap;}}
+...\special{t4ht+@Css: div.abstract p {margin-left:5%; margin-right:5%;}}
+...\special{t4ht+@Css: div.abstract {width:100%;}}
+...\special{t4ht+@Css: .abstracttitle{text-align:center;margin-bottom:1em;}}
+...\special{t4ht+@Css: figure.float, div.figure {margin-left: auto; margin-right:\ETC.}
+...\special{t4ht+@Css: figure.figure {text-align:center;}}
+...\special{t4ht+@Css: figcaption.caption {text-indent:-2em; margin-left:3em; mar\ETC.}
+...\special{t4ht+@Css: figcaption.caption span.id{font-weight: bold; white-space:\ETC.}
+...\special{t4ht+@Css: p + figcaption, img + figcaption{margin-top: 1em;}}
+...\special{t4ht+@Css: .abstract{margin:1em;}}
+...\glue(\topskip) 5.69446
+...\hbox(4.30554+0.0)x345.0, glue set 334.4444fil
+....\hbox(0.0+0.0)x0.0
+....\special{t4ht>ref1.css}
+....\special{t4ht= 
+/* css.sty */}
+....\special{t4ht<ref1.css}
+....\special{t4ht=<!DOCTYPE html> 
+}
+....\special{t4ht=<html lang="en-US" xml:lang="en-US" > 
+}
+....\special{t4ht;8}
+....\special{t4ht=<head>}
+....\special{t4ht>ref1.tmp}
+....\hbox(4.30554+0.0)x10.5556
+.....\OT1/cmr/m/n/10 x
+.....\special{t4ht;-}
+.....\OT1/cmr/m/n/10 x
+....\special{t4ht<ref1.tmp}
+....\special{t4ht=<title>}
+....\special{t4ht=</title> 
+}
+....\special{t4ht=<meta  charset="utf-8" /> 
+}
+....\special{t4ht=<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)\ETC.}
+....\special{t4ht=<meta name="viewport" content="width=device-width,initial-scale=\ETC.}
+....\special{t4ht=<link rel="stylesheet" type="text/css" href="ref1.css" /> 
+}
+....\special{t4ht=<meta name="src" content="ref1.tex" /> 
+}
+....\special{t4ht=</head>}
+....\special{t4ht;9}
+....\special{t4ht=<body 
+>}
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 172.5 minus 172.5
+...\penalty -300
+...\glue 15.0694 plus 4.30554 minus 0.86108
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 18.0
+...\hbox(0.0+0.0)x345.0, glue set 330.0fil
+....\hbox(0.0+0.0)x15.0
+....\hbox(0.0+0.0)x0.0
+.....\glue 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 172.5 minus 172.5
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 5.16669
+...\hbox(6.83331+0.0)x345.0, glue set 292.99997fil
+....\hbox(0.0+0.0)x15.0
+....\special{t4ht=<h3 class="sectionHead">}
+....\special{t4ht=<span class="titlemark">}
+....\OT1/cmr/m/n/10 a
+....\glue 10.00002
+....\special{t4ht=</span>}
+....\glue 3.33333 plus 1.66666 minus 1.11111
+....\write4{\doTocEntry\tocsection{a}{\csname a:TocLink\endcsname{1}{x1-1000a}{QQ\ETC.}
+....\write3{\:CrossWord{)Qx1-1000a}{1}{\folio }\prcnt:ch }
+....\special{t4ht=<a 
+ id="x1-1000a">}
+....\special{t4ht=</a>}
+....\OT1/cmr/m/n/10 T
+....\kern-0.83334
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 t
+....\special{t4ht=</h3>}
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 172.5 minus 172.5
+...\write1{\newlabel{sec:test}{{\rEfLiNK{x1-1000a}{\csname :autoref\endcsname{se\ETC.}
+...\penalty 10000
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 5.05556
+...\hbox(6.94444+1.94444)x345.0, glue set 216.24988fil
+....\hbox(0.0+0.0)x15.0
+....\glue -15.0
+....\special{t4ht=<!--l. 14--><p class="noindent" >}
+....\special{t4ht=<a 
+href="#x1-1000a">}
+....\OT1/cmr/m/n/10 a
+....\hbox(0.0+0.0)x0.0
+.....\special{t4ht=<!--tex4ht:ref: sec:test -->}
+....\special{t4ht=</a>}
+....\hbox(0.0+0.0)x0.0
+....\OT1/cmr/m/n/10 ,
+....\special{t4ht=<a 
+href="#x1-1000a">}
+....\OT1/cmr/m/n/10 a
+....\hbox(0.0+0.0)x0.0
+.....\special{t4ht=<!--tex4ht:ref: sec:test -->}
+....\special{t4ht=</a>}
+....\hbox(0.0+0.0)x0.0
+....\OT1/cmr/m/n/10 ,
+....\glue 3.33333 plus 1.66666 minus 1.11111
+....\special{t4ht=<a 
+href="#x1-1000a">}
+....\OT1/cmr/m/n/10 1
+....\hbox(0.0+0.0)x0.0
+.....\special{t4ht=<!--tex4ht:ref: sec:test -->}
+....\special{t4ht=</a>}
+....\hbox(0.0+0.0)x0.0
+....\glue 3.33333 plus 1.66666 minus 1.11111
+....\hbox(6.94444+0.0)x10.86105
+.....\OT1/cmr/bx/n/10 ?
+.....\OT1/cmr/bx/n/10 ?
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 c
+....\OT1/cmr/m/n/10 :
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 ,
+....\glue 20.00003
+....\special{t4ht=<a 
+href="#x1-1000a">}
+....\OT1/cmr/m/n/10 a
+....\hbox(0.0+0.0)x0.0
+.....\special{t4ht=<!--tex4ht:ref: sec:test -->}
+....\special{t4ht=</a>}
+....\hbox(0.0+0.0)x0.0
+....\OT1/cmr/m/n/10 ,
+....\glue 3.33333 plus 1.66666 minus 1.11111
+....\glue 20.00003
+....\special{t4ht=<a 
+href="#x1-1000a">}
+....\OT1/cmr/m/n/10 1
+....\hbox(0.0+0.0)x0.0
+.....\special{t4ht=<!--tex4ht:ref: sec:test -->}
+....\special{t4ht=</a>}
+....\hbox(0.0+0.0)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 172.5 minus 172.5
+...\glue(\baselineskip) 10.05556
+...\hbox(0.0+0.0)x0.0
+....\special{t4ht=</p>}
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 12.0
+...\hbox(0.0+0.0)x345.0, glue set 330.0fil
+....\hbox(0.0+0.0)x15.0
+....\special{t4ht= 
+</body>}
+....\special{t4ht= 
+</html>}
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 172.5 minus 172.5
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0
+...\special{color push  Black}
+...\hbox(0.0+0.0)x345.0
+...\special{color pop}
+.\kern 0.0
+(ref1.aux)
+LaTeX Warning: There were undefined references.

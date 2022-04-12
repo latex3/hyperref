@@ -1,6 +1,9 @@
+\input{regression-test}
 \documentclass{article}
 \usepackage{hyperref}
 \begin{document}
+
+\START \showoutput
 \renewcommand\thesection{\alph{section}}
 %\START \showoutput
 \ShowCommand\ref

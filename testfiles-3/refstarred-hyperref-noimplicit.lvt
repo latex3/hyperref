@@ -5,7 +5,7 @@
 
 \begin{document}
 xxx
-\renewcommand\thesection{\alph{section}}
+\labelformat{section}{sect: #1}
 \START \showoutput
 \ShowCommand\ref
 \ShowCommand\Ref
@@ -15,4 +15,4 @@ xxx
 \ref{sec:test},\Ref{sec:test}, \pageref{sec:test}
 
 \ref*{sec:test},\Ref*{sec:test}, \pageref*{sec:test}
-\end{document}
+\end{document} 

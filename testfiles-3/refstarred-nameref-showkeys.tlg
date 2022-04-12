@@ -1,23 +1,14 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-> \ref=robust macro:
-->\protect \ref  .
-> \ref =\long macro:
-->\@ifstar \@refstar \T@ref .
-<argument> \ref  
-l. ...\ShowCommand\ref
-> \Ref=robust macro:
-->\protect \Ref  .
-> \Ref =macro:
-->\@ifstar \@Refstar \T@Ref .
-<argument> \Ref  
-l. ...\ShowCommand\Ref
-> \pageref=robust macro:
-->\protect \pageref  .
-> \pageref =\long macro:
-->\@ifstar \@pagerefstar \T@pageref .
-<argument> \pageref  
-l. ...\ShowCommand\pageref
+> \ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@refstar }{\T@ref }.
+> \Ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@Refstar }{\T@Ref }.
+> \pageref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@pagerefstar }{\T@pageref }.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line ....
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -49,10 +40,10 @@ Completed box being shipped out [1]
 ...\glue(\parskip) 0.0 plus 1.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 8.12001
-...\hbox(9.87999+0.0)x345.0, glue set 290.92673fil
-....\hbox(6.39998+0.0)x24.07497
+...\hbox(9.87999+0.0)x345.0, glue set 290.70172fil
+....\hbox(9.27998+0.0)x24.29997
 .....\glue 0.0
-.....\OT1/cmr/bx/n/14.4 a
+.....\OT1/cmr/bx/n/14.4 1
 .....\glue 16.19998
 ....\OT1/cmr/bx/n/14.4 T
 ....\kern-1.35
@@ -91,13 +82,13 @@ Completed box being shipped out [1]
 .........\rule(*+*)x0.4
 ........\rule(0.4+0.0)x*
 ....\kern 11.0
-...\write1{\newlabel{sec:test}{{a}{\thepage }{Test}{}{}}}
+...\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{}{}}}
 ...\penalty 10000
 ...\penalty 10000
 ...\glue(\parskip) 0.0 plus 1.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 5.16669
-...\hbox(6.83331+1.94444)x345.0, glue set 278.611fil
+...\hbox(6.83331+1.94444)x345.0, glue set 231.61095fil
 ....\vbox(0.0+0.0)x0.0, glue set - 11.92859fil
 .....\glue 0.0 plus 1.0fil minus 1.0fil
 .....\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
@@ -119,7 +110,13 @@ Completed box being shipped out [1]
 ........\rule(0.39998+0.0)x*
 .......\mathoff
 ......\glue 0.0 plus 1.0fil minus 1.0fil
-....\OT1/cmr/m/n/10 a
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 c
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 :
+....\glue 4.44444 plus 3.33331 minus 0.55556
+....\OT1/cmr/m/n/10 1
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/cmr/m/n/10 ,
 ....\glue 20.00003
@@ -144,7 +141,13 @@ Completed box being shipped out [1]
 ........\rule(0.39998+0.0)x*
 .......\mathoff
 ......\glue 0.0 plus 1.0fil minus 1.0fil
-....\OT1/cmr/m/n/10 A
+....\OT1/cmr/m/n/10 S
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 c
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 :
+....\glue 4.44444 plus 3.33331 minus 0.55556
+....\OT1/cmr/m/n/10 1
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/cmr/m/n/10 ,
 ....\glue 3.33333 plus 2.08331 minus 0.88889
@@ -178,7 +181,7 @@ Completed box being shipped out [1]
 ...\glue(\parskip) 0.0 plus 1.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 3.22224
-...\hbox(6.83331+1.94444)x345.0, glue set 263.611fil
+...\hbox(6.83331+1.94444)x345.0, glue set 216.61095fil
 ....\hbox(0.0+0.0)x15.0
 ....\vbox(0.0+0.0)x0.0, glue set - 11.92859fil
 .....\glue 0.0 plus 1.0fil minus 1.0fil
@@ -201,7 +204,13 @@ Completed box being shipped out [1]
 ........\rule(0.39998+0.0)x*
 .......\mathoff
 ......\glue 0.0 plus 1.0fil minus 1.0fil
-....\OT1/cmr/m/n/10 a
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 c
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 :
+....\glue 4.44444 plus 3.33331 minus 0.55556
+....\OT1/cmr/m/n/10 1
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/cmr/m/n/10 ,
 ....\glue 20.00003
@@ -226,7 +235,13 @@ Completed box being shipped out [1]
 ........\rule(0.39998+0.0)x*
 .......\mathoff
 ......\glue 0.0 plus 1.0fil minus 1.0fil
-....\OT1/cmr/m/n/10 A
+....\OT1/cmr/m/n/10 S
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 c
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 :
+....\glue 4.44444 plus 3.33331 minus 0.55556
+....\OT1/cmr/m/n/10 1
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/cmr/m/n/10 ,
 ....\glue 3.33333 plus 2.08331 minus 0.88889

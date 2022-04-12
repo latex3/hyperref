@@ -6,7 +6,7 @@
 
 \begin{document}
 xxx
-\renewcommand\thesection{\alph{section}}
+\labelformat{section}{sect: #1}
 \START \showoutput
 \ShowCommand\ref
 \ShowCommand\Ref

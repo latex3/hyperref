@@ -1,23 +1,14 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-> \ref=robust macro:
-->\protect \ref  .
-> \ref =\long macro:
-->\@ifstar \@refstar \T@ref .
-<argument> \ref  
-l. ...\ShowCommand\ref
-> \Ref=robust macro:
-->\protect \Ref  .
-> \Ref =macro:
-->\@ifstar \@Refstar \T@Ref .
-<argument> \Ref  
-l. ...\ShowCommand\Ref
-> \pageref=robust macro:
-->\protect \pageref  .
-> \pageref =\long macro:
-->\@ifstar \@pagerefstar \T@pageref .
-<argument> \pageref  
-l. ...\ShowCommand\pageref
+> \ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@refstar }{\T@ref }.
+> \Ref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@Refstar }{\T@Ref }.
+> \pageref=document command:
+  #1:s
+->\IfBooleanTF {#1}{\@pagerefstar }{\T@pageref }.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line ....
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -74,15 +65,15 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 8.2512
-....\hbox(9.7488+0.0864)x345.0, glue set 292.72803fil, direction TLT
+....\hbox(9.7488+0.0864)x345.0, glue set 292.49762fil, direction TLT
 .....\localpar
 ......\localinterlinepenalty=0
 ......\localbrokenpenalty=0
 ......\localleftbox=null
 ......\localrightbox=null
-.....\hbox(6.5232+0.0864)x22.2768, direction TLT
+.....\hbox(9.4464+0.0)x22.50719, direction TLT
 ......\glue 0.0
-......\TU/lmr/bx/n/14.4 a
+......\TU/lmr/bx/n/14.4 1
 ......\glue 14.4
 .....\TU/lmr/bx/n/14.4 T
 .....\kern-1.35359 (font)
@@ -122,13 +113,13 @@ Completed box being shipped out [1]
 ..........\rule(*+*)x0.4
 .........\rule(0.4+0.0)x*
 .....\kern11.0
-....\write1{\newlabel{sec:test}{{a}{\thepage }{Test}{section.1}{}}}
+....\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{section.1}{}}}
 ....\penalty 10000
 ....\penalty 10000
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 4.7536
-....\hbox(7.16+1.93)x345.0, glue set 278.60999fil, direction TLT
+....\glue(\baselineskip) 4.8636
+....\hbox(7.05+1.93)x345.0, glue set 231.62999fil, direction TLT
 .....\localpar
 ......\localinterlinepenalty=0
 ......\localbrokenpenalty=0
@@ -156,7 +147,13 @@ Completed box being shipped out [1]
 ........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
-.....\TU/lmr/m/n/10 a
+.....\TU/lmr/m/n/10 s
+.....\TU/lmr/m/n/10 e
+.....\TU/lmr/m/n/10 c
+.....\TU/lmr/m/n/10 t
+.....\TU/lmr/m/n/10 :
+.....\glue(\spaceskip) 4.44 plus 3.32999 minus 0.555
+.....\TU/lmr/m/n/10 1
 .....\pdfendlink
 .....\TU/lmr/m/n/10 ,
 .....\glue 20.0
@@ -182,7 +179,13 @@ Completed box being shipped out [1]
 .........\rule(0.39998+0.0)x*
 ........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.....\TU/lmr/m/n/10 A
+.....\TU/lmr/m/n/10 S
+.....\TU/lmr/m/n/10 e
+.....\TU/lmr/m/n/10 c
+.....\TU/lmr/m/n/10 t
+.....\TU/lmr/m/n/10 :
+.....\glue(\spaceskip) 4.44 plus 3.32999 minus 0.555
+.....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
 .....\pdfendlink
 .....\TU/lmr/m/n/10 ,
@@ -217,8 +220,8 @@ Completed box being shipped out [1]
 .....\glue(\rightskip) 0.0
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 2.91
-....\hbox(7.16+1.93)x345.0, glue set 263.60999fil, direction TLT
+....\glue(\baselineskip) 3.02
+....\hbox(7.05+1.93)x345.0, glue set 216.62999fil, direction TLT
 .....\localpar
 ......\localinterlinepenalty=0
 ......\localbrokenpenalty=0
@@ -246,7 +249,13 @@ Completed box being shipped out [1]
 .........\rule(0.39998+0.0)x*
 ........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.....\TU/lmr/m/n/10 a
+.....\TU/lmr/m/n/10 s
+.....\TU/lmr/m/n/10 e
+.....\TU/lmr/m/n/10 c
+.....\TU/lmr/m/n/10 t
+.....\TU/lmr/m/n/10 :
+.....\glue(\spaceskip) 4.44 plus 3.32999 minus 0.555
+.....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
 .....\TU/lmr/m/n/10 ,
 .....\glue 20.0
@@ -271,7 +280,13 @@ Completed box being shipped out [1]
 .........\rule(0.39998+0.0)x*
 ........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.....\TU/lmr/m/n/10 A
+.....\TU/lmr/m/n/10 S
+.....\TU/lmr/m/n/10 e
+.....\TU/lmr/m/n/10 c
+.....\TU/lmr/m/n/10 t
+.....\TU/lmr/m/n/10 :
+.....\glue(\spaceskip) 4.44 plus 3.32999 minus 0.555
+.....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
 .....\TU/lmr/m/n/10 ,
 .....\glue(\spaceskip) 3.33 plus 2.08124 minus 0.888

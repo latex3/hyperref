@@ -7305,18 +7305,18 @@
   \Hy@DisableOption{colorlinks}%
   \Hy@DisableOption{frenchlinks}%
   \ifHy@texht
-    \long\def\@firstoffive#1#2#3#4#5{#1}%
-    \long\def\@secondoffive#1#2#3#4#5{#2}%
-    \long\def\@thirdoffive#1#2#3#4#5{#3}%
-    \long\def\@fourthoffive#1#2#3#4#5{#4}%
-    \long\def\@fifthoffive#1#2#3#4#5{#5}%
-    \providecommand*\@safe@activestrue{}%
-    \providecommand*\@safe@activesfalse{}%
-    \def\T@ref#1{%
-      \Hy@safe@activestrue
-      \expandafter\@setref\csname r@#1\endcsname\@firstoffive{#1}%
-      \Hy@safe@activesfalse
-    }%
+%    \long\def\@firstoffive#1#2#3#4#5{#1}%
+%    \long\def\@secondoffive#1#2#3#4#5{#2}%
+%    \long\def\@thirdoffive#1#2#3#4#5{#3}%
+%    \long\def\@fourthoffive#1#2#3#4#5{#4}%
+%    \long\def\@fifthoffive#1#2#3#4#5{#5}%
+%    \providecommand*\@safe@activestrue{}%
+%    \providecommand*\@safe@activesfalse{}%
+%    \def\T@ref#1{%
+%      \Hy@safe@activestrue
+%      \expandafter\@setref\csname r@#1\endcsname\@firstoffive{#1}%
+%      \Hy@safe@activesfalse
+%    }%
     \def\T@pageref#1{%
       \Hy@safe@activestrue
       \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
@@ -7324,12 +7324,12 @@
     }%
     \def\T@Ref#1{%
       \Hy@safe@activestrue
-      \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
+      \expandafter\@setref\csname r@#1\endcsname\@firstoffive{#1}%
       \Hy@safe@activesfalse
     }%
     \def\@Refstar#1{%
       \Hy@safe@activestrue
-      \expandafter\@setref\csname r@#1\endcsname\@secondoffive{#1}%
+      \expandafter\@setref\csname r@#1\endcsname\@firstoffive{#1}%
       \Hy@safe@activesfalse
     }%
   \else
@@ -7370,7 +7370,7 @@
   \fi
 }
 \Hy@AtBeginDocument{%
-  \ifHy@texht
+  \ifx\ReadBookmarks\relax
   \else
     \Hy@CatcodeWrapper\ReadBookmarks
   \fi

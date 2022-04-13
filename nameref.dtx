@@ -760,21 +760,24 @@
 %    to provide expandable versions without link of \cmd{\ref}
 %    and \cmd{\pageref}. As possible target I could only find
 %    \cmd{\begingroup}:
+%    Changed/disabled 2022-04-13: ifthen takes care itself to
+%    change \cmd{\pageref} to an expandable version.
 %    \begin{macrocode}
-\@ifpackageloaded{ifthen}{%
-  \let\NROrg@ifthenelse\ifthenelse
-  \def\ifthenelse{%
-    \let\begingroup\NR@TE@begingroup
-    \NROrg@ifthenelse
-  }%
-  \let\NROrg@begingroup\begingroup
-  \def\NR@TE@begingroup{%
-    \let\begingroup\NROrg@begingroup
-    \begingroup
-    \def\ref##1{\getrefbykeydefault{##1}{}{??}}%
-    \def\pageref##1{\getrefbykeydefault{##1}{page}{0}}%
-  }%
-}{}
+\@ifundefined{@kernel@pageref@exp}
+   {\@ifpackageloaded{ifthen}{%
+     \let\NROrg@ifthenelse\ifthenelse
+     \def\ifthenelse{%
+       \let\begingroup\NR@TE@begingroup
+       \NROrg@ifthenelse
+     }%
+     \let\NROrg@begingroup\begingroup
+     \def\NR@TE@begingroup{%
+       \let\begingroup\NROrg@begingroup
+       \begingroup
+       \def\ref##1{\getrefbykeydefault{##1}{}{??}}%
+       \def\pageref##1{\getrefbykeydefault{##1}{page}{0}}%
+     }%
+   }{}}{}
 %    \end{macrocode}
 %
 % \subsection{Compatibility with varioref}

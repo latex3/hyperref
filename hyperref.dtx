@@ -9511,16 +9511,21 @@
 \long\def\@gobbleopt[#1]{}
 \let\hyperpage\@empty
 %    \end{macrocode}
-%    Ignore star from referencing macros:
+%    Ignore star from referencing macros. This is only
+%    needed in older formats.
 %    \begin{macrocode}
-\LetLtxMacro\NoHy@OrgRef\ref
-\DeclareRobustCommand*{\ref}{%
-  \@ifstar\NoHy@OrgRef\NoHy@OrgRef
-}
-\LetLtxMacro\NoHy@OrgPageRef\pageref
-\DeclareRobustCommand*{\pageref}{%
-  \@ifstar\NoHy@OrgPageRef\NoHy@OrgPageRef
-}
+\@ifl@t@r\fmtversion{2022-06-01}
+ {}%
+ {%
+   \LetLtxMacro\NoHy@OrgRef\ref
+   \DeclareRobustCommand*{\ref}{%
+     \@ifstar\NoHy@OrgRef\NoHy@OrgRef
+   }
+   \LetLtxMacro\NoHy@OrgPageRef\pageref
+   \DeclareRobustCommand*{\pageref}{%
+     \@ifstar\NoHy@OrgPageRef\NoHy@OrgPageRef
+   }%
+ }
 %</nohyperref>
 %    \end{macrocode}
 %

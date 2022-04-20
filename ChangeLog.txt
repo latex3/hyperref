@@ -1,5 +1,8 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * LaTeX 2020-10-01 is required as hooks are used now.
+    * \refstepcounter no longer tests for the slide counter as no reason could be found 
+      for that test.  
     * nameref no longer patches \ifthenelse if kernel support is detected.
     * some support for references is done by tex4ht directly and has been removed from
       hyperref

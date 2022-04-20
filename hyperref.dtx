@@ -10385,7 +10385,7 @@
 % We do not want the handler for |\refstepcounter| to cut in
 % during the processing of |\item| (we handle that separately),
 % so we provide a bypass conditional.
-% change 2022-04-22: removed test for slide.
+% change 2022-04-22: removed test for the slide counter. 
 %    \begin{macrocode}
 \newif\if@hyper@item
 \newif\if@skiphyperref
@@ -10569,22 +10569,14 @@
 }
 %    \end{macrocode}
 %    \end{macro}
-%    \begin{macro}{\hyper@hook@dest@make}
+%    \begin{macro}{__hyp/target/setname}
 %   We define a hook to allow to overwrite the next destination name.
 %    \begin{macrocode}
-\@ifl@t@r\fmtversion{2020-10-01}
- {%
-   \NewHook{__hyp/dest/make }
-   \def\hyper@hook@dest@make
-    {\UseHook{__hyp/dest/make}}
-   \define@key{Hyp}{next-anchor}{%
-    \AddToHookNext{__hyp/dest/make}%
+\NewHook{__hyp/target/setname }
+\define@key{Hyp}{next-anchor}{%
+    \AddToHookNext{__hyp/target/setname}%
        {\Hy@MakeCurrentHref{#1}}%
    }
- }
- {
-   \def\hyper@hook@dest@make{}
- }
 %    \end{macrocode}
 % \end{macro}
 %    \begin{macro}{\hyper@makecurrent}
@@ -10638,7 +10630,7 @@
   \else
     \global\let\@currentHref\HyperGlobalCurrentHref
   \fi
-  \hyper@hook@dest@make
+  \UseHook{__hyp/target/setname}
 }
 %    \end{macrocode}
 %    \end{macro}
@@ -10665,7 +10657,7 @@
    \def\Hy@MakeCurrentHrefAuto#1{%
    \Hy@GlobalStepCount\Hy@linkcounter
    \Hy@MakeCurrentHref{#1.\the\Hy@linkcounter}%
-   \hyper@hook@dest@make}
+   \UseHook{__hyp/target/setname}}
 %    \end{macrocode}
 %    \end{macro}
 %

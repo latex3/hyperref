@@ -25,7 +25,7 @@
 %% The list of all files belonging to the `Hyperref Bundle' is
 %% given in the file `manifest.txt'.
 %%
-%<package|nohyperref|driver|check>\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+%<package|nohyperref|driver|check>\NeedsTeXFormat{LaTeX2e}[2020/10/01]
 %<package>\ProvidesPackage{hyperref}
 %<nohyperref>\ProvidesPackage{nohyperref}
 %<driver>\ProvidesFile{hyperref.drv}
@@ -10381,11 +10381,11 @@
 %    \begin{macrocode}
 \let\H@refstepcounter\refstepcounter
 \edef\name@of@eq{equation}%
-\edef\name@of@slide{slide}%
 %    \end{macrocode}
 % We do not want the handler for |\refstepcounter| to cut in
 % during the processing of |\item| (we handle that separately),
 % so we provide a bypass conditional.
+% change 2022-04-22: removed test for slide.
 %    \begin{macrocode}
 \newif\if@hyper@item
 \newif\if@skiphyperref
@@ -10395,9 +10395,6 @@
   \ifHy@pdfstring
   \else
     \H@refstepcounter{#1}%
-    \edef\This@name{#1}%
-    \ifx\This@name\name@of@slide
-    \else
       \if@skiphyperref
       \else
         \if@hyper@item
@@ -10408,7 +10405,6 @@
           \hyper@refstepcounter{#1}%
         \fi
       \fi
-    \fi
   \fi
 }
 \let\Hy@saved@refstepcounter\refstepcounter

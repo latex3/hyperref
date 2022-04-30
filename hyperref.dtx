@@ -4729,6 +4729,9 @@
 %    \end{macrocode}
 %    \begin{macrocode}
 \define@key{Hyp}{localanchorname}[true]{%
+  \Hy@WarningNoLine{%
+        Option `localanchorname' is deprecated%
+      }%
   \Hy@boolkey{localanchorname}{#1}%
 }
 %    \end{macrocode}
@@ -10385,7 +10388,7 @@
 % We do not want the handler for |\refstepcounter| to cut in
 % during the processing of |\item| (we handle that separately),
 % so we provide a bypass conditional.
-% change 2022-04-22: removed test for the slide counter. 
+% change 2022-04-22: removed test for the slide counter.
 %    \begin{macrocode}
 \newif\if@hyper@item
 \newif\if@skiphyperref

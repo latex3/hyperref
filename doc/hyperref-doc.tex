@@ -200,7 +200,7 @@ too.
 \subsection{Restoring removed patches}
 
 \xpackage{hyperref} has over time patched quite a number of packages to resolve clashes and incompabilities.
-Quite a number are either no longer needed or should be done by by the original packages. 
+Quite a number are either no longer needed or should be done by by the original packages.
 These patches are now slowly removed from \xpackage{hyperref}.  It should normally not lead to problems, but
 in case that the patches should be restored they can be loaded through the package \xpackage{hyperref-patches} which
 is a part of this bundle.
@@ -1638,7 +1638,7 @@ an anchor name which can be referenced with a bookmark command.
 
 \subsection{Option `localanchorname'}
 
- When an anchor is set (e.g. via \verb|\refstepcounter|, then the
+  When\marginpar{Deprecated 2022-04-27 v7.00o} an anchor is set (e.g. via \verb|\refstepcounter|, then the
   anchor name is globally set to the current anchor name.
 
 
@@ -1659,7 +1659,10 @@ an anchor name which can be referenced with a bookmark command.
   might be situations, where the anchor name is not available
   as expected.
 
-
+ The option is deprecated: it makes it difficult for package authors
+ to add targets for links if it is unclear if \verb|\@currentHref| is
+ set locally or globally. 
+ 
 \subsection{Option `customdriver'}
 
  The value of option `customdriver' is the name of an external

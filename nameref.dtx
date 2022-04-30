@@ -78,6 +78,43 @@
 % Cross-referencing to include the \emph{name} of the section, rather than
 % just the number or page. This works by redefining some of the inside
 % \LaTeX\ macros, so it is vulnerable to future changes.
+%
+% \section{Background and advice for package and class authors}
+% The package redefines the \cs{label} command to write additionally
+% \cs{@currentlabelname} to the \texttt{.aux} file. This can then be referenced with
+% \cs{nameref}. Package authors who want to support \textsf{nameref} should
+% define this command (locally) in a suitable way.
+% The content should be so that it can be safely written
+% to the \texttt{.aux} file. \textsf{nameref} itself uses the package
+% \textsf{gettitlestring} but this is not required.
+%
+% \textsf{nameref} patches a number of commands (mostly sectioning
+% commands) and environments so that they
+% store \cs{@currentlabelname}. A class or a package that want to provide native
+% support can suppress this patches by defining a command.
+%
+% \begin{description}
+% \item[sectioning commands] Redefined are
+%  \begin{itemize}
+%  \item
+%  \cs{@sect}: beside adding a command that stores the
+%  title of a sectioning command (if present the optional argument is used)
+%  \textsf{nameref} also stores the level number in a counter \texttt{section@level}
+%  (reason is unknown, only two packages, \textsf{e-french} and \textsf{pdfscreen}
+%  seem to use it), and  surrounds the text with \cs{Sectionformat} (only used by
+%  \textsf{acmart}, \textsf{memoir}, \textsf{pdfscreen}, \textsf{pdfslide}).
+%
+%  \item \cs{@ssect}: command to store the title added,
+%  \cs{Sectionformat} is added.
+%
+%  \item \cs{M@sect} (memoir class): command to store the title added
+%
+%  \item \cs{@part}, \cs{@spart}, \cs{@chapter}, \cs{@schapter}:
+%  command to store the title added
+%  \end{itemize}
+%
+% \end{description}
+%
 % \section{History}
 % Sebastian Rahtz, for Lou Burnard, March 15th 1994;\\
 % SPQR CERN July 1994;\\

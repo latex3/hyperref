@@ -9381,15 +9381,18 @@
 %    \end{macrocode}
 
 %    Ignore star from referencing macros:
+%    This is only needed if LaTeX doesn't define the starred
+%    variants itself.
 %    \begin{macrocode}
-\LetLtxMacro\NoHy@OrgRef\ref
-\DeclareRobustCommand*{\ref}{%
+\@ifundefined{@kernel@ref}
+ {\LetLtxMacro\NoHy@OrgRef\ref
+  \DeclareRobustCommand*{\ref}{%
   \@ifstar\NoHy@OrgRef\NoHy@OrgRef
-}
-\LetLtxMacro\NoHy@OrgPageRef\pageref
-\DeclareRobustCommand*{\pageref}{%
+  }
+  \LetLtxMacro\NoHy@OrgPageRef\pageref
+  \DeclareRobustCommand*{\pageref}{%
   \@ifstar\NoHy@OrgPageRef\NoHy@OrgPageRef
-}
+ }}{}
 %    \end{macrocode}
 %
 % \section{Localized nullifying of package}

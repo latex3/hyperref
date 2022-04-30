@@ -1,5 +1,7 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * various patches in nameref can now be disabled by package authors
+      by defining a command.
     * the experimental option localanchorname has been deprecated
     * LaTeX 2020-10-01 is required as hooks are used now.
     * \refstepcounter no longer tests for the slide counter as no reason could be found

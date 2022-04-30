@@ -91,7 +91,9 @@
 % \textsf{nameref} patches a number of commands (mostly sectioning
 % commands) and environments so that they
 % store \cs{@currentlabelname}. A class or a package that want to provide native
-% support can suppress this patches by defining a command.
+% support instead can suppress this patches by defining commands described below.
+% The commands must be defined before the patch is made, in most cases before
+% \textsf{nameref} is loaded, sometimes only before begin document.
 %
 % \begin{description}
 % \item[sectioning commands] Redefined are
@@ -102,7 +104,8 @@
 %  \textsf{nameref} also stores the level number in a counter \texttt{section@level}
 %  (reason is unknown, only two packages, \textsf{e-french} and \textsf{pdfscreen}
 %  seem to use it), and  surrounds the text with \cs{Sectionformat} (only used by
-%  \textsf{acmart}, \textsf{memoir}, \textsf{pdfscreen}, \textsf{pdfslide}).
+%  \textsf{acmart}, \textsf{memoir}, \textsf{pdfscreen}, \textsf{pdfslide}), a
+%  command which takes two argument: the first the text, the second the level.
 %
 %  \item \cs{@ssect}: command to store the title added,
 %  \cs{Sectionformat} is added.
@@ -111,8 +114,63 @@
 %
 %  \item \cs{@part}, \cs{@spart}, \cs{@chapter}, \cs{@schapter}:
 %  command to store the title added
+%  \item \cs{ttl@sect@i} (from the \textsf{titlesec} package):
+%   command to store the title added
 %  \end{itemize}
 %
+% All the patches excepted the last are disabled if the command
+% \cs{NR@nopatch@sectioning} is defined (the actual definition is irrelevant, only
+% existence is tested. The titlesec patch is disabled if
+% \cs{NR@nopatch@titlesec} is defined.
+% This currently only suppress the actual patches, the counter,
+% \cs{Sectionformat} and also the internal copies \cs{NR@sect} etc are still
+% defined.
+%
+% \item[captions] The following commands are patched
+% \begin{itemize}
+% \item \cs{@caption}: command to store the title added. This is done at begin
+% document, but only if \textsf{hyperref} is not detected. With \textsf{hyperref}
+% the patch is done there (and must be disabled in \textsf{hyperref}).
+%
+% This patch can be disabled by defining \cs{NR@nopatch@caption}
+%
+% \item \cs{LT@c@ption} (from the \textsf{longtable} package):
+% command to store the title added.
+%
+% This patch can be disabled by defining \cs{NR@nopatch@longtable}
+%
+% \item \cs{lst@MakeCaption} (from the \textsf{listings} package)
+%
+% This patch can be disabled by defining \cs{NR@nopatch@listings}
+% \end{itemize}
+%
+% \item[lists] The following command is patched
+% \begin{itemize}
+% \item \cs{descriptionlabel}: command to store the label text added. To
+% reference this text the \cs{label} must be put \emph{inside} the label.
+% This is not compatible with the \textsf{enumitem} package as internal
+% formatting commands are written to the \texttt{.aux} file too.
+%
+% This patch can be disabled by defining \cs{NR@nopatch@lists}
+% \end{itemize}
+%
+% \item[theorems]
+%
+% \begin{itemize}
+% \item \cs{@opargbegintheorem}: command to store the title added.
+%
+% This patch can be disabled by defining \cs{NR@nopatch@theorem}
+%
+% \item \cs{@begintheorem} (if amsthm is loaded and if
+% the command has a tested meaning): command to store the title added.
+%
+% This patch can be disabled by defining \cs{NR@nopatch@amsthm}
+%
+% \end{itemize}
+% \item[beamer] In the \textsf{beamer} class the following commands are
+% patched: \cs{beamer@section}, \cs{beamer@subsection}, \cs{beamer@subsubsection},
+% \cs{beamer@descriptionitem} and the template \texttt{theorem begin}. If
+% \cs{NR@nopatch@beamer} is defined nothing is done.
 % \end{description}
 %
 % \section{History}
@@ -341,11 +399,12 @@
 %    \end{macrocode}
 %    \begin{macro}{\@sect}
 %    \begin{macrocode}
-\def\@sect#1#2#3#4#5#6[#7]#8{%
-  \setcounter{section@level}{#2}%
-  \NR@gettitle{#7}%
-  \NR@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}]{\Sectionformat{#8}{#2}}%
-}
+\@ifundefined{NR@nopatch@sectioning}
+ {\def\@sect#1#2#3#4#5#6[#7]#8{%
+   \setcounter{section@level}{#2}%
+   \NR@gettitle{#7}%
+   \NR@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}]{\Sectionformat{#8}{#2}}%
+ }}{}
 %    \end{macrocode}
 %    \end{macro}
 % and now the unnumbered ones
@@ -354,33 +413,35 @@
 \let\NR@ssect\@ssect
 %    \end{macrocode}
 %    \end{macro}
-%    \begin{macro}{\NR@ssect}
+%    \begin{macro}{\@ssect}
 %    \begin{macrocode}
-\def\@ssect#1#2#3#4#5{%
-  \NR@gettitle{#5}%
-  \NR@ssect{#1}{#2}{#3}{#4}{\Sectionformat{#5}{#1}}%
-}
+\@ifundefined{NR@nopatch@sectioning}
+ {\def\@ssect#1#2#3#4#5{%
+   \NR@gettitle{#5}%
+   \NR@ssect{#1}{#2}{#3}{#4}{\Sectionformat{#5}{#1}}%
+ }}{}
 %    \end{macrocode}
 %    \end{macro}
 %
 % Support for class memoir.
 %
 %    \begin{macrocode}
-\ltx@IfUndefined{ifheadnameref}{%
-}{%
-  \ltx@IfUndefined{M@sect}{%
+\@ifundefined{NR@nopatch@sectioning}
+ {\ltx@IfUndefined{ifheadnameref}{%
   }{%
-    \let\NRorg@M@sect\M@sect
-    \def\M@sect#1#2#3#4#5#6[#7][#8]{%
-      \ifheadnameref
-        \NR@gettitle{#8}%
-      \else
-        \NR@gettitle{#7}%
-      \fi
-      \NRorg@M@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}][{#8}]%
+    \ltx@IfUndefined{M@sect}{%
+    }{%
+      \let\NRorg@M@sect\M@sect
+      \def\M@sect#1#2#3#4#5#6[#7][#8]{%
+        \ifheadnameref
+          \NR@gettitle{#8}%
+        \else
+          \NR@gettitle{#7}%
+        \fi
+        \NRorg@M@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}][{#8}]%
+      }%
     }%
-  }%
-}
+  }}{}
 %    \end{macrocode}
 %
 % Parts and chapters are treated differently. sigh.
@@ -388,51 +449,53 @@
 %
 %    \begin{macrocode}
 \let\NR@part\@part
-\long\def\@part[#1]#2{%
-  \NR@gettitle{#1}%
-  \NR@part[{#1}]{#2}%
-}
 \let\NR@spart\@spart
-\long\def\@spart#1{%
-  \NR@gettitle{#1}%
-  \NR@spart{#1}%
-}
 \let\NR@chapter\@chapter
-\def\@chapter[#1]#2{%
-  \NR@gettitle{#1}%
-  \NR@chapter[{#1}]{#2}%
-}
-\@ifclassloaded{memoir}{%
-  \ltx@IfUndefined{ifheadnameref}{%
-  }{%
-    \def\@chapter[#1]#2{%
-      \ltx@IfUndefined{ch@pt@c}{%
-        \NR@gettitle{#1}%
-      }{%
-        \ifx\ch@pt@c\ltx@empty
-          \NR@gettitle{#2}%
-        \else
-          \def\NR@temp{#1}%
-          \ifx\NR@temp\ltx@empty
-            \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
+\let\NR@schapter\@schapter
+\@ifundefined{NR@nopatch@sectioning}
+ {%
+  \long\def\@part[#1]#2{%
+    \NR@gettitle{#1}%
+    \NR@part[{#1}]{#2}%
+  }
+  \long\def\@spart#1{%
+    \NR@gettitle{#1}%
+    \NR@spart{#1}%
+  }
+  \def\@chapter[#1]#2{%
+    \NR@gettitle{#1}%
+    \NR@chapter[{#1}]{#2}%
+  }
+  \@ifclassloaded{memoir}{%
+    \ltx@IfUndefined{ifheadnameref}{%
+    }{%
+      \def\@chapter[#1]#2{%
+        \ltx@IfUndefined{ch@pt@c}{%
+          \NR@gettitle{#1}%
+        }{%
+          \ifx\ch@pt@c\ltx@empty
+            \NR@gettitle{#2}%
           \else
-            \ifheadnameref
-              \NR@gettitle{#1}%
-            \else
+            \def\NR@temp{#1}%
+            \ifx\NR@temp\ltx@empty
               \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
+            \else
+              \ifheadnameref
+                \NR@gettitle{#1}%
+              \else
+                \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
+              \fi
             \fi
           \fi
-        \fi
+        }%
+        \NR@chapter[{#1}]{#2}%
       }%
-      \NR@chapter[{#1}]{#2}%
     }%
-  }%
-}{}
-\let\NR@schapter\@schapter
-\def\@schapter#1{%
-  \NR@gettitle{#1}%
-  \NR@schapter{#1}%
-}
+  }{}
+  \def\@schapter#1{%
+    \NR@gettitle{#1}%
+    \NR@schapter{#1}%
+  }}{}
 %    \end{macrocode}
 %
 % Captions
@@ -441,25 +504,30 @@
 \AtBeginDocument{%
   \@ifpackageloaded{hyperref}{}
   {%
-    \let\NR@@caption\@caption
-    \long\def\@caption#1[#2]{%
+    \@ifundefined{NR@nopatch@caption}
+     {\let\NR@@caption\@caption
+      \long\def\@caption#1[#2]{%
       \NR@gettitle{#2}%
       \NR@@caption{#1}[{#2}]%
-    }%
+       }}%
+     {}%
   }%
 %    \end{macrocode}
 %
 %    \begin{macrocode}
   \@ifpackageloaded{longtable}{%
-    \let\NRorg@LT@c@ption\LT@c@ption
-    \def\LT@c@ption#1[#2]#3{%
-      \NRorg@LT@c@ption{#1}[{#2}]{#3}%
-      \def\@tempa{#2}%
-      \ifx\@tempa\@empty
-      \else
+   \@ifundefined{NR@nopatch@longtable}
+    {%
+      \let\NRorg@LT@c@ption\LT@c@ption
+      \def\LT@c@ption#1[#2]#3{%
+       \NRorg@LT@c@ption{#1}[{#2}]{#3}%
+       \def\@tempa{#2}%
+       \ifx\@tempa\@empty
+       \else
         \NR@gettitle{#2}%
-      \fi
-    }%
+       \fi
+      }%
+    }{}%
   }{}%
 %    \end{macrocode}
 %
@@ -467,11 +535,13 @@
 %    \begin{macrocode}
   \ltx@IfUndefined{descriptionlabel}{%
   }{%
-    \let\NRorg@descriptionlabel\descriptionlabel
-    \def\descriptionlabel#1{%
-      \NR@gettitle{#1}%
-      \NRorg@descriptionlabel{#1}%
-    }%
+    \@ifundefined{NR@nopatch@longtable}
+     {\let\NRorg@descriptionlabel\descriptionlabel
+      \def\descriptionlabel#1{%
+       \NR@gettitle{#1}%
+       \NRorg@descriptionlabel{#1}%
+       }%
+     }{}%
   }%
 }
 %    \end{macrocode}
@@ -481,10 +551,13 @@
 \AtBeginDocument{%
   \@ifpackageloaded{titlesec}{%
     \let\NRorg@ttl@sect@i\ttl@sect@i
-    \def\ttl@sect@i#1#2[#3]#4{%
-      \NR@gettitle{#4}%
-      \NRorg@ttl@sect@i{#1}{#2}[{#3}]{#4}%
-    }%
+    \@ifundefined{NR@nopatch@titlesec}
+     {%
+       \def\ttl@sect@i#1#2[#3]#4{%
+         \NR@gettitle{#4}%
+         \NRorg@ttl@sect@i{#1}{#2}[{#3}]{#4}%
+         }%
+      }{}%
   }{}%
 }
 %    \end{macrocode}
@@ -493,39 +566,42 @@
 %
 %    \begin{macrocode}
 \@ifclassloaded{beamer}{%
-  \def\NR@PatchBeamer#1{%
-    \expandafter\let\csname NRorg@beamer@#1\expandafter\endcsname
-                    \csname beamer@#1\endcsname
-    \begingroup
-      \edef\x{\endgroup
-        \long\def\expandafter\noexpand\csname beamer@#1\endcsname
-            [####1]{% hash-ok
-          \noexpand\NR@gettitle{####1}%
-          \expandafter\noexpand\csname NRorg@beamer@#1\endcsname
-          [{####1}]%
+  \@ifundefined{NR@nopatch@beamer}
+  {%
+    \def\NR@PatchBeamer#1{%
+      \expandafter\let\csname NRorg@beamer@#1\expandafter\endcsname
+                      \csname beamer@#1\endcsname
+      \begingroup
+        \edef\x{\endgroup
+          \long\def\expandafter\noexpand\csname beamer@#1\endcsname
+              [####1]{% hash-ok
+            \noexpand\NR@gettitle{####1}%
+            \expandafter\noexpand\csname NRorg@beamer@#1\endcsname
+            [{####1}]%
+          }%
         }%
-      }%
-    \x
-  }%
-  \NR@PatchBeamer{section}%
-  \NR@PatchBeamer{subsection}%
-  \NR@PatchBeamer{subsubsection}%
+      \x
+    }%
+    \NR@PatchBeamer{section}%
+    \NR@PatchBeamer{subsection}%
+    \NR@PatchBeamer{subsubsection}%
 %    \end{macrocode}
 %
 %    Theorem names.
 %    \begin{macrocode}
-  \addtobeamertemplate{theorem begin}{%
-    \expandafter\NR@gettitle\expandafter{\inserttheoremaddition}%
-  }{}%
+    \addtobeamertemplate{theorem begin}{%
+      \expandafter\NR@gettitle\expandafter{\inserttheoremaddition}%
+    }{}%
 %    \end{macrocode}
 %    \begin{macrocode}
-  \@ifdefinable{\NRorg@beamer@descriptionitem}{%
-    \let\NRorg@beamer@descriptionitem\beamer@descriptionitem
-    \renewcommand{\beamer@descriptionitem}[1]{%
-      \NR@gettitle{#1}%
-      \NRorg@beamer@descriptionitem{#1}%
+    \@ifdefinable{\NRorg@beamer@descriptionitem}{%
+      \let\NRorg@beamer@descriptionitem\beamer@descriptionitem
+      \renewcommand{\beamer@descriptionitem}[1]{%
+        \NR@gettitle{#1}%
+        \NRorg@beamer@descriptionitem{#1}%
+      }%
     }%
-  }%
+   }{}%
 }{}
 %    \end{macrocode}
 %
@@ -857,14 +933,17 @@
 %    \begin{macrocode}
 \AtBeginDocument{%
   \@ifpackageloaded{listings}{%
-    \let\NROrg@lst@MakeCaption\lst@MakeCaption
-    \def\lst@MakeCaption{%
-      \ifx\lst@label\@empty
-      \else
-        \let\@currentlabelname\lst@@caption
-      \fi
-      \NROrg@lst@MakeCaption
-    }%
+    \@ifundefined{NR@nopatch@listings}
+     {%
+       \let\NROrg@lst@MakeCaption\lst@MakeCaption
+       \def\lst@MakeCaption{%
+         \ifx\lst@label\@empty
+         \else
+           \let\@currentlabelname\lst@@caption
+         \fi
+         \NROrg@lst@MakeCaption
+       }%
+      }{}%
   }{}%
 }
 %    \end{macrocode}

@@ -12679,9 +12679,7 @@
 %    \begin{macrocode}
 \let\HyRef@ShowKeysRef\@gobble
 \def\HyRef@ShowKeysInit{%
-  \begingroup\expandafter\expandafter\expandafter\endgroup
-  \expandafter\ifx\csname SK@@label\endcsname\relax
-  \else
+  \ifcsname SK@@label\endcsname
     \ifx\SK@ref\@empty
     \else
       \def\HyRef@ShowKeysRef{%

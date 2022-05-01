@@ -10768,7 +10768,7 @@
 % Overload equation, temporarily reverting to original
 % |\refstepcounter|. If, however, it is in AMS math, we do not
 % do anything, as the tag mechanism is used there (see section \ref{ams}).
-% The execption is that we move the equation incrementation inside
+% The exception is that we move the equation incrementation inside
 % the math environment to avoid specials outside and a wrong vertical
 % spacing of equation environments.
 %    \begin{macrocode}
@@ -11342,8 +11342,8 @@
 %    Does anyone remember the function and purpose of \cmd{\realfootnote}?
 %    \begin{macrocode}
   \def\realfootnote{%
-    \@ifnextchar[\@xfootnote{%
-      \stepcounter{\@mpfn}%
+    \@ifnextchar[\@xfootnote%]
+     {\stepcounter{\@mpfn}%
       \protected@xdef\@thefnmark{\thempfn}%
       \H@@footnotemark\H@@footnotetext
     }%
@@ -11533,7 +11533,7 @@
 % and \emph{drftcite} may break.
 %
 % However, lets make an attempt to get \emph{natbib} right, because
-% thats a powerful, important package.
+% that's a powerful, important package.
 % Patrick Daly (\Email{daly@linmpi.mpg.de}) has
 % provided hooks for us, so all we need to do is activate them.
 %    \begin{macrocode}
@@ -12153,7 +12153,7 @@
 %    \end{macrocode}
 %
 %    \begin{macro}{\numberwithin}
-%    A appropiate definition of hyperref's companion counter
+%    A appropriate definition of hyperref's companion counter
 %    (\cmd{\theH...}) is added for correct link names.
 %    \begin{macrocode}
 %</package>

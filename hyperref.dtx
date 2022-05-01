@@ -12529,10 +12529,10 @@
 %    \end{macrocode}
 %    This are the patches for a varioref newer after 2019-09
 %    Older versions are no longer supported.
-%    If |\Hy@nopatch@varioref| is defined we don't patch but assume
+%    If |\hyper@nopatch@varioref| is defined we don't patch but assume
 %    that varioref handles the hyperlinks.
 %    \begin{macrocode}
-  \@ifundefined{Hy@nopatch@varioref}
+  \@ifundefined{hyper@nopatch@varioref}
    {
    \renewcommand\Vref@star[2][]{%
      \begingroup

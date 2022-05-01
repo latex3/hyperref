@@ -13036,15 +13036,7 @@
   \expandafter\endgroup
   \expandafter\pdflinkmargin\the\dimen@\relax
 }
-\ifx\pdfstartlink\@undefined% less than version 14
-  \let\pdfstartlink\pdfannotlink
-  \let\pdflinkmargin\@tempdima
-  \let\pdfxform\pdfform
-  \let\pdflastxform\pdflastform
-  \let\pdfrefxform\pdfrefform
-\else
-  \pdflinkmargin1pt %
-\fi
+\pdflinkmargin1pt %
 %    \end{macrocode}
 % First set up the default linking
 %    \begin{macrocode}

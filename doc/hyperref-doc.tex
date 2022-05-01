@@ -180,7 +180,7 @@
 As can be already seen in the following introduction, \xpackage{hyperref}
 has a long history and has seen many changes over time. The introduction
 mentions workflows, drivers and problems which are no longer relevant,
-or only in edge cases. The documentation reflect this varied history: changes
+or only in edge cases. The documentation reflects this varied history: changes
 and extensions and explanations were and are spread over various papers and sources and
 only incorporated later and so are not always in a coherent order and in sync which each other.
 
@@ -200,8 +200,8 @@ too.
 \subsection{Restoring removed patches}
 
 \xpackage{hyperref} has over time patched quite a number of packages to resolve clashes and incompabilities.
-Quite a number are either no longer needed or should be done by by the original packages.
-These patches are now slowly removed from \xpackage{hyperref}.  It should normally not lead to problems, but
+Quite a number are either no longer needed or should be done by the original packages.
+Those patches are now slowly removed from \xpackage{hyperref}.  It should normally not lead to problems, but
 in case that the patches should be restored they can be loaded through the package \xpackage{hyperref-patches} which
 is a part of this bundle.
 
@@ -351,7 +351,7 @@ option used in this document.
 hyperlink features are nowadays a common requirement. \xpackage{hyperref}
 patches quite a number of commands from the  \LaTeX{} core and from packages
 to add such features. But this is rather fragile and it add dependencies
-on the loading order and can break if the external packages break.
+on the loading order and can break if the external packages changes.
 It is therefore much better if packages add suitable support to their commands directly.
 Quite a lot packages actually did this, but due to missing documentation of the interface
 they often looked into the code and then used internal commands not meant as public command.
@@ -362,6 +362,30 @@ to stay compatible with the \xpackage{hyperref} command. Documented user command
 are naturally interfaces too, they are not explicitly mentioned here again.
 
 This section is work in progress. Suggestions or comments are welcome.
+
+\subsection{Patches and how to suppress them}
+
+Patches to external commands can be avoided alltogether by loading hyperref with the option \texttt{implicit=false}. But is often too drastic. There is a work in progress to classify
+the patches and to offer interfaces to suppress them in a more granular way.
+
+We start with the sectioning commands. 
+
+\begin{itemize}
+\item hyperref patches \cs{@sect}, \cs{@ssect}, \cs{@chapter}, \cs{@schapter},
+\cs{@part}, \cs{@spart}.  
+
+To commands for the starred sections a target for a link is added. To the other commands
+it is added if the sectioning is unnumbered, e.g. because of the \texttt{secnumdepth} setting or in the 
+frontmatter. 
+
+The patch can be suppressed by defining the command \cs{hyper@nopatch@sectioning}. This should normally
+be done only by a class or a package which provides sectioning commands and can add the targets itself.
+Targets have a location on the page and e.g. the section commands should take indents into
+account. Note that the nameref package patches these commands too to add commands to store the title text
+for a label. Check the nameref documentation about a way to suppress these patches. 
+\end{itemize}
+
+
 
 \subsection{Counters}
 Counters play an important part in the code. They are used to create destination names and
@@ -1661,8 +1685,8 @@ an anchor name which can be referenced with a bookmark command.
 
  The option is deprecated: it makes it difficult for package authors
  to add targets for links if it is unclear if \verb|\@currentHref| is
- set locally or globally. 
- 
+ set locally or globally.
+
 \subsection{Option `customdriver'}
 
  The value of option `customdriver' is the name of an external

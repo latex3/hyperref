@@ -10232,7 +10232,6 @@
 \fi
 %</pdfmarkbase|dvipdfm|xetex>
 %    \end{macrocode}
-%
 %    \begin{macrocode}
 %<*package>
 %    \end{macrocode}
@@ -19756,6 +19755,8 @@
     \hss
   }%
 }
+\@ifundefined{hyper@nopatch@sectioning}
+{
 \let\H@old@ssect\@ssect
 \def\@ssect#1#2#3#4#5{%
   \Hy@MakeCurrentHrefAuto{section*}%
@@ -19851,6 +19852,7 @@
     \H@old@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}]{#8}%
   }%
 }
+}{}
 %    \end{macrocode}
 %    \begin{macrocode}
 %</outlines|hypertex>

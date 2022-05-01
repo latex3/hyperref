@@ -12172,27 +12172,19 @@
 %</check>
 %<*package>
 \@ifpackageloaded{amsmath}{%
-  \@ifpackagelater{amsmath}{1999/12/14}{%
-    \renewcommand*{\numberwithin}[3][\arabic]{%
-      \@ifundefined{c@#2}{\@nocounterr{#2}}{%
-        \@ifundefined{c@#3}{\@nocnterr{#3}}{%
-          \HyOrg@addtoreset{#2}{#3}%
-          \@xp\xdef\csname the#2\endcsname{%
-            \@xp\@nx\csname the#3\endcsname .\@nx#1{#2}%
-          }%
-          \@xp\xdef\csname theH#2\endcsname{%
-            \@xp\@nx
-            \csname the\@ifundefined{theH#3}{}H#3\endcsname
-            .\@nx#1{#2}%
-          }%
+  \renewcommand*{\numberwithin}[3][\arabic]{%
+    \@ifundefined{c@#2}{\@nocounterr{#2}}{%
+      \@ifundefined{c@#3}{\@nocnterr{#3}}{%
+        \HyOrg@addtoreset{#2}{#3}%
+        \@xp\xdef\csname the#2\endcsname{%
+          \@xp\@nx\csname the#3\endcsname .\@nx#1{#2}%
+        }%
+        \@xp\xdef\csname theH#2\endcsname{%
+          \@xp\@nx
+          \csname the\@ifundefined{theH#3}{}H#3\endcsname
+          .\@nx#1{#2}%
         }%
       }%
-    }%
-  }{%
-    \Hy@WarningNoLine{%
-      \string\numberwithin\space of package `amsmath' %
-      only fixed\MessageBreak
-      for version 2000/06/06 v2.12 or newer%
     }%
   }%
 }{}

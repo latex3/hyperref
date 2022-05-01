@@ -1,5 +1,6 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * remove a test for amsmath before 1999
     * removed an since 2002 unneeded definition for subfigure
     * various patches in nameref can now be disabled by package authors
       by defining a command.

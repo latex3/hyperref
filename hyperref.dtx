@@ -19876,61 +19876,6 @@
 %</outlines>
 %    \end{macrocode}
 %
-% \section{Compatibility with koma-script classes}
-%
-%    \begin{macrocode}
-%<*outlines|hypertex>
-%    \end{macrocode}
-%
-% Hard-wire in an unpleasant over-ride of komascript `scrbook' class
-% for Tobias Isenberg (\Email{Tobias.Isenberg@gmx.de}).
-% With version 6.71b the hack is also applied to `scrreprt' class
-% and is removed for koma-script versions since 2001/01/01,
-% because Markus Kohm supports hyperref in komascript.
-%    \begin{macrocode}
-\def\Hy@tempa{%
-  \def\@addchap[##1]##2{%
-    \typeout{##2}%
-    \if@twoside
-      \@mkboth{##1}{}%
-    \else
-      \@mkboth{}{##1}%
-    \fi
-    \addtocontents{lof}{\protect\addvspace{10\p@}}%
-    \addtocontents{lot}{\protect\addvspace{10\p@}}%
-    \Hy@MakeCurrentHrefAuto{\Hy@chapapp*}%
-    \Hy@raisedlink{%
-      \hyper@anchorstart{\@currentHref}\hyper@anchorend
-    }%
-    \if@twocolumn
-       \@topnewpage[\@makeschapterhead{##2}]%
-    \else
-       \@makeschapterhead{##2}%
-       \@afterheading
-    \fi
-    \addcontentsline{toc}{chapter}{##1}%
-  }%
-}
-\@ifclassloaded{scrbook}{%
-  \@ifclasslater{scrbook}{2001/01/01}{%
-    \let\Hy@tempa\@empty
-  }{}%
-}{%
-  \@ifclassloaded{scrreprt}{%
-    \@ifclasslater{scrreprt}{2001/01/01}{%
-      \let\Hy@tempa\@empty
-    }{}%
-  }{%
-    \let\Hy@tempa\@empty
-  }%
-}%
-\Hy@tempa
-%    \end{macrocode}
-%
-%    \begin{macrocode}
-%</outlines|hypertex>
-%    \end{macrocode}
-%
 % \section{Encoding definition files for encodings of PDF strings}
 % This was contributed by
 % Heiko Oberdiek.

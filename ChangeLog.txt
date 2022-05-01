@@ -1,5 +1,6 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * removed loading of memhfixc: memoir handles that now by itself.
     * removed an old patch for KOMA before 2001
     * removed compability code for pdftex 1.14
     * remove a test for amsmath before 1999

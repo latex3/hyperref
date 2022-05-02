@@ -215,8 +215,10 @@
 % If the starred variant is used a manual target name is created.
 %
 % \texttt{\cs{MakeLinkTarget}*\{destname\}} is roughly equivalent to
-% \texttt{\cs{hypertarget}\{destname\}\{\}} (unlike the
-% latter it also raises the destination in a PDF, and there is no text argument).
+% \texttt{\cs{hypertarget}\{destname\}\{\}} but unlike the
+% latter it also raises the destination in a PDF, there is no text argument,
+% and---most importantly--it updates \cs{@currentHref}, that means the target
+% name is stored by the next \cs{label}, something that \cs{hypertarget} doesn't do).
 % The target name is expanded, see the remarks about prefixes above regarding
 % the allowed chars.
 %

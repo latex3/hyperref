@@ -74,6 +74,7 @@ checkconfigs = {"build","config-pvt","config-3","config-xetex"}
 checkengines = {"pdftex","etex","luatex"}
 
 -- for dev testing
+-- checkengines = {"pdftex","pdftexdev","etex","luatex"}
 -- checkengines = {"pdftexdev"}
 
 -- temp settings disable checks while testing ctan build

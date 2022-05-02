@@ -363,29 +363,6 @@ are naturally interfaces too, they are not explicitly mentioned here again.
 
 This section is work in progress. Suggestions or comments are welcome.
 
-\subsection{Patches and how to suppress them}
-
-Patches to external commands can be avoided alltogether by loading hyperref with the option \texttt{implicit=false}. But is often too drastic. There is a work in progress to classify
-the patches and to offer interfaces to suppress them in a more granular way.
-
-We start with the sectioning commands. 
-
-\begin{itemize}
-\item hyperref patches \cs{@sect}, \cs{@ssect}, \cs{@chapter}, \cs{@schapter},
-\cs{@part}, \cs{@spart}.  
-
-To commands for the starred sections a target for a link is added. To the other commands
-it is added if the sectioning is unnumbered, e.g. because of the \texttt{secnumdepth} setting or in the 
-frontmatter. 
-
-The patch can be suppressed by defining the command \cs{hyper@nopatch@sectioning}. This should normally
-be done only by a class or a package which provides sectioning commands and can add the targets itself.
-Targets have a location on the page and e.g. the section commands should take indents into
-account. Note that the nameref package patches these commands too to add commands to store the title text
-for a label. Check the nameref documentation about a way to suppress these patches. 
-\end{itemize}
-
-
 
 \subsection{Counters}
 Counters play an important part in the code. They are used to create destination names and
@@ -436,6 +413,84 @@ New drivers must provide this commands with similar arguments.
  \hyper@linknamed {action}{link text}                  %Named, only with new generic driver
 \end{verbatim}
 
+\subsection{Creating targets}
+
+Internal links and bookmarks need something they can jump to. In a PDF this is normally called
+a \emph{destination} (and the primitive is therefor called \cs{pdfdest}), in HTML it is more
+common to call this an \emph{anchor} (and the \xpackage{hyperref} uses therefor \cs{hyper@anchor}). 
+History can not be undone but future commands and descriptions will use the generic
+\emph{target} unless the PDF specific destination is meant.
+
+Targets are created automatically when \cs{refstepcounter} is used and in many cases this
+does the right thing and nothing more is needed. 
+But there are exceptions: 
+\begin{itemize}
+\item A needed target can be missing for example
+if a sectioning command doesn't have a number as the starred version is used or due to the 
+setting of \texttt{secnumdepth}. 
+\item The target created by the \cs{refstepcounter} can be in the wrong place.
+\item The target created by the \cs{refstepcounter} can affect spacing.
+\item The target name created by the \cs{refstepcounter} is not usable, e.g. in 
+\cs{bibitem} where you need a target name bases on the bib-key.
+\end{itemize}
+
+Package authors and users can use the following commands to create and manipulate 
+targets. The commands are described in more detail in \texttt{hyperref-linktarget.pdf}.
+
+\begin{verbatim}
+ \MakeLinkTarget
+ \LinkTargetOff
+ \LinkTargetOn
+ \NextLinkTarget
+ \SetLinkTargetFilter
+\end{verbatim}
+
+The first four commands will be defined also in \LaTeX{} directly as no-op and so can be
+used even if \xpackage{hyperref} is not loaded. 
+
+Until \LaTeX{} is updated package authors can also provide these definitions directly:
+
+\begin{verbatim}
+\ProvideDocumentCommand\MakeLinkTarget{sO{}m}{}
+\ProvideDocumentCommand\LinkTargetOn{}{}
+\ProvideDocumentCommand\LinkTargetOff{}{}
+\ProvideDocumentCommand\NextLinkTarget{m}{}
+\end{verbatim}
+
+\subsection{Patches and how to suppress them}
+
+The patches to external commands made by
+\xpackage{hyperref} can be avoided in toto by loading \xpackage{hyperref} 
+with the option \texttt{implicit=false}. 
+But suppressing everything is often too drastic.
+There is a work in progress to classify
+the patches and to offer interfaces to suppress them in a more granular way.
+
+\begin{description}
+\item[sectioning commands]
+\begin{itemize}
+\item hyperref patches \cs{@sect}, \cs{@ssect}, \cs{@chapter}, \cs{@schapter},
+\cs{@part}, \cs{@spart}.
+
+\item It adds to the starred commands a target for a link (with the
+prefix \texttt{chapter*} for chapters and \texttt{section*} otherwise). 
+To the other commands it adds a target for a link
+if the sectioning is unnumbered, e.g. because of the \texttt{secnumdepth} 
+setting or in the front matter.
+
+\item The patch can be suppressed by defining the command \cs{hyper@nopatch@sectioning}. 
+This should normally be done only by a class or a package 
+which provides sectioning commands and adds the targets itself.
+Targets have a location on the page and e.g. the section commands should take indents into
+account. Targets are needed for bookmarks and the table of contents,
+so \cs{@currentHref} should get the correct meaning before 
+\cs{addcontentsline} is used. 
+
+\item Note that the \xpackage{nameref} package patches these commands too 
+to add commands to store the title text in \cs{@currentlabelname}. 
+Check the \xpackage{nameref} documentation about a way to suppress these patches.
+\end{itemize}
+\end{description}
 
 \section{Package options}
 

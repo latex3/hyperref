@@ -9,8 +9,12 @@ backref.dtx
         Bibliographical back referencing.
 nameref.dtx
         Cross-referencing by name of section.
-
-hyperref.pdf, backref.pdf, nameref.pdf
+hyperref-linktarget.dtx
+        Module with commands to create targets         
+hyperref-patches.dtx
+        outsourced older patches
+        
+hyperref.pdf, backref.pdf, nameref.pdf, hyperref-linktarget.pdf
         Source code documentation.
 
 hyperref.ins
@@ -42,6 +46,7 @@ backref.sty
 nameref.sty
 hyperref.sty
 nohyperref.sty
+hyperref-patches.sty
         LaTeX package files.
 hycheck.tex
 	Test file.
@@ -76,7 +81,7 @@ psdextra.def
 % Directory doc/
 % =============
 
-hyperref-doc.pdf
+hyperref-doc.pdf, hyperref-linktarget.pdf
         Hyperref manual
 hyperref-doc.html, hyperref-doc[2-7].html, hyperref-doc.css,
         HTML version of the manual.

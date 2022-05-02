@@ -1,0 +1,582 @@
+% \iffalse meta-comment
+%
+%% File: hyperref-linktarget.dtx
+%
+% Copyright (C) 2022-2022 The LaTeX Project
+%
+% It may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License (LPPL), either version 1.3c of this
+% license or (at your option) any later version.  The latest version
+% of this license is in the file
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% This file is part of the "Hyperref bundle" (The Work in LPPL)
+% and all files in that bundle must be distributed together.
+%
+% -----------------------------------------------------------------------
+%
+% The development version of the bundle can be found at
+%
+%    https://github.com/latex3/hyperref
+%
+% for those people who are interested.
+%
+%<*driver>
+\RequirePackage{pdfmanagement-testphase}
+\DocumentMetadata{pdfstandard=A-2b}
+\documentclass[full]{l3doc}
+\usepackage{array,booktabs,hyperxmp}
+\hypersetup{pdfauthor=The LaTeX Project,
+  pdftitle=Make link targets (hyperref bundle)}
+\usepackage[skins]{tcolorbox}
+\definecolor{myblue}{RGB}{00,33,99}
+\newtcolorbox{doccomment}[1][]{enhanced,frame hidden,colback=myblue!10,fontupper=\footnotesize,#1}
+%\newtcbox{smalldoccomment}{size=small,on line,enhanced,frame hidden,colback=myblue!10,fontupper=\footnotesize}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+% \title{^^A
+%   Make link targets ^^A
+%   \\
+%   hyperref bundle
+% }
+%
+% \author{^^A
+%  The \LaTeX{} Project\thanks
+%    {^^A
+%      E-mail:
+%        \href{mailto:latex-team@latex-project.org}
+%          {latex-team@latex-project.org}^^A
+%    }^^A
+% }
+%
+% \date{Version XXXX, released XXXX-XX-XX}
+%
+% \maketitle
+% \begin{documentation}
+% \section{Commands to create and adapt targets}
+%  This module provides commands to create targets.
+%  Their goal is to unify and replace
+%  a number of user and internal hyperref commands and to provide a clear
+%  interface for package authors and users.
+% \subsection{The main command}
+% \begin{function}{\MakeLinkTarget}
+% \begin{syntax}
+% \cs{MakeLinkTarget}\oarg{prefix}\Arg{counter}\\
+% \cs{MakeLinkTarget}\oarg{prefix}\{\} \\
+% \cs{MakeLinkTarget}*\Arg{manual target}
+% \end{syntax}
+% \end{function}
+%
+% \cs{MakeLinkTarget} creates a target for an internal link, (called a destination
+% if a PDF is created). In vertical mode the target is created where the command is issued,
+% in horizontal mode it is typically (in a PDF) raised by the current \cs{normalbaselineskip}
+% (similar to the targets created by \cs{refstepcounter}).
+%
+% The arguments allow to control the name of the target/anchor/destination. While technically
+% any unique name (e.g. some number) would work, names related to the actual counter both
+% simplifies the debugging and referencing destinations from external documents. Also \cs{autoref}
+% makes use of the name to identify the type of a label: it splits off the part until the first period and
+% then looks up for a defined name. So if you create a target name \texttt{ABC.CDE.1.2}, \cs{autoref} tries
+% to use \cs{ABCautorefname}.
+%
+% The name is then stored \emph{globally}\footnote{This means that the deprecated \pkg{hyperref}
+% option \texttt{localanchorname} is ignored.} in \cs{@currentHref} and used for example in the
+% next \cs{label}.
+% A target name must be unique across a document. It is up to the users and package
+% authors to ensure this by following the advices given below.
+%
+% \begin{doccomment}
+% A global \cs{@currentHref} means that the target name and
+% the label name can get out of sync: if
+% for example a numbered equation is used between a section and a \cs{label},
+% a reference will show the section number but a link will jump to the equation.
+%
+% \pkg{hyperref} allows to switch to local assignment of \cs{@currentHref}
+% and so to align with the other \cs{label} values with the
+% (so-called experimental) option \texttt{localanchorname}. But while on a document
+% level this can work, it makes it difficult for package authors
+% to add reliable link targets that can be referenced if it is unclear
+% if the assignment is local or global.
+%
+% So the choice was made to set \cs{@currentHref} globally always
+% (and to deprecate \texttt{localanchorname}):
+% This is the default in \pkg{hyperref} since ever and it didn't lead to
+% major problems. It has the advantage to
+% allow to put an anchor in a box and move it around. E.g. in the following
+% example the two \cs{ref} commands
+% reference the section but the second jumps to the top of the rule:
+%
+% \begin{verbatim}
+% \section{An example}\label{sec:title}
+% \newpage \raisebox{3cm}[0pt][0pt]{\phantomsection}%
+% \rule{1cm}{3cm}\label{sec:page2}
+% page two
+% \newpage
+% \ref{sec:title}, \ref{sec:page2}
+% \end{verbatim}
+%
+% \end{doccomment}
+%
+%
+%
+% \subsection*{Target names from counters}
+% \begin{syntax}
+% \cs{MakeLinkTarget}\oarg{prefix}\Arg{counter}
+% \end{syntax}
+%
+% If the mandatory argument is not empty it is interpreted as a \LaTeX{} counter name.
+% The counter is not stepped by the command.
+% If the \meta{counter} doesn't exist, a warning is issued and no target is created.
+%
+% The target name is created as expansion of
+% \texttt{\meta{prefix}.\cs{theH\meta{counter}}} (and so both the prefix
+% and \cs{theH\meta{counter}} should be expandable).
+% The default prefix is the counter name \meta{counter}.
+%
+% For example:
+%
+% \medskip
+% \noindent
+% {\ttfamily
+% \begin{tabular}{@{}l@{}ll}
+% \cs{MakeLinkTarget}\{section\} &$\Rightarrow$ section.\cs{theHsection} & $\Rightarrow$ section.1.1\\
+% \cs{MakeLinkTarget}[sec]\{section\} &$\Rightarrow$ sec.\cs{theHsection}
+% \end{tabular}
+% }
+% \medskip
+%
+% \cs{theH\meta{counter}} must be defined:
+% \cs{MakeLinkTarget} does not try like other \pkg{hyperref} commands to
+% construct the command on-the-fly but warns and creates no
+% target if it doesn't exist.
+% Be aware that if \pkg{hyperref} is used with the option \texttt{implicit=false} it
+% does not predefine and create \cs{theH\meta{counter}} representations
+% so targets could be missing!\footnote{It is planed that \LaTeX{} directly defines
+% the \cs{theH\meta{counter}} for all counters created with \cs{newcounter}.}
+%
+%
+% Typically \cs{theH\meta{counter}} should expand to numbers
+% and periods and make use of parent counters to give a unique representation.
+% The prefix can be a more or less arbitrary string. Spaces are allowed (but not
+% really recommended).
+% A star at the end should be avoided to prevent clashes with
+% the names created when the internal counter is used.
+% The use of non-ASCII chars with pdflatex depends on the \LaTeX{} version: With newer
+% version many of them are safe and with a format 2022-06-01 or newer
+% it should be even possible to use chars in a target name which
+% are undeclared and can't be typeset in the document.
+% But despite the fact that it works, it is recommended to stick to ASCII
+% and to avoid spaces: It is unclear if all PDF viewers and editors can handle
+% them, also they give rather unreadable names in the PDF like |(\360\237\246\206)|
+% and so make debugging harder.
+%
+%
+% Using a special prefix can be useful if the actual counter
+% has an internal name like e.g. \texttt{tcb@cnt@example}.
+% \texttt{\cs{MakeLinkTarget}[tcbexample]\{tcb@cnt@example\}} then gives
+% a nicer looking target name. Care should be taken not to clash
+% with existing counter names and names for \cs{autoref}
+% should be adjusted if needed.
+%
+%
+% \subsection*{Targets using the internal counter}
+% \begin{syntax}
+% \cs{MakeLinkTarget}\oarg{prefix}\{\}
+% \end{syntax}
+%
+% If the mandatory argument is empty a target name based on
+% an internal absolute counter is created.
+% The counter is stepped at every call (and also by other \pkg{hyperref} commands).
+% The prefix is added with a star and a period (see above for
+% the allowed chars). The default prefix is \texttt{page}.
+%
+%
+% \begin{syntax}
+% \begin{tabular}{@{}ll}
+% \cs{MakeLinkTarget}\texttt{\{\}} &$\Rightarrow$ \texttt{page*.1}\\
+% \cs{MakeLinkTarget}\texttt{\{\}} &$\Rightarrow$ \texttt{page*.2}\\
+% \cs{MakeLinkTarget}[section]\texttt{\{\}} &$\Rightarrow$ \texttt{section*.3}\\
+% \end{tabular}
+% \end{syntax}
+%
+% As an example the
+% \pkg{hyperref} command \cs{phantomsection} is equivalent to
+% \texttt{\cs{MakeLinkTarget}[section]\{\}}.
+%
+% \subsection*{Manual target names}
+% \begin{syntax}
+% \cs{MakeLinkTarget}\texttt{*}\Arg{manual target name}
+% \end{syntax}
+%
+% If the starred variant is used a manual target name is created.
+%
+% \texttt{\cs{MakeLinkTarget}*\{destname\}} is roughly equivalent to
+% \texttt{\cs{hypertarget}\{destname\}\{\}} (unlike the
+% latter it also raises the destination in a PDF, and there is no text argument).
+% The target name is expanded, see the remarks about prefixes above regarding
+% the allowed chars.
+%
+% When creating manually targets care should be taken to avoid
+% clashes with automatic target names.
+% As all automatic targets contain at least one period,
+% names without a period are recommended.
+%
+% \begin{doccomment}
+% The second (text) argument of \cs{hypertarget} is only used
+% if the option \texttt{nesting} is set to true---but this option isn't used
+% anywhere (in PDF the idea of a text in the anchor or nesting of anchors
+% makes no sense anyway but also when html is produced e.g. with \texttt{make4ht}
+% it is not used). So probably the option will be deprecated and removed.
+% \end{doccomment}
+%
+% \subsection{Manipulate the next target name}
+%
+% Targets are sometimes created in places where it is difficult to inject
+% a label to retrieve the target name for use e.g. in a bookmark.
+% The next command allows to change the next target name:
+%
+% \begin{function}{\NextLinkTarget}
+% \begin{syntax}
+% \cs{NextLinkTarget}\Arg{manual target}
+% \end{syntax}
+%
+% The command changes the next target name to \meta{manual target}.
+% It does the same as the \cs{hypersetup} key
+% \texttt{next-anchor} and also affects targets created by \cs{refstepcounter}.
+%\end{function}
+%
+% A use case are bookmarks for the table of contents
+% where you know that the heading will create
+% a target:
+%
+% \begin{verbatim}
+% \documentclass{book}
+% \usepackage{bookmark}
+%
+% \begin{document}
+% \bookmark[dest=toc]{Table of Contents}
+% \NextLinkTarget{toc}
+% \tableofcontents
+% \chapter{A}
+% \end{document}
+% \end{verbatim}
+%
+%
+% \subsection*{Hooks}
+%
+% \begin{function}{makelinktarget}
+% The hook \texttt{makelinktarget}\footnote{The hook uses a plain name
+% without reference to the \pkg{hyperref} package in anticipation of the move
+% of this code into the \LaTeX{} kernel.}
+% is executed at the begin of the commands. It is inside a group and
+% so can be used to locally change settings. See below for an example.
+% \end{function}
+%
+%
+% \subsection*{Suppressing the target}
+%
+% \begin{function}{\LinkTargetOn,\LinkTargetOff}
+% \begin{syntax}
+% \cs{LinkTargetOn}\\
+% \cs{LinkTargetOff}
+% \end{syntax}
+% \end{function}
+%
+%
+% This commands allows to switch on and off locally the creation of a target with
+% \cs{MakeLinkTarget}.
+% The switches are also honored by \cs{refstepcounter}\footnote{currently
+% \cs{refstepcounter} doesn't use \cs{MakeLinkTarget} itself but this
+% will probably change.}.
+% This allows to suppress the target
+% from an internal \cs{refstepcounter} and replace it by some manual version
+% by using grouping:
+%
+% \begin{verbatim}
+% \LinkTargetOff %suppress anchor in internal refstepcounter
+% ...
+% \refstepcounter{...}
+% ...
+% {\LinkTargetOn\MakeLinkTarget*{mytarget}} %create manual anchor
+% ...
+% \LinkTargetOn
+% \end{verbatim}
+%
+%
+% \subsection*{Raising the target}
+%
+% In horizontal mode the target is raised by the current value of \cs{normalbaselineskip}.
+%
+% To change this the hook can be used e.g. to double the value everywhere:
+%
+% \begin{verbatim}
+% \AddToHook{cmd/MakeLinkTarget/before}
+%   {\setlength\normalbaselineskip{2\normalbaselineskip}}
+% \leavevmode\MakeLinkTarget{section}
+% \end{verbatim}
+%
+%
+% \subsection{Changing all target names}
+%
+% \begin{function}{\SetLinkTargetFilter}
+% \begin{syntax}
+% \cs{SetLinkTargetFilter}\Arg{filter code using \#1}
+% \end{syntax}
+% \end{function}
+%
+% \pkg{hyperref} provides the command \cs{HyperDestNameFilter} to change all target names.
+% It is applied\footnote{In the backend code, so it depends actually on
+% the driver if it is honored or not}
+% to every target name and is also used in references,
+% but it doesn't change \cs{@currentHref} itself. So after
+%
+% \begin{verbatim}
+% \renewcommand*{\HyperDestNameFilter}[1]{docA-#1}
+% \end{verbatim}
+%
+% you would get in the PDF everywhere the prefix \texttt{docA}
+%
+% \begin{verbatim}
+% %destination names:
+% <<
+% /Names [(docA-Doc-Start) 7 0 R (docA-chapter.1) 8 0 R (docA-page.1) 6 0 R]
+% /Limits [(docA-Doc-Start) (docA-page.1)]
+% >>
+% %link to a chapter
+% /A << /S /GoTo /D (docA-chapter.1) >>
+% %link from the bookmark
+% << /S /GoTo /D (docA-chapter.1) >>
+% \end{verbatim}
+%
+% but the label info in the \texttt{.aux} would show only \texttt{chapter.1}:
+%
+% \begin{verbatim}
+% \newlabel{chap}{{1}{1}{Title}{chapter.1}{}}
+% \end{verbatim}
+%
+% and so \cs{autoref} is still able to extract the counter name.
+%
+% \cs{MakeLinkTarget} uses this filter too: it would break internal link
+% commands if it would ignore it.
+% To stay compatible with future development the filter should not be redefined
+% directly but be set with \cs{SetLinkTargetFilter}.
+% The command can only be used in the preamble.
+%
+% \begin{verbatim}
+% \SetLinkTargetFilter{docA-#1}
+% \end{verbatim}
+% \end{documentation}
+%
+% \begin{implementation}
+% \section{\pkg{maketarget} implementation}
+%    \begin{macrocode}
+%<@@=hyp>
+%<*header>
+\ProvidesExplPackage{maketarget}{2022-04-22}{0.95}
+  {Making targets, destinations and anchors}
+%</header>
+%    \end{macrocode}
+%<package-include>\ExplSyntaxOn
+% \subsection{Variables}
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+% \begin{macro}{\l_@@_target_create_bool}
+%  This boolean decides if a target is created at all.
+%  (it will replace \cs{@skiphyperref} long term)
+%    \begin{macrocode}
+\bool_new:N \l_@@_target_create_bool
+\bool_set_true:N \l_@@_target_create_bool
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{makelinktarget}
+% This hook is used to adapt for example the raising
+%    \begin{macrocode}
+\hook_new:n {makelinktarget}
+%    \end{macrocode}
+% \end{macro}
+% \subsection{Helper commands}
+% \begin{macro}{\_@@_target_raise:n}
+% We need a command to raise the targets.
+% It is mostly a copy from the hyperref command
+% but we removed the hooks and use \cs{normalbaselineskip}.
+% TODO: The code to save/restore the space factor should
+% be replaced by kernel methods.
+%    \begin{macrocode}
+\cs_new_protected:Npn \@@_target_raise:n #1
+ {
+   \mode_if_vertical:TF
+    { #1 }
+    {
+     \Hy@SaveSpaceFactor
+     \penalty\@M
+     \smash
+      {
+       \box_move_up:nn
+        { \normalbaselineskip }
+        {
+         \hbox:n
+          {
+           \Hy@RestoreSpaceFactor
+           #1
+           \Hy@SaveSpaceFactor
+          }
+        }
+      }
+     \Hy@RestoreSpaceFactor
+    }
+ }
+%    \end{macrocode}
+% \end{macro}
+% \subsection{Providing the commands}
+% In anticipation of the addition of the main commands to the
+% kernel as no-ops we provide them:
+%    \begin{macrocode}
+\ProvideDocumentCommand\LinkTargetOn{}{}
+\ProvideDocumentCommand\LinkTargetOff{}{}
+\ProvideDocumentCommand\MakeLinkTarget{sO{}m}{}
+\ProvideDocumentCommand\NextLinkTarget{m}{}
+%    \end{macrocode}
+%
+% \subsection{Target on and off switch}
+% \begin{macro}{\LinkTargetOn,\LinkTargetOff}
+%    \begin{macrocode}
+\RenewDocumentCommand\LinkTargetOn {}
+ {
+   \bool_set_true:N \l_@@_target_create_bool
+ }
+
+
+\RenewDocumentCommand\LinkTargetOff {}
+ {
+   \bool_set_false:N \l_@@_target_create_bool
+ }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\MakeLinkTarget}
+% This is the main command. To keep it simple
+% we allow an optional argument also for the manual
+% command but ignore it for now.
+%    \begin{macrocode}
+\RenewDocumentCommand\MakeLinkTarget {s O{} m}
+  {
+    \bool_if:NT \l_@@_target_create_bool
+      {
+        \group_begin:
+        \hook_use:n { makelinktarget }
+        \IfBooleanTF  {#1}
+          {
+            \@@_target_manual:nn {#2}{#3}
+          }
+          {
+            \@@_target_counter:nn {#2}{#3}
+          }
+        \group_end:
+      }
+  }
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\@@_target_manual:nn}
+% This is the code for the manual target name. The prefix is simply ignored.
+%    \begin{macrocode}
+\cs_new_protected:Npn  \@@_target_manual:nn #1 #2 %#1 prefix, #2 name
+  {
+    \tl_gset:Nx \@currentHref {#2}
+    \hook_use:n {__hyp/target/setname}
+    \@onelevel@sanitize\@currentHref
+    \@@_target_raise:n {\hyper@anchorstart{\@currentHref}\hyper@anchorend}
+  }
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\@@_target_counter:nn}
+% The code for counter related targets must be split into the case
+% where the internal counter is used, and where a user counter is used
+%    \begin{macrocode}
+\cs_new_protected:Npn \@@_target_counter:nn #1 #2  %#1 prefix, #2 counter or empty
+  {
+    \tl_if_blank:nTF {#2}
+      {
+        \@@_target_counter_anon:n {#1}
+      }
+      {
+        \@@_target_counter_doc:nn {#1}{#2}
+      }
+  }
+
+%    \end{macrocode}
+%\end{macro}
+%\begin{macro}{\@@_target_counter_anon:n}
+% This creates the target with the internal count.
+% We use the same (tex) count \cs{Hy@linkcounter} than the other
+% hyperref commands.
+%    \begin{macrocode}
+\cs_new_protected:Npn \@@_target_counter_anon:n #1
+  {
+    \int_gincr:N\Hy@linkcounter
+    \tl_gset:Nx \@currentHref
+      {\tl_if_blank:nTF{#1}{page}{#1}*.\int_use:N\Hy@linkcounter}
+    \hook_use:n {__hyp/target/setname}
+    \@onelevel@sanitize\@currentHref
+    \@@_target_raise:n {\hyper@anchorstart{\@currentHref}\hyper@anchorend}
+  }
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\@@_target_counter_doc:nn}
+% And now the target with the user counter. We warn if
+% the counter or the representation doesn't exist
+%    \begin{macrocode}
+\cs_new_protected:Npn \@@_target_counter_doc:nn #1 #2
+  {
+    \bool_lazy_and:nnTF { \cs_if_free_p:c {c@#2} } { \cs_if_free_p:c {theH#2} }
+      {
+        \PackageWarning {hyperref}{Counter~'#2'~or~the~representation~'\string\theH#2`\MessageBreak
+        don't~exist.~No~target~created.}{}
+      }
+      {
+        \tl_gset:Nx \@currentHref {\tl_if_blank:nTF{#1}{#2}{#1}.\use:c{theH#2}}
+        \hook_use:n {@@/target/setname}
+        \@onelevel@sanitize\@currentHref
+        \@@_target_raise:n {\hyper@anchorstart{\@currentHref}\hyper@anchorend}
+      }
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\NextLinkTarget}
+%  we rely on the internal hook to set the next target name:
+%    \begin{macrocode}
+\RenewDocumentCommand\NextLinkTarget {m}
+  {
+    \hook_gput_next_code:nn {@@/target/setname}
+      {
+        \tl_gset:Nx \@currentHref {#1}
+      }
+  }
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\SetLinkTargetFilter}
+% This is an interface to \cs{HyperDestNameFilter}
+%    \begin{macrocode}
+\NewDocumentCommand\SetLinkTargetFilter {m}
+  {
+    \cs_set:Npn \HyperDestNameFilter ##1 {#1}
+  }
+\@onlypreamble \SetLinkTargetFilter
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+%</package>
+%<@@=>.
+%    \end{macrocode}
+%<package-include>\ExplSyntaxOff
+%\end{implementation}
+% \Finale
+\endinput

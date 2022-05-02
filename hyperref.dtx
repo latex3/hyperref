@@ -1,30 +1,30 @@
 % \iffalse
 %% File: hyperref.dtx
-%% Copyright
-%% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
-%% 2001-2015 Heiko Oberdiek.
-%% 2016-2019 Oberdiek Package Support Group
-%% 2019-2022 LaTeX Project
-%%      https://github.com/latex3/hyperref/issues
-%%
-%% This file is part of the `Hyperref Bundle'.
-%% -------------------------------------------
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%%
-%% The Current Maintainer of this work is the LaTeX Project.
-%%
-%% The list of all files belonging to the `Hyperref Bundle' is
-%% given in the file `manifest.txt'.
-%%
+% Copyright
+% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
+% 2001-2015 Heiko Oberdiek.
+% 2016-2019 Oberdiek Package Support Group
+% 2019-2022 LaTeX Project
+%      https://github.com/latex3/hyperref/issues
+%
+% This file is part of the `Hyperref Bundle'.
+% -------------------------------------------
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is the LaTeX Project.
+%
+% The list of all files belonging to the `Hyperref Bundle' is
+% given in the file `manifest.txt'.
+%
 %<package|nohyperref|driver|check>\NeedsTeXFormat{LaTeX2e}[2020/10/01]
 %<package>\ProvidesPackage{hyperref}
 %<nohyperref>\ProvidesPackage{nohyperref}
@@ -52,7 +52,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none>  [2022-02-21 v7.00n %
+%<!none&!packageEnd>  [2022-02-21 v7.00n %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -10232,8 +10232,9 @@
 \fi
 %</pdfmarkbase|dvipdfm|xetex>
 %    \end{macrocode}
+%
 %    \begin{macrocode}
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -10348,28 +10349,38 @@
 % We do not want the handler for |\refstepcounter| to cut in
 % during the processing of |\item| (we handle that separately),
 % so we provide a bypass conditional.
-% change 2022-04-22: removed test for the slide counter.
+% change 2022-04-22: removed test for the slide counter
+% and for the equation name.
+% change 2022-05-02: added the new boolean set by
+% |\LinkTargetOn/\LinkTargetOff|
+%
 %    \begin{macrocode}
 \newif\if@hyper@item
 \newif\if@skiphyperref
 \@hyper@itemfalse
 \@skiphyperreffalse
+\ExplSyntaxOn
 \def\refstepcounter#1{%
-  \ifHy@pdfstring
-  \else
+  \legacy_if:nF {Hy@pdfstring}
+   {
     \H@refstepcounter{#1}%
-      \if@skiphyperref
-      \else
-        \if@hyper@item
-          \stepcounter{Item}%
-          \hyper@refstepcounter{Item}%
-          \@hyper@itemfalse
-        \else
-          \hyper@refstepcounter{#1}%
-        \fi
-      \fi
-  \fi
+    \bool_lazy_and:nnT
+      { \l__hyp_target_create_bool }
+      { ! \legacy_if_p:n{@skiphyperref} }
+      {
+        \legacy_if:nTF {@hyper@item}
+          {
+            \stepcounter{Item}%
+            \hyper@refstepcounter{Item}%
+            \@hyper@itemfalse
+          }
+          {
+            \hyper@refstepcounter{#1}%
+          }
+      }
+   }
 }
+\ExplSyntaxOff
 \let\Hy@saved@refstepcounter\refstepcounter
 %    \end{macrocode}
 % AMS\LaTeX\ processes all equations twice; we want to make sure
@@ -10532,7 +10543,6 @@
 }
 %    \end{macrocode}
 %    \end{macro}
-%    \begin{macro}{__hyp/target/setname}
 %   We define a hook to allow to overwrite the next destination name.
 %    \begin{macrocode}
 \NewHook{__hyp/target/setname }
@@ -10541,7 +10551,6 @@
        {\Hy@MakeCurrentHref{#1}}%
    }
 %    \end{macrocode}
-% \end{macro}
 %    \begin{macro}{\hyper@makecurrent}
 % Because of Babel mucking around, nullify |\textlatin| when making names.
 % And |\@number| because of babel's lrbabel.def.
@@ -11352,7 +11361,7 @@
 %    \end{macro}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checklatex
 \checkcommand\def\@xfootnotenext[#1]{%
@@ -11377,7 +11386,7 @@
   \relax
 }
 %</check>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % \section{Float captions}\label{captions}
@@ -11488,7 +11497,7 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checklatex[1999/06/01 - 2000/06/01]
 \checkcommand\def\caption{%
@@ -11516,7 +11525,7 @@
   \endgroup
 }
 %</check>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % \section{Bibliographic references}\label{bib}
@@ -11630,7 +11639,7 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checklatex
 \checkcommand\def\@lbibitem[#1]#2{%
@@ -11655,7 +11664,7 @@
   \ignorespaces
 }
 %</check>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % \subsection{Package harvard}
@@ -12035,7 +12044,7 @@
 %    \end{macro}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checklatex
 \checkcommand\def\addcontentsline#1#2#3{%
@@ -12043,7 +12052,7 @@
 }
 \checkcommand\def\contentsline#1{\csname l@#1\endcsname}
 %</check>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % \section{New counters}\label{counters}
@@ -12152,7 +12161,7 @@
 %    A appropriate definition of hyperref's companion counter
 %    (\cmd{\theH...}) is added for correct link names.
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checkpackage{amsmath}[1999/12/14 - 2000/06/06]
 \checkcommand\newcommand{\numberwithin}[3][\arabic]{%
@@ -12166,7 +12175,7 @@
   }%
 }%
 %</check>
-%<*package>
+%<*packageEnd>
 \@ifpackageloaded{amsmath}{%
   \renewcommand*{\numberwithin}[3][\arabic]{%
     \@ifundefined{c@#2}{\@nocounterr{#2}}{%
@@ -12463,7 +12472,7 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %<*check>
 \checklatex
 \checkcommand\def\@setref#1#2#3{%
@@ -12478,7 +12487,7 @@
   \fi
 }
 %</check>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % Now some extended referencing. |\ref*| and |\pageref*| are not linked,
@@ -12721,7 +12730,7 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-%</package>
+%</packageEnd>
 %    \end{macrocode}
 %
 % \section{Configuration files}
@@ -15391,7 +15400,7 @@
 %    is used by writing some clipped text.
 %    \begin{macrocode}
 %<dviwindo>\def\literalps@out#1{\special{ps:#1}}%
-%<package>\providecommand*{\Hy@DistillerDestFix}{}
+%<packageEnd>\providecommand*{\Hy@DistillerDestFix}{}
 %<*pdfmark|dviwindo>
 \def\Hy@DistillerDestFix{%
   \begingroup
@@ -19262,7 +19271,7 @@
 %    \end{macro}
 %    \begin{macrocode}
 %</pdfform>
-%<*package>
+%<*packageEnd>
 %    \end{macrocode}
 %
 % \section{Bookmarks in the PDF file}
@@ -19282,7 +19291,7 @@
   \Hy@MakeCurrentHrefAuto{section*}%
   \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
 }
-%</package>
+%</packageEnd>
 %    \end{macrocode}
 %
 % \subsection{Bookmarks}

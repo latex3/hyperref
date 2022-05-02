@@ -15,6 +15,7 @@ tdslocations = {
   "doc/latex/hyperref/hyperref-doc.css",
   "doc/latex/hyperref/hyperref-doc.html",
   "doc/latex/hyperref/hyperref-doc.pdf",
+  "doc/latex/hyperref/hyperref-linktarget.pdf",
   "doc/latex/hyperref/hyperref-doc2.html",
   "doc/latex/hyperref/hyperref-doc3.html",
   "doc/latex/hyperref/hyperref-doc4.html",
@@ -115,7 +116,11 @@ end
 
 --excludefiles={"hyperref/hyperref-doc.tex"}
 
-typesetfiles = {"hyperref-doc.tex", "backref.dtx", "hyperref.dtx", "nameref.dtx"}
+typesetfiles = {"hyperref-doc.tex", 
+                "backref.dtx", 
+                "hyperref.dtx", 
+                "nameref.dtx",
+                "hyperref-linktarget.dtx"}
 
 local function type_manual()
   print("Special Typesetting hyperref-doc")

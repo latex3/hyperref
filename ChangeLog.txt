@@ -1,5 +1,8 @@
 XXXX-XX-XX Ulrike Fischer/David Carlisle
 
+    * added new interface for package authors to create targets for internal
+      links
+    * allow to suppress sectioning patches of hyperref 
     * removed loading of memhfixc: memoir handles that now by itself.
     * removed an old patch for KOMA before 2001
     * removed compability code for pdftex 1.14
@@ -18,7 +21,7 @@ XXXX-XX-XX Ulrike Fischer/David Carlisle
       \ref, \pageref, \Ref, \nameref and \ref*, \pageref*, \Ref*, \nameref*
     * removed older varioref code, a varioref newer than 2019 is now needed.
     * improved support for showkeys.
-    * Removed the contentsline tests, no longer needed as contentsline
+    * Removed the \contentsline tests, no longer needed as \contentsline
       has now four arguments also in latex.
     * \MakeUppercase and \MakeLowercase work now in bookmark if the expl3
     support is detected.

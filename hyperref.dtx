@@ -11100,8 +11100,10 @@
 % text, separately from whatever labels the text assigns. Too hard
 % to keep track of markers otherwise. If the raw forms |\footnotemark|
 % and |\footnotetext| are used, force them to use un-hyper original.
-%
+% If |\hyper@nopatch@footnote| is defined we don't patch but assume
+% that addings links to footnotes is handled elsewhere.
 %    \begin{macrocode}
+\@ifundefined{hyper@nopatch@footnote}{%
 \ifHy@hyperfootnotes
   \newcounter{Hfootnote}%
   \let\H@@footnotetext\@footnotetext
@@ -11356,6 +11358,7 @@
 %    \end{macrocode}
 %    \begin{macrocode}
 \fi
+}{}
 \Hy@DisableOption{hyperfootnotes}
 %    \end{macrocode}
 %    \end{macro}

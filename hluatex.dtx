@@ -1834,9 +1834,6 @@
       \newwrite\@outlinefile
       \Hy@OutlineRerunCheck
       \immediate\openout\@outlinefile=\jobname.out\relax
-      \ifHy@typexml
-        \immediate\write\@outlinefile{<relaxxml>\relax}%
-      \fi
     \fi
   \fi
 }

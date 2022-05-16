@@ -801,7 +801,6 @@
 % \subsection{Switches}
 %    \begin{macrocode}
 \newif\ifHy@stoppedearly
-\newif\ifHy@typexml
 \newif\ifHy@activeanchor
 \newif\ifHy@backref
 \newif\ifHy@bookmarks
@@ -884,7 +883,6 @@
 \Hy@texhtfalse
 \Hy@psdextrafalse
 \Hy@pdftoolbartrue
-\Hy@typexmlfalse
 \Hy@unicodetrue
 \ifx\kanjiskip\@undefined
 \else
@@ -4677,9 +4675,6 @@
 \define@key{Hyp}{verbose}[true]{%
   \Hy@boolkey{verbose}{#1}%
 }
-\define@key{Hyp}{typexml}[true]{%
-  \Hy@boolkey{typexml}{#1}%
-}
 %    \end{macrocode}
 % If we are going to PDF via HyperTeX |\special| commands,
 % the dvips (-z option)  processor does not know
@@ -6928,12 +6923,6 @@
 \else
   \Hy@Info{Backreferencing OFF}%
 \fi
-\ifHy@typexml
-  \Hy@AtEndOfPackage{%
-    \RequirePackage{color}%
-  }%
-\fi
-\Hy@DisableOption{typexml}
 \ifHy@implicit
   \Hy@InfoNoLine{Implicit mode ON; LaTeX internals redefined}%
 \else
@@ -7268,12 +7257,9 @@
   \ifHy@colorlinks
     \def\@pdfborder{0 0 0}%
     \let\@pdfborderstyle\@empty
-    \ifHy@typexml
-    \else
-      \Hy@CatcodeWrapper{%
-        \RequirePackage{color}%
-      }%
-    \fi
+    \Hy@CatcodeWrapper{%
+      \RequirePackage{color}%
+     }%
     \def\Hy@colorlink#1{%
       \begingroup
       \HyColor@UseColor#1%
@@ -9506,11 +9492,6 @@
 % longer needed as |\contentsline| has now always four arguments.
 %    \begin{macrocode}
   \if@filesw
-    \ifHy@typexml
-      \immediate\closeout\@mainaux
-      \immediate\openout\@mainaux\jobname.aux\relax
-      \immediate\write\@auxout{<relaxxml>\relax}%
-    \fi
     \immediate\write\@auxout{%
       \string\providecommand\string\HyperFirstAtBeginDocument{%
         \string\AtBeginDocument}^^J%
@@ -19620,9 +19601,6 @@
       \newwrite\@outlinefile
       \Hy@OutlineRerunCheck
       \immediate\openout\@outlinefile=\jobname.out\relax
-      \ifHy@typexml
-        \immediate\write\@outlinefile{<relaxxml>\relax}%
-      \fi
     \fi
   \fi
 }
@@ -19707,9 +19685,6 @@
       \newwrite\@outlinefile
       \Hy@OutlineRerunCheck
       \immediate\openout\@outlinefile=\jobname.out\relax
-      \ifHy@typexml
-        \immediate\write\@outlinefile{<relaxxml>\relax}%
-      \fi
     \fi
   \fi
 }

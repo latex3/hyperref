@@ -2,7 +2,7 @@
     * fixed: check if \nameref is already defined for compability
       with ltugboat.cls (issue #234)
     * nameref is loaded always and earlier (issue#235)
-    * the typexml option has been removed as the package is supports
+    * the typexml option has been removed as the package it supports
       no longer exists.
 
 2022-05-13 Ulrike Fischer/David Carlisle

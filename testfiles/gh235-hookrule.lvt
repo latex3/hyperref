@@ -1,0 +1,11 @@
+\input{regression-test}
+\documentclass{article}
+\AddToHook{begindocument}[A]{}
+\DeclareHookRule {begindocument}{A} {after} {hyperref}
+\usepackage{hyperref}
+
+\begin{document}
+\START
+\showoutput
+Foo
+\end{document}

@@ -609,6 +609,7 @@
 \RequirePackage{hycolor}
 \RequirePackage{letltxmacro}[2008/06/13]
 \RequirePackage{auxhook}[2009/12/14]
+\RequirePackage{nameref}[2012/07/28]
 \def\Hy@Error{\@PackageError{hyperref}}
 \def\Hy@Warning{\@PackageWarning{hyperref}}
 \def\Hy@WarningNoLine{\@PackageWarningNoLine{hyperref}}
@@ -6930,7 +6931,6 @@
 \ifHy@typexml
   \Hy@AtEndOfPackage{%
     \RequirePackage{color}%
-    \RequirePackage{nameref}[2012/07/28]%
   }%
 \fi
 \Hy@DisableOption{typexml}
@@ -7298,12 +7298,6 @@
   \Hy@DisableOption{frenchlinks}%
   \ifHy@texht
   \else
-    \ifHy@typexml
-    \else
-      \Hy@CatcodeWrapper{%
-        \RequirePackage{nameref}[2012/07/28]%
-      }%
-    \fi
 %    \end{macrocode}
 %    With active links we have to redefine the starred versions
 %   to avoid that they get links from the include |\@setref|:

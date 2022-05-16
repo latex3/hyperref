@@ -1,0 +1,11 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+
+\begin{document}
+\START
+\showoutput
+\section{abc}\label{blub}
+
+\nameref{blub}
+\end{document}

@@ -1,0 +1,9 @@
+\input{regression-test}
+\documentclass{ltugboat}
+\usepackage{nameref}
+\begin{document}
+\START
+
+\ShowCommand\nameref
+
+\end{document}

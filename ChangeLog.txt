@@ -1,3 +1,7 @@
+2022-05-16 Ulrike Fischer/David Carlisle
+    * fixed: check if \nameref is already defined for compability
+      with ltugboat.cls (issue #234)
+
 2022-05-13 Ulrike Fischer/David Carlisle
 
     * added new interface for package authors to create targets for internal

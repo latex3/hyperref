@@ -33,7 +33,7 @@
 %<driver>\ProvidesFile{nameref.drv}
 % \fi
 % \ProvidesFile{nameref.dtx}
-  [2022-05-13 v2.48 Cross-referencing by name of section]%
+  [2022-05-16 v2.49 Cross-referencing by name of section]%
 %
 %
 % \iffalse
@@ -843,8 +843,16 @@
 %    \end{macrocode}
 %    \begin{macro}{\nameref}
 %    \begin{macrocode}
-\NewDocumentCommand\nameref{s}
-   {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
+\@ifundefined{nameref}
+  {
+   \NewDocumentCommand\nameref{s}
+    {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
+  }
+  {
+    \PackageWarning{nameref}{Redefining \string\nameref}
+    \RenewDocumentCommand\nameref{s}
+    {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
+  }
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Nameref}

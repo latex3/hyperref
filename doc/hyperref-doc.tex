@@ -176,17 +176,16 @@
 \tableofcontents
 \setcounter{tocdepth}{2}% for bookmark levels
 
-\section{Preface---February 2022}
+\section{Preface}
 As can be already seen in the following introduction, \xpackage{hyperref}
 has a long history and has seen many changes over time. The introduction
-mentions workflows, drivers and problems which are no longer relevant,
-or only in edge cases. The documentation reflects this varied history: changes
-and extensions and explanations were and are spread over various papers and sources and
-only incorporated later and so are not always in a coherent order and in sync which each other.
-
+mentions workflows, drivers and problems that are no longer (or only in edge cases) relevant. 
+The documentation reflects this varied history: changes
+and extensions and explanations were and are spread over various papers and sources or
+have been incorporated later and so are not always in a coherent order and in sync which each other.
 
 This history is continuing: If you are using the new \hologo{LaTeX} PDF management
-which is currently distributed as testphase package \xpackage{pdfmanagement-testphase}
+which is currently distributed as a testphase package \xpackage{pdfmanagement-testphase}
 then \xpackage{hyperref} will for the PDF output use a new generic driver which
 contains a number of changes and new features. The documentation of this driver
 \texttt{hyperref-generic.pdf}
@@ -200,7 +199,7 @@ too.
 \subsection{Restoring removed patches}
 
 \xpackage{hyperref} has over time patched quite a number of packages to resolve clashes and incompabilities.
-Quite a number are either no longer needed or should be done by the original packages.
+Many of them are either no longer needed or should be done by the original packages.
 Those patches are now slowly removed from \xpackage{hyperref}.  It should normally not lead to problems, but
 in case that the patches should be restored they can be loaded through the package \xpackage{hyperref-patches} which
 is a part of this bundle.
@@ -2729,13 +2728,15 @@ specific \xpackage{hyperref} hooks to allow reliable interaction. This
 package covers a very wide variety of layouts and citation styles, all
 of which work with \xpackage{hyperref}.
 
-\item Packages that typeset the contents of the \ci{label} and \ci{ref}
-macros, such as \xpackage{showkeys}. Since the \xpackage{hyperref} package
-redefines these commands, you must set \texttt{implicit=false} for these
-packages to work.
+\item Packages that changes \ci{label} and \ci{ref}
+macros. 
 
 \item Packages that do anything serious with the index.
+
+\item Packages that do anything serious with sectioning commands and the toc
 \end{itemize}
+
+
 
 The \xpackage{hyperref} package is distributed with variants on two useful
 packages designed to work especially well with it. These are \xpackage{xr}
@@ -2747,12 +2748,6 @@ respectively.
 \subsection{Package Compatibility}
 
 Currently only package loading orders are available:
-
-
-
-Note: hyperref loads package \xpackage{nameref} at \verb|\begin{document}|.
-Sometimes this is too late, thus this package must be loaded
-earlier.
 
 
 \subsubsection{algorithm}
@@ -2910,6 +2905,8 @@ earlier.
   \usepackage{ellipsis}
 \end{verbatim}
 
+(this will lead to wrong ellipsis in the bookmarks, so \verb|\texorpdfstring| is needed).
+
 \subsubsection{float}
 \begin{verbatim}
  \usepackage{float}
@@ -3056,22 +3053,13 @@ For equations the following might work:
     is not available in general.
 \end{verbatim}
 
-\subsubsection{parskip}
-\begin{verbatim}
- \usepackage{parskip}
-  \usepackage{hyperref}[2012/08/20]
-\end{verbatim}
-
-
- Both packages want to redefine \verb|\@starttoc|.
-
 
 \subsubsection{prettyref}
 \begin{verbatim}
 %%% example for prettyref %%%
 \documentclass{article}
 \usepackage{prettyref}
-\usepackage[pdftex]{hyperref}
+\usepackage{hyperref}
 
 %\newrefformat{FIG}{Figure~\ref{#1}}% without hyperref
 \newrefformat{FIG}{\hyperref[{#1}]{Figure~\ref*{#1}}}
@@ -3095,33 +3083,11 @@ For equations the following might work:
 \end{verbatim}
 
 \subsubsection{sidecap}
-\begin{verbatim}
- Before 2002/05/24 v1.5h:
-    \usepackage{nameref}
-    \usepackage{hyperref}
-    \usepackage{sidecap}
-\end{verbatim}
+Nothing special is needed anymore.
 
 \subsubsection{subfigure}
-\begin{verbatim}
- 1995/03/06 v2.0:
-    \usepackage{subfigure}
-    \usepackage{hyperref}
-    % hypertexnames is set to false.
-  v2.1:
-    \usepackage{nameref}
-    \usepackage{subfigure}
-    \usepackage{hyperref}
-    or
-    \usepackage{hyperref}
-    \usepackage{subfigure}
-  v2.1.2:
-    please update
-  v2.1.3:
-    \usepackage{hyperref}
-    \usepackage{subfigure}
-    or vice versa?
-\end{verbatim}
+The package is obsolete. Use either \xpackage{subfig} 
+or \xpackage{subcaption}
 
 \subsubsection{titleref}
 \begin{verbatim}
@@ -3164,11 +3130,12 @@ For equations the following might work:
   The notation with two carets avoids trouble with 8-bit bytes
   for the README file, you can use the characters directly.
 
+Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
+ longer recommended.
 
 \subsubsection{varioref}
  There are too many problems with varioref. Nobody has time to
   sort them out. Therefore this package is now unsupported.
-
 
  Perhaps you are lucky and some of the features of varioref works
   with the following loading order:
@@ -3182,7 +3149,6 @@ For equations the following might work:
  Also some babel versions can be problematic. For example,
   2005/05/21 v3.8g contains a patch for varioref that breaks
   the hyperref support for varioref.
-
 
 
  Also unsupported:

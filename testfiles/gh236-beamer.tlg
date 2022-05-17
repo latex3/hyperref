@@ -1,0 +1,14 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \beamer@section=\long macro:
+[#1]->\NR@gettitle {#1}\NRorg@beamer@section [{#1}].
+l. ...\makeatletter\show\beamer@section
+> \beamer@descriptionitem=\long macro:
+#1->\NR@gettitle {#1}\NRorg@beamer@descriptionitem {#1}.
+l. ...\makeatletter\show\beamer@descriptionitem
+\tf@nav=\write...
+\tf@toc=\write...
+\tf@snm=\write...
+(gh236-beamer.aux)
+Package rerunfilecheck Info: File `gh236-beamer.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

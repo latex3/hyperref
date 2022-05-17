@@ -1,0 +1,8 @@
+\input{regression-test}
+\documentclass{beamer}
+
+\begin{document}
+\START
+\makeatletter\show\beamer@section
+\makeatletter\show\beamer@descriptionitem
+\end{document}

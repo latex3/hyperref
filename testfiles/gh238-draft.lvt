@@ -1,0 +1,13 @@
+
+\input{regression-test}
+\documentclass{article}
+\usepackage[draft]{hyperref}
+\begin{document}
+x
+\START
+\showoutput
+\section{a\textbf{b}}\label{a}
+\pageref{a}
+\nameref{a}
+
+\end{document}

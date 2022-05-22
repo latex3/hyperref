@@ -1,0 +1,97 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil, direction TLT
+..\kern0.0
+..\kern16.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil, direction TLT
+...\kern0.0
+...\kern62.0
+...\kern-1.00374
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0, direction TLT
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 484.95023fil, direction TLT
+....\write-{}
+....\glue(\topskip) 5.69
+....\hbox(4.31+0.0)x345.0, glue set 324.72fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x15.0, direction TLT
+.....\TU/lmr/m/n/10 x
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -300
+....\glue 15.08499 plus 4.31 minus 0.86198
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 8.00641
+....\hbox(9.99359+0.0864)x345.0, glue set 305.61603fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(9.4464+0.0)x22.50719, direction TLT
+......\glue 0.0
+......\TU/lmr/bx/n/14.4 1
+......\glue 14.4
+.....\TU/lmr/bx/n/14.4 a
+.....\kern0.0 (italic)
+.....\TU/lmr/bx/n/14.4 b
+.....\kern0.0 (italic)
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 9.913 plus 0.86198
+....\write1{\newlabel{a}{{1}{\thepage }{a\textbf {b}}{section.1}{}}}
+....\penalty 10000
+....\penalty 10000
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 4.9736
+....\hbox(6.94+0.11)x345.0, glue set 325.28fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\TU/lmr/m/n/10 1
+.....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
+.....\TU/lmr/m/n/10 a
+.....\kern0.0 (italic)
+.....\TU/lmr/bx/n/10 b
+.....\kern0.0 (italic)
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -0.11
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.34
+...\hbox(6.66+0.0)x345.0, direction TLT
+....\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern0.0
+(gh238-draft.aux)

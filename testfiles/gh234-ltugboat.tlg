@@ -3,4 +3,6 @@ Don't change this file in any respect.
 > \nameref=document command:
   #1:s
 ->\IfBooleanTF {#1}{\@namerefstar }{\T@nameref }.
+<recently read> }
+l. ...\ShowCommand\nameref
 (gh234-ltugboat.aux)

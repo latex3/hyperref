@@ -331,6 +331,13 @@ Make sure it comes \emph{last} of your loaded packages, to give it a
 fighting chance of not being over-written, since its job is to redefine
 many \LaTeX\ commands.\footnote{But work has started to reduce the
 number of redefinition and so the dependencies on the loading order.}
+
+\emph{Do not load it in \ci{AtBeginDocument} or the \texttt{begindocument} hook!}
+While this often worked in the past this is not officially supported. 
+As \xpackage{hyperref} and \xpackage{nameref} use this hook too to initialize commands,
+timing of code execution is tricky and fragile if the packages are loaded there.
+If you want to delay the loading, use the \texttt{begindocument/before} hook. 
+
 Hopefully you will find that all cross-references
 work correctly as hypertext. For example, \ci{section} commands will
 produce a bookmark and a link, whereas \ci{section*} commands will only
@@ -459,7 +466,7 @@ Until \LaTeX{} is updated package authors can also provide these definitions dir
 \subsection{Patches and how to suppress them}
 
 The patches to external commands made by
-\xpackage{hyperref} can be avoided completly by loading \xpackage{hyperref}
+\xpackage{hyperref} can be avoided completely by loading \xpackage{hyperref}
 with the option \texttt{implicit=false}.
 But suppressing everything is often too drastic.
 There is a work in progress to classify

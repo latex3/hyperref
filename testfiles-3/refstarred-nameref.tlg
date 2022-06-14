@@ -3,12 +3,18 @@ Don't change this file in any respect.
 > \ref=document command:
   #1:s
 ->\IfBooleanTF {#1}{\@refstar }{\T@ref }.
+<recently read> }
+l. ...\ShowCommand\ref
 > \Ref=document command:
   #1:s
 ->\IfBooleanTF {#1}{\@Refstar }{\T@Ref }.
+<recently read> }
+l. ...\ShowCommand\Ref
 > \pageref=document command:
   #1:s
 ->\IfBooleanTF {#1}{\@pagerefstar }{\T@pageref }.
+<recently read> }
+l. ...\ShowCommand\pageref
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0
 .\glue 16.0

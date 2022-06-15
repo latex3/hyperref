@@ -1,10 +1,10 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 > \beamer@section=\long macro:
-[#1]->\NR@gettitle {#1}\NRorg@beamer@section [{#1}].
+[#1]#2->\GetTitleString {#1}\let \@currentlabelname \GetTitleStringResult \beamer@savemode \mode <all>\ifbeamer@inlecture \refstepcounter {section}\ifblank {#2}{\long \def \secname {#1}\long \def \lastsection {#1}}{\global \advance \beamer@tocsectionnumber by 1\relax \long \def \secname {#2}\long \def \lastsection {#1}\addtocontents {toc}{\protect \beamer@sectionintoc {\the \c@section }{#2}{\the \c@page }{\the \c@part }{\the \beamer@tocsectionnumber }}}{\let \\=\relax \xdef \sectionlink {{Navigation\the \c@page }{\noexpand \secname }}}\beamer@tempcount =\c@page \advance \beamer@tempcount by -1\addtocontents {nav}{\protect \headcommand {\protect \beamer@sectionpages {\the \beamer@sectionstartpage }{\the \beamer@tempcount }}}\addtocontents {nav}{\protect \headcommand {\protect \beamer@subsectionpages {\the \beamer@subsectionstartpage }{\the \beamer@tempcount }}}\ifblank {#1}{}{\addtocontents {nav}{\protect \headcommand {\protect \sectionentry {\the \c@section }{#1}{\the \c@page }{\secname }{\the \c@part }}}}\beamer@sectionstartpage =\c@page \beamer@subsectionstartpage =\c@page \def \insertsection {\expandafter \hyperlink \sectionlink }\def \insertsubsection {}\def \insertsubsubsection {}\def \insertsectionhead {\hyperlink {Navigation\the \c@page }{#1}}\edef \insertsectionhead {\noexpand \hyperlink {Navigation\the \c@page }{\unexpanded {#1}}}\def \insertsubsectionhead {}\def \insertsubsubsectionhead {}\def \lastsubsection {}\Hy@writebookmark {\the \c@section }{\secname }{Outline\the \c@part .\the \c@section }{2}{toc}\hyper@anchorstart {Outline\the \c@part .\the \c@section }\hyper@anchorend \ifblank {#2}{\beamer@atbeginsections }{\beamer@atbeginsection }\fi \beamer@resumemode .
 l. ...\makeatletter\show\beamer@section
 > \beamer@descriptionitem=\long macro:
-#1->\NR@gettitle {#1}\NRorg@beamer@descriptionitem {#1}.
+#1->\GetTitleString {#1}\let \@currentlabelname \GetTitleStringResult \def \insertdescriptionitem {#1}\hfil \hspace \labelsep {\usebeamertemplate **{description item}}.
 l. ...\makeatletter\show\beamer@descriptionitem
 \tf@nav=\write...
 \tf@toc=\write...

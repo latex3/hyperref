@@ -166,7 +166,7 @@
 }
 \makeatother
 \title{Hypertext marks in \hologo{LaTeX}: a manual for \xpackage{hyperref}}
-\date{2022-05-17 v7.00q}
+\date{2022-06-13 v7.00r}
 
 \begin{document}
 
@@ -179,7 +179,7 @@
 \section{Preface}
 As can be already seen in the following introduction, \xpackage{hyperref}
 has a long history and has seen many changes over time. The introduction
-mentions workflows, drivers and problems that are no longer (or only in edge cases) relevant. 
+mentions workflows, drivers and problems that are no longer (or only in edge cases) relevant.
 The documentation reflects this varied history: changes
 and extensions and explanations were and are spread over various papers and sources or
 have been incorporated later and so are not always in a coherent order and in sync which each other.
@@ -331,6 +331,13 @@ Make sure it comes \emph{last} of your loaded packages, to give it a
 fighting chance of not being over-written, since its job is to redefine
 many \LaTeX\ commands.\footnote{But work has started to reduce the
 number of redefinition and so the dependencies on the loading order.}
+
+\emph{Do not load it in \ci{AtBeginDocument} or the \texttt{begindocument} hook!}
+While this often worked in the past this is not officially supported. 
+As \xpackage{hyperref} and \xpackage{nameref} use this hook too to initialize commands,
+timing of code execution is tricky and fragile if the packages are loaded there.
+If you want to delay the loading, use the \texttt{begindocument/before} hook. 
+
 Hopefully you will find that all cross-references
 work correctly as hypertext. For example, \ci{section} commands will
 produce a bookmark and a link, whereas \ci{section*} commands will only
@@ -459,7 +466,7 @@ Until \LaTeX{} is updated package authors can also provide these definitions dir
 \subsection{Patches and how to suppress them}
 
 The patches to external commands made by
-\xpackage{hyperref} can be avoided in toto by loading \xpackage{hyperref}
+\xpackage{hyperref} can be avoided completely by loading \xpackage{hyperref}
 with the option \texttt{implicit=false}.
 But suppressing everything is often too drastic.
 There is a work in progress to classify
@@ -2729,7 +2736,7 @@ package covers a very wide variety of layouts and citation styles, all
 of which work with \xpackage{hyperref}.
 
 \item Packages that changes \ci{label} and \ci{ref}
-macros. 
+macros.
 
 \item Packages that do anything serious with the index.
 
@@ -3086,7 +3093,7 @@ For equations the following might work:
 Nothing special is needed anymore.
 
 \subsubsection{subfigure}
-The package is obsolete. Use either \xpackage{subfig} 
+The package is obsolete. Use either \xpackage{subfig}
 or \xpackage{subcaption}
 
 \subsubsection{titleref}

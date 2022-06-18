@@ -1,0 +1,25 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+The property list \g__hyp_documentproperties_prop contains the pairs (without
+outer braces):
+>  {hyperref/pdfauthor}  =>  {(author1,xxx, gr^^c3^^bc^^c3^^9fe)}
+>  {hyperref/pdfkeywords}  =>  {keywords}
+>  {hyperref/pdfsubject}  =>  {subject}
+>  {hyperref/pdftitle}  =>  {title ^^c3^^a4^^c3^^bc^^c3^^9f \blub yyy}.
+<recently read> }
+l. ...\prop_show:N\g__hyp_documentproperties_prop
+> \test=macro:
+->(author1,xxx, gr^^c3^^bc^^c3^^9fe).
+l. ...\show\test
+> \test=macro:
+->title ^^c3^^a4^^c3^^bc^^c3^^9f \blub yyy.
+l. ...\show\test
+> \test=macro:
+->keywords.
+l. ...\show\test
+> \test=macro:
+->subject.
+l. ...\show\test
+(documentproperties.aux)
+Package rerunfilecheck Info: File `documentproperties.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

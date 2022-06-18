@@ -4435,7 +4435,35 @@
 %    \end{macrocode}
 %
 % \subsection{Help macros}
+% Package like hyperxmp want to retrieve the value of keys like |pdfauthor|.
+% To avoid that we have two parallel interfaces we provide the interface from
+% the pdfmanagement/ltdocinit if it doesn't exist.
 %
+%    \begin{macro}{\AddToDocumentProperties}
+%    \begin{macro}{\GetDocumentProperties}
+%    \begin{macrocode}
+\ExplSyntaxOn
+\@ifundefined{AddToDocumentProperties}
+  {
+   \prop_new:N \g__hyp_documentproperties_prop
+   \NewDocumentCommand\AddToDocumentProperties{O{\@currname}mm}
+    {
+      \exp_args:NNx
+      \prop_gput:Nnn \g__hyp_documentproperties_prop
+        {
+          \tl_if_blank:eTF {#1}{top-level/}{#1/} #2
+        }
+        { #3}
+    }
+   \NewExpandableDocumentCommand\GetDocumentProperties{m}
+     {
+       \prop_item:Nn \g__hyp_documentproperties_prop {#1}
+     }
+  }{}
+\ExplSyntaxOff
+%    \end{macrocode}
+%    \end{macro}
+%    \end{macro}
 %    \begin{macro}{\IfHyperBooleanExists}
 %    \begin{macrocode}
 \def\IfHyperBooleanExists#1{%
@@ -6202,21 +6230,25 @@
   \endgroup
 }
 \define@key{Hyp}{pdftitle}{%
+  \AddToDocumentProperties[hyperref]{pdftitle}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdftitle{#1}%
 }
 \define@key{Hyp}{pdfauthor}{%
+  \AddToDocumentProperties[hyperref]{pdfauthor}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfauthor{#1}%
 }
 \define@key{Hyp}{pdfproducer}{%
+  \AddToDocumentProperties[hyperref]{pdfproducer}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfproducer{#1}%
 }
 \define@key{Hyp}{pdfcreator}{%
+  \AddToDocumentProperties[hyperref]{pdfcreator}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfcreator{#1}%
@@ -6239,11 +6271,13 @@
   \endgroup
 }
 \define@key{Hyp}{pdfsubject}{%
+  \AddToDocumentProperties[hyperref]{pdfsubject}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfsubject{#1}%
 }
 \define@key{Hyp}{pdfkeywords}{%
+  \AddToDocumentProperties[hyperref]{pdfkeywords}{#1}%
   \HyXeTeX@CheckUnicode
   \HyPsd@PrerenderUnicode{#1}%
   \pdfstringdef\@pdfkeywords{#1}%

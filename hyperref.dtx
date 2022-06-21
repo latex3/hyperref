@@ -4649,6 +4649,22 @@
 }
 \let\KV@Hyp@nolinks\KV@Hyp@draft
 %    \end{macrocode}
+% Implementation with the new key-value handler.
+% Unlike the hyperref code they are currently silent.
+% The `nolinks` option is ignored as it is not documented.
+%    \begin{macrocode}
+\DeclareKeys
+ {
+   ,implicit  .legacy_if_set:n = {Hy@implicit}
+   ,implicit  .usage = load
+   ,draft     .legacy_if_set:n = {Hy@draft}
+   ,draft     .usage = preamble
+   ,
+   ,final     .legacy_if_set_inverse:n = {Hy@draft}
+   ,final     .usage = preamble
+ }
+%    \end{macrocode}
+% These obsolete options are ignored with the new keyval-handler.
 %    \begin{macrocode}
 \def\Hy@ObsoletePaperOption#1{%
   \Hy@WarningNoLine{%
@@ -4709,6 +4725,39 @@
 \define@key{Hyp}{verbose}[true]{%
   \Hy@boolkey{verbose}{#1}%
 }
+%    \end{macrocode}
+% This implements the above keys with the new keyval handler.
+% |setpagesize| is ignored. This isn't a task for hyperref but should
+% be handled by the backend code.
+%    \begin{macrocode}
+\ExplSyntaxOn
+\DeclareKeys
+ {
+   ,linktoc   .choices:nn =
+     { none, section, page, all }
+     { \cs_set_eq:Nc \Hy@linktoc { Hy@linktoc@#1 } }
+   ,linktoc / unknown .code:n =
+     {
+       \Hy@Warning
+         {
+          Unexpected~value~`#1'~of\MessageBreak
+          option~`linktoc'~instead~of~`none',\MessageBreak
+          `section',~`page'~or~`all'
+         }
+     }
+   ,linktoc   .usage:n         = {preamble}
+   ,linktocpage .choice:
+   ,linktocpage / true .code:n =
+     { \cs_set_eq:NN \Hy@linktoc\Hy@linktoc@page }
+   ,linktocpage / false .code:n =
+     { \cs_set_eq:NN \Hy@linktoc\Hy@linktoc@section }
+   ,linktocpage .default:n = {true}
+   ,linktocpage .usage:n   = {preamble}
+   ,extension .tl_set:N        = \XR@ext
+   ,verbose   .legacy_if_set:n = {Hy@verbose}
+   ,debug     .legacy_if_set:n = {Hy@verbose}
+ }
+\ExplSyntaxOff
 %    \end{macrocode}
 % If we are going to PDF via HyperTeX |\special| commands,
 % the dvips (-z option)  processor does not know
@@ -6785,6 +6834,7 @@
 %
 %    \begin{macrocode}
 \let\ReadBookmarks\relax
+\ProcessKeyOptions
 \ProcessKeyvalOptions{Hyp}
 %    \end{macrocode}
 %

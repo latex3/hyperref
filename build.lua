@@ -47,6 +47,7 @@ tdslocations = {
   "tex/latex/hyperref/hvtexmrk.def",
   "tex/latex/hyperref/hxetex.def",
   "tex/latex/hyperref/hyperref.sty",
+  "tex/latex/hyperref/hyperref-2022-06-21.sty",
   "tex/latex/hyperref/hypertex.def",
   "tex/latex/hyperref/minitoc-hyper.sty",
   "tex/latex/hyperref/nameref.sty",
@@ -90,6 +91,7 @@ sourcefiles = {
   "*.dtx",
   "*.ins",
   "*-hyper.sty",
+  "hyperref-2022-06-21.sty",
   "bmhydoc.sty",
   "paperslides99.zip"
 }

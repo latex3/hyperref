@@ -503,7 +503,12 @@
 %<*package>
 %    \end{macrocode}
 % \section{Package options and setup}\label{options}
-%
+% \subsection{Load frozen version in older LaTeX versions}
+%    \begin{macrocode}
+\providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+\IfFormatAtLeastTF{2022/06/01}{}{\RequirePackageWithOptions{hyperref-2022-06-21}}
+\IfFormatAtLeastTF{2022/06/01}{}{\endinput}
+%    \end{macrocode}
 %
 % \subsection{Save catcodes}
 %    There are many packages that change the standard catcodes.

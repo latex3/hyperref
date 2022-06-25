@@ -893,6 +893,7 @@
 \fi
 \Hy@pdfusetitlefalse
 \Hy@verbosefalse
+%\Hy@verbosetrue
 \Hy@pdfwindowuitrue
 \Hy@pdfdisplaydoctitlefalse
 \Hy@pdfafalse
@@ -12052,9 +12053,13 @@
     \else % uncolored
       \def\Hy@temp{#3}%
       \ifx\Hy@temp\ltx@empty
-        \csname l@#1\endcsname{#2}{#3}%
+        \csname l@#1\endcsname{%
+          \hyper@linkstart{uncoloredlink}{\Hy@tocdestname}{#2}\hyper@linkend
+        }{}%
       \else
-        \csname l@#1\endcsname{{#2}}{%
+        \csname l@#1\endcsname{%
+          \hyper@linkstart{uncoloredlink}{\Hy@tocdestname}{#2}\hyper@linkend
+        }{%
           \hyper@linkstart{uncoloredlink}{\Hy@tocdestname}{#3}\hyper@linkend
         }%
       \fi
@@ -16763,12 +16768,6 @@
 \def\@urltype{url}
 \def\hyper@linkstart#1#2{%
   \Hy@VerboseLinkStart{#1}{#2}%
- \ifnum\pdf@strcmp{\unexpanded{#1}}{uncoloredlink}=0 %
-     \expandafter\@firstoftwo
-  \else
-    \expandafter\@secondoftwo
-  \fi
-    {} % uncolored link does nothing
     {\expandafter\Hy@colorlink\csname @#1color\endcsname}
   \def\Hy@tempa{#1}%
   \ifx\Hy@tempa\@urltype

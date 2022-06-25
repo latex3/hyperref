@@ -881,7 +881,7 @@ hyperindex     & boolean & true    & Makes the page numbers of index entries int
 hyperfootnotes & boolean & true    & Makes the footnote marks into hyperlinks to the footnote text.
                                      Easily broken \ldots\\
 encap          &         &         & Sets encap character for hyperindex \\
-linktoc        & text    & section & make text (\verb|section|), page number (\verb|page|), both (\verb|all|) or nothing (\verb|none|) be link on TOC, LOF and LOT \\
+	linktoc        & text    & section & make text (\verb|section|), page number (\verb|page|), both (\verb|all|), both, but with no change in text color (\verb|uncolored|) or nothing (\verb|none|) be link on TOC, LOF and LOT \\
 linktocpage    & boolean & false   & make page number, not text, be link on TOC, LOF and LOT \\
 breaklinks     & boolean & false   & allow links to break over lines by making links over multiple lines into PDF links to
                                      the same target \\
@@ -2057,10 +2057,11 @@ an anchor name which can be referenced with a bookmark command.
  The new option `linktoc' allows more control which part
   of an entry in the table of contents is made into a link:
 \begin{itemize}
- \item `linktoc=none'    (no links)
- \item `linktoc=section' (default behaviour, same as `linktocpage=false')
- \item `linktoc=page'    (same as `linktocpage=true')
- \item `linktoc=all'     (both the section and page part are links)
+ \item `linktoc=none'      (no links)
+ \item `linktoc=section'   (default behaviour, same as `linktocpage=false')
+ \item `linktoc=page'      (same as `linktocpage=true')
+ \item `linktoc=all'       (both the section and page part are links)
+ \item `linktoc=uncolored' (both the section and page part are links, but are rendered in the default text color. Useful if tables of contents pages may have differing color schemes throughout a document)
 \end{itemize}
 
 \subsection{Option `pdfnewwindow' changed}

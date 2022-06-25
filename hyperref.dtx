@@ -16767,7 +16767,7 @@
 \def\@urltype{url}
 \def\hyper@linkstart#1#2{%
   \Hy@VerboseLinkStart{#1}{#2}%
-    {\expandafter\Hy@colorlink\csname @#1color\endcsname}
+  \expandafter\Hy@colorlink\csname @#1color\endcsname
   \def\Hy@tempa{#1}%
   \ifx\Hy@tempa\@urltype
     \special{html:<a href=\hyper@quote#2\hyper@quote>}%

@@ -4682,6 +4682,7 @@
 \chardef\Hy@linktoc@section=1 %
 \chardef\Hy@linktoc@page=2 %
 \chardef\Hy@linktoc@all=3 %
+\chardef\Hy@linktoc@uncolored=4 %
 \ifHy@linktocpage
   \let\Hy@linktoc\Hy@linktoc@page
 \else
@@ -4692,7 +4693,7 @@
     \Hy@Warning{%
       Unexpected value `#1' of\MessageBreak
       option `linktoc' instead of `none',\MessageBreak
-      `section', `page' or `all'%
+      `section', `page', 'uncolored' or `all'%
     }%
   }{%
     \expandafter\let\expandafter\Hy@linktoc
@@ -12034,8 +12035,8 @@
         \csname l@#1\endcsname{{#2}}{%
           \hyper@linkstart{link}{\Hy@tocdestname}{#3}\hyper@linkend
         }%
-      \fi
-    \else % all
+        \fi        
+    \or % all
       \def\Hy@temp{#3}%
       \ifx\Hy@temp\ltx@empty
         \csname l@#1\endcsname{%
@@ -12046,6 +12047,15 @@
           \hyper@linkstart{link}{\Hy@tocdestname}{#2}\hyper@linkend
         }{%
           \hyper@linkstart{link}{\Hy@tocdestname}{#3}\hyper@linkend
+        }%
+      \fi
+    \else % uncolored
+      \def\Hy@temp{#3}%
+      \ifx\Hy@temp\ltx@empty
+        \csname l@#1\endcsname{#2}{#3}%
+      \else
+        \csname l@#1\endcsname{{#2}}{%
+          \hyper@linkstart{uncoloredlink}{\Hy@tocdestname}{#3}\hyper@linkend
         }%
       \fi
     \fi
@@ -16753,7 +16763,13 @@
 \def\@urltype{url}
 \def\hyper@linkstart#1#2{%
   \Hy@VerboseLinkStart{#1}{#2}%
-  \expandafter\Hy@colorlink\csname @#1color\endcsname
+ \ifnum\pdf@strcmp{\unexpanded{#1}}{uncoloredlink}=0 %
+     \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+    {} % uncolored link does nothing
+    {\expandafter\Hy@colorlink\csname @#1color\endcsname}
   \def\Hy@tempa{#1}%
   \ifx\Hy@tempa\@urltype
     \special{html:<a href=\hyper@quote#2\hyper@quote>}%

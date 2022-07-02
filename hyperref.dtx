@@ -4830,11 +4830,18 @@
  }
 %    \end{macrocode}
 %
-% Determines whether an automatic anchor is put on each page
+% Determines whether an automatic anchor is put on each page.
 %    \begin{macrocode}
 \define@key{Hyp}{pageanchor}[true]{%
   \Hy@boolkey{pageanchor}{#1}%
 }
+%    \end{macrocode}
+% This can be changed inside the document if wanted.
+%    \begin{macrocode}
+\DeclareKeys
+ {
+   ,pageanchor .legacy_if_set:n {Hy@pageanchor}
+ }
 %    \end{macrocode}
 % Are the page links done as plain arabic numbers, or do
 % they follow the formatting of the package? The latter loses
@@ -4843,6 +4850,10 @@
 \define@key{Hyp}{plainpages}[true]{%
   \Hy@boolkey{plainpages}{#1}%
 }
+\DeclareKeys
+ {
+   ,plainpages .legacy_if_set:n {Hy@plainpages}
+ }
 %    \end{macrocode}
 % Are the names for anchors made as per the HyperTeX system,
 % or do they simply use what \LaTeX\ provides?
@@ -4850,6 +4861,10 @@
 \define@key{Hyp}{naturalnames}[true]{%
   \Hy@boolkey{naturalnames}{#1}%
 }
+\DeclareKeys
+ {
+   ,naturalnames .legacy_if_set:n {Hy@naturalnames}
+ }
 %    \end{macrocode}
 % Completely ignore the names as per the HyperTeX system,
 % and use unique counters.
@@ -4857,19 +4872,32 @@
 \define@key{Hyp}{hypertexnames}[true]{%
   \Hy@boolkey{hypertexnames}{#1}%
 }
+\DeclareKeys
+ {
+   ,hypertexnames .legacy_if_set:n {Hy@hypertexnames}
+ }
 %    \end{macrocode}
 % Currently, |dvips| doesn't allow anchors nested within targets,
 % so this option tries to stop that happening. Other processors
-% may be able to cope.
+% may be able to cope. This option is unused and only kept for
+% compabiblity
 %    \begin{macrocode}
 \define@key{Hyp}{nesting}[true]{%
   \Hy@boolkey{nesting}{#1}%
 }
+\DeclareKeys
+ {
+   ,nesting .legacy_if_set:n {Hy@nesting}
+ }
 %    \end{macrocode}
 %    \begin{macrocode}
 \define@key{Hyp}{destlabel}[true]{%
   \Hy@boolkey{destlabel}{#1}%
 }
+\DeclareKeys
+ {
+   ,destlabel .legacy_if_set:n {Hy@destlabel}
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}

@@ -4659,7 +4659,6 @@
    ,implicit  .usage = load
    ,draft     .legacy_if_set:n = {Hy@draft}
    ,draft     .usage = preamble
-   ,
    ,final     .legacy_if_set_inverse:n = {Hy@draft}
    ,final     .usage = preamble
  }
@@ -4769,6 +4768,12 @@
 \define@key{Hyp}{raiselinks}[true]{%
   \Hy@boolkey{raiselinks}{#1}%
 }
+%    \end{macrocode}
+%    \begin{macrocode}
+\DeclareKeys
+  {
+    raiselinks .legacy_if_set:n = {Hy@raiselinks}
+  }
 %    \end{macrocode}
 % Most PDF-creating drivers do not allow links to be broken
 %    \begin{macrocode}

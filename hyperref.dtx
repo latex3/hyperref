@@ -4910,6 +4910,23 @@
     \def\HyPsd@pdfencoding{pdfdoc}%
   \fi
 }
+\DeclareKeys
+ {
+   ,unicode .choice:
+   ,unicode / true .code:n  =
+    {
+      \legacy_if_set_true:n {Hy@unicode}
+      \def\HyPsd@pdfencoding{unicode}
+      \HyPsd@LoadUnicode
+    }
+   ,unicode / false .code:n =
+    {
+      \legacy_if_set_false:n {Hy@unicode}
+      \def\HyPsd@pdfencoding{pdfdoc}
+    }
+   ,unicode .default:n      = { true }
+   ,unicode .usage:n        = { preamble }
+ }
 \Hy@AtBeginDocument{%
   \ifx\HyPsd@LoadUnicode\relax
   \else

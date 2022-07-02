@@ -4775,7 +4775,11 @@
     raiselinks .legacy_if_set:n = {Hy@raiselinks}
   }
 %    \end{macrocode}
-% Most PDF-creating drivers do not allow links to be broken
+% Most PDF creating drivers nowadays allow links to be broken.
+% and the boolean |\Hy@breaklinks| is actually only used
+% for hdviwind.def and pdfmark.def
+% |\Hy@setbreaklinks| is a rather convoluted method to figure out if the key has
+% been set explicitly to be able to issue a warning if the driver is loaded.
 %    \begin{macrocode}
 \def\Hy@setbreaklinks#1{%
   \csname breaklinks#1\endcsname
@@ -4800,6 +4804,14 @@
   \let\Hy@setbreaklinks\@gobble
 }
 %    \end{macrocode}
+% As the dvips driver checks the value we set the usage to `load'.%
+%    \begin{macrocode}
+\DeclareKeys
+ {
+   ,breaklinks .legacy_if_set:n {Hy@breaklinks}
+   ,breaklinks .usage:n = load
+ }
+%    \end{macrocode}
 %    \begin{macrocode}
 \define@key{Hyp}{localanchorname}[true]{%
   \Hy@WarningNoLine{%
@@ -4808,6 +4820,16 @@
   \Hy@boolkey{localanchorname}{#1}%
 }
 %    \end{macrocode}
+% This key is deprecated, local anchor names are problematic.
+% TODO: add message.
+%    \begin{macrocode}
+\DeclareKeys
+ {
+   ,localanchorname .legacy_if_set:n {Hy@localanchorname}
+   ,localanchorname .usage:n = load
+ }
+%    \end{macrocode}
+%
 % Determines whether an automatic anchor is put on each page
 %    \begin{macrocode}
 \define@key{Hyp}{pageanchor}[true]{%

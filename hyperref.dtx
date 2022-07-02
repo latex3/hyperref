@@ -4656,11 +4656,11 @@
 \DeclareKeys
  {
    ,implicit  .legacy_if_set:n = {Hy@implicit}
-   ,implicit  .usage = load
+   ,implicit  .usage           = load
    ,draft     .legacy_if_set:n = {Hy@draft}
-   ,draft     .usage = preamble
+   ,draft     .usage           = preamble
    ,final     .legacy_if_set_inverse:n = {Hy@draft}
-   ,final     .usage = preamble
+   ,final     .usage           = preamble
  }
 %    \end{macrocode}
 % These obsolete options are ignored with the new keyval-handler.
@@ -4744,17 +4744,17 @@
           `section',~`page'~or~`all'
          }
      }
-   ,linktoc   .usage:n         = {preamble}
+   ,linktoc   .usage:n          = {preamble}
    ,linktocpage .choice:
-   ,linktocpage / true .code:n =
+   ,linktocpage / true .code:n  =
      { \cs_set_eq:NN \Hy@linktoc\Hy@linktoc@page }
    ,linktocpage / false .code:n =
      { \cs_set_eq:NN \Hy@linktoc\Hy@linktoc@section }
-   ,linktocpage .default:n = {true}
-   ,linktocpage .usage:n   = {preamble}
-   ,extension .tl_set:N        = \XR@ext
-   ,verbose   .legacy_if_set:n = {Hy@verbose}
-   ,debug     .legacy_if_set:n = {Hy@verbose}
+   ,linktocpage .default:n      = {true}
+   ,linktocpage .usage:n        = {preamble}
+   ,extension .tl_set:N         = \XR@ext
+   ,verbose   .legacy_if_set:n  = {Hy@verbose}
+   ,debug     .legacy_if_set:n  = {Hy@verbose}
  }
 \ExplSyntaxOff
 %    \end{macrocode}
@@ -4808,7 +4808,7 @@
 %    \begin{macrocode}
 \DeclareKeys
  {
-   ,breaklinks .legacy_if_set:n {Hy@breaklinks}
+   ,breaklinks .legacy_if_set:n = {Hy@breaklinks}
    ,breaklinks .usage:n = load
  }
 %    \end{macrocode}
@@ -4825,7 +4825,7 @@
 %    \begin{macrocode}
 \DeclareKeys
  {
-   ,localanchorname .legacy_if_set:n {Hy@localanchorname}
+   ,localanchorname .legacy_if_set:n = {Hy@localanchorname}
    ,localanchorname .usage:n = load
  }
 %    \end{macrocode}
@@ -4840,7 +4840,7 @@
 %    \begin{macrocode}
 \DeclareKeys
  {
-   ,pageanchor .legacy_if_set:n {Hy@pageanchor}
+   ,pageanchor .legacy_if_set:n = {Hy@pageanchor}
  }
 %    \end{macrocode}
 % Are the page links done as plain arabic numbers, or do
@@ -4852,7 +4852,7 @@
 }
 \DeclareKeys
  {
-   ,plainpages .legacy_if_set:n {Hy@plainpages}
+   ,plainpages .legacy_if_set:n = {Hy@plainpages}
  }
 %    \end{macrocode}
 % Are the names for anchors made as per the HyperTeX system,
@@ -4863,7 +4863,7 @@
 }
 \DeclareKeys
  {
-   ,naturalnames .legacy_if_set:n {Hy@naturalnames}
+   ,naturalnames .legacy_if_set:n =  {Hy@naturalnames}
  }
 %    \end{macrocode}
 % Completely ignore the names as per the HyperTeX system,
@@ -4874,7 +4874,7 @@
 }
 \DeclareKeys
  {
-   ,hypertexnames .legacy_if_set:n {Hy@hypertexnames}
+   ,hypertexnames .legacy_if_set:n =  {Hy@hypertexnames}
  }
 %    \end{macrocode}
 % Currently, |dvips| doesn't allow anchors nested within targets,
@@ -4887,7 +4887,7 @@
 }
 \DeclareKeys
  {
-   ,nesting .legacy_if_set:n {Hy@nesting}
+   ,nesting .legacy_if_set:n = {Hy@nesting}
  }
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -4896,7 +4896,7 @@
 }
 \DeclareKeys
  {
-   ,destlabel .legacy_if_set:n {Hy@destlabel}
+   ,destlabel .legacy_if_set:n = {Hy@destlabel}
  }
 %    \end{macrocode}
 %

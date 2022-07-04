@@ -4944,6 +4944,7 @@
   \fi
 }
 %    \end{macrocode}
+% TODO: deprecate pdfencoding??
 %    \begin{macrocode}
 \define@key{Hyp}{pdfencoding}{%
   \edef\HyPsd@temp{#1}%
@@ -4981,6 +4982,15 @@
     \fi
   \fi
 }
+\DeclareKeys
+ {
+   ,pdfencoding .code:n =
+    {
+      \Hy@Warning{option 'pdfencoding' is deprecated and ignored.\MessageBreak
+       Unicode is used always.}
+    }
+   ,pdfencoding .usage:n = load
+ }
 \def\HyPsd@pdfencoding@auto{auto}
 \def\HyPsd@pdfencoding@pdfdoc{pdfdoc}
 \def\HyPsd@pdfencoding@unicode{unicode}
@@ -5012,10 +5022,25 @@
   \Hy@boolkey{psdextra}{#1}%
   \HyPsd@LoadExtra
 }
+\DeclareKeys
+ {
+   ,psdextra .choice:
+   ,psdextra / true .code:n =
+     {
+       \legacy_if_set_true:n {Hy@psdextra}
+       \HyPsd@LoadExtra
+     }
+   ,psdextra / false .code:n =
+     {
+       \legacy_if_set_false:n {Hy@psdextra}
+     }
+   ,psdextra .default:n = true
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 \def\hypersetup{\kvsetkeys{Hyp}}
+\def\hypersetup{\SetKeys[hyperref]}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

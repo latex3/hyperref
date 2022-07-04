@@ -401,31 +401,31 @@ which are used in toc like lists and \cs{addcontentsline}. Typical values are
 
 \end{description}
 
-\subsection{Values of package and \cs{hypersetup} options} 
+\subsection{Values of package and \cs{hypersetup} options}
 When\marginpar{\tiny New in version 7.00s}
 a key is set either in the package options or with
-\cs{hypersetup} \xpackage{hyperref} typically 
+\cs{hypersetup} \xpackage{hyperref} typically
 stores the result in internal variables, or executes some
-code or sets a internal boolean. 
+code or sets a internal boolean.
 Package and class authors should here \emph{not} rely on
-the names or the details of the key processing. 
+the names or the details of the key processing.
 
 But as other packages sometimes need to know which value has been set,
 some values can be retrieved with the expandable
-\cs{GetDocumentProperties}. The values are given back 
+\cs{GetDocumentProperties}. The values are given back
 surrounded by \cs{exp\_not:n}, so can be used safely in an \cs{edef}.
-So for example to get the pdfauthor you can do. 
+So for example to get the pdfauthor you can do.
 
 \begin{verbatim}
 \edef\mypdfauthor{\GetDocumentProperties{hyperref/pdfauthor}}
 \end{verbatim}
 
 The values are given back as entered by the user! If they should be used in a PDF context
-\cs{pdfstringdef} or something equivalent must still be applied. 
+\cs{pdfstringdef} or something equivalent must still be applied.
 
-Currently this interface can be used for the keys \texttt{pdfauthor}, \texttt{pdftitle}, 
+Currently this interface can be used for the keys \texttt{pdfauthor}, \texttt{pdftitle},
 \texttt{pdfproducer},
-\texttt{pdfcreator}, \texttt{pdfsubject} and \texttt{pdfkeywords}.  
+\texttt{pdfcreator}, \texttt{pdfsubject} and \texttt{pdfkeywords}.
 If used with a unknown key an empty value is returned.
 The interface works also if the new PDF management is loaded with \cs{DocumentMetadata}, in this
 case more keys gives back their value.
@@ -1273,7 +1273,7 @@ following low-level user macros are provided:
 
 \noindent The \emph{text} is made a hyperlink to the \emph{URL}; this
 must be a full URL (relative to the base URL, if that is defined). The
-special characters \# and \~{} do \emph{not} need to be escaped in any
+special characters \# and \%{} do \emph{not} need to be escaped in any
 way (unless the command is used in the argument of another command).
 
 The optional argument \emph{options} recognizes the hyperref options

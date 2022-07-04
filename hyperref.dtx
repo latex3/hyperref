@@ -5022,27 +5022,29 @@
   \Hy@boolkey{psdextra}{#1}%
   \HyPsd@LoadExtra
 }
+
 \DeclareKeys
  {
    ,psdextra .choice:
    ,psdextra / true .code:n =
      {
-       \legacy_if_set_true:n {Hy@psdextra}
+       \Hy@psdextratrue
        \HyPsd@LoadExtra
      }
    ,psdextra / false .code:n =
      {
-       \legacy_if_set_false:n {Hy@psdextra}
+       \Hy@psdextrafalse
      }
    ,psdextra .default:n = true
  }
+
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 \def\hypersetup{\kvsetkeys{Hyp}}
 \def\hypersetup{\SetKeys[hyperref]}
 %    \end{macrocode}
-%
+% TODO: check if the version can be set with the backend (it must have been loaded)
 %    \begin{macrocode}
 \newif\ifHy@setpdfversion
 \define@key{Hyp}{pdfversion}{%
@@ -5056,6 +5058,21 @@
     \@nameuse{Hy@pdfversion@#1}%
   }%
 }
+\DeclareKeys
+ {
+   ,pdfversion .choices:nn = { 1.2,1.3,1.4,1.5,1.6,1.7,2.0 }
+    {
+      \Hy@setpdfversiontrue
+      \@nameuse{Hy@pdfversion@#1}%
+    }
+   ,pdfversion / unknown .code:n =
+    {
+      \PackageWarning{hyperref}{%
+      Unsupported PDF version `#1'.\MessageBreak
+      Valid values: 1.2-1.7, 2.0}
+    }
+   ,pdfversion .usage:n = {preamble}
+ }
 %    \end{macrocode}
 % \verb|\Hy@pdfminorversion| already used elsewhere to denote \verb|\pdfminorversion|
 % or \verb|\pdfvariable majorversion}| so introduce new names here.

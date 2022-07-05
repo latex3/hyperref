@@ -5156,7 +5156,7 @@
 }
 \DeclareKeys
  {
-   tex4ht .code:n =
+   ,tex4ht .code:n =
     {
       \Hy@texhttrue
       \SetKeys[hyperref]{colorlinks=true}%
@@ -5171,6 +5171,7 @@
        \endinput
        }%
     }
+   ,tex4ht .usage:n = load
  }
 \DeclareVoidOption{pdftex}{%
   \ifpdf
@@ -5197,8 +5198,12 @@
        }\@ehc
       \fi
     }
+  ,pdftex .usage:n = load
  }
-
+%    \end{macrocode}
+% The new luatex key no longer pass the option to color
+% (color can guess on its own).
+%    \begin{macrocode}
 \DeclareVoidOption{luatex}{%
   \ifpdf
     \ifx\pdfextension\@undefined
@@ -5215,6 +5220,26 @@
     }\@ehc
   \fi
 }
+
+\DeclareKeys
+ {
+   ,luatex .code:n =
+     {
+      \ifpdf
+       \ifluatex
+         \def\Hy@driver{hluatex}%
+       \else
+         \def\Hy@driver{hpdftex}%
+       \fi
+     \else
+       \Hy@Error{%
+        Wrong driver option `luatex',\MessageBreak
+        because luaTeX in PDF mode is not detected%
+       }\@ehc
+     \fi
+    }
+   ,luatex .usage:n = load
+ }
 \DeclareVoidOption{nativepdf}{%
   \HyOpt@CheckDvi{nativepdf}{%
     \def\Hy@driver{hdvips}%
@@ -5232,6 +5257,34 @@
     \PassOptionsToPackage{dvipdfmx}{color}%
   }%
 }
+
+\DeclareKeys
+ {
+   ,nativepdf .code:n =
+     {
+       \HyOpt@CheckDvi{nativepdf}{%
+        \def\Hy@driver{hdvips}%
+        \PassOptionsToPackage{dvips}{color}}%
+     }
+  ,nativepdf .usage:n = load
+  ,dvipdfm .code:n =
+    {
+      \HyOpt@CheckDvi{dvipdfm}{\def\Hy@driver{hdvipdfm}}
+    }
+  ,dvipdfm .usage:n = load
+  ,dvipdfmx .code:n =
+    {
+      \HyOpt@CheckDvi{dvipdfmx}{%
+        \def\Hy@driver{hdvipdfm}
+        \PassOptionsToPackage{dvipdfmx}{color}}
+    }
+  ,dvipdfmx .usage:n = load
+ }
+
+%    \end{macrocode}
+% The key dvipdfmx-outline-open has been removed as it was only
+% needed for rather old xetex versions.
+%    \begin{macrocode}
 \define@key{Hyp}{dvipdfmx-outline-open}[true]{%
   \expandafter\ifx\csname if#1\expandafter\endcsname
                   \csname iftrue\endcsname
@@ -5240,6 +5293,8 @@
     \chardef\SpecialDvipdfmxOutlineOpen\z@
   \fi
 }
+%    \end{macrocode}
+%    \begin{macrocode}
 \DeclareVoidOption{xetex}{%
   \ifxetex
     \def\Hy@driver{hxetex}%
@@ -5266,6 +5321,41 @@
     \def\Hy@driver{hypertex}%
   }%
 }
+
+\DeclareKeys
+ {
+   ,xetex .code:n =
+     {
+       \ifxetex
+        \def\Hy@driver{hxetex}%
+       \else
+       \Hy@Error{%
+         Wrong driver option `xetex',\MessageBreak
+         because XeTeX is not detected%
+        }\@ehc
+      \fi
+     }
+  ,xetex .usage:n = load
+  ,pdfmark .code:n =
+    {
+      \HyOpt@CheckDvi{pdfmark}{\def\Hy@driver{hdvips}}%
+    }
+  ,pdfmark .usage:n = load
+  ,dvips .code:n =
+    {
+      \HyOpt@CheckDvi{dvips}{\def\Hy@driver{hdvips}}%
+    }
+  ,dvips .usage:n = load
+  ,hypertex .code:n =
+    {
+      \HyOpt@CheckDvi{hypertex}{\def\Hy@driver{hypertex}}%
+    }
+  ,hypertex .usage:n = load
+ }
+
+%    \end{macrocode}
+% vtex is rather special.
+%    \begin{macrocode}
 \let\Hy@MaybeStopNow\relax
 \DeclareVoidOption{vtex}{%
   \ifvtex

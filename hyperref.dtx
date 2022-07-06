@@ -6320,11 +6320,63 @@
 %    \end{macrocode}
 %
 % \section{Options to change appearance of links}\label{appearance}
-% Colouring links at the \LaTeX\ level is useful for debugging, perhaps.
+% Colouring links at the \LaTeX\ level is not only useful for debugging.
+% So we allow to switch also in the document.
+% The options must be defined so that they work with the generic driver
+% and with the other drivers.
+% We assume for now that the generic driver is used if |\DocumentMetadata| has been
+% used; this is perhaps not true.
 %    \begin{macrocode}
+\newcommand \Hy@set@colorlinks
+  {%
+    \def\Hy@colorlink#1{\begingroup\HyColor@UseColor#1}%
+    \def\Hy@endcolorlink{\endgroup}%
+    \def\@pdfborder{0 0 0}%
+    \let\@pdfborderstyle\@empty
+  }
+\newcommand \Hy@set@hidelinks
+  {%
+    \def\Hy@colorlink#1{\begingroup#1}%
+    \def\Hy@endcolorlink{\endgroup}%
+    \def\@pdfborder{0 0 0}%
+    \let\@pdfborderstyle\ltx@empty
+  }
+\newcommand \Hy@set@frenchlinks
+ {%
+   \def\Hy@colorlink#1{\begingroup\fontshape{\scdefault}\selectfont}%
+   \def\Hy@endcolorlink{\endgroup}%
+ }
 \define@key{Hyp}{colorlinks}[true]{%
   \Hy@boolkey{colorlinks}{#1}%
 }
+
+\ExplSyntaxOn
+\IfDocumentMetadataTF
+ {
+   \DeclareKeys
+     {
+       ,colorlinks .choice:
+       ,colorlinks / true .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=true}}
+        }
+       ,colorlinks / false .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=false}}
+        }
+       ,colorlinks .default:n = true
+     }
+ }
+ {
+   \DeclareKeys
+    {
+      colorlinks .code:n =
+       {
+
+       }
+    }
+ }
+\ExplSyntaxOff
 \DeclareVoidOption{hidelinks}{%
   \Hy@colorlinksfalse
   \Hy@ocgcolorlinksfalse

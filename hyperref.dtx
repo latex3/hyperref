@@ -6327,21 +6327,25 @@
 % We assume for now that the generic driver is used if |\DocumentMetadata| has been
 % used; this is perhaps not true.
 %    \begin{macrocode}
-\newcommand \Hy@set@colorlinks
+\newcommand \Hy@activate@colorlinks
   {%
-    \def\Hy@colorlink#1{\begingroup\HyColor@UseColor#1}%
+    \def\Hy@colorlink##1{\begingroup\HyColor@UseColor##1}%
     \def\Hy@endcolorlink{\endgroup}%
     \def\@pdfborder{0 0 0}%
     \let\@pdfborderstyle\@empty
   }
-\newcommand \Hy@set@hidelinks
+\newcommand \Hy@activate@plainlinks
   {%
-    \def\Hy@colorlink#1{\begingroup#1}%
+    \def\Hy@colorlink##1{\begingroup##1}%
     \def\Hy@endcolorlink{\endgroup}%
+  }
+\newcommand \Hy@activate@hidelinks
+  {%
+    \Hy@activate@plainlinks
     \def\@pdfborder{0 0 0}%
     \let\@pdfborderstyle\ltx@empty
   }
-\newcommand \Hy@set@frenchlinks
+\newcommand \Hy@activate@frenchlinks
  {%
    \def\Hy@colorlink#1{\begingroup\fontshape{\scdefault}\selectfont}%
    \def\Hy@endcolorlink{\endgroup}%
@@ -6349,7 +6353,15 @@
 \define@key{Hyp}{colorlinks}[true]{%
   \Hy@boolkey{colorlinks}{#1}%
 }
-
+\DeclareVoidOption{hidelinks}{%
+  \Hy@colorlinksfalse
+  \Hy@ocgcolorlinksfalse
+  \Hy@frenchlinksfalse
+  \def\Hy@colorlink##1{\begingroup}%
+  \def\Hy@endcolorlink{\endgroup}%
+  \def\@pdfborder{0 0 0}%
+  \let\@pdfborderstyle\ltx@empty
+}
 \ExplSyntaxOn
 \IfDocumentMetadataTF
  {
@@ -6370,22 +6382,19 @@
  {
    \DeclareKeys
     {
-      colorlinks .code:n =
+      ,colorlinks .choice:
+      ,colorlinks /true .code:n =
        {
-
+         \Hy@activate@colorlinks
+       }
+      ,colorlinks / false .code:n =
+       {
+         \Hy@activate@plainlinks
        }
     }
  }
 \ExplSyntaxOff
-\DeclareVoidOption{hidelinks}{%
-  \Hy@colorlinksfalse
-  \Hy@ocgcolorlinksfalse
-  \Hy@frenchlinksfalse
-  \def\Hy@colorlink##1{\begingroup}%
-  \def\Hy@endcolorlink{\endgroup}%
-  \def\@pdfborder{0 0 0}%
-  \let\@pdfborderstyle\ltx@empty
-}
+
 \define@key{Hyp}{ocgcolorlinks}[true]{%
   \Hy@boolkey{ocgcolorlinks}{#1}%
 }

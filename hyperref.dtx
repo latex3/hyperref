@@ -5597,6 +5597,11 @@
 \define@key{Hyp}{hyperfigures}[true]{%
   \Hy@boolkey{hyperfigures}{#1}%
 }
+\DeclareKeys
+  {
+    ,hyperfigures .legacy_if_set:n = {Hy@hyperfigures}
+    ,hyperfigures .usage:n = load
+  }
 %    \end{macrocode}
 %
 %    The automatic footnote linking can be disabled
@@ -5605,6 +5610,11 @@
 \define@key{Hyp}{hyperfootnotes}[true]{%
   \Hy@boolkey{hyperfootnotes}{#1}%
 }
+\DeclareKeys
+  {
+    ,hyperfootnotes .legacy_if_set:n = {Hy@hyperfootnotes}
+    ,hyperfootnotes .usage:n = load
+  }
 %    \end{macrocode}
 %
 %    Set up back-referencing to be hyper links, by page,
@@ -5643,6 +5653,43 @@
     \fi
   \fi
 }
+
+\DeclareKeys
+ {
+   ,backref .choice:
+   ,backref / section .code:n =
+     {
+       \PassOptionsToPackage{hyperref}{backref}%
+       \Hy@backreftrue
+     }
+   ,backref / slide .code:n =
+     {
+       \PassOptionsToPackage{hyperref}{backref}%
+       \Hy@backreftrue
+     }
+   ,backref / page .code:n =
+     {
+       \PassOptionsToPackage{hyperpageref}{backref}%
+       \Hy@backreftrue
+     }
+   ,backref / false .code:n =
+     {
+       \Hy@backreffalse
+     }
+   ,backref / none .code:n =
+     {
+       \Hy@backreffalse
+     }
+   ,backref / unknown .code:n =
+     {%
+       \Hy@WarnOptionValue{#1}{backref}{%
+          `section', `slide', `page', `none',\MessageBreak
+          or `false'}%
+     }
+   ,backref .default:n = section
+   ,backref .usage:n = load
+ }
+
 \define@key{Hyp}{pagebackref}[true]{%
   \edef\Hy@tempa{#1}%
   \lowercase\expandafter{%
@@ -5662,6 +5709,15 @@
     \fi
   \fi
 }
+
+\DeclareKeys
+  {
+    ,pagebackref .choice:
+    ,pagebackref / true .code:n = {\SetKeys[hyperref]{backref=page}
+    ,pagebackref / false .code:n = {\SetKeys[hyperref]{backref=false}
+    ,pagebackref .default:n = true
+    ,pagebackref .usage:n = load
+  }
 %    \end{macrocode}
 % Make index entries be links back to the relevant pages. By default
 % this is turned on, but may be stopped.
@@ -5669,12 +5725,26 @@
 \define@key{Hyp}{hyperindex}[true]{%
   \Hy@boolkey{hyperindex}{#1}%
 }
+
+\DeclareKeys
+  {
+    ,hyperindex .legacy_if_set:n = {Hy@hyperindex}
+    ,hyperindex .initial:n = true
+    ,hyperindex .usage:n = load
+  }
 %    \end{macrocode}
 %    Configuration of encap char.
 %    \begin{macrocode}
 \define@key{Hyp}{encap}[\|]{%
   \def\HyInd@EncapChar{#1}%
 }
+
+\DeclareKeys
+  {
+    ,encap .tl_set:n  = \HyInd@EncapChar
+    ,encap .initial:n = \|
+  }
+
 %    \end{macrocode}
 %
 % \section{Language options}

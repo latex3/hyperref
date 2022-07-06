@@ -5355,8 +5355,8 @@
 
 %    \end{macrocode}
 % vtex is rather special.
+% The command |\Hy@MaybeStopNow| has been removed, as the purpose is unclear.
 %    \begin{macrocode}
-\let\Hy@MaybeStopNow\relax
 \DeclareVoidOption{vtex}{%
   \ifvtex
     \ifnum 0\ifnum\OpMode<1 1\fi \ifnum\OpMode>3 1\fi =0 %
@@ -7017,11 +7017,6 @@
 \InputIfFileExists{hyperref.cfg}{}{}
 \Hy@SetCatcodes
 \let\ExecuteOptions\hyper@normalise
-\ifx\Hy@MaybeStopNow\relax
-\else
-  \Hy@stoppedearlytrue
-  \expandafter\Hy@MaybeStopNow
-\fi
 \Hy@stoppedearlyfalse
 %    \end{macrocode}
 % To add flexibility, we will not use the ordinary processing of

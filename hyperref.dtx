@@ -6326,6 +6326,8 @@
 % and with the other drivers.
 % We assume for now that the generic driver is used if |\DocumentMetadata| has been
 % used; this is perhaps not true.
+% TODO: decide about frenchlinks with new driver
+% TODO: check the key handling
 %    \begin{macrocode}
 \newcommand \Hy@activate@colorlinks
   {%
@@ -6362,39 +6364,6 @@
   \def\@pdfborder{0 0 0}%
   \let\@pdfborderstyle\ltx@empty
 }
-\ExplSyntaxOn
-\IfDocumentMetadataTF
- {
-   \DeclareKeys
-     {
-       ,colorlinks .choice:
-       ,colorlinks / true .code:n =
-        {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=true}}
-        }
-       ,colorlinks / false .code:n =
-        {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=false}}
-        }
-       ,colorlinks .default:n = true
-     }
- }
- {
-   \DeclareKeys
-    {
-      ,colorlinks .choice:
-      ,colorlinks /true .code:n =
-       {
-         \Hy@activate@colorlinks
-       }
-      ,colorlinks / false .code:n =
-       {
-         \Hy@activate@plainlinks
-       }
-    }
- }
-\ExplSyntaxOff
-
 \define@key{Hyp}{ocgcolorlinks}[true]{%
   \Hy@boolkey{ocgcolorlinks}{#1}%
 }
@@ -6413,6 +6382,57 @@
 \define@key{Hyp}{frenchlinks}[true]{%
   \Hy@boolkey{frenchlinks}{#1}%
 }
+
+\ExplSyntaxOn
+\IfDocumentMetadataTF
+ {
+   \DeclareKeys
+     {
+       ,colorlinks .choice:
+       ,colorlinks / true .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=true}}
+        }
+       ,colorlinks / false .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=false}}
+        }
+       ,colorlinks .default:n = true
+       ,hidelinks .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{hidelinks}}
+        }
+       ,ocgcolorlinks .code:n =
+        {
+          \AtEndOfPackage {\keys_set:nn { hyp / setup }{ocgcolorlinks=#1}}
+        }
+     }
+ }
+ {
+   \DeclareKeys
+    {
+      ,colorlinks .choice:
+      ,colorlinks /true .code:n =
+       {
+         \Hy@activate@colorlinks
+       }
+      ,colorlinks / false .code:n =
+       {
+         \Hy@activate@plainlinks
+       }
+      ,hidelinks .code:n
+        {
+          \Hy@activate@hidelinks
+        }
+      ,frenchlinks .code:n =
+        {
+          \Hy@activate@frenchlinks
+        }
+      ,ocgcolorlinks .legacy_if_set:n = {Hy@ocgcolorlinks}
+    }
+ }
+\ExplSyntaxOff
+
 %    \end{macrocode}
 %
 % \section{Bookmarking}
@@ -6443,6 +6463,12 @@
 \define@key{Hyp}{bookmarksopen}[true]{%
   \Hy@boolkey{bookmarksopen}{#1}%
 }
+\DeclareKeys
+  {
+    ,bookmarks .legacy_if_set:n = Hy@bookmarks
+    ,bookmarks .usage:n =load
+    ,bookmarksopen .legacy_if_set:n = Hy@bookmarksopen
+  }
 %    \end{macrocode}
 %
 %    The depth of the outlines is controlled by option
@@ -6488,6 +6514,40 @@
     \fi
   \endgroup
 }
+
+\DeclareKeys
+ {
+   bookmarksdepth .code:n =
+    {%
+       \begingroup
+        \edef\x{#1}%
+        \ifx\x\empty
+          \global\let\Hy@bookmarksdepth\c@tocdepth
+        \else
+          \@ifundefined{toclevel@\x}{%
+            \@onelevel@sanitize\x
+            \edef\y{\expandafter\@car\x\@nil}%
+            \ifcase 0\expandafter\ifx\y-1\fi
+                     \expandafter\ifnum\expandafter`\y>47 %
+                       \expandafter\ifnum\expandafter`\y<58 1\fi\fi\relax
+              \Hy@Warning{Unknown document division name (\x)}%
+            \else
+              \setbox\z@=\hbox{%
+                \count@=\x
+                \xdef\Hy@bookmarksdepth{\the\count@}%
+              }%
+            \fi
+          }{%
+            \setbox\z@=\hbox{%
+              \count@=\csname toclevel@\x\endcsname
+              \xdef\Hy@bookmarksdepth{\the\count@}%
+            }%
+          }%
+        \fi
+      \endgroup
+    }
+ }
+
 %    \end{macrocode}
 %
 % `bookmarksopenlevel' to specify the open level. From Heiko Oberdiek.
@@ -6496,11 +6556,24 @@
   \def\@bookmarksopenlevel{#1}%
 }
 \def\@bookmarksopenlevel{\maxdimen}
+
+\DeclareKeys
+ {
+   ,bookmarksopenlevel .tl_set:N = \@bookmarksopenlevel
+   ,bookmarksopenlevel .initial:n = \maxdimen
+ }
 % `bookmarkstype' to specify which `toc' file to mimic
 \define@key{Hyp}{bookmarkstype}{%
   \def\Hy@bookmarkstype{#1}%
 }
 \def\Hy@bookmarkstype{toc}
+
+\DeclareKeys
+ {
+   ,bookmarkstype .tl_set:N = \Hy@bookmarkstype
+   ,bookmarkstype .initial:n = toc
+ }
+
 %    \end{macrocode}
 % Richard Curnow <richard@curnow.demon.co.uk> suggested this
 % functionality. It adds section numbers etc to bookmarks.
@@ -6508,6 +6581,12 @@
 \define@key{Hyp}{bookmarksnumbered}[true]{%
   \Hy@boolkey{bookmarksnumbered}{#1}%
 }
+
+\DeclareKeys
+ {
+   ,bookmarkstype .legacy_if_set:n = Hy@bookmarksnumbered
+ }
+
 %    \end{macrocode}
 %
 %    Option CJKbookmarks enables the patch for
@@ -6516,6 +6595,11 @@
 \define@key{Hyp}{CJKbookmarks}[true]{%
   \Hy@boolkey{CJKbookmarks}{#1}%
 }
+\DeclareKeys
+ {
+   ,CJKbookmarks .legacy_if_set:n = Hy@CJKbookmarks
+ }
+
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -6527,6 +6611,7 @@
     \HyColor@HyperrefColor{##1}#1%
   }%
   \def#1{#3}%
+  \DeclareKeys{#2color .code:n= {\HyColor@HyperrefColor{##1}#1}}%
 }
 \Hy@temp{link}{red}
 \Hy@temp{anchor}{black}
@@ -6551,6 +6636,19 @@
   \HyColor@HyperrefColor{#1}\@menucolor
   \HyColor@HyperrefColor{#1}\@runcolor
 }
+\DeclareKeys
+  {
+    allcolors .code:n =
+     {%
+       \HyColor@HyperrefColor{#1}\@linkcolor
+       \HyColor@HyperrefColor{#1}\@anchorcolor
+       \HyColor@HyperrefColor{#1}\@citecolor
+       \HyColor@HyperrefColor{#1}\@filecolor
+       \HyColor@HyperrefColor{#1}\@urlcolor
+       \HyColor@HyperrefColor{#1}\@menucolor
+       \HyColor@HyperrefColor{#1}\@runcolor
+     }
+  }
 %    \end{macrocode}
 %
 %    \begin{macrocode}

@@ -5403,6 +5403,63 @@
     }\@ehc
   \fi
 }
+
+\DeclareKeys
+  {
+    ,vtex .code:n =
+     {
+       \ifvtex
+         \ifnum 0\ifnum\OpMode<1 1\fi \ifnum\OpMode>3 1\fi =0 %
+           \def\Hy@driver{hvtex}%
+         \else
+           \ifnum\OpMode=10\relax
+             \def\Hy@driver{hvtexhtm}%
+             \def\MaybeStopEarly{%
+                \Hy@Message{Stopped early}%
+                \Hy@AtBeginDocument{%
+                  \PDF@FinishDoc
+                  \gdef\PDF@FinishDoc{}%
+                }%
+                \endinput
+             }%
+           \else
+             \Hy@Error{%
+               Wrong driver option `vtex',\MessageBreak
+               because of wrong OpMode (\the\OpMode)%
+             }\@ehc
+           \fi
+         \fi
+       \else
+         \Hy@Error{%
+           Wrong driver option `vtex',\MessageBreak
+           because VTeX is not running%
+         }\@ehc
+       \fi
+     }
+    ,vtex .usage:n = load
+    ,vtexpdfmark .code:n =
+     {
+       \ifvtex
+         \ifnum 0\ifnum\OpMode<1 1\fi \ifnum\OpMode>3 1\fi =0 %
+           \def\Hy@driver{hvtexmrk}%
+         \else
+           \Hy@Error{%
+             Wrong driver option `vtexpdfmark',\MessageBreak
+             because of wrong OpMode (\the\OpMode)%
+           }\@ehc
+         \fi
+       \else
+         \Hy@Error{%
+           Wrong driver option `vtexpdfmark,\MessageBreak
+           because VTeX is not running%
+         }\@ehc
+       \fi
+     }
+    ,vtexpdfmark .usage:n = load
+  }
+%    \end{macrocode}
+% Option \texttt{latex2html} is dropped.
+%    \begin{macrocode}
 \DeclareVoidOption{dviwindo}{%
   \HyOpt@CheckDvi{dviwindo}{%
     \def\Hy@driver{hdviwind}%
@@ -5426,6 +5483,33 @@
    A current html.sty will do all necessary (re)definitions%
   }%
 }
+\DeclareKeys
+  {
+    ,dviwindo .code:n =
+      {
+        \HyOpt@CheckDvi{dviwindo}
+         {
+          \def\Hy@driver{hdviwind}
+          \SetKeys[hyperref]{colorlinks}
+          \PassOptionsToPackage{dviwindo}{color}
+         }
+      }
+    ,dviwindo .usage:n = load
+    ,dvipsone .code:n =
+      {
+        \HyOpt@CheckDvi{dvipsone}
+         {
+          \def\Hy@driver{hdvipson}
+          \PassOptionsToPackage{dvipsone}{color}
+         }
+      }
+    ,dvipsone .usage:n = load
+    ,textures .code:n =
+      {
+        \HyOpt@CheckDvi{textures}{\def\Hy@driver{htexture}}%
+      }
+    ,textures .usage:n = load
+  }
 %    \end{macrocode}
 % No more special treatment for ps2pdf. Let it sink or swim.
 %    \begin{macrocode}
@@ -5435,8 +5519,17 @@
     \PassOptionsToPackage{dvips}{color}%
   }%
 }
+\DeclareKeys
+ {
+  ,ps2pdf .code:n =
+    {
+      \HyOpt@CheckDvi{dvips}{\def\Hy@driver{hdvips}}%
+    }
+  ,ps2pdf .usage:n = load
+ }
 %    \end{macrocode}
-%
+% The code for driverfallback has been simplified. No warning but simple error
+% if a wrong choice is used.
 %    \begin{macrocode}
 \let\HyOpt@DriverFallback\ltx@empty
 \define@key{Hyp}{driverfallback}{%
@@ -5454,6 +5547,17 @@
     }%
   \fi
 }
+\DeclareKeys
+ {
+   ,driverfallback .choices:nn =
+     {dvipdfmx,dvipdfmx,dvips,dvipsone,dviwindo,hypertex,ps2pdf,tex4ht}
+     {
+       \ifHy@DviMode
+         \edef\HyOpt@DriverFallback{\l_keys_choice_tl}%
+       \fi
+     }
+   ,driverfallback .usage:n = load
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -5468,6 +5572,22 @@
     }%
   }%
 }
+
+\DeclareKeys
+ {
+   ,customdriver .code:n =
+     {
+       \IfFileExists{#1.def}{%
+         \def\HyOpt@CustomDriver{#1}%
+       }{%
+         \Hy@Warning{%
+           Missing driver file `#1.def',\MessageBreak
+           ignoring custom driver%
+         }%
+       }%
+     }
+   ,customdriver .usage:n = load
+ }
 %    \end{macrocode}
 %
 % \section{Options to add extra features}\label{features}

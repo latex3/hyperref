@@ -6269,6 +6269,29 @@
     }%
   }%
 }
+
+\DeclareKeys
+  {
+    ,vietnamese .code:n =
+      {%
+        \HyLang@addto\extrasvietnamese\HyLang@vietnamese
+         \Hy@AtEndOfPackage{%
+           \@ifundefined{T@PU}{}{%
+             \input{puvnenc.def}%
+           }%
+         }%
+      }
+    ,vietnam .code:n =
+      {%
+        \HyLang@addto\extrasvietnamese\HyLang@vietnamese
+         \Hy@AtEndOfPackage{%
+           \@ifundefined{T@PU}{}{%
+             \input{puvnenc.def}%
+           }%
+         }%
+      }
+  }
+
 %    \end{macrocode}
 %    Similar for option |arabic| that just loads the additions
 %    to PU encoding for Arabi.
@@ -6280,6 +6303,20 @@
     }%
   }%
 }
+
+\DeclareKeys
+  {
+    ,arabic .code:n =
+      {%
+        \Hy@AtEndOfPackage{%
+          \@ifundefined{T@PU}{}{%
+            \input{puarenc.def}%
+          }%
+        }%
+      }
+  }
+
+
 %    \end{macrocode}
 %
 % \section{Options to change appearance of links}\label{appearance}

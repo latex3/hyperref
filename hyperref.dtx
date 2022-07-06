@@ -4924,8 +4924,8 @@
       \legacy_if_set_false:n {Hy@unicode}
       \def\HyPsd@pdfencoding{pdfdoc}
     }
-   ,unicode .default:n      = { true }
-   ,unicode .usage:n        = { preamble }
+   ,unicode .default:n      =  true
+   ,unicode .usage:n        =  preamble
  }
 \Hy@AtBeginDocument{%
   \ifx\HyPsd@LoadUnicode\relax
@@ -5071,7 +5071,7 @@
       Unsupported PDF version `#1'.\MessageBreak
       Valid values: 1.2-1.7, 2.0}
     }
-   ,pdfversion .usage:n = {preamble}
+   ,pdfversion .usage:n = preamble
  }
 %    \end{macrocode}
 % \verb|\Hy@pdfminorversion| already used elsewhere to denote \verb|\pdfminorversion|

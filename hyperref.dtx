@@ -5713,8 +5713,8 @@
 \DeclareKeys
   {
     ,pagebackref .choice:
-    ,pagebackref / true .code:n = {\SetKeys[hyperref]{backref=page}
-    ,pagebackref / false .code:n = {\SetKeys[hyperref]{backref=false}
+    ,pagebackref / true .code:n = {\SetKeys[hyperref]{backref=page}}
+    ,pagebackref / false .code:n = {\SetKeys[hyperref]{backref=false}}
     ,pagebackref .default:n = true
     ,pagebackref .usage:n = load
   }
@@ -5741,7 +5741,7 @@
 
 \DeclareKeys
   {
-    ,encap .tl_set:n  = \HyInd@EncapChar
+    ,encap .tl_set:N  = \HyInd@EncapChar
     ,encap .initial:n = \|
   }
 
@@ -6338,7 +6338,7 @@
   }
 \newcommand \Hy@activate@plainlinks
   {%
-    \def\Hy@colorlink##1{\begingroup##1}%
+    \def\Hy@colorlink##1{\begingroup}%
     \def\Hy@endcolorlink{\endgroup}%
   }
 \newcommand \Hy@activate@hidelinks
@@ -6349,7 +6349,7 @@
   }
 \newcommand \Hy@activate@frenchlinks
  {%
-   \def\Hy@colorlink#1{\begingroup\fontshape{\scdefault}\selectfont}%
+   \def\Hy@colorlink##1{\begingroup\fontshape{\scdefault}\selectfont}%
    \def\Hy@endcolorlink{\endgroup}%
  }
 \define@key{Hyp}{colorlinks}[true]{%

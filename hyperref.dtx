@@ -7362,7 +7362,7 @@
 }
 \DeclareKeys
  {
-   ,pdfescapeform .legacy_if_set:n = Hy@pdfescapeform   
+   ,pdfescapeform .legacy_if_set:n = Hy@pdfescapeform
  }
 %    \end{macrocode}
 % Default values:
@@ -7439,38 +7439,9 @@
 %    \end{macrocode}
 %
 %    Add option |tex4ht| if package |tex4ht| is loaded.
+%    This code has been removed. The option is passed by |tex4ht| anyway.
+%    Special cases should be handled by the document or the |tex4ht| scripts.
 %    \begin{macrocode}
-\@ifpackagewith{hyperref}{tex4ht}{%
-}{%
-  \@ifpackageloaded{tex4ht}{%
-    \PassOptionsToPackage{tex4ht}{hyperref}%
-  }{%
-    \ltx@IfUndefined{HCode}{%
-    }{%
-      \begingroup
-        \def\Hy@pkg{tex4ht}%
-        \def\Hy@temp@A#1\RequirePackage[#2]#3#4\Hy@NIL{%
-          \def\Hy@param{#2#3}%
-          \ifx\Hy@param\ltx@empty
-            \expandafter\ltx@gobble
-          \else
-            \def\Hy@param{#3}%
-            \ifx\Hy@param\Hy@pkg
-              \PassOptionsToPackage{#2}{tex4ht}%
-              \expandafter\expandafter\expandafter\@gobble
-            \else
-              \expandafter\expandafter\expandafter\ltx@firstofone
-            \fi
-          \fi
-          {\Hy@temp@A#4\Hy@NIL}%
-        }%
-        \expandafter
-        \Hy@temp@A\@documentclasshook\RequirePackage[]{}\Hy@NIL
-      \endgroup
-      \PassOptionsToPackage{tex4ht}{hyperref}%
-    }%
-  }%
-}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

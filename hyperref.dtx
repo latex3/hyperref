@@ -4653,14 +4653,17 @@
 % Unlike the hyperref code they are currently silent.
 % The `nolinks` option is ignored as it is not documented.
 %    \begin{macrocode}
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,implicit  .legacy_if_set:n = {Hy@implicit}
-   ,implicit  .usage           = load
+   ,implicit  .usage:n           = load
+ }
+\DeclareKeys
+ {
    ,draft     .legacy_if_set:n = {Hy@draft}
-   ,draft     .usage           = preamble
+   ,draft     .usage:n           = preamble
    ,final     .legacy_if_set_inverse:n = {Hy@draft}
-   ,final     .usage           = preamble
+   ,final     .usage:n           = preamble
  }
 %    \end{macrocode}
 % These obsolete options are ignored with the new keyval-handler.
@@ -4806,7 +4809,7 @@
 %    \end{macrocode}
 % As the dvips driver checks the value we set the usage to `load'.%
 %    \begin{macrocode}
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,breaklinks .legacy_if_set:n = {Hy@breaklinks}
    ,breaklinks .usage:n = load
@@ -4823,7 +4826,7 @@
 % This key is deprecated, local anchor names are problematic.
 % TODO: add message.
 %    \begin{macrocode}
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,localanchorname .legacy_if_set:n = {Hy@localanchorname}
    ,localanchorname .usage:n = load
@@ -4982,7 +4985,7 @@
     \fi
   \fi
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,pdfencoding .code:n =
     {
@@ -5058,7 +5061,7 @@
     \@nameuse{Hy@pdfversion@#1}%
   }%
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,pdfversion .choices:nn = { 1.2,1.3,1.4,1.5,1.6,1.7,2.0 }
     {
@@ -5071,7 +5074,7 @@
       Unsupported PDF version `#1'.\MessageBreak
       Valid values: 1.2-1.7, 2.0}
     }
-   ,pdfversion .usage:n = preamble
+   ,pdfversion .usage:n = load
  }
 %    \end{macrocode}
 % \verb|\Hy@pdfminorversion| already used elsewhere to denote \verb|\pdfminorversion|
@@ -6436,7 +6439,15 @@
         {
           \Hy@activate@frenchlinks
         }
+    }
+%    \end{macrocode}
+% The ocgcolorlinks code is set in the driver, and so
+% can only be activated at the first loading.
+%    \begin{macrocode}
+   \DeclareKeys[hyperref.load]
+    {
       ,ocgcolorlinks .legacy_if_set:n = {Hy@ocgcolorlinks}
+      ,ocgcolorlinks .usage:n = load
     }
  }
 \ExplSyntaxOff
@@ -7350,14 +7361,14 @@
 %    \end{macrocode}
 % pdfpagelabels is a load only option as the commands are defined in the drivers.
 %    \begin{macrocode}
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,pdfpagelabels .legacy_if_set:n = Hy@pdfpagelabels
    ,pdfpagelabels .usage:n = load
  }
 %    \end{macrocode}
 % pdfescapeform is used in the form code. It is probably useless but to
-% avoid compability problems we done change that.
+% avoid compability problems we don't change that.
 %    \begin{macrocode}
 \define@key{Hyp}{pdfescapeform}[true]{%
   \Hy@boolkey{pdfescapeform}{#1}%

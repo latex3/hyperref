@@ -6391,21 +6391,27 @@
        ,colorlinks .choice:
        ,colorlinks / true .code:n =
         {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=true}}
+          \AddToHook{package/hyperref/after} {\keys_set:nn { hyp / setup }{colorlinks=true}}
         }
        ,colorlinks / false .code:n =
         {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{colorlinks=false}}
+          \AddToHook{package/hyperref/after} {\keys_set:nn { hyp / setup }{colorlinks=false}}
         }
        ,colorlinks .default:n = true
        ,hidelinks .code:n =
         {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{hidelinks}}
+          \AddToHook{package/hyperref/after} {\keys_set:nn { hyp / setup }{hidelinks}}
         }
-       ,ocgcolorlinks .code:n =
+       ,ocgcolorlinks .choice:
+       ,ocgcolorlinks / true .code:n =
         {
-          \AtEndOfPackage {\keys_set:nn { hyp / setup }{ocgcolorlinks=#1}}
+          \AddToHook{package/hyperref/after} {\keys_set:nn { hyp / setup }{ocgcolorlinks=true}}
         }
+       ,ocgcolorlinks / false .code:n =
+        {
+          \AddToHook{package/hyperref/after} {\keys_set:nn { hyp / setup }{ocgcolorlinks=false}}
+        }
+       ,ocgcolorlinks .default:n = true
      }
  }
  {
@@ -7339,9 +7345,25 @@
 \define@key{Hyp}{pdfpagelabels}[true]{%
   \Hy@boolkey{pdfpagelabels}{#1}%
 }
+%    \end{macrocode}
+% pdfpagelabels is a load only option as the commands are defined in the drivers.
+%    \begin{macrocode}
+\DeclareKeys
+ {
+   ,pdfpagelabels .legacy_if_set:n = Hy@pdfpagelabels
+   ,pdfpagelabels .usage:n = load
+ }
+%    \end{macrocode}
+% pdfescapeform is used in the form code. It is probably useless but to
+% avoid compability problems we done change that.
+%    \begin{macrocode}
 \define@key{Hyp}{pdfescapeform}[true]{%
   \Hy@boolkey{pdfescapeform}{#1}%
 }
+\DeclareKeys
+ {
+   ,pdfescapeform .legacy_if_set:n = Hy@pdfescapeform   
+ }
 %    \end{macrocode}
 % Default values:
 %    \begin{macrocode}

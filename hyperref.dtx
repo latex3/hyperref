@@ -5106,7 +5106,9 @@
 %    \end{macrocode}
 %
 % \section{Options for different drivers}\label{drivers}
-%
+% The driver use a special family with the new keyval handler so that
+% it can be identified and loaded earlier if needed (as it is the case
+% with the generic driver).
 %    \begin{macrocode}
 \newif\ifHy@DviMode
 \let\Hy@DviErrMsg\ltx@empty
@@ -5154,7 +5156,7 @@
     \endinput
   }%
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,tex4ht .code:n =
     {
@@ -5185,7 +5187,7 @@
   \fi
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    pdftex .code:n =
     {
@@ -5221,7 +5223,7 @@
   \fi
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,luatex .code:n =
      {
@@ -5258,7 +5260,7 @@
   }%
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,nativepdf .code:n =
      {
@@ -5322,7 +5324,7 @@
   }%
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,xetex .code:n =
      {
@@ -5404,7 +5406,7 @@
   \fi
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
   {
     ,vtex .code:n =
      {
@@ -5483,7 +5485,7 @@
    A current html.sty will do all necessary (re)definitions%
   }%
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
   {
     ,dviwindo .code:n =
       {
@@ -5519,7 +5521,7 @@
     \PassOptionsToPackage{dvips}{color}%
   }%
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
   ,ps2pdf .code:n =
     {
@@ -5547,7 +5549,7 @@
     }%
   \fi
 }
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,driverfallback .choices:nn =
      {dvipdfmx,dvipdfmx,dvips,dvipsone,dviwindo,hypertex,ps2pdf,tex4ht}
@@ -5573,7 +5575,7 @@
   }%
 }
 
-\DeclareKeys
+\DeclareKeys[hyperref.load]
  {
    ,customdriver .code:n =
      {
@@ -6426,7 +6428,7 @@
        {
          \Hy@activate@plainlinks
        }
-      ,hidelinks .code:n
+      ,hidelinks .code:n =
         {
           \Hy@activate@hidelinks
         }
@@ -7446,6 +7448,9 @@
 %
 %    \begin{macrocode}
 \let\ReadBookmarks\relax
+\DeclareUnknownKeyHandler[hyperref.load]{}
+\DeclareUnknownKeyHandler[hyperref]{} %todo think about a sensible test.
+\ProcessKeyOptions[hyperref.load]
 \ProcessKeyOptions
 \ProcessKeyvalOptions{Hyp}
 %    \end{macrocode}

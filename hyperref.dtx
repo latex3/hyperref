@@ -8337,7 +8337,6 @@
 \def\Hy@babelnormalise#1[#2]{%
   \begingroup
     \Hy@safe@activestrue
-    \let\protect\@unexpandable@protect
     \edef\Hy@tempa{%
       \endgroup
       \noexpand#1[{#2}]%
@@ -13190,7 +13189,6 @@
 \def\HyRef@StarSetRef#1{%
   \begingroup
     \Hy@safe@activestrue
-    \let\protect\@unexpandable@protect
     \edef\x{#1}%
     \@onelevel@sanitize\x
     \edef\x{\endgroup

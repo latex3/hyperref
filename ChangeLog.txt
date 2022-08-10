@@ -1,3 +1,7 @@
+XXXX-XX-XX
+    * move to new keyval handler
+    * deprecate key pdfencoding, unicode is used always
+    
 2022-06-20 Ulrike Fischer/David Carlisle
     *  don't redefine \@secondoffive and \@fifthoffive, issue #238
     *  add interface to access some pdf related values unchanged (needed by hyperxmp).

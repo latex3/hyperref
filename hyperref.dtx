@@ -1589,7 +1589,7 @@
 %    In order to check the tokens we must separate them. This will be
 %    done with \TeX's argument parsing. With this method
 %    we must the following item takes into account, that makes
-%    makes things a litte more complicate:
+%    makes things a little more complicate:
 %    \begin{itemize}
 %    \item \TeX{} does not accept a space as an undelimited argument,
 %    it cancels space tokens while looking for an undelimited
@@ -1650,7 +1650,7 @@
       \expandafter\HyPsd@RemoveMask\expandafter
         |\expandafter\@empty#1\HyPsd@End#1%
 %    \end{macrocode}
-%    \cs{HyPsd@CheckCatcodes} should no have removed the tokens with
+%    \cs{HyPsd@CheckCatcodes} should now have removed the tokens with
 %    catcode 3, 4, 7, and 8. Because a parameter token (6) would
 %    cause to many errors before, there should now be only tokens
 %    with catcodes 11 or 12. So I think there is no need for
@@ -1673,7 +1673,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Backslash.}
-%    The double backslash disturbs parsing octal sequenzes, for
+%    The double backslash disturbs parsing octal sequences, for
 %    example in an string like |abc\\051| the sequence \cs{051}
 %    is detected although the second \cs{} belongs to the
 %    first backslash.
@@ -1684,7 +1684,7 @@
 % \paragraph{Spaces.}
 %    All spaces have already the form \cs{040}.
 %    The last postprocessing step will
-%    be an optimizing of the spaces, so we already introduce
+%    be an optimizing of the spaces, so we introduce
 %    already the necessary command \cs{HyPsd@SPACEOPTI}.
 %    But first it is defined to be \cs{relax} in order to
 %    prevent a too early expansion by an \cs{edef}.
@@ -4655,12 +4655,12 @@
 %    \begin{macrocode}
 \DeclareKeys[hyperref.load]
  {
-   ,implicit  .legacy_if_set:n = {Hy@implicit}
+   ,implicit  .legacy_if_set:n   = {Hy@implicit}
    ,implicit  .usage:n           = load
  }
 \DeclareKeys
  {
-   ,draft     .legacy_if_set:n = {Hy@draft}
+   ,draft     .legacy_if_set:n   = {Hy@draft}
    ,draft     .usage:n           = preamble
    ,final     .legacy_if_set_inverse:n = {Hy@draft}
    ,final     .usage:n           = preamble
@@ -10757,10 +10757,6 @@
 %<*xetex>
 \HyPsd@LoadUnicode
 \Hy@unicodetrue
-\ifx\HyPsd@pdfencoding\HyPsd@pdfencoding@unicode
-\else
-  \let\HyPsd@pdfencoding\HyPsd@pdfencoding@auto
-\fi
 \HyPsd@LoadStringEnc
 \define@key{Hyp}{unicode}[true]{%
   \Hy@boolkey{unicode}{#1}%

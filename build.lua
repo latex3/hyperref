@@ -5,7 +5,7 @@ module = "hyperref"
 docfiledir   = "doc"
 docfiles     = {"paper.pdf", "slides.pdf", "*.html", "*.css","doc/*.tex"}
 textfiles    = {"*.md", "*.txt"}
-installfiles = {"*.def", "*.sty", "*.cfg"}
+installfiles = {"*.def", "*.sty", "*.cfg","putfenc.def",}
 tdslocations = {
   "doc/latex/hyperref/ChangeLog.txt",
   "doc/latex/hyperref/README.md",
@@ -92,6 +92,7 @@ sourcefiles = {
   "*.ins",
   "*-hyper.sty",
   "new-pdfstring.sty",
+  "putfenc.def",
   "bmhydoc.sty",
   "paperslides99.zip"
 }

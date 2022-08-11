@@ -50,6 +50,7 @@ tdslocations = {
   "tex/latex/hyperref/hypertex.def",
   "tex/latex/hyperref/minitoc-hyper.sty",
   "tex/latex/hyperref/nameref.sty",
+  "tex/latex/hyperref/new-pdfstring.sty",
   "tex/latex/hyperref/nohyperref.sty",
   "tex/latex/hyperref/ntheorem-hyper.sty",
   "tex/latex/hyperref/pd1enc.def",
@@ -90,6 +91,7 @@ sourcefiles = {
   "*.dtx",
   "*.ins",
   "*-hyper.sty",
+  "new-pdfstring.sty",
   "bmhydoc.sty",
   "paperslides99.zip"
 }

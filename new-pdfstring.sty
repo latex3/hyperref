@@ -1,0 +1,311 @@
+\ProvidesPackage{new-pdfstring}
+  [2022-08-10 v0.1 %
+  redefinition of pdfstringdef of hyperref]
+
+\input{putfenc.def}
+\DeclareFontFamily{PUTF}{pdf}{}%
+\DeclareFontShape{PUTF}{pdf}{m}{n}{ <-> cmr10 }{}%
+\DeclareFontSubstitution{PUTF}{pdf}{m}{n}
+
+%
+\def\newpdfstringdef#1#2{%
+  \begingroup
+    \escapechar`\\%
+    \edef\0{\string\0}%
+    \edef\1{\string\1}%
+    \edef\2{\string\2}%
+    \edef\3{\string\3}%
+    \edef\8{\string\8}%
+    \edef\9{\string\9}%
+    \fontencoding{PUTF}%
+    \HyPsd@UTFviii% ??????? only unichar
+    \let\utf@viii@undeferr\HyPsd@utf@viii@undeferr % needed?
+    \enc@update
+    \@inmathwarn\pdfstringdef
+    \let\@inmathwarn\HyPsd@inmathwarn
+    \let\add@accent\HyPsd@add@accent
+    \let\{\textbraceleft
+    \let\}\textbraceright
+    \let\\\textbackslash
+    \let\#\textnumbersign
+    \let\$\textdollar
+    \let\%\textpercent
+    \let\&\textampersand
+    \let\_\textunderscore
+    \let\P\textparagraph
+    \let\ldots\textellipsis
+    \let\dots\textellipsis
+    \ltx@IfUndefined{textEncodingNoboundary}%
+      {}{\let\noboundary\textEncodingNoboundary}%
+    \def\\{\pdfstringdefWarn\\}%
+    \def\newline{\pdfstringdefWarn\newline}%
+    \def\TeX{TeX}%
+    \def\LaTeX{La\TeX}%
+    \def\LaTeXe{\LaTeX2ε}%
+    \def\eTeX{ε-\TeX}%
+    \def\SliTeX{Sli\TeX}%
+    \def\MF{Metafont}%
+    \def\MP{Metapost}%
+    \let\fontencoding\@gobble
+    \let\fontfamily\@gobble
+    \let\fontseries\@gobble
+    \let\fontshape\@gobble
+    \let\fontsize\@gobbletwo
+    \let\selectfont\@empty
+    \let\usefont\@gobblefour
+    \let\emph\@firstofone
+    \let\textnormal\@firstofone
+    \let\textrm\@firstofone
+    \let\textsf\@firstofone
+    \let\texttt\@firstofone
+    \let\textbf\@firstofone
+    \let\textmd\@firstofone
+    \let\textit\@firstofone
+    \let\textsc\@firstofone
+    \let\textsl\@firstofone
+    \let\textup\@firstofone
+    \let\normalfont\@empty
+    \let\rmfamily\@empty
+    \let\sffamily\@empty
+    \let\ttfamily\@empty
+    \let\bfseries\@empty
+    \let\mdseries\@empty
+    \let\itshape\@empty
+    \let\scshape\@empty
+    \let\slshape\@empty
+    \let\upshape\@empty
+    \let\em\@empty
+    \let\rm\@empty
+    \let\Huge\@empty
+    \let\LARGE\@empty
+    \let\Large\@empty
+    \let\footnotesize\@empty
+    \let\huge\@empty
+    \let\large\@empty
+    \let\normalsize\@empty
+    \let\scriptsize\@empty
+    \let\small\@empty
+    \let\tiny\@empty
+    \let\mathversion\@gobble
+    \let\phantom\@gobble
+    \let\vphantom\@gobble
+    \let\hphantom\@gobble
+    \let\ding\HyPsd@ding
+    \let\Cube\HyPsd@DieFace
+    \def\begin##1{\csname##1\endcsname}%
+    \def\end##1{\csname end##1\endcsname}%
+    \def\textcolor##1##{\@secondoftwo}%
+    \def\MakeUppercase{\MakeUppercaseUnsupportedInPdfStrings}%
+    \def\MakeLowercase{\MakeLowercaseUnsupportedInPdfStrings}%
+    \ifHy@psdextra
+        \csname psdmapshortnames\endcsname
+        \csname psdaliasnames\endcsname
+    \fi
+    \let\foreignlanguage\@secondoftwo
+    \let\textlatin\@firstofone
+    \ltx@IfUndefined{language@group}{}{%
+      \let\bbl@info\@gobble
+      \csname HyPsd@babel@\language@group\endcsname
+    }%
+    \let\@safe@activestrue\relax
+    \let\@safe@activesfalse\relax
+    \let\cyr\relax
+    \let\glqq\textglqq
+    \let\grqq\textgrqq
+    \let\glq\textglq
+    \let\grq\textgrq
+    \let\flqq\textflqq
+    \let\frqq\textfrqq
+    \let\flq\textflq
+    \let\frq\textfrq
+    \let\if@mid@expandable\@firstoftwo
+    \HyPsd@AMSclassfix
+    \let\hspace\HyPsd@hspace
+    \let\label\@gobble
+    \let\index\@gobble
+    \let\glossary\@gobble
+    \let\href\HyPsd@href
+    \let\@mkboth\@gobbletwo
+    \let\ref\HyPsd@ref
+    \let\pageref\HyPsd@pageref
+    \let\nameref\HyPsd@nameref
+    \let\autoref\HyPsd@autoref
+    \let\leavevmode\@empty
+    \let\mbox\@empty
+    \def\halign{\pdfstringdefWarn\halign\@gobble}%
+    \let\ignorespaces\HyPsd@ignorespaces
+    \let\Hy@SectionAnchorHref\@gobble
+    \let\ensuremath\@firstofone
+    \Hy@pdfstringtrue
+    \pdfstringdefPreHook
+    \HyPsd@LetUnexpandableSpace\space
+    \HyPsd@LetUnexpandableSpace\ %
+    \HyPsd@LetUnexpandableSpace~%
+    \HyPsd@LetUnexpandableSpace\nobreakspace
+    \ltx@IfUndefined{@xspace}{%
+      \let\xspace\HyPsd@ITALCORR
+    }{%
+      \let\xspace\HyPsd@XSPACE
+    }%
+    \let\/\HyPsd@ITALCORR
+    \let\bgroup\/%
+    \let\egroup\/%
+    \let\discretionary\@gobbletwo
+    \def\@ifnextchar{\HyPsd@ifnextchar\@ifnextchar}%
+    \def\kernel@ifnextchar{\HyPsd@ifnextchar\kernel@ifnextchar}%
+    \def\new@ifnextchar{\HyPsd@ifnextchar\new@ifnextchar}%
+    \let\@protected@testopt\HyPsd@protected@testopt
+    \let\@protected@testopt@xargs\HyPsd@protected@testopt
+    \begingroup
+      \let\GenericError\@gobblefour
+      \let\GenericWarning\@gobbletwo
+      \let\GenericInfo\@gobbletwo
+      \ifx\nofrenchguillemets\@undefined
+      \else
+        \nofrenchguillemets
+      \fi
+      \let\Hy@temp\xdef
+      \let\def\HyPsd@DefCommand
+      \let\gdef\HyPsd@DefCommand
+      \let\edef\HyPsd@DefCommand
+      \let\xdef\HyPsd@DefCommand
+      \let\futurelet\HyPsd@LetCommand
+      \let\let\HyPsd@LetCommand
+      \Hy@temp#1{#2}%
+    \endgroup
+    \ifx#1\@empty
+    \else
+      \HyPsd@ProtectSpaces#1%
+      \let\HyPsd@String\@empty
+      \expandafter\HyPsd@RemoveBraces\expandafter{#1|}%
+      \global\let#1\HyPsd@String
+      \let\HyPsd@SPACEOPTI\relax
+      {%
+         \let\HyPsd@String\@empty
+         \expandafter\HyPsd@CheckCatcodes#1\HyPsd@End
+         \global\let#1\HyPsd@String
+      }%
+      \expandafter\HyPsd@RemoveMask\expandafter
+        |\expandafter\@empty#1\HyPsd@End#1%
+      \expandafter
+      \HyPsd@Subst\expandafter{\HyPsd@GLYPHERR}{\relax}#1%
+      \let\HyPsd@String\@empty
+      \expandafter\HyPsd@GlyphProcess#1\relax\@empty
+      \global\let#1\HyPsd@String
+      \HyPsd@StringSubst{\\}{\textbackslash}#1%
+      \expandafter\HyPsd@StringSubst\csname 80\040\endcsname
+          \HyPsd@SPACEOPTI#1%
+      \edef\Hy@temp@A{\HyPsd@SPACEOPTI\HyPsd@SPACEOPTI\80\273}%
+      \expandafter\HyPsd@Subst\expandafter{\Hy@temp@A}%
+          {\HyPsd@SPACEOPTI»}#1%
+      \HyPsd@StringSubst{\)}{)}#1%
+      \let\HyPsd@empty\relax
+      \expandafter\HyPsd@StringSubst\csname 80\051\endcsname
+          {\HyPsd@empty)}#1%
+      \expandafter\HyPsd@Subst\expandafter{\/}\HyPsd@empty#1%
+      \ltx@IfUndefined{@xspace}{%
+      }{%
+        \let\HyPsd@xspace\relax
+        \expandafter\HyPsd@Subst\expandafter
+          {\HyPsd@XSPACE}\HyPsd@xspace#1%
+        \let\HyPsd@xspace\HyPsd@doxspace
+      }%
+      \xdef#1{#1\HyPsd@empty}%
+      \HyPsd@Subst{---}\textemdash#1%
+      \HyPsd@Subst{--}\textendash#1%
+      \HyPsd@Subst{!`}\textexclamdown#1%
+      \HyPsd@Subst{?`}\textquestiondown#1%
+      \let\HyPsd@empty\@empty
+      \HyPsd@StringSubst\(\textparenleft#1%
+      \HyPsd@Subst(\textparenleft#1%
+      \edef\HyPsd@SPACEOPTI{ }%
+      \xdef#1{#1\@empty}%
+    \fi
+  \endgroup
+  \begingroup
+    \HyPsd@ConvertToUnicode#1%
+    \pdfstringdefPostHook#1%
+  \endgroup
+}
+
+
+\ExplSyntaxOn
+\cs_generate_variant:Nn\str_gset_convert:Nnnn{NVnn}
+
+\def\HyPsd@ConvertToUnicode#1
+  {
+    \ifHy@unicode
+    \str_gset_convert:NVnn #1 #1
+        { default }
+        {utf16/string}
+    \else
+    \str_gset_convert:NVnn #1 #1
+        { default }
+        {utf8/string}
+    \fi
+  }
+
+\ExplSyntaxOff
+\def\HyPsd@expand@utfvii{\ERROR}
+\def\HyPsd@UTFviii{\let\unichar\HyPsd@unichar} %?
+
+\def\HyPsd@DieFace#1{%
+  \ifnum#1<1 %
+      \HyPsd@UnicodeReplacementCharacter
+  \else
+      \ifcase#1
+         \or ⚀ \or ⚁ \or ⚂ \or ⚃ \or ⚄\or ⚅
+      \else
+         ⚅\HyPsd@DieFace{\numexpr#1-6}%
+      \fi
+  \fi
+}
+
+
+\def\HyPsd@ding#1{%
+  \ifnum#1<32 %
+    \HyPsd@UnicodeReplacementCharacter
+  \else
+    \ifnum#1>254 %
+        \HyPsd@UnicodeReplacementCharacter
+    \else
+        \ifnum#1<127 %
+          \ifcase\numexpr#1-33\relax
+            ✁\or ✂\or ✃\or ✄\or ☎\or ✆\or ✇\or ✈\or ✉\or ☛\or ☞% 33-43
+             \or ✌\or ✍\or ✎\or ✏\or ✐\or ✑\or ✒\or ✓\or ✔\or ✕% 44-53
+             \or ✖\or ✗\or ✘\or ✙\or ✚\or ✛\or ✜\or ✝\or ✞\or ✟%  54-63
+             \or ✠\or ✡\or ✢\or ✣\or ✤\or ✥\or ✦\or ✧\or ★\or ✩% 64-73
+             \or ✪\or ✫\or ✬ \or ✭\or ✮\or ✯\or ✰\or ✱\or ✲\or ✳% 74-83
+             \or ✴\or ✵\or ✶\or ✷\or ✸\or ✹\or ✺\or ✻\or ✼\or ✽% 84-93
+             \or ✾\or ✿\or ❀\or ❁\or ❂\or ❃\or ❄\or ❅\or ❆\or ❇%94-103
+             \or ❈\or ❉\or ❊\or ❋\or ●\or ❍\or ■\or ❏\or ❐\or ❑% 104-113
+             \or ❒\or ▲\or ▼\or ◆\or ❖\or ◗\or ❘\or ❙\or ❚\or ❛\or ❜%114-124
+             \or ❝\or ❞%125-126
+           \fi
+        \else% >126
+          \ifnum#1>160 %
+           \ifcase\numexpr#1-161\relax
+            ❡\or ❢\or ❣\or ❤\or ❥\or ❦\or ❧\or ♣\or ♦\or ♥\or ♠%161-171
+            \or ①\or ②\or ③\or ④\or ⑤\or ⑥\or ⑦\or ⑧\or ⑨\or ⑩%172-181
+            \or ❶\or ❷\or ❸\or ❹\or ❺\or ❻\or ❼\or ❽\or ❾\or ❿%182-191
+            \or ➀\or ➁\or ➂\or ➃\or ➄\or ➅\or ➆\or ➇\or ➈\or ➉%192-201
+            \or ➊\or ➋\or ➌\or ➍\or ➎\or ➏\or ➐\or ➑\or ➒\or ➓%202-211
+            \or ➔\or →\or ↔\or ↕\or ➘\or ➙\or ➚\or ➛\or ➜\or ➝%212-221
+            \or ➞\or ➟\or ➠\or ➡\or ➢\or ➣\or ➤\or ➥\or ➦\or ➧%222-231
+            \or➨ \or ➩\or ➪\or ➫\or ➬\or ➭\or ➮\or ➯ \or \HyPsd@UnicodeReplacementCharacter %232-240
+            \or ➱\or ➲\or ➳\or ➴\or ➵\or ➶\or ➷\or ➸\or ➹\or ➺%241-250
+            \or ➻\or ➼\or ➽\or ➾%251-254
+           \fi
+          \else %127-160
+            \HyPsd@UnicodeReplacementCharacter
+          \fi
+        \fi
+      \fi
+    \fi
+}
+
+\def\HyPsd@UnicodeReplacementCharacter{�}
+
+\def\HyPsd@DieFaceLarge{\ERROR}
+\def\HyPsd@@ding#1!{\ERROR}
+\endinput

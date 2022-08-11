@@ -1,0 +1,43 @@
+\documentclass{article}
+%\usepackage{ucs}
+%\usepackage[utf8x]{inputenc}
+\usepackage{CJK}
+\makeatletter
+\endlinechar \m@ne
+\def\CJK@namepppdef#1{
+  \CJK@active\protected\def#1{
+    \CJK@@@
+    \ifx\protect \@typeset@protect
+      \expandafter\expandafter\expandafter\CJK@XXX
+       \expandafter\string\expandafter#1
+    \else
+      \noexpand #1
+    \fi}}
+\endlinechar `\^^M
+\makeatother
+
+
+\usepackage{hyperref}
+\usepackage{new-pdfstring}
+\let\pdfstringdef\newpdfstringdef
+
+\usepackage{pifont}
+
+\begin{document}
+
+\section{\texorpdfstring{xx}{\unichar{2600}\texteuro\Cube{10}}}
+
+\section{\texorpdfstring{blub}{ΓειάσουΚόσμε}}
+
+
+\section{\texorpdfstring{blub}{字體字體}}
+
+%spaces?
+\section{grüße an die Welt}
+%ligatures
+\section{grüße---}
+
+\begin{CJK*}{UTF8}{bsmi}
+\section{字體字體}
+\end{CJK*}
+\end{document}

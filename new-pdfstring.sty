@@ -18,7 +18,7 @@
     \edef\8{\string\8}%
     \edef\9{\string\9}%
     \fontencoding{PUTF}%
-    \HyPsd@UTFviii% ??????? only unichar
+    \let\unichar\HyPsd@unichar
     \let\utf@viii@undeferr\HyPsd@utf@viii@undeferr % needed?
     \enc@update
     \@inmathwarn\pdfstringdef
@@ -247,7 +247,7 @@
 
 \ExplSyntaxOff
 \def\HyPsd@expand@utfvii{\ERROR}
-\def\HyPsd@UTFviii{\let\unichar\HyPsd@unichar} %?
+\def\HyPsd@UTFviii{} %?
 
 \def\HyPsd@DieFace#1{%
   \ifnum#1<1 %
@@ -303,6 +303,47 @@
       \fi
     \fi
 }
+
+\ExplSyntaxOn
+\providecommand\HyPsd@unichar{}
+\bool_lazy_or:nnTF
+  { \sys_if_engine_luatex_p: }
+  { \sys_if_engine_xetex_p: }
+  {
+    \cs_set:Npn \HyPsd@unichar #1 { \char_generate:nn {#1} { 12 } }
+  }
+  {
+    \cs_set:Npn \HyPsd@unichar #1
+      {
+        \use:e
+          {
+            \exp_not:N \HyPsd@unichar@aux
+            \char_to_utfviii_bytes:n {#1}
+          }
+      }
+    \cs_new:Npn \HyPsd@unichar@aux #1#2#3#4
+      {
+        \tl_if_blank:nTF {#2}
+          { \char_generate:nn {#1} { 12 } }
+          {
+            \exp_after:wN \exp_after:wN \exp_after:wN
+              \exp_not:N \char_generate:nn {#1} { 13 }
+            \exp_after:wN \exp_after:wN \exp_after:wN
+              \exp_not:N \char_generate:nn {#2} { 13 }
+            \tl_if_blank:nF {#3}
+              {
+                \exp_after:wN \exp_after:wN \exp_after:wN
+                  \exp_not:N \char_generate:nn {#3} { 13 }
+              }
+            \tl_if_blank:nF {#4}
+              {
+                \exp_after:wN \exp_after:wN \exp_after:wN
+                  \exp_not:N \char_generate:nn {#4} { 13 }
+              }
+          }
+      }
+  }
+\ExplSyntaxOff
 
 \def\HyPsd@UnicodeReplacementCharacter{�}
 

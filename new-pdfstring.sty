@@ -2,10 +2,10 @@
   [2022-08-10 v0.1 %
   redefinition of pdfstringdef of hyperref]
 
-\input{putfenc.def}
-\DeclareFontFamily{PUTF}{pdf}{}%
-\DeclareFontShape{PUTF}{pdf}{m}{n}{ <-> cmr10 }{}%
-\DeclareFontSubstitution{PUTF}{pdf}{m}{n}
+\input{puxenc.def}
+\DeclareFontFamily{PUX}{pdf}{}%
+\DeclareFontShape{PUX}{pdf}{m}{n}{ <-> cmr10 }{}%
+\DeclareFontSubstitution{PUX}{pdf}{m}{n}
 
 %
 \def\newpdfstringdef#1#2{%
@@ -17,7 +17,7 @@
     \edef\3{\string\3}%
     \edef\8{\string\8}%
     \edef\9{\string\9}%
-    \fontencoding{PUTF}%
+    \fontencoding{PUX}%
     \let\unichar\HyPsd@unichar
     \let\utf@viii@undeferr\HyPsd@utf@viii@undeferr % needed?
     \enc@update
@@ -343,7 +343,10 @@
           }
       }
   }
+
+
 \ExplSyntaxOff
+
 
 \def\HyPsd@UnicodeReplacementCharacter{�}
 

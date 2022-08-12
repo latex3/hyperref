@@ -138,7 +138,8 @@
 \DeclareTextCommand{\textHT}{PU}{	}% U+0009
 \DeclareTextCommand{\textLF}{PU}{
 }% U+000A
-\DeclareTextCommand{\textCR}{PU}{}% U+000D
+\DeclareTextCommand{\textCR}{PU}{
+}% U+000D
 \DeclareTextCommand{\textquotedbl}{PU}{"}%  U+0022
 \DeclareTextCommand{\textnumbersign}{PU}{\HyPsd@unichar{35}}% U+0023
 \DeclareTextCommand{\textdollar}{PU}{\HyPsd@unichar{36}}% U+0024
@@ -1334,668 +1335,668 @@
 \DeclareTextCommand{\texteqcolon}{PU}{∹}%* U+2239
 \DeclareTextCommand{\textsim}{PU}{∼}%* U+223C
 \DeclareTextCommand{\textbacksim}{PU}{∽}%* U+223D
-\DeclareTextCommand{\textnbacksim}{PU}{∾}%* U+223D U+0338
-\DeclareTextCommand{\textwr}{PU}{}%* U+2240
-\DeclareTextCommand{\textnsim}{PU}{}%* U+2241
-\DeclareTextCommand{\texteqsim}{PU}{}%* U+2242
-\DeclareTextCommand{\textneqsim}{PU}{}%* U+2242 U+0338
-\DeclareTextCommand{\textsimeq}{PU}{}%* U+2243
+\DeclareTextCommand{\textnbacksim}{PU}{∾\HyPsd@unichar{824}}%* U+223D U+0338
+\DeclareTextCommand{\textwr}{PU}{≀}%* U+2240
+\DeclareTextCommand{\textnsim}{PU}{≁}%* U+2241
+\DeclareTextCommand{\texteqsim}{PU}{≂}%* U+2242
+\DeclareTextCommand{\textneqsim}{PU}{≂\HyPsd@unichar{824}}%* U+2242 U+0338
+\DeclareTextCommand{\textsimeq}{PU}{≃}%* U+2243
 \DeclareTextCommand{\textnsimeq}{PU}{}%* U+2244
-\DeclareTextCommand{\textcong}{PU}{}%* U+2245
-\DeclareTextCommand{\textncong}{PU}{}%* U+2247
-\DeclareTextCommand{\textapprox}{PU}{}%* U+2248
-\DeclareTextCommand{\textnapprox}{PU}{}%* U+2249
-\DeclareTextCommand{\textapproxeq}{PU}{}%* U+224A
-\DeclareTextCommand{\textnapproxeq}{PU}{}%* U+224A U+0338
-\DeclareTextCommand{\texttriplesim}{PU}{}%* U+224B
-\DeclareTextCommand{\textntriplesim}{PU}{}%* U+224B U+0338
-\DeclareTextCommand{\textbackcong}{PU}{}%* U+224C
-\DeclareTextCommand{\textnbackcong}{PU}{}%* U+224C U+0338
-\DeclareTextCommand{\textasymp}{PU}{}%* U+224D
-\DeclareTextCommand{\textnasymp}{PU}{}%* U+224D U+0338
-\DeclareTextCommand{\textBumpeq}{PU}{}%* U+224E
-\DeclareTextCommand{\textnBumpeq}{PU}{}%* U+224E U+0338
-\DeclareTextCommand{\textbumpeq}{PU}{}%* U+224F
-\DeclareTextCommand{\textnbumpeq}{PU}{}%* U+224F U+0338
-\DeclareTextCommand{\textdoteq}{PU}{}%* U+2250
-\DeclareTextCommand{\textndoteq}{PU}{}%* U+2250 U+0338
-\DeclareTextCommand{\textdoteqdot}{PU}{}%* U+2251
-\DeclareTextCommand{\textnDoteq}{PU}{}%* U+2251 U+0338
-\DeclareTextCommand{\textfallingdoteq}{PU}{}%* U+2252
-\DeclareTextCommand{\textnfallingdoteq}{PU}{}%* U+2252 U+0338
-\DeclareTextCommand{\textrisingdoteq}{PU}{}%* U+2253
-\DeclareTextCommand{\textnrisingdoteq}{PU}{}%* U+2253 U+0338
-\DeclareTextCommand{\textcolonequals}{PU}{}%* U+2254
-\DeclareTextCommand{\textequalscolon}{PU}{}%* U+2255
-\DeclareTextCommand{\texteqcirc}{PU}{}%* U+2256
-\DeclareTextCommand{\textneqcirc}{PU}{}%* U+2256 U+0338
-\DeclareTextCommand{\textcirceq}{PU}{}%* U+2257
-\DeclareTextCommand{\textncirceq}{PU}{}%* U+2257 U+0338
-\DeclareTextCommand{\texthateq}{PU}{}%* U+2259
-\DeclareTextCommand{\textnhateq}{PU}{}%* U+2259 U+0338
-\DeclareTextCommand{\texttriangleeq}{PU}{}%* U+225C
-\DeclareTextCommand{\textneq}{PU}{}%* U+2260
-\DeclareTextCommand{\textne}{PU}{}%* U+2260
-\DeclareTextCommand{\textequiv}{PU}{}%* U+2261
-\DeclareTextCommand{\textnequiv}{PU}{}%* U+2262
-\DeclareTextCommand{\textleq}{PU}{}%* U+2264
-\DeclareTextCommand{\textle}{PU}{}%* U+2264
-\DeclareTextCommand{\textgeq}{PU}{}%* U+2265
-\DeclareTextCommand{\textge}{PU}{}%* U+2265
-\DeclareTextCommand{\textleqq}{PU}{}%* U+2266
-\DeclareTextCommand{\textnleqq}{PU}{}%* U+2266 U+0338
-\DeclareTextCommand{\textgeqq}{PU}{}%* U+2267
-\DeclareTextCommand{\textngeqq}{PU}{}%* U+2267 U+0338
-\DeclareTextCommand{\textlneqq}{PU}{}%* U+2268
-\DeclareTextCommand{\textgneqq}{PU}{}%* U+2269
-\DeclareTextCommand{\textll}{PU}{}%* U+226A
-\DeclareTextCommand{\textnll}{PU}{}%* U+226A U+0338
-\DeclareTextCommand{\textgg}{PU}{}%* U+226B
-\DeclareTextCommand{\textngg}{PU}{}%* U+226B U+0338
-\DeclareTextCommand{\textbetween}{PU}{}%* U+226C
-\DeclareTextCommand{\textnless}{PU}{}%* U+226E
-\DeclareTextCommand{\textngtr}{PU}{}%* U+226F
-\DeclareTextCommand{\textnleq}{PU}{}%* U+2270
-\DeclareTextCommand{\textngeq}{PU}{}%* U+2271
-\DeclareTextCommand{\textlesssim}{PU}{}%* U+2272
-\DeclareTextCommand{\textgtrsim}{PU}{}%* U+2273
-\DeclareTextCommand{\textnlesssim}{PU}{}%* U+2274
-\DeclareTextCommand{\textngtrsim}{PU}{}%* U+2275
-\DeclareTextCommand{\textlessgtr}{PU}{}%* U+2276
-\DeclareTextCommand{\textgtrless}{PU}{}%* U+2277
-\DeclareTextCommand{\textngtrless}{PU}{}%* U+2278
-\DeclareTextCommand{\textnlessgtr}{PU}{}%* U+2279
-\DeclareTextCommand{\textprec}{PU}{}%* U+227A
-\DeclareTextCommand{\textsucc}{PU}{}%* U+227B
-\DeclareTextCommand{\textpreccurlyeq}{PU}{}%* U+227C
-\DeclareTextCommand{\textsucccurlyeq}{PU}{}%* U+227D
-\DeclareTextCommand{\textprecsim}{PU}{}%* U+227E
-\DeclareTextCommand{\textnprecsim}{PU}{}%* U+227E U+0338
-\DeclareTextCommand{\textsuccsim}{PU}{}%* U+227F
-\DeclareTextCommand{\textnsuccsim}{PU}{}%* U+227F U+0338
-\DeclareTextCommand{\textnprec}{PU}{}%* U+2280
-\DeclareTextCommand{\textnsucc}{PU}{}%* U+2281
-\DeclareTextCommand{\textsubset}{PU}{}%* U+2282
-\DeclareTextCommand{\textsupset}{PU}{}%* U+2283
-\DeclareTextCommand{\textnsubset}{PU}{}%* U+2284
-\DeclareTextCommand{\textnsupset}{PU}{}%* U+2285
-\DeclareTextCommand{\textsubseteq}{PU}{}%* U+2286
-\DeclareTextCommand{\textsupseteq}{PU}{}%* U+2287
-\DeclareTextCommand{\textnsubseteq}{PU}{}%* U+2288
-\DeclareTextCommand{\textnsupseteq}{PU}{}%* U+2289
-\DeclareTextCommand{\textsubsetneq}{PU}{}%* U+228A
-\DeclareTextCommand{\textsupsetneq}{PU}{}%* U+228B
-\DeclareTextCommand{\textcupdot}{PU}{}%* U+228D
-\DeclareTextCommand{\textcupplus}{PU}{}%* U+228E
-\DeclareTextCommand{\textsqsubset}{PU}{}%* U+228F
-\DeclareTextCommand{\textnsqsubset}{PU}{}%* U+228F U+0338
-\DeclareTextCommand{\textsqsupset}{PU}{}%* U+2290
-\DeclareTextCommand{\textnsqsupset}{PU}{}%* U+2290 U+0338
-\DeclareTextCommand{\textsqsubseteq}{PU}{}%* U+2291
-\DeclareTextCommand{\textnsqsubseteq}{PU}{}%* U+2291 U+0338
-\DeclareTextCommand{\textsqsupseteq}{PU}{}%* U+2292
-\DeclareTextCommand{\textnsqsupseteq}{PU}{}%* U+2292 U+0338
-\DeclareTextCommand{\textsqcap}{PU}{}%* U+2293
-\DeclareTextCommand{\textsqcup}{PU}{}%* U+2294
-\DeclareTextCommand{\textoplus}{PU}{}%* U+2295
-\DeclareTextCommand{\textominus}{PU}{}%* U+2296
-\DeclareTextCommand{\textotimes}{PU}{}%* U+2297
-\DeclareTextCommand{\textoslash}{PU}{}%* U+2298
-\DeclareTextCommand{\textodot}{PU}{}%* U+2299
-\DeclareTextCommand{\textcircledcirc}{PU}{}%* U+229A
-\DeclareTextCommand{\textcircledast}{PU}{}%* U+229B
-\DeclareTextCommand{\textcircleddash}{PU}{}%* U+229D
-\DeclareTextCommand{\textboxplus}{PU}{}%* U+229E
-\DeclareTextCommand{\textboxminus}{PU}{}%* U+229F
-\DeclareTextCommand{\textboxtimes}{PU}{}%* U+22A0
-\DeclareTextCommand{\textboxdot}{PU}{}%* U+22A1
-\DeclareTextCommand{\textvdash}{PU}{}%* U+22A2
-\DeclareTextCommand{\textdashv}{PU}{}%* U+22A3
-\DeclareTextCommand{\textndashv}{PU}{}%* U+22A3 U+0338
-\DeclareTextCommand{\texttop}{PU}{}%* U+22A4
-\DeclareTextCommand{\textndownvdash}{PU}{}%* U+22A4 U+0338
-\DeclareTextCommand{\textbot}{PU}{}%* U+22A5
-\DeclareTextCommand{\textnupvdash}{PU}{}%* U+22A5 U+0338
-\DeclareTextCommand{\textvDash}{PU}{}%* U+22A8
-\DeclareTextCommand{\textVdash}{PU}{}%* U+22A9
-\DeclareTextCommand{\textVvdash}{PU}{}%* U+22AA
-\DeclareTextCommand{\textnVvash}{PU}{}%* U+22AA U+0338
-\DeclareTextCommand{\textVDash}{PU}{}%* U+22AB
-\DeclareTextCommand{\textnvdash}{PU}{}%* U+22AC
-\DeclareTextCommand{\textnvDash}{PU}{}%* U+22AD
-\DeclareTextCommand{\textnVdash}{PU}{}%* U+22AE
-\DeclareTextCommand{\textnVDash}{PU}{}%* U+22AF
-\DeclareTextCommand{\textlhd}{PU}{}%* U+22B2
-\DeclareTextCommand{\textrhd}{PU}{}%* U+22B3
-\DeclareTextCommand{\textunlhd}{PU}{}%* U+22B4
-\DeclareTextCommand{\textunrhd}{PU}{}%* U+22B5
-\DeclareTextCommand{\textmultimapdotbothA}{PU}{}%* U+22B6
-\DeclareTextCommand{\textmultimapdotbothB}{PU}{}%* U+22B7
-\DeclareTextCommand{\textmultimap}{PU}{}%* U+22B8
-\DeclareTextCommand{\textveebar}{PU}{}%* U+22BB
-\DeclareTextCommand{\textbarwedge}{PU}{}%* U+22BC
-\DeclareTextCommand{\textstar}{PU}{}%* U+22C6
-\DeclareTextCommand{\textdivideontimes}{PU}{}%* U+22C7
-\DeclareTextCommand{\textbowtie}{PU}{}%* U+22C8
-\DeclareTextCommand{\textltimes}{PU}{}%* U+22C9
-\DeclareTextCommand{\textrtimes}{PU}{}%* U+22CA
-\DeclareTextCommand{\textleftthreetimes}{PU}{}%* U+22CB
-\DeclareTextCommand{\textrightthreetimes}{PU}{}%* U+22CC
-\DeclareTextCommand{\textbacksimeq}{PU}{}%* U+22CD
-\DeclareTextCommand{\textnbacksimeq}{PU}{}%* U+22CD U+0338
-\DeclareTextCommand{\textcurlyvee}{PU}{}%* U+22CE
-\DeclareTextCommand{\textcurlywedge}{PU}{}%* U+22CF
-\DeclareTextCommand{\textSubset}{PU}{}%* U+22D0
-\DeclareTextCommand{\textnSubset}{PU}{}%* U+22D0 U+0338
-\DeclareTextCommand{\textSupset}{PU}{}%* U+22D1
-\DeclareTextCommand{\textnSupset}{PU}{}%* U+22D1 U+0338
-\DeclareTextCommand{\textCap}{PU}{}%* U+22D2
-\DeclareTextCommand{\textCup}{PU}{}%* U+22D3
-\DeclareTextCommand{\textpitchfork}{PU}{}%* U+22D4
-\DeclareTextCommand{\textlessdot}{PU}{}%* U+22D6
-\DeclareTextCommand{\textgtrdot}{PU}{}%* U+22D7
-\DeclareTextCommand{\textlll}{PU}{}%* U+22D8
-\DeclareTextCommand{\textggg}{PU}{}%* U+22D9
-\DeclareTextCommand{\textlesseqgtr}{PU}{}%* U+22DA
-\DeclareTextCommand{\textgtreqless}{PU}{}%* U+22DB
-\DeclareTextCommand{\textcurlyeqprec}{PU}{}%* U+22DE
-\DeclareTextCommand{\textncurlyeqprec}{PU}{}%* U+22DE U+0338
-\DeclareTextCommand{\textcurlyeqsucc}{PU}{}%* U+22DF
-\DeclareTextCommand{\textncurlyeqsucc}{PU}{}%* U+22DF U+0338
-\DeclareTextCommand{\textnpreccurlyeq}{PU}{}%* U+22E0
-\DeclareTextCommand{\textnsucccurlyeq}{PU}{}%* U+22E1
-\DeclareTextCommand{\textnqsubseteq}{PU}{}%* U+22E2
-\DeclareTextCommand{\textnqsupseteq}{PU}{}%* U+22E3
-\DeclareTextCommand{\textsqsubsetneq}{PU}{}%* U+22E4
-\DeclareTextCommand{\textsqsupsetneq}{PU}{}%* U+22E5
-\DeclareTextCommand{\textlnsim}{PU}{}%* U+22E6
-\DeclareTextCommand{\textgnsim}{PU}{}%* U+22E7
-\DeclareTextCommand{\textprecnsim}{PU}{}%* U+22E8
-\DeclareTextCommand{\textsuccnsim}{PU}{}%* U+22E9
-\DeclareTextCommand{\textntriangleleft}{PU}{}%* U+22EA
-\DeclareTextCommand{\textntriangleright}{PU}{}%* U+22EB
-\DeclareTextCommand{\textntrianglelefteq}{PU}{}%* U+22EC
-\DeclareTextCommand{\textntrianglerighteq}{PU}{}%* U+22ED
-\DeclareTextCommand{\textvdots}{PU}{}%* U+22EE
-\DeclareTextCommand{\textcdots}{PU}{}%* U+22EF
-\DeclareTextCommand{\textudots}{PU}{}%* U+22F0
-\DeclareTextCommand{\textddots}{PU}{}%* U+22F1
-\DeclareTextCommand{\textbarin}{PU}{}%* U+22F6
-\DeclareTextCommand{\textdiameter}{PU}{}%* U+2300
-\DeclareTextCommand{\textbackneg}{PU}{}%* U+2310
-\DeclareTextCommand{\textwasylozenge}{PU}{}%* U+2311
-\DeclareTextCommand{\textinvbackneg}{PU}{}%* U+2319
-\DeclareTextCommand{\textclock}{PU}{}%* U+231A
-\DeclareTextCommand{\textulcorner}{PU}{}%* U+231C
-\DeclareTextCommand{\texturcorner}{PU}{}%* U+231D
-\DeclareTextCommand{\textllcorner}{PU}{}%* U+231E
-\DeclareTextCommand{\textlrcorner}{PU}{}%* U+231F
-\DeclareTextCommand{\textfrown}{PU}{}%* U+2322
-\DeclareTextCommand{\textsmile}{PU}{}%* U+2323
-\DeclareTextCommand{\textKeyboard}{PU}{}%* U+2328
-\DeclareTextCommand{\textlangle}{PU}{}%* U+2329
-\DeclareTextCommand{\textrangle}{PU}{}%* U+232A
-\DeclareTextCommand{\textAPLinv}{PU}{}%* U+2339
-\DeclareTextCommand{\textTumbler}{PU}{}%* U+233C
-\DeclareTextCommand{\textstmaryrdbaro}{PU}{}% U+233D
-\DeclareTextCommand{\textnotslash}{PU}{}%* U+233F
-\DeclareTextCommand{\textnotbackslash}{PU}{}%* U+2340
-\DeclareTextCommand{\textboxbackslash}{PU}{}%* U+2342
-\DeclareTextCommand{\textAPLleftarrowbox}{PU}{}%* U+2347
-\DeclareTextCommand{\textAPLrightarrowbox}{PU}{}%* U+2348
-\DeclareTextCommand{\textAPLuparrowbox}{PU}{}%* U+2350
-\DeclareTextCommand{\textAPLdownarrowbox}{PU}{}%* U+2357
-\DeclareTextCommand{\textAPLinput}{PU}{}%* U+235E
-\DeclareTextCommand{\textRequest}{PU}{}%* U+2370
-\DeclareTextCommand{\textBeam}{PU}{}%* U+2393
-\DeclareTextCommand{\texthexagon}{PU}{}%* U+2394
-\DeclareTextCommand{\textAPLbox}{PU}{}%* U+2395
-\DeclareTextCommand{\textForwardToIndex}{PU}{}%* U+23ED
-\DeclareTextCommand{\textRewindToIndex}{PU}{}%* U+23EE
-\DeclareTextCommand{\textblank}{PU}{}% U+2422
-\DeclareTextCommand{\textvisiblespace}{PU}{}% U+2423
-\DeclareTextCommand{\textbbslash}{PU}{}%* U+244A
-\DeclareTextCompositeCommand{\textcircled}{PU}{1}{}% U+2460
-\DeclareTextCompositeCommand{\textcircled}{PU}{2}{}% U+2461
-\DeclareTextCompositeCommand{\textcircled}{PU}{3}{}% U+2462
-\DeclareTextCompositeCommand{\textcircled}{PU}{4}{}% U+2463
-\DeclareTextCompositeCommand{\textcircled}{PU}{5}{}% U+2464
-\DeclareTextCompositeCommand{\textcircled}{PU}{6}{}% U+2465
-\DeclareTextCompositeCommand{\textcircled}{PU}{7}{}% U+2466
-\DeclareTextCompositeCommand{\textcircled}{PU}{8}{}% U+2467
-\DeclareTextCompositeCommand{\textcircled}{PU}{9}{}% U+2468
-\DeclareTextCompositeCommand{\textcircled}{PU}{10}{}% U+2469
-\DeclareTextCompositeCommand{\textcircled}{PU}{11}{}% U+246A
-\DeclareTextCompositeCommand{\textcircled}{PU}{12}{}% U+246B
-\DeclareTextCompositeCommand{\textcircled}{PU}{13}{}% U+246C
-\DeclareTextCompositeCommand{\textcircled}{PU}{14}{}% U+246D
-\DeclareTextCompositeCommand{\textcircled}{PU}{15}{}% U+246E
-\DeclareTextCompositeCommand{\textcircled}{PU}{16}{}% U+246F
-\DeclareTextCompositeCommand{\textcircled}{PU}{17}{}% U+2470
-\DeclareTextCompositeCommand{\textcircled}{PU}{18}{}% U+2471
-\DeclareTextCompositeCommand{\textcircled}{PU}{19}{}% U+2472
-\DeclareTextCompositeCommand{\textcircled}{PU}{20}{}% U+2473
-\DeclareTextCompositeCommand{\textcircled}{PU}{A}{}% U+24B6
-\DeclareTextCommand{\textCircledA}{PU}{}%* U+24B6
-\DeclareTextCompositeCommand{\textcircled}{PU}{B}{}% U+24B7
-\DeclareTextCompositeCommand{\textcircled}{PU}{C}{}% U+24B8
-\DeclareTextCompositeCommand{\textcircled}{PU}{D}{}% U+24B9
-\DeclareTextCompositeCommand{\textcircled}{PU}{E}{}% U+24BA
-\DeclareTextCompositeCommand{\textcircled}{PU}{F}{}% U+24BB
-\DeclareTextCommand{\textCleaningF}{PU}{}%* U+24BB
-\DeclareTextCommand{\textCleaningFF}{PU}{}%* U+24BB U+0332
-\DeclareTextCompositeCommand{\textcircled}{PU}{G}{}% U+24BC
-\DeclareTextCompositeCommand{\textcircled}{PU}{H}{}% U+24BD
-\DeclareTextCompositeCommand{\textcircled}{PU}{I}{}% U+24BE
-\DeclareTextCompositeCommand{\textcircled}{PU}{J}{}% U+24BF
-\DeclareTextCompositeCommand{\textcircled}{PU}{K}{}% U+24C0
-\DeclareTextCompositeCommand{\textcircled}{PU}{L}{}% U+24C1
-\DeclareTextCompositeCommand{\textcircled}{PU}{M}{}% U+24C2
-\DeclareTextCompositeCommand{\textcircled}{PU}{N}{}% U+24C3
-\DeclareTextCompositeCommand{\textcircled}{PU}{O}{}% U+24C4
-\DeclareTextCompositeCommand{\textcircled}{PU}{P}{}% U+24C5
-\DeclareTextCommand{\textCleaningP}{PU}{}%* U+24C5
-\DeclareTextCommand{\textCleaningPP}{PU}{}%* U+24C5 U+0332
-\DeclareTextCompositeCommand{\textcircled}{PU}{Q}{}% U+24C6
-\DeclareTextCompositeCommand{\textcircled}{PU}{R}{}% U+24C7
-\DeclareTextCompositeCommand{\textcircled}{PU}{S}{}% U+24C8
-\DeclareTextCompositeCommand{\textcircled}{PU}{T}{}% U+24C9
-\DeclareTextCompositeCommand{\textcircled}{PU}{U}{}% U+24CA
-\DeclareTextCompositeCommand{\textcircled}{PU}{V}{}% U+24CB
-\DeclareTextCompositeCommand{\textcircled}{PU}{W}{}% U+24CC
-\DeclareTextCompositeCommand{\textcircled}{PU}{X}{}% U+24CD
-\DeclareTextCompositeCommand{\textcircled}{PU}{Y}{}% U+24CE
-\DeclareTextCompositeCommand{\textcircled}{PU}{Z}{}% U+24CF
-\DeclareTextCompositeCommand{\textcircled}{PU}{a}{}% U+24D0
-\DeclareTextCompositeCommand{\textcircled}{PU}{b}{}% U+24D1
-\DeclareTextCompositeCommand{\textcircled}{PU}{c}{}% U+24D2
-\DeclareTextCompositeCommand{\textcircled}{PU}{d}{}% U+24D3
-\DeclareTextCompositeCommand{\textcircled}{PU}{e}{}% U+24D4
-\DeclareTextCompositeCommand{\textcircled}{PU}{f}{}% U+24D5
-\DeclareTextCompositeCommand{\textcircled}{PU}{g}{}% U+24D6
-\DeclareTextCompositeCommand{\textcircled}{PU}{h}{}% U+24D7
-\DeclareTextCompositeCommand{\textcircled}{PU}{i}{}% U+24D8
-\DeclareTextCompositeCommand{\textcircled}{PU}{j}{}% U+24D9
-\DeclareTextCompositeCommand{\textcircled}{PU}{k}{}% U+24DA
-\DeclareTextCompositeCommand{\textcircled}{PU}{l}{}% U+24DB
-\DeclareTextCompositeCommand{\textcircled}{PU}{m}{}% U+24DC
-\DeclareTextCompositeCommand{\textcircled}{PU}{n}{}% U+24DD
-\DeclareTextCompositeCommand{\textcircled}{PU}{o}{}% U+24DE
-\DeclareTextCompositeCommand{\textcircled}{PU}{p}{}% U+24DF
-\DeclareTextCompositeCommand{\textcircled}{PU}{q}{}% U+24E0
-\DeclareTextCompositeCommand{\textcircled}{PU}{r}{}% U+24E1
-\DeclareTextCompositeCommand{\textcircled}{PU}{s}{}% U+24E2
-\DeclareTextCompositeCommand{\textcircled}{PU}{t}{}% U+24E3
-\DeclareTextCompositeCommand{\textcircled}{PU}{u}{}% U+24E4
-\DeclareTextCompositeCommand{\textcircled}{PU}{v}{}% U+24E5
-\DeclareTextCompositeCommand{\textcircled}{PU}{w}{}% U+24E6
-\DeclareTextCompositeCommand{\textcircled}{PU}{x}{}% U+24E7
-\DeclareTextCompositeCommand{\textcircled}{PU}{y}{}% U+24E8
-\DeclareTextCompositeCommand{\textcircled}{PU}{z}{}% U+24E9
-\DeclareTextCompositeCommand{\textcircled}{PU}{0}{}% U+24EA
-\DeclareTextCommand{\textCuttingLine}{PU}{}%* U+2504
-\DeclareTextCommand{\textUParrow}{PU}{}%* U+25B2
-\DeclareTextCommand{\textbigtriangleup}{PU}{}%* U+25B3
-\DeclareTextCommand{\textForward}{PU}{}%* U+25B6
-\DeclareTextCommand{\texttriangleright}{PU}{}%* U+25B7
-\DeclareTextCommand{\textRHD}{PU}{}%* U+25BA
-\DeclareTextCommand{\textDOWNarrow}{PU}{}%* U+25BC
-\DeclareTextCommand{\textbigtriangledown}{PU}{}%* U+25BD
-\DeclareTextCommand{\textRewind}{PU}{}%* U+25C0
-\DeclareTextCommand{\texttriangleleft}{PU}{}%* U+25C1
-\DeclareTextCommand{\textLHD}{PU}{}%* U+25C4
-\DeclareTextCommand{\textdiamond}{PU}{}%* U+25C7
-\DeclareTextCommand{\textlozenge}{PU}{}%* U+25CA
-\DeclareTextCommand{\textLEFTCIRCLE}{PU}{}%* U+25D6
-\DeclareTextCommand{\textRIGHTCIRCLE}{PU}{}%* U+25D7
-\DeclareTextCommand{\textopenbullet}{PU}{}%* U+25E6
-\DeclareTextCommand{\textboxbar}{PU}{}%* U+25EB
-\DeclareTextCommand{\textbigcircle}{PU}{}%* U+25EF
-\DeclareTextCommand{\textCloud}{PU}{}%* U+2601
-\DeclareTextCommand{\textFiveStar}{PU}{}%* U+2605
-\DeclareTextCommand{\textFiveStarOpen}{PU}{}%* U+2606
-\DeclareTextCommand{\textPhone}{PU}{}%* U+260E
-\DeclareTextCommand{\textboxempty}{PU}{}%* U+2610
-\DeclareTextCommand{\textCheckedbox}{PU}{}%* U+2611
-\DeclareTextCommand{\textCrossedbox}{PU}{}%* U+2612
-\DeclareTextCommand{\textCoffeecup}{PU}{}%* U+2615
-\DeclareTextCommand{\textHandCuffLeft}{PU}{}%* U+261A
-\DeclareTextCommand{\textHandCuffRight}{PU}{}%* U+261B
-\DeclareTextCommand{\textHandLeft}{PU}{}%* U+261C
-\DeclareTextCommand{\textHandRight}{PU}{}%* U+261E
-\DeclareTextCommand{\textRadioactivity}{PU}{}%* U+2622
-\DeclareTextCommand{\textBiohazard}{PU}{}%* U+2623
-\DeclareTextCommand{\textAnkh}{PU}{}%* U+2625
-\DeclareTextCommand{\textYinYang}{PU}{}%* U+262F
-\DeclareTextCommand{\textfrownie}{PU}{}%* U+2639
-\DeclareTextCommand{\textsmiley}{PU}{}%* U+263A
-\DeclareTextCommand{\textblacksmiley}{PU}{}%* U+263B
-\DeclareTextCommand{\textsun}{PU}{}%* U+263C
-\DeclareTextCommand{\textleftmoon}{PU}{}%* U+263D
-\DeclareTextCommand{\textrightmoon}{PU}{}%* U+263E
-\DeclareTextCommand{\textmercury}{PU}{}%* U+263F
-\DeclareTextCommand{\textPUfemale}{PU}{}% U+2640
-\DeclareTextCommand{\textearth}{PU}{}%* U+2641
-\DeclareTextCommand{\textmale}{PU}{}%* U+2642
-\DeclareTextCommand{\textjupiter}{PU}{}%* U+2643
-\DeclareTextCommand{\textsaturn}{PU}{}%* U+2644
-\DeclareTextCommand{\texturanus}{PU}{}%* U+2645
-\DeclareTextCommand{\textneptune}{PU}{}%* U+2646
-\DeclareTextCommand{\textpluto}{PU}{}%* U+2647
-\DeclareTextCommand{\textaries}{PU}{}%* U+2648
-\DeclareTextCommand{\texttaurus}{PU}{}%* U+2649
-\DeclareTextCommand{\textgemini}{PU}{}%* U+264A
-\DeclareTextCommand{\textcancer}{PU}{}%* U+264B
-\DeclareTextCommand{\textleo}{PU}{}%* U+264C
-\DeclareTextCommand{\textvirgo}{PU}{}%* U+264D
-\DeclareTextCommand{\textlibra}{PU}{}%* U+264E
-\DeclareTextCommand{\textscorpio}{PU}{}%* U+264F
-\DeclareTextCommand{\textsagittarius}{PU}{}%* U+2650
-\DeclareTextCommand{\textcapricornus}{PU}{}%* U+2651
-\DeclareTextCommand{\textaquarius}{PU}{}%* U+2652
-\DeclareTextCommand{\textpisces}{PU}{}%* U+2653
-\DeclareTextCommand{\textspadesuitblack}{PU}{}% U+2660
-\DeclareTextCommand{\textheartsuitwhite}{PU}{}% U+2661
-\DeclareTextCommand{\textdiamondsuitwhite}{PU}{}% U+2662
-\DeclareTextCommand{\textclubsuitblack}{PU}{}% U+2663
-\DeclareTextCommand{\textspadesuitwhite}{PU}{}% U+2664
-\DeclareTextCommand{\textheartsuitblack}{PU}{}% U+2665
-\DeclareTextCommand{\textdiamondsuitblack}{PU}{}% U+2666
-\DeclareTextCommand{\textclubsuitwhite}{PU}{}% U+2667
-\DeclareTextCommand{\textquarternote}{PU}{}%* U+2669
-\DeclareTextCommand{\textmusicalnote}{PU}{}% U+266A
-\DeclareTextCommand{\texttwonotes}{PU}{}%* U+266B
-\DeclareTextCommand{\textsixteenthnote}{PU}{}%* U+266C
-\DeclareTextCommand{\textflat}{PU}{}%* U+266D
-\DeclareTextCommand{\textnatural}{PU}{}%* U+266E
-\DeclareTextCommand{\textsharp}{PU}{}%* U+266F
-\DeclareTextCommand{\textrecycle}{PU}{}%* U+2672
-\DeclareTextCommand{\textWheelchair}{PU}{}%* U+267F
-\DeclareTextCommand{\textFlag}{PU}{}%* U+2691
-\DeclareTextCommand{\textMineSign}{PU}{}%* U+2692
-\DeclareTextCommand{\textdsmilitary}{PU}{}%* U+2694
-\DeclareTextCommand{\textdsmedical}{PU}{}%* U+2695
-\DeclareTextCommand{\textdsjuridical}{PU}{}%* U+2696
-\DeclareTextCommand{\textdschemical}{PU}{}%* U+2697
-\DeclareTextCommand{\textdsbiological}{PU}{}%* U+2698
-\DeclareTextCommand{\textdscommercial}{PU}{}%* U+269A
-\DeclareTextCommand{\textmanstar}{PU}{}%* U+269D
-\DeclareTextCommand{\textdanger}{PU}{}%* U+26A0
-\DeclareTextCommand{\textFemaleFemale}{PU}{}%* U+26A2
-\DeclareTextCommand{\textMaleMale}{PU}{}%* U+26A3
-\DeclareTextCommand{\textFemaleMale}{PU}{}%* U+26A4
-\DeclareTextCommand{\textHermaphrodite}{PU}{}%* U+26A5
-\DeclareTextCommand{\textNeutral}{PU}{}%* U+26AA
-\DeclareTextCommand{\textmarried}{PU}{}% U+26AD
-\DeclareTextCommand{\textdivorced}{PU}{}% U+26AE
-\DeclareTextCommand{\textPUuncrfemale}{PU}{}% U+26B2
-\DeclareTextCommand{\texthexstar}{PU}{}%* U+26B9
-\DeclareTextCommand{\textSoccerBall}{PU}{}% U+26BD
-\DeclareTextCommand{\textSunCload}{PU}{}%* U+26C5
-\DeclareTextCommand{\textRain}{PU}{}%* U+26C6
-\DeclareTextCommand{\textnoway}{PU}{}%* U+26D4
-\DeclareTextCommand{\textMountain}{PU}{}%* U+26F0
-\DeclareTextCommand{\textTent}{PU}{}%* U+26FA
-\DeclareTextCommand{\textScissorRightBrokenBottom}{PU}{}% U+2701
-\DeclareTextCommand{\textScissorRight}{PU}{}%* U+2702
-\DeclareTextCommand{\textScissorRightBrokenTop}{PU}{}%* U+2703
-\DeclareTextCommand{\textScissorHollowRight}{PU}{}%* U+2704
-\DeclareTextCommand{\textPhoneHandset}{PU}{}%* U+2706
-\DeclareTextCommand{\textTape}{PU}{}%* U+2707
-\DeclareTextCommand{\textPlane}{PU}{}%* U+2708
-\DeclareTextCommand{\textEnvelope}{PU}{}%* U+2709
-\DeclareTextCommand{\textPeace}{PU}{}%* U+270C
-\DeclareTextCommand{\textWritingHand}{PU}{}%* U+270D
-\DeclareTextCommand{\textPencilRightDown}{PU}{}%* U+270E
-\DeclareTextCommand{\textPencilRight}{PU}{}%* U+270F
-\DeclareTextCommand{\textPencilRightUp}{PU}{}%* U+2710
-\DeclareTextCommand{\textNibRight}{PU}{}%* U+2711
-\DeclareTextCommand{\textNibSolidRight}{PU}{}%* U+2712
-\DeclareTextCommand{\textCheckmark}{PU}{}%* U+2713
-\DeclareTextCommand{\textCheckmarkBold}{PU}{}%* U+2714
-\DeclareTextCommand{\textXSolid}{PU}{}%* U+2715
-\DeclareTextCommand{\textXSolidBold}{PU}{}%* U+2716
-\DeclareTextCommand{\textXSolidBrush}{PU}{}%* U+2717
-\DeclareTextCommand{\textPlusOutline}{PU}{}%* U+2719
-\DeclareTextCommand{\textPlus}{PU}{}%* U+271A
-\DeclareTextCommand{\textPlusThinCenterOpen}{PU}{}%* U+271B
-\DeclareTextCommand{\textPlusCenterOpen}{PU}{}%* U+271C
-\DeclareTextCommand{\textCross}{PU}{}%* U+271D
-\DeclareTextCommand{\textCrossOpenShadow}{PU}{}%* U+271E
-\DeclareTextCommand{\textCrossOutline}{PU}{}%* U+271F
-\DeclareTextCommand{\textCrossMaltese}{PU}{}%* U+2720
-\DeclareTextCommand{\textDavidStar}{PU}{}%* U+2721
-\DeclareTextCommand{\textFourAsterisk}{PU}{}%* U+2722
-\DeclareTextCommand{\textJackStar}{PU}{}%* U+2723
-\DeclareTextCommand{\textJackStarBold}{PU}{}%* U+2724
-\DeclareTextCommand{\textClowerTips}{PU}{}%* U+2725
-\DeclareTextCommand{\textFourStar}{PU}{}%* U+2726
-\DeclareTextCommand{\textFourStarOpen}{PU}{}%* U+2727
-\DeclareTextCommand{\textFiveStarOpenCircled}{PU}{}%* U+272A
-\DeclareTextCommand{\textFiveStarCenterOpen}{PU}{}%* U+272B
-\DeclareTextCommand{\textFiveStarOpenDotted}{PU}{}%* U+272C
-\DeclareTextCommand{\textFiveStarOutline}{PU}{}%* U+272D
-\DeclareTextCommand{\textFiveStarOutlineHeavy}{PU}{}%* U+272E
-\DeclareTextCommand{\textFiveStarConvex}{PU}{}%* U+272F
-\DeclareTextCommand{\textFiveStarShadow}{PU}{}%* U+2730
-\DeclareTextCommand{\textAsteriskBold}{PU}{}%* U+2731
-\DeclareTextCommand{\textAsteriskCenterOpen}{PU}{}%* U+2732
-\DeclareTextCommand{\textEightStarTaper}{PU}{}%* U+2734
-\DeclareTextCommand{\textEightStarConvex}{PU}{}%* U+2735
-\DeclareTextCommand{\textSixStar}{PU}{}%* U+2736
-\DeclareTextCommand{\textEightStar}{PU}{}%* U+2737
-\DeclareTextCommand{\textEightStarBold}{PU}{}%* U+2738
-\DeclareTextCommand{\textTwelveStar}{PU}{}%* U+2739
-\DeclareTextCommand{\textSixteenStarLight}{PU}{}%* U+273A
-\DeclareTextCommand{\textSixFlowerPetalRemoved}{PU}{}%* U+273B
-\DeclareTextCommand{\textSixFlowerOpenCenter}{PU}{}%* U+273C
-\DeclareTextCommand{\textAsterisk}{PU}{}%* U+273D
-\DeclareTextCommand{\textSixFlowerAlternate}{PU}{}%* U+273E
-\DeclareTextCommand{\textFiveFlowerPetal}{PU}{}%* U+273F
-\DeclareTextCommand{\textFiveFlowerOpen}{PU}{}%* U+2740
-\DeclareTextCommand{\textEightFlowerPetal}{PU}{}%* U+2741
-\DeclareTextCommand{\textSunshineOpenCircled}{PU}{}%* U+2742
-\DeclareTextCommand{\textSixFlowerAltPetal}{PU}{}%* U+2743
-\DeclareTextCommand{\textSnowflakeChevron}{PU}{}%* U+2744
-\DeclareTextCommand{\textSnowflake}{PU}{}%* U+2745
-\DeclareTextCommand{\textSnowflakeChevronBold}{PU}{}%* U+2746
-\DeclareTextCommand{\textSparkle}{PU}{}%* U+2747
-\DeclareTextCommand{\textSparkleBold}{PU}{}%* U+2748
-\DeclareTextCommand{\textAsteriskRoundedEnds}{PU}{}%* U+2749
-\DeclareTextCommand{\textEightFlowerPetalRemoved}{PU}{}%* U+274A
-\DeclareTextCommand{\textEightAsterisk}{PU}{}%* U+274B
-\DeclareTextCommand{\textCircleShadow}{PU}{}%* U+274D
-\DeclareTextCommand{\textSquareShadowBottomRight}{PU}{}%* U+274F
-\DeclareTextCommand{\textSquareTopRight}{PU}{}%* U+2750
-\DeclareTextCommand{\textSquareCastShadowBottomRight}{PU}{}%* U+2751
-\DeclareTextCommand{\textSquareCastShadowTopRight}{PU}{}%* U+2752
-\DeclareTextCommand{\textDiamandSolid}{PU}{}%* U+2756
-\DeclareTextCommand{\textRectangleThin}{PU}{}%* U+2758
-\DeclareTextCommand{\textRectangle}{PU}{}%* U+2759
-\DeclareTextCommand{\textRectangleBold}{PU}{}%* U+275A
-\DeclareTextCommand{\textperp}{PU}{}%* U+27C2
-\DeclareTextCommand{\textnotperp}{PU}{}%* U+27C2 U+0338
-\DeclareTextCommand{\textveedot}{PU}{}%* U+27C7
-\DeclareTextCommand{\textwedgedot}{PU}{}%* U+27D1
-\DeclareTextCommand{\textleftspoon}{PU}{}%* U+27DC
-\DeclareTextCommand{\textlbrackdbl}{PU}{}%* U+27E6
-\DeclareTextCommand{\textrbrackdbl}{PU}{}%* U+27E7
-\DeclareTextCommand{\textcirclearrowleft}{PU}{}%* U+27F2
-\DeclareTextCommand{\textcirclearrowright}{PU}{}%* U+27F3
-\DeclareTextCommand{\textlongleftarrow}{PU}{}%* U+27F5
-\DeclareTextCommand{\textlongrightarrow}{PU}{}%* U+27F6
-\DeclareTextCommand{\textlongleftrightarrow}{PU}{}%* U+27F7
-\DeclareTextCommand{\textLongleftarrow}{PU}{}%* U+27F8
-\DeclareTextCommand{\textLongrightarrow}{PU}{}%* U+27F9
-\DeclareTextCommand{\textLongleftrightarrow}{PU}{}%* U+27FA
-\DeclareTextCommand{\textlongmapsto}{PU}{}%* U+27FC
-\DeclareTextCommand{\textLongmapsfrom}{PU}{}%* U+27FD
-\DeclareTextCommand{\textLongmapsto}{PU}{}%* U+27FE
-\DeclareTextCommand{\textnwsearrow}{PU}{}%* U+2921
-\DeclareTextCommand{\textneswarrow}{PU}{}%* U+2922
-\DeclareTextCommand{\textlhooknwarrow}{PU}{}%* U+2923
-\DeclareTextCommand{\textrhooknearrow}{PU}{}%* U+2924
-\DeclareTextCommand{\textlhooksearrow}{PU}{}%* U+2925
-\DeclareTextCommand{\textrhookswarrow}{PU}{}%* U+2926
-\DeclareTextCommand{\textleadsto}{PU}{}%* U+2933
-\DeclareTextCommand{\textrcurvearrowne}{PU}{}%* U+2934
-\DeclareTextCommand{\textlcurvearrowse}{PU}{}%* U+2935
-\DeclareTextCommand{\textlcurvearrowsw}{PU}{}%* U+2936
-\DeclareTextCommand{\textrcurvearrowse}{PU}{}%* U+2937
-\DeclareTextCommand{\textlcurvearrowdown}{PU}{}%* U+2938
-\DeclareTextCommand{\textrcurvearrowdown}{PU}{}%* U+2939
-\DeclareTextCommand{\textrcurvearrowleft}{PU}{}%* U+293A
-\DeclareTextCommand{\textrcurvearrowright}{PU}{}%* U+293B
-\DeclareTextCommand{\textleftrightharpoon}{PU}{}%* U+294A
-\DeclareTextCommand{\textrightleftharpoon}{PU}{}%* U+294B
-\DeclareTextCommand{\textupdownharpoonrightleft}{PU}{}%* U+294C
-\DeclareTextCommand{\textupdownharpoonleftright}{PU}{}%* U+294D
-\DeclareTextCommand{\textleftleftharpoons}{PU}{}%* U+2962
-\DeclareTextCommand{\textupupharpoons}{PU}{}%* U+2963
-\DeclareTextCommand{\textrightrightharpoons}{PU}{}%* U+2964
-\DeclareTextCommand{\textdowndownharpoons}{PU}{}%* U+2965
-\DeclareTextCommand{\textleftbarharpoon}{PU}{}%* U+296A
-\DeclareTextCommand{\textbarleftharpoon}{PU}{}%* U+296B
-\DeclareTextCommand{\textrightbarharpoon}{PU}{}%* U+296C
-\DeclareTextCommand{\textbarrightharpoon}{PU}{}%* U+296D
-\DeclareTextCommand{\textupdownharpoons}{PU}{}%* U+296E
-\DeclareTextCommand{\textdownupharpoons}{PU}{}%* U+296F
-\DeclareTextCommand{\textmoo}{PU}{}%* U+297F U+0336
-\DeclareTextCommand{\textllparenthesis}{PU}{}%* U+2987
-\DeclareTextCommand{\textrrparenthesis}{PU}{}%* U+2988
-\DeclareTextCommand{\textinvdiameter}{PU}{}%* U+29B0
-\DeclareTextCommand{\textobar}{PU}{}%* U+29B6
-\DeclareTextCommand{\textobslash}{PU}{}%* U+29B8
-\DeclareTextCommand{\textobot}{PU}{}%* U+29BA
-\DeclareTextCommand{\textNoChemicalCleaning}{PU}{}%* U+29BB
-\DeclareTextCommand{\textolessthan}{PU}{}%* U+29C0
-\DeclareTextCommand{\textogreaterthan}{PU}{}%* U+29C1
-\DeclareTextCommand{\textboxslash}{PU}{}%* U+29C4
-\DeclareTextCommand{\textboxbslash}{PU}{}%* U+29C5
-\DeclareTextCommand{\textboxast}{PU}{}%* U+29C6
-\DeclareTextCommand{\textboxcircle}{PU}{}%* U+29C7
-\DeclareTextCommand{\textboxbox}{PU}{}%* U+29C8
-\DeclareTextCommand{\textValve}{PU}{}%* U+29D3
-\DeclareTextCommand{\textmultimapboth}{PU}{}%* U+29DF
-\DeclareTextCommand{\textshuffle}{PU}{}%* U+29E2
-\DeclareTextCommand{\textuplus}{PU}{}%* U+2A04
-\DeclareTextCommand{\textbigdoublewedge}{PU}{}%* U+2A07
-\DeclareTextCommand{\textbigdoublevee}{PU}{}%* U+2A08
-\DeclareTextCommand{\textJoin}{PU}{}%* U+2A1D
-\DeclareTextCommand{\textfatsemi}{PU}{}%* U+2A1F
-\DeclareTextCommand{\textcircplus}{PU}{}%* U+2A22
-\DeclareTextCommand{\textminusdot}{PU}{}%* U+2A2A
-\DeclareTextCommand{\textdottimes}{PU}{}%* U+2A30
-\DeclareTextCommand{\textdtimes}{PU}{}%* U+2A32
-\DeclareTextCommand{\textodiv}{PU}{}%* U+2A38
-\DeclareTextCommand{\textinvneg}{PU}{}%* U+2A3C
-\DeclareTextCommand{\textsqdoublecap}{PU}{}%* U+2A4E
-\DeclareTextCommand{\textcapdot}{PU}{}%* U+2A40
-\DeclareTextCommand{\textsqdoublecup}{PU}{}%* U+2A4F
-\DeclareTextCommand{\textdoublewedge}{PU}{}%* U+2A55
-\DeclareTextCommand{\textdoublevee}{PU}{}%* U+2A56
-\DeclareTextCommand{\textdoublebarwedge}{PU}{}%* U+2A5E
-\DeclareTextCommand{\textveedoublebar}{PU}{}%* U+2A63
-\DeclareTextCommand{\texteqdot}{PU}{}%* U+2A66
-\DeclareTextCommand{\textneqdot}{PU}{}%* U+2A66 U+0338
-\DeclareTextCommand{\textcoloncolonequals}{PU}{}%* U+2A74
-\DeclareTextCommand{\textleqslant}{PU}{}%* U+2A7D
-\DeclareTextCommand{\textnleqslant}{PU}{}%* U+2A7D U+0338
-\DeclareTextCommand{\textgeqslant}{PU}{}%* U+2A7E
-\DeclareTextCommand{\textngeqslant}{PU}{}%* U+2A7E U+0338
-\DeclareTextCommand{\textlessapprox}{PU}{}%* U+2A85
-\DeclareTextCommand{\textnlessapprox}{PU}{}%* U+2A85 U+0338
-\DeclareTextCommand{\textgtrapprox}{PU}{}%* U+2A86
-\DeclareTextCommand{\textngtrapprox}{PU}{}%* U+2A86 U+0338
-\DeclareTextCommand{\textlneq}{PU}{}%* U+2A87
-\DeclareTextCommand{\textgneq}{PU}{}%* U+2A88
-\DeclareTextCommand{\textlnapprox}{PU}{}%* U+2A89
-\DeclareTextCommand{\textgnapprox}{PU}{}%* U+2A8A
-\DeclareTextCommand{\textlesseqqgtr}{PU}{}%* U+2A8B
-\DeclareTextCommand{\textgtreqqless}{PU}{}%* U+2A8C
-\DeclareTextCommand{\texteqslantless}{PU}{}%* U+2A95
-\DeclareTextCommand{\texteqslantgtr}{PU}{}%* U+2A96
-\DeclareTextCommand{\textleftslice}{PU}{}%* U+2AA6
-\DeclareTextCommand{\textrightslice}{PU}{}%* U+2AA7
-\DeclareTextCommand{\textpreceq}{PU}{}%* U+2AAF
-\DeclareTextCommand{\textnpreceq}{PU}{}%* U+2AAF U+0338
-\DeclareTextCommand{\textsucceq}{PU}{}%* U+2AB0
-\DeclareTextCommand{\textnsucceq}{PU}{}%* U+2AB0 U+0338
-\DeclareTextCommand{\textprecneq}{PU}{}%* U+2AB1
-\DeclareTextCommand{\textsuccneq}{PU}{}%* U+2AB2
-\DeclareTextCommand{\textpreceqq}{PU}{}%* U+2AB3
-\DeclareTextCommand{\textnpreceqq}{PU}{}%* U+2AB3 U+0338
-\DeclareTextCommand{\textsucceqq}{PU}{}%* U+2AB4
-\DeclareTextCommand{\textnsucceqq}{PU}{}%* U+2AB4 U+0338
-\DeclareTextCommand{\textprecneqq}{PU}{}%* U+2AB5
-\DeclareTextCommand{\textsuccneqq}{PU}{}%* U+2AB6
-\DeclareTextCommand{\textprecapprox}{PU}{}%* U+2AB7
-\DeclareTextCommand{\textnprecapprox}{PU}{}%* U+2AB7 U+0338
-\DeclareTextCommand{\textsuccapprox}{PU}{}%* U+2AB8
-\DeclareTextCommand{\textnsuccapprox}{PU}{}%* U+2AB8 U+0338
-\DeclareTextCommand{\textprecnapprox}{PU}{}%* U+2AB9
-\DeclareTextCommand{\textsuccnapprox}{PU}{}%* U+2ABA
-\DeclareTextCommand{\textsubseteqq}{PU}{}%* U+2AC5
-\DeclareTextCommand{\textnsubseteqq}{PU}{}%* U+2AC5 U+0338
-\DeclareTextCommand{\textsupseteqq}{PU}{}%* U+2AC6
-\DeclareTextCommand{\textnsupseteqq}{PU}{}%* U+2AC6 U+0338
-\DeclareTextCommand{\textdashV}{PU}{}%* U+2AE3
-\DeclareTextCommand{\textndashV}{PU}{}%* U+2AE3 U+0338
-\DeclareTextCommand{\textDashv}{PU}{}%* U+2AE4
-\DeclareTextCommand{\textnDashv}{PU}{}%* U+2AE4 U+0338
-\DeclareTextCommand{\textDashV}{PU}{}%* U+2AE5
-\DeclareTextCommand{\textnDashV}{PU}{}%* U+2AE5 U+0338
-\DeclareTextCommand{\textdownmodels}{PU}{}%* U+2AEA
-\DeclareTextCommand{\textndownmodels}{PU}{}%* U+2AEA U+0338
-\DeclareTextCommand{\textupmodels}{PU}{}%* U+2AEB
-\DeclareTextCommand{\textnupmodels}{PU}{}%* U+2AEB U+0338
-\DeclareTextCommand{\textupspoon}{PU}{}%* U+2AEF
-\DeclareTextCommand{\textinterleave}{PU}{}%* U+2AF4
-\DeclareTextCommand{\textsslash}{PU}{}%* U+2AFD
-\DeclareTextCommand{\textpentagon}{PU}{}%* U+2B20
-\DeclareTextCommand{\textvarhexagon}{PU}{}%* U+2B21
-\DeclareTextCommand{\textjinferior}{PU}{}%* U+2C7C
-\DeclareTextCommand{\textslashdiv}{PU}{}%* U+2E13
-\DeclareTextCommand{\textinterrobangdown}{PU}{}% U+2E18
-\DeclareTextCommand{\textfivedots}{PU}{}%* U+2E2D
-\DeclareTextCommand{\textupstep}{PU}{}% U+A71B
-\DeclareTextCommand{\textdownstep}{PU}{}% U+A71C
-\DeclareTextCommand{\textPUheng}{PU}{}% U+A727
-\DeclareTextCommand{\textPUlhookfour}{PU}{}% U+A72C
-\DeclareTextCommand{\textPUscf}{PU}{}% U+A730
-\DeclareTextCommand{\textPUaolig}{PU}{}% U+A735
-\DeclareTextCommand{\textoo}{PU}{}%* U+A74F
-\DeclareTextCommand{\textcircumlow}{PU}{}% U+A788
-\DeclareTextCommand{\textfi}{PU}{}% U+FB01
-\DeclareTextCommand{\textfl}{PU}{}% U+FB02
-\DeclareTextCommand{\textGaPa}{PU}{}%* U+1D13B
-\DeclareTextCommand{\textHaPa}{PU}{}%* U+1D13C
-\DeclareTextCommand{\textViPa}{PU}{}%* U+1D13D
-\DeclareTextCommand{\textAcPa}{PU}{}%* U+1D13E
-\DeclareTextCommand{\textSePa}{PU}{}%* U+1D13F
-\DeclareTextCommand{\textZwPa}{PU}{}%* U+1D140
-\DeclareTextCommand{\textfullnote}{PU}{}%* U+1D15D
-\DeclareTextCommand{\texthalfnote}{PU}{}%* U+1D15E
-\DeclareTextCommand{\textVier}{PU}{}%* U+1D15F
-\DeclareTextCommand{\textAcht}{PU}{}%* U+1D160
-\DeclareTextCommand{\textSech}{PU}{}%* U+1D161
-\DeclareTextCommand{\textZwdr}{PU}{}%* U+1D162
-\DeclareTextCommand{\textMundus}{PU}{}%* U+1F30D
-\DeclareTextCommand{\textMoon}{PU}{}%* U+1F319
-\DeclareTextCommand{\textManFace}{PU}{}%* U+1F468
-\DeclareTextCommand{\textWomanFace}{PU}{}%* U+1F469
-\DeclareTextCommand{\textFax}{PU}{}%* U+1F4E0
-\DeclareTextCommand{\textFire}{PU}{}%* U+1F525
-\DeclareTextCommand{\textBicycle}{PU}{}%* U+1F6B2
-\DeclareTextCommand{\textGentsroom}{PU}{}%* U+1F6B9
-\DeclareTextCommand{\textLadiesroom}{PU}{}%* U+1F6BA
+\DeclareTextCommand{\textcong}{PU}{≅}%* U+2245
+\DeclareTextCommand{\textncong}{PU}{≇}%* U+2247
+\DeclareTextCommand{\textapprox}{PU}{≈}%* U+2248
+\DeclareTextCommand{\textnapprox}{PU}{≉}%* U+2249
+\DeclareTextCommand{\textapproxeq}{PU}{≊}%* U+224A
+\DeclareTextCommand{\textnapproxeq}{PU}{≋\HyPsd@unichar{824}}%* U+224A U+0338
+\DeclareTextCommand{\texttriplesim}{PU}{≋}%* U+224B
+\DeclareTextCommand{\textntriplesim}{PU}{≋}%* U+224B U+0338
+\DeclareTextCommand{\textbackcong}{PU}{≌}%* U+224C
+\DeclareTextCommand{\textnbackcong}{PU}{≌\HyPsd@unichar{824}}%* U+224C U+0338
+\DeclareTextCommand{\textasymp}{PU}{≍}%* U+224D
+\DeclareTextCommand{\textnasymp}{PU}{≍\HyPsd@unichar{824}}%* U+224D U+0338
+\DeclareTextCommand{\textBumpeq}{PU}{≎}%* U+224E
+\DeclareTextCommand{\textnBumpeq}{PU}{≎\HyPsd@unichar{824}}%* U+224E U+0338
+\DeclareTextCommand{\textbumpeq}{PU}{≏}%* U+224F
+\DeclareTextCommand{\textnbumpeq}{PU}{≏\HyPsd@unichar{824}}%* U+224F U+0338
+\DeclareTextCommand{\textdoteq}{PU}{≐}%* U+2250
+\DeclareTextCommand{\textndoteq}{PU}{≐\HyPsd@unichar{824}}%* U+2250 U+0338
+\DeclareTextCommand{\textdoteqdot}{PU}{≑}%* U+2251
+\DeclareTextCommand{\textnDoteq}{PU}{≑\HyPsd@unichar{824}}%* U+2251 U+0338
+\DeclareTextCommand{\textfallingdoteq}{PU}{≒}%* U+2252
+\DeclareTextCommand{\textnfallingdoteq}{PU}{≒\HyPsd@unichar{824}}%* U+2252 U+0338
+\DeclareTextCommand{\textrisingdoteq}{PU}{≓}%* U+2253
+\DeclareTextCommand{\textnrisingdoteq}{PU}{≓\HyPsd@unichar{824}}%* U+2253 U+0338
+\DeclareTextCommand{\textcolonequals}{PU}{≔}%* U+2254
+\DeclareTextCommand{\textequalscolon}{PU}{≕}%* U+2255
+\DeclareTextCommand{\texteqcirc}{PU}{≖}%* U+2256
+\DeclareTextCommand{\textneqcirc}{PU}{≖\HyPsd@unichar{824}}%* U+2256 U+0338
+\DeclareTextCommand{\textcirceq}{PU}{≗}%* U+2257
+\DeclareTextCommand{\textncirceq}{PU}{≗\HyPsd@unichar{824}}%* U+2257 U+0338
+\DeclareTextCommand{\texthateq}{PU}{≙}%* U+2259
+\DeclareTextCommand{\textnhateq}{PU}{≙\HyPsd@unichar{824}}%* U+2259 U+0338
+\DeclareTextCommand{\texttriangleeq}{PU}{≜}%* U+225C
+\DeclareTextCommand{\textneq}{PU}{≠}%* U+2260
+\DeclareTextCommand{\textne}{PU}{≠}%* U+2260
+\DeclareTextCommand{\textequiv}{PU}{≡}%* U+2261
+\DeclareTextCommand{\textnequiv}{PU}{≢}%* U+2262
+\DeclareTextCommand{\textleq}{PU}{≤}%* U+2264
+\DeclareTextCommand{\textle}{PU}{≤}%* U+2264
+\DeclareTextCommand{\textgeq}{PU}{≥}%* U+2265
+\DeclareTextCommand{\textge}{PU}{≥}%* U+2265
+\DeclareTextCommand{\textleqq}{PU}{≦}%* U+2266
+\DeclareTextCommand{\textnleqq}{PU}{≦\HyPsd@unichar{824}}%* U+2266 U+0338
+\DeclareTextCommand{\textgeqq}{PU}{≧}%* U+2267
+\DeclareTextCommand{\textngeqq}{PU}{≧\HyPsd@unichar{824}}%* U+2267 U+0338
+\DeclareTextCommand{\textlneqq}{PU}{≨}%* U+2268
+\DeclareTextCommand{\textgneqq}{PU}{≩}%* U+2269
+\DeclareTextCommand{\textll}{PU}{≪}%* U+226A
+\DeclareTextCommand{\textnll}{PU}{≪\HyPsd@unichar{824}}%* U+226A U+0338
+\DeclareTextCommand{\textgg}{PU}{≫}%* U+226B
+\DeclareTextCommand{\textngg}{PU}{≫\HyPsd@unichar{824}}%* U+226B U+0338
+\DeclareTextCommand{\textbetween}{PU}{≬}%* U+226C
+\DeclareTextCommand{\textnless}{PU}{≮}%* U+226E
+\DeclareTextCommand{\textngtr}{PU}{≯}%* U+226F
+\DeclareTextCommand{\textnleq}{PU}{≰}%* U+2270
+\DeclareTextCommand{\textngeq}{PU}{≱}%* U+2271
+\DeclareTextCommand{\textlesssim}{PU}{≲}%* U+2272
+\DeclareTextCommand{\textgtrsim}{PU}{≳}%* U+2273
+\DeclareTextCommand{\textnlesssim}{PU}{≴}%* U+2274
+\DeclareTextCommand{\textngtrsim}{PU}{≵}%* U+2275
+\DeclareTextCommand{\textlessgtr}{PU}{≶}%* U+2276
+\DeclareTextCommand{\textgtrless}{PU}{≷}%* U+2277
+\DeclareTextCommand{\textngtrless}{PU}{≸}%* U+2278
+\DeclareTextCommand{\textnlessgtr}{PU}{≹}%* U+2279
+\DeclareTextCommand{\textprec}{PU}{≺}%* U+227A
+\DeclareTextCommand{\textsucc}{PU}{≻}%* U+227B
+\DeclareTextCommand{\textpreccurlyeq}{PU}{≼}%* U+227C
+\DeclareTextCommand{\textsucccurlyeq}{PU}{≽}%* U+227D
+\DeclareTextCommand{\textprecsim}{PU}{≾}%* U+227E
+\DeclareTextCommand{\textnprecsim}{PU}{≾\HyPsd@unichar{824}}%* U+227E U+0338
+\DeclareTextCommand{\textsuccsim}{PU}{≿}%* U+227F
+\DeclareTextCommand{\textnsuccsim}{PU}{≿\HyPsd@unichar{824}}%* U+227F U+0338
+\DeclareTextCommand{\textnprec}{PU}{⊀}%* U+2280
+\DeclareTextCommand{\textnsucc}{PU}{⊁}%* U+2281
+\DeclareTextCommand{\textsubset}{PU}{⊂}%* U+2282
+\DeclareTextCommand{\textsupset}{PU}{⊃}%* U+2283
+\DeclareTextCommand{\textnsubset}{PU}{⊄}%* U+2284
+\DeclareTextCommand{\textnsupset}{PU}{⊅}%* U+2285
+\DeclareTextCommand{\textsubseteq}{PU}{⊆}%* U+2286
+\DeclareTextCommand{\textsupseteq}{PU}{⊇}%* U+2287
+\DeclareTextCommand{\textnsubseteq}{PU}{⊈}%* U+2288
+\DeclareTextCommand{\textnsupseteq}{PU}{⊉}%* U+2289
+\DeclareTextCommand{\textsubsetneq}{PU}{⊊}%* U+228A
+\DeclareTextCommand{\textsupsetneq}{PU}{⊋}%* U+228B
+\DeclareTextCommand{\textcupdot}{PU}{⊍}%* U+228D
+\DeclareTextCommand{\textcupplus}{PU}{⊎}%* U+228E
+\DeclareTextCommand{\textsqsubset}{PU}{⊏}%* U+228F
+\DeclareTextCommand{\textnsqsubset}{PU}{⊏\HyPsd@unichar{824}}%* U+228F U+0338
+\DeclareTextCommand{\textsqsupset}{PU}{⊐}%* U+2290
+\DeclareTextCommand{\textnsqsupset}{PU}{⊐\HyPsd@unichar{824}}%* U+2290 U+0338
+\DeclareTextCommand{\textsqsubseteq}{PU}{⊑}%* U+2291
+\DeclareTextCommand{\textnsqsubseteq}{PU}{⊑\HyPsd@unichar{824}}%* U+2291 U+0338
+\DeclareTextCommand{\textsqsupseteq}{PU}{⊒}%* U+2292
+\DeclareTextCommand{\textnsqsupseteq}{PU}{⊒\HyPsd@unichar{824}}%* U+2292 U+0338
+\DeclareTextCommand{\textsqcap}{PU}{⊓}%* U+2293
+\DeclareTextCommand{\textsqcup}{PU}{⊔}%* U+2294
+\DeclareTextCommand{\textoplus}{PU}{⊕}%* U+2295
+\DeclareTextCommand{\textominus}{PU}{⊖}%* U+2296
+\DeclareTextCommand{\textotimes}{PU}{⊗}%* U+2297
+\DeclareTextCommand{\textoslash}{PU}{⊘}%* U+2298
+\DeclareTextCommand{\textodot}{PU}{⊙}%* U+2299
+\DeclareTextCommand{\textcircledcirc}{PU}{⊚}%* U+229A
+\DeclareTextCommand{\textcircledast}{PU}{⊛}%* U+229B
+\DeclareTextCommand{\textcircleddash}{PU}{⊝}%* U+229D
+\DeclareTextCommand{\textboxplus}{PU}{⊞}%* U+229E
+\DeclareTextCommand{\textboxminus}{PU}{⊟}%* U+229F
+\DeclareTextCommand{\textboxtimes}{PU}{⊠}%* U+22A0
+\DeclareTextCommand{\textboxdot}{PU}{⊡}%* U+22A1
+\DeclareTextCommand{\textvdash}{PU}{⊢}%* U+22A2
+\DeclareTextCommand{\textdashv}{PU}{⊣}%* U+22A3
+\DeclareTextCommand{\textndashv}{PU}{⊣\HyPsd@unichar{824}}%* U+22A3 U+0338
+\DeclareTextCommand{\texttop}{PU}{⊤}%* U+22A4
+\DeclareTextCommand{\textndownvdash}{PU}{⊤\HyPsd@unichar{824}}%* U+22A4 U+0338
+\DeclareTextCommand{\textbot}{PU}{⊥}%* U+22A5
+\DeclareTextCommand{\textnupvdash}{PU}{⊥\HyPsd@unichar{824}}%* U+22A5 U+0338
+\DeclareTextCommand{\textvDash}{PU}{⊨}%* U+22A8
+\DeclareTextCommand{\textVdash}{PU}{⊩}%* U+22A9
+\DeclareTextCommand{\textVvdash}{PU}{⊪}%* U+22AA
+\DeclareTextCommand{\textnVvash}{PU}{⊪\HyPsd@unichar{824}}%* U+22AA U+0338
+\DeclareTextCommand{\textVDash}{PU}{⊫}%* U+22AB
+\DeclareTextCommand{\textnvdash}{PU}{⊬}%* U+22AC
+\DeclareTextCommand{\textnvDash}{PU}{⊭}%* U+22AD
+\DeclareTextCommand{\textnVdash}{PU}{⊮}%* U+22AE
+\DeclareTextCommand{\textnVDash}{PU}{⊯}%* U+22AF
+\DeclareTextCommand{\textlhd}{PU}{⊲}%* U+22B2
+\DeclareTextCommand{\textrhd}{PU}{⊳}%* U+22B3
+\DeclareTextCommand{\textunlhd}{PU}{⊴}%* U+22B4
+\DeclareTextCommand{\textunrhd}{PU}{⊵}%* U+22B5
+\DeclareTextCommand{\textmultimapdotbothA}{PU}{⊶}%* U+22B6
+\DeclareTextCommand{\textmultimapdotbothB}{PU}{⊷}%* U+22B7
+\DeclareTextCommand{\textmultimap}{PU}{⊸}%* U+22B8
+\DeclareTextCommand{\textveebar}{PU}{⊻}%* U+22BB
+\DeclareTextCommand{\textbarwedge}{PU}{⊼}%* U+22BC
+\DeclareTextCommand{\textstar}{PU}{⋆}%* U+22C6
+\DeclareTextCommand{\textdivideontimes}{PU}{⋇}%* U+22C7
+\DeclareTextCommand{\textbowtie}{PU}{⋈}%* U+22C8
+\DeclareTextCommand{\textltimes}{PU}{⋉}%* U+22C9
+\DeclareTextCommand{\textrtimes}{PU}{⋊}%* U+22CA
+\DeclareTextCommand{\textleftthreetimes}{PU}{⋋}%* U+22CB
+\DeclareTextCommand{\textrightthreetimes}{PU}{⋌}%* U+22CC
+\DeclareTextCommand{\textbacksimeq}{PU}{⋍}%* U+22CD
+\DeclareTextCommand{\textnbacksimeq}{PU}{⋍\HyPsd@unichar{824}}%* U+22CD U+0338
+\DeclareTextCommand{\textcurlyvee}{PU}{⋎}%* U+22CE
+\DeclareTextCommand{\textcurlywedge}{PU}{⋏}%* U+22CF
+\DeclareTextCommand{\textSubset}{PU}{⋐}%* U+22D0
+\DeclareTextCommand{\textnSubset}{PU}{⋐\HyPsd@unichar{824}}%* U+22D0 U+0338
+\DeclareTextCommand{\textSupset}{PU}{⋑}%* U+22D1
+\DeclareTextCommand{\textnSupset}{PU}{⋑\HyPsd@unichar{824}}%* U+22D1 U+0338
+\DeclareTextCommand{\textCap}{PU}{⋒}%* U+22D2
+\DeclareTextCommand{\textCup}{PU}{⋓}%* U+22D3
+\DeclareTextCommand{\textpitchfork}{PU}{⋔}%* U+22D4
+\DeclareTextCommand{\textlessdot}{PU}{⋖}%* U+22D6
+\DeclareTextCommand{\textgtrdot}{PU}{⋗}%* U+22D7
+\DeclareTextCommand{\textlll}{PU}{⋘}%* U+22D8
+\DeclareTextCommand{\textggg}{PU}{⋙}%* U+22D9
+\DeclareTextCommand{\textlesseqgtr}{PU}{⋚}%* U+22DA
+\DeclareTextCommand{\textgtreqless}{PU}{⋛}%* U+22DB
+\DeclareTextCommand{\textcurlyeqprec}{PU}{⋞}%* U+22DE
+\DeclareTextCommand{\textncurlyeqprec}{PU}{⋞\HyPsd@unichar{824}}%* U+22DE U+0338
+\DeclareTextCommand{\textcurlyeqsucc}{PU}{⋟}%* U+22DF
+\DeclareTextCommand{\textncurlyeqsucc}{PU}{⋟\HyPsd@unichar{824}}%* U+22DF U+0338
+\DeclareTextCommand{\textnpreccurlyeq}{PU}{⋠}%* U+22E0
+\DeclareTextCommand{\textnsucccurlyeq}{PU}{⋡}%* U+22E1
+\DeclareTextCommand{\textnqsubseteq}{PU}{⋢}%* U+22E2
+\DeclareTextCommand{\textnqsupseteq}{PU}{⋣}%* U+22E3
+\DeclareTextCommand{\textsqsubsetneq}{PU}{⋤}%* U+22E4
+\DeclareTextCommand{\textsqsupsetneq}{PU}{⋥}%* U+22E5
+\DeclareTextCommand{\textlnsim}{PU}{⋦}%* U+22E6
+\DeclareTextCommand{\textgnsim}{PU}{⋧}%* U+22E7
+\DeclareTextCommand{\textprecnsim}{PU}{⋨}%* U+22E8
+\DeclareTextCommand{\textsuccnsim}{PU}{⋩}%* U+22E9
+\DeclareTextCommand{\textntriangleleft}{PU}{⋪}%* U+22EA
+\DeclareTextCommand{\textntriangleright}{PU}{⋫}%* U+22EB
+\DeclareTextCommand{\textntrianglelefteq}{PU}{⋬}%* U+22EC
+\DeclareTextCommand{\textntrianglerighteq}{PU}{⋭}%* U+22ED
+\DeclareTextCommand{\textvdots}{PU}{⋮}%* U+22EE
+\DeclareTextCommand{\textcdots}{PU}{⋯}%* U+22EF
+\DeclareTextCommand{\textudots}{PU}{⋰}%* U+22F0
+\DeclareTextCommand{\textddots}{PU}{⋱}%* U+22F1
+\DeclareTextCommand{\textbarin}{PU}{⋶}%* U+22F6
+\DeclareTextCommand{\textdiameter}{PU}{⌀}%* U+2300
+\DeclareTextCommand{\textbackneg}{PU}{⌐}%* U+2310
+\DeclareTextCommand{\textwasylozenge}{PU}{⌑}%* U+2311
+\DeclareTextCommand{\textinvbackneg}{PU}{⌙}%* U+2319
+\DeclareTextCommand{\textclock}{PU}{⌚}%* U+231A
+\DeclareTextCommand{\textulcorner}{PU}{⌜}%* U+231C
+\DeclareTextCommand{\texturcorner}{PU}{⌝}%* U+231D
+\DeclareTextCommand{\textllcorner}{PU}{⌞}%* U+231E
+\DeclareTextCommand{\textlrcorner}{PU}{⌟}%* U+231F
+\DeclareTextCommand{\textfrown}{PU}{⌢}%* U+2322
+\DeclareTextCommand{\textsmile}{PU}{⌣}%* U+2323
+\DeclareTextCommand{\textKeyboard}{PU}{⌨}%* U+2328
+\DeclareTextCommand{\textlangle}{PU}{〈}%* U+2329
+\DeclareTextCommand{\textrangle}{PU}{〉}%* U+232A
+\DeclareTextCommand{\textAPLinv}{PU}{⌹}%* U+2339
+\DeclareTextCommand{\textTumbler}{PU}{⌼}%* U+233C
+\DeclareTextCommand{\textstmaryrdbaro}{PU}{⌽}% U+233D
+\DeclareTextCommand{\textnotslash}{PU}{⌿}%* U+233F
+\DeclareTextCommand{\textnotbackslash}{PU}{⍀}%* U+2340
+\DeclareTextCommand{\textboxbackslash}{PU}{⍂}%* U+2342
+\DeclareTextCommand{\textAPLleftarrowbox}{PU}{⍇}%* U+2347
+\DeclareTextCommand{\textAPLrightarrowbox}{PU}{⍈}%* U+2348
+\DeclareTextCommand{\textAPLuparrowbox}{PU}{⍐}%* U+2350
+\DeclareTextCommand{\textAPLdownarrowbox}{PU}{⍗}%* U+2357
+\DeclareTextCommand{\textAPLinput}{PU}{⍞}%* U+235E
+\DeclareTextCommand{\textRequest}{PU}{⍰}%* U+2370
+\DeclareTextCommand{\textBeam}{PU}{⎓}%* U+2393
+\DeclareTextCommand{\texthexagon}{PU}{⎔}%* U+2394
+\DeclareTextCommand{\textAPLbox}{PU}{⎕}%* U+2395
+\DeclareTextCommand{\textForwardToIndex}{PU}{⏭}%* U+23ED
+\DeclareTextCommand{\textRewindToIndex}{PU}{⏮}%* U+23EE
+\DeclareTextCommand{\textblank}{PU}{␢}% U+2422
+\DeclareTextCommand{\textvisiblespace}{PU}{␣}% U+2423
+\DeclareTextCommand{\textbbslash}{PU}{⑊}%* U+244A
+\DeclareTextCompositeCommand{\textcircled}{PU}{1}{①}% U+2460
+\DeclareTextCompositeCommand{\textcircled}{PU}{2}{②}% U+2461
+\DeclareTextCompositeCommand{\textcircled}{PU}{3}{③}% U+2462
+\DeclareTextCompositeCommand{\textcircled}{PU}{4}{④}% U+2463
+\DeclareTextCompositeCommand{\textcircled}{PU}{5}{⑤}% U+2464
+\DeclareTextCompositeCommand{\textcircled}{PU}{6}{⑥}% U+2465
+\DeclareTextCompositeCommand{\textcircled}{PU}{7}{⑦}% U+2466
+\DeclareTextCompositeCommand{\textcircled}{PU}{8}{⑧}% U+2467
+\DeclareTextCompositeCommand{\textcircled}{PU}{9}{⑨}% U+2468
+\DeclareTextCompositeCommand{\textcircled}{PU}{10}{⑩}% U+2469
+\DeclareTextCompositeCommand{\textcircled}{PU}{11}{⑪}% U+246A
+\DeclareTextCompositeCommand{\textcircled}{PU}{12}{⑫}% U+246B
+\DeclareTextCompositeCommand{\textcircled}{PU}{13}{⑬}% U+246C
+\DeclareTextCompositeCommand{\textcircled}{PU}{14}{⑭}% U+246D
+\DeclareTextCompositeCommand{\textcircled}{PU}{15}{⑮}% U+246E
+\DeclareTextCompositeCommand{\textcircled}{PU}{16}{⑯}% U+246F
+\DeclareTextCompositeCommand{\textcircled}{PU}{17}{⑰}% U+2470
+\DeclareTextCompositeCommand{\textcircled}{PU}{18}{⑱}% U+2471
+\DeclareTextCompositeCommand{\textcircled}{PU}{19}{⑲}% U+2472
+\DeclareTextCompositeCommand{\textcircled}{PU}{20}{⑳}% U+2473
+\DeclareTextCompositeCommand{\textcircled}{PU}{A}{Ⓐ}% U+24B6
+\DeclareTextCommand{\textCircledA}{PU}{Ⓐ}%* U+24B6
+\DeclareTextCompositeCommand{\textcircled}{PU}{B}{Ⓑ}% U+24B7
+\DeclareTextCompositeCommand{\textcircled}{PU}{C}{Ⓒ}% U+24B8
+\DeclareTextCompositeCommand{\textcircled}{PU}{D}{Ⓓ}% U+24B9
+\DeclareTextCompositeCommand{\textcircled}{PU}{E}{Ⓔ}% U+24BA
+\DeclareTextCompositeCommand{\textcircled}{PU}{F}{Ⓕ}% U+24BB
+\DeclareTextCommand{\textCleaningF}{PU}{Ⓕ}%* U+24BB
+\DeclareTextCommand{\textCleaningFF}{PU}{Ⓕ\HyPsd@unichar{818}}%* U+24BB U+0332
+\DeclareTextCompositeCommand{\textcircled}{PU}{G}{Ⓖ}% U+24BC
+\DeclareTextCompositeCommand{\textcircled}{PU}{H}{Ⓗ}% U+24BD
+\DeclareTextCompositeCommand{\textcircled}{PU}{I}{Ⓘ}% U+24BE
+\DeclareTextCompositeCommand{\textcircled}{PU}{J}{Ⓙ}% U+24BF
+\DeclareTextCompositeCommand{\textcircled}{PU}{K}{Ⓚ}% U+24C0
+\DeclareTextCompositeCommand{\textcircled}{PU}{L}{Ⓛ}% U+24C1
+\DeclareTextCompositeCommand{\textcircled}{PU}{M}{Ⓜ}% U+24C2
+\DeclareTextCompositeCommand{\textcircled}{PU}{N}{Ⓝ}% U+24C3
+\DeclareTextCompositeCommand{\textcircled}{PU}{O}{Ⓞ}% U+24C4
+\DeclareTextCompositeCommand{\textcircled}{PU}{P}{Ⓟ}% U+24C5
+\DeclareTextCommand{\textCleaningP}{PU}{Ⓟ}%* U+24C5
+\DeclareTextCommand{\textCleaningPP}{PU}{Ⓟ\HyPsd@unichar{818}}%* U+24C5 U+0332
+\DeclareTextCompositeCommand{\textcircled}{PU}{Q}{Ⓠ}% U+24C6
+\DeclareTextCompositeCommand{\textcircled}{PU}{R}{Ⓡ}% U+24C7
+\DeclareTextCompositeCommand{\textcircled}{PU}{S}{Ⓢ}% U+24C8
+\DeclareTextCompositeCommand{\textcircled}{PU}{T}{Ⓣ}% U+24C9
+\DeclareTextCompositeCommand{\textcircled}{PU}{U}{Ⓤ}% U+24CA
+\DeclareTextCompositeCommand{\textcircled}{PU}{V}{Ⓥ}% U+24CB
+\DeclareTextCompositeCommand{\textcircled}{PU}{W}{Ⓦ}% U+24CC
+\DeclareTextCompositeCommand{\textcircled}{PU}{X}{Ⓧ}% U+24CD
+\DeclareTextCompositeCommand{\textcircled}{PU}{Y}{Ⓨ}% U+24CE
+\DeclareTextCompositeCommand{\textcircled}{PU}{Z}{Ⓩ}% U+24CF
+\DeclareTextCompositeCommand{\textcircled}{PU}{a}{ⓐ}% U+24D0
+\DeclareTextCompositeCommand{\textcircled}{PU}{b}{ⓑ}% U+24D1
+\DeclareTextCompositeCommand{\textcircled}{PU}{c}{ⓒ}% U+24D2
+\DeclareTextCompositeCommand{\textcircled}{PU}{d}{ⓓ}% U+24D3
+\DeclareTextCompositeCommand{\textcircled}{PU}{e}{ⓔ}% U+24D4
+\DeclareTextCompositeCommand{\textcircled}{PU}{f}{ⓕ}% U+24D5
+\DeclareTextCompositeCommand{\textcircled}{PU}{g}{ⓖ}% U+24D6
+\DeclareTextCompositeCommand{\textcircled}{PU}{h}{ⓗ}% U+24D7
+\DeclareTextCompositeCommand{\textcircled}{PU}{i}{ⓘ}% U+24D8
+\DeclareTextCompositeCommand{\textcircled}{PU}{j}{ⓙ}% U+24D9
+\DeclareTextCompositeCommand{\textcircled}{PU}{k}{ⓚ}% U+24DA
+\DeclareTextCompositeCommand{\textcircled}{PU}{l}{ⓛ}% U+24DB
+\DeclareTextCompositeCommand{\textcircled}{PU}{m}{ⓜ}% U+24DC
+\DeclareTextCompositeCommand{\textcircled}{PU}{n}{ⓝ}% U+24DD
+\DeclareTextCompositeCommand{\textcircled}{PU}{o}{ⓞ}% U+24DE
+\DeclareTextCompositeCommand{\textcircled}{PU}{p}{ⓟ}% U+24DF
+\DeclareTextCompositeCommand{\textcircled}{PU}{q}{ⓠ}% U+24E0
+\DeclareTextCompositeCommand{\textcircled}{PU}{r}{ⓡ}% U+24E1
+\DeclareTextCompositeCommand{\textcircled}{PU}{s}{ⓢ}% U+24E2
+\DeclareTextCompositeCommand{\textcircled}{PU}{t}{ⓣ}% U+24E3
+\DeclareTextCompositeCommand{\textcircled}{PU}{u}{ⓤ}% U+24E4
+\DeclareTextCompositeCommand{\textcircled}{PU}{v}{ⓥ}% U+24E5
+\DeclareTextCompositeCommand{\textcircled}{PU}{w}{ⓦ}% U+24E6
+\DeclareTextCompositeCommand{\textcircled}{PU}{x}{ⓧ}% U+24E7
+\DeclareTextCompositeCommand{\textcircled}{PU}{y}{ⓨ}% U+24E8
+\DeclareTextCompositeCommand{\textcircled}{PU}{z}{ⓩ}% U+24E9
+\DeclareTextCompositeCommand{\textcircled}{PU}{0}{⓪}% U+24EA
+\DeclareTextCommand{\textCuttingLine}{PU}{┄}%* U+2504
+\DeclareTextCommand{\textUParrow}{PU}{▲}%* U+25B2
+\DeclareTextCommand{\textbigtriangleup}{PU}{△}%* U+25B3
+\DeclareTextCommand{\textForward}{PU}{▶}%* U+25B6
+\DeclareTextCommand{\texttriangleright}{PU}{▷}%* U+25B7
+\DeclareTextCommand{\textRHD}{PU}{►}%* U+25BA
+\DeclareTextCommand{\textDOWNarrow}{PU}{▼}%* U+25BC
+\DeclareTextCommand{\textbigtriangledown}{PU}{▽}%* U+25BD
+\DeclareTextCommand{\textRewind}{PU}{◀}%* U+25C0
+\DeclareTextCommand{\texttriangleleft}{PU}{◁}%* U+25C1
+\DeclareTextCommand{\textLHD}{PU}{◄}%* U+25C4
+\DeclareTextCommand{\textdiamond}{PU}{◇}%* U+25C7
+\DeclareTextCommand{\textlozenge}{PU}{◊}%* U+25CA
+\DeclareTextCommand{\textLEFTCIRCLE}{PU}{◖}%* U+25D6
+\DeclareTextCommand{\textRIGHTCIRCLE}{PU}{◗}%* U+25D7
+\DeclareTextCommand{\textopenbullet}{PU}{◦}%* U+25E6
+\DeclareTextCommand{\textboxbar}{PU}{◦}%* U+25EB
+\DeclareTextCommand{\textbigcircle}{PU}{◯}%* U+25EF
+\DeclareTextCommand{\textCloud}{PU}{☁}%* U+2601
+\DeclareTextCommand{\textFiveStar}{PU}{★}%* U+2605
+\DeclareTextCommand{\textFiveStarOpen}{PU}{☆}%* U+2606
+\DeclareTextCommand{\textPhone}{PU}{☎}%* U+260E
+\DeclareTextCommand{\textboxempty}{PU}{☐}%* U+2610
+\DeclareTextCommand{\textCheckedbox}{PU}{☑}%* U+2611
+\DeclareTextCommand{\textCrossedbox}{PU}{☒}%* U+2612
+\DeclareTextCommand{\textCoffeecup}{PU}{☕}%* U+2615
+\DeclareTextCommand{\textHandCuffLeft}{PU}{☚}%* U+261A
+\DeclareTextCommand{\textHandCuffRight}{PU}{☛}%* U+261B
+\DeclareTextCommand{\textHandLeft}{PU}{☜}%* U+261C
+\DeclareTextCommand{\textHandRight}{PU}{☞}%* U+261E
+\DeclareTextCommand{\textRadioactivity}{PU}{☢}%* U+2622
+\DeclareTextCommand{\textBiohazard}{PU}{☣}%* U+2623
+\DeclareTextCommand{\textAnkh}{PU}{☥}%* U+2625
+\DeclareTextCommand{\textYinYang}{PU}{☯}%* U+262F
+\DeclareTextCommand{\textfrownie}{PU}{☹}%* U+2639
+\DeclareTextCommand{\textsmiley}{PU}{☺}%* U+263A
+\DeclareTextCommand{\textblacksmiley}{PU}{☻}%* U+263B
+\DeclareTextCommand{\textsun}{PU}{☼}%* U+263C
+\DeclareTextCommand{\textleftmoon}{PU}{☽}%* U+263D
+\DeclareTextCommand{\textrightmoon}{PU}{☾}%* U+263E
+\DeclareTextCommand{\textmercury}{PU}{☿}%* U+263F
+\DeclareTextCommand{\textPUfemale}{PU}{♀}% U+2640
+\DeclareTextCommand{\textearth}{PU}{♁}%* U+2641
+\DeclareTextCommand{\textmale}{PU}{♂}%* U+2642
+\DeclareTextCommand{\textjupiter}{PU}{♃}%* U+2643
+\DeclareTextCommand{\textsaturn}{PU}{♄}%* U+2644
+\DeclareTextCommand{\texturanus}{PU}{♅}%* U+2645
+\DeclareTextCommand{\textneptune}{PU}{♆}%* U+2646
+\DeclareTextCommand{\textpluto}{PU}{♇}%* U+2647
+\DeclareTextCommand{\textaries}{PU}{♈}%* U+2648
+\DeclareTextCommand{\texttaurus}{PU}{♉}%* U+2649
+\DeclareTextCommand{\textgemini}{PU}{♊}%* U+264A
+\DeclareTextCommand{\textcancer}{PU}{♋}%* U+264B
+\DeclareTextCommand{\textleo}{PU}{♌}%* U+264C
+\DeclareTextCommand{\textvirgo}{PU}{♍}%* U+264D
+\DeclareTextCommand{\textlibra}{PU}{♎}%* U+264E
+\DeclareTextCommand{\textscorpio}{PU}{♏}%* U+264F
+\DeclareTextCommand{\textsagittarius}{PU}{♐}%* U+2650
+\DeclareTextCommand{\textcapricornus}{PU}{♑}%* U+2651
+\DeclareTextCommand{\textaquarius}{PU}{♒}%* U+2652
+\DeclareTextCommand{\textpisces}{PU}{♓}%* U+2653
+\DeclareTextCommand{\textspadesuitblack}{PU}{♠}% U+2660
+\DeclareTextCommand{\textheartsuitwhite}{PU}{♡}% U+2661
+\DeclareTextCommand{\textdiamondsuitwhite}{PU}{♢}% U+2662
+\DeclareTextCommand{\textclubsuitblack}{PU}{♣}% U+2663
+\DeclareTextCommand{\textspadesuitwhite}{PU}{♤}% U+2664
+\DeclareTextCommand{\textheartsuitblack}{PU}{♥}% U+2665
+\DeclareTextCommand{\textdiamondsuitblack}{PU}{♦}% U+2666
+\DeclareTextCommand{\textclubsuitwhite}{PU}{♧}% U+2667
+\DeclareTextCommand{\textquarternote}{PU}{♩}%* U+2669
+\DeclareTextCommand{\textmusicalnote}{PU}{♪}% U+266A
+\DeclareTextCommand{\texttwonotes}{PU}{♫}%* U+266B
+\DeclareTextCommand{\textsixteenthnote}{PU}{♬}%* U+266C
+\DeclareTextCommand{\textflat}{PU}{♭}%* U+266D
+\DeclareTextCommand{\textnatural}{PU}{♮}%* U+266E
+\DeclareTextCommand{\textsharp}{PU}{♯}%* U+266F
+\DeclareTextCommand{\textrecycle}{PU}{♲}%* U+2672
+\DeclareTextCommand{\textWheelchair}{PU}{♿}%* U+267F
+\DeclareTextCommand{\textFlag}{PU}{⚑}%* U+2691
+\DeclareTextCommand{\textMineSign}{PU}{⚒}%* U+2692
+\DeclareTextCommand{\textdsmilitary}{PU}{⚔}%* U+2694
+\DeclareTextCommand{\textdsmedical}{PU}{⚕}%* U+2695
+\DeclareTextCommand{\textdsjuridical}{PU}{⚖}%* U+2696
+\DeclareTextCommand{\textdschemical}{PU}{⚗}%* U+2697
+\DeclareTextCommand{\textdsbiological}{PU}{⚘}%* U+2698
+\DeclareTextCommand{\textdscommercial}{PU}{⚚}%* U+269A
+\DeclareTextCommand{\textmanstar}{PU}{⚝}%* U+269D
+\DeclareTextCommand{\textdanger}{PU}{⚠}%* U+26A0
+\DeclareTextCommand{\textFemaleFemale}{PU}{⚢}%* U+26A2
+\DeclareTextCommand{\textMaleMale}{PU}{⚣}%* U+26A3
+\DeclareTextCommand{\textFemaleMale}{PU}{⚤}%* U+26A4
+\DeclareTextCommand{\textHermaphrodite}{PU}{⚥}%* U+26A5
+\DeclareTextCommand{\textNeutral}{PU}{⚪}%* U+26AA
+\DeclareTextCommand{\textmarried}{PU}{⚭}% U+26AD
+\DeclareTextCommand{\textdivorced}{PU}{⚮}% U+26AE
+\DeclareTextCommand{\textPUuncrfemale}{PU}{⚲}% U+26B2
+\DeclareTextCommand{\texthexstar}{PU}{⚹}%* U+26B9
+\DeclareTextCommand{\textSoccerBall}{PU}{⚽}% U+26BD
+\DeclareTextCommand{\textSunCload}{PU}{⛅}%* U+26C5
+\DeclareTextCommand{\textRain}{PU}{⛆}%* U+26C6
+\DeclareTextCommand{\textnoway}{PU}{⛔}%* U+26D4
+\DeclareTextCommand{\textMountain}{PU}{⛰}%* U+26F0
+\DeclareTextCommand{\textTent}{PU}{⛺}%* U+26FA
+\DeclareTextCommand{\textScissorRightBrokenBottom}{PU}{✁}% U+2701
+\DeclareTextCommand{\textScissorRight}{PU}{✂}%* U+2702
+\DeclareTextCommand{\textScissorRightBrokenTop}{PU}{✃}%* U+2703
+\DeclareTextCommand{\textScissorHollowRight}{PU}{✄}%* U+2704
+\DeclareTextCommand{\textPhoneHandset}{PU}{✆}%* U+2706
+\DeclareTextCommand{\textTape}{PU}{✇}%* U+2707
+\DeclareTextCommand{\textPlane}{PU}{✈}%* U+2708
+\DeclareTextCommand{\textEnvelope}{PU}{✉}%* U+2709
+\DeclareTextCommand{\textPeace}{PU}{✌}%* U+270C
+\DeclareTextCommand{\textWritingHand}{PU}{✍}%* U+270D
+\DeclareTextCommand{\textPencilRightDown}{PU}{✎}%* U+270E
+\DeclareTextCommand{\textPencilRight}{PU}{✏}%* U+270F
+\DeclareTextCommand{\textPencilRightUp}{PU}{✐}%* U+2710
+\DeclareTextCommand{\textNibRight}{PU}{✑}%* U+2711
+\DeclareTextCommand{\textNibSolidRight}{PU}{✒}%* U+2712
+\DeclareTextCommand{\textCheckmark}{PU}{✓}%* U+2713
+\DeclareTextCommand{\textCheckmarkBold}{PU}{✔}%* U+2714
+\DeclareTextCommand{\textXSolid}{PU}{✕}%* U+2715
+\DeclareTextCommand{\textXSolidBold}{PU}{✖}%* U+2716
+\DeclareTextCommand{\textXSolidBrush}{PU}{✗}%* U+2717
+\DeclareTextCommand{\textPlusOutline}{PU}{✙}%* U+2719
+\DeclareTextCommand{\textPlus}{PU}{✚}%* U+271A
+\DeclareTextCommand{\textPlusThinCenterOpen}{PU}{✛}%* U+271B
+\DeclareTextCommand{\textPlusCenterOpen}{PU}{✜}%* U+271C
+\DeclareTextCommand{\textCross}{PU}{✝}%* U+271D
+\DeclareTextCommand{\textCrossOpenShadow}{PU}{✞}%* U+271E
+\DeclareTextCommand{\textCrossOutline}{PU}{✟}%* U+271F
+\DeclareTextCommand{\textCrossMaltese}{PU}{✠}%* U+2720
+\DeclareTextCommand{\textDavidStar}{PU}{✡}%* U+2721
+\DeclareTextCommand{\textFourAsterisk}{PU}{✢}%* U+2722
+\DeclareTextCommand{\textJackStar}{PU}{✣}%* U+2723
+\DeclareTextCommand{\textJackStarBold}{PU}{✤}%* U+2724
+\DeclareTextCommand{\textClowerTips}{PU}{✥}%* U+2725
+\DeclareTextCommand{\textFourStar}{PU}{✦}%* U+2726
+\DeclareTextCommand{\textFourStarOpen}{PU}{✧}%* U+2727
+\DeclareTextCommand{\textFiveStarOpenCircled}{PU}{✪}%* U+272A
+\DeclareTextCommand{\textFiveStarCenterOpen}{PU}{✫}%* U+272B
+\DeclareTextCommand{\textFiveStarOpenDotted}{PU}{✬}%* U+272C
+\DeclareTextCommand{\textFiveStarOutline}{PU}{✭}%* U+272D
+\DeclareTextCommand{\textFiveStarOutlineHeavy}{PU}{✮}%* U+272E
+\DeclareTextCommand{\textFiveStarConvex}{PU}{✯}%* U+272F
+\DeclareTextCommand{\textFiveStarShadow}{PU}{✰}%* U+2730
+\DeclareTextCommand{\textAsteriskBold}{PU}{✱}%* U+2731
+\DeclareTextCommand{\textAsteriskCenterOpen}{PU}{✲}%* U+2732
+\DeclareTextCommand{\textEightStarTaper}{PU}{✴}%* U+2734
+\DeclareTextCommand{\textEightStarConvex}{PU}{✵}%* U+2735
+\DeclareTextCommand{\textSixStar}{PU}{✶}%* U+2736
+\DeclareTextCommand{\textEightStar}{PU}{✷}%* U+2737
+\DeclareTextCommand{\textEightStarBold}{PU}{✸}%* U+2738
+\DeclareTextCommand{\textTwelveStar}{PU}{✹}%* U+2739
+\DeclareTextCommand{\textSixteenStarLight}{PU}{✺}%* U+273A
+\DeclareTextCommand{\textSixFlowerPetalRemoved}{PU}{✻}%* U+273B
+\DeclareTextCommand{\textSixFlowerOpenCenter}{PU}{✼}%* U+273C
+\DeclareTextCommand{\textAsterisk}{PU}{✽}%* U+273D
+\DeclareTextCommand{\textSixFlowerAlternate}{PU}{✾}%* U+273E
+\DeclareTextCommand{\textFiveFlowerPetal}{PU}{✿}%* U+273F
+\DeclareTextCommand{\textFiveFlowerOpen}{PU}{❀}%* U+2740
+\DeclareTextCommand{\textEightFlowerPetal}{PU}{❁}%* U+2741
+\DeclareTextCommand{\textSunshineOpenCircled}{PU}{❂}%* U+2742
+\DeclareTextCommand{\textSixFlowerAltPetal}{PU}{❃}%* U+2743
+\DeclareTextCommand{\textSnowflakeChevron}{PU}{❄}%* U+2744
+\DeclareTextCommand{\textSnowflake}{PU}{❅}%* U+2745
+\DeclareTextCommand{\textSnowflakeChevronBold}{PU}{❆}%* U+2746
+\DeclareTextCommand{\textSparkle}{PU}{❇}%* U+2747
+\DeclareTextCommand{\textSparkleBold}{PU}{❈}%* U+2748
+\DeclareTextCommand{\textAsteriskRoundedEnds}{PU}{❉}%* U+2749
+\DeclareTextCommand{\textEightFlowerPetalRemoved}{PU}{❊}%* U+274A
+\DeclareTextCommand{\textEightAsterisk}{PU}{❋}%* U+274B
+\DeclareTextCommand{\textCircleShadow}{PU}{❍}%* U+274D
+\DeclareTextCommand{\textSquareShadowBottomRight}{PU}{❏}%* U+274F
+\DeclareTextCommand{\textSquareTopRight}{PU}{❐}%* U+2750
+\DeclareTextCommand{\textSquareCastShadowBottomRight}{PU}{❑}%* U+2751
+\DeclareTextCommand{\textSquareCastShadowTopRight}{PU}{❒}%* U+2752
+\DeclareTextCommand{\textDiamandSolid}{PU}{❖}%* U+2756
+\DeclareTextCommand{\textRectangleThin}{PU}{❘}%* U+2758
+\DeclareTextCommand{\textRectangle}{PU}{❙}%* U+2759
+\DeclareTextCommand{\textRectangleBold}{PU}{❚}%* U+275A
+\DeclareTextCommand{\textperp}{PU}{⟂}%* U+27C2
+\DeclareTextCommand{\textnotperp}{PU}{⟂\HyPsd@unichar{824}}%* U+27C2 U+0338
+\DeclareTextCommand{\textveedot}{PU}{⟇}%* U+27C7
+\DeclareTextCommand{\textwedgedot}{PU}{⟑}%* U+27D1
+\DeclareTextCommand{\textleftspoon}{PU}{⟜}%* U+27DC
+\DeclareTextCommand{\textlbrackdbl}{PU}{⟦}%* U+27E6
+\DeclareTextCommand{\textrbrackdbl}{PU}{⟧}%* U+27E7
+\DeclareTextCommand{\textcirclearrowleft}{PU}{⟲}%* U+27F2
+\DeclareTextCommand{\textcirclearrowright}{PU}{⟳}%* U+27F3
+\DeclareTextCommand{\textlongleftarrow}{PU}{⟵}%* U+27F5
+\DeclareTextCommand{\textlongrightarrow}{PU}{⟶}%* U+27F6
+\DeclareTextCommand{\textlongleftrightarrow}{PU}{⟷}%* U+27F7
+\DeclareTextCommand{\textLongleftarrow}{PU}{⟸}%* U+27F8
+\DeclareTextCommand{\textLongrightarrow}{PU}{⟹}%* U+27F9
+\DeclareTextCommand{\textLongleftrightarrow}{PU}{⟺}%* U+27FA
+\DeclareTextCommand{\textlongmapsto}{PU}{⟼}%* U+27FC
+\DeclareTextCommand{\textLongmapsfrom}{PU}{⟽}%* U+27FD
+\DeclareTextCommand{\textLongmapsto}{PU}{⟾}%* U+27FE
+\DeclareTextCommand{\textnwsearrow}{PU}{⤡}%* U+2921
+\DeclareTextCommand{\textneswarrow}{PU}{⤢}%* U+2922
+\DeclareTextCommand{\textlhooknwarrow}{PU}{⤣}%* U+2923
+\DeclareTextCommand{\textrhooknearrow}{PU}{⤤}%* U+2924
+\DeclareTextCommand{\textlhooksearrow}{PU}{⤥}%* U+2925
+\DeclareTextCommand{\textrhookswarrow}{PU}{⤦}%* U+2926
+\DeclareTextCommand{\textleadsto}{PU}{⤳}%* U+2933
+\DeclareTextCommand{\textrcurvearrowne}{PU}{⤴}%* U+2934
+\DeclareTextCommand{\textlcurvearrowse}{PU}{⤵}%* U+2935
+\DeclareTextCommand{\textlcurvearrowsw}{PU}{⤶}%* U+2936
+\DeclareTextCommand{\textrcurvearrowse}{PU}{⤷}%* U+2937
+\DeclareTextCommand{\textlcurvearrowdown}{PU}{⤸}%* U+2938
+\DeclareTextCommand{\textrcurvearrowdown}{PU}{⤹}%* U+2939
+\DeclareTextCommand{\textrcurvearrowleft}{PU}{⤺}%* U+293A
+\DeclareTextCommand{\textrcurvearrowright}{PU}{⤻}%* U+293B
+\DeclareTextCommand{\textleftrightharpoon}{PU}{⥊}%* U+294A
+\DeclareTextCommand{\textrightleftharpoon}{PU}{⥋}%* U+294B
+\DeclareTextCommand{\textupdownharpoonrightleft}{PU}{⥌}%* U+294C
+\DeclareTextCommand{\textupdownharpoonleftright}{PU}{⥍}%* U+294D
+\DeclareTextCommand{\textleftleftharpoons}{PU}{⥢}%* U+2962
+\DeclareTextCommand{\textupupharpoons}{PU}{⥣}%* U+2963
+\DeclareTextCommand{\textrightrightharpoons}{PU}{⥤}%* U+2964
+\DeclareTextCommand{\textdowndownharpoons}{PU}{⥥}%* U+2965
+\DeclareTextCommand{\textleftbarharpoon}{PU}{⥪}%* U+296A
+\DeclareTextCommand{\textbarleftharpoon}{PU}{⥫}%* U+296B
+\DeclareTextCommand{\textrightbarharpoon}{PU}{⥬}%* U+296C
+\DeclareTextCommand{\textbarrightharpoon}{PU}{⥭}%* U+296D
+\DeclareTextCommand{\textupdownharpoons}{PU}{⥮}%* U+296E
+\DeclareTextCommand{\textdownupharpoons}{PU}{⥯}%* U+296F
+\DeclareTextCommand{\textmoo}{PU}{⥿\HyPsd@unichar{822}}%* U+297F U+0336
+\DeclareTextCommand{\textllparenthesis}{PU}{⦇}%* U+2987
+\DeclareTextCommand{\textrrparenthesis}{PU}{⦈}%* U+2988
+\DeclareTextCommand{\textinvdiameter}{PU}{⦰}%* U+29B0
+\DeclareTextCommand{\textobar}{PU}{⦶}%* U+29B6
+\DeclareTextCommand{\textobslash}{PU}{⦸}%* U+29B8
+\DeclareTextCommand{\textobot}{PU}{⦺}%* U+29BA
+\DeclareTextCommand{\textNoChemicalCleaning}{PU}{⦻}%* U+29BB
+\DeclareTextCommand{\textolessthan}{PU}{⧀}%* U+29C0
+\DeclareTextCommand{\textogreaterthan}{PU}{⧁}%* U+29C1
+\DeclareTextCommand{\textboxslash}{PU}{⧄}%* U+29C4
+\DeclareTextCommand{\textboxbslash}{PU}{⧅}%* U+29C5
+\DeclareTextCommand{\textboxast}{PU}{⧆}%* U+29C6
+\DeclareTextCommand{\textboxcircle}{PU}{⧇}%* U+29C7
+\DeclareTextCommand{\textboxbox}{PU}{⧈}%* U+29C8
+\DeclareTextCommand{\textValve}{PU}{⧓}%* U+29D3
+\DeclareTextCommand{\textmultimapboth}{PU}{⧗}%* U+29DF
+\DeclareTextCommand{\textshuffle}{PU}{⧢}%* U+29E2
+\DeclareTextCommand{\textuplus}{PU}{⨄}%* U+2A04
+\DeclareTextCommand{\textbigdoublewedge}{PU}{⨇}%* U+2A07
+\DeclareTextCommand{\textbigdoublevee}{PU}{⨈}%* U+2A08
+\DeclareTextCommand{\textJoin}{PU}{⨝}%* U+2A1D
+\DeclareTextCommand{\textfatsemi}{PU}{⨟}%* U+2A1F
+\DeclareTextCommand{\textcircplus}{PU}{⨢}%* U+2A22
+\DeclareTextCommand{\textminusdot}{PU}{⨪}%* U+2A2A
+\DeclareTextCommand{\textdottimes}{PU}{⨰}%* U+2A30
+\DeclareTextCommand{\textdtimes}{PU}{⨲}%* U+2A32
+\DeclareTextCommand{\textodiv}{PU}{⨸}%* U+2A38
+\DeclareTextCommand{\textinvneg}{PU}{⨼}%* U+2A3C
+\DeclareTextCommand{\textsqdoublecap}{PU}{⩎}%* U+2A4E
+\DeclareTextCommand{\textcapdot}{PU}{⩀}%* U+2A40
+\DeclareTextCommand{\textsqdoublecup}{PU}{⩏}%* U+2A4F
+\DeclareTextCommand{\textdoublewedge}{PU}{⩕}%* U+2A55
+\DeclareTextCommand{\textdoublevee}{PU}{⩖}%* U+2A56
+\DeclareTextCommand{\textdoublebarwedge}{PU}{⩞}%* U+2A5E
+\DeclareTextCommand{\textveedoublebar}{PU}{⩣}%* U+2A63
+\DeclareTextCommand{\texteqdot}{PU}{⩦}%* U+2A66
+\DeclareTextCommand{\textneqdot}{PU}{⩦\HyPsd@unichar{824}}%* U+2A66 U+0338
+\DeclareTextCommand{\textcoloncolonequals}{PU}{⩴}%* U+2A74
+\DeclareTextCommand{\textleqslant}{PU}{⩽}%* U+2A7D
+\DeclareTextCommand{\textnleqslant}{PU}{⩽\HyPsd@unichar{824}}%* U+2A7D U+0338
+\DeclareTextCommand{\textgeqslant}{PU}{⩾}%* U+2A7E
+\DeclareTextCommand{\textngeqslant}{PU}{⩾\HyPsd@unichar{824}}%* U+2A7E U+0338
+\DeclareTextCommand{\textlessapprox}{PU}{⪅}%* U+2A85
+\DeclareTextCommand{\textnlessapprox}{PU}{⪅\HyPsd@unichar{824}}%* U+2A85 U+0338
+\DeclareTextCommand{\textgtrapprox}{PU}{⪆}%* U+2A86
+\DeclareTextCommand{\textngtrapprox}{PU}{⪆\HyPsd@unichar{824}}%* U+2A86 U+0338
+\DeclareTextCommand{\textlneq}{PU}{⪇}%* U+2A87
+\DeclareTextCommand{\textgneq}{PU}{⪈}%* U+2A88
+\DeclareTextCommand{\textlnapprox}{PU}{⪉}%* U+2A89
+\DeclareTextCommand{\textgnapprox}{PU}{⪊}%* U+2A8A
+\DeclareTextCommand{\textlesseqqgtr}{PU}{⪋}%* U+2A8B
+\DeclareTextCommand{\textgtreqqless}{PU}{⪌}%* U+2A8C
+\DeclareTextCommand{\texteqslantless}{PU}{⪕}%* U+2A95
+\DeclareTextCommand{\texteqslantgtr}{PU}{⪖}%* U+2A96
+\DeclareTextCommand{\textleftslice}{PU}{⪦}%* U+2AA6
+\DeclareTextCommand{\textrightslice}{PU}{⪧}%* U+2AA7
+\DeclareTextCommand{\textpreceq}{PU}{⪯}%* U+2AAF
+\DeclareTextCommand{\textnpreceq}{PU}{⪯\HyPsd@unichar{824}}%* U+2AAF U+0338
+\DeclareTextCommand{\textsucceq}{PU}{⪰}%* U+2AB0
+\DeclareTextCommand{\textnsucceq}{PU}{⪰\HyPsd@unichar{824}}%* U+2AB0 U+0338
+\DeclareTextCommand{\textprecneq}{PU}{⪱}%* U+2AB1
+\DeclareTextCommand{\textsuccneq}{PU}{⪲}%* U+2AB2
+\DeclareTextCommand{\textpreceqq}{PU}{⪳}%* U+2AB3
+\DeclareTextCommand{\textnpreceqq}{PU}{⪳\HyPsd@unichar{824}}%* U+2AB3 U+0338
+\DeclareTextCommand{\textsucceqq}{PU}{⪴}%* U+2AB4
+\DeclareTextCommand{\textnsucceqq}{PU}{⪴\HyPsd@unichar{824}}%* U+2AB4 U+0338
+\DeclareTextCommand{\textprecneqq}{PU}{⪵}%* U+2AB5
+\DeclareTextCommand{\textsuccneqq}{PU}{⪶}%* U+2AB6
+\DeclareTextCommand{\textprecapprox}{PU}{⪷}%* U+2AB7
+\DeclareTextCommand{\textnprecapprox}{PU}{⪷\HyPsd@unichar{824}}%* U+2AB7 U+0338
+\DeclareTextCommand{\textsuccapprox}{PU}{⪸}%* U+2AB8
+\DeclareTextCommand{\textnsuccapprox}{PU}{⪸\HyPsd@unichar{824}}%* U+2AB8 U+0338
+\DeclareTextCommand{\textprecnapprox}{PU}{⪹}%* U+2AB9
+\DeclareTextCommand{\textsuccnapprox}{PU}{⪺}%* U+2ABA
+\DeclareTextCommand{\textsubseteqq}{PU}{⫅}%* U+2AC5
+\DeclareTextCommand{\textnsubseteqq}{PU}{⫅\HyPsd@unichar{824}}%* U+2AC5 U+0338
+\DeclareTextCommand{\textsupseteqq}{PU}{⫆}%* U+2AC6
+\DeclareTextCommand{\textnsupseteqq}{PU}{⫆\HyPsd@unichar{824}}%* U+2AC6 U+0338
+\DeclareTextCommand{\textdashV}{PU}{⫣}%* U+2AE3
+\DeclareTextCommand{\textndashV}{PU}{⫣\HyPsd@unichar{824}}%* U+2AE3 U+0338
+\DeclareTextCommand{\textDashv}{PU}{⫤}%* U+2AE4
+\DeclareTextCommand{\textnDashv}{PU}{⫤\HyPsd@unichar{824}}%* U+2AE4 U+0338
+\DeclareTextCommand{\textDashV}{PU}{⫥}%* U+2AE5
+\DeclareTextCommand{\textnDashV}{PU}{⫥\HyPsd@unichar{824}}%* U+2AE5 U+0338
+\DeclareTextCommand{\textdownmodels}{PU}{⫪}%* U+2AEA
+\DeclareTextCommand{\textndownmodels}{PU}{⫪\HyPsd@unichar{824}}%* U+2AEA U+0338
+\DeclareTextCommand{\textupmodels}{PU}{⫫}%* U+2AEB
+\DeclareTextCommand{\textnupmodels}{PU}{⫫\HyPsd@unichar{824}}%* U+2AEB U+0338
+\DeclareTextCommand{\textupspoon}{PU}{⫯}%* U+2AEF
+\DeclareTextCommand{\textinterleave}{PU}{⫴}%* U+2AF4
+\DeclareTextCommand{\textsslash}{PU}{⫽}%* U+2AFD
+\DeclareTextCommand{\textpentagon}{PU}{⬠}%* U+2B20
+\DeclareTextCommand{\textvarhexagon}{PU}{⬡}%* U+2B21
+\DeclareTextCommand{\textjinferior}{PU}{ⱼ}%* U+2C7C
+\DeclareTextCommand{\textslashdiv}{PU}{⸓}%* U+2E13
+\DeclareTextCommand{\textinterrobangdown}{PU}{⸘}% U+2E18
+\DeclareTextCommand{\textfivedots}{PU}{⸭}%* U+2E2D
+\DeclareTextCommand{\textupstep}{PU}{ꜛ}% U+A71B
+\DeclareTextCommand{\textdownstep}{PU}{ꜜ}% U+A71C
+\DeclareTextCommand{\textPUheng}{PU}{ꜧ}% U+A727
+\DeclareTextCommand{\textPUlhookfour}{PU}{Ꜭ}% U+A72C
+\DeclareTextCommand{\textPUscf}{PU}{ꜰ}% U+A730
+\DeclareTextCommand{\textPUaolig}{PU}{ꜵ}% U+A735
+\DeclareTextCommand{\textoo}{PU}{ꝏ}%* U+A74F
+\DeclareTextCommand{\textcircumlow}{PU}{ꞈ}% U+A788
+\DeclareTextCommand{\textfi}{PU}{ﬁ}% U+FB01
+\DeclareTextCommand{\textfl}{PU}{ﬂ}% U+FB02
+\DeclareTextCommand{\textGaPa}{PU}{𝄻}%* U+1D13B
+\DeclareTextCommand{\textHaPa}{PU}{𝄼}%* U+1D13C
+\DeclareTextCommand{\textViPa}{PU}{𝄽}%* U+1D13D
+\DeclareTextCommand{\textAcPa}{PU}{𝄾}%* U+1D13E
+\DeclareTextCommand{\textSePa}{PU}{𝄿}%* U+1D13F
+\DeclareTextCommand{\textZwPa}{PU}{𝅀}%* U+1D140
+\DeclareTextCommand{\textfullnote}{PU}{𝅝}%* U+1D15D
+\DeclareTextCommand{\texthalfnote}{PU}{𝅗𝅥}%* U+1D15E
+\DeclareTextCommand{\textVier}{PU}{𝅘𝅥}%* U+1D15F
+\DeclareTextCommand{\textAcht}{PU}{𝅘𝅥𝅮}%* U+1D160
+\DeclareTextCommand{\textSech}{PU}{𝅘𝅥𝅯}%* U+1D161
+\DeclareTextCommand{\textZwdr}{PU}{𝅘𝅥𝅰}%* U+1D162
+\DeclareTextCommand{\textMundus}{PU}{🌍}%* U+1F30D
+\DeclareTextCommand{\textMoon}{PU}{🌙}%* U+1F319
+\DeclareTextCommand{\textManFace}{PU}{👨}%* U+1F468
+\DeclareTextCommand{\textWomanFace}{PU}{👩}%* U+1F469
+\DeclareTextCommand{\textFax}{PU}{📠}%* U+1F4E0
+\DeclareTextCommand{\textFire}{PU}{🔥}%* U+1F525
+\DeclareTextCommand{\textBicycle}{PU}{🚲}%* U+1F6B2
+\DeclareTextCommand{\textGentsroom}{PU}{🚹}%* U+1F6B9
+\DeclareTextCommand{\textLadiesroom}{PU}{🚺}%* U+1F6BA
 \DeclareTextCommand{\SS}{PU}{SS}%
-\DeclareTextCommand{\textcopyleft}{PU}{}% U+2184 U+20DD
-\DeclareTextCommand{\textccnc}{PU}{}%* U+0024 U+20E0
-\DeclareTextCommand{\textccnd}{PU}{=}%* U+003D U+20DD
-\DeclareTextCommand{\textccsa}{PU}{}%* U+27F2 U+20DD
-\DeclareTextCommand{\textInfo}{PU}{}%* U+1D422 U+20DE
-\DeclareTextCommand{\textCESign}{PU}{}%* U+0043 U+0045
+\DeclareTextCommand{\textcopyleft}{PU}{ↄ\HyPsd@unichar{8413}}% U+2184 U+20DD
+\DeclareTextCommand{\textccnc}{PU}{\HyPsd@unichar{36}\HyPsd@unichar{8418}}%* U+0024 U+20E0
+\DeclareTextCommand{\textccnd}{PU}{=\HyPsd@unichar{8413}}%* U+003D U+20DD
+\DeclareTextCommand{\textccsa}{PU}{⟲\HyPsd@unichar{8413}}%* U+27F2 U+20DD
+\DeclareTextCommand{\textInfo}{PU}{𝐢⃞}%* U+1D422 U+20DE
+\DeclareTextCommand{\textCESign}{PU}{CE}%* U+0043 U+0045
 \DeclareTextCommand{\textglqq}{PU}{\quotedblbase}%
 \DeclareTextCommand{\textgrqq}{PU}{\textquotedblleft}%
 \DeclareTextCommand{\textglq}{PU}{\quotesinglbase}%

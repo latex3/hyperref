@@ -1,0 +1,134 @@
+%%
+%% This is file `puxenc-greekbasic.def',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% hyperref.dtx  (with options: `pugreek')
+%%
+%% Copyright
+%% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
+%% 2001-2015 Heiko Oberdiek.
+%% 2016-2019 Oberdiek Package Support Group
+%% 2019-2022 LaTeX Project
+%%      https://github.com/latex3/hyperref/issues
+%%
+%% This file is part of the `Hyperref Bundle'.
+%% -------------------------------------------
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is the LaTeX Project.
+%%
+%% The list of all files belonging to the `Hyperref Bundle' is
+%% given in the file `manifest.txt'.
+%%
+%% File: hyperref.dtx
+\ProvidesFile{puxenc-greekbasic.def}
+  [2022-06-20 v7.00s %
+  Hyperref: PDF Unicode definition (greek block) (HO)]
+\DeclareTextCommand{\textnumeralsigngreek}{PUX}{ʹ}% U+0374
+\DeclareTextCommand{\textdexiakeraia}{PUX}{ʹ}% U+0374
+\DeclareTextCommand{\textnumeralsignlowergreek}{PUX}{͵}% U+0375
+\DeclareTextCommand{\textaristerikeraia}{PUX}{͵}% U+0375
+\DeclareTextCompositeCommand{\'}{PUX}{\textAlpha}{Ά}% U+0386
+\DeclareTextCompositeCommand{\'}{PUX}{\textEpsilon}{Έ}% U+0388
+\DeclareTextCompositeCommand{\'}{PUX}{\textEta}{Ή}% U+0389
+\DeclareTextCompositeCommand{\'}{PUX}{\textIota}{Ί}% U+038A
+\DeclareTextCompositeCommand{\'}{PUX}{\textOmicron}{Ό}% U+038C
+\DeclareTextCompositeCommand{\'}{PUX}{\textUpsilon}{Ύ}% U+038E
+\DeclareTextCompositeCommand{\'}{PUX}{\textOmega}{Ώ}% U+038F
+\DeclareTextCompositeCommand{\'}{PUX}{\textIotadieresis}{ΐ}% U+0390
+\DeclareTextCommand{\textAlpha}{PUX}{Α}% U+0391
+\DeclareTextCommand{\textBeta}{PUX}{Β}% U+0392
+\DeclareTextCommand{\textGamma}{PUX}{Γ}%* U+0393
+\DeclareTextCommand{\textDelta}{PUX}{Δ}%* U+0394
+\DeclareTextCommand{\textEpsilon}{PUX}{Ε}% U+0395
+\DeclareTextCommand{\textZeta}{PUX}{Ζ}% U+0396
+\DeclareTextCommand{\textEta}{PUX}{Η}% U+0397
+\DeclareTextCommand{\textTheta}{PUX}{Θ}%* U+0398
+\DeclareTextCommand{\textIota}{PUX}{Ι}% U+0399
+\DeclareTextCommand{\textKappa}{PUX}{Κ}% U+039A
+\DeclareTextCommand{\textLambda}{PUX}{Λ}%* U+039B
+\DeclareTextCommand{\textMu}{PUX}{Μ}% U+039C
+\DeclareTextCommand{\textNu}{PUX}{Ν}% U+039D
+\DeclareTextCommand{\textXi}{PUX}{Ξ}%* U+039E
+\DeclareTextCommand{\textOmicron}{PUX}{Ο}% U+039F
+\DeclareTextCommand{\textPi}{PUX}{Π}%* U+03A0
+\DeclareTextCommand{\textRho}{PUX}{Ρ}% U+03A1
+\DeclareTextCommand{\textSigma}{PUX}{Σ}%* U+03A3
+\DeclareTextCommand{\textTau}{PUX}{Τ}% U+03A4
+\DeclareTextCommand{\textUpsilon}{PUX}{Υ}%* U+03A5
+\DeclareTextCommand{\textPhi}{PUX}{Φ}%* U+03A6
+\DeclareTextCommand{\textChi}{PUX}{Χ}% U+03A7
+\DeclareTextCommand{\textPsi}{PUX}{Ψ}%* U+03A8
+\DeclareTextCommand{\textOmega}{PUX}{Ω}%* U+03A9
+\DeclareTextCommand{\textIotadieresis}{PUX}{Ϊ}% U+03AA
+\DeclareTextCompositeCommand{\"}{PUX}{\textIota}{Ϊ}% U+03AA
+\DeclareTextCompositeCommand{\"}{PUX}{\textUpsilon}{Ϋ}% U+03AB
+\DeclareTextCompositeCommand{\'}{PUX}{\textalpha}{ά}%* U+03AC
+\DeclareTextCompositeCommand{\'}{PUX}{\textepsilon}{έ}% U+03AD
+\DeclareTextCompositeCommand{\'}{PUX}{\texteta}{ή}% U+03AE
+\DeclareTextCompositeCommand{\'}{PUX}{\textiota}{ί}% U+03AF
+\DeclareTextCompositeCommand{\"}{PUX}{\textupsilonacute}{ΰ}% U+03B0
+\DeclareTextCommand{\textalpha}{PUX}{α}%* U+03B1
+\DeclareTextCommand{\textbeta}{PUX}{β}%* U+03B2
+\DeclareTextCommand{\textgamma}{PUX}{γ}%* U+03B3
+\DeclareTextCommand{\textdelta}{PUX}{δ}%* U+03B4
+\DeclareTextCommand{\textepsilon}{PUX}{ε}%* U+03B5
+\DeclareTextCommand{\textzeta}{PUX}{ζ}%* U+03B6
+\DeclareTextCommand{\texteta}{PUX}{η}%* U+03B7
+\DeclareTextCommand{\texttheta}{PUX}{θ}%* U+03B8
+\DeclareTextCommand{\textiota}{PUX}{ι}%* U+03B9
+\DeclareTextCommand{\textkappa}{PUX}{κ}%* U+03BA
+\DeclareTextCommand{\textlambda}{PUX}{λ}%* U+03BB
+\DeclareTextCommand{\textmugreek}{PUX}{μ}%* U+03BC
+\DeclareTextCommand{\textnu}{PUX}{ν}%* U+03BD
+\DeclareTextCommand{\textxi}{PUX}{ξ}%* U+03BE
+\DeclareTextCommand{\textomicron}{PUX}{ο}% U+03BF
+\DeclareTextCommand{\textpi}{PUX}{π}%* U+03C0
+\DeclareTextCommand{\textrho}{PUX}{ρ}%* U+03C1
+\DeclareTextCommand{\textvarsigma}{PUX}{ς}%* U+03C2
+\DeclareTextCommand{\textsigma}{PUX}{σ}%* U+03C3
+\DeclareTextCommand{\texttau}{PUX}{τ}%* U+03C4
+\DeclareTextCommand{\textupsilon}{PUX}{υ}%* U+03C5
+\DeclareTextCommand{\textphi}{PUX}{φ}%* U+03C6
+\DeclareTextCommand{\textchi}{PUX}{χ}%* U+03C7
+\DeclareTextCommand{\textpsi}{PUX}{ψ}%* U+03C8
+\DeclareTextCommand{\textomega}{PUX}{ω}%* U+03C9
+\DeclareTextCompositeCommand{\"}{PUX}{\textiota}{ϊ}% U+03CA
+\DeclareTextCompositeCommand{\"}{PUX}{\textupsilon}{ϋ}% U+03CB
+\DeclareTextCompositeCommand{\'}{PUX}{\textomicron}{ό}% U+03CC
+\DeclareTextCommand{\textupsilonacute}{PUX}{ύ}% U+03CD
+\DeclareTextCompositeCommand{\'}{PUX}{\textupsilon}{ύ}% U+03CD
+\DeclareTextCompositeCommand{\'}{PUX}{\textomega}{ώ}% U+03CE
+\DeclareTextCommand{\textQoppa}{PUX}{Ϙ}% U+03D8
+\DeclareTextCommand{\textqoppa}{PUX}{ϙ}% U+03D9
+\DeclareTextCommand{\textStigmagreek}{PUX}{Ϛ}% U+03DA
+\DeclareTextCommand{\textStigma}{PUX}{Ϛ}% U+03DA
+\DeclareTextCommand{\textstigmagreek}{PUX}{ϛ}% U+03DB
+\DeclareTextCommand{\textstigma}{PUX}{ϛ}% U+03DB
+\DeclareTextCommand{\textDigammagreek}{PUX}{Ϝ}% U+03DC
+\DeclareTextCommand{\textDigamma}{PUX}{Ϝ}% U+03DC
+\DeclareTextCommand{\textdigammagreek}{PUX}{ϝ}% U+03DD
+\DeclareTextCommand{\textdigamma}{PUX}{ϝ}% U+03DD
+\DeclareTextCommand{\textKoppa}{PUX}{Ϟ}% U+03DE
+\DeclareTextCommand{\textKoppagreek}{PUX}{Ϟ}% U+03DE
+\DeclareTextCommand{\textkoppa}{PUX}{ϟ}% U+03DF
+\DeclareTextCommand{\textkoppagreek}{PUX}{ϟ}% U+03DF
+\DeclareTextCommand{\textSampigreek}{PUX}{Ϡ}% U+03E0
+\DeclareTextCommand{\textSampi}{PUX}{Ϡ}% U+03E0
+\DeclareTextCommand{\textsampigreek}{PUX}{ϡ}% U+03E1
+\DeclareTextCommand{\textsampi}{PUX}{ϡ}% U+03E1
+\DeclareTextCommand{\textbackepsilon}{PUX}{϶}% U+03F6
+\endinput
+%%
+%% End of file `puxenc-greekbasic.def'.

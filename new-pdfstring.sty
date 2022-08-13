@@ -157,6 +157,7 @@
     \let\@protected@testopt\HyPsd@protected@testopt
     \let\@protected@testopt@xargs\HyPsd@protected@testopt
     \begingroup
+      \HyPsd@fix@shorthands
       \let\GenericError\@gobblefour
       \let\GenericWarning\@gobbletwo
       \let\GenericInfo\@gobbletwo
@@ -344,11 +345,20 @@
       }
   }
 
+\sys_if_engine_luatex:TF
+ {\def\HyPsd@UnicodeReplacementCharacter{⍰}}
+ {\def\HyPsd@UnicodeReplacementCharacter{\HyPsd@unichar{"FFFD}}}
+
+
+\def\HyPsd@fix@shorthands
+ {
+   %greek makes this an active char and that gives continuation errors in utf8
+   \tl_set:cx{normal@char\char_generate:nn{159}{12}}{\char_generate:nn{159}{12}}
+ }
 
 \ExplSyntaxOff
 
 
-\def\HyPsd@UnicodeReplacementCharacter{�}
 
 \def\HyPsd@DieFaceLarge{\ERROR}
 \def\HyPsd@@ding#1!{\ERROR}

@@ -751,10 +751,26 @@
         \fi
       }{%
         \ifdim\stockwidth>\z@
-          \setlength{\pagewidth}{\stockwidth}%
-        \fi
-        \ifdim\stockheight>\z@
-          \setlength{\pageheight}{\stockheight}%
+          \ifdim\stockheight>\z@
+           \setlength{\pagewidth}{\stockwidth}%
+           \setlength{\pageheight}{\stockheight}%
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pagewidth}{\paperwidth}%
+                \setlength{\pageheight}{\paperheight}%
+              \fi
+            \fi
+          \fi
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pagewidth}{\paperwidth}%
+                \setlength{\pageheight}{\paperheight}%
+              \fi
+            \fi
+          \fi
         \fi
       }%
     }%

@@ -6696,7 +6696,7 @@
 \def\HyperDestNameFilter#1{#1}
 \Hy@AtBeginDocument{%
   \begingroup
-    \edef\x{\@ifundefined{stockheight}\paperheight\stockheight}%
+    \edef\x{\@ifundefined{stockheight}{\paperheight}{\ifdim\stockheight>\z@ \stockheight\else\paperheight\fi}}%
     \dimen@=\x\relax
     \ifdim\dimen@>\z@
     \else
@@ -13538,10 +13538,26 @@
         \fi
       }{%
         \ifdim\stockwidth>\z@
-          \setlength{\pdfpagewidth}{\stockwidth}%
-        \fi
-        \ifdim\stockheight>\z@
-          \setlength{\pdfpageheight}{\stockheight}%
+          \ifdim\stockheight>\z@
+           \setlength{\pdfpagewidth}{\stockwidth}%
+           \setlength{\pdfpageheight}{\stockheight}%
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pdfpagewidth}{\paperwidth}%
+                \setlength{\pdfpageheight}{\paperheight}%
+              \fi
+            \fi
+          \fi
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pdfpagewidth}{\paperwidth}%
+                \setlength{\pdfpageheight}{\paperheight}%
+              \fi
+            \fi
+          \fi
         \fi
       }%
     }%
@@ -14604,7 +14620,21 @@
       }{%
         \ifdim\stockwidth>\z@
           \ifdim\stockheight>\z@
-            \special{papersize=\the\stockwidth,\the\stockheight}%
+           \special{papersize=\the\stockwidth,\the\stockheight}%
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \special{papersize=\the\paperwidth,\the\paperheight}%
+              \fi
+            \fi
+          \fi
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \special{papersize=\the\paperwidth,\the\paperheight}%
+              \fi
+            \fi
           \fi
         \fi
       }%
@@ -14743,32 +14773,44 @@
 %    it avoids the definition and the hash table entry of a
 %    previous undefined macro.
 %    \begin{macrocode}
-\ifx\mediaheight\@undefined
-\else
-  \ifx\mediaheight\relax
-  \else
-    \ifHy@setpagesize
-       \providecommand*{\VTeXInitMediaSize}{%
-         \ltx@IfUndefined{stockwidth}{%
-           \ifdim\paperheight>0pt %
-             \setlength\mediaheight\paperheight
-           \fi
-           \ifdim\paperheight>0pt %
-             \setlength\mediawidth\paperwidth
-           \fi
-         }{%
-           \ifdim\stockheight>0pt %
-             \setlength\mediaheight\stockheight
-           \fi
-           \ifdim\stockwidth>0pt %
-             \setlength\mediawidth\stockwidth
-           \fi
-         }%
+\ifcsname mediaheight\endcsname
+  \ifHy@setpagesize
+     \providecommand*{\VTeXInitMediaSize}{%
+       \ltx@IfUndefined{stockwidth}{%
+         \ifdim\paperheight>0pt %
+           \setlength\mediaheight\paperheight
+         \fi
+         \ifdim\paperheight>0pt %
+           \setlength\mediawidth\paperwidth
+         \fi
+       }{%
+        \ifdim\stockwidth>\z@
+          \ifdim\stockheight>\z@
+           \setlength\mediaheight\stockheight
+           \setlength\mediawidth\stockwidth
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength\mediaheight\paperheight
+                \setlength\mediawidth\paperwidth
+              \fi
+            \fi
+          \fi
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength\mediaheight\paperheight
+                \setlength\mediawidth\paperwidth
+              \fi
+            \fi
+          \fi
+        \fi
        }%
-       \Hy@AtBeginDocument{\VTeXInitMediaSize}%
-    \fi
-    \Hy@DisableOption{setpagesize}%
+     }%
+     \Hy@AtBeginDocument{\VTeXInitMediaSize}%
   \fi
+  \Hy@DisableOption{setpagesize}%
 \fi
 %    \end{macrocode}
 %    Older versions of VTeX require |xyz| in lower case.
@@ -16404,7 +16446,21 @@
       }{%
         \ifdim\stockwidth>\z@
           \ifdim\stockheight>\z@
-            \special{papersize=\the\stockwidth,\the\stockheight}%
+           \special{papersize=\the\stockwidth,\the\stockheight}%
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \special{papersize=\the\paperwidth,\the\paperheight}%
+              \fi
+            \fi
+          \fi
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \special{papersize=\the\paperwidth,\the\paperheight}%
+              \fi
+            \fi
           \fi
         \fi
       }%

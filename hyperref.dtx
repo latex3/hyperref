@@ -6696,7 +6696,7 @@
 \def\HyperDestNameFilter#1{#1}
 \Hy@AtBeginDocument{%
   \begingroup
-    \edef\x{\@ifundefined{stockheight}{\paperheight}{\ifdim\stockheight>\z@ \stockheight\else\paperheight\fi}}%
+    \edef\x{\ifdim\stockheight>\z@ \stockheight\else\paperheight\fi}%
     \dimen@=\x\relax
     \ifdim\dimen@>\z@
     \else
@@ -6985,6 +6985,11 @@
 %    \end{macrocode}
 %
 % \subsubsection{Driver loading}
+% Ensure that |\stockwidth| and |\stockheight| are defined
+%    \begin{macrocode}
+\@ifundefined{stockwidth}{\newdimen\stockwidth}{}
+\@ifundefined{stockheight}{\newdimen\stockheight}{}
+%    \end{macrocode}
 %
 %    \begin{macrocode}
 \Hy@AtEndOfPackage{%
@@ -13529,37 +13534,28 @@
         \fi
       \fi
     }{%
-      \ltx@IfUndefined{stockwidth}{%
-        \ifdim\paperwidth>\z@
-          \setlength{\pdfpagewidth}{\paperwidth}%
-        \fi
-        \ifdim\paperheight>\z@
-          \setlength{\pdfpageheight}{\paperheight}%
-        \fi
-      }{%
-        \ifdim\stockwidth>\z@
-          \ifdim\stockheight>\z@
-           \setlength{\pdfpagewidth}{\stockwidth}%
-           \setlength{\pdfpageheight}{\stockheight}%
-          \else
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \setlength{\pdfpagewidth}{\paperwidth}%
-                \setlength{\pdfpageheight}{\paperheight}%
-              \fi
-            \fi
-          \fi
+      \ifdim\stockwidth>\z@
+        \ifdim\stockheight>\z@
+         \setlength{\pdfpagewidth}{\stockwidth}%
+         \setlength{\pdfpageheight}{\stockheight}%
         \else
-          \ifdim\stockwidth=\z@
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \setlength{\pdfpagewidth}{\paperwidth}%
-                \setlength{\pdfpageheight}{\paperheight}%
-              \fi
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \setlength{\pdfpagewidth}{\paperwidth}%
+              \setlength{\pdfpageheight}{\paperheight}%
             \fi
           \fi
         \fi
-      }%
+      \else
+        \ifdim\stockwidth=\z@
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \setlength{\pdfpagewidth}{\paperwidth}%
+              \setlength{\pdfpageheight}{\paperheight}%
+            \fi
+          \fi
+        \fi
+      \fi
     }%
   }%
   \Hy@DisableOption{setpagesize}%
@@ -14611,33 +14607,25 @@
 \AtBeginShipoutFirst{%
   \ifHy@setpagesize
     \begingroup
-      \@ifundefined{stockwidth}{%
-        \ifdim\paperwidth>\z@
-          \ifdim\paperheight>\z@
-            \special{papersize=\the\paperwidth,\the\paperheight}%
-          \fi
-        \fi
-      }{%
-        \ifdim\stockwidth>\z@
-          \ifdim\stockheight>\z@
-           \special{papersize=\the\stockwidth,\the\stockheight}%
-          \else
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \special{papersize=\the\paperwidth,\the\paperheight}%
-              \fi
-            \fi
-          \fi
+      \ifdim\stockwidth>\z@
+        \ifdim\stockheight>\z@
+         \special{papersize=\the\stockwidth,\the\stockheight}%
         \else
-          \ifdim\stockwidth=\z@
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \special{papersize=\the\paperwidth,\the\paperheight}%
-              \fi
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \special{papersize=\the\paperwidth,\the\paperheight}%
             \fi
           \fi
         \fi
-      }%
+      \else
+        \ifdim\stockwidth=\z@
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \special{papersize=\the\paperwidth,\the\paperheight}%
+            \fi
+          \fi
+        \fi
+      \fi
     \endgroup
   \fi
   \Hy@DisableOption{setpagesize}%
@@ -14776,14 +14764,6 @@
 \ifcsname mediaheight\endcsname
   \ifHy@setpagesize
      \providecommand*{\VTeXInitMediaSize}{%
-       \ltx@IfUndefined{stockwidth}{%
-         \ifdim\paperheight>0pt %
-           \setlength\mediaheight\paperheight
-         \fi
-         \ifdim\paperheight>0pt %
-           \setlength\mediawidth\paperwidth
-         \fi
-       }{%
         \ifdim\stockwidth>\z@
           \ifdim\stockheight>\z@
            \setlength\mediaheight\stockheight
@@ -14806,7 +14786,6 @@
             \fi
           \fi
         \fi
-       }%
      }%
      \Hy@AtBeginDocument{\VTeXInitMediaSize}%
   \fi
@@ -16437,33 +16416,25 @@
 \AtBeginShipoutFirst{%
   \ifHy@setpagesize
     \begingroup
-      \@ifundefined{stockwidth}{%
-        \ifdim\paperwidth>\z@
-          \ifdim\paperheight>\z@
-            \special{papersize=\the\paperwidth,\the\paperheight}%
-          \fi
-        \fi
-      }{%
-        \ifdim\stockwidth>\z@
-          \ifdim\stockheight>\z@
-           \special{papersize=\the\stockwidth,\the\stockheight}%
-          \else
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \special{papersize=\the\paperwidth,\the\paperheight}%
-              \fi
-            \fi
-          \fi
+      \ifdim\stockwidth>\z@
+        \ifdim\stockheight>\z@
+         \special{papersize=\the\stockwidth,\the\stockheight}%
         \else
-          \ifdim\stockwidth=\z@
-            \ifdim\paperwidth>\z@
-              \ifdim\paperheight>\z@
-                \special{papersize=\the\paperwidth,\the\paperheight}%
-              \fi
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \special{papersize=\the\paperwidth,\the\paperheight}%
             \fi
           \fi
         \fi
-      }%
+      \else
+        \ifdim\stockwidth=\z@
+          \ifdim\paperwidth>\z@
+            \ifdim\paperheight>\z@
+              \special{papersize=\the\paperwidth,\the\paperheight}%
+            \fi
+          \fi
+        \fi
+      \fi
     \endgroup
   \fi
   \Hy@DisableOption{setpagesize}%

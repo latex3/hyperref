@@ -8240,9 +8240,10 @@
 %    Provide a dummy default definition of \cs{hyper@newdestlabel}
 %    inside the .aux files.
 %    \begin{macrocode}
-\AddLineBeginAux{%
-  \string\providecommand\string\hyper@newdestlabel[2]{}%
-}
+\AddToHook{include/before}
+ {\immediate\write\@partaux{\string\providecommand\string\hyper@newdestlabel[2]{}}}
+\AddToHook{begindocument}
+ {\immediate\write\@mainaux{\string\providecommand\string\hyper@newdestlabel[2]{}}}
 %    \end{macrocode}
 %
 % \section{Forms creation}
@@ -12709,15 +12710,7 @@
     \fi
   \fi
 }
-\@ifpackageloaded{showkeys}{%
-  \HyRef@ShowKeysInit
-}{%
-  \Hy@AtBeginDocument{%
-    \@ifpackageloaded{showkeys}{%
-      \HyRef@ShowKeysInit
-    }{}%
-  }%
-}
+\AddToHook{package/showkeys/after}{\HyRef@ShowKeysInit}
 %    \end{macrocode}
 %    \end{macro}
 %

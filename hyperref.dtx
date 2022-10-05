@@ -13527,24 +13527,26 @@
         \fi
       \fi
     }{%
-      \ifdim\stockwidth>\z@
-        \ifdim\stockheight>\z@
-         \setlength{\pdfpagewidth}{\stockwidth}%
-         \setlength{\pdfpageheight}{\stockheight}%
-        \else
-          \ifdim\paperwidth>\z@
-            \ifdim\paperheight>\z@
-              \setlength{\pdfpagewidth}{\paperwidth}%
-              \setlength{\pdfpageheight}{\paperheight}%
+      \ifnum\mag=\@m
+        \ifdim\stockwidth>\z@
+          \ifdim\stockheight>\z@
+           \setlength{\pdfpagewidth}{\stockwidth}%
+           \setlength{\pdfpageheight}{\stockheight}%
+          \else
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pdfpagewidth}{\paperwidth}%
+                \setlength{\pdfpageheight}{\paperheight}%
+              \fi
             \fi
           \fi
-        \fi
-      \else
-        \ifdim\stockwidth=\z@
-          \ifdim\paperwidth>\z@
-            \ifdim\paperheight>\z@
-              \setlength{\pdfpagewidth}{\paperwidth}%
-              \setlength{\pdfpageheight}{\paperheight}%
+        \else
+          \ifdim\stockwidth=\z@
+            \ifdim\paperwidth>\z@
+              \ifdim\paperheight>\z@
+                \setlength{\pdfpagewidth}{\paperwidth}%
+                \setlength{\pdfpageheight}{\paperheight}%
+              \fi
             \fi
           \fi
         \fi
@@ -14600,6 +14602,7 @@
 \AtBeginShipoutFirst{%
   \ifHy@setpagesize
     \begingroup
+     \ifnum\mag=\@m
       \ifdim\stockwidth>\z@
         \ifdim\stockheight>\z@
          \special{papersize=\the\stockwidth,\the\stockheight}%
@@ -14619,6 +14622,7 @@
           \fi
         \fi
       \fi
+     \fi
     \endgroup
   \fi
   \Hy@DisableOption{setpagesize}%
@@ -14757,6 +14761,7 @@
 \ifcsname mediaheight\endcsname
   \ifHy@setpagesize
      \providecommand*{\VTeXInitMediaSize}{%
+       \ifnum\mag=\@m
         \ifdim\stockwidth>\z@
           \ifdim\stockheight>\z@
            \setlength\mediaheight\stockheight
@@ -14779,6 +14784,7 @@
             \fi
           \fi
         \fi
+       \fi
      }%
      \Hy@AtBeginDocument{\VTeXInitMediaSize}%
   \fi
@@ -16409,6 +16415,7 @@
 \AtBeginShipoutFirst{%
   \ifHy@setpagesize
     \begingroup
+     \ifnum\mag=\@m
       \ifdim\stockwidth>\z@
         \ifdim\stockheight>\z@
          \special{papersize=\the\stockwidth,\the\stockheight}%
@@ -16428,6 +16435,7 @@
           \fi
         \fi
       \fi
+     \fi 
     \endgroup
   \fi
   \Hy@DisableOption{setpagesize}%

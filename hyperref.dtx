@@ -12442,6 +12442,8 @@
 % normal text (which is used as an anchor).
 % (|\endinput| have to be on the same line like |\fi|, or you
 % have to use |\expandafter| before.)
+% 
+% change 2022-11-13: added an |\@empty| for issue\#261.
 %    \begin{macrocode}
 \ifHy@texht
   \expandafter\endinput
@@ -12455,7 +12457,7 @@
       Reference `#3' on page \thepage \space undefined%
     }%
   \else
-    \expandafter\Hy@setref@link#1\@empty\@empty\@nil{#2}%
+    \expandafter\Hy@setref@link#1\@empty\@empty\@empty\@nil{#2}%
   \fi
 }
 %    \end{macrocode}

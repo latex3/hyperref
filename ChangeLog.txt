@@ -1,5 +1,6 @@
 2022-XX-XX Ulrike Fischer/David Carlisle
     * don't set the pagesize if \mag is different from 1000, see issue #1138 in latex3.
+    * avoid error from old labels if hyperref is loaded, issue #261
     
 2022-09-22 Ulrike Fischer/David Carlisle
     * adapt setpagesize option to changes in LaTeX (stockwidth is always defined)

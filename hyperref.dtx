@@ -12016,7 +12016,14 @@
 %    \begin{macro}{\contentsline}
 %    The page number might be empty. In this case the link for the
 %    page number is suppressed to avoid little link boxes.
+%    
+%    change 2022-11-13: To avoid problems if |MakeUppercase| is used
+%    around the entry we use special protected commands:
+%    
 %    \begin{macrocode}
+\protected\def\Hy@toclinkstart{\hyper@linkstart{link}{\Hy@tocdestname}}
+\protected\def\Hy@toclinkend{\hyper@linkend}
+
 \def\contentsline#1#2#3#4{%
   \begingroup
     \Hy@safe@activestrue
@@ -12030,7 +12037,7 @@
       \csname l@#1\endcsname{#2}{#3}%
     \or % section
       \csname l@#1\endcsname{%
-        \hyper@linkstart{link}{\Hy@tocdestname}{#2}\hyper@linkend
+        \Hy@toclinkstart{#2}\Hy@toclinkend
       }{#3}%
     \or % page
       \def\Hy@temp{#3}%
@@ -12038,20 +12045,20 @@
         \csname l@#1\endcsname{#2}{#3}%
       \else
         \csname l@#1\endcsname{{#2}}{%
-          \hyper@linkstart{link}{\Hy@tocdestname}{#3}\hyper@linkend
+          \Hy@toclinkstart{#3}\Hy@toclinkend
         }%
       \fi
     \else % all
       \def\Hy@temp{#3}%
       \ifx\Hy@temp\ltx@empty
         \csname l@#1\endcsname{%
-          \hyper@linkstart{link}{\Hy@tocdestname}{#2}\hyper@linkend
+          \Hy@toclinkstart{#2}\Hy@toclinkend
         }{}%
       \else
         \csname l@#1\endcsname{%
-          \hyper@linkstart{link}{\Hy@tocdestname}{#2}\hyper@linkend
+          \Hy@toclinkstart{#2}\Hy@toclinkend
         }{%
-          \hyper@linkstart{link}{\Hy@tocdestname}{#3}\hyper@linkend
+          \Hy@toclinkstart{#3}\Hy@toclinkend
         }%
       \fi
     \fi

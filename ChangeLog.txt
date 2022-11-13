@@ -3,6 +3,7 @@
     * avoid error from old labels if hyperref is loaded, issue #261
     * fixed issue #260
     * fixed a nopatch command, issue #258
+    * Use protected commands in \contentsline to allow the use of \MakeUppercase, issue #121
     
 2022-09-22 Ulrike Fischer/David Carlisle
     * adapt setpagesize option to changes in LaTeX (stockwidth is always defined)

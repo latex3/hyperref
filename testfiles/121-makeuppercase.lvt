@@ -1,0 +1,13 @@
+\input{regression-test}
+\documentclass{memoir}
+\renewcommand*{\cftchapterfont}{\MakeUppercase}
+\usepackage[]{hyperref}
+\begin{document}
+\START
+\showoutput
+\frontmatter 
+\tableofcontents* 
+
+\mainmatter 
+\chapter{A chapter}
+\end{document}

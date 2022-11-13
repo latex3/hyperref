@@ -1,0 +1,537 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+(121-makeuppercase.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+)
+Completed box being shipped out [1]
+\vbox(627.36243+3.60004)x378.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 35.99626fil, direction TLT
+...\kern0.0
+...\kern37.0
+...\kern-1.00374
+...\pdfdest name{page.i} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+3.60004)x378.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+3.60004)x341.0, shifted 37.0, direction TLT
+...\vbox(12.0+0.0)x341.0, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(12.0+0.0)x341.0, direction TLT
+.....\hbox(12.0+0.0)x341.0, direction TLT
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(12.0+0.0)x341.0, direction TLT
+.......\vbox(12.0+0.0)x341.0, direction TLT
+........\hbox(8.39996+3.60004)x341.0, direction TLT
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+..........\vbox(8.39996+3.60004)x341.0, direction TLT
+...........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+............\localpar
+.............\localinterlinepenalty=0
+.............\localbrokenpenalty=0
+.............\localleftbox=null
+.............\localrightbox=null
+............\hbox(0.0+0.0)x0.0, direction TLT
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(8.39996+3.60004)x341.0, direction TLT
+...........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil, direction TLT
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\localpar
+.............\localinterlinepenalty=0
+.............\localbrokenpenalty=0
+.............\localleftbox=null
+.............\localrightbox=null
+............\hbox(0.0+0.0)x0.0, direction TLT
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x341.0, glue set 403.0fil, direction TLT
+....\vbox(0.0+0.0)x0.0, direction TLT
+.....\hbox(0.0+0.0)x0.0, glue set - 348.0fil, direction TLT
+......\glue 341.0
+......\glue 7.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\write-{}
+....\pdfdest name{section*.1} xyz
+....\glue(\topskip) 10.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 50.0
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 10.52348
+....\hbox(14.47652+0.24889)x341.0, glue set 249.80621fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\TU/lmr/bx/n/20.74 C
+.....\TU/lmr/bx/n/20.74 o
+.....\TU/lmr/bx/n/20.74 n
+.....\kern-0.64294 (font)
+.....\TU/lmr/bx/n/20.74 t
+.....\TU/lmr/bx/n/20.74 e
+.....\TU/lmr/bx/n/20.74 n
+.....\kern-0.64294 (font)
+.....\TU/lmr/bx/n/20.74 t
+.....\TU/lmr/bx/n/20.74 s
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\marks1{\MakeUppercase    []{Contents}}
+....\marks2{\MakeUppercase    []{Contents}}
+....\marks3{\MakeUppercase    []{Contents}}
+....\mark{{\MakeUppercase    []{Contents}}{\MakeUppercase    []{Contents}}}
+....\penalty 10000
+....\glue 40.0
+....\glue 10.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 4.59111
+....\hbox(7.16+0.22)x341.0, glue set 249.24997fill, direction TLT
+.....\glue(\leftskip) 15.0
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\penalty 10000
+.....\glue -15.0
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{chapter.1}
+.....\hbox(6.66+0.0)x15.0, glue set 10.0fil, direction TLT
+......\TU/lmr/m/n/10 1
+......\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 A
+.....\glue(\spaceskip) 3.33 plus 1.66331 minus 1.1111
+.....\TU/lmr/m/n/10 C
+.....\TU/lmr/m/n/10 H
+.....\TU/lmr/m/n/10 A
+.....\TU/lmr/m/n/10 P
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10 -
+.....\TU/lmr/m/n/10 T
+.....\TU/lmr/m/n/10 E
+.....\TU/lmr/m/n/10 R
+.....\pdfendlink
+.....\penalty 10000
+.....\leaders 0.0 plus 1.0fill
+......\hbox(1.56+0.0)x2225.35797, direction TLT
+.......\mathon
+.......\kern1111.08398 (italic)
+.......\hbox(1.56+0.0)x3.19, direction TLT
+........\TU/lmr/bx/n/10 .
+.......\kern1111.08398 (italic)
+.......\mathoff
+.....\penalty 10000
+.....\hbox(6.55+0.0)x15.50003, glue set 9.75003fil, direction TLT
+......\glue 0.0 plus 1.0fil
+......\TU/lmr/bx/n/10 1
+.....\penalty 10000
+.....\glue(\parfillskip) -25.50003
+.....\glue(\rightskip) 25.50003
+....\glue -0.22
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 16.89497
+...\hbox(8.39996+3.60004)x341.0, direction TLT
+....\hbox(8.39996+3.60004)x341.0, direction TLT
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(8.39996+3.60004)x341.0, direction TLT
+......\vbox(8.39996+3.60004)x341.0, direction TLT
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(8.39996+3.60004)x341.0, direction TLT
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(8.39996+3.60004)x341.0, direction TLT
+.........\hbox(8.39996+3.60004)x341.0, glue set 169.11fil, direction TLT
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\localpar
+...........\localinterlinepenalty=0
+...........\localbrokenpenalty=0
+...........\localleftbox=null
+...........\localrightbox=null
+..........\hbox(0.0+0.0)x0.0, direction TLT
+..........\rule(8.39996+3.60004)x0.0
+..........\TU/lmr/m/n/10 i
+..........\rule(8.39996+3.60004)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil, direction TLT
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.\kern0.0
+Completed box being shipped out [2]
+\vbox(627.36243+0.0)x432.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 89.99626fil, direction TLT
+...\kern0.0
+...\kern91.0
+...\kern-1.00374
+...\pdfdest name{page.ii} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+0.0)x432.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+0.0)x341.0, shifted 91.0, direction TLT
+...\vbox(12.0+0.0)x341.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x341.0, direction TLT
+.....\hbox(0.0+0.0)x341.0, direction TLT
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(0.0+0.0)x341.0, direction TLT
+.......\vbox(0.0+0.0)x341.0, direction TLT
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\hbox(0.0+0.0)x0.0, direction TLT
+..........\vbox(0.0+0.0)x0.0, direction TLT
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(0.0+0.0)x0.0, direction TLT
+.........\glue 0.0 plus 1.0fill
+.........\hbox(0.0+0.0)x0.0, direction TLT
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(0.0+0.0)x0.0, direction TLT
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x0.0, glue set 540.0fil, direction TLT
+....\vbox(0.0+0.0)x0.0, direction TLT
+.....\hbox(0.0+0.0)x0.0, glue set 135.0fil, direction TLT
+......\glue -7.0
+......\glue -128.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\glue(\topskip) 10.0
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 25.29494
+...\hbox(0.0+0.0)x341.0, direction TLT
+....\hbox(0.0+0.0)x341.0, direction TLT
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(0.0+0.0)x341.0, direction TLT
+......\vbox(0.0+0.0)x341.0, direction TLT
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\vbox(0.0+0.0)x0.0, direction TLT
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(0.0+0.0)x0.0, direction TLT
+........\glue 0.0 plus 1.0fill
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(0.0+0.0)x0.0, direction TLT
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+Completed box being shipped out [1]
+\vbox(627.36243+3.60004)x378.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 35.99626fil, direction TLT
+...\kern0.0
+...\kern37.0
+...\kern-1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+3.60004)x378.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+3.60004)x341.0, shifted 37.0, direction TLT
+...\vbox(12.0+0.0)x341.0, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(12.0+0.0)x341.0, direction TLT
+.....\hbox(12.0+0.0)x341.0, direction TLT
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(12.0+0.0)x341.0, direction TLT
+.......\vbox(12.0+0.0)x341.0, direction TLT
+........\hbox(8.39996+3.60004)x341.0, direction TLT
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+..........\vbox(8.39996+3.60004)x341.0, direction TLT
+...........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+............\localpar
+.............\localinterlinepenalty=0
+.............\localbrokenpenalty=0
+.............\localleftbox=null
+.............\localrightbox=null
+............\hbox(0.0+0.0)x0.0, direction TLT
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(8.39996+3.60004)x341.0, direction TLT
+...........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil, direction TLT
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\localpar
+.............\localinterlinepenalty=0
+.............\localbrokenpenalty=0
+.............\localleftbox=null
+.............\localrightbox=null
+............\hbox(0.0+0.0)x0.0, direction TLT
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x341.0, glue set 383.0fil, direction TLT
+....\vbox(0.0+0.0)x0.0, direction TLT
+.....\hbox(0.0+0.0)x0.0, glue set - 348.0fil, direction TLT
+......\glue 341.0
+......\glue 7.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\pdfdest name{chapter.1} xyz
+....\marks1{\MakeUppercase    []{Chapter\ 1. \ A chapter}}
+....\marks2{\prg_do_nothing: }
+....\mark{{\MakeUppercase    []{Chapter\ 1. \ A chapter}}{}}
+....\write1{\@writefile{lof}{\protect \addvspace {10pt}}}
+....\write1{\@writefile{lot}{\protect \addvspace {10pt}}}
+....\glue(\topskip) 10.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 50.0
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.93857
+....\hbox(12.06143+3.35233)x341.0, glue set 127.65424fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\TU/lmr/bx/n/17.28 C
+.....\TU/lmr/bx/n/17.28 h
+.....\TU/lmr/bx/n/17.28 a
+.....\TU/lmr/bx/n/17.28 p
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/17.28 -
+.....\TU/lmr/bx/n/17.28 t
+.....\TU/lmr/bx/n/17.28 e
+.....\TU/lmr/bx/n/17.28 r
+.....\glue(\spaceskip) 6.48 plus 3.24 minus 2.16
+.....\TU/lmr/bx/n/17.28 1
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 20.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 7.12967
+....\hbox(14.518+4.02356)x341.0, glue set 119.66624fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\TU/lmr/bx/n/20.74 A
+.....\glue(\spaceskip) 7.7775 plus 3.88486 minus 2.5951
+.....\TU/lmr/bx/n/20.74 c
+.....\kern-0.64294 (font)
+.....\TU/lmr/bx/n/20.74 h
+.....\TU/lmr/bx/n/20.74 a
+.....\TU/lmr/bx/n/20.74 p
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/20.74 -
+.....\TU/lmr/bx/n/20.74 t
+.....\TU/lmr/bx/n/20.74 e
+.....\TU/lmr/bx/n/20.74 r
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 40.0
+....\write4{\protect \BOOKMARK [0][-]{chapter.1}{\376\377\000A\000\040\000c\000h\\ETC.}
+....\penalty 10000
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \chapternumberline \ETC.}
+....\penalty 10000
+....\glue -4.02356
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 16.89497
+...\hbox(8.39996+3.60004)x341.0, direction TLT
+....\hbox(8.39996+3.60004)x341.0, direction TLT
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(8.39996+3.60004)x341.0, direction TLT
+......\vbox(8.39996+3.60004)x341.0, direction TLT
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(8.39996+3.60004)x341.0, direction TLT
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil, direction TLT
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(8.39996+3.60004)x341.0, direction TLT
+.........\hbox(8.39996+3.60004)x341.0, glue set 168.0fil, direction TLT
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\localpar
+...........\localinterlinepenalty=0
+...........\localbrokenpenalty=0
+...........\localleftbox=null
+...........\localrightbox=null
+..........\hbox(0.0+0.0)x0.0, direction TLT
+..........\rule(8.39996+3.60004)x0.0
+..........\TU/lmr/m/n/10 1
+..........\rule(8.39996+3.60004)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil, direction TLT
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(8.39996+3.60004)x341.0, direction TLT
+..........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil, direction TLT
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\localpar
+............\localinterlinepenalty=0
+............\localbrokenpenalty=0
+............\localleftbox=null
+............\localrightbox=null
+...........\hbox(0.0+0.0)x0.0, direction TLT
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+\tf@toc=\write...
+(121-makeuppercase.aux)
+Package rerunfilecheck Info: File `121-makeuppercase.out' has not changed.
+(rerunfilecheck)             Checksum: C6AFDE9ABA9BDF25DA18CC2A3A88F7C1;91.

@@ -1,0 +1,476 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+(121-makeuppercase.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+)
+Completed box being shipped out [1]
+\vbox(627.36243+3.60004)x378.0
+.\hbox(0.0+0.0)x0.0
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Cre\ETC.}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil
+..\kern 0.0
+..\kern 22.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 35.99626fil
+...\kern 0.0
+...\kern 37.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.i) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+3.60004)x378.0
+..\glue 22.0
+..\vbox(605.36243+3.60004)x341.0, shifted 37.0
+...\vbox(12.0+0.0)x341.0
+....\glue 0.0 plus 1.0fil
+....\hbox(12.0+0.0)x341.0
+.....\hbox(12.0+0.0)x341.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(12.0+0.0)x341.0
+.......\vbox(12.0+0.0)x341.0
+........\hbox(8.39996+3.60004)x341.0
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+..........\vbox(8.39996+3.60004)x341.0
+...........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+............\hbox(0.0+0.0)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(8.39996+3.60004)x341.0
+...........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\hbox(0.0+0.0)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x341.0, glue set 402.99998fil
+....\vbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0, glue set - 348.0fil
+......\glue 341.0
+......\glue 7.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\special{ps:SDict begin [/Count -0/Dest (chapter.1) cvn/Title (\376\377\000A\0\ETC.}
+....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pd\ETC.}
+....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\special{ps:SDict begin [ {Catalog} <</PageLabels<</Nums[0<</S/r>>2<</S/D>>]>>\ETC.}
+....\write-{}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section*.1) cvn /DEST pdfmark \ETC.}
+....\glue(\topskip) 10.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 50.0
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 10.77005
+....\hbox(14.22995+0.0)x341.0, glue set 249.85684fil
+.....\hbox(0.0+0.0)x0.0
+.....\OT1/cmr/bx/n/20.74 C
+.....\OT1/cmr/bx/n/20.74 o
+.....\OT1/cmr/bx/n/20.74 n
+.....\kern-0.64813
+.....\OT1/cmr/bx/n/20.74 t
+.....\OT1/cmr/bx/n/20.74 e
+.....\OT1/cmr/bx/n/20.74 n
+.....\kern-0.64813
+.....\OT1/cmr/bx/n/20.74 t
+.....\OT1/cmr/bx/n/20.74 s
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\marks1{\MakeUppercase    []{Contents}}
+....\marks2{\MakeUppercase    []{Contents}}
+....\marks3{\MakeUppercase    []{Contents}}
+....\mark{{\MakeUppercase    []{Contents}}{\MakeUppercase    []{Contents}}}
+....\penalty 10000
+....\glue 40.0
+....\glue 10.00002 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.16669
+....\hbox(6.83331+0.0)x341.0, glue set 249.24985fill
+.....\glue(\leftskip) 15.00002
+.....\hbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0
+.....\penalty 10000
+.....\glue -15.00002
+.....\hbox(6.83331+0.0)x76.2501
+......\special{ps:SDict begin H.S end}
+......\penalty 10000
+......\glue 0.0
+......\hbox(6.44444+0.0)x15.00002, glue set 10.0fil
+.......\OT1/cmr/m/n/10 1
+.......\glue 0.0 plus 1.0fil
+......\OT1/cmr/m/n/10 A
+......\glue 3.33333 plus 1.66498 minus 1.11221
+......\OT1/cmr/m/n/10 C
+......\OT1/cmr/m/n/10 H
+......\OT1/cmr/m/n/10 A
+......\OT1/cmr/m/n/10 P
+......\OT1/cmr/m/n/10 T
+......\OT1/cmr/m/n/10 E
+......\OT1/cmr/m/n/10 R
+......\special{ps:SDict begin 12 H.L end}
+......\special{ps:SDict begin [/Subtype /Link/Dest (chapter.1) cvn/H /I/Border [0 0 \ETC.}
+.....\penalty 10000
+.....\leaders 0.0 plus 1.0fill
+......\hbox(1.55556+0.0)x2225.3624
+.......\mathon
+.......\kern 1111.08398
+.......\hbox(1.55556+0.0)x3.19443
+........\OT1/cmr/bx/n/10 .
+.......\kern 1111.08398
+.......\mathoff
+.....\penalty 10000
+.....\hbox(6.44444+0.0)x15.50005, glue set 9.75008fil
+......\glue 0.0 plus 1.0fil
+......\OT1/cmr/bx/n/10 1
+.....\penalty 10000
+.....\glue(\parfillskip) -25.50006
+.....\glue(\rightskip) 25.50006
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 16.89497
+...\hbox(8.39996+3.60004)x341.0
+....\hbox(8.39996+3.60004)x341.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(8.39996+3.60004)x341.0
+......\vbox(8.39996+3.60004)x341.0
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(8.39996+3.60004)x341.0
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(8.39996+3.60004)x341.0
+.........\hbox(8.39996+3.60004)x341.0, glue set 169.11111fil
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\rule(8.39996+3.60004)x0.0
+..........\OT1/cmr/m/n/10 i
+..........\rule(8.39996+3.60004)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.\kern 0.0
+Completed box being shipped out [2]
+\vbox(627.36243+0.0)x432.0
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil
+..\kern 0.0
+..\kern 22.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 89.99626fil
+...\kern 0.0
+...\kern 91.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.ii) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+0.0)x432.0
+..\glue 22.0
+..\vbox(605.36243+0.0)x341.0, shifted 91.0
+...\vbox(12.0+0.0)x341.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x341.0
+.....\hbox(0.0+0.0)x341.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(0.0+0.0)x341.0
+.......\vbox(0.0+0.0)x341.0
+........\hbox(0.0+0.0)x0.0
+.........\hbox(0.0+0.0)x0.0
+..........\vbox(0.0+0.0)x0.0
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(0.0+0.0)x0.0
+.........\glue 0.0 plus 1.0fill
+.........\hbox(0.0+0.0)x0.0
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(0.0+0.0)x0.0
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x0.0, glue set 540.0fil
+....\vbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0, glue set 135.0fil
+......\glue -7.0
+......\glue -128.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\glue(\topskip) 10.0
+....\hbox(0.0+0.0)x0.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 25.29494
+...\hbox(0.0+0.0)x341.0
+....\hbox(0.0+0.0)x341.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(0.0+0.0)x341.0
+......\vbox(0.0+0.0)x341.0
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0
+.........\vbox(0.0+0.0)x0.0
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(0.0+0.0)x0.0
+........\glue 0.0 plus 1.0fill
+........\hbox(0.0+0.0)x0.0
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(0.0+0.0)x0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+Completed box being shipped out [1]
+\vbox(627.36243+3.60004)x378.0
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil
+..\kern 0.0
+..\kern 22.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 35.99626fil
+...\kern 0.0
+...\kern 37.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.1) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+3.60004)x378.0
+..\glue 22.0
+..\vbox(605.36243+3.60004)x341.0, shifted 37.0
+...\vbox(12.0+0.0)x341.0
+....\glue 0.0 plus 1.0fil
+....\hbox(12.0+0.0)x341.0
+.....\hbox(12.0+0.0)x341.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(12.0+0.0)x341.0
+.......\vbox(12.0+0.0)x341.0
+........\hbox(8.39996+3.60004)x341.0
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+..........\vbox(8.39996+3.60004)x341.0
+...........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+............\hbox(0.0+0.0)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(8.39996+3.60004)x341.0
+...........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\hbox(0.0+0.0)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\rule(8.39996+3.60004)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\rule(0.0+0.0)x341.0
+........\glue 0.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x341.0, glue set 383.0fil
+....\vbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0, glue set - 348.0fil
+......\glue 341.0
+......\glue 7.0
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\write-{}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (chapter.1) cvn /DEST pdfmark e\ETC.}
+....\marks1{\MakeUppercase    []{Chapter\ 1. \ A chapter}}
+....\marks2{\prg_do_nothing: }
+....\mark{{\MakeUppercase    []{Chapter\ 1. \ A chapter}}{}}
+....\write1{\@writefile{lof}{\protect \addvspace {10pt}}}
+....\write1{\@writefile{lot}{\protect \addvspace {10pt}}}
+....\glue(\topskip) 10.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 50.0
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 10.00002
+....\hbox(11.99998+3.35999)x341.0, glue set 127.67003fil
+.....\hbox(0.0+0.0)x0.0
+.....\OT1/cmr/bx/n/17.28 C
+.....\OT1/cmr/bx/n/17.28 h
+.....\OT1/cmr/bx/n/17.28 a
+.....\OT1/cmr/bx/n/17.28 p
+.....\OT1/cmr/bx/n/17.28 t
+.....\OT1/cmr/bx/n/17.28 e
+.....\OT1/cmr/bx/n/17.28 r
+.....\glue 6.48 plus 3.23999 minus 2.15999
+.....\OT1/cmr/bx/n/17.28 1
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 20.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 7.23726
+....\hbox(14.40276+4.03276)x341.0, glue set 119.6822fil
+.....\hbox(0.0+0.0)x0.0
+.....\OT1/cmr/bx/n/20.74 A
+.....\glue 7.7775 plus 3.88486 minus 2.5951
+.....\OT1/cmr/bx/n/20.74 c
+.....\kern-0.64813
+.....\OT1/cmr/bx/n/20.74 h
+.....\OT1/cmr/bx/n/20.74 a
+.....\OT1/cmr/bx/n/20.74 p
+.....\OT1/cmr/bx/n/20.74 t
+.....\OT1/cmr/bx/n/20.74 e
+.....\OT1/cmr/bx/n/20.74 r
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 40.0
+....\write4{\protect \BOOKMARK [0][-]{chapter.1}{\376\377\000A\000\040\000c\000h\\ETC.}
+....\penalty 10000
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \chapternumberline \ETC.}
+....\penalty 10000
+....\glue -4.03276
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 16.89497
+...\hbox(8.39996+3.60004)x341.0
+....\hbox(8.39996+3.60004)x341.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+.....\hbox(8.39996+3.60004)x341.0
+......\vbox(8.39996+3.60004)x341.0
+.......\glue -3.60004
+.......\glue 0.0
+.......\rule(0.0+0.0)x341.0
+.......\glue 3.60004
+.......\hbox(8.39996+3.60004)x341.0
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 170.5fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(8.39996+3.60004)x341.0
+.........\hbox(8.39996+3.60004)x341.0, glue set 168.0fil
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\rule(8.39996+3.60004)x0.0
+..........\OT1/cmr/m/n/10 1
+..........\rule(8.39996+3.60004)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(8.39996+3.60004)x0.0, glue set - 341.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(8.39996+3.60004)x341.0
+..........\hbox(8.39996+3.60004)x341.0, glue set 341.0fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\rule(8.39996+3.60004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+\tf@toc=\write...
+(121-makeuppercase.aux)
+Package rerunfilecheck Info: File `121-makeuppercase.out' has not changed.
+(rerunfilecheck)             Checksum: C6AFDE9ABA9BDF25DA18CC2A3A88F7C1;91.

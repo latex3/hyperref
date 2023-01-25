@@ -1,4 +1,4 @@
-2022-22-11 Ulrike Fischer/David Carlisle
+2022-11-13 Ulrike Fischer/David Carlisle
     * don't set the pagesize if \mag is different from 1000, see issue #1138 in latex3.
     * avoid error from old labels if hyperref is loaded, issue #261
     * fixed issue #260

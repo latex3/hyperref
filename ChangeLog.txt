@@ -1,14 +1,18 @@
+2023-02-04 Yukai Chou
+    * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file
+    renaming, issue #269
+
 2022-22-11 Ulrike Fischer/David Carlisle
     * don't set the pagesize if \mag is different from 1000, see issue #1138 in latex3.
     * avoid error from old labels if hyperref is loaded, issue #261
     * fixed issue #260
     * fixed a nopatch command, issue #258
     * Use protected commands in \contentsline to allow the use of \MakeUppercase, issue #121
-    
+
 2022-09-22 Ulrike Fischer/David Carlisle
     * adapt setpagesize option to changes in LaTeX (stockwidth is always defined)
     * Use hooks instead of auxhook package
-    
+
 2022-06-20 Ulrike Fischer/David Carlisle
     *  don't redefine \@secondoffive and \@fifthoffive, issue #238
     *  add interface to access some pdf related values unchanged (needed by hyperxmp).

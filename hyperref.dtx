@@ -1038,6 +1038,7 @@
 %
 %    \cs{MakeUppercase} and \cs{MakeLowercase} do not work by expansion in
 %    legacy code but if the expl3 code is available we can handle them.
+%    If babel is used we can also make use of the language.
 %
 %    \begin{macro}{\MakeUppercaseUnsupportedInPdfStrings}
 %    \begin{macro}{\MakeLowercaseUnsupportedInPdfStrings}
@@ -1047,6 +1048,21 @@
  {
    \def\MakeUppercaseUnsupportedInPdfStrings#1{\use:e {\text_uppercase:n {#1}}}
    \def\MakeLowercaseUnsupportedInPdfStrings#1{\use:e {\text_lowercase:n {#1}}}
+   \AddToHook{package/babel/after}
+     {
+      \def\MakeUppercaseUnsupportedInPdfStrings#1
+         {\use:e 
+           {\exp_args:Ne
+              \text_uppercase:nn{\localeinfo*{tag.bcp47}}{#1}
+           }
+         }
+      \def\MakeLowercaseUnsupportedInPdfStrings#1
+         {\use:e 
+           {\exp_args:Ne
+              \text_lowercase:nn{\localeinfo*{tag.bcp47}}{#1}
+           }
+         }         
+     }
  }
 \ExplSyntaxOff
 %    \end{macrocode}

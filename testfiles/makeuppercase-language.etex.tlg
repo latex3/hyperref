@@ -1,0 +1,106 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Cre\ETC.}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\special{ps:SDict begin H.S end}
+...\special{ps:SDict begin H.R end}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (page.1) cvn /DEST pdfmark end}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 505.49962fil
+....\write-{}
+....\write1{\babel@aux{greek}{}}
+....\special{ps:SDict begin [/Count -0/Dest (subsection.0.1) cvn/Title (\376\377\0\ETC.}
+....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pd\ETC.}
+....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\glue(\topskip) 3.05725
+....\hbox(6.94275+2.49939)x345.0, glue set 315.83679fil
+.....\hbox(0.0+0.0)x15.0
+.....\LGR/cmr/m/n/10 x
+.....\LGR/cmr/m/n/10 x
+.....\LGR/cmr/m/n/10 x
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -300
+....\glue 13.98964 plus 4.3045 minus 0.86089
+....\special{ps:SDict begin H.S end}
+....\special{ps:SDict begin 12 H.A end}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (subsection.0.1) cvn /DEST pdfm\ETC.}
+....\penalty 10000
+....\glue -13.98964 plus -4.3045 minus -0.86089
+....\glue 13.98964 plus 4.3045 minus 0.86089
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 3.28041
+....\hbox(8.2202+0.0)x345.0, glue set 133.49611fil
+.....\hbox(7.73145+0.0)x33.26964
+......\glue 0.0
+......\LGR/cmr/bx/n/12 0
+......\LGR/cmr/bx/n/12 .
+......\LGR/cmr/bx/n/12 1
+......\glue 14.55199
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\glue 4.94324 plus 2.33043 minus 1.55672
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\LGR/cmr/bx/n/12 A
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\003\221\003\221\00\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 6.45676 plus 0.86089
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55713
+...\hbox(6.44287+0.0)x345.0
+....\hbox(6.44287+0.0)x345.0, glue set 170.00061fil
+.....\glue 0.0 plus 1.0fil
+.....\LGR/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(makeuppercase-language.aux)
+Package rerunfilecheck Info: File `makeuppercase-language.out' has not changed.
+(rerunfilecheck)             Checksum: 4C7D49BA2A1A998DB05A3F610C59B0F3;184.

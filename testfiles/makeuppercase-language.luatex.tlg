@@ -1,0 +1,133 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil, direction TLT
+..\kern0.0
+..\kern16.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil, direction TLT
+...\kern0.0
+...\kern62.0
+...\kern-1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0, direction TLT
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 505.47351fil, direction TLT
+....\write-{}
+....\write1{\babel@aux{greek}{}}
+....\pdfdest name{Doc-Start} xyz
+....\glue(\topskip) 5.69
+....\hbox(4.31+0.0)x345.0, glue set 314.16fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x15.0, direction TLT
+.....\TU/lmr/m/n/10 x
+.....\TU/lmr/m/n/10 x
+.....\TU/lmr/m/n/10 x
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -300
+....\glue 14.00749 plus 4.31 minus 0.86198
+....\pdfdest name{subsection.0.1} xyz
+....\penalty 10000
+....\glue -14.00749 plus -4.31 minus -0.86198
+....\glue 14.00749 plus 4.31 minus 0.86198
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.6
+....\hbox(8.4+0.144)x345.0, glue set 148.03206fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(7.872+0.144)x29.26799, direction TLT
+......\glue 0.0
+......\TU/lmr/bx/n/12 0
+......\TU/lmr/bx/n/12 .
+......\TU/lmr/bx/n/12 1
+......\glue 12.0
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\glue(\spaceskip) 4.5 plus 2.24774 minus 1.5015
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\discretionary (penalty 50)
+......< \TU/lmr/bx/n/12 -
+.....\TU/lmr/bx/n/12 Α
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\003\221\003\221\00\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline \ETC.}
+....\penalty 10000
+....\glue 6.465 plus 0.86198
+....\glue -0.144
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.34
+...\hbox(6.66+0.0)x345.0, direction TLT
+....\hbox(6.66+0.0)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern0.0
+(makeuppercase-language.aux
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line ....
+Package rerunfilecheck Info: File `makeuppercase-language.out' has not changed.
+(rerunfilecheck)             Checksum: 4C7D49BA2A1A998DB05A3F610C59B0F3;184.

@@ -1,0 +1,13 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage[greek]{babel}
+
+\usepackage{hyperref}
+
+\begin{document}
+\showoutput
+xxx
+\START
+\subsection{\MakeUppercase{ἀἁἂἃἄἅἆἇ ἈἉἊἋἌἍἎἏ}}
+
+\end{document}

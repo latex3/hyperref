@@ -1,3 +1,6 @@
+2023-02-05 Ulrike Fischer/David Carlisle
+    * if babel is loaded \MakeUppercase respects the locale rules in the bookmarks.
+
 2023-02-04 Yukai Chou
     * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file
     renaming, issue #269

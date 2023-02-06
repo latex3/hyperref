@@ -1,0 +1,15 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{amsmath}
+\makeatletter \def\hyper@nopatch@amsmath@tag{} \makeatother
+\usepackage{hyperref}
+\begin{document}
+\START \showoutput
+\phantomsection
+\makeatletter\show\make@df@tag@@
+text
+\begin{equation*}\label{aaa}
+  a=b\tag{x}
+\end{equation*}
+    
+\end{document}

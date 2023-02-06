@@ -1,0 +1,78 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \make@df@tag@@=macro:
+#1->\gdef \df@tag {\maketag@@@ {#1}\def \@currentlabel {#1}}.
+l. ...\makeatletter\show\make@df@tag@@
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 521.94424fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\pdfdest name{section*.1} xyz
+....\glue(\topskip) 3.84921
+....\hbox(6.15079+0.0)x345.0, glue set 312.49995fil
+.....\hbox(0.0+0.0)x15.0
+.....\OT1/cmr/m/n/10 t
+.....\OT1/cmr/m/n/10 e
+.....\OT1/cmr/m/n/10 x
+.....\OT1/cmr/m/n/10 t
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\abovedisplayshortskip) 0.0 plus 3.0
+....\glue(\baselineskip) 4.5
+....\hbox(7.5+2.5)x183.95538, shifted 161.04462
+.....\hbox(6.94444+0.0)x22.91077, display
+......\OML/cmm/m/it/10 a
+......\glue(\thickmuskip) 2.77771 plus 2.77771
+......\OT1/cmr/m/n/10 =
+......\glue(\thickmuskip) 2.77771 plus 2.77771
+......\OML/cmm/m/it/10 b
+.....\kern147.98901
+.....\hbox(7.5+2.5)x13.0556, display
+......\hbox(7.5+2.5)x13.0556
+.......\OT1/cmr/m/n/10 (
+.......\OT1/cmr/m/n/10 x
+.......\kern 0.0
+.......\OT1/cmr/m/n/10 )
+......\write1{\newlabel{aaa}{{{x}}{\thepage }{}{section*.1}{}}}
+....\penalty 0
+....\glue(\belowdisplayshortskip) 6.0 plus 3.0 minus 3.0
+....\glue -2.5
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(nopatch-amsmath-1.aux)
+Package rerunfilecheck Info: File `nopatch-amsmath-1.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

@@ -12151,20 +12151,6 @@
   \let\make@df@tag@@@\Hy@make@df@tag@@@
 }{}
 %    \end{macrocode}
-% Only play with |\seteqlebal| if we are using pdftex. Other drivers
-% cause problems; requested by Michael Downes (AMS).
-%    \begin{macrocode}
-\@ifpackagewith{hyperref}{pdftex}{%
-   \let\H@seteqlabel\@seteqlabel
-   \def\@seteqlabel#1{%
-     \H@seteqlabel{#1}%
-     \xdef\@currentHref{AMS.\the\Hy@linkcounter}%
-     \Hy@raisedlink{%
-       \hyper@anchorstart{\@currentHref}\hyper@anchorend
-     }%
-   }%
-}{}
-%    \end{macrocode}
 % This code I simply cannot remember what I was trying to achieve.
 % The final result seems to do nothing anyway.
 %\begin{verbatim}

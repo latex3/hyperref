@@ -12126,30 +12126,36 @@
 % up. They'll change all the code again anyway, I expect (SR).
 %
 % Version 6.77p uses a patch by Ross Moore.
+%
+% If |\hyper@nopatch@amsmath@tag| is defined we don't patch but assume
+% that kernel code adds anchors to equations.
 %    \begin{macrocode}
-\@ifpackageloaded{amsmath}{%
-  \def\Hy@make@anchor{%
-    \Hy@MakeCurrentHrefAuto{AMS}%
-    \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
-  }%
-  \def\Hy@make@df@tag@@#1{%
-    \gdef\df@tag{%
-      \maketag@@@{\Hy@make@anchor#1}%
-      \def\@currentlabel{#1}%
-    }%
-  }%
-  \def\Hy@make@df@tag@@@#1{%
-    \gdef\df@tag{%
-      \tagform@{\Hy@make@anchor#1}%
-      \toks@\@xp{\p@equation{#1}}%
-      \edef\@currentlabel{\the\toks@}%
-    }%
-  }%
-  \let\HyOrg@make@df@tag@@\make@df@tag@@
-  \let\HyOrg@make@df@tag@@@\make@df@tag@@@
-  \let\make@df@tag@@\Hy@make@df@tag@@
-  \let\make@df@tag@@@\Hy@make@df@tag@@@
-}{}
+\@ifundefined{hyper@nopatch@amsmath@tag}
+   {%
+    \@ifpackageloaded{amsmath}{%
+      \def\Hy@make@anchor{%
+        \Hy@MakeCurrentHrefAuto{AMS}%
+        \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
+      }%
+      \def\Hy@make@df@tag@@#1{%
+        \gdef\df@tag{%
+          \maketag@@@{\Hy@make@anchor#1}%
+          \def\@currentlabel{#1}%
+        }%
+      }%
+      \def\Hy@make@df@tag@@@#1{%
+        \gdef\df@tag{%
+          \tagform@{\Hy@make@anchor#1}%
+          \toks@\@xp{\p@equation{#1}}%
+          \edef\@currentlabel{\the\toks@}%
+        }%
+      }%
+      \let\HyOrg@make@df@tag@@\make@df@tag@@
+      \let\HyOrg@make@df@tag@@@\make@df@tag@@@
+      \let\make@df@tag@@\Hy@make@df@tag@@
+      \let\make@df@tag@@@\Hy@make@df@tag@@@
+    }{}
+  }{} 
 %    \end{macrocode}
 % This code I simply cannot remember what I was trying to achieve.
 % The final result seems to do nothing anyway.

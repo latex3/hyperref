@@ -2,7 +2,7 @@
     * if babel is loaded casing with \MakeUppercase and \MakeLowercase
       respects the rules of the current locale/language in the bookmarks.
     * removed old amstex patch of \@seteqlabel
-    * 
+    * add \hyper@nopatch@amsmath@tag to allow to suppress an amsmath patch
 
 2023-02-04 Yukai Chou
     * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file

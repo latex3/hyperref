@@ -12100,22 +12100,28 @@
 % we are going to intercept this. Sigh. Do it at the level where
 % new counters are defined.
 %    \begin{macrocode}
-\let\H@definecounter\@definecounter
-\def\@definecounter#1{%
-  \H@definecounter{#1}%
-  \expandafter\gdef\csname theH#1\endcsname{\arabic{#1}}%
-}
+\@ifundefined{hyper@nopatch@counter}
+  {
+   \let\H@definecounter\@definecounter
+   \def\@definecounter#1{%
+     \H@definecounter{#1}%
+     \expandafter\gdef\csname theH#1\endcsname{\arabic{#1}}%
+   }
+  }{} 
 %    \end{macrocode}
 % But what if they have used the optional argument to e.g. |\newtheorem|
 % to determine when the numbering is reset? OK, we'll trap that too.
 %    \begin{macrocode}
-\let\H@newctr\@newctr
-\def\@newctr#1[#2]{%
-  \H@newctr#1[{#2}]%
-  \expandafter\gdef\csname theH#1\endcsname{%
-    \csname the\@ifundefined{theH#2}{}{H}#2\endcsname.\arabic{#1}%
-  }%
-}
+\@ifundefined{hyper@nopatch@counter}
+  {
+    \let\H@newctr\@newctr
+    \def\@newctr#1[#2]{%
+      \H@newctr#1[{#2}]%
+      \expandafter\gdef\csname theH#1\endcsname{%
+        \csname the\@ifundefined{theH#2}{}{H}#2\endcsname.\arabic{#1}%
+      }%
+    }
+   }{} 
 %    \end{macrocode}
 % \section{AMS\LaTeX\ compatibility}\label{ams}
 % Oh, no, they don't use anything as simple as |\refstepcounter|
@@ -12178,15 +12184,18 @@
 %    \cs{theHcounter} is redefined in order to add the
 %    parent counter.
 %    \begin{macrocode}
-\let\HyOrg@addtoreset\@addtoreset
-\def\@addtoreset#1#2{%
-  \HyOrg@addtoreset{#1}{#2}%
-  \expandafter\xdef\csname theH#1\endcsname{%
-    \expandafter\noexpand
-        \csname the\@ifundefined{theH#2}{}H#2\endcsname
-    .\noexpand\the\noexpand\value{#1}%
-  }%
-}
+\@ifundefined{hyper@nopatch@counter}
+  {
+   \let\HyOrg@addtoreset\@addtoreset
+   \def\@addtoreset#1#2{%
+     \HyOrg@addtoreset{#1}{#2}%
+     \expandafter\xdef\csname theH#1\endcsname{%
+       \expandafter\noexpand
+           \csname the\@ifundefined{theH#2}{}H#2\endcsname
+       .\noexpand\the\noexpand\value{#1}%
+     }%
+   }
+  }{} 
 %    \end{macrocode}
 %
 %    \begin{macro}{\numberwithin}
@@ -12208,23 +12217,26 @@
 }%
 %</check>
 %<*packageEnd>
-\@ifpackageloaded{amsmath}{%
-  \renewcommand*{\numberwithin}[3][\arabic]{%
-    \@ifundefined{c@#2}{\@nocounterr{#2}}{%
-      \@ifundefined{c@#3}{\@nocnterr{#3}}{%
-        \HyOrg@addtoreset{#2}{#3}%
-        \@xp\xdef\csname the#2\endcsname{%
-          \@xp\@nx\csname the#3\endcsname .\@nx#1{#2}%
-        }%
-        \@xp\xdef\csname theH#2\endcsname{%
-          \@xp\@nx
-          \csname the\@ifundefined{theH#3}{}H#3\endcsname
-          .\@nx#1{#2}%
-        }%
-      }%
-    }%
-  }%
-}{}
+\@ifundefined{hyper@nopatch@counter}
+  {
+   \@ifpackageloaded{amsmath}{%
+     \renewcommand*{\numberwithin}[3][\arabic]{%
+       \@ifundefined{c@#2}{\@nocounterr{#2}}{%
+         \@ifundefined{c@#3}{\@nocnterr{#3}}{%
+           \HyOrg@addtoreset{#2}{#3}%
+           \@xp\xdef\csname the#2\endcsname{%
+             \@xp\@nx\csname the#3\endcsname .\@nx#1{#2}%
+           }%
+           \@xp\xdef\csname theH#2\endcsname{%
+             \@xp\@nx
+             \csname the\@ifundefined{theH#3}{}H#3\endcsname
+             .\@nx#1{#2}%
+           }%
+         }%
+       }%
+     }%
+   }{}
+  }{} 
 %    \end{macrocode}
 %    \end{macro}
 %

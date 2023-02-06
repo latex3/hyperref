@@ -1,5 +1,8 @@
 2023-02-05 Ulrike Fischer/David Carlisle
-    * if babel is loaded \MakeUppercase respects the locale rules in the bookmarks.
+    * if babel is loaded casing with \MakeUppercase and \MakeLowercase
+      respects the rules of the current locale/language in the bookmarks.
+    * removed old amstex patch of \@seteqlabel
+    * 
 
 2023-02-04 Yukai Chou
     * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file

@@ -11961,56 +11961,58 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\def\addcontentsline#1#2#3{% toc extension, type, tag
-  \begingroup
-    \let\label\@gobble
-    \ifx\@currentHref\@empty
-      \Hy@Warning{%
-        No destination for bookmark of \string\addcontentsline,%
-        \MessageBreak destination is added%
-      }%
-      \phantomsection
-    \fi
-    \expandafter\ifx\csname toclevel@#2\endcsname\relax
-      \begingroup
-        \def\Hy@tempa{#1}%
-        \ifx\Hy@tempa\Hy@bookmarkstype
-          \Hy@WarningNoLine{%
-            bookmark level for unknown #2 defaults to 0%
-          }%
-        \else
-          \Hy@Info{bookmark level for unknown #2 defaults to 0}%
-        \fi
-      \endgroup
-      \expandafter\gdef\csname toclevel@#2\endcsname{0}%
-    \fi
-    \edef\Hy@toclevel{\csname toclevel@#2\endcsname}%
-    \Hy@writebookmark{\csname the#2\endcsname}%
-      {#3}%
-      {\@currentHref}%
-      {\Hy@toclevel}%
-      {#1}%
-    \ifHy@verbose
-      \begingroup
-        \def\Hy@tempa{#3}%
-        \@onelevel@sanitize\Hy@tempa
-        \let\temp@online\on@line
-        \let\on@line\@empty
-        \Hy@Info{%
-          bookmark\temp@online:\MessageBreak
-          thecounter {\csname the#2\endcsname}\MessageBreak
-          text {\Hy@tempa}\MessageBreak
-          reference {\@currentHref}\MessageBreak
-          toclevel {\Hy@toclevel}\MessageBreak
-          type {#1}%
+\@ifundefined{hyper@nopatch@toc}{%
+  \def\addcontentsline#1#2#3{% toc extension, type, tag
+    \begingroup
+      \let\label\@gobble
+      \ifx\@currentHref\@empty
+        \Hy@Warning{%
+          No destination for bookmark of \string\addcontentsline,%
+          \MessageBreak destination is added%
         }%
-      \endgroup
-    \fi
-    \addtocontents{#1}{%
-      \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}\protected@file@percent
-    }%
-  \endgroup
-}
+        \phantomsection
+      \fi
+      \expandafter\ifx\csname toclevel@#2\endcsname\relax
+        \begingroup
+          \def\Hy@tempa{#1}%
+          \ifx\Hy@tempa\Hy@bookmarkstype
+            \Hy@WarningNoLine{%
+              bookmark level for unknown #2 defaults to 0%
+            }%
+          \else
+            \Hy@Info{bookmark level for unknown #2 defaults to 0}%
+          \fi
+        \endgroup
+        \expandafter\gdef\csname toclevel@#2\endcsname{0}%
+      \fi
+      \edef\Hy@toclevel{\csname toclevel@#2\endcsname}%
+      \Hy@writebookmark{\csname the#2\endcsname}%
+        {#3}%
+        {\@currentHref}%
+        {\Hy@toclevel}%
+        {#1}%
+      \ifHy@verbose
+        \begingroup
+          \def\Hy@tempa{#3}%
+          \@onelevel@sanitize\Hy@tempa
+          \let\temp@online\on@line
+          \let\on@line\@empty
+          \Hy@Info{%
+            bookmark\temp@online:\MessageBreak
+            thecounter {\csname the#2\endcsname}\MessageBreak
+            text {\Hy@tempa}\MessageBreak
+            reference {\@currentHref}\MessageBreak
+            toclevel {\Hy@toclevel}\MessageBreak
+            type {#1}%
+          }%
+        \endgroup
+      \fi
+      \addtocontents{#1}{%
+        \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}\protected@file@percent
+      }%
+    \endgroup
+  }
+}{}  
 %    \end{macrocode}
 %    \begin{macro}{\contentsline}
 %    The page number might be empty. In this case the link for the
@@ -12023,46 +12025,48 @@
 \protected\def\Hy@toclinkstart{\hyper@linkstart{link}{\Hy@tocdestname}}
 \protected\def\Hy@toclinkend{\hyper@linkend}
 
-\def\contentsline#1#2#3#4{%
-  \begingroup
-    \Hy@safe@activestrue
-  \edef\x{\endgroup
-    \def\noexpand\Hy@tocdestname{#4}%
-  }\x
-  \ifx\Hy@tocdestname\ltx@empty
-    \csname l@#1\endcsname{#2}{#3}%
-  \else
-    \ifcase\Hy@linktoc % none
+\@ifundefined{hyper@nopatch@toc}{%
+  \def\contentsline#1#2#3#4{%
+    \begingroup
+      \Hy@safe@activestrue
+    \edef\x{\endgroup
+      \def\noexpand\Hy@tocdestname{#4}%
+    }\x
+    \ifx\Hy@tocdestname\ltx@empty
       \csname l@#1\endcsname{#2}{#3}%
-    \or % section
-      \csname l@#1\endcsname{%
-        \Hy@toclinkstart{#2}\Hy@toclinkend
-      }{#3}%
-    \or % page
-      \def\Hy@temp{#3}%
-      \ifx\Hy@temp\ltx@empty
+    \else
+      \ifcase\Hy@linktoc % none
         \csname l@#1\endcsname{#2}{#3}%
-      \else
-        \csname l@#1\endcsname{{#2}}{%
-          \Hy@toclinkstart{#3}\Hy@toclinkend
-        }%
-      \fi
-    \else % all
-      \def\Hy@temp{#3}%
-      \ifx\Hy@temp\ltx@empty
+      \or % section
         \csname l@#1\endcsname{%
           \Hy@toclinkstart{#2}\Hy@toclinkend
-        }{}%
-      \else
-        \csname l@#1\endcsname{%
-          \Hy@toclinkstart{#2}\Hy@toclinkend
-        }{%
-          \Hy@toclinkstart{#3}\Hy@toclinkend
-        }%
+        }{#3}%
+      \or % page
+        \def\Hy@temp{#3}%
+        \ifx\Hy@temp\ltx@empty
+          \csname l@#1\endcsname{#2}{#3}%
+        \else
+          \csname l@#1\endcsname{{#2}}{%
+            \Hy@toclinkstart{#3}\Hy@toclinkend
+          }%
+        \fi
+      \else % all
+        \def\Hy@temp{#3}%
+        \ifx\Hy@temp\ltx@empty
+          \csname l@#1\endcsname{%
+            \Hy@toclinkstart{#2}\Hy@toclinkend
+          }{}%
+        \else
+          \csname l@#1\endcsname{%
+            \Hy@toclinkstart{#2}\Hy@toclinkend
+          }{%
+            \Hy@toclinkstart{#3}\Hy@toclinkend
+          }%
+        \fi
       \fi
     \fi
-  \fi
-}
+  }
+}{}
 %    \end{macrocode}
 %    \end{macro}
 %

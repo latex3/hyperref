@@ -554,6 +554,10 @@ Check the \xpackage{nameref} documentation about a way to suppress these patches
 \item[math environments] hyperref patches \cs{equation}/\cs{endequation}, \cs{eqnarray},    
     \cs{endeqnarray}. This code can be suppressed by 
     defining \cs{hyper@nopatch@mathenv}. 
+    
+\item[table of contents] hyperref redefines \cs{contentsline} to be able to add links to
+toc entries. It redefines \cs{addcontentsline} to create the bookmarks and pass the 
+destination names to the toc entries. This code can be suppressed by defining \cs{hyper@nopatch@toc}.     
 \end{description}
 
 \section{Package options}

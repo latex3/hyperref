@@ -537,19 +537,23 @@ Check the \xpackage{nameref} documentation about a way to suppress these patches
 \item \emph{All} those redefinitions can be suppressed by defining \cs{hyper@nopatch@footnote}. Be aware that this can suppress links but also make unwanted links appear.
 \end{itemize}
 
-\item[amsmath tags] hyperref defines two internal commands of amsmath 
+\item[amsmath tags] hyperref redefines two internal commands of amsmath 
     related the |\tag| command to add an anchor. This code can be 
     suppressed by defining \cs{hyper@nopatch@amsmath@tag}. (This normally 
     makes no sense in packages but will probably be needed when math 
     environments are changed to allow tagging.) 
    
 \item[counters] hyperref patches the kernel command \cs{@definecounter}, 
-    \cs{@newctr}, \cs{@addtoreset} and \cs{numberwithin} from amsmath to 
-    ensure that for every counter the correct \cs{theHcounter} 
+    \cs{@newctr}, \cs{@addtoreset} and the amsmath command \cs{numberwithin} 
+    to ensure that for every counter the correct \cs{theHcounter} 
     representation is created or reset. This code can be suppressed by 
     defining \cs{hyper@nopatch@counter}. (This normally makes no sense in 
     packages but will probably be needed when kernel commands are changed 
     to allow tagging.)  
+    
+\item[math environments] hyperref patches \cs{equation}/\cs{endequation}, \cs{eqnarray},    
+    \cs{endeqnarray}. This code can be suppressed by 
+    defining \cs{hyper@nopatch@mathenv}. 
 \end{description}
 
 \section{Package options}

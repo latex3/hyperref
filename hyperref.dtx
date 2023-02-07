@@ -10799,6 +10799,8 @@
 % The exception is that we move the equation incrementation inside
 % the math environment to avoid specials outside and a wrong vertical
 % spacing of equation environments.
+% This and more math related patches can be suppressed with 
+% |\hyper@nopatch@mathenv|
 %    \begin{macrocode}
 \let\new@refstepcounter\refstepcounter
 \let\H@equation\equation
@@ -10806,48 +10808,50 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\@ifpackageloaded{amsmath}{%
-  \long\def\Hy@temp{%
-    \incr@eqnum
-    \mathdisplay@push
-    \st@rredfalse \global\@eqnswtrue
-    \mathdisplay{equation}%
-  }%
-  \ifx\Hy@temp\equation
-    \expandafter\ifx\csname if@fleqn\expandafter\endcsname
-                    \csname iftrue\endcsname
-    \else
-      \long\def\equation{%
-        \mathdisplay@push
-        \st@rredfalse \global\@eqnswtrue
-        \mathdisplay{equation}%
-        \incr@eqnum
-      }%
+\@ifundefined{hyper@nopatch@mathenv}{%
+  \@ifpackageloaded{amsmath}{%
+    \long\def\Hy@temp{%
+      \incr@eqnum
+      \mathdisplay@push
+      \st@rredfalse \global\@eqnswtrue
+      \mathdisplay{equation}%
+    }%
+    \ifx\Hy@temp\equation
+      \expandafter\ifx\csname if@fleqn\expandafter\endcsname
+                      \csname iftrue\endcsname
+      \else
+        \long\def\equation{%
+          \mathdisplay@push
+          \st@rredfalse \global\@eqnswtrue
+          \mathdisplay{equation}%
+          \incr@eqnum
+        }%
+      \fi
     \fi
-  \fi
-}{%
-  \def\equation{%
-    \let\refstepcounter\H@refstepcounter
-    \H@equation
-    \hyper@makecurrent{equation}%
+  }{%
+    \def\equation{%
+      \let\refstepcounter\H@refstepcounter
+      \H@equation
+      \hyper@makecurrent{equation}%
 %    \end{macrocode}
 %    \cs{mathopen} is needed in case the equation starts with
 %    an unary minus, for example.
 %    \begin{macrocode}
-    \mathopen{%
-      \Hy@raisedlink{\hyper@anchorstart{\@currentHref}}%
+      \mathopen{%
+        \Hy@raisedlink{\hyper@anchorstart{\@currentHref}}%
+      }%
+      \let\refstepcounter\new@refstepcounter
     }%
-    \let\refstepcounter\new@refstepcounter
-  }%
-  \def\endequation{%
-    \ifx\Hy@raisedlink\ltx@empty
-      \hyper@anchorend
-    \else
-      \mathclose{\Hy@raisedlink{\hyper@anchorend}}%
-    \fi
-    \H@endequation
-  }%
-}
+    \def\endequation{%
+      \ifx\Hy@raisedlink\ltx@empty
+        \hyper@anchorend
+      \else
+        \mathclose{\Hy@raisedlink{\hyper@anchorend}}%
+      \fi
+      \H@endequation
+    }%
+  }
+}{}  
 %    \end{macrocode}
 % My goodness, why can't \LaTeX{} be consistent? Why is |\eqnarray|
 % set up differently from other objects?
@@ -10861,26 +10865,28 @@
 \@eqnstarfalse
 \let\H@eqnarray\eqnarray
 \let\H@endeqnarray\endeqnarray
-\def\eqnarray{%
-  \let\Hy@reserved@a\relax
-  \def\@currentHref{}%
-  \H@eqnarray
-  \if@eqnstar
-  \else
-    \ifx\\\@currentHref\\%
+\@ifundefined{hyper@nopatch@mathenv}{%
+  \def\eqnarray{%
+    \let\Hy@reserved@a\relax
+    \def\@currentHref{}%
+    \H@eqnarray
+    \if@eqnstar
     \else
-      \hyper@makecurrent{equation}%
-      \mathopen{%
-        \Hy@raisedlink{%
-          \hyper@anchorstart{\@currentHref}\hyper@anchorend
+      \ifx\\\@currentHref\\%
+      \else
+        \hyper@makecurrent{equation}%
+        \mathopen{%
+          \Hy@raisedlink{%
+            \hyper@anchorstart{\@currentHref}\hyper@anchorend
+          }%
         }%
-      }%
+      \fi
     \fi
-  \fi
-}
-\def\endeqnarray{%
-  \H@endeqnarray
-}
+  }
+  \def\endeqnarray{%
+    \H@endeqnarray
+  }
+}{}  
 %    \end{macrocode}
 % This is quite heavy-handed, but it works for now. If its an |eqnarray*|
 % we need to disable the hyperref actions. There may well be a cleaner
@@ -10936,9 +10942,7 @@
 %
 % Support for amsmath's \texttt{subequations}:
 %    \begin{macrocode}
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname subequations\endcsname\relax
-\else
+\ifcsname subequations\endcsname
   \let\HyOrg@subequations\subequations
   \def\subequations{%
     \stepcounter{equation}%

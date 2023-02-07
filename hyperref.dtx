@@ -10423,13 +10423,6 @@
 %    \begin{macro}{\hyper@refstepcounter}
 %    \begin{macrocode}
 \def\hyper@refstepcounter#1{%
-  \edef\This@name{#1}%
-  \ifx\This@name\name@of@eq
-    \@ifundefined{theHequation}{%
-      \make@stripped@name{\theequation}%
-      \let\theHequation\newname
-    }{}%
-  \fi
   \HyCnt@ProvideTheHCounter{#1}%
   \hyper@makecurrent{#1}%
   \ifmeasuring@
@@ -10836,10 +10829,6 @@
   \def\equation{%
     \let\refstepcounter\H@refstepcounter
     \H@equation
-    \@ifundefined{theHequation}{%
-      \make@stripped@name{\theequation}%
-      \let\theHequation\newname
-    }{}%
     \hyper@makecurrent{equation}%
 %    \end{macrocode}
 %    \cs{mathopen} is needed in case the equation starts with
@@ -10880,10 +10869,6 @@
   \else
     \ifx\\\@currentHref\\%
     \else
-      \@ifundefined{theHequation}{%
-        \make@stripped@name{\theequation}%
-        \let\theHequation\newname
-      }{}%
       \hyper@makecurrent{equation}%
       \mathopen{%
         \Hy@raisedlink{%
@@ -10917,10 +10902,6 @@
   \def\subeqnarray{%
     \let\Hy@reserved@a\relax
     \H@subeqnarray
-    \@ifundefined{theHequation}{%
-      \make@stripped@name{\theequation}%
-      \let\theHequation\newname
-    }{}%
     \hyper@makecurrent{equation}%
     \hyper@anchorstart{\@currentHref}{}\hyper@anchorend
   }%
@@ -10961,9 +10942,7 @@
   \let\HyOrg@subequations\subequations
   \def\subequations{%
     \stepcounter{equation}%
-    \protected@edef\theHparentequation{%
-      \@ifundefined{theHequation}\theequation\theHequation
-    }%
+    \protected@edef\theHparentequation{\theHequation}%
     \addtocounter{equation}{-1}%
     \HyOrg@subequations
     \def\theHequation{\theHparentequation\alph{equation}}%

@@ -10893,7 +10893,7 @@
 % way to trap this. Bill Moss found this.
 %    \begin{macrocode}
 \@namedef{eqnarray*}{%
-  \def\@eqncr{\nonumber\@seqncr}\@eqnstartrue\eqnarray
+  \protected\def\@eqncr{\nonumber\@seqncr}\@eqnstartrue\eqnarray
 }
 \@namedef{endeqnarray*}{%
   \nonumber\endeqnarray\@eqnstarfalse

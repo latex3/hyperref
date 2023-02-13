@@ -1,0 +1,23 @@
+% from https://github.com/latex3/hyperref/issues/48
+\documentclass{article}
+\input{regression-test}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+xxx
+\showoutput\START
+\autoref{thm:1}.
+\autoref{thm:2},
+\autoref{item:1}.
+\clearpage
+\begin{theorem}\label{thm:1}
+  This is a test for theorem.
+\end{theorem}
+\clearpage
+\begin{theorem}\label{thm:2}
+  \begin{enumerate}
+    \item\label{item:1} Item 1
+    \item\label{item:2} Item 2
+  \end{enumerate}
+\end{theorem}
+\end{document}

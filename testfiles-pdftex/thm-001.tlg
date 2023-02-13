@@ -1,0 +1,220 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 499.9466fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\glue(\topskip) 3.05556
+....\hbox(6.94444+0.0)x345.0, glue set 269.30545fil
+.....\hbox(0.0+0.0)x15.0
+.....\OT1/cmr/m/n/10 C
+.....\OT1/cmr/m/n/10 o
+.....\OT1/cmr/m/n/10 n
+.....\OT1/cmr/m/n/10 s
+.....\OT1/cmr/m/n/10 i
+.....\OT1/cmr/m/n/10 d
+.....\OT1/cmr/m/n/10 e
+.....\OT1/cmr/m/n/10 r
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 t
+.....\OT1/cmr/m/n/10 h
+.....\OT1/cmr/m/n/10 i
+.....\OT1/cmr/m/n/10 s
+.....\OT1/cmr/m/n/10 :
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\abovedisplayshortskip) 0.0 plus 3.0
+....\glue(\baselineskip) 5.05556
+....\hbox(6.94444+0.0)x22.91077, shifted 161.04462, display
+.....\OML/cmm/m/it/10 a
+.....\glue(\thickmuskip) 2.77771 plus 2.77771
+.....\OT1/cmr/m/n/10 =
+.....\glue(\thickmuskip) 2.77771 plus 2.77771
+.....\OML/cmm/m/it/10 b
+....\penalty 0
+....\glue(\belowdisplayshortskip) 6.0 plus 3.0 minus 3.0
+....\glue -6.0 plus -3.0 minus -3.0
+....\penalty -51
+....\glue 6.0 plus 3.0 minus 3.0
+....\glue -6.0 plus -3.0 minus -3.0
+....\glue 8.0 plus 3.0 minus 4.0
+....\write1{\newlabel{blub}{{1}{\thepage }{}{rk.1}{}}}
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.05556
+....\hbox(6.94444+1.94444)x345.0, glue set 48.27705fil
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -12.0
+.......\pdfdest name{rk.1} xyz
+.......\penalty 10000
+.....\hbox(6.94444+0.0)x54.45807
+......\glue 0.0
+......\glue 0.0
+......\glue -5.0
+......\hbox(6.94444+0.0)x54.45807
+.......\glue 5.0
+.......\OT1/cmr/bx/n/10 R
+.......\OT1/cmr/bx/n/10 e
+.......\OT1/cmr/bx/n/10 m
+.......\OT1/cmr/bx/n/10 a
+.......\OT1/cmr/bx/n/10 r
+.......\OT1/cmr/bx/n/10 k
+.......\glue 3.83331 plus 1.91666 minus 1.27777
+.......\OT1/cmr/bx/n/10 1
+......\glue 5.0
+.....\penalty 0
+.....\OT1/cmr/m/it/10 T
+.....\kern-0.76666
+.....\OT1/cmr/m/it/10 o
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 o
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 m
+.....\OT1/cmr/m/it/10 u
+.....\OT1/cmr/m/it/10 c
+.....\OT1/cmr/m/it/10 h
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 s
+.....\OT1/cmr/m/it/10 p
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 a
+.....\OT1/cmr/m/it/10 c
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 e
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 a
+.....\OT1/cmr/m/it/10 b
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 o
+.....\OT1/cmr/m/it/10 v
+.....\OT1/cmr/m/it/10 e
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 i
+.....\OT1/cmr/m/it/10 f
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 h
+.....\OT1/cmr/m/it/10 y
+.....\OT1/cmr/m/it/10 p
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 e
+.....\OT1/cmr/m/it/10 r
+.....\OT1/cmr/m/it/10 r
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 e
+.....\OT1/cmr/m/it/10 f
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 l
+.....\OT1/cmr/m/it/10 i
+.....\OT1/cmr/m/it/10 n
+.....\OT1/cmr/m/it/10 e
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 i
+.....\OT1/cmr/m/it/10 s
+.....\glue 3.57774 plus 1.53333 minus 1.0222
+.....\OT1/cmr/m/it/10 u
+.....\OT1/cmr/m/it/10 n
+.....\OT1/cmr/m/it/10 c
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 o
+.....\OT1/cmr/m/it/10 m
+.....\OT1/cmr/m/it/10 m
+.....\OT1/cmr/m/it/10 e
+.....\OT1/cmr/m/it/10 n
+.....\OT1/cmr/m/it/10 t
+.....\OT1/cmr/m/it/10 e
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 d
+.....\OT1/cmr/m/it/10 ?
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -51
+....\glue 8.0 plus 2.0 minus 4.0
+....\glue -1.94444
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+Completed box being shipped out [2]
+\vbox(633.0+0.0)x407.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.2} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 539.94232fil
+....\glue(\topskip) 3.55556
+....\hbox(6.44444+0.0)x345.0, glue set 324.99998fil
+.....\hbox(0.0+0.0)x15.0
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{rk.1}
+.....\OT1/cmr/m/n/10 1
+.....\pdfendlink
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 2
+.....\glue 0.0 plus 1.0fil
+(thm-001.aux)
+Package rerunfilecheck Info: File `thm-001.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

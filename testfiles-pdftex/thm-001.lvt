@@ -1,0 +1,19 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{hyperref}
+
+\newtheorem{rk}{Remark}
+\begin{document}\showoutput
+\START
+Consider this:
+\[
+a=b
+\] 
+\begin{rk}\label{blub}
+Too much space above if hyperref line is uncommented?
+\end{rk}
+
+\newpage
+\ref{blub}
+
+\end{document}

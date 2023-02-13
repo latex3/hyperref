@@ -610,6 +610,7 @@
 \RequirePackage{letltxmacro}[2008/06/13]
 \RequirePackage{auxhook}[2009/12/14]
 \RequirePackage{nameref}[2012/07/28]
+\RequirePackage{etoolbox}
 \def\Hy@Error{\@PackageError{hyperref}}
 \def\Hy@Warning{\@PackageWarning{hyperref}}
 \def\Hy@WarningNoLine{\@PackageWarningNoLine{hyperref}}
@@ -10955,156 +10956,31 @@
 \fi
 %    \end{macrocode}
 %
-% Support for package \texttt{amsthm} (Daniel M\"ullner):
-% also \texttt{cleveref}.
+% Support for theorems. We move the target into the para hook to 
+% avoid spacing problem. The patch will not apply to 
+% \texttt{cleveref} but hopefully it does the right thing anyway.
+% \cs{@currentHref} is updated directly for labels set before 
+% the actual start of the paragraph. The target can be behind
+% a target created from a following list, so we restore \cs{@currentHref}
+% just in case
+% 
+% 
 %    \begin{macrocode}
-\Hy@AtBeginDocument{%
-\@ifpackageloaded{cleveref}{%
-\let\Hy@savedthm\@thm
-\def\@thm{\ifhmode\unskip\fi\Hy@savedthm}%
-}{%
-\@ifpackageloaded{amsthm}{%
-%    \end{macrocode}
-% Class amsbook uses a different definition of \cs{@thm},
-% where two lines are added (thanks to Dan Luecking for
-% his analysis):
-%\begin{quote}
-%\begin{verbatim}
-%\let\thm@indent\indent % indent
-%\thm@headfont{\scshape}% heading font small caps
-%\end{verbatim}
-%\end{quote}
-%    \begin{macrocode}
-  \def\Hy@temp#1#2#3{%
-    \ifhmode\unskip\unskip\par\fi
-    \normalfont
-    \trivlist
-    \let\thmheadnl\relax
-    \let\thm@swap\@gobble
-    \let\thm@indent\indent % indent
-    \thm@headfont{\scshape}% heading font small caps
-    \thm@notefont{\fontseries\mddefault\upshape}%
-    \thm@headpunct{.}% add period after heading
-    \thm@headsep 5\p@ plus\p@ minus\p@\relax
-    \thm@space@setup
-    #1% style overrides
-    \@topsep \thm@preskip               % used by thm head
-    \@topsepadd \thm@postskip           % used by \@endparenv
-    \def\@tempa{#2}\ifx\@empty\@tempa
-      \def\@tempa{\@oparg{\@begintheorem{#3}{}}[]}%
-    \else
-      \refstepcounter{#2}%
-      \def\@tempa{%
-        \@oparg{\@begintheorem{#3}{\csname the#2\endcsname}}[]%
-      }%
-    \fi
-    \@tempa
-  }%
-  \ifx\Hy@temp\@thm
-    \def\@thm#1#2#3{%
-      \ifhmode
-        \unskip\unskip\par
-      \fi
-      \normalfont
-      \trivlist
-      \let\thmheadnl\relax
-      \let\thm@swap\@gobble
-      \let\thm@indent\indent % indent
-      \thm@headfont{\scshape}% heading font small caps
-      \thm@notefont{\fontseries\mddefault\upshape}%
-      \thm@headpunct{.}% add period after heading
-      \thm@headsep 5\p@ plus\p@ minus\p@\relax
-      \thm@space@setup
-      #1% style overrides
-      \@topsep \thm@preskip               % used by thm head
-      \@topsepadd \thm@postskip           % used by \@endparenv
-      \def\dth@counter{#2}%
-      \ifx\@empty\dth@counter
-        \def\@tempa{%
-          \@oparg{\@begintheorem{#3}{}}[]%
-        }%
-      \else
-        \H@refstepcounter{#2}%
-        \hyper@makecurrent{#2}%
-        \let\Hy@dth@currentHref\@currentHref
-        \def\@tempa{%
-          \@oparg{\@begintheorem{#3}{\csname the#2\endcsname}}[]%
-        }%
-      \fi
-      \@tempa
-    }%
-  \else
-    \def\@thm#1#2#3{%
-      \ifhmode
-        \unskip\unskip\par
-      \fi
-      \normalfont
-      \trivlist
-      \let\thmheadnl\relax
-      \let\thm@swap\@gobble
-      \thm@notefont{\fontseries\mddefault\upshape}%
-      \thm@headpunct{.}% add period after heading
-      \thm@headsep 5\p@ plus\p@ minus\p@\relax
-      \thm@space@setup
-      #1% style overrides
-      \@topsep \thm@preskip               % used by thm head
-      \@topsepadd \thm@postskip           % used by \@endparenv
-      \def\dth@counter{#2}%
-      \ifx\@empty\dth@counter
-        \def\@tempa{%
-          \@oparg{\@begintheorem{#3}{}}[]%
-        }%
-      \else
-        \H@refstepcounter{#2}%
-        \hyper@makecurrent{#2}%
-        \let\Hy@dth@currentHref\@currentHref
-        \def\@tempa{%
-          \@oparg{\@begintheorem{#3}{\csname the#2\endcsname}}[]%
-        }%
-      \fi
-      \@tempa
-    }%
-  \fi
-  \dth@everypar={%
-    \@minipagefalse
-    \global\@newlistfalse
-    \@noparitemfalse
-    \if@inlabel
-      \global\@inlabelfalse
-      \begingroup
-        \setbox\z@\lastbox
-        \ifvoid\z@
-          \kern-\itemindent
-        \fi
-      \endgroup
-      \ifx\@empty\dth@counter
-      \else
-        \Hy@raisedlink{%
-          \hyper@anchorstart{%
-            \ltx@ifundefined{Hy@dth@currentHref}%
-            \@currentHref\Hy@dth@currentHref
-          }\hyper@anchorend
-        }%
-      \fi
-      \unhbox\@labels
-    \fi
-    \if@nobreak
-      \@nobreakfalse \clubpenalty\@M
-    \else
-      \clubpenalty\@clubpenalty \everypar{}%
-    \fi
-  }%
-}%
-%    \end{macrocode}
-% non \texttt{amsthm} case, remove final space on line before a theorem
-% for githib issue 11.
-%    \begin{macrocode}
-{%
-\let\Hy@savedthm\@thm
-\def\@thm{\ifhmode\unskip\fi\Hy@savedthm}%
-}%
-}%
-}
+\newcommand\Hy@theorem@refstepcounter[1]
+  {%
+   \H@refstepcounter{#1}%
+   \hyper@makecurrent{#1}%
+   \global\let\Hy@dth@currentHref\@currentHref
+   \AddToHookNext{para/begin}
+     {\let\Hy@tempa\@currentHref
+      \MakeLinkTarget*{\Hy@dth@currentHref}%
+      \global\let\@currentHref\Hy@tempa
+     }%
+  } 
+\AtBeginDocument{%  
+\ifpatchable\@thm{\refstepcounter}
+  {\patchcmd\@thm{\refstepcounter}{\Hy@theorem@refstepcounter}{}{}}
+  {}}
 %    \end{macrocode}
 %
 % \section{Footnotes}\label{footnotes}

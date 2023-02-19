@@ -1,5 +1,11 @@
-2023-02-05 Ulrike Fischer/David Carlisle
-    * if babel is loaded casing with \MakeUppercase and \MakeLowercase
+XXXX-XX-XX Ulrike Fischer/David Carlisle
+    * expand key once, issue #275
+    * added italian to backref, PR # 274
+    * added swedish to autoref names, PR #266   
+
+2023-02-05 Ulrike Fischer/David Carlisle 
+    * if babel is loaded casing with 
+    \MakeUppercase and \MakeLowercase 
       respects the rules of the current locale/language in the bookmarks.
     * removed old amstex patch of \@seteqlabel
     * added test for \hyper@nopatch@amsmath@tag to allow to suppress an amsmath patch

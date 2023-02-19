@@ -6390,14 +6390,14 @@
           \HyInfo@AddonList
           \HyInfo@do{\HyInfo@Key}%
         }%
-        \kv@parse@normalized{%
+        \expandafter\kv@parse@normalized\expandafter{%
           \HyInfo@Key={#2}%
         }{%
           \kv@processor@default{pdfinfo}%
         }%
       \fi
     \else
-      \kv@parse@normalized{%
+      \expandafter\kv@parse@normalized\expandafter{%
         \HyInfo@Key={#2}%
       }{%
         \kv@processor@default{pdfinfo}%

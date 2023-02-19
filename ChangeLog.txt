@@ -1,3 +1,6 @@
+2023-02-19 Yukai Chou
+    * remove dependency on etexcmds package
+
 2023-02-05 Ulrike Fischer/David Carlisle
     * if babel is loaded casing with \MakeUppercase and \MakeLowercase
       respects the rules of the current locale/language in the bookmarks.

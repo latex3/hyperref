@@ -1,4 +1,7 @@
-XXXX-XX-XX Ulrike Fischer/David Carlisle
+2023-02-19 Yukai Chou
+    * remove dependency on etexcmds package
+
+2023-02-19 Ulrike Fischer/David Carlisle
     * expand key once, issue #275
     * added italian to backref, PR # 274
     * added swedish to autoref names, PR #266   

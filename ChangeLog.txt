@@ -1,8 +1,14 @@
 2023-02-19 Yukai Chou
     * remove dependency on etexcmds package
 
-2023-02-05 Ulrike Fischer/David Carlisle
-    * if babel is loaded casing with \MakeUppercase and \MakeLowercase
+2023-02-19 Ulrike Fischer/David Carlisle
+    * expand key once, issue #275
+    * added italian to backref, PR # 274
+    * added swedish to autoref names, PR #266   
+
+2023-02-05 Ulrike Fischer/David Carlisle 
+    * if babel is loaded casing with 
+    \MakeUppercase and \MakeLowercase 
       respects the rules of the current locale/language in the bookmarks.
     * removed old amstex patch of \@seteqlabel
     * added test for \hyper@nopatch@amsmath@tag to allow to suppress an amsmath patch
@@ -14,12 +20,11 @@
     * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file
     renaming, issue #269
 
-2022-22-11 Ulrike Fischer/David Carlisle
-    * don't set the pagesize if \mag is different from 1000, see issue #1138 in latex3.
-    * avoid error from old labels if hyperref is loaded, issue #261
-    * fixed issue #260
-    * fixed a nopatch command, issue #258
-    * Use protected commands in \contentsline to allow the use of \MakeUppercase, issue #121
+2022-11-13 Ulrike Fischer/David Carlisle * don't set the pagesize if \mag is 
+    different from 1000, see issue #1138 in latex3. * avoid error from old 
+    labels if hyperref is loaded, issue #261 * fixed issue #260 * fixed a 
+    nopatch command, issue #258 * Use protected commands in \contentsline to 
+    allow the use of \MakeUppercase, issue #121 
 
 2022-09-22 Ulrike Fischer/David Carlisle
     * adapt setpagesize option to changes in LaTeX (stockwidth is always defined)

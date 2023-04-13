@@ -52,7 +52,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2023-02-07 v7.00v %
+%<!none&!packageEnd>  [2023-04-07 v7.00w %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -5116,6 +5116,21 @@
    A current html.sty will do all necessary (re)definitions%
   }%
 }
+\DeclareVoidOption{hitex}{%
+  \ifhint
+   \IfFileExists{hhitex.def}
+     {\def\Hy@driver{hhitex}}%
+     {\Hy@Warning{%
+      Missing driver file `hhitex.def',\MessageBreak
+      ignoring hitex driver%
+     }}% 
+  \else
+    \Hy@Error{%
+      Wrong driver option `hitex',\MessageBreak
+      because HiTeX is not detected%
+    }\@ehc
+  \fi
+}
 %    \end{macrocode}
 % No more special treatment for ps2pdf. Let it sink or swim.
 %    \begin{macrocode}
@@ -7051,6 +7066,21 @@
   \fi
   \ifx\Hy@driver\@empty
   \else
+   \def\Hy@temp{hhitex}%
+   \ifhint    
+     \ifx\Hy@driver\Hy@temp
+     \else
+        \Hy@WarningNoLine{%
+          Wrong driver `\Hy@driver.def';\MessageBreak
+          hitex is running.\MessageBreak
+          Forcing driver `\Hy@temp.def'%
+        }%
+        \let\Hy@driver\Hy@temp
+     \fi        
+    \fi 
+  \fi    
+  \ifx\Hy@driver\@empty
+  \else
     \def\Hy@temp{hvtexhtm}%
     \ifnum\ifvtex\OpMode\else\m@ne\fi=10 %
       \ifx\Hy@driver\Hy@temp
@@ -7103,31 +7133,35 @@
               \endinput
             }%
           \else
-            \ifnum\ifvtex\OpMode\else\m@ne\fi=\@ne
-              \def\Hy@driver{hvtex}%
+            \ifhint
+              \def\Hy@driver{hhitex}
             \else
-              \ifnum\ifvtex\OpMode\else\m@ne\fi=\tw@
+              \ifnum\ifvtex\OpMode\else\m@ne\fi=\@ne
                 \def\Hy@driver{hvtex}%
               \else
-                \ifx\HyOpt@DriverFallback\ltx@empty
-                  \let\Hy@driver\Hy@defaultdriver
-                  \def\HyOpt@DriverType{ (default)}%
+                \ifnum\ifvtex\OpMode\else\m@ne\fi=\tw@
+                  \def\Hy@driver{hvtex}%
                 \else
-                  \begingroup
-                    \toks@\expandafter{\HyOpt@DriverFallback}%
-                    \edef\x{\endgroup
-                      \noexpand\kvsetkeys{Hyp}{\the\toks@}%
-                    }%
-                  \x
-                  \ifx\Hy@driver\ltx@empty
+                  \ifx\HyOpt@DriverFallback\ltx@empty
                     \let\Hy@driver\Hy@defaultdriver
                     \def\HyOpt@DriverType{ (default)}%
                   \else
-                    \def\HyOpt@DriverType{ (fallback)}%
+                    \begingroup
+                      \toks@\expandafter{\HyOpt@DriverFallback}%
+                      \edef\x{\endgroup
+                        \noexpand\kvsetkeys{Hyp}{\the\toks@}%
+                      }%
+                    \x
+                    \ifx\Hy@driver\ltx@empty
+                      \let\Hy@driver\Hy@defaultdriver
+                      \def\HyOpt@DriverType{ (default)}%
+                    \else
+                      \def\HyOpt@DriverType{ (fallback)}%
+                    \fi
                   \fi
                 \fi
               \fi
-            \fi
+            \fi  
           \fi
         \fi
       \fi

@@ -1,3 +1,6 @@
+2023-04-19 Ulrike Fischer
+    * support hitex engine
+
 2023-02-19 Yukai Chou
     * remove dependency on etexcmds package
 

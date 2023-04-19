@@ -1,3 +1,5 @@
+% This tests gives wrong link border in links going over more than one line with luatex
+% see bug report at https://mailman.ntg.nl/pipermail/dev-luatex/2023-April/thread.html
 \input{regression-test}
 \documentclass[11pt]{book}
 \makeatletter

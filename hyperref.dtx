@@ -52,7 +52,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2023-02-07 v7.00v %
+%<!none&!packageEnd>  [2023-04-07 v7.00w %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -3124,16 +3124,6 @@
 %
 % \subsubsection{Protecting spaces}
 %
-%    \begin{macrocode}
-\RequirePackage{etexcmds}[2007/09/09]
-\ifetex@unexpanded
-  \expandafter\@secondoftwo
-\else
-  \expandafter\@firstoftwo
-\fi
-{%
-%    \end{macrocode}
-%
 %    \begin{macro}{\HyPsd@ProtectSpaces}
 %    \cs{HyPsd@ProtectSpaces} calls with the expanded
 %    string \cs{HyPsd@@ProtectSpacesFi}. The expanded string is
@@ -3142,27 +3132,30 @@
 %    at the beginning or end of the string and grouping characters
 %    are not removed by the call of \cs{HyPsd@@ProtectSpacesFi}.
 %    \begin{macrocode}
-  \def\HyPsd@ProtectSpaces#1{%
+\let\HyPsd@fi\fi
+\def\HyPsd@ProtectSpaces#1{%
+  \xdef#1{%
     \iftrue
       \expandafter\HyPsd@@ProtectSpacesFi
-        \expandafter|\expandafter\@empty#1| \HyPsd@End#1%
-    \fi
+        \expandafter|\expandafter\@empty#1| %
+    \HyPsd@fi
   }%
+  \expandafter\HyPsd@RemoveMask#1\HyPsd@End#1%
+}%
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\HyPsd@@ProtectSpacesFi}
 %    The string can contain command tokens, so it is better
 %    to use an \cs{def} instead of an \cs{edef}.
 %    \begin{macrocode}
-  \def\HyPsd@@ProtectSpacesFi#1 #2\HyPsd@End#3\fi{%
-    \fi
-    \ifx\scrollmode#2\scrollmode
-      \HyPsd@RemoveMask#1\HyPsd@End#3%
-    \else
-      \gdef#3{#1\HyPsd@UnexpandableSpace#2}%
-      \expandafter\HyPsd@@ProtectSpacesFi#3\HyPsd@End#3%
-    \fi
-  }%
+\def\HyPsd@@ProtectSpacesFi#1 #2\HyPsd@fi{%
+  \fi
+  \unexpanded{#1}%
+  \ifx\scrollmode#2\scrollmode
+  \else
+    \HyPsd@@ProtectSpacesFi\HyPsd@UnexpandableSpace#2%
+  \HyPsd@fi
+}%
 %    \end{macrocode}
 %    \end{macro}
 %
@@ -3172,38 +3165,11 @@
 %    It is used by \cs{HyPsd@@ProtectSpacesFi} and by the code in
 %    \cs{pdfstringdef} that removes the grouping chararcters.
 %    \begin{macrocode}
-  \def\HyPsd@RemoveMask|#1|\HyPsd@End#2{%
-    \toks@\expandafter{#1}%
-    \xdef#2{\the\toks@}%
-  }%
+\def\HyPsd@RemoveMask|#1|\HyPsd@End#2{%
+  \xdef#2{\unexpanded\expandafter{#1}}%
+}%
 %    \end{macrocode}
 %    \end{macro}
-%
-%    \begin{macrocode}
-}{%
-  \let\HyPsd@fi\fi
-  \def\HyPsd@ProtectSpaces#1{%
-    \xdef#1{%
-      \iftrue
-        \expandafter\HyPsd@@ProtectSpacesFi
-          \expandafter|\expandafter\@empty#1| %
-      \HyPsd@fi
-    }%
-    \expandafter\HyPsd@RemoveMask#1\HyPsd@End#1%
-  }%
-  \def\HyPsd@@ProtectSpacesFi#1 #2\HyPsd@fi{%
-    \fi
-    \etex@unexpanded{#1}%
-    \ifx\scrollmode#2\scrollmode
-    \else
-      \HyPsd@@ProtectSpacesFi\HyPsd@UnexpandableSpace#2%
-    \HyPsd@fi
-  }%
-  \def\HyPsd@RemoveMask|#1|\HyPsd@End#2{%
-    \xdef#2{\etex@unexpanded\expandafter{#1}}%
-  }%
-}
-%    \end{macrocode}
 %
 % \subsubsection{Remove grouping braces}
 %    \begin{macro}{\HyPsd@RemoveBraces}
@@ -5151,6 +5117,21 @@
    A current html.sty will do all necessary (re)definitions%
   }%
 }
+\DeclareVoidOption{hitex}{%
+  \ifhint
+   \IfFileExists{hhitex.def}
+     {\def\Hy@driver{hhitex}}%
+     {\Hy@Warning{%
+      Missing driver file `hhitex.def',\MessageBreak
+      ignoring hitex driver%
+     }}% 
+  \else
+    \Hy@Error{%
+      Wrong driver option `hitex',\MessageBreak
+      because HiTeX is not detected%
+    }\@ehc
+  \fi
+}
 %    \end{macrocode}
 % No more special treatment for ps2pdf. Let it sink or swim.
 %    \begin{macrocode}
@@ -5704,6 +5685,24 @@
   \def\theoremautorefname{Teorem}%
   \def\pageautorefname{side}%
 }
+\def\HyLang@swedish{%
+  \def\equationautorefname{Ekvation}%
+  \def\footnoteautorefname{fotnot}%
+  \def\itemautorefname{punkt}%
+  \def\figureautorefname{Figur}%
+  \def\tableautorefname{Tabell}%
+  \def\partautorefname{Del}%
+  \def\appendixautorefname{Bilaga}%
+  \def\chapterautorefname{kapitel}%
+  \def\sectionautorefname{avsnitt}%
+  \def\subsectionautorefname{underavsnitt}%
+  \def\subsubsectionautorefname{under-underavsnitt}%
+  \def\paragraphautorefname{paragraf}%
+  \def\subparagraphautorefname{underparagraf}%
+  \def\FancyVerbLineautorefname{linje}%
+  \def\theoremautorefname{Teorem}%
+  \def\pageautorefname{sida}%
+}
 %    \end{macrocode}
 %
 %    Instead of package babel's definition of \cmd{\addto} the
@@ -5785,6 +5784,7 @@
 \HyLang@DeclareLang{norsk}{norsk}{}
 \HyLang@DeclareLang{norwegian}{norsk}{}
 \HyLang@DeclareLang{danish}{danish}{}
+\HyLang@DeclareLang{swedish}{swedish}{}
 %    \end{macrocode}
 %    More work is needed in case of options |vietnamese| and |vietnam|.
 %    \begin{macrocode}
@@ -6391,14 +6391,14 @@
           \HyInfo@AddonList
           \HyInfo@do{\HyInfo@Key}%
         }%
-        \kv@parse@normalized{%
+        \expandafter\kv@parse@normalized\expandafter{%
           \HyInfo@Key={#2}%
         }{%
           \kv@processor@default{pdfinfo}%
         }%
       \fi
     \else
-      \kv@parse@normalized{%
+      \expandafter\kv@parse@normalized\expandafter{%
         \HyInfo@Key={#2}%
       }{%
         \kv@processor@default{pdfinfo}%
@@ -7067,6 +7067,21 @@
   \fi
   \ifx\Hy@driver\@empty
   \else
+   \def\Hy@temp{hhitex}%
+   \ifhint    
+     \ifx\Hy@driver\Hy@temp
+     \else
+        \Hy@WarningNoLine{%
+          Wrong driver `\Hy@driver.def';\MessageBreak
+          hitex is running.\MessageBreak
+          Forcing driver `\Hy@temp.def'%
+        }%
+        \let\Hy@driver\Hy@temp
+     \fi        
+    \fi 
+  \fi    
+  \ifx\Hy@driver\@empty
+  \else
     \def\Hy@temp{hvtexhtm}%
     \ifnum\ifvtex\OpMode\else\m@ne\fi=10 %
       \ifx\Hy@driver\Hy@temp
@@ -7119,31 +7134,35 @@
               \endinput
             }%
           \else
-            \ifnum\ifvtex\OpMode\else\m@ne\fi=\@ne
-              \def\Hy@driver{hvtex}%
+            \ifhint
+              \def\Hy@driver{hhitex}
             \else
-              \ifnum\ifvtex\OpMode\else\m@ne\fi=\tw@
+              \ifnum\ifvtex\OpMode\else\m@ne\fi=\@ne
                 \def\Hy@driver{hvtex}%
               \else
-                \ifx\HyOpt@DriverFallback\ltx@empty
-                  \let\Hy@driver\Hy@defaultdriver
-                  \def\HyOpt@DriverType{ (default)}%
+                \ifnum\ifvtex\OpMode\else\m@ne\fi=\tw@
+                  \def\Hy@driver{hvtex}%
                 \else
-                  \begingroup
-                    \toks@\expandafter{\HyOpt@DriverFallback}%
-                    \edef\x{\endgroup
-                      \noexpand\kvsetkeys{Hyp}{\the\toks@}%
-                    }%
-                  \x
-                  \ifx\Hy@driver\ltx@empty
+                  \ifx\HyOpt@DriverFallback\ltx@empty
                     \let\Hy@driver\Hy@defaultdriver
                     \def\HyOpt@DriverType{ (default)}%
                   \else
-                    \def\HyOpt@DriverType{ (fallback)}%
+                    \begingroup
+                      \toks@\expandafter{\HyOpt@DriverFallback}%
+                      \edef\x{\endgroup
+                        \noexpand\kvsetkeys{Hyp}{\the\toks@}%
+                      }%
+                    \x
+                    \ifx\Hy@driver\ltx@empty
+                      \let\Hy@driver\Hy@defaultdriver
+                      \def\HyOpt@DriverType{ (default)}%
+                    \else
+                      \def\HyOpt@DriverType{ (fallback)}%
+                    \fi
                   \fi
                 \fi
               \fi
-            \fi
+            \fi  
           \fi
         \fi
       \fi

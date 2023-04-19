@@ -392,9 +392,9 @@ Completed box being shipped out [1]
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\penalty 10000
 ....\glue 40.0
-....\write4{\protect \BOOKMARK [0][-]{chapter.1}{\376\377\000A\000\040\000c\000h\\ETC.}
+....\write4{\protect \BOOKMARK [0][-]{chapter.1}{\376\377\000A\000\040\000c\000h\000a\000p\000t\000e\000r}{}% 1}
 ....\penalty 10000
-....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \chapternumberline \ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \chapternumberline {1}A chapter}{\thepage }{chapter.1}\protected@file@percent }}
 ....\penalty 10000
 ....\glue -4.03276
 ....\glue 0.0 plus 1.0fil

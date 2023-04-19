@@ -128,8 +128,8 @@ Completed box being shipped out [2]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000\ETC.}
-....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000i\000o\000n}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}section}{\thepage }{section.1}\protected@file@percent }}
 ....\penalty 10000
 ....\glue 11.8956 plus 1.03438
 ....\pdfcolorstack 0 push {1 0 0 rg 1 0 0 RG}
@@ -157,9 +157,9 @@ Completed box being shipped out [2]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000\ETC.}
+....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000k}{}% 2}
 ....\penalty 10000
-....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {2}quack}{\thepage }{section.2}\protected@file@percent }}
 ....\penalty 10000
 ....\penalty 10000
 ....\glue 11.8956 plus 1.03438

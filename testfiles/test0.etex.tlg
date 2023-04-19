@@ -24,8 +24,8 @@ File: hog.eps Graphic file (type eps)
  <hog.eps>
 File: hog.eps Graphic file (type eps)
  <hog.eps> (test0.ind [5] [6
-])
-AED: lastpage setting LastPage
+]) 
+enddocument/afterlastpage: lastpage setting LastPage.
 (test0.aux)
 Package rerunfilecheck Info: File `test0.out' has not changed.
 (rerunfilecheck)             Checksum: 7D09406EE5B5159223610243735F368A;1485.

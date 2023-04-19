@@ -3,10 +3,10 @@ Don't change this file in any respect.
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0
 .\hbox(0.0+0.0)x0.0
-..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
-..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title (\376\377\000T\00\ETC.}
-..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get put}{userdict /?pdfmark systemdict /pop get put userdict /pdfmark systemdict /cleartomark get put}ifelse}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title (\376\377\000T\000e\000s\000t\000i\000n\000g\000\040\000n\000a\000t\000b\000i\000b\000\040\000a\000n\000d\000\040\000h\000y\000p\000e\000r\000r\000e\000f)/Subject (\376\377\000D\000u\000m\000m\000y\000\040\000s\000t\000u\000f\000f)/Creator (LaTeX with hyperref)/Author (\376\377\000S\000P\000Q\000R\000\040\000a\000n\000d\000\040\000P\000W\000D)/Keywords (\376\377\000L\000u\000h\000m\000a\000n\000n) /DOCINFO pdfmark end}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Resolution mul} def/BPToDvips{72 div Resolution mul}def product (Ghostscript) search {pop pop pop revision 927 gt}{pop false} ifelse{/BorderArrayPatch{} def}{/BorderArrayPatch{[exch{dup dup type/integertype eq exch type/realtype eq or{BPToDvips}if}forall]}def} ifelse /HyperBorder {1 PDFToDvips} def/H.V {pdf@hoff pdf@voff null} def/H.B {/Rect[pdf@llx pdf@lly pdf@urx pdf@ury]} def/H.S {currentpoint HyperBorder add /pdf@lly exch def dup DvipsToPDF 72 add /pdf@hoff exch def HyperBorder sub /pdf@llx exch def} def/H.L {2 sub dup/HyperBasePt exch def PDFToDvips /HyperBaseDvips exch def currentpoint HyperBaseDvips sub /pdf@ury exch def/pdf@urx exch def} def/H.A {H.L currentpoint exch pop vsize 72 sub exch DvipsToPDF HyperBasePt sub sub /pdf@voff exch def} def/H.R {currentpoint HyperBorder sub /pdf@ury exch def HyperBorder add /pdf@urx exch def currentpoint exch pop vsize 72 sub exch DvipsToPDF sub /pdf@voff exch def} def}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
 ..\kern 0.0
 ..\kern 16.0
@@ -34,11 +34,11 @@ Completed box being shipped out [1]
 ...\vbox(550.0+0.0)x345.0, glue set 336.99185fil
 ....\write-{}
 ....\write1{\babel@aux{german}{}}
-....\special{ps:SDict begin [/PageMode /UseThumbs/Page 1/View [/Fit] /DOCVIEW pdfm\ETC.}
+....\special{ps:SDict begin [/PageMode /UseThumbs/Page 1/View [/Fit] /DOCVIEW pdfmark end}
 ....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
 ....\special{ps:SDict begin H.S end}
 ....\special{ps:SDict begin 12 H.A end}
-....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark end}
 ....\glue(\topskip) 3.05556
 ....\hbox(6.94444+1.94444)x345.0, glue set - 0.15979
 .....\hbox(0.0+0.0)x15.0
@@ -225,7 +225,7 @@ Completed box being shipped out [1]
 .......\glue 0.0
 .......\OT1/cmr/m/n/10 1
 .......\special{ps:SDict begin 12 H.L end}
-.......\special{ps:SDict begin [/Subtype /Link/Dest (cite.luhm:DoS) cvn/H /I/Border [\ETC.}
+.......\special{ps:SDict begin [/Subtype /Link/Dest (cite.luhm:DoS) cvn/H /I/Border [0 0 1]BorderArrayPatch/Color [.5 .5 0] H.B /ANN pdfmark end}
 .....\OT1/cmr/m/n/10 { (ligature --)
 .....\discretionary
 .....\penalty 1000
@@ -236,7 +236,7 @@ Completed box being shipped out [1]
 .......\glue 0.0
 .......\OT1/cmr/m/n/10 3
 .......\special{ps:SDict begin 12 H.L end}
-.......\special{ps:SDict begin [/Subtype /Link/Dest (cite.luhm:WrtdG) cvn/H /I/Border\ETC.}
+.......\special{ps:SDict begin [/Subtype /Link/Dest (cite.luhm:WrtdG) cvn/H /I/Border [0 0 1]BorderArrayPatch/Color [.5 .5 0] H.B /ANN pdfmark end}
 .....\OT1/cmr/m/n/10 ]
 .....\OT1/cmr/m/n/10 .
 .....\glue 3.33333 plus 1.66666 minus 1.11111
@@ -417,7 +417,7 @@ Completed box being shipped out [1]
 ......\penalty 10000
 ......\glue 0.0
 ......\special{ps:SDict begin 18 H.A end}
-......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section*.1) cvn /DEST pdfmark \ETC.}
+......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section*.1) cvn /DEST pdfmark end}
 ......\penalty 10000
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\OT1/cmr/bx/n/14.4 L
@@ -452,7 +452,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 1
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
-.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:DoS) cvn /DEST pdfma\ETC.}
+.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:DoS) cvn /DEST pdfmark end}
 .......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
@@ -610,7 +610,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 2
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
-.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.Luhm:Soc&int) cvn /DEST p\ETC.}
+.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.Luhm:Soc&int) cvn /DEST pdfmark end}
 .......\penalty 10000
 ......\glue 5.0
 .....\penalty 0
@@ -990,7 +990,7 @@ Completed box being shipped out [1]
 .......\OT1/cmr/m/n/10 3
 .......\OT1/cmr/m/n/10 ]
 .......\special{ps:SDict begin 12 H.A end}
-.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:WrtdG) cvn /DEST pdf\ETC.}
+.......\special{ps:SDict begin [/View [/XYZ H.V]/Dest (cite.luhm:WrtdG) cvn /DEST pdfmark end}
 .......\penalty 10000
 ......\glue 5.0
 .....\penalty 0

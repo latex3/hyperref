@@ -38,7 +38,7 @@ Package pdftex.def Info: hog.pdf  used on input line ....
 (pdftex.def)             Requested size: 125.9703pt x 106.89911pt.
 (test0.ind [5] [6
 ]) 
-AED: lastpage setting LastPage
+enddocument/afterlastpage: lastpage setting LastPage.
 (test0.aux)
 Package rerunfilecheck Info: File `test0.out' has not changed.
 (rerunfilecheck)             Checksum: 7D09406EE5B5159223610243735F368A;1485.

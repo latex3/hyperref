@@ -328,7 +328,7 @@ Overfull \hbox (7.00789pt too wide) in paragraph at lines 125--128
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.31305
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Su\ETC.}
+.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype /Link/Dest (section.22) cvn H.B /ANN pdfmark end}
 .\special{color pop}
 .\OT1/cmr/m/n/10.95 )
 .\OT1/cmr/m/n/10.95 ,
@@ -382,7 +382,7 @@ Overfull \hbox (7.00789pt too wide) in paragraph at lines 125--128
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Su\ETC.}
+.\special{ps:SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype /Link/Dest (subsection.24) cvn H.B /ANN pdfmark end}
 .\special{color pop}
 .\OT1/cmr/m/n/10.95 )
 .\glue(\rightskip) 0.0
@@ -479,7 +479,7 @@ Overfull \hbox (115.79382pt too wide) in paragraph at lines 157--158
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://www.aw.com/cp/tlgc.html#Describe)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -555,7 +555,7 @@ Overfull \hbox (127.2912pt too wide) in paragraph at lines 159--160
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://nsi.net.kiae.su/latex/latex2e.html)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -629,7 +629,7 @@ Overfull \hbox (110.04514pt too wide) in paragraph at lines 161--162
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://www.lehigh.edu/~dlj0/LyriX.html)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -707,7 +707,7 @@ Overfull \hbox (121.54251pt too wide) in paragraph at lines 163--164
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://www.cs.wisc.edu/~ghost/index.html)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -808,7 +808,7 @@ Overfull \hbox (236.51627pt too wide) in paragraph at lines 165--166
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://www.win.tue.nl/win/math/dw/personalpages/dickie/idvi/)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -882,7 +882,7 @@ Overfull \hbox (127.2912pt too wide) in paragraph at lines 167--168
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://www.tug.org/interest.html#projects)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -972,7 +972,7 @@ Overfull \hbox (173.2807pt too wide) in paragraph at lines 169--170
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(ftp://ftp.cbr.dit.csiro.au/staff/gjw/www/tex.html)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
@@ -1054,7 +1054,7 @@ Overfull \hbox (92.79907pt too wide) in paragraph at lines 172--173
 ..\special{color pop}
 .\hbox(0.0+0.0)x0.0, shifted -7.60416
 ..\special{ps:SDict begin H.R end}
-.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Ac\ETC.}
+.\special{ps:SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action <</Subtype/URI/URI(http://srahtz/attend.html#sebastian)>>/Subtype /Link H.B /ANN pdfmark end}
 .\special{color pop}
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil

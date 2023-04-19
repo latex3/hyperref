@@ -265,28 +265,33 @@ of a URL (of the form \emph{URL\#name\_string}). Here
 
 However, the drivers intended to produce \emph{only} PDF use literal
 PostScript or PDF \verb|\special| commands. The commands are defined in
-configuration files for different drivers, selected by package options;
+configuration files for different drivers, selected by package options or for
+most current engines autodetected;
 at present, the following drivers are supported:
 
 \begin{description}
 \item[hypertex] DVI processors conforming to the Hyper\TeX\ guidelines (i.e.\ \textsf{xdvi}, \textsf{dvips} (with
 the \textsf{-z} option), \textsf{\hologo{OzTeX}}, and \textsf{Textures})
-\item[dvips] produces \verb|\special| commands tailored for \textsf{dvips}
+\item[dvips] produces \verb|\special| commands tailored for \textsf{dvips}. This is the default driver if dvi mode is
+detected.
 \item[dvipsone] produces \verb|\special| commands tailored for \textsf{dvipsone}
 \item[ps2pdf] a special case of output suitable for processing by earlier versions of Ghost\-script's
 PDF writer; this is basically the same as that for \textsf{dvips}, but a few variations remained before version 5.21
-\item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}
-\item[pdftex] pdf\TeX, \hologo{HanTheThanh}'s \TeX{} variant that writes PDF directly
-\item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly
+\item[tex4ht] produces \verb|\special| commands for use with \textsf{\TeX4ht}, autodetected.
+\item[pdftex] pdf\TeX, \hologo{HanTheThanh}'s \TeX{} variant that writes PDF directly, autodetected.
+\item[luatex] lua\TeX, Unicode \TeX{} variant that writes PDF directly, autodetected.
 \item[dvipdfm] produces \verb|\special| commands for Mark Wicks' DVI to PDF driver \textsf{dvipdfm}
 \item[dvipdfmx] produces \verb|\special| commands for driver
      \textsf{dvipdfmx}, a successor of \textsf{dvipdfm}
 \item[dviwindo] produces \verb|\special| commands that Y\&Y's Windows previewer interprets as hypertext jumps within the previewer
 \item[vtex] produces \verb|\special| commands that MicroPress' HTML and
      PDF-producing \TeX\ variants interpret as hypertext jumps within the
-     previewer
+     previewer, autodetected.
 \item[textures] produces \verb|\special| commands that \textsf{Textures} interprets as hypertext jumps within the previewer
-\item[xetex] produces \verb|\special| commands for Xe\TeX{}
+\item[xetex] produces \verb|\special| commands for Xe\TeX{}, autodetected.
+\item[hitex] (new 2023) for the hint format produces by the Hi\TeX{} engine, autodetected. This a quite experimental
+engine and the driver file is not part of the \xpackage{hyperref} bundle but is provided by
+the \xpackage{hitex} package. Problems should be reported to \url{https://github.com/ruckertm/HINT}. 
 \end{description}
 
 Output from \textsf{dvips} or \textsf{dvipsone} must be processed using
@@ -307,8 +312,8 @@ such as \textsf{xdvi}.
   \begin{quote}
     \texttt{driverfallback=dvipdfm}
   \end{quote}
-  Autodetected drivers (\textsf{pdftex}, \textsf{xetex}, \textsf{vtex},
-  \textsf{vtexpdfmark}) are recognized from within \TeX\ and
+  Autodetected drivers (\textsf{pdftex}, \textsf{luatex}, \textsf{xetex}, \textsf{vtex},
+  \textsf{vtexpdfmark}, \textsf{hitex}) are recognized from within \TeX\ and
   therefore cannot be given as value to option \textsf{driverfallback}.
   However a DVI driver program is run after the \TeX\ run is finished.
   Thus it cannot be detected at \TeX\ macro level. Then package

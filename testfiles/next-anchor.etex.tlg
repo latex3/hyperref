@@ -4,7 +4,7 @@ Don't change this file in any respect.
 \tf@toc=\write...
 Completed box being shipped out [2]
 \vbox(633.0+0.0)x407.0
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
 ..\kern 0.0
 ..\kern 16.0
@@ -15,7 +15,7 @@ Completed box being shipped out [2]
 ...\kern -1.00374
 ...\special{ps:SDict begin H.S end}
 ...\special{ps:SDict begin H.R end}
-...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.2) cvn /DEST pdfmark \ETC.}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.2) cvn /DEST pdfmark end}
 ...\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\glue 0.0 plus 1.0fil minus 1.0fil
@@ -77,7 +77,7 @@ Completed box being shipped out [2]
 ......\OT1/cmr/bx/n/10 x
 ......\OT1/cmr/bx/n/10 x
 ......\special{ps:SDict begin 12 H.L end}
-......\special{ps:SDict begin [/Subtype /Link/Dest (abc-xxx) cvn/H /I/Border [0 0 1]\ETC.}
+......\special{ps:SDict begin [/Subtype /Link/Dest (abc-xxx) cvn/H /I/Border [0 0 1]BorderArrayPatch/Color [1 0 0] H.B /ANN pdfmark end}
 .....\penalty 10000
 .....\glue 0.0 plus 1.0fil
 .....\penalty 10000
@@ -100,7 +100,7 @@ Completed box being shipped out [2]
 .....\glue 0.0 plus 1.0fil
 Completed box being shipped out [3]
 \vbox(633.0+0.0)x407.0
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
 ..\kern 0.0
 ..\kern 16.0
@@ -111,7 +111,7 @@ Completed box being shipped out [3]
 ...\kern -1.00374
 ...\special{ps:SDict begin H.S end}
 ...\special{ps:SDict begin H.R end}
-...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.3) cvn /DEST pdfmark \ETC.}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.3) cvn /DEST pdfmark end}
 ...\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\glue 0.0 plus 1.0fil minus 1.0fil
@@ -180,7 +180,7 @@ Completed box being shipped out [3]
 \BKM@file=\write...
 Completed box being shipped out [4]
 \vbox(633.0+0.0)x407.0
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
 ..\kern 0.0
 ..\kern 16.0
@@ -191,7 +191,7 @@ Completed box being shipped out [4]
 ...\kern -1.00374
 ...\special{ps:SDict begin H.S end}
 ...\special{ps:SDict begin H.R end}
-...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.4) cvn /DEST pdfmark \ETC.}
+...\special{ps:SDict begin [/View [/XYZ H.V]/Dest (abc-page.4) cvn /DEST pdfmark end}
 ...\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\glue 0.0 plus 1.0fil minus 1.0fil
@@ -221,7 +221,7 @@ Completed box being shipped out [4]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}xxx}{\thepage }{xxx}\protected@file@percent }}
 ....\penalty 10000
 ....\glue 9.90276 plus 0.86108
 ....\write1{\newlabel{xxx}{{1}{\thepage }{xxx}{xxx}{}}}

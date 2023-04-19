@@ -74,8 +74,8 @@ Completed box being shipped out [1]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\003\221\003\221\00\ETC.}
-....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline \ETC.}
+....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\003\221\003\221\003\221\003\221\003\221\003\221\003\221\003\221\000\040\003\221\003\221\003\221\003\221\003\221\003\221\003\221\003\221}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline {0.1}\MakeUppercase    []{^^e1^^bc^^80^^e1^^bc^^81^^e1^^bc^^82^^e1^^bc^^83^^e1^^bc^^84^^e1^^bc^^85^^e1^^bc^^86^^e1^^bc^^87 ^^e1^^bc^^88^^e1^^bc^^89^^e1^^bc^^8a^^e1^^bc^^8b^^e1^^bc^^8c^^e1^^bc^^8d^^e1^^bc^^8e^^e1^^bc^^8f}}{\thepage }{subsection.0.1}\protected@file@percent }}
 ....\penalty 10000
 ....\glue 6.45676 plus 0.86089
 ....\glue 0.0 plus 1.0fil

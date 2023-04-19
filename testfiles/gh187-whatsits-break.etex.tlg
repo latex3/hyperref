@@ -3,10 +3,10 @@ Don't change this file in any respect.
 Completed box being shipped out [1]
 \vbox(632.5+0.0)x429.0
 .\hbox(0.0+0.0)x0.0
-..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get p\ETC.}
-..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Cre\ETC.}
-..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Reso\ETC.}
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+..\special{! systemdict /pdfmark known{userdict /?pdfmark systemdict /exec get put}{userdict /?pdfmark systemdict /pop get put userdict /pdfmark systemdict /cleartomark get put}ifelse}
+..\special{ps:SDict begin [/Producer (dvips + Distiller)/Title ()/Subject ()/Creator (LaTeX with hyperref)/Author ()/Keywords () /DOCINFO pdfmark end}
+..\special{! /DvipsToPDF{72.27 mul Resolution div} def/PDFToDvips{72.27 div Resolution mul} def/BPToDvips{72 div Resolution mul}def product (Ghostscript) search {pop pop pop revision 927 gt}{pop false} ifelse{/BorderArrayPatch{} def}{/BorderArrayPatch{[exch{dup dup type/integertype eq exch type/realtype eq or{BPToDvips}if}forall]}def} ifelse /HyperBorder {1 PDFToDvips} def/H.V {pdf@hoff pdf@voff null} def/H.B {/Rect[pdf@llx pdf@lly pdf@urx pdf@ury]} def/H.S {currentpoint HyperBorder add /pdf@lly exch def dup DvipsToPDF 72 add /pdf@hoff exch def HyperBorder sub /pdf@llx exch def} def/H.L {2 sub dup/HyperBasePt exch def PDFToDvips /HyperBaseDvips exch def currentpoint HyperBaseDvips sub /pdf@ury exch def/pdf@urx exch def} def/H.A {H.L currentpoint exch pop vsize 72 sub exch DvipsToPDF HyperBasePt sub sub /pdf@voff exch def} def/H.R {currentpoint HyperBorder sub /pdf@ury exch def HyperBorder add /pdf@urx exch def currentpoint exch pop vsize 72 sub exch DvipsToPDF sub /pdf@voff exch def} def}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 15.99626fil
 ..\kern 0.0
 ..\kern 17.0
@@ -35,13 +35,13 @@ Completed box being shipped out [1]
 ...\glue(\lineskip) 0.0
 ...\vbox(548.5+0.0)x390.0, glue set >20000.0fil
 ....\write-{}
-....\special{ps:SDict begin [/Count -0/Dest (section.1) cvn/Title (\376\377\000s\0\ETC.}
-....\special{ps:SDict begin [/Count -0/Dest (section.2) cvn/Title (\376\377\000q\0\ETC.}
-....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pd\ETC.}
+....\special{ps:SDict begin [/Count -0/Dest (section.1) cvn/Title (\376\377\000s\000e\000c\000t\000i\000o\000n) /OUT pdfmark end}
+....\special{ps:SDict begin [/Count -0/Dest (section.2) cvn/Title (\376\377\000q\000u\000a\000c\000k) /OUT pdfmark end}
+....\special{ps:SDict begin [/PageMode /UseOutlines/Page 1/View [/Fit] /DOCVIEW pdfmark end}
 ....\special{ps:SDict begin [ {Catalog}<<>> /PUT pdfmark end}
 ....\special{ps:SDict begin H.S end}
 ....\special{ps:SDict begin 14.5 H.A end}
-....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark e\ETC.}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark end}
 ....\glue(\topskip) 6.83333
 ....\hbox(5.16667+0.0)x390.0, glue set 366.50024fil
 .....\hbox(0.0+0.0)x17.62482
@@ -71,7 +71,7 @@ Completed box being shipped out [1]
 .\kern 0.0
 Completed box being shipped out [2]
 \vbox(632.5+0.0)x429.0
-.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop po\ETC.}
+.\special{ps:SDict begin /product where{pop product(Distiller)search{pop pop pop version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show grestore}if}{pop}ifelse}{pop}ifelse}if end}
 .\vbox(0.0+0.0)x0.0, glue set - 15.99626fil
 ..\kern 0.0
 ..\kern 17.0
@@ -101,7 +101,7 @@ Completed box being shipped out [2]
 ...\vbox(548.5+0.0)x390.0, glue set 476.18245fil
 ....\special{ps:SDict begin H.S end}
 ....\special{ps:SDict begin 14.5 H.A end}
-....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.1) cvn /DEST pdfmark e\ETC.}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.1) cvn /DEST pdfmark end}
 ....\glue(\topskip) 0.00002
 ....\hbox(11.99998+0.0)x390.0, glue set 302.18205fil
 .....\hbox(11.13599+0.0)x29.15997
@@ -118,14 +118,14 @@ Completed box being shipped out [2]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000\ETC.}
-....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000s\000e\000c\000t\000i\000o\000n}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}section}{\thepage }{section.1}\protected@file@percent }}
 ....\penalty 10000
 ....\glue 11.88335 plus 1.03331
 ....\special{color push rgb 1 0 0}
 ....\special{ps:SDict begin H.S end}
 ....\special{ps:SDict begin 14.5 H.A end}
-....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.2) cvn /DEST pdfmark e\ETC.}
+....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (section.2) cvn /DEST pdfmark end}
 ....\penalty 10000
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
@@ -144,9 +144,9 @@ Completed box being shipped out [2]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000\ETC.}
+....\write3{\protect \BOOKMARK [1][-]{section.2}{\376\377\000q\000u\000a\000c\000k}{}% 2}
 ....\penalty 10000
-....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {2}quack}{\thepage }{section.2}\protected@file@percent }}
 ....\penalty 10000
 ....\penalty 10000
 ....\glue 11.88335 plus 1.03331

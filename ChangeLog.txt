@@ -3,6 +3,7 @@
       This requires etoolbox and the LaTeX para hooks.
     * Adapted MakeUppercase and MakeLowercase to new \BCPdata used by babel and polyglossia.
     * added swissgerman and nswissgerman, issue #264
+    * removed stray \CheckSum from backref.dtx
        
 2023-04-19 Ulrike Fischer
     * support hitex engine

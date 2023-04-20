@@ -1,4 +1,8 @@
 2023-04-19 Ulrike Fischer
+    * fix spacing issues in theorems with new \@thm handling, issues 11,48. 
+      This requires etoolbox and the LaTeX para hooks.
+       
+2023-04-19 Ulrike Fischer
     * support hitex engine
 
 2023-02-19 Yukai Chou

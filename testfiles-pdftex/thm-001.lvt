@@ -1,3 +1,4 @@
+%see https://github.com/latex3/hyperref/issues/11
 \documentclass{article}
 \input{regression-test}
 \usepackage{hyperref}
@@ -16,4 +17,4 @@ Too much space above if hyperref line is uncommented?
 \newpage
 \ref{blub}
 
-\end{document}
+\end{document} 

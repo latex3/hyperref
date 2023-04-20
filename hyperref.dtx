@@ -52,7 +52,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2023-04-07 v7.00w %
+%<!none&!packageEnd>  [2023-02-07 v7.00v %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -1039,31 +1039,27 @@
 %
 %    \cs{MakeUppercase} and \cs{MakeLowercase} do not work by expansion in
 %    legacy code but if the expl3 code is available we can handle them.
-%    If babel is used we can also make use of the language.
+%    If a current babel or polyglossia is used we can also make use of the language.
 %
 %    \begin{macro}{\MakeUppercaseUnsupportedInPdfStrings}
 %    \begin{macro}{\MakeLowercaseUnsupportedInPdfStrings}
 %    \begin{macrocode}
+\providecommand*\BCPdata[1]{}
 \ExplSyntaxOn
 \@ifundefined{text_uppercase:n}{}
  {
-   \def\MakeUppercaseUnsupportedInPdfStrings#1{\use:e {\text_uppercase:n {#1}}}
-   \def\MakeLowercaseUnsupportedInPdfStrings#1{\use:e {\text_lowercase:n {#1}}}
-   \AddToHook{package/babel/after}
-     {
-      \def\MakeUppercaseUnsupportedInPdfStrings#1
+   \def\MakeUppercaseUnsupportedInPdfStrings#1
          {\use:e 
            {\exp_args:Ne
-              \text_uppercase:nn{\localeinfo*{tag.bcp47}}{#1}
+              \text_uppercase:nn{\BCPdata { casing }}{#1}
            }
          }
-      \def\MakeLowercaseUnsupportedInPdfStrings#1
+   \def\MakeLowercaseUnsupportedInPdfStrings#1
          {\use:e 
            {\exp_args:Ne
-              \text_lowercase:nn{\localeinfo*{tag.bcp47}}{#1}
+              \text_lowercase:nn{\BCPdata { casing }}{#1}
            }
-         }         
-     }
+         }        
  }
 \ExplSyntaxOff
 %    \end{macrocode}

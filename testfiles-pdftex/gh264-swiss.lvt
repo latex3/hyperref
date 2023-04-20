@@ -1,0 +1,10 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[nswissgerman]{babel}
+\usepackage{hyperref}
+\begin{document}
+\START \showoutput
+\section{MWE} \label{section}
+\subsection{subsection} \label{subsection}
+\autoref{section} \ \autoref{subsection}
+\end{document}

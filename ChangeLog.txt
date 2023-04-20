@@ -2,6 +2,7 @@
     * fix spacing issues in theorems with new \@thm handling, issues 11,48. 
       This requires etoolbox and the LaTeX para hooks.
     * Adapted MakeUppercase and MakeLowercase to new \BCPdata used by babel and polyglossia.
+    * added swissgerman and nswissgerman, issue #264
        
 2023-04-19 Ulrike Fischer
     * support hitex engine

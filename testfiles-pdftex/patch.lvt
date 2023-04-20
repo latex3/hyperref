@@ -1,0 +1,44 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{varioref}
+\makeatletter 
+%\def\hyper@nopatch@amsmath@tag{} 
+%\def\hyper@nopatch@longtable{} 
+%\def\hyper@nopatch@mathenv{}
+%\def\hyper@nopatch@footnote{}
+%\def\hyper@nopatch@caption{}
+%\def\hyper@nopatch@toc{}
+%\def\hyper@nopatch@counter{}
+%\def\hyper@nopatch@varioref{}
+%\def\hyper@nopatch@sectioning{}
+\makeatother
+\usepackage{hyperref}
+\begin{document}
+\START 
+\makeatletter
+% amsamth
+\ShowCommand\make@df@tag@@
+%longtable
+\ShowCommand\LT@array
+\ShowCommand\LT@start
+% mathenv
+\ShowCommand\equation
+\ShowCommand\endequation
+%footnote (more involved)
+\ShowCommand\@xfootnotenext
+\ShowCommand\@footnotetext
+%caption
+\ShowCommand\caption
+\ShowCommand\@caption
+% toc + more
+\ShowCommand\addcontentsline
+% counter +more
+\ShowCommand\@definecounter
+\ShowCommand\@newctr
+%varioref + more
+\ShowCommand\Vref@star   
+%sectioning
+\ShowCommand\@ssect 
+\end{document} 

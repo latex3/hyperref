@@ -10775,6 +10775,7 @@
 %    \cmd{\H@refstepcounter} without anchor generation
 %    \begin{macrocode}
 \@ifpackageloaded{longtable}{%
+\@ifundefined{hyper@nopatch@longtable}{%
   \begingroup
     \def\y{\LT@array}%
     \@ifundefined{scr@LT@array}{%
@@ -10808,6 +10809,7 @@
       }%
     }%
   \expandafter\x\LT@start\@nil
+ }{}  
 }{}
 %    \end{macrocode}
 %
@@ -11305,6 +11307,7 @@
 % we can't just copy the definition of |\@caption|. Its all to do
 % with expansion. It screws up. Sigh.
 %    \begin{macrocode}
+\@ifundefined{hyper@nopatch@caption}{%
 \def\caption{%
   \ifx\@captype\@undefined
     \@latex@error{\noexpand\caption outside float}\@ehd
@@ -11368,7 +11371,7 @@
     \fi
     \par
   \endgroup
-}
+}}{}%end no patch
 %    \end{macrocode}
 %    Compatibility with float.sty: anchor setting at the top
 %    of the float, if the float is controlled by float.sty.

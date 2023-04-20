@@ -1,0 +1,64 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \make@df@tag@@=macro:
+#1->\gdef \df@tag {\maketag@@@ {\Hy@make@anchor #1}\def \@currentlabel {#1}}.
+<argument> \make@df@tag@@ 
+l. ...\ShowCommand\make@df@tag@@
+> \LT@array=macro:
+[#1]#2->\H@refstepcounter {table}\hyper@makecurrent {table}\let \Hy@LT@currentHref \@currentHref \stepcounter {LT@tables}\if l#1\LTleft \z@ \LTright \fill \else \if r#1\LTleft \fill \LTright \z@ \else \if c#1\LTleft \fill \LTright \fill \fi \fi \fi \let \LT@mcol \multicolumn \let \LT@@tabarray \@tabarray \let \LT@@hl \hline \def \@tabarray {\let \hline \LT@@hl \LT@@tabarray }\let \\\LT@tabularcr \let \tabularnewline \\\def \newpage {\noalign {\break }}\def \pagebreak {\noalign {\ifnum `}=0\fi \@testopt {\LT@no@pgbk -}4}\def \nopagebreak {\noalign {\ifnum `}=0\fi \@testopt \LT@no@pgbk 4}\let \hline \LT@hline \let \kill \LT@kill \let \caption \LT@caption \@tempdima \ht \strutbox \let \@endpbox \LT@endpbox \ifx \extrarowheight \@undefined \let \@acol \@tabacol \let \@classz \@tabclassz \let \@classiv \@tabclassiv \def \@startpbox {\vtop \LT@startpbox }\let \@@startpbox \@startpbox \let \@@endpbox \@endpbox \let \LT@LL@FM@cr \@tabularcr \else \advance \@tempdima \extrarowheight \col@sep \tabcolsep \let \@startpbox \LT@startpbox \let \LT@LL@FM@cr \@arraycr \fi \setbox \@arstrutbox \hbox {\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@ }\let \@sharp ##\let \protect \relax \begingroup \@mkpream {#2}\xdef \LT@bchunk {\global \advance \c@LT@chunks \@ne \global \LT@rows \z@ \setbox \z@ \vbox \bgroup \LT@setprevdepth \tabskip \LTleft \noexpand \halign to\hsize \bgroup \tabskip \z@ \@arstrut \@preamble \tabskip \LTright \cr }\endgroup \expandafter \LT@nofcols \LT@bchunk &\LT@nofcols \LT@make@row \m@th \let \par \@empty \everycr {}\lineskip \z@ \baselineskip \z@ \LT@bchunk .
+<argument> \LT@array 
+l. ...\ShowCommand\LT@array
+> \LT@start=macro:
+->\let \LT@start \endgraf \endgraf \penalty \z@ \vskip \LTpre \endgraf \ifdim \pagetotal <\pagegoal \else \dimen@ =\pageshrink \advance \dimen@ 1sp \kern \dimen@ \penalty 9999\endgraf \kern -\dimen@ \fi \dimen@ \pagetotal \advance \dimen@ \ht \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \dp \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \ht \LT@foot \edef \LT@reset@vfuzz {\vfuzz \the \vfuzz \vbadness \the \vbadness \relax }\vfuzz \maxdimen \vbadness \@M \setbox \tw@ \copy \z@ \setbox \tw@ \vsplit \tw@ to \ht \@arstrutbox \setbox \tw@ \vbox {\unvbox \tw@ }\LT@reset@vfuzz \advance \dimen@ \ht \ifdim \ht \@arstrutbox >\ht \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ \dp \ifdim \dp \@arstrutbox >\dp \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ -\pagegoal \ifdim \dimen@ >\z@ \vfil \break \else \ifdim \pageshrink >\z@ \pageshrink \z@ \fi \fi \global \@colroom \@colht \ifvoid \LT@foot \else \global \advance \vsize -\ht \LT@foot \global \advance \@colroom -\ht \LT@foot \dimen@ \pagegoal \advance \dimen@ -\ht \LT@foot \pagegoal \dimen@ \maxdepth \z@ \fi \let \@currentHref \Hy@LT@currentHref \Hy@raisedlink {\hyper@anchorstart {\@currentHref }\hyper@anchorend }\ifvoid \LT@firsthead \copy \LT@head \else \box \LT@firsthead \fi \nobreak \output {\LT@output }.
+<argument> \LT@start 
+l. ...\ShowCommand\LT@start
+> \equation=\long macro:
+->\mathdisplay@push \st@rredfalse \global \@eqnswtrue \mathdisplay {equation}\incr@eqnum \mathopen {}.
+<argument> \equation 
+l. ...\ShowCommand\equation
+> \endequation=\long macro:
+->\endmathdisplay {equation}\mathdisplay@pop \ignorespacesafterend .
+<argument> \endequation 
+l. ...\ShowCommand\endequation
+> \@xfootnotenext=macro:
+[#1]->\begingroup \csname c@\@mpfn \endcsname #1\relax \unrestored@protected@xdef \@thefnmark {\thempfn }\endgroup \ifx \@footnotetext \@mpfootnotetext \expandafter \H@@mpfootnotetext \else \expandafter \H@@footnotetext \fi .
+<argument> \@xfootnotenext 
+l. ...\ShowCommand\@xfootnotenext
+> \@footnotetext=\long macro:
+#1->\H@@footnotetext {\ifHy@nesting \expandafter \ltx@firstoftwo \else \expandafter \ltx@secondoftwo \fi {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\ignorespaces #1}}{\Hy@raisedlink {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\relax }}\let \@currentHref \Hy@footnote@currentHref \let \@currentlabelname \@empty \ignorespaces #1}}.
+<argument> \@footnotetext 
+l. ...\ShowCommand\@footnotetext
+> \caption=macro:
+->\ifx \@captype \@undefined \@latex@error {\noexpand \caption outside float}\@ehd \expandafter \@gobble \else \H@refstepcounter \@captype \let \Hy@tempa \@caption \@ifundefined {float@caption}{}{\expandafter \ifx \csname @float@c@\@captype \endcsname \float@caption \let \Hy@tempa \Hy@float@caption \fi }\expandafter \@firstofone \fi {\@dblarg {\Hy@tempa \@captype }}.
+<argument> \caption 
+l. ...\ShowCommand\caption
+> \@caption=\long macro:
+#1[#2]#3->\expandafter \ifx \csname if@capstart\expandafter \endcsname \csname iftrue\endcsname \global \let \@currentHref \hc@currentHref \else \hyper@makecurrent {\@captype }\fi \@ifundefined {NR@gettitle}{\def \@currentlabelname {#2}}{\NR@gettitle {#2}}\par \addcontentsline {\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{\ignorespaces #2}}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \normalsize \expandafter \ifx \csname if@capstart\expandafter \endcsname \csname iftrue\endcsname \global \@capstartfalse \@makecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\else \@makecaption {\csname fnum@#1\endcsname }{\ignorespaces \ifHy@nesting \expandafter \hyper@@anchor \expandafter {\@currentHref }{#3}\else \Hy@raisedlink {\expandafter \hyper@@anchor \expandafter {\@currentHref }{\relax }}#3\fi }\fi \par \endgroup .
+<argument> \@caption 
+l. ...\ShowCommand\@caption
+> \addcontentsline=macro:
+#1#2#3->\begingroup \let \label \@gobble \ifx \@currentHref \@empty \Hy@Warning {No destination for bookmark of \string \addcontentsline ,\MessageBreak destination is added}\phantomsection \fi \expandafter \ifx \csname toclevel@#2\endcsname \relax \begingroup \def \Hy@tempa {#1}\ifx \Hy@tempa \Hy@bookmarkstype \Hy@WarningNoLine {bookmark level for unknown #2 defaults to 0}\else \Hy@Info {bookmark level for unknown #2 defaults to 0}\fi \endgroup \expandafter \gdef \csname toclevel@#2\endcsname {0}\fi \edef \Hy@toclevel {\csname toclevel@#2\endcsname }\Hy@writebookmark {\csname the#2\endcsname }{#3}{\@currentHref }{\Hy@toclevel }{#1}\ifHy@verbose \begingroup \def \Hy@tempa {#3}\@onelevel@sanitize \Hy@tempa \let \temp@online \on@line \let \on@line \@empty \Hy@Info {bookmark\temp@online :\MessageBreak thecounter {\csname the#2\endcsname }\MessageBreak text {\Hy@tempa }\MessageBreak reference {\@currentHref }\MessageBreak toclevel {\Hy@toclevel }\MessageBreak type {#1}}\endgroup \fi \addtocontents {#1}{\protect \contentsline {#2}{#3}{\thepage }{\@currentHref }\protected@file@percent }\endgroup .
+<argument> \addcontentsline 
+l. ...\ShowCommand\addcontentsline
+> \@definecounter=macro:
+#1->\H@definecounter {#1}\expandafter \gdef \csname theH#1\endcsname {\arabic {#1}}.
+<argument> \@definecounter 
+l. ...\ShowCommand\@definecounter
+> \@newctr=macro:
+#1[#2]->\H@newctr #1[{#2}]\expandafter \gdef \csname theH#1\endcsname {\csname the\@ifundefined {theH#2}{}{H}#2\endcsname .\arabic {#1}}.
+<argument> \@newctr 
+l. ...\ShowCommand\@newctr
+> \Vref@star=robust macro:
+->\@protected@testopt \Vref@star \\Vref@star {}.
+> \\Vref@star=\long macro:
+> default #1=.
+[#1]#2->\begingroup \let \T@pageref \@pagerefstar \Ref *{#2} \vpageref [#1]{#2}\endgroup .
+<recently read> }
+l. ...\ShowCommand\Vref@star
+> \@ssect=macro:
+#1#2#3#4#5->\Hy@MakeCurrentHrefAuto {section*}\setlength {\Hy@SectionHShift }{#1}\begingroup \toks@ {\H@old@ssect {#1}{#2}{#3}{#4}}\toks \tw@ \expandafter {\expandafter \Hy@SectionAnchorHref \expandafter {\@currentHref }#5}\edef \x {\endgroup \the \toks@ {\the \toks \tw@ }}\x .
+<argument> \@ssect 
+l. ...\ShowCommand\@ssect
+(patch.aux)
+Package rerunfilecheck Info: File `patch.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

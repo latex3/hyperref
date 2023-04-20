@@ -1,0 +1,64 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \make@df@tag@@=macro:
+#1->\gdef \df@tag {\maketag@@@ {#1}\def \@currentlabel {#1}}.
+<argument> \make@df@tag@@ 
+l. ...\ShowCommand\make@df@tag@@
+> \LT@array=macro:
+[#1]#2->\refstepcounter {table}\stepcounter {LT@tables}\if l#1\LTleft \z@ \LTright \fill \else \if r#1\LTleft \fill \LTright \z@ \else \if c#1\LTleft \fill \LTright \fill \fi \fi \fi \let \LT@mcol \multicolumn \let \LT@@tabarray \@tabarray \let \LT@@hl \hline \def \@tabarray {\let \hline \LT@@hl \LT@@tabarray }\let \\\LT@tabularcr \let \tabularnewline \\\def \newpage {\noalign {\break }}\def \pagebreak {\noalign {\ifnum `}=0\fi \@testopt {\LT@no@pgbk -}4}\def \nopagebreak {\noalign {\ifnum `}=0\fi \@testopt \LT@no@pgbk 4}\let \hline \LT@hline \let \kill \LT@kill \let \caption \LT@caption \@tempdima \ht \strutbox \let \@endpbox \LT@endpbox \ifx \extrarowheight \@undefined \let \@acol \@tabacol \let \@classz \@tabclassz \let \@classiv \@tabclassiv \def \@startpbox {\vtop \LT@startpbox }\let \@@startpbox \@startpbox \let \@@endpbox \@endpbox \let \LT@LL@FM@cr \@tabularcr \else \advance \@tempdima \extrarowheight \col@sep \tabcolsep \let \@startpbox \LT@startpbox \let \LT@LL@FM@cr \@arraycr \fi \setbox \@arstrutbox \hbox {\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@ }\let \@sharp ##\let \protect \relax \begingroup \@mkpream {#2}\xdef \LT@bchunk {\global \advance \c@LT@chunks \@ne \global \LT@rows \z@ \setbox \z@ \vbox \bgroup \LT@setprevdepth \tabskip \LTleft \noexpand \halign to\hsize \bgroup \tabskip \z@ \@arstrut \@preamble \tabskip \LTright \cr }\endgroup \expandafter \LT@nofcols \LT@bchunk &\LT@nofcols \LT@make@row \m@th \let \par \@empty \everycr {}\lineskip \z@ \baselineskip \z@ \LT@bchunk .
+<argument> \LT@array 
+l. ...\ShowCommand\LT@array
+> \LT@start=macro:
+->\let \LT@start \endgraf \endgraf \penalty \z@ \vskip \LTpre \endgraf \ifdim \pagetotal <\pagegoal \else \dimen@ =\pageshrink \advance \dimen@ 1sp \kern \dimen@ \penalty 9999\endgraf \kern -\dimen@ \fi \dimen@ \pagetotal \advance \dimen@ \ht \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \dp \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \ht \LT@foot \edef \LT@reset@vfuzz {\vfuzz \the \vfuzz \vbadness \the \vbadness \relax }\vfuzz \maxdimen \vbadness \@M \setbox \tw@ \copy \z@ \setbox \tw@ \vsplit \tw@ to \ht \@arstrutbox \setbox \tw@ \vbox {\unvbox \tw@ }\LT@reset@vfuzz \advance \dimen@ \ht \ifdim \ht \@arstrutbox >\ht \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ \dp \ifdim \dp \@arstrutbox >\dp \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ -\pagegoal \ifdim \dimen@ >\z@ \vfil \break \else \ifdim \pageshrink >\z@ \pageshrink \z@ \fi \fi \global \@colroom \@colht \ifvoid \LT@foot \else \global \advance \vsize -\ht \LT@foot \global \advance \@colroom -\ht \LT@foot \dimen@ \pagegoal \advance \dimen@ -\ht \LT@foot \pagegoal \dimen@ \maxdepth \z@ \fi \ifvoid \LT@firsthead \copy \LT@head \else \box \LT@firsthead \fi \nobreak \output {\LT@output }.
+<argument> \LT@start 
+l. ...\ShowCommand\LT@start
+> \equation=\long macro:
+->\mathdisplay@push \st@rredfalse \global \@eqnswtrue \mathdisplay {equation}\incr@eqnum \mathopen {}.
+<argument> \equation 
+l. ...\ShowCommand\equation
+> \endequation=\long macro:
+->\endmathdisplay {equation}\mathdisplay@pop \ignorespacesafterend .
+<argument> \endequation 
+l. ...\ShowCommand\endequation
+> \@xfootnotenext=macro:
+[#1]->\begingroup \csname c@\@mpfn \endcsname #1\relax \unrestored@protected@xdef \@thefnmark {\thempfn }\endgroup \@footnotetext .
+<argument> \@xfootnotenext 
+l. ...\ShowCommand\@xfootnotenext
+> \@footnotetext=\long macro:
+#1->\insert \footins {\reset@font \footnotesize \interlinepenalty \interfootnotelinepenalty \splittopskip \footnotesep \splitmaxdepth \dp \strutbox \floatingpenalty \@MM \hsize \columnwidth \@parboxrestore \def \@currentcounter {footnote}\protected@edef \@currentlabel {\csname p@footnote\endcsname \@thefnmark }\color@begingroup \@makefntext {\rule \z@ \footnotesep \ignorespaces #1\@finalstrut \strutbox }\par \color@endgroup }.
+<argument> \@footnotetext 
+l. ...\ShowCommand\@footnotetext
+> \caption=macro:
+->\ifx \@captype \@undefined \@latex@error {\noexpand \caption outside float}\@ehd \expandafter \@gobble \else \refstepcounter \@captype \expandafter \@firstofone \fi {\@dblarg {\@caption \@captype }}.
+<argument> \caption 
+l. ...\ShowCommand\caption
+> \@caption=\long macro:
+#1[#2]#3->\par \addcontentsline {\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{\ignorespaces #2}}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \normalsize \@makecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\par \endgroup .
+<argument> \@caption 
+l. ...\ShowCommand\@caption
+> \addcontentsline=macro:
+#1#2#3->\addtocontents {#1}{\protect \contentsline {#2}{#3}{\thepage }{}\protected@file@percent }.
+<argument> \addcontentsline 
+l. ...\ShowCommand\addcontentsline
+> \@definecounter=macro:
+#1->\expandafter \newcount \csname c@#1\endcsname \setcounter {#1}\z@ \global \expandafter \let \csname cl@#1\endcsname \@empty \@addtoreset {#1}{@ckpt}\global \expandafter \let \csname p@#1\endcsname \@empty \expandafter \gdef \csname the#1\expandafter \endcsname \expandafter {\expandafter \@arabic \csname c@#1\endcsname }.
+<argument> \@definecounter 
+l. ...\ShowCommand\@definecounter
+> \@newctr=macro:
+#1[#2]->\@ifundefined {c@#2}{\@nocounterr {#2}}{\@addtoreset {#1}{#2}}.
+<argument> \@newctr 
+l. ...\ShowCommand\@newctr
+> \Vref@star=robust macro:
+->\@protected@testopt \Vref@star \\Vref@star {}.
+> \\Vref@star=\long macro:
+> default #1=.
+[#1]->\Vrefformat {#1}.
+<recently read> }
+l. ...\ShowCommand\Vref@star
+> \@ssect=macro:
+#1#2#3#4#5->\NR@gettitle {#5}\NR@ssect {#1}{#2}{#3}{#4}{\Sectionformat {#5}{#1}}.
+<argument> \@ssect 
+l. ...\ShowCommand\@ssect
+(nopatch.aux)
+Package rerunfilecheck Info: File `nopatch.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

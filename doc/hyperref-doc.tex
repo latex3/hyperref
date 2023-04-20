@@ -562,7 +562,15 @@ Check the \xpackage{nameref} documentation about a way to suppress these patches
     
 \item[table of contents] hyperref redefines \cs{contentsline} to be able to add links to
 toc entries. It redefines \cs{addcontentsline} to create the bookmarks and pass the 
-destination names to the toc entries. This code can be suppressed by defining \cs{hyper@nopatch@toc}.     
+destination names to the toc entries. This code can be suppressed by defining \cs{hyper@nopatch@toc}.  
+
+\item[captions] hyperref redefines \cs{caption} and \cs{@caption} to insert targets for links.
+This code can be suppressed by defining \cs{hyper@nopatch@caption} (additional helper commands are
+not suppressed). As various packages redefine captions too (e.g. the \xpackage{caption} package)
+side-effects must be carefully tested! 
+ 
+\item[longtable] hyperref redefines \cs{LT@start} and \cs{LT@array} to move the targets in a better place.
+This code can be suppressed by defining \cs{hyper@nopatch@longtable}  
 \end{description}
 
 \section{Package options}

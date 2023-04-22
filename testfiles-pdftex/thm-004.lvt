@@ -1,0 +1,18 @@
+% https://tex.stackexchange.com/q/683581/2388
+% 
+\documentclass[a4paper,12pt]{report}
+\input{regression-test}
+\usepackage{hyperref}
+\usepackage{ntheorem}
+\usepackage{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+
+\begin{document}
+\START\showoutput
+
+\begin{lemma}
+  lemma
+\end{lemma}
+\end{document}

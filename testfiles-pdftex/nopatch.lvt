@@ -13,6 +13,7 @@
 \def\hyper@nopatch@counter{}
 \def\hyper@nopatch@varioref{}
 \def\hyper@nopatch@sectioning{}
+\def\hyper@nopatch@thm{}
 \makeatother
 \usepackage{hyperref}
 \begin{document}
@@ -41,4 +42,6 @@
 \ShowCommand\Vref@star   
 %sectioning
 \ShowCommand\@ssect 
+%
+\ShowCommand\@thm
 \end{document} 

@@ -1,0 +1,84 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line ....
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line ....
+\tf@thm=\write...
+Completed box being shipped out [1]
+\vbox(679.0+0.0)x421.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 18.99626fil
+..\kern 0.0
+..\kern 20.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 29.99626fil
+...\kern 0.0
+...\kern 31.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(679.0+0.0)x421.0
+..\glue 20.0
+..\vbox(659.0+0.0)x390.0, shifted 31.0
+...\vbox(12.0+0.0)x390.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x390.0
+.....\hbox(0.0+0.0)x390.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(592.0+0.0)x390.0, glue set 566.93944fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\pdfdest name{lemma.0.0.1} xyz
+....\write1{\@writefile{thm}{\protect \contentsline {lemma}{{Lemma}{0.0.{1}}{}}{\thepage }{lemma.0.0.1}\protected@file@percent }}
+....\glue(\topskip) 3.66669
+....\hbox(8.33331+0.0)x390.0, glue set 274.94144fil
+.....\hbox(8.23334+0.0)x81.45827
+......\glue 0.0
+......\glue 0.0
+......\glue -5.87494
+......\hbox(8.23334+0.0)x81.45827
+.......\glue 5.87494
+.......\OT1/cmr/bx/n/12 L
+.......\OT1/cmr/bx/n/12 e
+.......\OT1/cmr/bx/n/12 m
+.......\OT1/cmr/bx/n/12 m
+.......\OT1/cmr/bx/n/12 a
+.......\glue 4.5 plus 2.25 minus 1.5
+.......\OT1/cmr/bx/n/12 0
+.......\OT1/cmr/bx/n/12 .
+.......\OT1/cmr/bx/n/12 0
+.......\OT1/cmr/bx/n/12 .
+.......\OT1/cmr/bx/n/12 1
+......\glue 5.87494
+.....\penalty 0
+.....\OT1/cmr/m/it/12 l
+.....\OT1/cmr/m/it/12 e
+.....\OT1/cmr/m/it/12 m
+.....\OT1/cmr/m/it/12 m
+.....\OT1/cmr/m/it/12 a
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -51
+....\glue 13.0 plus 6.0 minus 8.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 22.26668
+...\hbox(7.73332+0.0)x390.0
+....\hbox(7.73332+0.0)x390.0, glue set 192.06253fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/12 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(thm-004.aux)
+Package rerunfilecheck Info: File `thm-004.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

@@ -1,0 +1,42 @@
+% from https://github.com/latex3/hyperref/issues/11
+% 
+\documentclass[a4paper,12pt]{report}
+\input{regression-test}
+\usepackage{
+hyperref,
+ntheorem}
+\usepackage{cleveref}
+\newtheorem{definition}{Definition}[section]
+
+\begin{document}
+
+
+\showoutput\START
+
+\chapter{Too much vspace}
+The user interacts with a proof assistant via a proof script
+in the  folllowing.
+\begin{definition}[proof script]
+  A \emph{proof script} is the sequence of instructions
+  a user gives a proof assistant to prove a statement.
+\end{definition}
+The user interacts with a proof assistant via a proof script
+in the folllowing
+\begin{definition}[proof script]
+  A \emph{proof script} is the sequence of instructions
+  a user gives a proof assistant to prove a statement.
+\end{definition}
+The user interacts with a proof assistant via a proof script
+in the folllowing.
+\begin{definition}[proof script]
+  A \emph{proof script} is the sequence of instructions
+  a user gives a proof assistant to prove a statement.
+\end{definition}
+The user interacts with a proof assistant via a proof script
+in the folllowing
+\begin{definition}[proof script]
+  A \emph{proof script} is the sequence of instructions
+  a user gives a proof assistant to prove a statement.
+\end{definition}
+
+\end{document}

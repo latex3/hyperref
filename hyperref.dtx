@@ -10996,10 +10996,15 @@
       \global\let\@currentHref\Hy@tempa
      }%
   } 
+\@ifundefined{hyper@nopatch@thm}{%  
 \AtBeginDocument{%  
-\ifpatchable\@thm{\refstepcounter}
-  {\patchcmd\@thm{\refstepcounter}{\Hy@theorem@refstepcounter}{}{}}
-  {}}
+ \@ifpackageloaded{cleveref}
+  {\AddToHook{cmd/@thm/before}{\ifhmode\unskip\fi}} 
+  {%
+   \ifpatchable\@thm{\refstepcounter}
+     {\patchcmd\@thm{\refstepcounter}{\Hy@theorem@refstepcounter}{}{}}
+     {}%
+  }}}{}
 %    \end{macrocode}
 %
 % \section{Footnotes}\label{footnotes}

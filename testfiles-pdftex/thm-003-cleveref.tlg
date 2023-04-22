@@ -34,7 +34,7 @@ Completed box being shipped out [1]
 .....\hbox(0.0+0.0)x390.0
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
-...\vbox(592.0+0.0)x390.0, glue set 143.98462fil
+...\vbox(592.0+0.0)x390.0, glue set 155.98334fil
 ....\write-{}
 ....\pdfdest name{Doc-Start} xyz
 ....\write-{}
@@ -185,6 +185,11 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/12 g
 .....\OT1/cmr/m/n/12 .
 .....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -14.5
+.......\pdfdest name{definition.1.0.1} xyz
+.......\penalty 10000
+.....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
@@ -194,11 +199,6 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.16669
 ....\hbox(9.0+3.0)x390.0, glue set - 0.05005
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{definition.1.0.1} xyz
-.......\penalty 10000
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -365,7 +365,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
-....\glue 13.0 plus 6.0 minus 8.0
+....\glue 10.0 plus 4.0 minus 6.0
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.83337
@@ -454,6 +454,11 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/12 n
 .....\OT1/cmr/m/n/12 g
 .....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -14.5
+.......\pdfdest name{definition.1.0.2} xyz
+.......\penalty 10000
+.....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
@@ -463,11 +468,6 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.16669
 ....\hbox(9.0+3.0)x390.0, glue set - 0.05005
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{definition.1.0.2} xyz
-.......\penalty 10000
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -634,7 +634,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
-....\glue 13.0 plus 6.0 minus 8.0
+....\glue 10.0 plus 4.0 minus 6.0
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.83337
@@ -724,6 +724,11 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/12 g
 .....\OT1/cmr/m/n/12 .
 .....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -14.5
+.......\pdfdest name{definition.1.0.3} xyz
+.......\penalty 10000
+.....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
@@ -733,11 +738,6 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.16669
 ....\hbox(9.0+3.0)x390.0, glue set - 0.05005
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{definition.1.0.3} xyz
-.......\penalty 10000
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -904,7 +904,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
-....\glue 13.0 plus 6.0 minus 8.0
+....\glue 10.0 plus 4.0 minus 6.0
 ....\glue(\parskip) 0.0 plus 1.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.83337
@@ -993,6 +993,11 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/12 n
 .....\OT1/cmr/m/n/12 g
 .....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -14.5
+.......\pdfdest name{definition.1.0.4} xyz
+.......\penalty 10000
+.....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
@@ -1002,11 +1007,6 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 3.16669
 ....\hbox(9.0+3.0)x390.0, glue set - 0.05005
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{definition.1.0.4} xyz
-.......\penalty 10000
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -1173,7 +1173,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty -51
-....\glue 13.0 plus 6.0 minus 8.0
+....\glue 10.0 plus 4.0 minus 6.0
 ....\glue -2.33331
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
@@ -1185,6 +1185,6 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/12 1
 .....\glue 0.0 plus 1.0fil
 .\kern 0.0
-(thm-003.aux)
-Package rerunfilecheck Info: File `thm-003.out' has not changed.
+(thm-003-cleveref.aux)
+Package rerunfilecheck Info: File `thm-003-cleveref.out' has not changed.
 (rerunfilecheck)             Checksum: FDD0757A91C70E4B0CE5CD04E27FAE4E;124.

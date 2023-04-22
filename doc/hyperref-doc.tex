@@ -571,6 +571,8 @@ side-effects must be carefully tested!
  
 \item[longtable] hyperref redefines \cs{LT@start} and \cs{LT@array} to move the targets in a better place.
 This code can be suppressed by defining \cs{hyper@nopatch@longtable}  
+
+\item[theorems] hyperref patches \cs{@thm}. This code can be suppressed by defining \cs{hyper@nopatch@thm}   
 \end{description}
 
 \section{Package options}

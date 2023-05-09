@@ -1,3 +1,6 @@
+2023-05-09 Ulrike Fischer
+    * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.
+    
 2023-04-22 Ulrike Fischer
     * fix cleveref/ntheorem incompability https://tex.stackexchange.com/q/683581/2388
     * add nopatch option for \@thm 

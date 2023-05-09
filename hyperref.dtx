@@ -48,7 +48,6 @@
 %<pd1enc>\ProvidesFile{pd1enc.def}
 %<puenc>\ProvidesFile{puenc.def}
 %<puextra>\ProvidesFile{puenc-extra.def}
-%<pugreek>\ProvidesFile{puenc-greekbasic.def}
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
@@ -89,7 +88,6 @@
 %<pd1enc>  Hyperref: PDFDocEncoding definition (HO)]
 %<puenc>      Hyperref: PDF Unicode definition (HO)]
 %<puextra>  Hyperref: PDF Unicode extra definition (HO)]
-%<pugreek>  Hyperref: PDF Unicode definition (greek block) (HO)]
 %<puvnenc>  Hyperref: Additions to puenc.def for VnTeX]
 %<puarenc>  Hyperref: Additions to puenc.def for Arabi]
 %<psdextra>  Hyperref: Additions to PDF string support]
@@ -21732,189 +21730,6 @@
 \input{puenc-greek.def}
 \fi
 %</puenc>
-%<*pugreek>
-% U+0374 GREEK NUMERAL SIGN; numeralsigngreek
-\DeclareTextCommand{\textnumeralsigngreek}{PU}{\83\164}% U+0374
-\DeclareTextCommand{\textdexiakeraia}{PU}{\83\164}% U+0374
-% U+0375 GREEK LOWER NUMERAL SIGN; numeralsignlowergreek
-\DeclareTextCommand{\textnumeralsignlowergreek}{PU}{\83\165}% U+0375
-\DeclareTextCommand{\textaristerikeraia}{PU}{\83\165}% U+0375
-% U+0386 GREEK CAPITAL LETTER ALPHA WITH TONOS; Alphatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textAlpha}{\83\206}% U+0386
-% U+0388 GREEK CAPITAL LETTER EPSILON WITH TONOS; Epsilontonos
-\DeclareTextCompositeCommand{\'}{PU}{\textEpsilon}{\83\210}% U+0388
-% U+0389 GREEK CAPITAL LETTER ETA WITH TONOS; Etatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textEta}{\83\211}% U+0389
-% U+038A GREEK CAPITAL LETTER IOTA WITH TONOS; Iotatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textIota}{\83\212}% U+038A
-% U+038C GREEK CAPITAL LETTER OMICRON WITH TONOS; Omicrontonos
-\DeclareTextCompositeCommand{\'}{PU}{\textOmicron}{\83\214}% U+038C
-% U+038E GREEK CAPITAL LETTER UPSILON WITH TONOS; Upsilontonos
-\DeclareTextCompositeCommand{\'}{PU}{\textUpsilon}{\83\216}% U+038E
-% U+038F GREEK CAPITAL LETTER OMEGA WITH TONOS; Omegatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textOmega}{\83\217}% U+038F
-% U+0390 GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS;
-%   iotadieresistonos
-\DeclareTextCompositeCommand{\'}{PU}{\textIotadieresis}{\83\220}% U+0390
-% U+0391 GREEK CAPITAL LETTER ALPHA; Alpha
-\DeclareTextCommand{\textAlpha}{PU}{\83\221}% U+0391
-% U+0392 GREEK CAPITAL LETTER BETA; Beta
-\DeclareTextCommand{\textBeta}{PU}{\83\222}% U+0392
-% U+0393 GREEK CAPITAL LETTER GAMMA; Gamma; \Gamma (LaTeX)
-\DeclareTextCommand{\textGamma}{PU}{\83\223}%* U+0393
-% U+0394 GREEK CAPITAL LETTER DELTA; Deltagreek, *Delta; \Delta (LaTeX)
-\DeclareTextCommand{\textDelta}{PU}{\83\224}%* U+0394
-% U+0395 GREEK CAPITAL LETTER EPSILON; Epsilon
-\DeclareTextCommand{\textEpsilon}{PU}{\83\225}% U+0395
-% U+0396 GREEK CAPITAL LETTER ZETA; Zeta
-\DeclareTextCommand{\textZeta}{PU}{\83\226}% U+0396
-% U+0397 GREEK CAPITAL LETTER ETA; Eta
-\DeclareTextCommand{\textEta}{PU}{\83\227}% U+0397
-% U+0398 GREEK CAPITAL LETTER THETA; Theta; \Theta (LaTeX)
-\DeclareTextCommand{\textTheta}{PU}{\83\230}%* U+0398
-% U+0399 GREEK CAPITAL LETTER IOTA; Iota
-\DeclareTextCommand{\textIota}{PU}{\83\231}% U+0399
-% U+039A GREEK CAPITAL LETTER KAPPA; Kappa
-\DeclareTextCommand{\textKappa}{PU}{\83\232}% U+039A
-% U+039B GREEK CAPITAL LETTER LAMDA; Lambda; \Lambda (LaTeX)
-\DeclareTextCommand{\textLambda}{PU}{\83\233}%* U+039B
-% U+039C GREEK CAPITAL LETTER MU; Mu
-\DeclareTextCommand{\textMu}{PU}{\83\234}% U+039C
-% U+039D GREEK CAPITAL LETTER NU; Nu
-\DeclareTextCommand{\textNu}{PU}{\83\235}% U+039D
-% U+039E GREEK CAPITAL LETTER XI; Xi; \Xi (LaTeX)
-\DeclareTextCommand{\textXi}{PU}{\83\236}%* U+039E
-% U+039F GREEK CAPITAL LETTER OMICRON; Omicron
-\DeclareTextCommand{\textOmicron}{PU}{\83\237}% U+039F
-% U+03A0 GREEK CAPITAL LETTER PI; Pi
-\DeclareTextCommand{\textPi}{PU}{\83\240}%* U+03A0
-% U+03A1 GREEK CAPITAL LETTER RHO; Rho
-\DeclareTextCommand{\textRho}{PU}{\83\241}% U+03A1
-% U+03A3 GREEK CAPITAL LETTER SIGMA; Sigma; \Sigma (LaTeX)
-\DeclareTextCommand{\textSigma}{PU}{\83\243}%* U+03A3
-% U+03A4 GREEK CAPITAL LETTER TAU; Tau
-\DeclareTextCommand{\textTau}{PU}{\83\244}% U+03A4
-% U+03A5 GREEK CAPITAL LETTER UPSILON; Upsilon; \Upsilon (LaTeX)
-\DeclareTextCommand{\textUpsilon}{PU}{\83\245}%* U+03A5
-% U+03A6 GREEK CAPITAL LETTER PHI; Phi; \Phi (LaTeX)
-\DeclareTextCommand{\textPhi}{PU}{\83\246}%* U+03A6
-% U+03A7 GREEK CAPITAL LETTER CHI; Chi
-\DeclareTextCommand{\textChi}{PU}{\83\247}% U+03A7
-% U+03A8 GREEK CAPITAL LETTER PSI; Psi; \Psi (LaTeX)
-\DeclareTextCommand{\textPsi}{PU}{\83\250}%* U+03A8
-% U+03A9 GREEK CAPITAL LETTER OMEGA; Omegagreek, *Omega;
-%   \Omega (LaTeX)
-\DeclareTextCommand{\textOmega}{PU}{\83\251}%* U+03A9
-% U+03AA GREEK CAPITAL LETTER IOTA WITH DIALYTIKA; Iotadieresis
-\DeclareTextCommand{\textIotadieresis}{PU}{\83\252}% U+03AA
-\DeclareTextCompositeCommand{\"}{PU}{\textIota}{\83\252}% U+03AA
-% U+03AB GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA; Upsilondieresis
-\DeclareTextCompositeCommand{\"}{PU}{\textUpsilon}{\83\253}% U+03AB
-% U+03AC GREEK SMALL LETTER ALPHA WITH TONOS; alphatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textalpha}{\83\254}%* U+03AC
-% U+03AD GREEK SMALL LETTER EPSILON WITH TONOS; epsilontonos
-\DeclareTextCompositeCommand{\'}{PU}{\textepsilon}{\83\255}% U+03AD
-% U+03AE GREEK SMALL LETTER ETA WITH TONOS; etatonos
-\DeclareTextCompositeCommand{\'}{PU}{\texteta}{\83\256}% U+03AE
-% U+03AF GREEK SMALL LETTER IOTA WITH TONOS; iotatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textiota}{\83\257}% U+03AF
-% U+03B0 GREEK SMALL LETTER UPSILON WITH DIALYTIKA
-%   AND TONOS; upsilondieresisto
-\DeclareTextCompositeCommand{\"}{PU}{\textupsilonacute}{\83\260}% U+03B0
-% U+03B1 GREEK SMALL LETTER ALPHA; alpha; \alpha (LaTeX)
-\DeclareTextCommand{\textalpha}{PU}{\83\261}%* U+03B1
-% U+03B2 GREEK SMALL LETTER BETA; beta; \beta (LaTeX)
-\DeclareTextCommand{\textbeta}{PU}{\83\262}%* U+03B2
-% U+03B3 GREEK SMALL LETTER GAMMA; gamma; \gamma (LaTeX)
-\DeclareTextCommand{\textgamma}{PU}{\83\263}%* U+03B3
-% U+03B4 GREEK SMALL LETTER DELTA; delta; \delta (LaTeX)
-\DeclareTextCommand{\textdelta}{PU}{\83\264}%* U+03B4
-% U+03B5 GREEK SMALL LETTER EPSILON; epsilon; \epsilon (LaTeX)
-\DeclareTextCommand{\textepsilon}{PU}{\83\265}%* U+03B5
-% U+03B6 GREEK SMALL LETTER ZETA; zeta; \zeta (LaTeX)
-\DeclareTextCommand{\textzeta}{PU}{\83\266}%* U+03B6
-% U+03B7 GREEK SMALL LETTER ETA; eta; \eta (LaTeX)
-\DeclareTextCommand{\texteta}{PU}{\83\267}%* U+03B7
-% U+03B8 GREEK SMALL LETTER THETA; theta; \theta (LaTeX)
-\DeclareTextCommand{\texttheta}{PU}{\83\270}%* U+03B8
-% U+03B9 GREEK SMALL LETTER IOTA; iota; \iota (LaTeX)
-\DeclareTextCommand{\textiota}{PU}{\83\271}%* U+03B9
-% U+03BA GREEK SMALL LETTER KAPPA; kappa; \kappa (LaTeX)
-\DeclareTextCommand{\textkappa}{PU}{\83\272}%* U+03BA
-% U+03BB GREEK SMALL LETTER LAMDA; lambda; \lambda (LaTeX)
-\DeclareTextCommand{\textlambda}{PU}{\83\273}%* U+03BB
-% U+03BC GREEK SMALL LETTER MU; mugreek, *mu; \mu (LaTeX)
-\DeclareTextCommand{\textmugreek}{PU}{\83\274}%* U+03BC
-% U+03BD GREEK SMALL LETTER NU; nu; \nu (LaTeX)
-\DeclareTextCommand{\textnu}{PU}{\83\275}%* U+03BD
-% U+03BE GREEK SMALL LETTER XI; xi; \xi (LaTeX)
-\DeclareTextCommand{\textxi}{PU}{\83\276}%* U+03BE
-% U+03BF GREEK SMALL LETTER OMICRON; omicron
-\DeclareTextCommand{\textomicron}{PU}{\83\277}% U+03BF
-% U+03C0 GREEK SMALL LETTER PI; pi; \pi (LaTeX)
-\DeclareTextCommand{\textpi}{PU}{\83\300}%* U+03C0
-% U+03C1 GREEK SMALL LETTER RHO; rho; \rho (LaTeX)
-\DeclareTextCommand{\textrho}{PU}{\83\301}%* U+03C1
-% U+03C2 GREEK SMALL LETTER FINAL SIGMA; *sigma1, sigmafinal
-\DeclareTextCommand{\textvarsigma}{PU}{\83\302}%* U+03C2
-% U+03C3 GREEK SMALL LETTER SIGMA; sigma; \sigma (LaTeX)
-\DeclareTextCommand{\textsigma}{PU}{\83\303}%* U+03C3
-% U+03C4 GREEK SMALL LETTER TAU; tau; \tau (LaTeX)
-\DeclareTextCommand{\texttau}{PU}{\83\304}%* U+03C4
-% U+03C5 GREEK SMALL LETTER UPSILON; upsilon; \upsilon (LaTeX)
-\DeclareTextCommand{\textupsilon}{PU}{\83\305}%* U+03C5
-% U+03C6 GREEK SMALL LETTER PHI; phi; \phi (LaTeX)
-\DeclareTextCommand{\textphi}{PU}{\83\306}%* U+03C6
-% U+03C7 GREEK SMALL LETTER CHI; chi; \chi (LaTeX)
-\DeclareTextCommand{\textchi}{PU}{\83\307}%* U+03C7
-% U+03C8 GREEK SMALL LETTER PSI; psi; \psi (LaTeX)
-\DeclareTextCommand{\textpsi}{PU}{\83\310}%* U+03C8
-% U+03C9 GREEK SMALL LETTER OMEGA; omega; \omega (LaTeX)
-\DeclareTextCommand{\textomega}{PU}{\83\311}%* U+03C9
-% U+03CA GREEK SMALL LETTER IOTA WITH DIALYTIKA; iotadieresis
-\DeclareTextCompositeCommand{\"}{PU}{\textiota}{\83\312}% U+03CA
-% U+03CB GREEK SMALL LETTER UPSILON WITH DIALYTIKA; upsilondieresis
-\DeclareTextCompositeCommand{\"}{PU}{\textupsilon}{\83\313}% U+03CB
-% U+03CC GREEK SMALL LETTER OMICRON WITH TONOS; omicrontonos
-\DeclareTextCompositeCommand{\'}{PU}{\textomicron}{\83\314}% U+03CC
-% U+03CD GREEK SMALL LETTER UPSILON WITH TONOS; upsilontonos
-\DeclareTextCommand{\textupsilonacute}{PU}{\83\315}% U+03CD
-\DeclareTextCompositeCommand{\'}{PU}{\textupsilon}{\83\315}% U+03CD
-% U+03CE GREEK SMALL LETTER OMEGA WITH TONOS; omegatonos
-\DeclareTextCompositeCommand{\'}{PU}{\textomega}{\83\316}% U+03CE
-% U+03D8 GREEK LETTER ARCHAIC KOPPA;
-\DeclareTextCommand{\textQoppa}{PU}{\83\330}% U+03D8
-% U+03D9 GREEK SMALL LETTER ARCHAIC KOPPA;
-\DeclareTextCommand{\textqoppa}{PU}{\83\331}% U+03D9
-% U+03DA GREEK LETTER STIGMA; Stigmagreek
-\DeclareTextCommand{\textStigmagreek}{PU}{\83\332}% U+03DA
-\DeclareTextCommand{\textStigma}{PU}{\83\332}% U+03DA
-% U+03DB GREEK SMALL LETTER STIGMA
-\DeclareTextCommand{\textstigmagreek}{PU}{\83\333}% U+03DB
-\DeclareTextCommand{\textstigma}{PU}{\83\333}% U+03DB
-% U+03DC GREEK LETTER DIGAMMA; Digammagreek
-\DeclareTextCommand{\textDigammagreek}{PU}{\83\334}% U+03DC
-\DeclareTextCommand{\textDigamma}{PU}{\83\334}% U+03DC
-% U+03DD GREEK SMALL LETTER DIGAMMA
-\DeclareTextCommand{\textdigammagreek}{PU}{\83\335}% U+03DD
-\DeclareTextCommand{\textdigamma}{PU}{\83\335}% U+03DD
-%* \textdigammagreek -> \digamma (AmS)
-% U+03DE GREEK LETTER KOPPA; Koppagreek
-\DeclareTextCommand{\textKoppa}{PU}{\83\336}% U+03DE
-\DeclareTextCommand{\textKoppagreek}{PU}{\83\336}% U+03DE
-% U+03DF GREEK SMALL LETTER KOPPA
-\DeclareTextCommand{\textkoppa}{PU}{\83\337}% U+03DF
-\DeclareTextCommand{\textkoppagreek}{PU}{\83\337}% U+03DF
-% U+03E0 GREEK LETTER SAMPI; Sampigreek
-\DeclareTextCommand{\textSampigreek}{PU}{\83\340}% U+03E0
-\DeclareTextCommand{\textSampi}{PU}{\83\340}% U+03E0
-% U+03E1 GREEK SMALL LETTER SAMPI
-\DeclareTextCommand{\textsampigreek}{PU}{\83\341}% U+03E1
-\DeclareTextCommand{\textsampi}{PU}{\83\341}% U+03E1
-% U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL;
-%   \backepsilon (AmS)
-\DeclareTextCommand{\textbackepsilon}{PU}{\83\366}% U+03F6
-%</pugreek>
 %    \end{macrocode}
 %
 % \subsubsection{Cyrillic: U+0400 to U+04FF}

@@ -1,0 +1,11 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage[psdextra]{hyperref}
+
+\begin{document}
+\START
+\showoutput \textkappa
+
+\section{Math like $\kappa$ is not fine here}
+$\kappa$ is fine here.
+\end{document}

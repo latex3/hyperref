@@ -1,0 +1,128 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+! LaTeX Error: Command \textkappa unavailable in encoding OT1.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+l. ...\showoutput \textkappa
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line ....
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 518.04192fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\pdfdest name{section.1} xyz
+....\glue(\topskip) 0.00002
+....\hbox(9.99998+0.0)x345.0, glue set 127.06868fil
+.....\hbox(9.27998+0.0)x24.29997
+......\glue 0.0
+......\OT1/cmr/bx/n/14.4 1
+......\glue 16.19998
+.....\OT1/cmr/bx/n/14.4 M
+.....\OT1/cmr/bx/n/14.4 a
+.....\OT1/cmr/bx/n/14.4 t
+.....\OT1/cmr/bx/n/14.4 h
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\OT1/cmr/bx/n/14.4 l
+.....\OT1/cmr/bx/n/14.4 i
+.....\OT1/cmr/bx/n/14.4 k
+.....\kern-0.45001
+.....\OT1/cmr/bx/n/14.4 e
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\mathon
+.....\OML/cmm/m/it/14.4 ^^T
+.....\mathoff
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\OT1/cmr/bx/n/14.4 i
+.....\OT1/cmr/bx/n/14.4 s
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\OT1/cmr/bx/n/14.4 n
+.....\OT1/cmr/bx/n/14.4 o
+.....\OT1/cmr/bx/n/14.4 t
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\OT1/cmr/bx/n/14.4 ^^L (ligature fi)
+.....\OT1/cmr/bx/n/14.4 n
+.....\OT1/cmr/bx/n/14.4 e
+.....\glue 5.4 plus 2.7 minus 1.79999
+.....\OT1/cmr/bx/n/14.4 h
+.....\OT1/cmr/bx/n/14.4 e
+.....\OT1/cmr/bx/n/14.4 r
+.....\OT1/cmr/bx/n/14.4 e
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000M\000a\000t\000h\000\040\000l\000i\000k\000e\000\040\003\272\000\040\000i\000s\000\040\000n\000o\000t\000\040\000f\000i\000n\000e\000\040\000h\000e\000r\000e}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}Math like $\kappa $ is not fine here}{\thepage }{section.1}\protected@file@percent }}
+....\penalty 10000
+....\glue 9.90276 plus 0.86108
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.05556
+....\hbox(6.94444+0.0)x345.0, glue set 285.8217fil
+.....\mathon
+.....\OML/cmm/m/it/10 ^^T
+.....\mathoff
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 i
+.....\OT1/cmr/m/n/10 s
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 ^^L (ligature fi)
+.....\OT1/cmr/m/n/10 n
+.....\OT1/cmr/m/n/10 e
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 h
+.....\OT1/cmr/m/n/10 e
+.....\OT1/cmr/m/n/10 r
+.....\OT1/cmr/m/n/10 e
+.....\OT1/cmr/m/n/10 .
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(psdextra-greek.aux)
+Package rerunfilecheck Info: File `psdextra-greek.out' has not changed.
+(rerunfilecheck)             Checksum: 2B67F8311EE4E270F4104AB009831DFD;204.

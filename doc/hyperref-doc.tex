@@ -510,7 +510,7 @@ the patches and to offer interfaces to suppress them in a more granular way.
 \begin{description}
 \item[sectioning commands]
 \begin{itemize}
-\item hyperref patches \cs{@sect}, \cs{@ssect}, \cs{@chapter}, \cs{@schapter},
+\item \xpackage{hyperref} patches \cs{@sect}, \cs{@ssect}, \cs{@chapter}, \cs{@schapter},
 \cs{@part}, \cs{@spart}.
 
 \item It adds to the starred commands a target for a link (with the
@@ -532,9 +532,9 @@ to add commands to store the title text in \cs{@currentlabelname}.
 Check the \xpackage{nameref} documentation about a way to suppress these patches.
 \end{itemize}
 
-\item[footnotes] To enable (partly) the linking of footnotes hyperref redefines or patches various commands, in part package dependant.
+\item[footnotes] To enable (partly) the linking of footnotes \xpackage{hyperref} redefines or patches various commands, in part package dependant.
 \begin{itemize}
-\item hyperref redefines \cs{@xfootnotenext}, \cs{@xfootnotemark}, \cs{@mpfootnotetext},
+\item \xpackage{hyperref} redefines \cs{@xfootnotenext}, \cs{@xfootnotemark}, \cs{@mpfootnotetext},
     \cs{@footnotetext}, \cs{@footnotemark}.
     If \xpackage{tabularx} is loaded it changes \cs{TX@endtabularx}. If \xpackage{longtable} is loaded it changes \cs{LT@p@ftntext}.
     If \xpackage{fancyvfb} is loaded it redefines \cs{V@@footnotetext}. It also redefines \cs{footref} and \cs{maketitle}.
@@ -542,13 +542,13 @@ Check the \xpackage{nameref} documentation about a way to suppress these patches
 \item \emph{All} those redefinitions can be suppressed by defining \cs{hyper@nopatch@footnote}. Be aware that this can suppress links but also make unwanted links appear.
 \end{itemize}
 
-\item[amsmath tags] hyperref redefines two internal commands of amsmath 
+\item[amsmath tags] \xpackage{hyperref} redefines two internal commands of amsmath 
     related the \cs{tag} command to add an anchor. This code can be 
     suppressed by defining \cs{hyper@nopatch@amsmath@tag}. (This normally 
     makes no sense in packages but will probably be needed when math 
     environments are changed to allow tagging.) 
    
-\item[counters] hyperref patches the kernel command \cs{@definecounter}, 
+\item[counters] \xpackage{hyperref} patches the kernel command \cs{@definecounter}, 
     \cs{@newctr}, \cs{@addtoreset} and the amsmath command \cs{numberwithin} 
     to ensure that for every counter the correct \cs{theHcounter} 
     representation is created or reset. This code can be suppressed by 
@@ -556,23 +556,26 @@ Check the \xpackage{nameref} documentation about a way to suppress these patches
     packages but will probably be needed when kernel commands are changed 
     to allow tagging.)  
     
-\item[math environments] hyperref patches \cs{equation}/\cs{endequation}, \cs{eqnarray},    
+\item[math environments] \xpackage{hyperref} patches \cs{equation}/\cs{endequation}, \cs{eqnarray},    
     \cs{endeqnarray}. This code can be suppressed by 
     defining \cs{hyper@nopatch@mathenv}. 
     
-\item[table of contents] hyperref redefines \cs{contentsline} to be able to add links to
+\item[table of contents] \xpackage{hyperref} redefines \cs{contentsline} to be able to add links to
 toc entries. It redefines \cs{addcontentsline} to create the bookmarks and pass the 
 destination names to the toc entries. This code can be suppressed by defining \cs{hyper@nopatch@toc}.  
 
-\item[captions] hyperref redefines \cs{caption} and \cs{@caption} to insert targets for links.
+\item[captions] \xpackage{hyperref} redefines \cs{caption} and \cs{@caption} to insert targets for links.
 This code can be suppressed by defining \cs{hyper@nopatch@caption} (additional helper commands are
 not suppressed). As various packages redefine captions too (e.g. the \xpackage{caption} package)
 side-effects must be carefully tested! 
  
-\item[longtable] hyperref redefines \cs{LT@start} and \cs{LT@array} to move the targets in a better place.
+\item[longtable] \xpackage{hyperref} redefines \cs{LT@start} and \cs{LT@array} to move the targets in a better place.
 This code can be suppressed by defining \cs{hyper@nopatch@longtable}  
 
-\item[theorems] hyperref patches \cs{@thm}. This code can be suppressed by defining \cs{hyper@nopatch@thm}   
+\item[theorems] \xpackage{hyperref} patches \cs{@thm}. This code can be suppressed by defining \cs{hyper@nopatch@thm}  
+
+\item[citations and bibliography] If \xpackage{natbib} is not loaded \xpackage{hyperref} redefines \cs{bibcite},
+\cs{@lbibitem}  and \cs{@bibitem}. These redefinitions can be suppressed by defining \cs{hyper@nopatch@bib}.
 \end{description}
 
 \section{Package options}
@@ -589,7 +592,7 @@ Note however that some options (for example \texttt{unicode}) can only be used a
 package options, and not in \verb|\hypersetup| as the option settings are processed
 as the package is read. The following tabular lists (hopefully all) these options.
 Be aware that some of the option do nothing or have
-changed behaviour if the new pdfmanagement and so the new generic hyperref driver is used.
+changed behaviour if the new pdfmanagement and so the new generic \xpackage{hyperref} driver is used.
 
 \begin{tabular}{>{\ttfamily}l>{\raggedright\arraybackslash}p{5cm}}
 option     & remark \\\hline
@@ -628,7 +631,7 @@ colorlinks=true}
 \end{verbatim}
 
 \item	A global option in the file, which is passed down to
-\textsf{hyperref}:
+\xpackage{hyperref}:
 
 \begin{verbatim}
 \documentclass[dvips]{article}
@@ -833,7 +836,7 @@ plainpages     & boolean & false & Forces page anchors to be named by the Arabic
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
                                simply the base line of contained text; this options forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
-breaklinks & boolean & both & This option is in hyperref only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
+breaklinks & boolean & both & This option is in \xpackage{hyperref} only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
 checks the state of the boolean.\\
 pageanchor & boolean & true  & Determines whether every page is given an implicit anchor at the top left corner. If this
                                is turned off, \verb|\printindex| will not contain
@@ -867,16 +870,16 @@ because driver \textsf{dvips} provides much more features than
 \begin{longtable}{@{}>{\ttfamily}lp{.8\hsize}@{}}
 driverfallback & Its value is used as driver option\\
             & if the driver is not given or autodetected.\\
-dvipdfm     & Sets up \textsf{hyperref} for use with the \textsf{dvipdfm} driver.\\
-dvipdfmx    & Sets up \textsf{hyperref} for use with the \textsf{dvipdfmx} driver.\\
-dvips       & Sets up \textsf{hyperref} for use with the \textsf{dvips} driver. \\
-dvipsone    & Sets up \textsf{hyperref} for use with the \textsf{dvipsone} driver. \\
-dviwindo    & Sets up \textsf{hyperref} for use with the \textsf{dviwindo} Windows previewer. \\
-hypertex    & Sets up \textsf{hyperref} for use with the Hyper\TeX-compliant drivers. \\
+dvipdfm     & Sets up \xpackage{hyperref} for use with the \textsf{dvipdfm} driver.\\
+dvipdfmx    & Sets up \xpackage{hyperref} for use with the \textsf{dvipdfmx} driver.\\
+dvips       & Sets up \xpackage{hyperref} for use with the \textsf{dvips} driver. \\
+dvipsone    & Sets up \xpackage{hyperref} for use with the \textsf{dvipsone} driver. \\
+dviwindo    & Sets up \xpackage{hyperref} for use with the \textsf{dviwindo} Windows previewer. \\
+hypertex    & Sets up \xpackage{hyperref} for use with the Hyper\TeX-compliant drivers. \\
 latex2html  & Redefines a few macros for compatibility with \textsf{latex2html}. \\
 nativepdf   & An alias for \textsf{dvips} \\
 pdfmark     & An alias for \textsf{dvips} \\
-pdftex      & Sets up \textsf{hyperref} for use with the \textsf{pdftex} program.\\
+pdftex      & Sets up \xpackage{hyperref} for use with the \textsf{pdftex} program.\\
 ps2pdf      & Redefines a few macros for compatibility with
               Ghostscript's PDF writer, otherwise identical to
               \textsf{dvips}. \\
@@ -960,7 +963,7 @@ CJKbookmarks       & boolean   & false   &
     supports both normal and preprocessed mode of the \xpackage{CJK} package;
     during the creation of bookmarks, it simply replaces CJK's macros
     with special versions which expand to the corresponding character
-    codes.  Note that without the `unicode' option of hyperref you get
+    codes.  Note that without the `unicode' option of \xpackage{hyperref} you get
     PDF files which actually violate the PDF specification because
     non-Unicode character codes are used -- some PDF readers localized
     for CJK languages (most notably Acroread itself) support this.
@@ -1090,7 +1093,7 @@ is bp and the origin is in the lower left corner. See also
 pdf\TeX\
 works by supplying default values for \texttt{XYZ} (horizontal $\times$
 vertical $\times$ zoom) and \texttt{FitBH}. However, drivers using
-\texttt{pdfmark} do not supply defaults, so \textsf{hyperref} passes in
+\texttt{pdfmark} do not supply defaults, so \xpackage{hyperref} passes in
 a value of -32768, which causes Acrobat to set (usually) sensible
 defaults. The following are possible values for the \texttt{pdfview},
 \texttt{pdfstartview} and \texttt{pdfremotestartview} parameters.
@@ -1176,7 +1179,7 @@ Example:
 \subsection{Big alphabetical list}
 
 The following is a complete listing of available options for
-\textsf{hyperref}, arranged alphabetically.
+\xpackage{hyperref}, arranged alphabetically.
 
 \begin{longtable}{@{}>{\ttfamily}llp{7cm}@{}}
 allbordercolors    &                        & Set all border color options\\
@@ -1312,7 +1315,7 @@ must be a full URL (relative to the base URL, if that is defined). The
 special characters \# and \%{} do \emph{not} need to be escaped in any
 way (unless the command is used in the argument of another command).
 
-The optional argument \emph{options} recognizes the hyperref options
+The optional argument \emph{options} recognizes the \xpackage{hyperref} options
 \texttt{pdfremotestartview}, \texttt{pdfnewwindow} and the following
 key value options:
 \begin{description}
@@ -1454,14 +1457,14 @@ bigger target to click for hyperlinks (e.g.\ `section 2' instead of
 merely the number `2').
 
 The label is worked out from the context of the original \verb|\label|
-command by \textsf{hyperref} by using the macros listed below (shown
+command by \xpackage{hyperref} by using the macros listed below (shown
 with their default values). The macros can be (re)defined in documents
 using \verb|\(re)newcommand|; note that some of these macros are already
 defined in the standard document classes. The mixture of lowercase and
 uppercase initial letters is deliberate and corresponds to the author's
 practice.
 
-For each macro below, \textsf{hyperref} checks \ci{*autorefname} before
+For each macro below, \xpackage{hyperref} checks \ci{*autorefname} before
 \ci{*name}.  For instance, it looks for \ci{figureautorefname} before
 \ci{figurename}.
 
@@ -1591,7 +1594,7 @@ definitions and redefinitions are made in a group to keep them local:
 
 In addition, parentheses are protected to avoid the danger of unsafe
 unbalanced parentheses in the PDF string. For further details, see Heiko
-Oberdiek's Euro\TeX\ paper distributed with \textsf{hyperref}.
+Oberdiek's Euro\TeX\ paper distributed with \xpackage{hyperref}.
 
 \begin{cmdsyntax}
 \ci{begin}\verb|{NoHyper}|\ldots\ci{end}\verb|{NoHyper}|
@@ -1606,7 +1609,7 @@ Oberdiek's Euro\TeX\ paper distributed with \textsf{hyperref}.
 
 \subsubsection{Setting bookmarks}
 
-Usually \textsf{hyperref} automatically adds bookmarks for
+Usually \xpackage{hyperref} automatically adds bookmarks for
 \verb|\section| and similar macros. But they can also set manually.
 
 \begin{cmdsyntax}
@@ -1634,7 +1637,7 @@ creates a bookmark below the current bookmark level. However after the
 command the current bookmark level has not changed.
 
 \noindent \textbf{Hint:} Package \textsf{bookmark} replaces
-\textsf{hyperref}'s bookmark organization by a new algorithm:
+\xpackage{hyperref}'s bookmark organization by a new algorithm:
 \begin{itemize}
 \item Usually only one \LaTeX\ run is needed.
 \item More control over the bookmark appearance (color, font).
@@ -1645,7 +1648,7 @@ Therefore I recommend using this package.
 
 \subsubsection{Replacement macros}\label{sec:texorpdfstring}
 
-\textsf{hyperref} takes the text for bookmarks from the arguments of
+\xpackage{hyperref} takes the text for bookmarks from the arguments of
 commands like \ci{section}, which can contain things like math, colors,
 or font changes, none of which will display in bookmarks as is.
 
@@ -1886,7 +1889,7 @@ an anchor name which can be referenced with a bookmark command.
 \begin{verbatim}
  \IfHyperBooleanExists{OPTION}{YES}{NO}
 \end{verbatim}
-  If a hyperref OPTION is a boolean, that means it takes values
+  If a \xpackage{hyperref} OPTION is a boolean, that means it takes values
   `true' or `false', then \verb|\IfHyperBooleanExists| calls YES, otherwise NO.
 
 
@@ -1900,7 +1903,7 @@ an anchor name which can be referenced with a bookmark command.
 
  Both macros are expandable. Additionally option `stoppedearly' is
   available. It is enabled if \verb|\MaybeStopEarly| or \verb|\MaybeStopNow|
-  end hyperref prematurely.
+  end \xpackage{hyperref} prematurely.
 
 
 \subsection{\textbackslash unichar}
@@ -1908,7 +1911,7 @@ an anchor name which can be referenced with a bookmark command.
  If a Unicode character is not supported by puenc.def, it can
   be given by using \verb|\unichar|. Its name and syntax is inherited
   from package `ucs'. However it is defined independently for
-  use in hyperref's \verb|\pdfstringdef| (that converts arbitrary
+  use in \xpackage{hyperref}'s \verb|\pdfstringdef| (that converts arbitrary
   TeX code to PDF strings or tries to do this).
 
 
@@ -1961,7 +1964,7 @@ an anchor name which can be referenced with a bookmark command.
   an acute, but a hook. However standard LaTeX does not provide
   such an accent.
 
-    Now we can extend the definition to support hyperref.
+    Now we can extend the definition to support \xpackage{hyperref}.
   The first and the last word are already supported automatically.
   Characters with two or more accents are a difficult business in
   LaTeX, because the NFSS2 macros of the LaTeX kernel do not support
@@ -2005,7 +2008,7 @@ an anchor name which can be referenced with a bookmark command.
 
 
 
- For hyperlink support in the index, hyperref inserts \verb|\hyperpage|
+ For hyperlink support in the index, \xpackage{hyperref} inserts \verb|\hyperpage|
   into the index macros. After processing with Makeindex, \verb|\hyperpage|
   analyzes its argument to detect page ranges and page comma lists.
   However, only the standard settings are supported directly:
@@ -2056,8 +2059,8 @@ an anchor name which can be referenced with a bookmark command.
 \subsection{Option `pdfa'}
 
  The new option `pdfa' tries to avoid violations of PDF/A in code
-  generated by hyperref. However, the result is usually not in PDF/A,
-  because many features aren't controlled by hyperref (XMP metadata,
+  generated by \xpackage{hyperref}. However, the result is usually not in PDF/A,
+  because many features aren't controlled by \xpackage{hyperref} (XMP metadata,
   fonts, colors, driver dependend low level stuff, ...).
 
 
@@ -2075,7 +2078,7 @@ an anchor name which can be referenced with a bookmark command.
    \item Trigger events (additional actions) [PDF/A 6.6.2]
    \item Push button (because of JavaScript)
    \item Interactive Forms: Flag NeedAppearances is the default `false'
-      (Because of this, hyperref's implementation of Forms looks ugly).
+      (Because of this, \xpackage{hyperref}'s implementation of Forms looks ugly).
       [PDF/A 6.9]
   \end{itemize}
 \end{itemize}
@@ -2083,7 +2086,7 @@ an anchor name which can be referenced with a bookmark command.
 
 
  The default value of the new option `pdfa' is `false'. It influences
-  the loading of the package and cannot be changed after hyperref is
+  the loading of the package and cannot be changed after \xpackage{hyperref} is
   loaded (\verb|\usepackage{hyperref}|).
 
 
@@ -2292,7 +2295,7 @@ an anchor name which can be referenced with a bookmark command.
 
 \subsection{Option pdfusetitle}
 
- If option pdfusetitle is set then hyperref tries to
+ If option pdfusetitle is set then \xpackage{hyperref} tries to
   derive the values for pdftitle and pdfauthor from
   \verb|\title| and \verb|\author|. An optional argument for \verb|\title| and
   \verb|\author| is supported (class amsart).
@@ -2351,14 +2354,14 @@ an anchor name which can be referenced with a bookmark command.
   distinguishes three cases:
 \begin{itemize}
  \item \xoption{bookmarksdepth} without value
-     Then hyperref uses the current value of counter \xoption{tocdepth}.
+     Then \xpackage{hyperref} uses the current value of counter \xoption{tocdepth}.
      This is the compatible behaviour and the default.
  \item \verb"bookmarksdepth=<number>", the value is number (also negative):
     The depth for the bookmarks are set to this number.
  \item \verb"bookmarksdepth=<name>"
     The <name> is a document division name (part, chapter, ...).
     It must not start with a digit or minus to avoid mixing up
-    with the number case. Internally hyperref uses the value
+    with the number case. Internally \xpackage{hyperref} uses the value
     of macro \verb|\toclevel@<name>|.
   Examples:
 \begin{verbatim}
@@ -2398,12 +2401,12 @@ an anchor name which can be referenced with a bookmark command.
 \subsection{Default driver setting}
 
  (hyperref $\ge$ 6.72s)
-  If no driver is given, hyperref tries its best to guess the
+  If no driver is given, \xpackage{hyperref} tries its best to guess the
   most suitable driver. Thus it loads \xoption{hpdftex}, if pdfTeX is
   detected running in PDF mode. Or it loads the corresponding
   VTeX driver for VTeX's working modes.
     Unhappily many driver programs run after the TeX compiler,
-  so hyperref does not have a chance (dvips, dvipdfm, ...).
+  so \xpackage{hyperref} does not have a chance (dvips, dvipdfm, ...).
   In this case driver \xoption{hypertex} is loaded that supports the
   HyperTeX features that are recognized by xdvi for example.
   This behaviour, however, can easily be changed in the configuration
@@ -2415,7 +2418,7 @@ an anchor name which can be referenced with a bookmark command.
 \begin{verbatim}
     \providecommand*{\Hy@defaultdriver}{hypertex}
 \end{verbatim}
-  for the default behaviour of hyperref.
+  for the default behaviour of \xpackage{hyperref}.
 
  See also the new option `driverfallback'.
 
@@ -2756,7 +2759,7 @@ width           & dimen   &       & width of field box
 \end{longtable}
 
 \section{Defining a new driver}
-A hyperref driver has to provide definitions for eight macros:
+A \xpackage{hyperref} driver has to provide definitions for eight macros:
 
 \smallskip
 \noindent 1. \verb|\hyper@anchor|
@@ -2857,8 +2860,8 @@ Currently only package loading orders are available:
 
 \subsubsection{arydshln, longtable}
 
- Package longtable must be put before hyperref and arydshln,
-  hyperref after arydshln generates an error, thus the
+ Package \xpackage{longtable} must be put before \xpackage{hyperref} and \xpackage{arydshln},
+ \xpackage{hyperref} after \xpackage{arydshln} generates an error, thus the
   resulting package order is then:
 
 \begin{verbatim}
@@ -2906,14 +2909,14 @@ Currently only package loading orders are available:
 
 \subsubsection{bigfoot}
 
- Hyperref does not support package `bigfoot'. And package
-  `bigfoot' does not support hyperref's footnotes and disables
+ \xpackage{hyperref} does not support package \xpackage{bigfoot}. And package
+  \xpackage{bigfoot} does not support \xpackage{hyperref}'s footnotes and disables
   them (hyperfootnotes=false).
 
 
 \subsubsection{chappg}
 
- Package `chappg' uses \verb|\@addtoreset| that is redefined by `hyperref'.
+ Package \xpacakge{chappg} uses \verb|\@addtoreset| that is redefined by \xpackage{hyperref}.
   The package order is therefore:
 
 \begin{verbatim}
@@ -2924,7 +2927,7 @@ Currently only package loading orders are available:
 \subsubsection{cite}
 
  This is from Mike Shell:
- cite.sty cannot currently be used with hyperref.
+ cite.sty cannot currently be used with \xpackage{hyperref}.
  However, I can do a workaround via:
 
 \begin{verbatim}
@@ -2935,7 +2938,7 @@ Currently only package loading orders are available:
  \usepackage[hypertex]{hyperref}
 \end{verbatim}
 
- so that hyperref will not redefine any of the biblabel stuff - so cite.sty
+ so that \xpackage{hyperref} will not redefine any of the biblabel stuff - so cite.sty
  will work as normal - although the citations will not be hyperlinked, of
  course (But this may not be an issue for many people).
 
@@ -2973,7 +2976,7 @@ Currently only package loading orders are available:
 \subsubsection{ellipsis}
 
  This packages redefines \verb|\textellipsis|
-  after package hyperref (pd1enc.def/puenc.def should be loaded before):
+  after package \xpackage{hyperref} (pd1enc.def/puenc.def should be loaded before):
 \begin{verbatim}
   \usepackage{hyperref}
   \usepackage{ellipsis}
@@ -2997,16 +3000,16 @@ Currently only package loading orders are available:
 
 \subsubsection{foiltex}
  Update to version 2008/01/28 v2.1.4b:
-  Since version 6.77a hyperref does not hack into \verb|\@begindvi|,
+  Since version 6.77a \xpackage{hyperref} does not hack into \verb|\@begindvi|,
   it uses package `atbegshi' instead, that hooks into \verb|\shipout|.
-  Thus the patch of `foils.cls' regarding hyperref is now obsolete
+  Thus the patch of `foils.cls' regarding \xpackage{hyperref} is now obsolete
   and causes an undefined error message about \verb|\@hyperfixhead|.
   This is fixed in FoilTeX 2.1.4b.
 
 
 \subsubsection{footnote}
 
- This package is not supported, you have to disable hyperref's footnote
+ This package is not supported, you have to disable \xpackage{hyperref}'s footnote
   support by using option \verb"hyperfootnotes=false".
 
 
@@ -3080,17 +3083,17 @@ Currently only package loading orders are available:
 
 
 
- Both `mathenv' and `hyperref' messes around with
-  environment `eqnarray'. You can load `mathenv' after
-  `hyperref' to avoid an error message. But \verb|\label|
-  will not work inside environment `eqnarray' properly,
+ Both \xpackage{mathenv} and \xpackage{hyperref} messes around with
+  environment \texttt{eqnarray}. You can load \xpackage{mathenv} after
+  \xpackage{hyperref} to avoid an error message. But \verb|\label|
+  will not work inside environment \texttt{eqnarray} properly,
   for example.
 
 
 \subsubsection{minitoc-hyper}
 
  This package is obsolete, use the up-to-date original
-  package minitoc instead.
+  package \xpackage{minitoc} instead.
 
 
 
@@ -3115,7 +3118,7 @@ Example for introducing links for the page numbers:
 
 \subsubsection{ntheorem-hyper}
  This package is obsolete, use the up-to-date original
-  package ntheorem instead.
+  package \xpackage{ntheorem} instead.
 
 
 For equations the following might work:
@@ -3172,15 +3175,15 @@ or \xpackage{subcaption}
 
 \subsubsection{tabularx}
 
- Linked footnotes are not supported inside environment `tabularx',
+ Linked footnotes are not supported inside environment \texttt{tabularx},
   because they uses the optional argument of \verb|\footnotetext|, see
   section `Limitations'. Before version 2011/09/28 6.82i
-  hyperref had disabled footnotes entirely by `hyperfootnotes=false'.
+ \xpackage{hyperref} had disabled footnotes entirely by \texttt{hyperfootnotes=false}.
 
 
 \subsubsection{titlesec}
 
- \xpackage{nameref} supports titlesec, but hyperref does not
+ \xpackage{nameref} supports \xpackage{titlesec}, but \xpackage{hyperref} does not
   (unsolved is the anchor setting, missing with unnumbered
   section, perhaps problems with page breaks with numbered ones).
 
@@ -3208,10 +3211,10 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
  longer recommended.
 
 \subsubsection{varioref}
- There are too many problems with varioref. Nobody has time to
+ There are too many problems with \xpackage{varioref}. Nobody has time to
   sort them out. Therefore this package is now unsupported.
 
- Perhaps you are lucky and some of the features of varioref works
+ Perhaps you are lucky and some of the features of \xpackage{varioref} works
   with the following loading order:
 \begin{verbatim}
     \usepackage{nameref}
@@ -3221,8 +3224,8 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 
 
  Also some babel versions can be problematic. For example,
-  2005/05/21 v3.8g contains a patch for varioref that breaks
-  the hyperref support for varioref.
+  2005/05/21 v3.8g contains a patch for \xpackage{varioref} that breaks
+  the \xpackage{hyperref} support for \xpackage{varioref}.
 
 
  Also unsupported:
@@ -3234,7 +3237,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 
 \subsubsection{verse}
 
- Version 2005/08/22 v2.22 contains support for hyperref.
+ Version 2005/08/22 v2.22 contains support for \xpackage{hyperref}.
 
   For older versions see example from
   de.comp.text.tex (2005/08/11, slightly modified):
@@ -3298,7 +3301,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
  if the string restricts to the printable ASCII set,
  The reason is that the \verb|\special| does not support PDFDocEncoding.
 
- In older versions hyperref contained special conversion code from
+ In older versions \xpackage{hyperref} contained special conversion code from
  UTF-16BE back to UTF-8 in a number of places for
  xetex to avoid the xdvipdfmx warning
 
@@ -3355,7 +3358,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
   \verb|\footnotemark| to \verb|\footnotetext| is not as strong as \verb|\ref| to \verb|\label|.
   Therefore it is not clear in general which \verb|\footnotemark| references
   which \verb|\footnotetext|. But that is necessary to implement hyperlinking.
-  Thus the implementation of hyperref does not support the optional
+  Thus the implementation of \xpackage{hyperref} does not support the optional
   argument of \verb|\footnotemark| and \verb|\footnotetext|.
 
 
@@ -3369,7 +3372,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 \begin{verbatim}
     \usepackage[pdfborder=0 0 1]{hyperref}
 \end{verbatim}
-  Package hyperref now gets
+  Package \xpackage{hyperref} now gets
 \begin{verbatim}
     pdfborder=001
 \end{verbatim}
@@ -3394,11 +3397,11 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 
 \subsection{Index with makeindex}
 \begin{itemize}
- \item Package hyperref adds \verb|\hyperpage| commands by the encap
+ \item Package \xpackage{hyperref} adds \verb|\hyperpage| commands by the encap
     mechanism (see documentation of Makeindex),
     if option hyperindex is set (default).
     \verb|\hyperpage| uses the page anchors that are set by
-    hyperref at each page (default). However in the
+ \xpackage{hyperref} at each page (default). However in the
     default case page numbers are used in anchor names
     in arabic form. If the page numbers in other formats
     are used (book class with \verb|\frontmatter|, \verb|\romannumbering|, ...),
@@ -3406,7 +3409,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
     \verb"plainpages=false" is recommended.
  \item The encap mechanism of Makeindex allows to use one command only
     (see documentation of Makeindex).
-    If the user sets such a command, hyperref suppresses its
+    If the user sets such a command, \xpackage{hyperref} suppresses its
     \verb|\hyperpage| command. With logical markup this situation
     can easily be solved:
 \begin{verbatim}
@@ -3425,7 +3428,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
       \usepackage[encap=?]{hyperref}
 \end{verbatim}
   \item Another possibility is the insertion of \verb|\hyperpage| by
-    a style file for makeindex. For this case, hyperref's
+    a style file for makeindex. For this case, \xpackage{hyperref}'s
     insertion will be disabled by \verb"hyperindex=false".
     \verb|\hyperpage| will be defined regardless of setting of hyperindex.
 \begin{verbatim}
@@ -3454,7 +3457,7 @@ encap_suffix "}"
 \subsection{Link anchors in figures}
 
  The caption command increments the counter and here is the
-  place where hyperref set the corresponding anchor. Unhappily
+  place where \xpackage{hyperref} set the corresponding anchor. Unhappily
   the caption is set below the figure, so the figure is not
   visible if a link jumps to a figure.
     In this case, try package \xpackage{hypcap} that implements
@@ -3492,7 +3495,7 @@ Support for additional unicode characters:
     1EA1 -> \036\241
 \end{verbatim}
 
- 4. Transform into a form understood by hyperref:
+ 4. Transform into a form understood by \xpackage{hyperref}:
 
     Hyperref must know where the first byte starts,
     this is marked by \verb"9" (8 and 9 cannot occur in
@@ -3526,7 +3529,7 @@ Support for additional unicode characters:
 
  The footnote support is rather limited. It is beyond the scope
   to use \verb|\footnotemark| and \verb|\footnotetext| out of order or reusing
-  \verb|\footnotemark|. Here you can either disable hyperref's footnote
+  \verb|\footnotemark|. Here you can either disable \xpackage{hyperref}'s footnote
   support by \verb"hyperfootnotes=false" or fiddle with internal macros,
   nasty examples:
 
@@ -3587,16 +3590,16 @@ C%
   might be numbered within chapters or \verb|\newtheorem| is used with
   an optional counter argument. Internally LaTeX uses \verb|\@addtoreset|
   to reset a counter in dependency to another counter. Package
-  hyperref hooks into \verb|\@addtoreset| to catch this situation.
-  Also \verb|\numberwithin| of package amsmath is caught by hyperref.
+ \xpackage{hyperref} hooks into \verb|\@addtoreset| to catch this situation.
+  Also \verb|\numberwithin| of package amsmath is caught by \xpackage{hyperref}.
 
 
 
  However, if the definition of subordinate counters take place
-  before hyperref is loaded, the old meaning of \verb|\@addtoreset| is
-  called without hyperref's additions. Then the companion counter
+  before \xpackage{hyperref} is loaded, the old meaning of \verb|\@addtoreset| is
+  called without \xpackage{hyperref}'s additions. Then the companion counter
   macro \verb|\theH<counter>| can be redefined accordingly. Or move the
-  definition of subordinate counters after hyperref is loaded.
+  definition of subordinate counters after \xpackage{hyperref} is loaded.
 
  Example for \verb|\newtheorem|, problematic case:
 \begin{verbatim}
@@ -3644,7 +3647,7 @@ the changes needed for \textsf{dvipdf}, and \Hologo{HanTheThanh} supplied all th
 information needed for \textsf{pdftex}. Patrick Daly kindly updated his
 \xpackage{natbib} package to allow easy integration with
 \xpackage{hyperref}. Michael Mehlich's \xpackage{hyper} package (developed
-in parallel with \textsf{hyperref}) showed me solutions for some
+in parallel with \xpackage{hyperref}) showed me solutions for some
 problems. Hopefully the two packages will combine one day.
 
 The forms creation section owes a great deal to: T.\ V.\ Raman, for

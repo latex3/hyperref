@@ -61,7 +61,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{xr-hyper}
-         [2023-04-22 v7.00x eXternal References (DPC)]
+         [2023-05-13 v7.00x eXternal References (DPC)]
 
 \def\externaldocument{\@testopt\XR@cite{}}
 \let\externalcitedocument\externaldocument
@@ -92,6 +92,35 @@
 \long\def\@secondofthree#1#2#3{#2}
 \long\def\@thirdofthree #1#2#3{#3}
 
+% 2023-05-13 we need to handle \newlabel's with two arguments differently
+% to \newlabel's with three argument. For this we count the values of the first
+% \newlabel of an aux-file.
+% By default we assume five arguments as that will be the case in future LaTeX
+\ExplSyntaxOn
+\def\XR@HYPcompargs{}
+\newcommand\XR@testnewlabel[1]{}
+\cs_new_protected:Npn\XR@testnewlabel@aux #1
+ {
+   \cs_set_eq:NN \XR@testnewlabel \use_none:n
+   \int_compare:nNnT{\tl_count:n{#1}}={2}
+    {
+      \def\XR@HYPcompargs{{}{}{}} 
+    }  
+ }
+\ExplSyntaxOff 
+% we also have to ensure that hyperref doesn't remove the empty braces again
+\AddToHook{package/hyperref/after}
+ {
+   \def\XR@@dURL#1#2#3#4#5\\{%
+     {#1}{#2}%
+     \if!#4!%
+      {#3}{#4}{}% new perhaps this could use \XR@URL too?
+     \else
+      {#3}{#4}{\XR@URL}%
+    \fi
+  }%
+ } 
+
 \def\XR@explist{\expandafter\XR@next\XR@list\\}
 \def\XR@loop#1{%
 \openin\@inputcheck#1\relax
@@ -100,19 +129,14 @@
     \expandafter\XR@aux
   \else
     \PackageInfo{xr}{IMPORTING LABELS FROM #1}%
+    \let\XR@testnewlabel\XR@testnewlabel@aux
     \expandafter\XR@read\fi}
 \def\XR@read{%
   \read\@inputcheck to\XR@line
   \expandafter\XR@test\XR@line...\XR@}
 % 2019 update to match xr
-% 2020 don't extend r@-arguments if hyperref has been detected in the source
-% newlabel has already the right number of arguments
-\def\XR@HYPcompargs{{}{}{}}
 \long\def\XR@test#1#2#3#4\XR@{%
   \let\XR@tempa\@gobblethree
-  \ifx#1\HyperFirstAtBeginDocument
-    \def\XR@HYPcompargs{}%
-  \fi
   \ifx#1\newlabel
     \let\XR@tempa\@firstofthree
   \else\ifx#1\XR@bibcite
@@ -121,7 +145,9 @@
      \let\XR@tempa\@thirdofthree
   \fi\fi\fi
    \XR@tempa
-    {\expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}\XR@HYPcompargs}}%
+    {\XR@testnewlabel{#3}%
+     \expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}\XR@HYPcompargs}%     
+    }%
     {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
     {\edef\XR@list{\XR@list\filename@area#2\relax}}%
   \ifeof\@inputcheck\expandafter\XR@aux

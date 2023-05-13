@@ -220,7 +220,8 @@
 \RequirePackage{ltxcmds}[2009/12/12]
 %    \end{macrocode}
 %
-% We redefine |\label| so that it also writes the name of the
+% In formats older than 2023-06-01 
+% we redefine |\label| so that it also writes the name of the
 % current section to the .aux file; if the name ends in a dot,
 % we zap it. To allow for the \xpackage{hyperref} package, also write
 % fourth and fifth fields (empty by default;
@@ -269,57 +270,72 @@
   \endgroup
 }{}
 %    \end{macrocode}
-%    \end{macro}
+%    \end{macro}   
 %    \begin{macro}{\label@hook}
+% Starting with LaTeX 2023-06-01 it is not longer needed to 
+% redefine \cs{label} as the kernel provides a hook and  
+% stores \cs{@currentlabelname}. We still support
+% \cs{label@hook} for now as it is used below in \cs{slabel}
+% and also in hyperref.    
 %    \begin{macrocode}
 \providecommand*{\label@hook}{}
 \ltx@GlobalAppendToMacro{\label@hook}{%
-  \NR@sanitize@labelname
-}
+    \NR@sanitize@labelname
+    }
+\@ifl@t@r\fmtversion{2023-06-01}
+  {
+    \AddToHookWithArguments{label}{\def\label@name{#1}\label@hook}
+  }
+  {
+    
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\label}
 %    \begin{macrocode}
-\def\label#1{%
-  \@bsphack
-  \begingroup
-    \def\label@name{#1}%
-    \label@hook
-    \protected@write\@auxout{}{%
-      \string\newlabel{#1}{%
-        {\@currentlabel}%
-        {\thepage}%
-        {\@currentlabelname}%
-        {\@currentHref}{}%
-      }%
-    }%
-  \endgroup
-  \@esphack
-}%
-\ifNR@showkeys
-  \def\label#1{%
-    \@bsphack
-    \SK@\SK@@label{#1}%
-    \begingroup
-      \def\label@name{#1}%
-      \label@hook
-      \protected@write\@auxout{}{%
-        \string\newlabel{#1}{%
-          {\@currentlabel}%
-          {\thepage}%
-          {\@currentlabelname}%
-          {\@currentHref}{}%
+    \def\label#1{%
+      \@bsphack
+      \begingroup
+        \def\label@name{#1}%
+        \label@hook
+        \protected@write\@auxout{}{%
+          \string\newlabel{#1}{%
+            {\@currentlabel}%
+            {\thepage}%
+            {\@currentlabelname}%
+            {\@currentHref}{}%
+          }%
         }%
+      \endgroup
+      \@esphack
+    }%
+    \ifNR@showkeys
+      \def\label#1{%
+        \@bsphack
+        \SK@\SK@@label{#1}%
+        \begingroup
+          \def\label@name{#1}%
+          \label@hook
+          \protected@write\@auxout{}{%
+            \string\newlabel{#1}{%
+              {\@currentlabel}%
+              {\thepage}%
+              {\@currentlabelname}%
+              {\@currentHref}{}%
+            }%
+          }%
+        \endgroup
+        \@esphack
       }%
-    \endgroup
-    \@esphack
-  }%
-\fi
+    \fi
+  }
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\ltx@label}
+%  Starting with LaTeX 2023-06-01 it is not longer needed to update the
+%  amsmath command \cs{ltx@label} as nameref no longer changes \cs{label} 
 %    \begin{macrocode}
-\let\ltx@label\label
+\@ifl@t@r\fmtversion{2023-06-01}
+  {}{\let\ltx@label\label}
 %    \end{macrocode}
 %    \end{macro}
 % Needed for the \emph{subeqnarray} package.

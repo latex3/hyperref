@@ -109,8 +109,10 @@
  }
 \ExplSyntaxOff 
 % we also have to ensure that hyperref doesn't remove the empty braces again
+% %  or that \XR@HYPcompargs adds more
 \AddToHook{package/hyperref/after}
  {
+   \def\XR@addURL#1\XR@HYPcompargs{\XR@@dURL#1{}{}{}{}\\}
    \def\XR@@dURL#1#2#3#4#5\\{%
      {#1}{#2}%
      \if!#4!%

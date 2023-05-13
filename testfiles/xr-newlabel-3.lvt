@@ -19,10 +19,11 @@
 \newlabel{IIIa}{{1.1}{1}{title}{section.title}{}}
 \end{filecontents}
 \usepackage{xr-hyper}
-
 \externaldocument{test-aux1}
 \externaldocument{test-aux2}
 \externaldocument{test-aux3}
+\usepackage{hyperref}
+
 \begin{document}
 \START \showoutput
 

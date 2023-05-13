@@ -1,5 +1,6 @@
 \documentclass{book}
 \input{regression-test}
+
 \begin{filecontents}[force]{test-aux1.aux}
 % aux-file with five arguments
 \newlabel{Ia}{{1.1}{1}{}{}{}}
@@ -19,7 +20,7 @@
 \newlabel{IIIa}{{1.1}{1}{title}{section.title}{}}
 \end{filecontents}
 \usepackage{xr-hyper}
-
+\usepackage{hyperref}
 \externaldocument{test-aux1}
 \externaldocument{test-aux2}
 \externaldocument{test-aux3}

@@ -4246,27 +4246,14 @@
 %    \end{macrocode}
 %
 % \subsection{Package xr and xr-hyper}
-%    The beta version of xr that supports \cmd{\XR@addURL} is called
-%    \verb|xr-hyper|. Therefore we test for the macro itself and not
-%    for the package name:
-%    \begin{macrocode}
-\ltx@IfUndefined{XR@addURL}{%
-}{%
-%    \end{macrocode}
+%  
+% The beta version of xr that supports \cmd{\XR@addURL} is called
+% \verb|xr-hyper|. 
 % If reading external aux files check whether they have a non zero
 % fourth field in |\newlabel| and if so, add the URL as the fifth field.
-%    \begin{macrocode}
-  \def\XR@addURL#1{\XR@@dURL#1{}{}{}{}\\}%
-  \def\XR@@dURL#1#2#3#4#5\\{%
-    {#1}{#2}%
-    \if!#4!%
-    \else
-      {#3}{#4}{\XR@URL}%
-    \fi
-  }%
-}
-%    \end{macrocode}
+% Change 2023-05-14: xr-hyper adds the field.
 %
+% 
 %    \begin{macrocode}
 \def\Hy@true{true}
 \def\Hy@false{false}

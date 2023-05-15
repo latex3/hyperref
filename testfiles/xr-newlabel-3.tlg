@@ -27,7 +27,7 @@ l. ... \show\r@IIa \show\r@IIb \show\r@IIbspecial
 ->{1.3}{1}{}{}{}.
 l. ......\show\r@IIb \show\r@IIbspecial \show\r@IIc
 > \r@IIIa=macro:
-->{1.1}{1}{title}{section.title}{test-aux3.dvi}.
+->{1.1}{1}{title}{section.title}{test-aux3.pdf}.
 l. ... \show\r@IIIa
 Completed box being shipped out [1]
 \vbox(627.36243+0.0)x380.0
@@ -62,7 +62,7 @@ Completed box being shipped out [1]
 ....\glue(\topskip) 3.55556
 ....\hbox(6.44444+0.0)x345.0, glue set 317.22218fil
 .....\hbox(0.0+0.0)x15.0
-.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 1 1]} action user{/Subtype/Link/A<</Type/Action/S/URI/URI(test-aux3.dvi#section.title)>>}
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 .5 .5]} action user{/Subtype/Link/A<</F(test-aux3.pdf)/S/GoToR/D(section.title)>>}
 .....\OT1/cmr/m/n/10 1
 .....\OT1/cmr/m/n/10 .
 .....\OT1/cmr/m/n/10 1

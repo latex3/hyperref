@@ -2,34 +2,33 @@ This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 > \r@Ia=macro:
 ->{1.1}{1}{}{}{}.
-l. ...\makeatletter \show\r@Ia
-                              \show\r@Ib \show\r@Icfail \show\r@IIa \show\r@IIb
+l. ... \show\r@Ia
+                 \show\r@Ib \show\r@Icspecial
 > \r@Ib=macro:
 ->{1.2}{1}{}{}{}.
-l. ...\makeatletter \show\r@Ia \show\r@Ib
-                                         \show\r@Icfail \show\r@IIa \show\r@IIb
-> \r@Icfail=macro:
-->{1.3}{1}.
-l. ......etter \show\r@Ia \show\r@Ib \show\r@Icfail
-                                                   \show\r@IIa \show\r@IIb
+l. ... \show\r@Ia \show\r@Ib
+                            \show\r@Icspecial
+> \r@Icspecial=macro:
+->{1.3}{1}{}{}{}.
+l. ... \show\r@Ia \show\r@Ib \show\r@Icspecial
 > \r@IIa=macro:
 ->{1.1}{1}{}{}{}.
-l. ......r@Ia \show\r@Ib \show\r@Icfail \show\r@IIa
-                                                   \show\r@IIb
+l. ... \show\r@IIa
+                  \show\r@IIb \show\r@IIbspecial \show\r@IIc
 > \r@IIb=macro:
 ->{1.2}{1}{}{}{}.
-l. ......@Ib \show\r@Icfail \show\r@IIa \show\r@IIb
-> \r@IIbfail=macro:
-->{1.2}{1}{}{}{}{}{}{}.
-l. ...\show\r@IIbfail
-                     \show\r@IIc \show\r@IIIa
+l. ... \show\r@IIa \show\r@IIb
+                              \show\r@IIbspecial \show\r@IIc
+> \r@IIbspecial=macro:
+->{1.2}{1}{}{}{}.
+l. ... \show\r@IIa \show\r@IIb \show\r@IIbspecial
+                                                 \show\r@IIc
 > \r@IIc=macro:
 ->{1.3}{1}{}{}{}.
-l. ...\show\r@IIbfail \show\r@IIc
-                                 \show\r@IIIa
+l. ......\show\r@IIb \show\r@IIbspecial \show\r@IIc
 > \r@IIIa=macro:
-->{1.1}{1}{title}{section.title}{}.
-l. ...\show\r@IIbfail \show\r@IIc \show\r@IIIa
+->{1.1}{1}{title}{section.title}{test-aux3.dvi}.
+l. ... \show\r@IIIa
 Completed box being shipped out [1]
 \vbox(627.36243+0.0)x380.0
 .\glue 22.0
@@ -45,7 +44,7 @@ Completed box being shipped out [1]
 ..\vbox(550.0+0.0)x345.0, glue set 540.0fil
 ...\write-{}
 ...\glue(\topskip) 3.05556
-...\hbox(6.94444+0.0)x345.0, glue set 248.83316fil
+...\hbox(6.94444+0.0)x345.0, glue set 192.1108fil
 ....\hbox(0.0+0.0)x15.0
 ....\OT1/cmr/m/n/10 1
 ....\OT1/cmr/m/n/10 .
@@ -68,6 +67,20 @@ Completed box being shipped out [1]
 ....\OT1/cmr/m/n/10 t
 ....\OT1/cmr/m/n/10 l
 ....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 e
+....\OT1/cmr/m/n/10 s
+....\OT1/cmr/m/n/10 t
+....\OT1/cmr/m/n/10 -
+....\discretionary
+....\OT1/cmr/m/n/10 a
+....\OT1/cmr/m/n/10 u
+....\OT1/cmr/m/n/10 x
+....\OT1/cmr/m/n/10 3
+....\OT1/cmr/m/n/10 .
+....\OT1/cmr/m/n/10 d
+....\OT1/cmr/m/n/10 v
+....\OT1/cmr/m/n/10 i
 ....\hbox(0.0+0.0)x0.0
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil

@@ -18,6 +18,10 @@
 % aux-file with five arguments and destinations
 \newlabel{IIIa}{{1.1}{1}{title}{section.title}{}}
 \end{filecontents}
+
+\usepackage{hyperref} % 
+
+% xr-hyper after hyperref
 \usepackage{xr-hyper}
 
 \externaldocument{test-aux1}
@@ -33,6 +37,9 @@
  
  \show\r@IIIa 
 
-%This prints the fourth and fifth argument in older LaTeX but works in newer
+% should work fine because of hyperref
 \ref{IIIa}
 \end{document}
+
+
+

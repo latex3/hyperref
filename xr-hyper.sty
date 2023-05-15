@@ -16,18 +16,14 @@
 %% which must be somewhere on TeX's input path.
 %% Some packages (eg hyperref) really need to know the location of the
 %% final document rather than the aux file. By default this is assumed
-%% to be `document.dvi'. A package may redefine the command \XR@ext to
-%% change this default extension (eg some of the hyperref backends
-%% define this to be `document.pdf'). However sometimes the final
+%% to be `document.pdf'. A package may redefine the command \XR@ext to
+%% change this default extension. However sometimes the final
 %% document may be in a position unrelated to the aux file, or the
 %% browser may not be able to find files at an arbitrary point in
 %% TeX's input path, so the new final optional argument allows a full
 %% URL to the final document to be specified.
 %%
-%% \externaldocument{file}[http://here.xxx.edu/this/path/to/file.dvi]
-%%
-%% Unless a package redefines \XR@addfile, the optional URL argument
-%% will be ignored.
+%% \externaldocument{file}[http://here.xxx.edu/this/path/to/file.pdf]
 %%
 %% Version beta2 also added another improvement unrelated
 %% to the hyperref support. Olivier Michel pointed out that
@@ -137,26 +133,8 @@
   \ifeof\@inputcheck\expandafter\XR@aux
   \else\expandafter\XR@read\fi}
 
-\providecommand*{\XR@addURL}[1]{#1}
-% The above definition doesn't actually use the URL, hyperref 6 could
-% make a definition like so to put the URL in the fifth field of its
-% ref structure.
 
-\@ifpackageloaded{hyperref}{%
-  \PackageWarningNoLine{xr-hyper}{Load package `hyperref' after `xr-hyper'}%
-}{}
-
-%\def\XR@addURL#1{\XR@@dURL#1{}{}{}{}\\}
-
-%\def\XR@@dURL#1#2#3#4#5\\{%
-%  {#1}{#2}%
-%  \if!#4!%
-%  \else
-%    {#3}{#4}{\XR@URL}%
-%  \fi
-%}
-
-\providecommand\XR@ext{dvi}
+\providecommand\XR@ext{pdf}
 
 \endinput
 %%
@@ -179,4 +157,8 @@
 %% 2020-05-14 v7.00e
 %%   add additional braces to \r@ only if hyperref is not detected in the aux
 %%   of the source document (https://github.com/latex3/hyperref/issues/118)
-%%
+%% 
+%% 2023-05-15 v.7.00z
+%%  unified and simplified the brace handling: all defined references have now
+%%  five brace groups. Together with the planed change in LaTeX 2023-06-01 this
+%%  will improve the combination of hyperref/non-hyperref documents.

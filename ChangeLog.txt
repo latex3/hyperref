@@ -1,9 +1,10 @@
-2023-05-09 Ulrike Fischer
+2023-05-16 Ulrike Fischer
     * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.
     * xr-hyper: unified and simplified the brace handling: all defined references have now
       five brace groups. Together with the planed change in LaTeX 2023-06-01 this
       will improve the combination of hyperref/non-hyperref documents and allow to merge with xr
     * xr-hyper: changed default extension from dvi to pdf  
+    * nameref: adapt label (re)definition to changes in LaTeX 2023-06-01
     
 2023-04-22 Ulrike Fischer
     * fix cleveref/ntheorem incompability https://tex.stackexchange.com/q/683581/2388

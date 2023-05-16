@@ -75,7 +75,7 @@ checkengines = {"pdftex","etex","luatex"}
 
 -- for dev testing
 -- checkengines = {"pdftex","pdftexdev","etex","luatex"}
-checkengines = {"pdftex","pdftexdev"}
+-- checkengines = {"pdftex","pdftexdev"}
 
 -- temp settings disable checks while testing ctan build
 -- testfiledir= "disabled"

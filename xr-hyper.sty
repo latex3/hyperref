@@ -73,6 +73,7 @@
    \else
      \let\XR@bibcite\bibcite
    \fi
+  \def\XR@useURL{}%  
   \def\XR@URL{#4}%
   \filename@parse{#3}%
   \XR@next#3.aux\relax\\}}
@@ -97,7 +98,7 @@
      \if!#4!%
       {#3}{#4}{}% new perhaps this could use \XR@URL too?
      \else
-      {#3}{#4}{\XR@URL}%
+      {#3}{#4}{\XR@useURL}%
     \fi
   }%
 
@@ -117,6 +118,11 @@
 % 2019 update to match xr
 \long\def\XR@test#1#2#3#4\XR@{%
   \let\XR@tempa\@gobblethree
+% we set the file name only if the target has actually destinations.
+% for this we test if hyperref has been used.  
+  \ifx#1\HyperFirstAtBeginDocument
+    \let\XR@useURL\XR@URL
+  \fi
   \ifx#1\newlabel
     \let\XR@tempa\@firstofthree
   \else\ifx#1\XR@bibcite
@@ -125,7 +131,7 @@
      \let\XR@tempa\@thirdofthree
   \fi\fi\fi
    \XR@tempa
-    {%\XR@testnewlabel{#3}%
+    {%
      \expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}}%     
     }%
     {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%

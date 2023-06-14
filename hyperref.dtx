@@ -10416,7 +10416,12 @@
 % that the hyper stuff is not executed twice, so we use the AMS
 % |\ifmeasuring@|, initialized if AMS math is not used.
 %    \begin{macrocode}
-\@ifpackageloaded{amsmath}{}{\newif\ifmeasuring@\measuring@false}
+\newcommand\Hy@ifnotmeasuring[1]{#1}
+\AddToHook{package/amsmath/after}
+ {
+   \renewcommand\Hy@ifnotmeasuring[1]
+    {\ifmeasuring@ \else #1\fi}
+ }
 %    \end{macrocode}
 %
 %    \begin{macro}{\hyper@refstepcounter}
@@ -10424,12 +10429,10 @@
 \def\hyper@refstepcounter#1{%
   \HyCnt@ProvideTheHCounter{#1}%
   \hyper@makecurrent{#1}%
-  \ifmeasuring@
-  \else
-    \Hy@raisedlink{%
+  \Hy@ifnotmeasuring
+   {\Hy@raisedlink{%
       \hyper@anchorstart{\@currentHref}\hyper@anchorend
-    }%
-  \fi
+    }}%  
 }
 %    \end{macrocode}
 %    \end{macro}
@@ -10797,9 +10800,11 @@
 % Overload equation, temporarily reverting to original
 % |\refstepcounter|. If, however, it is in AMS math, we do not
 % do anything, as the tag mechanism is used there (see section \ref{ams}).
-% The exception is that we move the equation incrementation inside
-% the math environment to avoid specials outside and a wrong vertical
-% spacing of equation environments.
+% change 2023-06-14: previously hyperref contained code that moved
+% the equation incrementation inside the math environment to 
+% avoid specials outside and a wrong vertical spacing of equation environments. 
+% Since 2021/08/24 this code is now in amsmath directly and so has been removed here.
+% 
 % This and more math related patches can be suppressed with 
 % |\hyper@nopatch@mathenv|
 %    \begin{macrocode}
@@ -10807,29 +10812,17 @@
 \let\H@equation\equation
 \let\H@endequation\endequation
 %    \end{macrocode}
-%
+% 
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@mathenv}{%
-  \@ifpackageloaded{amsmath}{%
-    \long\def\Hy@temp{%
-      \incr@eqnum
-      \mathdisplay@push
-      \st@rredfalse \global\@eqnswtrue
-      \mathdisplay{equation}%
-    }%
-    \ifx\Hy@temp\equation
-      \expandafter\ifx\csname if@fleqn\expandafter\endcsname
-                      \csname iftrue\endcsname
-      \else
-        \long\def\equation{%
-          \mathdisplay@push
-          \st@rredfalse \global\@eqnswtrue
-          \mathdisplay{equation}%
-          \incr@eqnum
-        }%
-      \fi
-    \fi
-  }{%
+%    \end{macrocode}
+% If amsmath was loaded before the following does nothing.
+% If amsmath is loaded later it will overwrite the definition again,
+% which is what is wanted here. 
+% If it is not loaded the new definition of equation
+% will be used.
+%    \begin{macrocode}
+  \@ifpackageloaded{amsmath}{}{%
     \def\equation{%
       \let\refstepcounter\H@refstepcounter
       \H@equation
@@ -10942,18 +10935,23 @@
 %    \end{macrocode}
 %
 % Support for amsmath's \texttt{subequations}:
+% change 2023-06-14: we use hooks to no longer depend on 
+% amsmath being loaded before hyperref.
+% Once amsmath sets the theH-representation itself this
+% can go completely.
 %    \begin{macrocode}
-\ifcsname subequations\endcsname
-  \let\HyOrg@subequations\subequations
-  \def\subequations{%
+\AddToHook{cmd/subequations/before}
+ {%
     \stepcounter{equation}%
     \protected@edef\theHparentequation{\theHequation}%
     \addtocounter{equation}{-1}%
-    \HyOrg@subequations
-    \def\theHequation{\theHparentequation\alph{equation}}%
-    \ignorespaces
-  }%
-\fi
+ }
+ 
+\AddToHook{cmd/subequations/after}
+ {%
+   \def\theHequation{\theHparentequation\alph{equation}}%
+   \ignorespaces
+ } 
 %    \end{macrocode}
 %
 % Support for theorems. We move the target into the para hook to 
@@ -12007,10 +12005,11 @@
 %
 % If |\hyper@nopatch@amsmath@tag| is defined we don't patch but assume
 % that kernel code adds anchors to equations.
+% change 2023-06-14: use a hook to make it independent of loading order.
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@amsmath@tag}
    {%
-    \@ifpackageloaded{amsmath}{%
+    \AddToHook{package/amsmath/after}{%
       \def\Hy@make@anchor{%
         \Hy@MakeCurrentHrefAuto{AMS}%
         \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
@@ -12088,10 +12087,13 @@
   }%
 }%
 %</check>
+%    \end{macrocode}
+% change 2023-06-14: use hook to make independent of loading order
+%    \begin{macrocode}
 %<*packageEnd>
 \@ifundefined{hyper@nopatch@counter}
   {
-   \@ifpackageloaded{amsmath}{%
+   \AddToHook{package/amsmath/after}{%
      \renewcommand*{\numberwithin}[3][\arabic]{%
        \@ifundefined{c@#2}{\@nocounterr{#2}}{%
          \@ifundefined{c@#3}{\@nocnterr{#3}}{%

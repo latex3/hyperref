@@ -1,3 +1,6 @@
+2023-06-14 Ulrike Fischer
+    * changed various patches for amsmath to make them independent of loading order.
+    
 2023-05-16 Ulrike Fischer
     * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.
     * xr-hyper: unified and simplified the brace handling: all defined references have now

@@ -25,8 +25,8 @@ Completed box being shipped out [1]
 ..\glue(\lineskip) 0.0
 ..\vbox(550.0+0.0)x345.0, glue set 540.0fil, direction TLT
 ...\write-{}
-...\glue(\topskip) 3.06
-...\hbox(6.94+0.11)x345.0, glue set 248.83fil, direction TLT
+...\glue(\topskip) 3.34
+...\hbox(6.66+0.0)x345.0, glue set 317.22fil, direction TLT
 ....\localpar
 .....\localinterlinepenalty=0
 .....\localbrokenpenalty=0
@@ -36,37 +36,10 @@ Completed box being shipped out [1]
 ....\TU/lmr/m/n/10 1
 ....\TU/lmr/m/n/10 .
 ....\TU/lmr/m/n/10 1
-....\TU/lmr/m/n/10 t
-....\TU/lmr/m/n/10 i
-....\discretionary (penalty 50)
-.....< \TU/lmr/m/n/10 -
-....\TU/lmr/m/n/10 t
-....\TU/lmr/m/n/10 l
-....\TU/lmr/m/n/10 e
-....\discretionary (penalty 50)
-.....< \TU/lmr/m/n/10 -
-....\TU/lmr/m/n/10 s
-....\TU/lmr/m/n/10 e
-....\TU/lmr/m/n/10 c
-....\discretionary (penalty 50)
-.....< \TU/lmr/m/n/10 -
-....\TU/lmr/m/n/10 t
-....\TU/lmr/m/n/10 i
-....\TU/lmr/m/n/10 o
-....\TU/lmr/m/n/10 n
-....\TU/lmr/m/n/10 .
-....\TU/lmr/m/n/10 t
-....\TU/lmr/m/n/10 i
-....\discretionary (penalty 50)
-.....< \TU/lmr/m/n/10 -
-....\TU/lmr/m/n/10 t
-....\TU/lmr/m/n/10 l
-....\TU/lmr/m/n/10 e
 ....\hbox(0.0+0.0)x0.0, direction TLT
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
-...\glue -0.11
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0
 ..\glue(\baselineskip) 25.29494

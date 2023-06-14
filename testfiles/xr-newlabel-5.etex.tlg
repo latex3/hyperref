@@ -26,30 +26,12 @@ Completed box being shipped out [1]
 ..\glue(\lineskip) 0.0
 ..\vbox(550.0+0.0)x345.0, glue set 540.0fil
 ...\write-{}
-...\glue(\topskip) 3.05556
-...\hbox(6.94444+0.0)x345.0, glue set 248.83316fil
+...\glue(\topskip) 3.55556
+...\hbox(6.44444+0.0)x345.0, glue set 317.22218fil
 ....\hbox(0.0+0.0)x15.0
 ....\OT1/cmr/m/n/10 1
 ....\OT1/cmr/m/n/10 .
 ....\OT1/cmr/m/n/10 1
-....\OT1/cmr/m/n/10 t
-....\OT1/cmr/m/n/10 i
-....\OT1/cmr/m/n/10 t
-....\OT1/cmr/m/n/10 l
-....\OT1/cmr/m/n/10 e
-....\OT1/cmr/m/n/10 s
-....\OT1/cmr/m/n/10 e
-....\OT1/cmr/m/n/10 c
-....\OT1/cmr/m/n/10 t
-....\OT1/cmr/m/n/10 i
-....\OT1/cmr/m/n/10 o
-....\OT1/cmr/m/n/10 n
-....\OT1/cmr/m/n/10 .
-....\OT1/cmr/m/n/10 t
-....\OT1/cmr/m/n/10 i
-....\OT1/cmr/m/n/10 t
-....\OT1/cmr/m/n/10 l
-....\OT1/cmr/m/n/10 e
 ....\hbox(0.0+0.0)x0.0
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil

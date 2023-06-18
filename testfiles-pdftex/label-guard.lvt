@@ -1,0 +1,11 @@
+\documentclass{article}
+\input{regression-test}
+
+\usepackage[thref]{ntheorem}
+\START 
+\usepackage{nameref}
+\begin{document}
+
+\show\label
+\end{document}
+

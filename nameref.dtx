@@ -274,8 +274,10 @@
 %    \begin{macro}{\label@hook}
 % Starting with LaTeX 2023-06-01 it is not longer needed to 
 % redefine \cs{label} as the kernel provides a hook and  
-% stores \cs{@currentlabelname}. We still support
-% \cs{label@hook} for now as it is used below in \cs{slabel}
+% stores \cs{@currentlabelname}. But as there are packages like ntheorem
+% and revtex which overwrites the kernel definition and then break nameref 
+% and hyperref we add a guard. 
+% We still support \cs{label@hook} for now as it is used below in \cs{slabel}
 % and also in hyperref.    
 %    \begin{macrocode}
 \providecommand*{\label@hook}{}
@@ -284,6 +286,21 @@
     }
 \@ifl@t@r\fmtversion{2023-06-01}
   {
+   \def\NR@label@copy#1{\@bsphack
+     \begingroup
+     \UseHookWithArguments{label}{1}{#1}%
+     \protected@write\@auxout{}%
+         {\string\newlabel{#1}{{\@currentlabel}{\thepage}%
+         {\@currentlabelname}{\@currentHref}{\@kernel@reserved@label@data}}}%
+  \endgroup
+  \@esphack}
+    \ifx\label\NR@label@copy
+    \else 
+      \PackageWarning{nameref}{The definition of \string\label\space has changed! 
+                               \MessageBreak Check your packages!
+                               \MessageBreak Replacing it with the kernel definition}
+      \let\label\NR@label@copy
+    \fi    
     \AddToHookWithArguments{label}{\def\label@name{#1}\label@hook}
   }
   {

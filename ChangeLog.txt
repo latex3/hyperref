@@ -1,5 +1,7 @@
-2023-06-14 Ulrike Fischer
+2023-06-18 Ulrike Fischer
     * changed various patches for amsmath to make them independent of loading order.
+    * nameref: check the definition of label and reinstate the kernel definition if it has been changed.
+      This avoid problems with classes (revtex) and packages (ntheorem) which changes \label in an incompatible way.
     
 2023-05-16 Ulrike Fischer
     * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.

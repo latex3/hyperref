@@ -1,0 +1,13 @@
+\documentclass{article}
+\input{regression-test}
+
+\usepackage{caption}
+\usepackage{hyperref}
+\begin{document}
+\START
+\begin{figure}
+
+\caption{abc}
+\end{figure}
+\end{document}
+

@@ -1,3 +1,6 @@
+2023-06-25 Ulrike Fischer
+    * define the amsmath \ifmeasuring@ always as external package depend on hyperref doing it.
+    
 2023-06-18 Ulrike Fischer
     * changed various patches for amsmath to make them independent of loading order.
     * nameref: check the definition of label and reinstate the kernel definition if it has been changed.

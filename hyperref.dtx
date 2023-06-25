@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2023-06-18 v7.00z %
+%<!none&!packageEnd>  [2023-06-25 v7.01a %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -10416,6 +10416,7 @@
 % that the hyper stuff is not executed twice, so we use the AMS
 % |\ifmeasuring@|, initialized if AMS math is not used.
 %    \begin{macrocode}
+\newif\ifmeasuring@\measuring@false
 \newcommand\Hy@ifnotmeasuring[1]{#1}
 \AddToHook{package/amsmath/after}
  {

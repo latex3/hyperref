@@ -1,0 +1,25 @@
+\input{regression-test}
+\documentclass{article}
+
+\setcounter{secnumdepth}{-1}
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-1.5ex \@plus -1ex \@minus -.2ex}%
+                                   {0.5ex \@plus.2ex}%
+                                   {\normalsize\bfseries\MakeUppercase}}
+\makeatother                                   
+
+\usepackage{hyperref} 
+
+\begin{document}
+\START\showoutput
+some text
+
+\newpage 
+
+\section{Section 1}
+
+\newpage
+
+text
+\end{document}

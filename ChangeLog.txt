@@ -1,3 +1,8 @@
+2023-07-07 Ulrike Fischer
+    * make \Hy@@SectionAnchor safe in a MakeUppercase, issue 281
+    * reset also \ltx@label of amsmath (avoids problems with ntheorem and classes like svmono)
+    
+
 2023-06-25 Ulrike Fischer
     * define the amsmath \ifmeasuring@ always as external package depend on hyperref doing it.
     

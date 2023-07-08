@@ -1332,16 +1332,22 @@ action dictionaries, see PDF specification.
 \ci{url}\verb|{|\emph{URL}\verb|}|
 \end{cmdsyntax}
 
-\noindent Similar to
-\ci{href}\verb|{|\emph{URL}\verb|}{|\ci{nolinkurl}\verb|{|\emph{URL}\verb|}}|.
-Depending on the driver \verb|\href| also tries to detect the link type.
-Thus the result can be a url link, file link, \dots
+\noindent Similar to 
+\ci{href}\verb|{|\emph{URL}\verb|}{|\ci{nolinkurl}\verb|{|\emph{URL}\verb|}}|. 
+Depending on the driver \verb|\href| also tries to detect the link type. Thus 
+the result can be a url link, file link, \dots. The implementation makes use 
+of the \xpackage{url} package and its commands can be used to format and fine 
+tune the url, but the behaviour of \ci{url} is different to the behaviour in 
+the \xpackage{url} package: Most importantly the hyperref \cs{url} expands 
+commands.  If the behaviour or the original \cs{url} is needed, the url 
+package should be loaded first and the command should be copied into some 
+alias command.  
 
 \begin{cmdsyntax}
 \ci{nolinkurl}\verb|{|\emph{URL}\verb|}|
 \end{cmdsyntax}
 
-\noindent Write \emph{URL} in the same way as \verb|\url|,
+\noindent Write \emph{URL} in the same way as \verb|\url| described above,
   without creating a hyperlink.
 
 \begin{cmdsyntax}

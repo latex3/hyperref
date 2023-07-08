@@ -172,15 +172,11 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 p
 .....\kern0.28 (font)
 .....\TU/lmr/m/n/10 o
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
-......= \kern-0.28 (font)
+.....\kern-0.28 (font)
 .....\TU/lmr/m/n/10 w
 .....\kern-0.28 (font)
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 r
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 f
 .....\TU/lmr/m/n/10 u
 .....\TU/lmr/m/n/10 l
@@ -275,6 +271,8 @@ Completed box being shipped out [1]
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 r
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 e
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/n/10 -
@@ -313,17 +311,15 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 t
 .....\TU/lmr/m/n/10 i
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 o
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 ,
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 a
-.....\TU/lmr/m/n/10 t
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/n/10 -
+.....\TU/lmr/m/n/10 t
 .....\TU/lmr/m/n/10 h
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 r
@@ -388,8 +384,6 @@ Completed box being shipped out [1]
 ......= \kern0.28 (font)
 .....\TU/lmr/m/n/10 c
 .....\TU/lmr/m/n/10 i
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 a
 .....\TU/lmr/m/n/10 l
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
@@ -828,8 +822,6 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 t
 .....\TU/lmr/m/n/10 i
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 o
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 .
@@ -840,7 +832,11 @@ Completed box being shipped out [1]
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 J
 .....\TU/lmr/m/n/10 e
-.....\TU/lmr/m/n/10 ﬀ (ligature ff)
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10 f
+......< \TU/lmr/m/n/10 -
+......> \TU/lmr/m/n/10 f
+......= \TU/lmr/m/n/10 ﬀ (ligature ff)
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 y
@@ -898,8 +894,6 @@ Completed box being shipped out [1]
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 M
 .....\TU/lmr/m/n/10 u
-.....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 -
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 c

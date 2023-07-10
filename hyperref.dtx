@@ -12605,14 +12605,15 @@
 %    \begin{macrocode}
 \let\HyRef@ShowKeysRef\@gobble
 \def\HyRef@ShowKeysInit{%
-  \ifcsname SK@@label\endcsname
+  \@ifundefined{SK@@label}{}
+   {%
     \ifx\SK@ref\@empty
     \else
       \def\HyRef@ShowKeysRef{%
         \SK@\SK@@ref
       }%
     \fi
-  \fi
+   }%
 }
 \AddToHook{package/showkeys/after}{\HyRef@ShowKeysInit}
 %    \end{macrocode}

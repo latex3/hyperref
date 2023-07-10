@@ -1,0 +1,10 @@
+\documentclass[final]{article}
+\input{regression-test}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{showkeys}
+\begin{document}
+\START\showoutput
+\section{The Pythagoras Theorem}\label{sec:pythagoras}
+\autoref{sec:pythagoras}
+\end{document}

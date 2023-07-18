@@ -1,0 +1,18 @@
+\documentclass[12pt]{book}
+\input{regression-test}
+\newtheorem{theorem}{theorem}
+\newtheorem{proof}{proof}
+\makeatletter
+\def\@oddhead{\parbox[t]{\linewidth}{head}}
+
+\usepackage{hyperref}
+\begin{document}
+\START \showoutput
+
+\vspace*{36\baselineskip} 
+
+line\\ line\\ line
+    \begin{theorem}
+        theorem
+    \end{theorem} 
+\end{document}

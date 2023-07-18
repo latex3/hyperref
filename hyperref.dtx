@@ -10970,11 +10970,13 @@
    \H@refstepcounter{#1}%
    \hyper@makecurrent{#1}%
    \global\let\Hy@dth@currentHref\@currentHref
-   \AddToHookNext{para/begin}
-     {\let\Hy@tempa\@currentHref
-      \MakeLinkTarget*{\Hy@dth@currentHref}%
-      \global\let\@currentHref\Hy@tempa
-     }%
+   \AddToHookNext{cmd/item/before}
+     {\AddToHookNext{para/begin}
+       {\let\Hy@tempa\@currentHref
+        \MakeLinkTarget*{\Hy@dth@currentHref}%
+        \global\let\@currentHref\Hy@tempa
+       }%
+     }%  
   } 
 \@ifundefined{hyper@nopatch@thm}{%  
 \AtBeginDocument{%  

@@ -3,6 +3,9 @@
 
 ===============
 
+2023-07-18 Ulrike Fischer
+    * delay anchor in \@thm, issue 294
+
 2023-07-10 Ulrike Fischer
     * solve amsmath/showkeys/final conflict, issue 292
     

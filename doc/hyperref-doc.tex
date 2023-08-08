@@ -2799,33 +2799,39 @@ The draft option defines the macros as follows
 
 \section{Special support for other packages}
 
-Package \xpackage{hyperref} aims to cooperate with other packages, but there are
-several possible sources for conflict, such as
+Package \xpackage{hyperref} aims to cooperate with other packages, but while 
+the long term goal is to remove patches and to move link support into the 
+kernel, classes and packages there are still several possible sources for 
+conflict, such as 
 
 \begin{itemize}
 
-\item Packages that manipulate the bibliographic mechanism. Peter
-William's \xpackage{harvard} package is supported. However, the
-recommended package is Patrick Daly's \xpackage{natbib} package that has
-specific \xpackage{hyperref} hooks to allow reliable interaction. This
-package covers a very wide variety of layouts and citation styles, all
-of which work with \xpackage{hyperref}.
+\item Packages that manipulate the bibliographic mechanism. Peter William's 
+    \xpackage{harvard} package is supported. However, the recommended 
+    package is either Patrick Daly's \xpackage{natbib} package that has 
+    specific \xpackage{hyperref} hooks to allow reliable interaction or the 
+    \xpackage{biblatex} package. Both packages cover a very wide variety of 
+    layouts and citation styles, all of which work with 
+    \xpackage{hyperref}. 
 
-\item Packages that changes \ci{label} and \ci{ref}
-macros.
+\item Packages that changes \ci{label} and \ci{ref} macros. Since \LaTeX{} 
+    2023-06-01 the kernel and \xpackage{hyperref}/\xpackage{nameref} use 
+    the same \ci{label} definition. \ci{label} has a hook for external 
+    packages. There should be no need for external packages and classes to 
+    redefine them.  
 
 \item Packages that do anything serious with the index.
 
-\item Packages that do anything serious with sectioning commands and the toc
+\item Packages that do anything serious with sectioning commands and the 
+    toc. 
 \end{itemize}
 
 
 
-The \xpackage{hyperref} package is distributed with variants on two useful
-packages designed to work especially well with it. These are \xpackage{xr}
-and \xpackage{minitoc}, which support crossdocument links using \hologo{LaTeX}'s
-normal \cs{label}/\cs{ref} mechanisms and per-chapter tables of contents,
-respectively.
+The \xpackage{hyperref} package is distributed with a variant of the 
+\xpackage{xr}, \xpackage{xr-hyper}\footnote{It will be merged with the 
+\xpackage{xr} package soon}, which support crossdocument links using 
+\hologo{LaTeX}'s normal \cs{label}/\cs{ref} mechanisms.
 
 
 \subsection{Package Compatibility}
@@ -2857,7 +2863,9 @@ Currently only package loading orders are available:
 
 \subsubsection{amsrefs}
 
- Package loading order:
+The documentation of \xpackage{amsrefs} claims that the package must be 
+loaded after \xpackage{hyperref} (it is unclear if that is really true) so 
+the recommended package loading order is: 
 
 \begin{verbatim}
   \usepackage{hyperref}
@@ -2930,25 +2938,6 @@ Currently only package loading orders are available:
   \usepackage{chappg}
 \end{verbatim}
 
-\subsubsection{cite}
-
- This is from Mike Shell:
- cite.sty cannot currently be used with \xpackage{hyperref}.
- However, I can do a workaround via:
-
-\begin{verbatim}
- \makeatletter
- \def\NAT@parse{\typeout{This is a fake Natbib command to fool Hyperref.}}
- \makeatother
-
- \usepackage[hypertex]{hyperref}
-\end{verbatim}
-
- so that \xpackage{hyperref} will not redefine any of the biblabel stuff - so cite.sty
- will work as normal - although the citations will not be hyperlinked, of
- course (But this may not be an issue for many people).
-
-
 \subsubsection{count1to}
 
  Package `count1to' adds several \verb|\@addtoreset| commands that confuse
@@ -3017,57 +3006,6 @@ Currently only package loading orders are available:
 
  This package is not supported, you have to disable \xpackage{hyperref}'s footnote
   support by using option \verb"hyperfootnotes=false".
-
-
-\subsubsection{geometry}
-
- Driver `dvipdfm' and program `dvipdfm' might generate a warning:
-      Sorry.  Too late to change page size
-  Then prefer the program `dvipdfmx' or use one of the following
-  workarounds to move the \verb|\special| of geometry to an earlier
-  location:
-
-\begin{verbatim}
-    \documentclass[dvipdfm]{article}% or other classes
-    \usepackage{atbegshi}
-    \AtBeginDocument{%
-      \let\OrgAtBeginDvi\AtBeginDvi
-      \let\AtBeginDvi\AtBeginShipoutFirst
-    }
-    \usepackage[
-      paperwidth=170mm,
-      paperheight=240mm
-    ]{geometry}
-    \AtBeginDocument{%
-      \let\AtBeginDvi\OrgAtBeginDvi
-    }
-    \usepackage{hyperref}
-
-  or
-
-    \documentclass[dvipdfm]{article}% or other classes
-    \usepackage{atbegshi}
-    \let\AtBeginDvi\AtBeginShipoutFirst
-    \usepackage[
-      paperwidth=170mm,
-      paperheight=240mm
-    ]{geometry}
-    \usepackage{hyperref}
-\end{verbatim}
-
-\subsubsection{IEEEtran.cls}
-
- version $\ge$ V1.6b (because of \verb|\@makecaption|, see ChangeLog)
-
-
-\subsubsection{index}
-
- version $\ge$ 1995/09/28 v4.1 (because of \verb|\addcontentsline| redefinition)
-
-
-\subsubsection{lastpage}
-
- Compatible.
 
 
 \subsubsection{linguex}
@@ -3195,6 +3133,8 @@ or \xpackage{subcaption}
 
 
 \subsubsection{ucs/utf8x.def}
+Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
+ longer recommended.
 
  The first time a multibyte UTF8 sequence is called, it
   does some calculations and stores the result in a macro
@@ -3213,8 +3153,6 @@ or \xpackage{subcaption}
   The notation with two carets avoids trouble with 8-bit bytes
   for the README file, you can use the characters directly.
 
-Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
- longer recommended.
 
 \subsubsection{varioref}
  There are too many problems with \xpackage{varioref}. Nobody has time to
@@ -3244,52 +3182,6 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 \subsubsection{verse}
 
  Version 2005/08/22 v2.22 contains support for \xpackage{hyperref}.
-
-  For older versions see example from
-  de.comp.text.tex (2005/08/11, slightly modified):
-
-\begin{verbatim}
-  \documentclass{article}
-
-  % package order does not matter
-  \usepackage{verse}
-  \usepackage{hyperref}
-
-  \makeatletter
-  % make unique poemline anchors
-  \newcounter{verse@env}
-  \setcounter{verse@env}{0}
-  \let\org@verse\verse
-  \def\verse{%
-    \stepcounter{verse@env}%
-    \org@verse
-  }
-  \def\theHpoemline{\arabic{verse@env}.\thepoemline}
-
-  % add anchor for before \addcontentsline in \@vsptitle
-  \let\org@vsptitle\@vsptitle
-  \def\@vsptitle{%
-    \phantomsection
-    \org@vsptitle
-  }
-  \makeatother
-
-  \begin{document}
-
-  \poemtitle{Poem 1}
-  \begin{verse}
-  An one-liner.
-  \end{verse}
-
-  \newpage
-
-  \poemtitle{Poem 2}
-  \begin{verse}
-  Another one-liner.
-  \end{verse}
-
-  \end{document}
-\end{verbatim}
 
 \subsubsection{vietnam}
 \begin{verbatim}
@@ -3323,7 +3215,7 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 \subsection{Wrapped/broken link support}
 
  Only few drivers support automatically wrapped/broken links,
-  e.g. pdftex, dvipdfm, hypertex. Other drivers lack this
+  e.g. pdftex, dvipdfmx, hypertex. Other drivers lack this
   feature, e.g. dvips, dvipsone.
 
   Workarounds:
@@ -3351,9 +3243,14 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
  In general they have problems:
 \begin{itemize}
   \item Some driver doesn't support them at all (see above).
-  \item The driver allows it, but the link result might include
-    the footer and/or header, or an error message can
-    occur sometimes.
+  \item The driver allows it, but the link result might include the footer 
+      and/or header. This can currently (2023) be avoided by using the PDF 
+      management and to load at least the new-or-1 module from latex-lab: 
+      
+      \begin{verbatim}
+      \DocumentMetadata{testphase=new-or-1} 
+      \end{verbatim}
+      
 \end{itemize}
 
 \subsection{Footnotes}

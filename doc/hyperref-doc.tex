@@ -3155,29 +3155,15 @@ Note: utf8 is now the default in \LaTeX{} and \xpackage{ucs} is no
 
 
 \subsubsection{varioref}
- There are too many problems with \xpackage{varioref}. Nobody has time to
-  sort them out. Therefore this package is now unsupported.
-
- Perhaps you are lucky and some of the features of \xpackage{varioref} works
-  with the following loading order:
+Most previous problems with \xpackage{varioref} should be resolved. There is 
+only an open issue regarding \ci{vrefformat} 
+(\url{https://github.com/latex3/hyperref/issues/225}). 
+ 
+It is recommended to load \xpackage{varioref} always with the option 
+\texttt{nospace}, see the documentation. 
 \begin{verbatim}
-    \usepackage{nameref}
-    \usepackage{varioref}
-    \usepackage{hyperref}
+    \usepackage[nospace]{varioref}
 \end{verbatim}
-
-
- Also some babel versions can be problematic. For example,
-  2005/05/21 v3.8g contains a patch for \xpackage{varioref} that breaks
-  the \xpackage{hyperref} support for \xpackage{varioref}.
-
-
- Also unsupported:
-\begin{itemize}
-\item   \verb|\Ref|, \verb|\Vref| do not uppercase the first letter.
-\item \verb|\vpageref[]{...}|
-    On the same page a previous space is not suppressed.
-\end{itemize}
 
 \subsubsection{verse}
 

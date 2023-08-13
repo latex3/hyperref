@@ -9532,9 +9532,14 @@
 % to a document without having to remove .aux and .toc files
 % (this section is by David Carlisle)
 % All the code is delayed to |\begin{document}|
+% change 2023-08-13: with a new format it is no longer
+% needed to handle different |\newlabel|
+% definitions. The code can be removed completly later.
 %    \begin{macrocode}
 %<*package>
-\Hy@AtBeginDocument{%
+\@ifl@t@r\fmtversion{2023-06-01}{}
+ {
+   \Hy@AtBeginDocument{%
 %    \end{macrocode}
 % First the code to deal with removing the hyperref package from
 % a document.
@@ -9545,40 +9550,40 @@
 % change 2022-03-28: removed the code for |\contentsline|, it is no
 % longer needed as |\contentsline| has now always four arguments.
 %    \begin{macrocode}
-  \if@filesw
-    \immediate\write\@auxout{%
-      \string\providecommand\string\HyperFirstAtBeginDocument{%
-        \string\AtBeginDocument}^^J%
-      \string\HyperFirstAtBeginDocument{%
-        \string\ifx\string\hyper@anchor\string\@undefined^^J%
-          \string\global\string\let\string\oldnewlabel\string\newlabel^^J%
-          \string\gdef\string\newlabel\string#1\string#2{%
-             \string\newlabelxx{\string#1}\string#2}^^J%
-          \string\gdef\string\newlabelxx%
-             \string#1\string#2\string#3\string#4\string#5\string#6{%
-             \string\oldnewlabel{\string#1}{{\string#2}{\string#3}}}^^J%
+      \if@filesw
+        \immediate\write\@auxout{%
+          \string\providecommand\string\HyperFirstAtBeginDocument{%
+            \string\AtBeginDocument}^^J%
+          \string\HyperFirstAtBeginDocument{%
+            \string\ifx\string\hyper@anchor\string\@undefined^^J%
+              \string\global\string\let\string\oldnewlabel\string\newlabel^^J%
+              \string\gdef\string\newlabel\string#1\string#2{%
+                 \string\newlabelxx{\string#1}\string#2}^^J%
+              \string\gdef\string\newlabelxx%
+                 \string#1\string#2\string#3\string#4\string#5\string#6{%
+                 \string\oldnewlabel{\string#1}{{\string#2}{\string#3}}}^^J%
 %    \end{macrocode}
 %
 % But the new aux file will be read again at the end, with the normal
 % definitions expected, so better put things back as they were.
 %    \begin{macrocode}
-          \string\AtEndDocument{%
-            \string\ifx\string\hyper@anchor\string\@undefined^^J%
-              \string\let\string\newlabel\string\oldnewlabel^^J%
-            \string\fi%
-          }^^J%
+              \string\AtEndDocument{%
+                \string\ifx\string\hyper@anchor\string\@undefined^^J%
+                  \string\let\string\newlabel\string\oldnewlabel^^J%
+                \string\fi%
+              }^^J%
 %    \end{macrocode}
 %
 % If the document is being run with hyperref put this definition
 % into the aux file, so we can spot it on the next run.
 %    \begin{macrocode}
-        \string\fi%
-      }^^J%
-      \string\global\string\let\string\hyper@last\relax^^J%
-      \string\gdef\string\HyperFirstAtBeginDocument\string#1{\string#1}%
-    }%
-  \fi
-  \let\HyperFirstAtBeginDocument\ltx@firstofone
+            \string\fi%
+          }^^J%
+          \string\global\string\let\string\hyper@last\relax^^J%
+          \string\gdef\string\HyperFirstAtBeginDocument\string#1{\string#1}%
+        }%
+      \fi
+      \let\HyperFirstAtBeginDocument\ltx@firstofone
 %    \end{macrocode}
 %
 % Now the code to deal with adding the hyperref package to a document
@@ -9589,9 +9594,10 @@
 % |\contentsline|
 % has now always four arguments.
 %    \begin{macrocode}
-  \ifx\hyper@last\@undefined
-    \def\newlabel#1#2{\@newl@bel r{#1}{#2{}{}{}{}}}%
-  \fi
+      \ifx\hyper@last\@undefined
+        \def\newlabel#1#2{\@newl@bel r{#1}{#2{}{}{}{}}}%
+      \fi
+    }
 }
 %    \end{macrocode}
 %

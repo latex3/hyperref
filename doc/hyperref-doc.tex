@@ -1002,7 +1002,7 @@ next \TeX\ run if it is edited to contain the line
 \let\WriteBookmarks\relax
 \end{verbatim}
 
-\subsection{PDF display and information options}
+\subsection{PDF display and information options}\label{sec:pdfdata}
 \begin{longtable}{@{}>{\ttfamily}l>{\raggedright}p{\widthof{key value}}>{\itshape}lp{7cm}@{}}
 baseurl            & URL     &       & Sets the base URL of the PDF document \\
 pdfpagemode        & name    & empty & Determines how the file is opening in Acrobat; the possibilities are
@@ -1014,6 +1014,8 @@ pdftitle           & text    &       & Sets the document information Title field
 pdfauthor          & text    &       & Sets the document information Author field \\
 pdfsubject         & text    &       & Sets the document information Subject field \\
 pdfcreator         & text    &       & Sets the document information Creator field \\
+pdfcreationdate    & date    &       & Sets the creation date, see below the table for more info about the format\\ 
+pdfmoddate         & date    &       & Sets the modification date, see below the table for more info about the format\\
 addtopdfcreator    & text    &       & Adds additional text to the document information Creator field \\
 pdfkeywords        & text    &       & Sets the document information Keywords field \\
 pdftrapped         & name    & empty & Sets the document information Trapped entry. Possible values are \verb|True|, \verb|False| and \verb|Unknown|.
@@ -1085,6 +1087,25 @@ pdfviewclip        & name    & empty & set /ViewClip of viewer preferences Possi
 pdfwindowui        & boolean & true  & make PDF user interface elements visible \\
 unicode            & boolean & true & Unicode encoded PDF strings
 \end{longtable}
+
+ The dates |CreationDate| and |ModDate| 
+ are normally set automatically to the current date/time when the compilation
+ started. If they should be changed
+ (e.g. for regression tests to produce reproducible documents) they can
+ be set with |\hypersetup| with the keys
+ |pdfcreationdate|, |pdfmoddate| or externally by setting the |SOURCE_DATE_EPOCH| environment variable. 
+
+ \begin{verbatim}
+ \hypersetup{pdfcreationdate=D:20010101205959-00'00'}
+ \end{verbatim}
+
+ The format should be a full date/time in PDF format, so one of these (naturally
+ the numbers can change):
+ \begin{verbatim}
+  D:20010101205959-00'00'
+  D:20010101205959+00'00'
+  D:20010101205959Z
+ \end{verbatim}
 
 Each link in Acrobat carries its own magnification level, which is set
 using PDF coordinate space, which is not the same as \TeX's. The unit
@@ -1240,6 +1261,7 @@ pdfborderstyle     &                        & border style for links \\
 pdfcenterwindow    & \textit{false}         & position the document window in the center of the screen \\
 pdfcreator         & \textit{LaTeX with}    & text for PDF Creator field \\
                    & \textit{hyperref}      & \\
+pdfcreationdate    &                        & Sets the creation date, see below the table in section~\ref{sec:pdfdata} for more info about the format\\                    
 pdfdirection       & \textit{empty}         & direction setting \\
 pdfdisplaydoctitle & \textit{false}         & display document title instead
                                               of file name in title bar\\
@@ -1252,6 +1274,7 @@ pdfkeywords        & \textit{empty}         & text for PDF Keywords field \\
 pdflang            & \textit{relax}         & PDF language identifier (RFC 3066) \\
 pdfmark            & \textit{false}         & an alias for \textsf{dvips} \\
 pdfmenubar         & \textit{true}          & make PDF viewer's menu bar visible \\
+pdfmoddate    &                        & Sets the modification date, see below the table in section~\ref{sec:pdfdata} for more info about the format\\                    
 pdfnewwindow       & \textit{false}         & make links that open another PDF \\
                    &                        & file start a new window \\
 pdfnonfullscreenpagemode

@@ -68,8 +68,8 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 y
 .....\discretionary (penalty 50)
-......< \TU/lmr/m/n/10 — (ligature ---)
-......= \TU/lmr/m/n/10 — (ligature ---)
+......< \TU/lmr/m/n/10 —
+......= \TU/lmr/m/n/10 —
 .....\TU/lmr/m/n/10 t
 .....\TU/lmr/m/n/10 h
 .....\TU/lmr/m/n/10 a
@@ -126,7 +126,7 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 a
 .....\TU/lmr/m/n/10 n
 .....\TU/lmr/m/n/10 n
-.....\TU/lmr/m/n/10 — (ligature ---)
+.....\TU/lmr/m/n/10 —
 .....\discretionary (penalty 50)
 .....\glue(\rightskip) 0.0
 ....\penalty 250
@@ -256,7 +256,7 @@ Completed box being shipped out [1]
 ......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[.5 .5 0]} action goto name{cite.luhm:DoS}
 ......\TU/lmr/m/n/10 1
 ......\pdfendlink
-.....\TU/lmr/m/n/10 – (ligature --)
+.....\TU/lmr/m/n/10 –
 .....\penalty 1000
 .....\hbox(6.66+0.22)x5.0, direction TLT
 ......\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[.5 .5 0]} action goto name{cite.luhm:WrtdG}
@@ -367,7 +367,7 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 f
 ......< \TU/lmr/m/n/10 -
 ......> \TU/lmr/m/n/10 f
-......= \TU/lmr/m/n/10 ﬀ (ligature ff)
+......= \TU/lmr/m/n/10 ﬀ
 .....\TU/lmr/m/n/10 e
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/n/10 -
@@ -409,7 +409,7 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 f
 ......< \TU/lmr/m/n/10 -
 ......> \TU/lmr/m/n/10 l
-......= \TU/lmr/m/n/10 ﬂ (ligature fl)
+......= \TU/lmr/m/n/10 ﬂ
 .....\TU/lmr/m/n/10 y
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 p
@@ -566,7 +566,7 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/it/10 f
 ......< \TU/lmr/m/it/10 -
 ......> \TU/lmr/m/it/10 f
-......= \TU/lmr/m/it/10 ﬀ (ligature ff)
+......= \TU/lmr/m/it/10 ﬀ
 .....\TU/lmr/m/it/10 e
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/it/10 -
@@ -750,7 +750,7 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 f
 ......< \TU/lmr/m/n/10 -
 ......> \TU/lmr/m/n/10 f
-......= \TU/lmr/m/n/10 ﬀ (ligature ff)
+......= \TU/lmr/m/n/10 ﬀ
 .....\TU/lmr/m/n/10 e
 .....\discretionary (penalty 50)
 ......< \TU/lmr/m/n/10 -
@@ -836,7 +836,7 @@ Completed box being shipped out [1]
 ......< \TU/lmr/m/n/10 f
 ......< \TU/lmr/m/n/10 -
 ......> \TU/lmr/m/n/10 f
-......= \TU/lmr/m/n/10 ﬀ (ligature ff)
+......= \TU/lmr/m/n/10 ﬀ
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 y
@@ -975,7 +975,7 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 1
 .....\TU/lmr/m/n/10 1
 .....\TU/lmr/m/n/10 2
-.....\TU/lmr/m/n/10 – (ligature --)
+.....\TU/lmr/m/n/10 –
 .....\TU/lmr/m/n/10 3
 .....\TU/lmr/m/n/10 1
 .....\TU/lmr/m/n/10 .

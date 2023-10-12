@@ -11743,19 +11743,28 @@
 %    early, if lots of float pages will follow.
 %    Therefore currently nothing is done by hyperref.
 %
-% This where we supply a destination for each page.
+% This where we supply a destination for each page. 
+% 
+% \marginpar{Experimental!}The name of destination
+% is stored in the global command \cs{@currentHpage}, this allows it to retrieve
+% it with an extended reference system like zref or the new property code from \LaTeX{}
+% 2023-11-01.
+%    \begin{macrocode}
+\def\@currentHpage{Doc-Start}
+%    \end{macrocode}
 %    \begin{macrocode}
 \ltx@ifclassloaded{slides}{%
   \def\Hy@SlidesFormatOptionalPage#1{(#1)}%
   \def\Hy@PageAnchorSlidesPlain{%
     \advance\c@page\ltx@one
-    \edef\Hy@TempPageAnchor{%
-      \noexpand\hyper@@anchor{%
-        page.\the\c@slide.\the\c@overlay.\the\c@note%
+    \xdef\@currentHpage{page.\the\c@slide.\the\c@overlay.\the\c@note%
         \ifnum\c@page=\ltx@one
         \else
           .\the\c@page
-        \fi
+        \fi}%
+    \edef\Hy@TempPageAnchor{%
+      \noexpand\hyper@@anchor{%
+        \@currentHpage
       }%
     }%
     \advance\c@page-\ltx@one
@@ -11806,6 +11815,7 @@
     \ifHy@hypertexnames
       \ifHy@plainpages
         \def\Hy@TempPageAnchor{\hyper@@anchor{page.\the\c@page}}%
+        \xdef\@currentHpage{page.\the\c@page}%        
         \Hy@PageAnchorSlidesPlain
       \else
         \begingroup
@@ -11816,12 +11826,14 @@
         \endgroup
         \EdefUnescapeString\@the@H@page{\@the@H@page}%
         \def\Hy@TempPageAnchor{\hyper@@anchor{page.\@the@H@page}}%
+        \xdef\@currentHpage{page.\@the@H@page}%
       \fi
     \else
       \Hy@GlobalStepCount\Hy@pagecounter
       \def\Hy@TempPageAnchor{%
         \hyper@@anchor{page.\the\Hy@pagecounter}%
       }%
+      \xdef\@currentHpage{page.\the\Hy@pagecounter}%
     \fi
     \vbox to 0pt{%
       \kern\voffset

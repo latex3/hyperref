@@ -124,10 +124,10 @@ Completed box being shipped out [1]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\marks1{\MakeUppercase    []{Contents}}
-....\marks2{\MakeUppercase    []{Contents}}
-....\marks3{\MakeUppercase    []{Contents}}
-....\mark{{\MakeUppercase    []{Contents}}{\MakeUppercase    []{Contents}}}
+....\marks1{\MakeTextUppercase    []{Contents}}
+....\marks2{\MakeTextUppercase    []{Contents}}
+....\marks3{\MakeTextUppercase    []{Contents}}
+....\mark{{\MakeTextUppercase    []{Contents}}{\MakeTextUppercase    []{Contents}}}
 ....\penalty 10000
 ....\glue 40.0
 ....\glue 10.0 plus 1.0
@@ -401,9 +401,9 @@ Completed box being shipped out [1]
 .....\glue 0.0 plus 1.0fil minus 1.0fil
 ....\write-{}
 ....\pdfdest name{chapter.1} xyz
-....\marks1{\MakeUppercase    []{Chapter\ 1. \ A chapter}}
+....\marks1{\MakeTextUppercase    []{Chapter\ 1. \ A chapter}}
 ....\marks2{\prg_do_nothing: }
-....\mark{{\MakeUppercase    []{Chapter\ 1. \ A chapter}}{}}
+....\mark{{\MakeTextUppercase    []{Chapter\ 1. \ A chapter}}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10pt}}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10pt}}}
 ....\glue(\topskip) 10.0

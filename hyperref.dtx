@@ -5710,7 +5710,7 @@
 %
 %    \begin{macrocode}
 \def\HyLang@DeclareLang#1#2#3{%
-  \@ifpackagewith{babel}{#1}{%
+  \ifcsname extras#1\endcsname
     \expandafter\HyLang@addto
         \csname extras#1\expandafter\endcsname
         \csname HyLang@#2\endcsname
@@ -5720,7 +5720,7 @@
       }%
     \x
     \@namedef{HyLang@#1@done}{}%
-  }{}%
+  \fi
   \begingroup
     \edef\x##1##2{%
       \noexpand\ifx##2\relax

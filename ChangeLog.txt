@@ -1,6 +1,7 @@
 2023-10-12 Ulrike Fischer
     * hyperref.dtx: handle \TextOrMath in \pdfstringdef, issue 303
-
+    * support babel languages loaded with main or with \babelprovide, issue 165
+    
 2023-10-05 Ulrike Fischer
     * nameref.dtx: add missing nameref nopatches issue 302
       

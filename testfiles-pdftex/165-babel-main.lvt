@@ -1,0 +1,17 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage[dutch,main=ngerman]{babel}
+\babelprovide[import]{norsk}
+\usepackage{hyperref}
+
+\begin{document}
+\START \showoutput
+\section{Test}\label{foo}
+
+\autoref{foo}
+
+\selectlanguage{norsk} \autoref{foo} 
+
+\selectlanguage{dutch} \autoref{foo} 
+ 
+\end{document}

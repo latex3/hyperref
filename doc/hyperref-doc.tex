@@ -845,7 +845,7 @@ In a PDF \xpackage{hyperref} adds to every page an target for links (in the uppe
 \begin{cmdsyntax}
 \ci{@currentHpage}
 \end{cmdsyntax}
-\marginpar{Experimental!}Starting with version 7.01c \xpackage{hyperref} stores the name of the page target it has just set into the (global) variable \cs{@currentHpage}. As the target is set when the page is shipout, \cs{@currentHpage} is only reliable at shipout. With a \hologo{LaTeX} format from 2023-11-01 the name can be for labeled by a package like this:
+\marginpar{Experimental!}Starting with version 7.01c \xpackage{hyperref} stores the name of the page target it has just set into the (global) variable \cs{@currentHpage}. The fallback value is \texttt{Doc-Start}. As the target is set when the page is shipout, \cs{@currentHpage} is only reliable at shipout. With a \hologo{LaTeX} format from 2023-11-01 the name can be for labeled by a package like this:
 
 \begin{verbatim}
 %preamble

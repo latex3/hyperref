@@ -1311,6 +1311,12 @@
     \def\MakeLowercase{\MakeLowercaseUnsupportedInPdfStrings}%
 %    \end{macrocode}
 %
+% \paragraph{TextOrMath}
+% The \cs{TextOrMath} command is protected in a current \LaTeX{} and
+% so can not be processed. 
+%    \begin{macrocode}
+   \def\TextOrMath{\ifmmode\expandafter\@secondoftwo\else\expandafter\@firstoftwo\fi}%   
+%    \end{macrocode}
 % \paragraph{Support of math commands without prefix \texttt{text}.}
 %    This is controlled by option ``psdextra'' and only
 %    activated with Unicode PDF strings.

@@ -1,0 +1,11 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{hyperref}
+\protected\def\blub{xxx}
+\START
+\SHOWFILE{\jobname.out}
+\OMIT
+\begin{document}
+\TIMO
+\section{\TextOrMath{Bär}{Duck}\blub}
+\end{document}

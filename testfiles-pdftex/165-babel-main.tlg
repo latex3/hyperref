@@ -1,0 +1,136 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 494.04448fil
+....\write-{}
+....\write1{\babel@aux{ngerman}{}}
+....\pdfdest name{Doc-Start} xyz
+....\pdfdest name{section.1} xyz
+....\glue(\topskip) 0.12001
+....\hbox(9.87999+0.0)x345.0, glue set 290.70172fil
+.....\hbox(9.27998+0.0)x24.29997
+......\glue 0.0
+......\OT1/cmr/bx/n/14.4 1
+......\glue 16.19998
+.....\OT1/cmr/bx/n/14.4 T
+.....\kern-1.35
+.....\OT1/cmr/bx/n/14.4 e
+.....\OT1/cmr/bx/n/14.4 s
+.....\OT1/cmr/bx/n/14.4 t
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000T\000e\000s\000t}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}Test}{\thepage }{section.1}\protected@file@percent }}
+....\penalty 10000
+....\glue 9.90276 plus 0.86108
+....\write1{\newlabel{foo}{{1}{\thepage }{Test}{section.1}{}}}
+....\penalty 10000
+....\penalty 10000
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.05556
+....\hbox(6.94444+0.0)x345.0, glue set 293.83324fil
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
+.....\OT1/cmr/m/n/10 A
+.....\OT1/cmr/m/n/10 b
+.....\OT1/cmr/m/n/10 s
+.....\OT1/cmr/m/n/10 c
+.....\kern-0.27779
+.....\OT1/cmr/m/n/10 h
+.....\OT1/cmr/m/n/10 n
+.....\OT1/cmr/m/n/10 i
+.....\OT1/cmr/m/n/10 t
+.....\OT1/cmr/m/n/10 t
+.....\penalty 10000
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 1
+.....\hbox(0.0+0.0)x0.0
+.....\pdfendlink
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write1{\babel@aux{norsk}{}}
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.05556
+....\hbox(6.94444+1.94444)x345.0, glue set 290.44437fil
+.....\hbox(0.0+0.0)x15.0
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
+.....\OT1/cmr/m/n/10 s
+.....\OT1/cmr/m/n/10 e
+.....\OT1/cmr/m/n/10 k
+.....\OT1/cmr/m/n/10 s
+.....\OT1/cmr/m/n/10 j
+.....\OT1/cmr/m/n/10 o
+.....\OT1/cmr/m/n/10 n
+.....\penalty 10000
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 1
+.....\hbox(0.0+0.0)x0.0
+.....\pdfendlink
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write1{\babel@aux{dutch}{}}
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 3.11111
+....\hbox(6.94444+1.94444)x345.0, glue set 280.22209fil
+.....\hbox(0.0+0.0)x15.0
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
+.....\OT1/cmr/m/n/10 p
+.....\OT1/cmr/m/n/10 a
+.....\OT1/cmr/m/n/10 r
+.....\OT1/cmr/m/n/10 a
+.....\OT1/cmr/m/n/10 g
+.....\OT1/cmr/m/n/10 r
+.....\OT1/cmr/m/n/10 a
+.....\OT1/cmr/m/n/10 a
+.....\OT1/cmr/m/n/10 f
+.....\penalty 10000
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\OT1/cmr/m/n/10 1
+.....\hbox(0.0+0.0)x0.0
+.....\pdfendlink
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -1.94444
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(165-babel-main.aux)
+Package rerunfilecheck Info: File `165-babel-main.out' has not changed.
+(rerunfilecheck)             Checksum: FC90D1180BECD91AF9B24497E24BDAEA;63.

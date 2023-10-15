@@ -845,15 +845,17 @@ In a PDF \xpackage{hyperref} adds to every page an target for links (in the uppe
 \begin{cmdsyntax}
 \ci{@currentHpage}
 \end{cmdsyntax}
-\marginpar{Experimental!}Starting with version 7.01c \xpackage{hyperref} stores the name of the page target it has just set into the (global) variable \cs{@currentHpage}. The fallback value is \texttt{Doc-Start}. As the target is set when the page is shipout, \cs{@currentHpage} is only reliable at shipout. With a \hologo{LaTeX} format from 2023-11-01 the name can be for labeled by a package like this:
+Starting with version 7.01c \xpackage{hyperref} stores the name of the page 
+target it has just set into the (global) variable \cs{@currentHpage}. The 
+fallback value is \texttt{Doc-Start}. As the target is set when the page is 
+shipout, \cs{@currentHpage} is only reliable at shipout. With a 
+\hologo{LaTeX} format from 2023-11-01 the name can be labeled like this: 
 
 \begin{verbatim}
-%preamble
-\NewProperty{mypackage/pagetarget}{shipout}{Doc-Start}{\csname @currentHpage\endcsname}
 %labeling in the document
-\RecordProperties{mylabel}{mypackage/pagetarget}
+\RecordProperties{mylabel}{pagetarget}
 %linking to the page:
-\hyperlink{\RefProperty{mylabel}{mypackage/pagetarget}}{some text}
+\hyperlink{\RefProperty{mylabel}{pagetarget}}{some text}
 \end{verbatim}
 
        

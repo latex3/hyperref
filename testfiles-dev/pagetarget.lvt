@@ -1,0 +1,22 @@
+\PassOptionsToPackage{enable-debug,check-declarations}{expl3}
+\input{regression-test}
+\documentclass{article}
+\input{regression-test}
+\documentclass{article}
+\ExplSyntaxOn
+\sys_if_engine_pdftex:T {\usepackage[LGR]{fontenc}}
+\ExplSyntaxOff
+\usepackage[pdfpagelabels=true
+]{hyperref}
+\START
+\SHOWFILE{\jobname.aux}
+\renewcommand\thepage{λέγ\arabic{page}}
+\OMIT
+\begin{document}
+\TIMO \hyperlink{\RefProperty{A}{pagetarget}}{some text} 
+\hyperlink{\RefProperty{B}{pagetarget}}{some text}
+
+abc \newpage abc \newpage A \RecordProperties{A}{page,pagetarget}  
+\newpage \fontencoding{T1}\selectfont\pagenumbering{Roman}\setcounter{page}{5} B 
+\RecordProperties{B}{page,pagetarget}  
+\end{document}

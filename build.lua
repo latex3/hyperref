@@ -70,13 +70,13 @@ specialformats["latex"] = specialformats["latex"] or
   }
 
 
-checkconfigs = {"build","config-pvt","config-3","config-xetex"}
+checkconfigs = {"build","config-pvt","config-3","config-xetex","config-pdftex"}
 checkengines = {"pdftex","etex","luatex"}
 
 -- for dev testing
 -- checkengines = {"pdftex","pdftexdev","etex","luatex"}
 -- checkengines = {"pdftex","pdftexdev"}
-
+-- checkconfigs = {"config-dev"}
 -- temp settings disable checks while testing ctan build
 -- testfiledir= "disabled"
 -- checkconfigs={}

@@ -180,6 +180,7 @@ babel-dutch
 hyphen-greek
 greek-fontenc
 greek-inputenc
+hyphen-ancientgreek
 
 # fonts
 amsfonts 

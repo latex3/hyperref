@@ -171,6 +171,12 @@ sourcesanspro
 psnfss
 tex-gyre
 hyperxmp
+tugboat
+babel-greek
+babel-spanish
+times
+ntheorem
+babel-dutch
 
 # fonts
 amsfonts 

@@ -1,0 +1,32 @@
+name: Automated testing
+
+on:
+  push:
+    branches:
+      - "*"
+      - "!test*"
+jobs:
+  run-checks:
+    runs-on: ubuntu-latest
+    outputs:
+      cache_key: ${{ steps.texlive.outputs.cache_key }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - run: sudo apt-get update && sudo apt-get install ghostscript
+      - name: Install TeX Live
+        id: texlive
+        uses: zauguin/install-texlive@v3
+        with:
+          # List the required TeX Live packages in a separate file to allow reuse in
+          # different workflows.
+          package_file: .github/tl_packages
+      - run: l3build install
+      - run: l3build check
+      - name: Archive failed test output
+        if: ${{ always() }}
+        uses: zauguin/l3build-failure-artifacts@v1
+        with:
+          name: testfiles-hyperref
+          # Decide how long to keep the test output artifact:
+          retention-days: 3

@@ -1,0 +1,181 @@
+# The test framework itself
+l3build
+
+# this collection looks ok
+collection-basic
+
+# from collection latex:
+        amsmath
+        atbegshi
+        babel
+        babel-english
+        bigintcalc
+        bookmark
+        carlisle
+        colortbl
+        epstopdf-pkg
+        etexcmds
+        fancyhdr
+        firstaid
+        geometry
+        gettitlestring
+        graphics
+        graphics-cfg
+        hopatch
+        hycolor
+        hyperref
+        intcalc
+        kvdefinekeys
+        kvoptions
+        kvsetkeys
+        l3backend
+        l3kernel
+        l3packages
+        latex
+        latex-bin
+        latex-fonts
+        latex-lab
+        latexconfig
+        letltxmacro
+        ltxcmds
+        ltxmisc
+        mfnfss
+        mptopdf
+        natbib
+        oberdiek
+        pdfescape
+        refcount
+        rerunfilecheck
+        stringenc
+        tagpdf
+        tools
+        uniquecounter
+        url
+
+# From collection-latexextra
+        accsupp
+        acro
+        adjustbox
+        attachfile
+        bearwear
+        blindtext
+        cleveref
+        csquotes
+        doclicense
+        duckuments
+        embedfile
+        enumitem
+        etoc
+        filecontents
+        fonttable
+        getfiledate
+        hobsub
+        hvlogos
+        hypdoc
+        intopdf
+        kantlipsum
+        lastpage
+        latex-amsmath-dev
+        latex-base-dev
+        latex-bin-dev
+        latex-context-ppchtex
+        latex-firstaid-dev
+        latex-graphics-dev
+        latex-lab-dev
+        latex-tools-dev
+        lipsum
+        listing
+        listingsutf8
+        lua-check-hyphen
+        marginnote
+        mleftright
+        mlist
+        mmap
+        mwe
+        pdfcolmk
+        scrlayer-fancyhdr
+        scrwfile
+        tabularray
+        transparent
+        varwidth
+        xpatch
+        zref
+        
+# from collection-luatex
+        ctablestack
+        lua-ul
+        lua-uni-algos
+        luacode
+        luacolor
+        lualibs
+        luamplib
+        luaotfload
+        luatex85
+        luatexbase
+        newpax
+
+# from collection xetex
+        realscripts
+        xelatex-dev
+        xetex
+        xetexconfig
+
+# from collection-langgerman
+        babel-german
+        dehyph
+        dehyph-exptl
+        hyphen-german
+ 
+# from collection-latexrecommended
+        attachfile2
+        beamer
+        booktabs
+        caption
+        etoolbox
+        float
+        fontspec
+        hologo
+        index
+        infwarerr
+        koma-script
+        l3experimental
+        latexbug
+        lineno
+        listings
+        mathtools
+        memoir
+        microtype
+        parskip
+        pdfcolfoot
+        pdflscape
+        pdfmanagement-testphase
+        pdfpages
+        pdftexcmds
+        ragged2e
+        setspace
+        textcase
+        translator
+        unicode-math
+        xcolor
+        xkeyval
+
+# other
+pgf 
+marginnote 
+tikzducks 
+tikzlings 
+catchfile
+babel-latin
+hyphen-latin
+sourcesanspro
+psnfss
+tex-gyre
+hyperxmp
+
+# fonts
+amsfonts 
+cm-super 
+
+
+
+

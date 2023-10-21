@@ -181,6 +181,8 @@ hyphen-greek
 greek-fontenc
 greek-inputenc
 hyphen-ancientgreek
+cbfonts-fd
+cbfonts
 
 # fonts
 amsfonts 

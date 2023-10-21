@@ -177,6 +177,9 @@ babel-spanish
 times
 ntheorem
 babel-dutch
+hyphen-greek
+greek-fontenc
+greek-inputenc
 
 # fonts
 amsfonts 

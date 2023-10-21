@@ -1,3 +1,6 @@
+===========
+Version: 2023-10-21 v7.01c
+
 2023-10-16 Ulrike Fischer
     * hyperref.dtx: add \@currentHpage support
 
@@ -6,7 +9,8 @@
     with \babelprovide, issue 165 
     
 2023-10-05 Ulrike Fischer
-    * nameref.dtx: add missing nameref nopatches issue 302
+    * nameref.dtx: add missing nameref nopatches issue 302,
+      version changed to 2023-10-05 v2.54
       
 2023-08-14 Ulrike Fischer
     * remove redefinition of \newlabel from the aux if format is new enough.

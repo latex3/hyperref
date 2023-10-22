@@ -1118,7 +1118,7 @@ pdfwindowui        & boolean & true  & make PDF user interface elements visible 
 unicode            & boolean & true & Unicode encoded PDF strings
 \end{longtable}
 
- The dates |CreationDate| and |ModDate| 
+ The dates \verb|CreationDate| and \verb|ModDate| 
  are normally set automatically to the current date/time when the compilation
  started. If they should be changed
  (e.g. for regression tests to produce reproducible documents) they can
@@ -1172,12 +1172,11 @@ TwoPageLeft    & Displays two pages, odd-numbered pages to the left (since PDF 1
 TwoPageRight   & Displays two pages, odd-numbered pages to the right (since PDF 1.5).
 \end{longtable}
 
-Finally, the \texttt{pdfpagetransition} can be one of the following
-values, where \textit{/Di} stands for direction of motion in degrees,
-generally in 90$^{\circ}$\ steps, \textit{/Dm} is a horizontal
-(\texttt{/H}) or vertical (\texttt{/V}) dimension (e.g.\ \texttt{Blinds
-/Dm /V}), and \textit{/M} is for motion, either in (\texttt{/I}) or out
-(\texttt{/O}).
+Finally, the \texttt{pdfpagetransition} can be one of the following values, 
+where \textit{/Di} stands for direction of motion in degrees, generally in 90 
+degree steps, \textit{/Dm} is a horizontal (\texttt{/H}) or vertical 
+(\texttt{/V}) dimension (e.g.\ \texttt{Blinds /Dm /V}), and \textit{/M} is 
+for motion, either in (\texttt{/I}) or out (\texttt{/O}). 
 
 \begin{longtable}{@{}>{\ttfamily}llp{8.5cm}@{}}
 Blinds   & /Dm    & Multiple lines distributed evenly across the screen sweep in the same direction to reveal the new

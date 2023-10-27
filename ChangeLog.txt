@@ -1,4 +1,11 @@
 ===========
+Version: 2023-10-27 v7.01d
+
+
+2023-10-27 Ulrike Fischer
+    * hyperref.dtx: change anchor handling for amsthm, issue 304
+    
+===========
 Version: 2023-10-21 v7.01c
 
 2023-10-16 Ulrike Fischer

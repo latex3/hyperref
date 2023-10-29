@@ -1,0 +1,17 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\START \showoutput
+
+\begin{theorem} 
+bla \label{thm:lab}
+\end{theorem}
+
+\ref{thm:lab}
+
+\end{document}

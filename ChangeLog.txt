@@ -1,3 +1,6 @@
+2023-10-31
+    * hyperref-linktarget.dtx: switch to e-type
+
 ===========
 Version: 2023-10-27 v7.01d
 

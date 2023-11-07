@@ -1,0 +1,136 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 510.3122fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\glue(\topskip) 3.05556
+....\hbox(6.94444+0.0)x345.0, glue set 314.72218fil
+.....\hbox(0.0+0.0)x15.0
+.....\OT1/cmr/m/n/10 a
+.....\OT1/cmr/m/n/10 b
+.....\kern0.27779
+.....\OT1/cmr/m/n/10 c
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\lineskip) 1.0
+....\hbox(19.31665+14.31665)x345.0, glue set 279.0333fil
+.....\hbox(0.0+0.0)x15.0
+.....\hbox(19.31665+14.31665)x50.9667
+......\hbox(33.6333+0.0)x50.9667, shifted 14.31665
+.......\vbox(33.6333+0.0)x50.9667
+........\rule(0.4+0.0)x*
+........\hbox(32.83331+0.0)x50.9667
+.........\rule(*+*)x0.4
+.........\vbox(32.83331+0.0)x50.16672
+..........\glue 3.0
+..........\hbox(15.91666+10.91666)x50.16672
+...........\kern 3.0
+...........\mathon
+...........\vbox(15.91666+10.91666)x44.16672
+............\pdfdest name{Item.1} xyz
+............\penalty 10000
+............\glue 4.0 plus 2.0 minus 1.0
+............\glue -4.0 plus -2.0 minus -1.0
+............\hbox(6.83331+0.0)x44.16672, glue set 1.38887fil
+.............\kern 25.00003
+.............\hbox(6.44444+0.0)x0.0
+..............\glue 0.0
+..............\glue -20.00003
+..............\glue -5.0
+..............\hbox(6.44444+0.0)x20.00003, glue set 20.00003fil
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+...............\hbox(6.44444+0.0)x0.0, glue set - 7.7778fil
+................\glue 0.0 plus 1.0fil minus 1.0fil
+................\OT1/cmr/m/n/10 1
+................\OT1/cmr/m/n/10 .
+..............\glue 5.0
+.............\penalty 0
+.............\OT1/cmr/m/n/10 O
+.............\OT1/cmr/m/n/10 n
+.............\OT1/cmr/m/n/10 e
+.............\penalty 10000
+.............\glue(\parfillskip) 0.0 plus 1.0fil
+.............\glue(\rightskip) 0.0
+.............\kern 0.0
+............\glue 4.0 plus 2.0 minus 1.0
+............\pdfdest name{Item.2} xyz
+............\penalty 10000
+............\glue 4.0 plus 2.0 minus 1.0
+............\glue 5.16669
+............\hbox(6.83331+0.0)x44.16672
+.............\kern 25.00003
+.............\hbox(6.44444+0.0)x0.0
+..............\glue 0.0
+..............\glue -20.00003
+..............\glue -5.0
+..............\hbox(6.44444+0.0)x20.00003, glue set 20.00003fil
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+...............\hbox(6.44444+0.0)x0.0, glue set - 7.7778fil
+................\glue 0.0 plus 1.0fil minus 1.0fil
+................\OT1/cmr/m/n/10 2
+................\OT1/cmr/m/n/10 .
+..............\glue 5.0
+.............\penalty 0
+.............\OT1/cmr/m/n/10 T
+.............\OT1/cmr/m/n/10 w
+.............\kern-0.27779
+.............\OT1/cmr/m/n/10 o
+.............\penalty 10000
+.............\glue(\parfillskip) 0.0 plus 1.0fil
+.............\glue(\rightskip) 0.0
+.............\kern 0.0
+............\glue 0.0
+...........\mathoff
+...........\kern 3.0
+..........\glue 3.0
+.........\rule(*+*)x0.4
+........\rule(0.4+0.0)x*
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -5.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(varwidth-gh204.aux)
+Package rerunfilecheck Info: File `varwidth-gh204.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

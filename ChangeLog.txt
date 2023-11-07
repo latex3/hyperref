@@ -1,6 +1,10 @@
-2023-10-31
-    * hyperref-linktarget.dtx: switch to e-type
+2023-11-07 Ulrike Fischer
+	* improve thm code, issue 304
+	* insert socket for varwidth, issue 204 and 293
 
+2023-10-31 Ulrike Fischer
+    * hyperref-linktarget.dtx: switch to e-type
+    
 ===========
 Version: 2023-10-27 v7.01d
 

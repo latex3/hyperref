@@ -4312,9 +4312,16 @@
     \global\Hy@SavedSpaceFactor=\the\Hy@SavedSpaceFactor\relax
   }%
 }
+%    \end{macrocode}
+% Packages like varwidth need an option to change the handling in vmode.
+% (Issue \#204). With a new format we therefore insert a socket.
+%    \begin{macrocode}
+\@ifl@t@r\fmtversion{2023-11-01}
+ {\NewSocket{hyp/raisedlink}{1}}
+ {\providecommand\UseSocket[2]{#2}} 
 \def\Hy@raisedlink#1{%
   \ifvmode
-    #1%
+    \UseSocket{hyp/raisedlink}{#1}%
   \else
     \Hy@SaveSpaceFactor
     \penalty\@M
@@ -10692,6 +10699,20 @@
 \def\hypergetpageref#1{\getrefbykeydefault{#1}{page}{0}}
 %    \end{macrocode}
 %
+% \section{Package varwidth support}
+% 2023-11-07: varwidth needs a special configuration point to inserts its handler.
+% We use a socket for this.
+% 
+%    \begin{macrocode}
+\@ifl@t@r\fmtversion{2023-11-01}
+ {
+   \AddToHook{package/varwidth/after}
+    { 
+      \NewSocketPlug{hyp/raisedlink}{varwidth}{\@vwid@wrap{#1}}
+      \appto\@vwid@setup{\AssignSocketPlug{hyp/raisedlink}{varwidth}}
+    }  
+ }{}
+%    \end{macrocode}
 % \section{Package titlesec and titletoc support}
 %
 %    This code is contributed by Javier Bezos

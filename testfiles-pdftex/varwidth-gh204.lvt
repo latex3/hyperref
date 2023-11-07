@@ -1,0 +1,17 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{varwidth}
+\usepackage{hyperref}
+
+\begin{document}
+\START\showoutput
+abc
+
+\fbox{\begin{varwidth}{\textwidth}
+  \begin{enumerate}
+    \item One
+    \item Two
+  \end{enumerate}
+\end{varwidth}}
+
+\end{document}

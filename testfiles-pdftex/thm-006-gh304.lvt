@@ -1,0 +1,15 @@
+\input{regression-test}
+\documentclass{amsart}
+\usepackage{hyperref}
+
+\newtheorem{thmx}{Theorem}
+
+\begin{document}\START\showoutput
+
+\begin{thmx}\label{t:a}
+   a
+\end{thmx}
+
+By \ref{t:a} 
+
+\end{document}

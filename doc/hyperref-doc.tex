@@ -3111,6 +3111,12 @@ Example for introducing links for the page numbers:
       \renewcommand*{\pagedeclaration}[1]{\unskip, \hyperpage{#1}}
 \end{verbatim}
 
+\subsubsection{ntheorem}
+
+This package is not fully supported. The \texttt{thref} option should not be used at all as
+it breaks the \verb+\label+ command. It also not garantied that links to theorems always work
+properly as the package redefines many internals and but offers no proper interface for hyperlinks.
+
 
 \subsubsection{ntheorem-hyper}
  This package is obsolete, use the up-to-date original

@@ -1,0 +1,83 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(640.215+0.0)x414.8775
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 21.21126fil
+..\kern 0.0
+..\kern 22.215
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 53.87376fil
+...\kern 0.0
+...\kern 54.8775
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(640.215+0.0)x414.8775
+..\glue 22.215
+..\vbox(618.0+0.0)x360.0, shifted 54.8775
+...\vbox(8.0+0.0)x360.0, glue set 8.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x360.0
+.....\hbox(0.0+0.0)x360.0
+...\glue 14.0
+...\glue(\lineskip) 0.0
+...\vbox(584.0+0.0)x360.0, glue set 556.0fil
+....\pdfdest name{Doc-Start} xyz
+....\write1{\newlabel{t:a}{{1}{\thepage }{}{thmx.1}{}}}
+....\glue(\topskip) 3.05556
+....\hbox(6.94444+0.0)x360.0, glue set 292.11142fil
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -12.0
+.......\pdfdest name{thmx.1} xyz
+.......\penalty 10000
+.....\OT1/cmr/bx/n/10 T
+.....\OT1/cmr/bx/n/10 h
+.....\OT1/cmr/bx/n/10 e
+.....\OT1/cmr/bx/n/10 o
+.....\OT1/cmr/bx/n/10 r
+.....\OT1/cmr/bx/n/10 e
+.....\OT1/cmr/bx/n/10 m
+.....\kern 0.0
+.....\glue 3.83331 plus 1.91666 minus 1.27777
+.....\OT1/cmr/bx/n/10 1
+.....\kern 0.0
+.....\OT1/cmr/bx/n/10 .
+.....\glue 5.0 plus 1.0 minus 1.0
+.....\OT1/cmr/m/it/10 a
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -51
+....\glue 6.0 plus 2.39996 minus 2.39996
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.16669
+....\hbox(6.83331+1.94444)x360.0, glue set 327.3055fil
+.....\hbox(0.0+0.0)x12.0
+.....\OT1/cmr/m/n/10 B
+.....\OT1/cmr/m/n/10 y
+.....\glue 3.33333 plus 1.66666 minus 1.11111
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{thmx.1}
+.....\OT1/cmr/m/n/10 1
+.....\pdfendlink
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -1.94444
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 7.48889
+...\hbox(4.51111+0.0)x360.0
+....\hbox(4.51111+0.0)x360.0, glue set 178.00694fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/7 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(thm-006-gh304.aux)
+Package rerunfilecheck Info: File `thm-006-gh304.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

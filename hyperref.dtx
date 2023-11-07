@@ -10967,14 +10967,52 @@
  } 
 %    \end{macrocode}
 %
-% Support for theorems. We move the target into the para hook to 
-% avoid spacing problem. The patch will not apply to 
-% \texttt{cleveref} but hopefully it does the right thing anyway.
+% \section{Support for theorems} 
+% 
+% Hyperlink support in theorems has to resolve typically three problems:
+% \begin{itemize}
+% \item The \cs{refstepcounter} can be issued to early. The target it produces
+% can be separated from the theorem and then the link if wrong (see testfiles thm-005-xx). 
+% It can also affect spacing. 
+% This means that it is better if this \cs{refstepcounter} doesn't produce a target.
+%
+% \item The natural place for the target (before the theorem label) is normally not printed
+% directly but delayed to the next paragraph begin (through the \cs{item} code or by other means). 
+% and \cs{label} commands used directly at the begin of the environment are perhaps 
+% processed \emph{before} the target is created 
+% and so do not know the correct \cs{@currentHref} value. That means that if
+% \cs{refstepcounter} does not produce a target, it should nevertheless update the target
+% name.
+% 
+% \item The target should be placed (in horizontal mode) before the theorem label to avoid
+% side effects on spacing. For this a suitable place must be 
+% found depending on the actual theorem definition. 
+% \end{itemize} 
+% 
+% Theorems typically issue the \cs{refstepcounter} in \cs{@thm}. 
+% The first two points can therefore be resolved by patching this command 
+% and replacing the \cs{refstepcounter}. 
+% 
+% The last point is the most complicated. Simply moving at the point \cs{refstepcounter}
+% is encountered into the next para hook doesn't work, as this can be in a header if there is page
+% break. The next item hook doesn't work for the same reason, 
+% also not every theorem environment actually use \cs{item} (e.g. \xpackage{amsthm} and ams-classes).
+% Patching (or using a hook) \cs{@begintheorem} doesn't work either as \xpackage{ntheorem}
+% redefines this on the fly. 
+% 
+% For now we move the target creation into the item hook. This is not perfect,
+% as it can end up in header or be to much to the right, but there is not really
+% a better place.
+% 
+% The patch will not apply to 
+% \texttt{cleveref}, this means that with cleveref there
+% can be a page break between target and theorem but beside this
+% it hopefully it does the right thing.
 % \cs{@currentHref} is updated directly for labels set before 
 % the actual start of the paragraph. The target can be behind
 % a target created from a following list, so we restore \cs{@currentHref}
-% just in case
-% 
+% just in case.
+% Later we could use sockets here (or hope that the packages take this over. 
 % 
 %    \begin{macrocode}
 \newcommand\Hy@theorem@refstepcounter[1]
@@ -10982,33 +11020,37 @@
    \H@refstepcounter{#1}%
    \hyper@makecurrent{#1}%
    \global\let\Hy@dth@currentHref\@currentHref
+   \Hy@theorem@makelinktarget{\Hy@dth@currentHref}%
+  } 
+\newcommand\Hy@theorem@makelinktarget[1]
+ {
    \AddToHookNext{cmd/item/before}
      {\AddToHookNext{para/begin}
        {\let\Hy@tempa\@currentHref
-        \MakeLinkTarget*{\Hy@dth@currentHref}%
+        \MakeLinkTarget*{#1}% \Hy@dth@currentHref
         \global\let\@currentHref\Hy@tempa
        }%
-     }%  
-  } 
+     }%   
+ }  
 %    \end{macrocode}
 % amsthm doesn't issue an item in the theorem, we delay the target into
 % \cs{deferred@thm@head} and hope that it always begins a paragraph.
 %    \begin{macrocode}
-\AddToHook{package/amsthm/after}
- {
-  \renewcommand\Hy@theorem@refstepcounter[1]
+\AddToHook{begindocument}
+ {%
+  \@ifundefined{deferred@thm@head}{}
    {%
-    \H@refstepcounter{#1}%
-    \hyper@makecurrent{#1}%
-    \global\let\Hy@dth@currentHref\@currentHref
-    \AddToHookNext{cmd/deferred@thm@head/before}
-     {\AddToHookNext{para/begin}
-       {\let\Hy@tempa\@currentHref
-        \MakeLinkTarget*{\Hy@dth@currentHref}%
-        \global\let\@currentHref\Hy@tempa
-       }%
-     }%  
-   }
+    \renewcommand\Hy@theorem@makelinktarget[1]
+     {%
+      \AddToHookNext{cmd/deferred@thm@head/before}
+       {\AddToHookNext{para/begin}
+         {\let\Hy@tempa\@currentHref
+          \MakeLinkTarget*{#1}%
+          \global\let\@currentHref\Hy@tempa
+         }%
+       }%  
+     }%
+   }%
  }  
 \@ifundefined{hyper@nopatch@thm}{%  
 \AtBeginDocument{%  

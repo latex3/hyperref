@@ -1,0 +1,22 @@
+%check if anchor is on the right page!
+\input{regression-test}
+\documentclass[12pt]{book}
+
+\newtheorem{theorem}{theorem}
+
+\usepackage{hyperref}
+\begin{document}%
+\START\showoutput
+x
+
+\vspace{30\baselineskip}
+x\\x\\x\\x\\x\\x\\x%
+\begin{theorem}\label{blub}
+xxx
+\end{theorem}
+
+
+\newpage
+\ref{blub}
+
+\end{document}

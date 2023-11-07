@@ -10734,30 +10734,6 @@
 }{}
 %    \end{macrocode}
 %
-%
-% \section{Package varioref support}
-%
-%    Package nameref uses five arguments for the ref system.
-%    Fix provided by Felix Neubauer (\Email{felix.neubauer@gmx.net}).
-%    This fix will no longer be needed with latex 2021-11-15.
-%    \begin{macrocode}
-\@ifl@t@r\fmtversion{2021-11-15}
- {}%
- {
-   \AtBeginDocument{%
-   \def\Hy@varioref@undefined{{??}{??}{}{}{}}
-   \@ifpackageloaded{varioref}{%
-     \def\vref@pagenum#1#2{%
-       \@ifundefined{r@#2}{%
-         \expandafter\let\csname r@#2\endcsname\Hy@varioref@undefined
-       }{}%
-       \edef#1{\getpagerefnumber{#2}}%
-     }%
-   }{}
-   }
- }
-%    \end{macrocode}
-%
 % \section{Package longtable support}
 %
 %    Sometimes the anchor of the longtable goes to the previous

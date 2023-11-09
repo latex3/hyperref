@@ -596,55 +596,6 @@
 }
 %    \end{macrocode}
 %
-% \subsubsection{Class beamer}
-%
-%    \begin{macrocode}
-\@ifclassloaded{beamer}{%
- \@ifclasslater{beamer}{2022-05-17}
-  {}%do nothing
-  {%
-    \@ifundefined{NR@nopatch@beamer}
-    {%
-      \def\NR@PatchBeamer#1{%
-        \expandafter\let\csname NRorg@beamer@#1\expandafter\endcsname
-                        \csname beamer@#1\endcsname
-        \begingroup
-          \edef\x{\endgroup
-            \long\def\expandafter\noexpand\csname beamer@#1\endcsname
-                [####1]{% hash-ok
-              \noexpand\NR@gettitle{####1}%
-              \expandafter\noexpand\csname NRorg@beamer@#1\endcsname
-              [{####1}]%
-            }%
-          }%
-        \x
-      }%
-      \AddToHook{class/beamer/after}{%
-      \NR@PatchBeamer{section}%
-      \NR@PatchBeamer{subsection}%
-      \NR@PatchBeamer{subsubsection}%
-%    \end{macrocode}
-%
-%    Theorem names.
-%    \begin{macrocode}
-      \addtobeamertemplate{theorem begin}{%
-       \expandafter\NR@gettitle\expandafter{\inserttheoremaddition}%
-      }{}%
-%    \end{macrocode}
-%    \begin{macrocode}
-      \@ifdefinable{\NRorg@beamer@descriptionitem}{%
-        \let\NRorg@beamer@descriptionitem\beamer@descriptionitem
-        \renewcommand{\beamer@descriptionitem}[1]{%
-          \NR@gettitle{#1}%
-          \NRorg@beamer@descriptionitem{#1}%
-        }%
-      }%
-     }%Hook
-   }{}%@ifundefined
-  }%class later
- }{}
-%    \end{macrocode}
-%
 % \subsubsection{Theorems}
 %
 %    \begin{macrocode}

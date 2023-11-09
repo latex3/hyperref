@@ -1,6 +1,7 @@
 2023-11-09 Ulrike Fischer
 	* correct commands in encoding files, issue 307 and 308
 	* remove now unneeded fallbacks for reference commands
+	* nameref: remove unneeded beamer patch
 
 ===========
 Version: 2023-10-27 v7.01e

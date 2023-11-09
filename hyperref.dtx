@@ -9420,21 +9420,6 @@
 }
 %    \end{macrocode}
 
-%    Ignore star from referencing macros:
-%    This is only needed if LaTeX doesn't define the starred
-%    variants itself.
-%    \begin{macrocode}
-\@ifundefined{@kernel@ref}
- {\LetLtxMacro\NoHy@OrgRef\ref
-  \DeclareRobustCommand*{\ref}{%
-  \@ifstar\NoHy@OrgRef\NoHy@OrgRef
-  }
-  \LetLtxMacro\NoHy@OrgPageRef\pageref
-  \DeclareRobustCommand*{\pageref}{%
-  \@ifstar\NoHy@OrgPageRef\NoHy@OrgPageRef
- }}{}
-%    \end{macrocode}
-%
 % \section{Localized nullifying of package}
 % Sometimes we just don't want the wretched package interfering
 % with us. Define an environment we can put in manually, or include
@@ -9522,21 +9507,7 @@
 \long\def\@gobbleopt[#1]{}
 \let\hyperpage\@empty
 %    \end{macrocode}
-%    Ignore star from referencing macros. This is only
-%    needed in older formats.
-%    \begin{macrocode}
-\@ifl@t@r\fmtversion{2022-06-01}
- {}%
- {%
-   \LetLtxMacro\NoHy@OrgRef\ref
-   \DeclareRobustCommand*{\ref}{%
-     \@ifstar\NoHy@OrgRef\NoHy@OrgRef
-   }
-   \LetLtxMacro\NoHy@OrgPageRef\pageref
-   \DeclareRobustCommand*{\pageref}{%
-     \@ifstar\NoHy@OrgPageRef\NoHy@OrgPageRef
-   }%
- }
+%
 %</nohyperref>
 %    \end{macrocode}
 %

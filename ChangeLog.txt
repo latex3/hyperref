@@ -1,5 +1,8 @@
 2023-11-09 Ulrike Fischer
-	* correct commands in encoding files, issue 307 and 308
+	* correct \cyreref to \cyrerev issue 307 
+	* corrent \textddagger definition issue 308
+	* correct \DiamandSolid to \DiamondSolid in \psdmapshortnames issue 310
+	* correct \textDiamandSolid to \textDiamondSolid issue 310
 	* remove now unneeded fallbacks for reference commands
 	* nameref: remove unneeded beamer patch
 	* nameref: remove unneeded ifthen patch

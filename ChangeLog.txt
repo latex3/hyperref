@@ -1,3 +1,6 @@
+2023-11-11 David Carlisle
+        * remove ltxcmds dependency
+	
 2023-11-07 Ulrike Fischer
 	* improve thm code, issue 304
 	* insert socket for varwidth, issue 204 and 293

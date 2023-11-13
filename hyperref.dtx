@@ -10486,7 +10486,7 @@
   \@ifundefined{theH#1}{%
     \expandafter\def\csname theH#1\endcsname{}%
     \def\Hy@temp{\@elt{#1}}%
-    \@nelevel@sanitize\Hy@temp
+    \@onelevel@sanitize\Hy@temp
     \let\HyOrg@elt\@elt
     \edef\@elt{%
       \noexpand\HyCnt@LookForParentCounter
@@ -10509,7 +10509,7 @@
   \expandafter\let\expandafter\Hy@temp@A\csname cl@#2\endcsname
   \@ifundefined{cl@#2}{%
   }{%
-    \@nelevel@sanitize\Hy@temp@A
+    \@onelevel@sanitize\Hy@temp@A
     \edef\Hy@temp@A{%
       \noexpand\in@{\Hy@temp}{\Hy@temp@A}%
     }\Hy@temp@A
@@ -12355,7 +12355,7 @@
         \begingroup
           \let\protect\@unexpandable@protect
           \edef\Hy@temp{#1}%
-          \@nelevel@sanitize\Hy@temp
+          \@onelevel@sanitize\Hy@temp
           \global\let\HyInd@key\Hy@temp
         \endgroup
       }%

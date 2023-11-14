@@ -1,3 +1,7 @@
+2023-11-14 Ulrike Fischer
+	* remove ltxcmds dependency in hluatex.dtx
+	* remove ltxcmds dependency in nameref.dtx (v2.55)
+
 2023-11-11 David Carlisle
         * remove ltxcmds dependency
 	

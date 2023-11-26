@@ -7,7 +7,7 @@ Version: 2023-11-26 v7.01g
 
 2023-11-26 Ulrike Fischer
 	* xr-hyper.sty: store URL/file name of external documents always to
-	* allow file links even without destinations.
+	  allow file links even without destinations.
 	* nameref.dtx remove unneeded memoir patch
 	* nameref.dtx remove unneeded titlesec patch
 	* rename \HyPsd@expand@utfvii to \HyPsd@expand@utfviii, issue #309

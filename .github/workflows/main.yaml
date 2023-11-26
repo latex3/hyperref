@@ -3,7 +3,7 @@ name: Automated testing
 on:
   push:
     branches:
-      - "*"
+      - "**"
       - "!test*"
 jobs:
   run-checks:

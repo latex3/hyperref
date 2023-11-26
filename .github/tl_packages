@@ -14,7 +14,6 @@ collection-basic
         carlisle
         colortbl
         epstopdf-pkg
-        etexcmds
         fancyhdr
         firstaid
         geometry
@@ -37,7 +36,6 @@ collection-basic
         latex-lab
         latexconfig
         letltxmacro
-        ltxcmds
         ltxmisc
         mfnfss
         mptopdf
@@ -136,7 +134,6 @@ collection-basic
         fontspec
         hologo
         index
-        infwarerr
         koma-script
         l3experimental
         latexbug
@@ -150,7 +147,6 @@ collection-basic
         pdflscape
         pdfmanagement-testphase
         pdfpages
-        pdftexcmds
         ragged2e
         setspace
         textcase

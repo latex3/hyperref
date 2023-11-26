@@ -112,14 +112,11 @@
 %
 %  \item \cs{@part}, \cs{@spart}, \cs{@chapter}, \cs{@schapter}:
 %  command to store the title added
-%  \item \cs{ttl@sect@i} (from the \textsf{titlesec} package):
-%   command to store the title added
 %  \end{itemize}
 %
 % All the patches excepted the last are disabled if the command
 % \cs{NR@nopatch@sectioning} is defined (the actual definition is irrelevant, only
-% existence is tested. The titlesec patch is disabled if
-% \cs{NR@nopatch@titlesec} is defined.
+% existence is tested. 
 % This currently only suppress the actual patches, the counter,
 % \cs{Sectionformat} and also the internal copies \cs{NR@sect} etc are still
 % defined.
@@ -533,22 +530,6 @@
        }%
      }{}%
   }%
-}
-%    \end{macrocode}
-%
-% Compatibility for package titlesec.
-%    \begin{macrocode}
-\AtBeginDocument{%
-  \@ifpackageloaded{titlesec}{%
-    \let\NRorg@ttl@sect@i\ttl@sect@i
-    \@ifundefined{NR@nopatch@titlesec}
-     {%
-       \def\ttl@sect@i#1#2[#3]#4{%
-         \NR@gettitle{#4}%
-         \NRorg@ttl@sect@i{#1}{#2}[{#3}]{#4}%
-         }%
-      }{}%
-  }{}%
 }
 %    \end{macrocode}
 %

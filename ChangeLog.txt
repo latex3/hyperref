@@ -2,6 +2,7 @@
 	* xr-hyper.sty: store URL/file name of external documents always to
 	* allow file links even without destinations.
 	* nameref.dtx remove unneeded memoir patch
+	* nameref.dtx remove unneeded titlesec patch
    
 2023-11-14 Ulrike Fischer
 	* remove ltxcmds dependency in hluatex.dtx

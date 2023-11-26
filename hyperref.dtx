@@ -10974,8 +10974,8 @@
 % The last point is the most complicated. Simply moving at the point \cs{refstepcounter}
 % is encountered into the next para hook doesn't work, as this can be in a header if there is page
 % break. The next item hook doesn't work for the same reason, 
-% also not every theorem environment actually use \cs{item} (e.g. \xpackage{amsthm} and ams-classes).
-% Patching (or using a hook) \cs{@begintheorem} doesn't work either as \xpackage{ntheorem}
+% also not every theorem environment actually use \cs{item} (e.g. \texttt{amsthm} and ams-classes).
+% Patching (or using a hook) \cs{@begintheorem} doesn't work either as \texttt{ntheorem}
 % redefines this on the fly. 
 % 
 % For now we move the target creation into the item hook. This is not perfect,

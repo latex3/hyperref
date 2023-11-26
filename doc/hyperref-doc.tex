@@ -439,7 +439,7 @@ case more keys gives back their value.
 \subsection{Links commands}
 The following commands are provided by all drivers to create links.
 They can be used by packages if the user commands are not sufficient.
-New drivers must provide this commands with similar arguments.
+New drivers must provide these commands with similar arguments.
 
 \begin{verbatim}
  \hyper@anchor {destination name}
@@ -591,7 +591,7 @@ site-wide basis.
 Note however that some options (for example \texttt{unicode}) can only be used as
 package options, and not in \verb|\hypersetup| as the option settings are processed
 as the package is read. The following tabular lists (hopefully all) these options.
-Be aware that some of the option do nothing or have
+Be aware that some of the options do nothing or have
 changed behaviour if the new pdfmanagement and so the new generic \xpackage{hyperref} driver is used.
 
 \begin{tabular}{>{\ttfamily}l>{\raggedright\arraybackslash}p{5cm}}
@@ -689,7 +689,7 @@ names that identify a position on a page in the document. They
 are used in link targets for inner document links or the bookmarks,
 for example.
 
-Usually anchor are set, if \cs{refstepcounter} is called.
+Usually anchors are set, if \cs{refstepcounter} is called.
 Thus there is a counter name and value. Both are used to
 construct the destination name. By default the counter value
 follows the counter name separated by a dot. Example for
@@ -812,7 +812,7 @@ or \cs{strcmp} of \hologo{XeTeX}, package \xpackage{pdftexcmds} also supports
 \end{verbatim}
 \end{quote}
 
-With option \texttt{destlabel} destinations can also named manually,
+With option \texttt{destlabel} destinations can also be named manually,
 if the destination is not yet renamed:
 \begin{quote}
 \verb|\HyperDestRename{|\meta{destination}\verb|}{|\meta{newname}\verb|}|

@@ -1,3 +1,11 @@
+2023-11-14 Ulrike Fischer
+	* remove ltxcmds dependency in hluatex.dtx
+	* remove ltxcmds dependency in nameref.dtx (v2.55)
+	* remove ltxcmds dependency in backref.dtx (v1.44)
+
+2023-11-11 David Carlisle
+        * remove ltxcmds dependency
+	
 2023-11-07 Ulrike Fischer
 	* improve thm code, issue 304
 	* insert socket for varwidth, issue 204 and 293

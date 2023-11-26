@@ -1,8 +1,7 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Package hyperref Warning: Suppressing link with empty target on input line ....
 > \r@sec-no-hyper=macro:
-->{1}{1}{}{}{}.
+->{1}{1}{}{}{test-xr-nohyper.pdf}.
 <recently read> \r@sec-no-hyper 
 l. ......ndafter\show\csname r@sec-no-hyper\endcsname
 > \r@sec-hyper=macro:
@@ -45,6 +44,7 @@ Completed box being shipped out [1]
 ......\localleftbox=null
 ......\localrightbox=null
 .....\hbox(0.0+0.0)x15.0, direction TLT
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 .5 .5]} action user{/Subtype/Link/A<</F(test-xr-nohyper.pdf)/S/GoToR/D[0/Fit]>>}
 .....\TU/lmr/m/n/10 s
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 c
@@ -58,6 +58,7 @@ Completed box being shipped out [1]
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT
+.....\pdfendlink
 .....\glue(\spaceskip) 3.33 plus 1.665 minus 1.11
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[0 .5 .5]} action user{/Subtype/Link/A<</F(test-xr-hyper.pdf)/S/GoToR/D(section.1)>>}
 .....\TU/lmr/m/n/10 s

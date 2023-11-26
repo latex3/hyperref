@@ -1,7 +1,7 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 > \r@IIIa=macro:
-->{1.1}{1}{title}{section.title}{}.
+->{1.1}{1}{title}{section.title}{test-aux3.pdf}.
 l. ... \show\r@IIIa
                     \show\r@IVa  \show\r@Va
 > \r@IVa=macro:
@@ -9,7 +9,7 @@ l. ... \show\r@IIIa
 l. ... \show\r@IIIa  \show\r@IVa
                                  \show\r@Va
 > \r@Va=macro:
-->{1.1}{1}{title}{section.title}{}.
+->{1.1}{1}{title}{section.title}{test-aux5.pdf}.
 l. ... \show\r@IIIa  \show\r@IVa  \show\r@Va
 Completed box being shipped out [1]
 \vbox(627.36243+0.0)x380.0

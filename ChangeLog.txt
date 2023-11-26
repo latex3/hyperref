@@ -1,3 +1,7 @@
+
+2023-11-26  David Carlisle
+	* hyperref.dtx: Remove infwarerr
+
 2023-11-26 Ulrike Fischer
 	* xr-hyper.sty: store URL/file name of external documents always to
 	* allow file links even without destinations.

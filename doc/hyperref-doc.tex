@@ -864,7 +864,7 @@ shipout, \cs{@currentHpage} is only reliable at shipout. With a
 
 \begin{longtable}{>{\ttfamily}ll>{\itshape}lp{9cm}}
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
-                               simply the base line of contained text; this options forces \verb|\special| commands to
+                               simply the base line of contained text; this option forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
 breaklinks & boolean & both & This option is in \xpackage{hyperref} only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
 checks the state of the boolean.\\
@@ -954,7 +954,7 @@ linktoc        & text    & section & make text (\verb|section|), page number (\v
 linktocpage    & boolean & false   & make page number, not text, be link on TOC, LOF and LOT \\
 breaklinks     & boolean & false   & allow links to break over lines by making links over multiple lines into PDF links to
                                      the same target \\
-colorlinks     & boolean & false   & Colors the text of links and anchors. The colors chosen depend on the the type of
+colorlinks     & boolean & false   & Colors the text of links and anchors. The colors chosen depend on the type of
                                      link. At present the only types of link distinguished are citations, page references,
                                      URLs, local file references, and other links.
                                      Unlike colored boxes, the colored
@@ -1024,7 +1024,7 @@ has been loaded.
 For further information see description of package \xpackage{hycolor}.
 
 The bookmark commands are stored in a file called
-\textit{jobname}\texttt{.out}. The files is not processed by \LaTeX\ so
+\textit{jobname}\texttt{.out}. The file is not processed by \LaTeX\ so
 any markup is passed through. You can postprocess this file as needed;
 as an aid for this, the \texttt{.out} file is not overwritten on the
 next \TeX\ run if it is edited to contain the line
@@ -1093,11 +1093,11 @@ pdfpicktraybypdfsize
 pdfprintarea       & name    & empty & set /PrintArea of viewer preferences.  Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfprintclip       & name    & empty & set /PrintClip of viewer preferences.  Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfprintpagerange  & n n (n n)*
                              & empty & set /PrintPageRange of viewer preferences\\
 pdfprintscaling    & name    & empty & page scaling option for print dialog
@@ -1109,11 +1109,11 @@ pdftoolbar         & boolean & true  & make PDF toolbar visible \\
 pdfviewarea        & name    & empty & set /ViewArea of viewer preferences. Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfviewclip        & name    & empty & set /ViewClip of viewer preferences Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfwindowui        & boolean & true  & make PDF user interface elements visible \\
 unicode            & boolean & true & Unicode encoded PDF strings
 \end{longtable}

@@ -1,8 +1,7 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Package hyperref Warning: Suppressing link with empty target on input line ....
 > \r@sec-no-hyper=macro:
-->{1}{1}{}{}{}.
+->{1}{1}{}{}{test-xr-nohyper.pdf}.
 <recently read> \r@sec-no-hyper 
 l. ......after\show\csname r@sec-no-hyper\endcsname
 > \r@sec-hyper=macro:
@@ -50,17 +49,22 @@ Completed box being shipped out [1]
 ....\glue(\topskip) 3.32141
 ....\hbox(6.67859+0.0)x345.0, glue set 249.88878fil
 .....\hbox(0.0+0.0)x15.0
-.....\OT1/cmr/m/n/10 s
-.....\OT1/cmr/m/n/10 e
-.....\OT1/cmr/m/n/10 c
-.....\OT1/cmr/m/n/10 t
-.....\OT1/cmr/m/n/10 i
-.....\OT1/cmr/m/n/10 o
-.....\OT1/cmr/m/n/10 n
-.....\penalty 10000
-.....\glue 3.33333 plus 1.66666 minus 1.11111
-.....\OT1/cmr/m/n/10 1
-.....\hbox(0.0+0.0)x0.0
+.....\special{ps:SDict begin H.S end}
+.....\hbox(6.67859+0.0)x38.38895
+......\OT1/cmr/m/n/10 s
+......\OT1/cmr/m/n/10 e
+......\OT1/cmr/m/n/10 c
+......\OT1/cmr/m/n/10 t
+......\OT1/cmr/m/n/10 i
+......\OT1/cmr/m/n/10 o
+......\OT1/cmr/m/n/10 n
+......\penalty 10000
+......\glue 3.33333 plus 1.66666 minus 1.11111
+......\OT1/cmr/m/n/10 1
+......\hbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0, shifted -6.67859
+......\special{ps:SDict begin H.R end}
+.....\special{ps:SDict begin [/Subtype /Link/H /I/Border [0 0 1]BorderArrayPatch/Color [0 .5 .5]/Action <</S/GoToR/F(test-xr-nohyper.pdf)/D[0/Fit]>> H.B /ANN pdfmark end}
 .....\glue 3.33333 plus 1.66666 minus 1.11111
 .....\special{ps:SDict begin H.S end}
 .....\hbox(6.67859+0.0)x38.38895

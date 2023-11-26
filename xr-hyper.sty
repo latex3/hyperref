@@ -50,14 +50,15 @@
 %%
 %% In the case of \ref, if the external document has not used
 %% hyperref, this package will work like xr and produce the correct
-%% text, but can not produce a well formed link as the target document
-%% is not set up. In this case you may prefer to use \ref* rather than
+%% text, but it can only produce a file link and
+%% not target the exact location as the target document has no destinations
+%% In this case you may prefer to use \ref* rather than
 %% \ref to avoid generating a hyperlink.
 %%
 %%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{xr-hyper}
-         [2023-10-27 v7.01d eXternal References (DPC)]
+         [2023-11-09 v7.01f eXternal References (DPC)]
 
 \def\externaldocument{\@testopt\XR@cite{}}
 \let\externalcitedocument\externaldocument
@@ -73,7 +74,6 @@
    \else
      \let\XR@bibcite\bibcite
    \fi
-  \def\XR@useURL{}%  
   \def\XR@URL{#4}%
   \filename@parse{#3}%
   \XR@next#3.aux\relax\\}}
@@ -94,12 +94,7 @@
 % XR@addURL:
 \def\XR@addURL#1{\XR@@dURL#1{}{}{}{}\\}
 \def\XR@@dURL#1#2#3#4#5\\{%
-     {#1}{#2}%
-     \if!#4!%
-      {#3}{#4}{}% new perhaps this could use \XR@URL too?
-     \else
-      {#3}{#4}{\XR@useURL}%
-    \fi
+     {#1}{#2}{#3}{#4}{\XR@URL}% 
   }%
 
 \def\XR@explist{\expandafter\XR@next\XR@list\\}
@@ -118,11 +113,6 @@
 % 2019 update to match xr
 \long\def\XR@test#1#2#3#4\XR@{%
   \let\XR@tempa\@gobblethree
-% we set the file name only if the target has actually destinations.
-% for this we test if hyperref has been used.  
-  \ifx#1\HyperFirstAtBeginDocument
-    \let\XR@useURL\XR@URL
-  \fi
   \ifx#1\newlabel
     \let\XR@tempa\@firstofthree
   \else\ifx#1\XR@bibcite
@@ -168,3 +158,9 @@
 %%  unified and simplified the brace handling: all defined references have now
 %%  five brace groups. Together with the planed change in LaTeX 2023-06-01 this
 %%  will improve the combination of hyperref/non-hyperref documents.
+%%
+%% 2023-11-26
+%%
+%% Always store the URL/file name of the external document to allow file links
+%% even if it has no destinations.
+%%

@@ -1,3 +1,13 @@
+2023-11-14 Ulrike Fischer
+	* remove ltxcmds dependency in hluatex.dtx
+	* remove ltxcmds dependency in nameref.dtx (v2.55)
+	* remove ltxcmds dependency in backref.dtx (v1.44)
+
+2023-11-11 David Carlisle
+        * remove ltxcmds dependency
+
+Version: 2023-11-09 v7.01f
+
 2023-11-09 Ulrike Fischer
 	* correct \cyreref to \cyrerev issue 307 
 	* corrent \textddagger definition issue 308
@@ -8,7 +18,7 @@
 	* nameref: remove unneeded ifthen patch
 
 ===========
-Version: 2023-10-27 v7.01e
+Version: 2023-11-?? v7.01e
 
 2023-11-07 Ulrike Fischer
 	* improve thm code, issue 304

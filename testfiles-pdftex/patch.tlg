@@ -25,7 +25,7 @@ l. ...\ShowCommand\endequation
 <argument> \@xfootnotenext 
 l. ...\ShowCommand\@xfootnotenext
 > \@footnotetext=\long macro:
-#1->\H@@footnotetext {\ifHy@nesting \expandafter \ltx@firstoftwo \else \expandafter \ltx@secondoftwo \fi {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\ignorespaces #1}}{\Hy@raisedlink {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\relax }}\let \@currentHref \Hy@footnote@currentHref \let \@currentlabelname \@empty \ignorespaces #1}}.
+#1->\H@@footnotetext {\ifHy@nesting \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\ignorespaces #1}}{\Hy@raisedlink {\expandafter \hyper@@anchor \expandafter {\Hy@footnote@currentHref }{\relax }}\let \@currentHref \Hy@footnote@currentHref \let \@currentlabelname \@empty \ignorespaces #1}}.
 <argument> \@footnotetext 
 l. ...\ShowCommand\@footnotetext
 > \caption=macro:

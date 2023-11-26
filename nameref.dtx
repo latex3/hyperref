@@ -33,7 +33,7 @@
 %<driver>\ProvidesFile{nameref.drv}
 % \fi
 % \ProvidesFile{nameref.dtx}
-  [2023-11-09 v2.55 Cross-referencing by name of section]%
+  [2023-11-14 v2.56 Cross-referencing by name of section]%
 %
 %
 % \iffalse
@@ -217,9 +217,14 @@
 %    \begin{macrocode}
 \RequirePackage{refcount}[2006/02/12]
 \RequirePackage{gettitlestring}[2009/12/18]
-\RequirePackage{ltxcmds}[2009/12/12]
 %    \end{macrocode}
-%
+
+%    \begin{macrocode}
+\ExplSyntaxOn
+\let\NR@GlobalAppendToMacro\tl_gput_right:Nn
+\ExplSyntaxOff
+
+%    \end{macrocode}
 % In formats older than 2023-06-01 
 % we redefine |\label| so that it also writes the name of the
 % current section to the .aux file; if the name ends in a dot,
@@ -228,7 +233,7 @@
 % used for cross-ref name, and file).
 %    \begin{macro}{\NR@strip@period}
 %    \begin{macrocode}
-\def\NR@strip@period#1.\ltx@empty#2\@nil{#1}
+\def\NR@strip@period#1.\@empty#2\@nil{#1}
 %    \end{macrocode}
 %    \end{macro}
 %
@@ -246,7 +251,7 @@
   \@onelevel@sanitize\@currentlabelname
   \edef\@currentlabelname{%
     \expandafter\NR@strip@period\@currentlabelname
-    \ltx@empty.\ltx@empty\@nil
+    \@empty.\@empty\@nil
   }%
 }
 %    \end{macrocode}
@@ -281,7 +286,7 @@
 % and also in hyperref.    
 %    \begin{macrocode}
 \providecommand*{\label@hook}{}
-\ltx@GlobalAppendToMacro{\label@hook}{%
+\NR@GlobalAppendToMacro{\label@hook}{%
     \NR@sanitize@labelname
     }
 \@ifl@t@r\fmtversion{2023-06-01}
@@ -461,9 +466,9 @@
 %
 %    \begin{macrocode}
 \@ifundefined{NR@nopatch@sectioning}
- {\ltx@IfUndefined{ifheadnameref}{%
+ {\@ifundefined{ifheadnameref}{%
   }{%
-    \ltx@IfUndefined{M@sect}{%
+    \@ifundefined{M@sect}{%
     }{%
       \let\NRorg@M@sect\M@sect
       \def\M@sect#1#2#3#4#5#6[#7][#8]{%
@@ -501,17 +506,17 @@
     \NR@chapter[{#1}]{#2}%
   }
   \@ifclassloaded{memoir}{%
-    \ltx@IfUndefined{ifheadnameref}{%
+    \@ifundefined{ifheadnameref}{%
     }{%
       \def\@chapter[#1]#2{%
-        \ltx@IfUndefined{ch@pt@c}{%
+        \@ifundefined{ch@pt@c}{%
           \NR@gettitle{#1}%
         }{%
-          \ifx\ch@pt@c\ltx@empty
+          \ifx\ch@pt@c\@empty
             \NR@gettitle{#2}%
           \else
             \def\NR@temp{#1}%
-            \ifx\NR@temp\ltx@empty
+            \ifx\NR@temp\@empty
               \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
             \else
               \ifheadnameref
@@ -567,7 +572,7 @@
 %
 % Environment `description'.
 %    \begin{macrocode}
-  \ltx@IfUndefined{descriptionlabel}{%
+  \@ifundefined{descriptionlabel}{%
   }{%
     \@ifundefined{NR@nopatch@lists}
      {\let\NRorg@descriptionlabel\descriptionlabel
@@ -600,7 +605,7 @@
 %
 %    \begin{macrocode}
 \@ifundefined{NR@nopatch@theorem}{%
- \ltx@IfUndefined{@opargbegintheorem}{}{%
+ \@ifundefined{@opargbegintheorem}{}{%
    \let\NRorg@opargbegintheorem\@opargbegintheorem
    \def\@opargbegintheorem#1#2#3{%
      \NR@gettitle{#3}%

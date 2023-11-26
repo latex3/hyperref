@@ -66,7 +66,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pdf@ifdraftmode{%
-  \let\Hy@PutCatalog\ltx@gobble
+  \let\Hy@PutCatalog\@gobble
 }{%
   \let\Hy@PutCatalog\pdfcatalog
 }
@@ -105,7 +105,7 @@
       |ifx|\#2|\%%
       |else
         \\%
-        |ltx@ReturnAfterFi{%
+        |Hy@ReturnAfterFi{%
           |Hy@ExchangeBackslash#2|@nil
         }%
       |fi
@@ -116,7 +116,7 @@
     \ifx\\#2\\%
     \else
       \@backslashchar(%
-      \ltx@ReturnAfterFi{%
+      \Hy@ReturnAfterFi{%
         \Hy@ExchangeLeftParenthesis#2\@nil
       }%
     \fi
@@ -126,7 +126,7 @@
     \ifx\\#2\\%
     \else
       \@backslashchar)%
-      \ltx@ReturnAfterFi{%
+      \Hy@ReturnAfterFi{%
         \Hy@ExchangeRightParenthesis#2\@nil
       }%
     \fi
@@ -156,7 +156,7 @@
   \fi
   \ifHy@setpdfversion
     \ifnum\Hy@pdf@majorminor@version<105 %
-      \ltx@IfUndefined{pdfobjcompresslevel}{%
+      \@ifundefined{pdfobjcompresslevel}{%
       }{%
         \ifHy@verbose
           \Hy@InfoNoLine{%
@@ -166,19 +166,19 @@
             \Hy@pdf@majorversion.\Hy@pdf@minorversion
           }%
         \fi
-        \pdfobjcompresslevel=\ltx@zero
+        \pdfobjcompresslevel=\z@
       }%
     \fi
     \ifnum\Hy@pdfmajorminor@version=\Hy@pdf@majorminor@version\relax
     \else
-      \let\Hy@temp\ltx@empty
+      \let\Hy@temp\@empty
       \def\Hy@temp@A#1#2{%
-        \ifnum#1>\ltx@zero
+        \ifnum#1>\z@
           \edef\Hy@temp{%
             \Hy@temp
             \space\space
             \the#1\space #2%
-            \ifnum#1=\ltx@one\else s\fi
+            \ifnum#1=\@ne\else s\fi
             \MessageBreak
           }%
         \fi
@@ -187,15 +187,15 @@
       \Hy@temp@A\lastsavedboxresourceindex{form XObject}%
       \Hy@temp@A\lastsavedimageresourceindex{image XObject}%
       \Hy@temp@A\pdflastannot{annotation}%
-      \ltx@IfUndefined{pdflastlink}{%
+      \@ifundefined{pdflastlink}{%
       }{%
          \Hy@temp@A\pdflastlink{link}%
       }%
-      \ifx\Hy@temp\ltx@empty
+      \ifx\Hy@temp\@empty
         \Hy@pdfmajorversion=\Hy@pdf@majorversion\relax
         \Hy@pdfminorversion=\Hy@pdf@minorversion\relax
       \else
-        \let\Hy@temp@A\ltx@empty
+        \let\Hy@temp@A\@empty
         \ifnum\Hy@pdf@majorminor@version=104 %
           \IfFileExists{pdf14.sty}{%
             \def\Hy@temp@A{%
@@ -218,7 +218,7 @@
           \expandafter\string\Hy@pdfminorversion=\Hy@pdf@minorversion
           \string\relax
           \ifnum\Hy@pdf@majorminor@version<105 %
-            \ltx@ifundefined{pdfobjcompresslevel}{%
+            \@ifundefined{pdfobjcompresslevel}{%
             }{%
               \MessageBreak
               \space\space
@@ -426,7 +426,7 @@
 }
 \def\hyper@linkstart#1#2{%
   \Hy@VerboseLinkStart{#1}{#2}%
-  \ltx@IfUndefined{@#1bordercolor}{%
+  \@ifundefined{@#1bordercolor}{%
     \let\CurrentBorderColor\relax
   }{%
     \edef\CurrentBorderColor{\csname @#1bordercolor\endcsname}%
@@ -436,7 +436,7 @@
 \def\hyper@linkend{\close@pdflink}
 \def\hyper@link#1#2#3{%
   \Hy@VerboseLinkStart{#1}{#2}%
-  \ltx@IfUndefined{@#1bordercolor}{%
+  \@ifundefined{@#1bordercolor}{%
     \let\CurrentBorderColor\relax
   }{%
     \edef\CurrentBorderColor{\csname @#1bordercolor\endcsname}%
@@ -742,7 +742,7 @@
         \fi
       \fi
     }{%
-      \ltx@IfUndefined{stockwidth}{%
+      \@ifundefined{stockwidth}{%
         \ifdim\paperwidth>\z@
           \setlength{\pagewidth}{\paperwidth}%
         \fi
@@ -813,8 +813,8 @@
     \the\lastsavedboxresourceindex\space 0 R%
   }%
 }%
-\let\HyField@afields\ltx@empty
-\let\HyField@cofields\ltx@empty
+\let\HyField@afields\@empty
+\let\HyField@cofields\@empty
 \begingroup\expandafter\expandafter\expandafter\endgroup
 \expandafter\ifx\csname pdflastlink\endcsname\relax
   \let\HyField@AddToFields\relax
@@ -826,37 +826,37 @@
     but other PDF viewers might complain%
   }%
 \else
-  \let\HyField@AuxAddToFields\ltx@gobble
-  \let\HyField@AuxAddToCoFields\ltx@gobbletwo
+  \let\HyField@AuxAddToFields\@gobble
+  \let\HyField@AuxAddToCoFields\@gobbletwo
   \def\HyField@AfterAuxOpen{\Hy@AtBeginDocument}%
   \def\HyField@ABD@AuxAddToCoFields#1#2{%
     \begingroup
       \Hy@safe@activestrue
-      \let\ltx@secondoftwo\relax
-      \ifx\HyField@cofields\ltx@empty
+      \let\@secondoftwo\relax
+      \ifx\HyField@cofields\@empty
         \xdef\HyField@cofields{%
-          \ltx@secondoftwo{#1}{ #2 0 R}%
+          \@secondoftwo{#1}{ #2 0 R}%
         }%
       \else
-        \let\ltx@secondoftwo\relax
+        \let\@secondoftwo\relax
         \def\HyField@AddCoField##1##2##3{%
-          \ifx##1\ltx@empty
-            \ltx@secondoftwo{#1}{ #2 0 R}%
-            \expandafter\ltx@gobble
+          \ifx##1\@empty
+            \@secondoftwo{#1}{ #2 0 R}%
+            \expandafter\@gobble
           \else
-            \ifnum\pdf@strcmp{##2}{#1}>\ltx@zero
-              \ltx@secondoftwo{#1}{ #2 0 R}%
-              \ltx@secondoftwo{##2}{##3}%
-              \expandafter\expandafter\expandafter\ltx@gobble
+            \ifnum\pdf@strcmp{##2}{#1}>\z@
+              \@secondoftwo{#1}{ #2 0 R}%
+              \@secondoftwo{##2}{##3}%
+              \expandafter\expandafter\expandafter\@gobble
             \else
-              \ltx@secondoftwo{##2}{##3}%
+              \@secondoftwo{##2}{##3}%
             \fi
           \fi
           \HyField@AddCoField
         }%
         \xdef\HyField@cofields{%
           \expandafter\HyField@AddCoField
-          \HyField@cofields\ltx@empty\ltx@empty\ltx@empty
+          \HyField@cofields\@empty\@empty\@empty
         }%
       \fi
     \endgroup
@@ -887,7 +887,7 @@
     \expandafter\HyField@@AddToFields\expandafter{%
       \the\pdflastlink
     }%
-    \ifx\Fld@calculate@code\ltx@empty
+    \ifx\Fld@calculate@code\@empty
     \else
       \begingroup
         \Hy@safe@activestrue
@@ -928,7 +928,7 @@
       \immediate\pdfobj{%
         <<%
           /Fields[\HyField@afields]%
-          \ifx\HyField@cofields\ltx@empty
+          \ifx\HyField@cofields\@empty
           \else
             /CO[\romannumeral-`\Q\HyField@cofields]%
           \fi
@@ -968,16 +968,16 @@
     \fbox{\textcolor{yellow}{\textsf{SubmitP}}}%
   }{SubmitP}%
 }
-\let\@endForm\ltx@empty
-\let\HyAnn@AbsPageLabel\ltx@empty
-\let\Fld@pageobjref\ltx@empty
-\ltx@IfUndefined{pdfpageref}{%
+\let\@endForm\@empty
+\let\HyAnn@AbsPageLabel\@empty
+\let\Fld@pageobjref\@empty
+\@ifundefined{pdfpageref}{%
 }{%
-  \ltx@ifpackageloaded{zref-abspage}{%
+  \@ifpackageloaded{zref-abspage}{%
     \newcount\HyAnn@Count
-    \HyAnn@Count=\ltx@zero
+    \HyAnn@Count=\z@
     \def\HyAnn@AbsPageLabel{%
-      \global\advance\HyAnn@Count by\ltx@one
+      \global\advance\HyAnn@Count by\@ne
       \zref@labelbyprops{HyAnn@\the\HyAnn@Count}{abspage}%
       \zref@refused{HyAnn@\the\HyAnn@Count}%
     }%
@@ -997,7 +997,7 @@
 }
 \def\@TextField[#1]#2{% parameters, label
   \def\Fld@name{#2}%
-  \let\Fld@default\ltx@empty
+  \let\Fld@default\@empty
   \let\Fld@value\@empty
   \def\Fld@width{\DefaultWidthofText}%
   \def\Fld@height{%
@@ -1317,7 +1317,7 @@
     \else
       \expandafter
       \Hy@pstringdef\csname Hy@esc@\string#2\endcsname{#2}%
-      \ltx@ReturnAfterFi{%
+      \Hy@ReturnAfterFi{%
         \Hy@@escapeform#3\@nil
       }%
     \fi
@@ -1750,9 +1750,9 @@
   \def\HyPsd@SanitizeOut@BraceLeft#1(#2\@nil{%
     #1%
     \ifx\\#2\\%
-      \expandafter\ltx@gobble
+      \expandafter\@gobble
     \else
-      \expandafter\ltx@firstofone
+      \expandafter\@firstofone
     \fi
     {%
       \string\173%
@@ -1762,9 +1762,9 @@
   \def\HyPsd@SanitizeOut@BraceRight#1)#2\@nil{%
     #1%
     \ifx\\#2\\%
-      \expandafter\ltx@gobble
+      \expandafter\@gobble
     \else
-      \expandafter\ltx@firstofone
+      \expandafter\@firstofone
     \fi
     {%
       \string\175%
@@ -1913,7 +1913,7 @@
   \endgroup
   \H@old@schapter{#1}%
 }
-\ltx@IfUndefined{@chapter}{}{%
+\@ifundefined{@chapter}{}{%
   \let\Hy@org@chapter\@chapter
   \def\@chapter{%
     \def\Hy@next{%
@@ -1923,7 +1923,7 @@
       }%
     }%
     \ifnum\c@secnumdepth>\m@ne
-      \ltx@IfUndefined{if@mainmatter}%
+      \@ifundefined{if@mainmatter}%
       \iftrue{\csname if@mainmatter\endcsname}%
         \let\Hy@next\relax
       \fi

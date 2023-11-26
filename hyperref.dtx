@@ -3810,14 +3810,14 @@
 % case in the new latex code, so we test for it.
 %    \begin{macrocode}
 \ifcsname UTFviii@loop\endcsname
- \def\HyPsd@expand@utfvii{%
+ \def\HyPsd@expand@utfviii {%
     \count@"C2
     \@tempcnta"F5
     \def\UTFviii@tmp{\expandafter\def\expandafter~\expandafter{~}}%
     \UTFviii@loop
   }
 \else
- \def\HyPsd@expand@utfvii{}
+ \def\HyPsd@expand@utfviii {}
 \fi
 %    \end{macrocode}
 %    \end{macro}
@@ -3843,7 +3843,7 @@
     \lccode`\~=`^^f4\relax
   \lowercase{\endgroup
     \def\HyPsd@UTFviii{%
-      \HyPsd@expand@utfvii
+      \HyPsd@expand@utfviii 
       \let\UTFviii@two@octets\HyPsd@UTFviii@two
       \let\UTFviii@three@octets\HyPsd@UTFviii@three
       \let\UTFviii@four@octets\HyPsd@UTFviii@four

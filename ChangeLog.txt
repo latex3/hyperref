@@ -10,6 +10,7 @@ Version: 2023-11-26 v7.01g
 	* allow file links even without destinations.
 	* nameref.dtx remove unneeded memoir patch
 	* nameref.dtx remove unneeded titlesec patch
+	* rename \HyPsd@expand@utfvii to \HyPsd@expand@utfviii, issue #309 
    
 2023-11-14 Ulrike Fischer
 	* remove ltxcmds dependency in hluatex.dtx

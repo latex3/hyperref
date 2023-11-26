@@ -110,8 +110,6 @@
 %  \item \cs{@ssect}: command to store the title added,
 %  \cs{Sectionformat} is added.
 %
-%  \item \cs{M@sect} (memoir class): command to store the title added
-%
 %  \item \cs{@part}, \cs{@spart}, \cs{@chapter}, \cs{@schapter}:
 %  command to store the title added
 %  \item \cs{ttl@sect@i} (from the \textsf{titlesec} package):
@@ -462,27 +460,6 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-% Support for class memoir.
-%
-%    \begin{macrocode}
-\@ifundefined{NR@nopatch@sectioning}
- {\@ifundefined{ifheadnameref}{%
-  }{%
-    \@ifundefined{M@sect}{%
-    }{%
-      \let\NRorg@M@sect\M@sect
-      \def\M@sect#1#2#3#4#5#6[#7][#8]{%
-        \ifheadnameref
-          \NR@gettitle{#8}%
-        \else
-          \NR@gettitle{#7}%
-        \fi
-        \NRorg@M@sect{#1}{#2}{#3}{#4}{#5}{#6}[{#7}][{#8}]%
-      }%
-    }%
-  }}{}
-%    \end{macrocode}
-%
 % Parts and chapters are treated differently. sigh.
 % \cs{@part} and \cs{@spart} are \cs{long} because of class memoir.
 %
@@ -505,32 +482,6 @@
     \NR@gettitle{#1}%
     \NR@chapter[{#1}]{#2}%
   }
-  \@ifclassloaded{memoir}{%
-    \@ifundefined{ifheadnameref}{%
-    }{%
-      \def\@chapter[#1]#2{%
-        \@ifundefined{ch@pt@c}{%
-          \NR@gettitle{#1}%
-        }{%
-          \ifx\ch@pt@c\@empty
-            \NR@gettitle{#2}%
-          \else
-            \def\NR@temp{#1}%
-            \ifx\NR@temp\@empty
-              \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
-            \else
-              \ifheadnameref
-                \NR@gettitle{#1}%
-              \else
-                \expandafter\NR@gettitle\expandafter{\ch@pt@c}%
-              \fi
-            \fi
-          \fi
-        }%
-        \NR@chapter[{#1}]{#2}%
-      }%
-    }%
-  }{}
   \def\@schapter#1{%
     \NR@gettitle{#1}%
     \NR@schapter{#1}%

@@ -439,7 +439,7 @@ case more keys gives back their value.
 \subsection{Links commands}
 The following commands are provided by all drivers to create links.
 They can be used by packages if the user commands are not sufficient.
-New drivers must provide this commands with similar arguments.
+New drivers must provide these commands with similar arguments.
 
 \begin{verbatim}
  \hyper@anchor {destination name}
@@ -591,7 +591,7 @@ site-wide basis.
 Note however that some options (for example \texttt{unicode}) can only be used as
 package options, and not in \verb|\hypersetup| as the option settings are processed
 as the package is read. The following tabular lists (hopefully all) these options.
-Be aware that some of the option do nothing or have
+Be aware that some of the options do nothing or have
 changed behaviour if the new pdfmanagement and so the new generic \xpackage{hyperref} driver is used.
 
 \begin{tabular}{>{\ttfamily}l>{\raggedright\arraybackslash}p{5cm}}
@@ -689,7 +689,7 @@ names that identify a position on a page in the document. They
 are used in link targets for inner document links or the bookmarks,
 for example.
 
-Usually anchor are set, if \cs{refstepcounter} is called.
+Usually anchors are set, if \cs{refstepcounter} is called.
 Thus there is a counter name and value. Both are used to
 construct the destination name. By default the counter value
 follows the counter name separated by a dot. Example for
@@ -812,7 +812,7 @@ or \cs{strcmp} of \hologo{XeTeX}, package \xpackage{pdftexcmds} also supports
 \end{verbatim}
 \end{quote}
 
-With option \texttt{destlabel} destinations can also named manually,
+With option \texttt{destlabel} destinations can also be named manually,
 if the destination is not yet renamed:
 \begin{quote}
 \verb|\HyperDestRename{|\meta{destination}\verb|}{|\meta{newname}\verb|}|
@@ -864,7 +864,7 @@ shipout, \cs{@currentHpage} is only reliable at shipout. With a
 
 \begin{longtable}{>{\ttfamily}ll>{\itshape}lp{9cm}}
 raiselinks & boolean & true  & In the hypertex driver, the height of links is normally calculated by the driver as
-                               simply the base line of contained text; this options forces \verb|\special| commands to
+                               simply the base line of contained text; this option forces \verb|\special| commands to
                                reflect the real height of the link (which could contain a graphic) \\
 breaklinks & boolean & both & This option is in \xpackage{hyperref} only used in the dviwindo driver, in all other cases it doesn't do anything sensible---it neither allows nor prevents links to be broken. The ocgx2 package
 checks the state of the boolean.\\
@@ -954,7 +954,7 @@ linktoc        & text    & section & make text (\verb|section|), page number (\v
 linktocpage    & boolean & false   & make page number, not text, be link on TOC, LOF and LOT \\
 breaklinks     & boolean & false   & allow links to break over lines by making links over multiple lines into PDF links to
                                      the same target \\
-colorlinks     & boolean & false   & Colors the text of links and anchors. The colors chosen depend on the the type of
+colorlinks     & boolean & false   & Colors the text of links and anchors. The colors chosen depend on the type of
                                      link. At present the only types of link distinguished are citations, page references,
                                      URLs, local file references, and other links.
                                      Unlike colored boxes, the colored
@@ -1024,7 +1024,7 @@ has been loaded.
 For further information see description of package \xpackage{hycolor}.
 
 The bookmark commands are stored in a file called
-\textit{jobname}\texttt{.out}. The files is not processed by \LaTeX\ so
+\textit{jobname}\texttt{.out}. The file is not processed by \LaTeX\ so
 any markup is passed through. You can postprocess this file as needed;
 as an aid for this, the \texttt{.out} file is not overwritten on the
 next \TeX\ run if it is edited to contain the line
@@ -1093,11 +1093,11 @@ pdfpicktraybypdfsize
 pdfprintarea       & name    & empty & set /PrintArea of viewer preferences.  Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfprintclip       & name    & empty & set /PrintClip of viewer preferences.  Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfprintpagerange  & n n (n n)*
                              & empty & set /PrintPageRange of viewer preferences\\
 pdfprintscaling    & name    & empty & page scaling option for print dialog
@@ -1109,11 +1109,11 @@ pdftoolbar         & boolean & true  & make PDF toolbar visible \\
 pdfviewarea        & name    & empty & set /ViewArea of viewer preferences. Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfviewclip        & name    & empty & set /ViewClip of viewer preferences Possible values are
                                        \verb|MediaBox|, \verb|CropBox|,
                                        \verb|BleedBox|, \verb|TrimBox|, and \verb|ArtBox|.
-                                       The dafault according to the PDF~Refence is \verb|CropBox| \\
+                                       The dafault according to the PDF~Reference is \verb|CropBox| \\
 pdfwindowui        & boolean & true  & make PDF user interface elements visible \\
 unicode            & boolean & true & Unicode encoded PDF strings
 \end{longtable}

@@ -606,11 +606,11 @@
 \RequirePackage{auxhook}[2009/12/14]
 \RequirePackage{nameref}[2012/07/28]
 \RequirePackage{etoolbox}
-\def\Hy@Error{\@PackageError{hyperref}}
-\def\Hy@Warning{\@PackageWarning{hyperref}}
-\def\Hy@WarningNoLine{\@PackageWarningNoLine{hyperref}}
-\def\Hy@Info{\@PackageInfo{hyperref}}
-\def\Hy@InfoNoLine{\@PackageInfoNoLine{hyperref}}
+\def\Hy@Error{\PackageError{hyperref}}
+\def\Hy@Warning{\PackageWarning{hyperref}}
+\def\Hy@WarningNoLine{\PackageWarningNoLine{hyperref}}
+\def\Hy@Info{\PackageInfo{hyperref}}
+\def\Hy@InfoNoLine#1{\PackageInfo{hyperref}{#1\@gobble}}
 \def\Hy@Message#1{%
   \GenericWarning{%
     (hyperref)\@spaces\@spaces\@spaces\@spaces

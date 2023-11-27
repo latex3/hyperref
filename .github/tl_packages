@@ -38,7 +38,6 @@ collection-basic
         latexconfig
         letltxmacro
         ltxcmds
-        ltxmisc
         mfnfss
         mptopdf
         natbib

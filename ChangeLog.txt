@@ -2,7 +2,10 @@ Version: 2023-11-26 v7.01g
 		nameref 2023-11-26 v2.56 
 		backref 2023-11-26 v1.44
 
-2023-11-26  David Carlisle
+2023-11-28 Yukai Chou
+	* remove infwarerr dependency in hyperref.dtx
+
+2023-11-26 David Carlisle
 	* hyperref.dtx: Remove infwarerr
 
 2023-11-26 Ulrike Fischer

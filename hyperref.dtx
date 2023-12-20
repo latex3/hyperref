@@ -9508,7 +9508,7 @@
 \let\hyperdef\@gobbletwo
 \let\hyperlink\@gobble
 \let\hypertarget\@gobble
-\def\hyperref{%
+\protected\def\hyperref{%
   \@ifnextchar[\@gobbleopt{\expandafter\@gobbletwo\@gobble}%
 }
 \long\def\@gobbleopt[#1]{}

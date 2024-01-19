@@ -84,10 +84,11 @@
 \def\XR@aux{%
   \ifx\XR@list\@empty\else\expandafter\XR@explist\fi}
 
-\long\def\@gobblethree  #1#2#3{}
-\long\def\@firstofthree #1#2#3{#1}
-\long\def\@secondofthree#1#2#3{#2}
-\long\def\@thirdofthree #1#2#3{#3}
+\long\def\@gobblefour  #1#2#3#4{}
+\long\def\@firstoffour #1#2#3#4{#1}
+\long\def\@secondoffour#1#2#3#4{#2}
+\long\def\@thirdoffour #1#2#3#4{#3}
+\long\def\@fourthoffour #1#2#3#4{#4}
 
 % 2023-05-13 we need to handle \newlabel's with two arguments differently
 % to \newlabel's with five argument. For this we make use of  
@@ -112,20 +113,25 @@
   \expandafter\XR@test\XR@line...\XR@}
 % 2019 update to match xr
 \long\def\XR@test#1#2#3#4\XR@{%
-  \let\XR@tempa\@gobblethree
+  \let\XR@tempa\@gobblefour
   \ifx#1\newlabel
-    \let\XR@tempa\@firstofthree
+    \let\XR@tempa\@firstoffour
   \else\ifx#1\XR@bibcite
-    \let\XR@tempa\@secondofthree
+    \let\XR@tempa\@secondoffour
   \else\ifx#1\@input
-     \let\XR@tempa\@thirdofthree
-  \fi\fi\fi
+     \let\XR@tempa\@thirdoffour
+  \else\ifx#1\new@label@record
+     \let\XR@tempa\@fourthoffour    
+  \fi\fi\fi\fi
    \XR@tempa
     {%
      \expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}}%     
     }%
     {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
     {\edef\XR@list{\XR@list\filename@area#2\relax}}%
+    {%
+      \expandafter\new@label@record\expandafter{\XR@prefix#2}{#3}%
+    }
   \ifeof\@inputcheck\expandafter\XR@aux
   \else\expandafter\XR@read\fi}
 

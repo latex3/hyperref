@@ -130,7 +130,8 @@
     {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
     {\edef\XR@list{\XR@list\filename@area#2\relax}}%
     {%
-      \expandafter\new@label@record\expandafter{\XR@prefix#2}{#3}%
+      \edef\next{\noexpand\new@label@record{\XR@prefix#2}{\unexpanded{#3}{xr-url}{\XR@URL}}}%
+      \next
     }
   \ifeof\@inputcheck\expandafter\XR@aux
   \else\expandafter\XR@read\fi}

@@ -94,7 +94,7 @@
 % XR@addURL:
 \def\XR@addURL#1{\XR@@dURL#1{}{}{}{}\\}
 \def\XR@@dURL#1#2#3#4#5\\{%
-     {#1}{#2}{#3}{#4}{\XR@URL}% 
+     \unexpanded{{#1}{#2}{#3}{#4}}{\XR@URL}% 
   }%
 
 \def\XR@explist{\expandafter\XR@next\XR@list\\}

@@ -11015,6 +11015,8 @@
  {%
   \@ifundefined{deferred@thm@head}{}
    {%
+    \let\Hy@deferred@thm@head\deferred@thm@head
+    \def\deferred@thm@head#1{\Hy@deferred@thm@head{#1}}%
     \renewcommand\Hy@theorem@makelinktarget[1]
      {%
       \AddToHookNext{cmd/deferred@thm@head/before}

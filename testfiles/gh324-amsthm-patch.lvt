@@ -1,0 +1,14 @@
+\documentclass[]{article}
+\input{regression-test}
+\usepackage{amsthm}
+\usepackage[czech]{babel}
+\usepackage{hyperref}                                             
+
+\newtheorem{foo}{bar}
+\begin{document}
+\START	
+	\begin{foo}
+		content...
+	\end{foo}
+	
+\end{document}

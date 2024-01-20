@@ -1,0 +1,17 @@
+\documentclass{book}
+\input{regression-test}
+\begin{filecontents}[force]{test with space.aux}
+\newlabel{A}{{1.1}{1}{title}{section.title}{}}
+\end{filecontents}
+
+\usepackage{xr-hyper}
+
+\externaldocument{ test with space }
+\begin{document}
+\START \showoutput
+
+\makeatletter 
+
+ \show\r@A
+
+\end{document}

@@ -238,8 +238,9 @@
      \let\XR@bibcite\bibcite
    \fi
   \def\XR@URL{#4}%
-  \filename@parse{#3}%
-  \XR@next#3.aux\relax\\}}
+  \set@curr@file{#3}% 
+  \filename@parse\@curr@file 
+  \XR@next\@curr@file.aux\relax\\}}
 %    \end{macrocode}
 %
 % Process the next |aux| file in the list and remove it from the head of

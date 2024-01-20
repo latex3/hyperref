@@ -44,6 +44,17 @@
 %</driver>
 % \fi
 %
+% \changes{v5.00}{1993/07/07}
+%         {First DPC version (by agreement with J-PD).  New mechanism
+%         (\cmd{\read} instead of \cmd\input). (xr)}
+%
+% \changes{v5.01}{1993/07/20}{Fix bug added by DPC, v5.00 did not import
+%           aux files of \cmd\include'ed files. (Reported by J-PD) (xr)}
+%
+% \changes{v5.02}{1994/05/28}{Update for LaTeX2e}
+% \changes{v5.03}{2018/10/01}{Fix for conditionals in aux file (xr)}
+% \changes{v5.05}{2019/07/20}{include xcite (xr)}
+%
 % \changes{v6.00 beta2}{1997/10/06}
 %         {}
 %
@@ -227,6 +238,8 @@
 % This version calls \cs{filename@parse} to get the directory name of the
 % remote directory, which is then explicitly prepended to the names of
 % any included aux files.
+%  \changes{v5.06}{2020-05-10}{Remove leading and trailing sapces from
+%    the filename (gh/2223) (xr)}
 %    \begin{macrocode}
 \def\XR@@#1#2#3[#4]{{%
   \makeatletter
@@ -266,6 +279,8 @@
 % If the |aux| file exists, loop through line by line, looking for
 % |\newlabel| and |\@input|. Otherwise process the next file in the
 % list.
+%  \changes{v5.06}{2020-05-10}{Add braces around the filename to
+%    support filenames with spaces (gh/223) (xr)}
 %  \changes{v7.01h}{2024-01-20}{Add braces around the filename to
 %    support filenames with spaces (gh/223) similar to xr}
 %    \begin{macrocode}

@@ -22,6 +22,7 @@ tdslocations = {
   "doc/latex/hyperref/hyperref-doc5.html",
   "doc/latex/hyperref/hyperref-doc6.html",
   "doc/latex/hyperref/nameref.pdf",
+  "doc/latex/hyperref/xr-hyper.pdf",
   "doc/latex/hyperref/paper.pdf",
   "doc/latex/hyperref/slides.pdf",
   "doc/latex/hyperref/hyperref-doc.tex",
@@ -31,6 +32,7 @@ tdslocations = {
   "source/latex/hyperref/hyperref.dtx",
   "source/latex/hyperref/hyperref.ins",
   "source/latex/hyperref/nameref.dtx",
+  "source/latex/hyperref/xr-hyper.dtx",  
   "source/latex/hyperref/doc/paperslides99.zip",  
   "tex/latex/hyperref/backref.sty",
   "tex/latex/hyperref/hdvipdfm.def",
@@ -121,6 +123,7 @@ typesetfiles = {"hyperref-doc.tex",
                 "backref.dtx", 
                 "hyperref.dtx", 
                 "nameref.dtx",
+                "xr-hyper.dtx",
                 "hyperref-linktarget.dtx"}
 
 local function type_manual()

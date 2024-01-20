@@ -1,0 +1,332 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 1993-2024 David Carlisle
+%
+% This file is part of the `Hyperref Bundle'.
+% -------------------------------------------
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is the LaTeX Project.
+%
+% The list of all files belonging to the `Hyperref Bundle' is
+% given in the file `manifest.txt'.
+%
+% \fi
+% \iffalse
+%% File: xr-hyper.dtx Copyright (C) 1993-2024 David Carlisle
+%
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\ProvidesPackage{xr-hyper}
+%<package>         [2023-11-26 v7.01g eXternal References (DPC)]
+%
+%<*driver>
+\documentclass{l3doc}
+\usepackage{xr-hyper}
+\GetFileInfo{xr-hyper.sty}
+\begin{document}
+\title{The \textsf{xr-hyper} package\thanks{This file
+        has version number \fileversion, last
+        revised \filedate.}}
+\author{David Carlisle}
+\date{\filedate}
+\maketitle
+\DocInput{xr-hyper.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{v6.00 beta2}{1997/10/06}
+%         {}
+%
+% \changes{v6.00 beta3}{1999/09/01}
+%         {Definitions of \cs{XR@addURL} corrected (Heiko Oberdiek)}
+%
+% \changes{v6.00 beta 4}{2000/03/22}
+%         {\cmd\xdef changed to \cs{protected@xdef}} 
+%
+% \changes{v6.1}{2019/10/03}
+%         {Incorporate updates to \pkg{xr} (including citation support)}
+%
+% \changes{v7.00e}{2020-05-14}
+%         {add additional braces to \cs{r@}\meta{label} only if \pkg{hyperref} is not detected in the aux
+%          of the source document (https://github.com/latex3/hyperref/issues/118)}
+%
+% \changes{v7.00z}{2023-05-15}
+%         {unified and simplified the brace handling: all defined references have now
+%          five brace groups. Together with the planed change in LaTeX 2023-06-01 this
+%          will improve the combination of hyperref/non-hyperref documents.}
+%          
+% \changes{v7.01g}{2023-11-26}
+%         {Always store the URL/file name of the external document to allow file links
+%          even if it has no destinations.}
+%  
+% \changes{v7.01h}{2024-01-20}
+%         {do not expand the labels when reading, (https://github.com/latex3/hyperref/issues/327)}
+%         
+% \changes{v7.01h}{2024-01-20}
+%         {support \LaTeX\ properties.}
+%        
+% This package implements a system for eXternal References.
+% 
+% It is an extension of the \pkg{xr} package. It was developed to support the
+% extended label syntax of the \pkg{hyperref} package and to enable active links
+% to the external documents.
+% 
+% In the \LaTeX{} release 2023-06-01 the label syntax of \pkg{hyperref}
+% and the \LaTeX{} kernel have been synchronized and there is no longer
+% a need for two packages. \pkg{xr-hyper} already works with all documents --
+% it is not required to load\pkg{hyperref} -- and its code will move in the
+% next \LaTeX{} release into the \pkg{xr} package. Then \pkg{xr-hyper} can be
+% deprecated.
+% 
+% \section{Usage}
+% 
+% \begin{syntax}
+% \cs{externaldocument}\oarg{prefix}\texttt[nocite\texttt]\marg{document}\oarg{url}
+% \end{syntax}
+%
+% If one document needs to refer to sections of another, say |aaa.tex|,
+% then this package may be loaded in the main file, and the command
+% \begin{verbatim}
+% |\externaldocument{aaa}|
+% \end{verbatim}
+%  given in the preamble.
+%
+% Then you may use |\ref| and |\pageref| (or |\nameref| if the
+% package \pkg{nameref} has been loaded to refer to anything which has
+% been given a |\label| in either |aaa.tex| or the main document.
+% You may declare any number of such external documents.
+%
+% If any of the external documents, or the main document, use the same
+% |\label| then an error will occur as the label will be multiply
+% defined. To overcome this problem |\externaldocument| has an optional
+% argument \meta{prefix}. 
+% If you declare |\externaldocument[A-]{aaa}|, then all
+% references from |aaa| are prefixed by |A-|. So for instance, if a
+% section of |aaa| had |\label{intro}|, then this could be referenced
+% with |\ref{A-intro}|. The prefix need not be |A-|, it can be any
+% string chosen to ensure that all the labels imported from external
+% files are unique. Note however that the prefix is expanded and
+% so should not contain commands that are not safe in this context. 
+%
+% As first suggested in Enrico Gregorio's |xcite| package, the current version
+% also allows |\cite| to reference |\bibitem| in the external document.
+% For compatibility with |xcite|, |\externalcitedocument| is made available
+% as an alias for |\externaldocument|
+% 
+% Many packages have variant citation commands (natbib,
+% biblatex,....) and the external document may or may not have used
+% hyperref. Because of these differences the citation linking may not
+% always work, it can be disabled by specifying \texttt{[nocite]} after the
+% \meta{prefix}:
+% \begin{verbatim}
+%  \externaldocument[][nocite]{aaa}
+% \end{verbatim}  
+% 
+% The `document' referred to by the main argument \meta{document} is the file
+% \file{document.aux} which must be somewhere on TeX's input path.
+% Some packages (eg hyperref) really need to know the location of the
+% final document rather than the aux file. By default this is assumed
+% to be \file{document.pdf}. A package may redefine the command \cs{XR@ext} to
+% change this default extension. However sometimes the final
+% document may be in a position unrelated to the aux file, or the
+% browser may not be able to find files at an arbitrary point in
+% TeX's input path, so the final optional argument \meta{url} allows a full
+% URL to the final document to be specified.
+% \begin{verbatim}
+% \externaldocument{aaa}[http://here.xxx.edu/this/path/to/aaa.pdf]
+% \end{verbatim}
+% 
+% The package stores the url of the external document in the label data. If can
+% e.g. be retrieved with the \pkg{refcount} package
+% 
+% \begin{verbatim}
+% \usepackage{refcount,xr-hyper}
+% \externaldocument{aaa}
+% ...
+% \getrefbykeydefault{intro}{url}{??} %prints aaa.pdf or ??
+% \end{verbatim}
+% 
+% \pkg{xr-hyper} supports also the properties introduced in \LaTeX{} 2023-11-01.
+% Here the url of the external document is stored in the \texttt{xr-url} property.
+% 
+% \begin{verbatim}
+% \usepackage{xr-hyper}
+% \externaldocument{aaa} %aaa contains \RecordProperties{intro}{page}
+% ...
+% \RefProperty{intro}{page}   %gives page number
+% \RefProperty{intro}{xr-url} %gives aaa.pdf 
+% \end{verbatim}
+% 
+%
+% \MaybeStop{}
+%
+% \section{The macros}
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+% Check for the optional argument.
+%    \begin{macrocode}
+\def\externaldocument{\@testopt\XR@cite{}}
+\let\externalcitedocument\externaldocument
+\def\XR@cite[#1]{\@testopt{\XR@[#1]}{}}
+\def\XR@[#1][#2]#3{\@testopt{\XR@@{#1}{#2}{#3}}{#3.\XR@ext}}
+%    \end{macrocode}
+%
+% \subsection{helper definitions}
+% To test the second optional argument
+%    \begin{macrocode}
+\def\XR@@nocite{nocite}
+%    \end{macrocode}
+% Needed in the processing
+%    \begin{macrocode}
+\long\def\@gobblefour  #1#2#3#4{}
+\long\def\@firstoffour #1#2#3#4{#1}
+\long\def\@secondoffour#1#2#3#4{#2}
+\long\def\@thirdoffour #1#2#3#4{#3}
+\long\def\@fourthoffour #1#2#3#4{#4}
+%    \end{macrocode}
+% The url is added as fifth argument. The command used here is
+% \cs{XR@addURL}. The command is more complicated as needed
+% as it tries to handle also older documents with 
+% \cs{newlabel}'s with two arguments. 
+%    \begin{macrocode}
+\def\XR@addURL#1{\XR@@dURL#1{}{}{}{}\\}
+\def\XR@@dURL#1#2#3#4#5\\{%
+     \unexpanded{{#1}{#2}{#3}{#4}}{\XR@URL}% 
+  }%
+%    \end{macrocode}
+% 
+% \subsection{Variables}
+% 
+% Default file extension:
+%    \begin{macrocode}
+\providecommand\XR@ext{pdf}
+%    \end{macrocode}
+%
+% \subsection{Processing}
+% Save the optional prefix. Start processing the first |aux| file.
+% Version beta2 also added another improvement unrelated
+% to the hyperref support. Olivier Michel pointed out that
+% if the aux file was not on texinputs you could not always go
+% \cs{externaldocument}{/some/path/to/file}
+% specifically that worked if file.aux was a `simple'  document with
+% one aux file, but if \cs{include} had been used, the `sub' aux files
+% would not be found by xr in the remote directory.
+% This version calls \cs{filename@parse} to get the directory name of the
+% remote directory, which is then explicitly prepended to the names of
+% any included aux files.
+%    \begin{macrocode}
+\def\XR@@#1#2#3[#4]{{%
+  \makeatletter
+  \def\XR@prefix{#1}%
+   \def\XR@nocite{#2}%
+   \ifx\XR@nocite\XR@@nocite
+     \let\XR@bibcite\vadjust
+   \else
+     \let\XR@bibcite\bibcite
+   \fi
+  \def\XR@URL{#4}%
+  \filename@parse{#3}%
+  \XR@next#3.aux\relax\\}}
+%    \end{macrocode}
+%
+% Process the next |aux| file in the list and remove it from the head of
+% the list of files to process.
+%    \begin{macrocode}
+\def\XR@next#1\relax#2\\{%
+  \edef\XR@list{#2}%
+  \XR@loop{#1}}
+%    \end{macrocode}
+%
+% Check whether the list of |aux| files is empty.
+%    \begin{macrocode}
+\def\XR@aux{%
+  \ifx\XR@list\@empty\else\expandafter\XR@explist\fi}
+%    \end{macrocode}
+%
+% Expand the list of aux files, and call |\XR@next| to process the first
+% one.
+%    \begin{macrocode}
+\def\XR@explist{\expandafter\XR@next\XR@list\\}
+%    \end{macrocode}
+%
+% If the |aux| file exists, loop through line by line, looking for
+% |\newlabel| and |\@input|. Otherwise process the next file in the
+% list.
+%  \changes{v7.01h}{2024-01-20}{Add braces around the filename to
+%    support filenames with spaces (gh/223) similar to xr}
+%    \begin{macrocode}
+\def\XR@loop#1{\openin\@inputcheck{#1}\relax
+  \ifeof\@inputcheck
+    \PackageWarning{xr}{^^JNo file #1^^JLABELS NOT IMPORTED.^^J}%
+    \expandafter\XR@aux
+  \else
+    \PackageInfo{xr}{IMPORTING LABELS FROM #1}%
+    \expandafter\XR@read\fi}
+%    \end{macrocode}
+%
+% Read the next line of the aux file.
+%    \begin{macrocode}
+\def\XR@read{%
+  \read\@inputcheck to\XR@line
+%    \end{macrocode}
+% The |...| make sure that |\XR@test| always has sufficient arguments.
+%    \begin{macrocode}
+  \expandafter\XR@test\XR@line...\XR@}
+%    \end{macrocode}
+%
+% Look at the first token of the line.
+% If it is |\newlabel|, define \cs{r@}\meta{label}, ensure that it has
+% five label data argument and add the url as the last one.  
+% If it is |\@input|, add the
+% filename to the list of files to process. 
+% If it is |\bibcite|, call a |\bibcite|. 
+% If it is |\new@label@record| add the url and then call it.
+% Otherwise ignore.
+% Go around the loop if not at end of file. Finally process the next
+% file in the list.
+% Make sure the arguments are handled outside the |\ifx| test,
+%    \begin{macrocode}
+\long\def\XR@test#1#2#3#4\XR@{%
+  \let\XR@tempa\@gobblefour
+  \ifx#1\newlabel
+    \let\XR@tempa\@firstoffour
+  \else\ifx#1\XR@bibcite
+    \let\XR@tempa\@secondoffour
+  \else\ifx#1\@input
+     \let\XR@tempa\@thirdoffour
+  \else\ifx#1\new@label@record
+     \let\XR@tempa\@fourthoffour    
+  \fi\fi\fi\fi
+   \XR@tempa
+    {%
+     \expandafter\protected@xdef\csname r@\XR@prefix#2\endcsname{\XR@addURL{#3}}%     
+    }%
+    {\expandafter\bibcite\expandafter{\XR@prefix#2}{#3}}%
+    {\edef\XR@list{\XR@list\filename@area#2\relax}}%
+    {%
+      \edef\next{\noexpand\new@label@record{\XR@prefix#2}{\unexpanded{#3}{xr-url}{\XR@URL}}}%
+      \next
+    }
+  \ifeof\@inputcheck\expandafter\XR@aux
+  \else\expandafter\XR@read\fi}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \Finale
+%

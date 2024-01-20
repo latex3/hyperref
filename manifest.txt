@@ -24,7 +24,7 @@ minitoc-hyper.sty
         Obsolete, now just calls minitoc.
 ntheorem-hyper.sty
         Obsolete, now just calls ntheorem.
-xr-hyper.sty
+xr-hyper.dtx
         Patched version of `xr.sty' to work with `hyperref.sty'.
 
 bmhydoc.sty

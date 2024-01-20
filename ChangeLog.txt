@@ -1,3 +1,6 @@
+2024-01-20  Ulrike Fischer
+	* create xr-hyper.dtx, align it with the current xr.dtx to prepare the merge
+
 2024-01-19  Ulrike Fischer
 	* xr-hyper.sty: add support for properties, issue latex3/latex2e#1180
 

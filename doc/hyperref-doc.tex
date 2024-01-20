@@ -756,7 +756,7 @@ a prefix to all destination names:
 In document \texttt{docA} the destination name \texttt{chapter.2}
 becomes \texttt{docA-chapter.2}.
 
-Destination names can also be used from the outside in URIs(, if the
+Destination names can also be used from the outside in URIs, (if the
 driver has not removed or changed them), for example:
 \begin{quote}
 \begin{verbatim}
@@ -1362,7 +1362,7 @@ following low-level user macros are provided:
 \ci{href}\verb|[|\emph{options}\verb|]|\verb|{|\emph{URL}\verb|}{|\emph{text}\verb|}|
 \end{cmdsyntax}
 
-\noindent The \emph{text} is made a hyperlink to the \emph{URL}; this
+\noindent The \emph{text} is made into a hyperlink to the \emph{URL}; this
 must be a full URL (relative to the base URL, if that is defined). The
 special characters \# and \%{} do \emph{not} need to be escaped in any
 way (unless the command is used in the argument of another command).
@@ -1374,7 +1374,7 @@ key value options:
 \item[\texttt{page}:] Specifies the start page number of remote
 PDF documents. First page is \verb|1|.
 \item[\texttt{ismap}:] Boolean key, if set to \verb|true|, the
-URL should appended by the coordinates as query parameters by
+URL should be appended by the coordinates as query parameters by
 the PDF viewer.
 \item[\texttt{nextactionraw}:] The value of key \verb|/Next| of
 action dictionaries, see PDF specification.
@@ -1452,7 +1452,7 @@ given the name \emph{category.name}
 with two parameters of an anchor \emph{name}, and anchor
 \emph{text}. \verb|\hyperlink| has two arguments, the name of a
 hypertext object defined somewhere by \verb|\hypertarget|, and the
-\emph{text} which be used as the link on the page.
+\emph{text} which is used as the link on the page.
 
 Note that in HTML parlance, the \verb|\hyperlink| command inserts a
 notional \# in front of each link, making it relative to the current
@@ -1482,8 +1482,8 @@ index points to the start of the index page, not to a location
 before this page.
 
 \begin{cmdsyntax}
-\ci{hyperget}\verb|{|\emph{anchor}\verb|}{|\emph{label}\verb|}|
-\ci{hyperget}\verb|{|\emph{pageanchor}\verb|}{|\emph{label}\verb|}|
+\ci{hyperget}\verb|{anchor}{|\emph{label}\verb|}|
+\ci{hyperget}\verb|{pageanchor}{|\emph{label}\verb|}|
 \end{cmdsyntax}
 
 This retrieves the anchor or the page anchor from a label in an expandable way.
@@ -1494,11 +1494,11 @@ It takes \verb|\HyperDestNameFilter| into account. It can e.g. be used with the
 \bookmark[dest=\hyperget{anchor}{sec}]{section}
 \end{verbatim}
 
-As \emph{pageanchor} retrieves the page number from the label it can't be use together with
+As \emph{pageanchor} retrieves the page number from the label it can't be used together with
 the option \texttt{plainpages}.
 
 \begin{cmdsyntax}
-\ci{hyperget}\verb|{|\emph{currentanchor}\verb|}{}|
+\ci{hyperget}\verb|{currentanchor}{}|
 \end{cmdsyntax}
 
 This retrieves the last anchor that has been set. It too takes \verb|\HyperDestNameFilter| into account.
@@ -1762,7 +1762,7 @@ a PDF viewer for a specific page, for example
 \verb+\thispdfpagelabel{Empty Page-\roman{page}}+
 
 The command affects the page on which it is executed, so asynchronous page breaking
-should be taken into account. It should be used in places where for example \verb+\thispagestyle+ can be use too.
+should be taken into account. It should be used in places where for example \verb+\thispagestyle+ can be used too.
 
 \subsection{Utility macros}
 
@@ -2601,7 +2601,7 @@ with pdflatex. Some of the definitions in \texttt{puenc.def} clash with other us
 To reduce the impact \xpackage{hyperref} uses two strategies.
 
 \begin{itemize}
-\item A number of command are only defined conditionally:
+\item A number of commands are only defined conditionally:
 The commands for the cyrillic block  if \cs{CYRDZE} is defined,
 greek if \cs{textBeta} is defined, and hebrew if \cs{hebdalet} is defined.
 

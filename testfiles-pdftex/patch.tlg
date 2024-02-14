@@ -41,7 +41,7 @@ l. ...\ShowCommand\@caption
 <argument> \addcontentsline 
 l. ...\ShowCommand\addcontentsline
 > \@definecounter=macro:
-#1->\H@definecounter {#1}\expandafter \gdef \csname theH#1\endcsname {\arabic {#1}}.
+#1->\H@definecounter {#1}\expandafter \gdef \csname theH#1\expandafter \endcsname \expandafter {\expandafter \@arabic \csname c@#1\endcsname }.
 <argument> \@definecounter 
 l. ...\ShowCommand\@definecounter
 > \@newctr=macro:

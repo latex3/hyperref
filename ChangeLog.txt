@@ -1,3 +1,7 @@
+2024-02-14 Ulrike Fischer
+	* hyperref.dtx: allow commands in counter names
+issue #330
+
 2024-01-20 Ulrike Fischer
 	* hyperref.dtx: alias for \deferred@thm@head to allow patching if czech is used,
 issue #324

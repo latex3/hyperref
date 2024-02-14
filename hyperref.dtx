@@ -12035,14 +12035,17 @@
 % The whole theorem business makes up new counters on the fly;
 % we are going to intercept this. Sigh. Do it at the level where
 % new counters are defined.
+% change 2024-02-14: use a csname to handle counter names with commands,
+% see issue \#330
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@counter}
   {
    \let\H@definecounter\@definecounter
    \def\@definecounter#1{%
      \H@definecounter{#1}%
-     \expandafter\gdef\csname theH#1\endcsname{\arabic{#1}}%
-   }
+     \expandafter
+     \gdef\csname theH#1\expandafter\endcsname\expandafter
+          {\expandafter\@arabic\csname c@#1\endcsname}}%
   }{} 
 %    \end{macrocode}
 % But what if they have used the optional argument to e.g. |\newtheorem|

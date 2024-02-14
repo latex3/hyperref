@@ -1,7 +1,6 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-The property list \g__hyp_documentproperties_prop contains the pairs (without
-outer braces):
+The property list \g__hyp_documentproperties_prop contains the pairs (without outer braces):
 >  {hyperref/pdfauthor}  =>  {(author1,xxx, gr^^fc^^dfe)}
 >  {hyperref/pdfkeywords}  =>  {keywords}
 >  {hyperref/pdfsubject}  =>  {subject}

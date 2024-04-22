@@ -1,3 +1,6 @@
+2024-04-22 Ulrike Fischer
+	* hyperref.dtx: remove auxhook package.
+
 2024-02-14 Ulrike Fischer
 	* hyperref.dtx: allow commands in counter names
 issue #330

@@ -1146,7 +1146,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Internal encoding commands.}
-%    \cs{pdfstringdef} interpretes text strings which are not allowed
+%    \cs{pdfstringdef} interprets text strings which are not allowed
 %    to contain mathematical stuff. The text glyph commands will produce
 %    a warning, if called in math mode. But this warning disturbs while
 %    expanding. Therefore we check for math mode here, before
@@ -1157,7 +1157,7 @@
 %    If a glyph is used, that isn't in the PD1/PU encoding there will
 %    be an infinite error loop, because the NFSS encoding stuff
 %    have to be expanded unprotected (\cs{edef}), so that the
-%    assigments of \cs{@changed@cmd} don't take place.
+%    assignments of \cs{@changed@cmd} don't take place.
 %    To patch this behaviour I only found \cs{@inmathwarn}
 %    as a usable hook. While an \cs{edef} a warning message by
 %    \cs{@inmathwarn} or \cs{TextSymbolUnavailable} cannot be give out,
@@ -1335,7 +1335,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Package babel.}
-%    Whereever ``naturalnames'' is used, disable \cs{textlatin}
+%    Wherever ``naturalnames'' is used, disable \cs{textlatin}
 %    (from Babel 3.6k). Thanks to Felix Neubauer
 %    (Email: \Email{Felix.Neubauer@gmx.net}).
 %    \begin{macrocode}
@@ -1519,7 +1519,7 @@
 %      it does not expand the font encoding commands. They are
 %      made roboust and protect themselves.
 %    \item[\cs{csname}:] First the string is
-%      expanded whithin a \cs{csname} and \cs{endcsname}.
+%      expanded within a \cs{csname} and \cs{endcsname}.
 %      Then the command name is converted to characters
 %      with catcode 12 by \cs{string} and the first
 %      escape character removed by \cs{@gobble}.
@@ -1538,7 +1538,7 @@
 %    \item[\cs{edef}] This version uses this standard form for expansion.
 %      It is stronger than \LaTeX's \cs{protected@edef}.
 %      So the font encoding mechanism works and the glyph commands
-%      are converted to the correct tokens for PDF strings whith the
+%      are converted to the correct tokens for PDF strings with the
 %      definitions of the PD1 encoding.
 %      Because the protecting mechanism of \LaTeX{} doesn't work
 %      within an \cs{edef}, there are situations thinkable where
@@ -1606,7 +1606,7 @@
 %    In order to check the tokens we must separate them. This will be
 %    done with \TeX's argument parsing. With this method
 %    we must the following item takes into account, that makes
-%    makes things a litte more complicate:
+%    makes things a little more complicated:
 %    \begin{itemize}
 %    \item \TeX{} does not accept a space as an undelimited argument,
 %    it cancels space tokens while looking for an undelimited
@@ -1690,7 +1690,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Backslash.}
-%    The double backslash disturbs parsing octal sequenzes, for
+%    The double backslash disturbs parsing octal sequences, for
 %    example in an string like |abc\\051| the sequence \cs{051}
 %    is detected although the second \cs{} belongs to the
 %    first backslash.
@@ -2199,7 +2199,7 @@
 %    \end{macro}
 % \subsubsection{Babel languages}
 % change 2020-10-10: moved language patches to its own file as a first step
-% toward removing them completly.
+% toward removing them completely.
 %    \begin{macrocode}
 \newif\ifHy@next
 %</package>
@@ -2740,7 +2740,7 @@
 %    \begin{macro}{\HyPsd@XSPACE}
 %    \begin{macro}{\HyPsd@ITALCORR}
 %    \begin{macro}{\HyPsd@GLYPHERR}
-%    Some commands and informations cannot be utilized before
+%    Some commands and information cannot be utilized before
 %    the string expansion and the checking process.
 %    Command names are filtered out, so we need another way
 %    to transport the information: An unusual |#| with catcode
@@ -3167,7 +3167,7 @@
 %    \begin{macro}{\HyPsd@RemoveMask}
 %    \cs{HyPsd@RemoveMask} removes the protecting \verb+|+.
 %    It is used by \cs{HyPsd@@ProtectSpacesFi} and by the code in
-%    \cs{pdfstringdef} that removes the grouping chararcters.
+%    \cs{pdfstringdef} that removes the grouping characters.
 %    \begin{macrocode}
 \def\HyPsd@RemoveMask|#1|\HyPsd@End#2{%
   \xdef#2{\unexpanded\expandafter{#1}}%
@@ -4709,7 +4709,7 @@
     \ifHy@breaklinks
       \Hy@WarningNoLine{%
         You have enabled option `breaklinks'.\MessageBreak
-        But driver `\Hy@driver.def' does not suppport this.\MessageBreak
+        But driver `\Hy@driver.def' does not support this.\MessageBreak
         Expect trouble with the link areas of broken links%
       }%
     \fi
@@ -9525,7 +9525,7 @@
 % All the code is delayed to |\begin{document}|
 % change 2023-08-13: with a new format it is no longer
 % needed to handle different |\newlabel|
-% definitions. The code can be removed completly later.
+% definitions. The code can be removed completely later.
 %    \begin{macrocode}
 %<*package>
 \@ifl@t@r\fmtversion{2023-06-01}{}
@@ -9595,7 +9595,7 @@
 % \section{Title strings}
 %
 %    If options |pdftitle| and |pdfauthor| are not used,
-%    these informations for the pdf information dictionary
+%    this information for the pdf information dictionary
 %    can be extracted by the \cmd{\title} and \cmd{\author}.
 %    \begin{macrocode}
 \ifHy@pdfusetitle
@@ -9889,7 +9889,7 @@
 %    \begin{macro}{\HyPL@@CheckThePage}
 %    The first check is, is \cmd{\thepage} is defined
 %    such as in \LaTeX, e.\,g.: |\csname @arabic\endcsname\c@page|.
-%    In the current implemenation the check fails, if there is
+%    In the current implementation the check fails, if there is
 %    another \cmd{\csname} before.
 %
 %    The second check tries to detect |\arabic{page}| at the
@@ -9931,7 +9931,7 @@
 %    The help macro \cmd{\HyPL@Format} is executed while
 %    a \cmd{\protected@edef} in the second check
 %    method of \cmd{\HyPL@@CheckPage}.
-%    The first occurences of, for example, |\arabic{page}| is
+%    The first occurrences of, for example, |\arabic{page}| is
 %    marked by \cmd{\HyPL@found} that is also defined by
 %    \cmd{\csname}.
 %    \begin{macrocode}
@@ -10283,7 +10283,7 @@
 % a trap to make |\theH<name>| be the same as |\arabic{<name>}|,
 % if |\theH<name>| is not defined, but this is not necessarily a good idea.
 % Alternatively, the `naturalnames' option uses whatever \LaTeX\
-% provides, which may be useable. But then its up to you to make
+% provides, which may be usable. But then its up to you to make
 % sure these are legal PDF and HTML names. The `hypertexnames=false' option
 % just makes up arbitrary names.
 %
@@ -11163,7 +11163,7 @@
 %    \end{macrocode}
 %
 %    Support for footnotes in p columns of longtable.
-%    Here \verb+\footnote+ commands are splitted into
+%    Here \verb+\footnote+ commands are split into
 %    \verb+\footnotemark+ and a call of \verb+\footnotetext+
 %    with the optional argument, that is not supported
 %    by hyperref. The result is a link by \verb+\footnotemark+
@@ -13045,7 +13045,7 @@
 %    \end{macrocode}
 %    \begin{macro}{\Hy@DestName}
 %    Wrap the call of \verb|\pdfdest name| in \cs{Hy@DestName}.
-%    Then it can easier be catched by package |hypdestopt|.
+%    Then it can easier be caught by package |hypdestopt|.
 %    \begin{macrocode}
 \def\Hy@DestName#1#2{%
   \pdfdest name{#1}#2\relax
@@ -18944,7 +18944,7 @@
     /Fo<</S/JavaScript/JS(\Hy@escapestring{\Fld@onfocus@code})>>%
   \fi
 %    \end{macrocode}
-%    Bl loosing the input focus (blurred)
+%    Bl losing the input focus (blurred)
 %    \begin{macrocode}
   \ifx\Fld@onblur@code\@empty
   \else
@@ -21016,7 +21016,7 @@
 %    \end{macrocode}
 %    The canonical name of U+0138, small letter kra, would be
 %    \cs{textkgreenlandic}, following the glyph naming convention.
-%    However |latex/base/inputenc.dtx| has choosen \cs{textkra}.
+%    However |latex/base/inputenc.dtx| has chosen \cs{textkra}.
 %    \begin{macrocode}
 % U+0138 LATIN SMALL LETTER KRA; kgreenlandic
 \DeclareTextCommand{\textkra}{PU}{\81\070}% U+0138

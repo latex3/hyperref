@@ -1,3 +1,6 @@
+2024-05-22 Ulrike Fischer
+	* hyperref.dtx: add \@makeother{:} to \hyper@normalise, issue #340
+
 2024-04-22 Ulrike Fischer
 	* hyperref.dtx: remove auxhook package.
 

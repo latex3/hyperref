@@ -7413,7 +7413,8 @@
 % command, you can use |#| and |%| unescaped, to produce themselves.
 % even if, say, |#| is entered as |#| it will be converted to |\#|
 % so it does not die if written to an aux file etc. |\#| will write
-% as |#| locally while making |\special|s.
+% as |#| locally while making |\special|s. The catcode |:| is set to other
+% to avoid problems with expl3 syntax.
 %    \begin{macrocode}
 \begingroup
   \endlinechar=-1 %
@@ -7426,6 +7427,7 @@
   \catcode`\&\active
   \gdef\hyper@normalise{^^A
     \begingroup
+    \@makeother{:}^^A
     \catcode`\^^M\active
     \def^^M{ }^^A
     \catcode`\%\active

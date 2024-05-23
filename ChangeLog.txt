@@ -1,3 +1,6 @@
+2024-05-25 Ulrike Fischer
+	* hyperref.dtx: load stringenc always to allow the use of pdfencoding in a group.
+
 2024-05-22 Ulrike Fischer
 	* hyperref.dtx: add \@makeother{:} to \hyper@normalise, issue #340
 

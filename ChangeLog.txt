@@ -1,3 +1,7 @@
+2024-06-02 Ulrike Fischer
+	* hyperref.dtx: enable use of onmousedown and onmouseup, issue #342
+
+Version: 2024-05-23 v7.01i
 2024-05-25 Ulrike Fischer
 	* hyperref.dtx: load stringenc always to allow the use of pdfencoding in a group.
 

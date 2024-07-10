@@ -1,3 +1,7 @@
+2024-07-102 Ulrike Fischer
+	* hyperref.dtx: define \HyOrg@addtoreset always for cleveref
+	 compability with tagging code, see https://github.com/latex3/tagging-project/issues/2
+
 2024-06-02 Ulrike Fischer
 	* hyperref.dtx: enable use of onmousedown and onmouseup, issue #342
 

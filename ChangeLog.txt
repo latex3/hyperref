@@ -1,4 +1,5 @@
-2024-07-102 Ulrike Fischer
+Version: 2024-07-10 v7.01j
+2024-07-10 Ulrike Fischer
 	* hyperref.dtx: define \HyOrg@addtoreset always for cleveref
 	 compability with tagging code, see https://github.com/latex3/tagging-project/issues/2
 

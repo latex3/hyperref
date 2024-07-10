@@ -3,7 +3,9 @@ Don't change this file in any respect.
 (test0.toc)
 \tf@toc=\write...
 [1
-] [2] [3]
+]
+[2]
+[3]
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line ....
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -19,11 +21,14 @@ File: hog.eps Graphic file (type eps)
 File: hog.eps Graphic file (type eps)
  <hog.eps>
 File: hog.eps Graphic file (type eps)
- <hog.eps> [4]
+ <hog.eps>
+[4]
 File: hog.eps Graphic file (type eps)
  <hog.eps>
 File: hog.eps Graphic file (type eps)
- <hog.eps> (test0.ind [5] [6
+ <hog.eps> (test0.ind
+[5]
+[6
 ]) 
 enddocument/afterlastpage: lastpage setting LastPage.
 (test0.aux)

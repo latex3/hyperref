@@ -114,16 +114,16 @@ Completed box being shipped out [2]
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 6.16669
 ....\hbox(8.33331+0.0)x390.0, glue set 284.24136fil
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{theorem.0.0.1} xyz
-.......\penalty 10000
 .....\hbox(8.33331+0.0)x65.70827
 ......\glue 0.0
 ......\glue 0.0
 ......\glue -5.87494
 ......\hbox(8.33331+0.0)x65.70827
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0, shifted -14.5
+.........\pdfdest name{theorem.0.0.1} xyz
+.........\penalty 10000
 .......\glue 5.87494
 .......\OT1/cmr/bx/n/12 t
 .......\OT1/cmr/bx/n/12 h

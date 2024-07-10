@@ -3,7 +3,9 @@ Don't change this file in any respect.
 (test0.toc)
 \tf@toc=\write...
 [1
-] [2] [3]
+]
+[2]
+[3]
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line ....
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -36,7 +38,9 @@ File: hog.pdf Graphic file (type pdf)
 <use hog.pdf>
 Package luatex.def Info: hog.pdf  used on input line ....
 (luatex.def)             Requested size: 125.9703pt x 106.89911pt.
-(test0.ind [5] [6
+(test0.ind
+[5]
+[6
 ]) 
 enddocument/afterlastpage: lastpage setting LastPage.
 (test0.aux)

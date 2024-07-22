@@ -1006,19 +1006,19 @@ CJKbookmarks       & boolean   & false   &
 pdfhighlight       & name      & /I      & How link buttons behave when selected; /I is for inverse (the default);
                                            the other possibilities are /N (no effect), /O (outline), and /P (inset
                                            highlighting). \\
-citebordercolor    & RGB color & 0 1 0   & The color of the box around citations \\
-filebordercolor    & RGB color & 0 .5 .5 & The color of the box around links to files \\
-linkbordercolor    & RGB color & 1 0 0   & The color of the box around normal links \\
-menubordercolor    & RGB color & 1 0 0   & The color of the box around Acrobat menu links \\
-urlbordercolor     & RGB color & 0 1 1   & The color of the box around links to URLs \\
-runbordercolor     & RGB color & 0 .7 .7 & Color of border around `run' links \\
+citebordercolor    & rgb color & 0 1 0   & The color of the box around citations \\
+filebordercolor    & rgb color & 0 .5 .5 & The color of the box around links to files \\
+linkbordercolor    & rgb color & 1 0 0   & The color of the box around normal links \\
+menubordercolor    & rgb color & 1 0 0   & The color of the box around Acrobat menu links \\
+urlbordercolor     & rgb color & 0 1 1   & The color of the box around links to URLs \\
+runbordercolor     & rgb color & 0 .7 .7 & Color of border around `run' links \\
 allbordercolors    &           &         & Set all border color options \\
 pdfborder          &           & 0 0 1   & The style of box around links; defaults to a box with lines of 1pt thickness,
                                            but the colorlinks option resets it to produce no border.
 \end{longtable}
 
 The color of link borders used to be specified \emph{only} as 3
-numbers in the range 0..1, giving an RGB color. Since version 6.76a, the usual
+numbers in the range 0..1, giving an rgb color. Since version 6.76a, the usual
 color specifications of package \xpackage{(x)color} can be used if \xpackage{xcolor}
 has been loaded.
 For further information see description of package \xpackage{hycolor}.
@@ -2751,7 +2751,7 @@ method   & name & Used only when generating HTML; values can be \texttt{post} or
 \end{longtable}
 
 \subsection{Forms optional parameters}
-Note that all colors must be expressed as RGB triples, in the range 0..1 (i.e.\ \texttt{color=0 0
+Note that all colors must be expressed as rgb triples, in the range 0..1 (i.e.\ \texttt{color=0 0
 0.5})
 
 \smallskip

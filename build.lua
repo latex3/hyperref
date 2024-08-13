@@ -16,6 +16,7 @@ tdslocations = {
   "doc/latex/hyperref/hyperref-doc.html",
   "doc/latex/hyperref/hyperref-doc.pdf",
   "doc/latex/hyperref/hyperref-linktarget.pdf",
+  "doc/latex/hyperref/hyperref-patches.pdf",
   "doc/latex/hyperref/hyperref-doc2.html",
   "doc/latex/hyperref/hyperref-doc3.html",
   "doc/latex/hyperref/hyperref-doc4.html",
@@ -30,6 +31,8 @@ tdslocations = {
   "source/latex/hyperref/bmhydoc.sty",
   "source/latex/hyperref/hluatex.dtx",
   "source/latex/hyperref/hyperref.dtx",
+  "source/latex/hyperref/hyperref-patches.dtx",
+  "source/latex/hyperref/hyperref-linktarget.dtx",
   "source/latex/hyperref/hyperref.ins",
   "source/latex/hyperref/nameref.dtx",
   "source/latex/hyperref/xr-hyper.dtx",  
@@ -124,7 +127,9 @@ typesetfiles = {"hyperref-doc.tex",
                 "hyperref.dtx", 
                 "nameref.dtx",
                 "xr-hyper.dtx",
-                "hyperref-linktarget.dtx"}
+                "hyperref-linktarget.dtx",
+                "hyperref-patches.dtx"
+                }
 
 local function type_manual()
   print("Special Typesetting hyperref-doc")

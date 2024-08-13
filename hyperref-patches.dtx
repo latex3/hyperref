@@ -1,5 +1,4 @@
 % \iffalse meta-comment
-% \iffalse
 %% File: hyperref-patches.dtx
 %% Copyright
 %% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
@@ -27,13 +26,9 @@
 %% given in the file `manifest.txt'.
 %
 %<*driver>
-\RequirePackage{pdfmanagement-testphase}
 \DocumentMetadata{pdfstandard=A-2b}
-\makeatletter
-\declare@file@substitution{doc.sty}{doc-v3beta.sty}
-\makeatother
 \documentclass[full]{l3doc}
-\usepackage{array,booktabs,hyperxmp}
+\usepackage{array,booktabs}
 \hypersetup{pdfauthor=The LaTeX Project,pdftitle=hyperref patches}
 \usepackage{caption}
 \begin{document}
@@ -79,7 +74,7 @@
 % \texttt{nofoiltex}, \texttt{nolisting}, \texttt{nolistings}, \texttt{norevtex}.
 %
 % \end{documentation}
-
+%
 % \begin{implementation}
 %
 % \section{\pkg{hyperref-patches} documentation}
@@ -141,6 +136,7 @@
 }{}
 \fi
 %    \end{macrocode}
+%
 % \section{listings}
 % --Moved 2021-06-30--
 %

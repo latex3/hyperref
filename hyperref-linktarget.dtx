@@ -216,7 +216,7 @@
 % \texttt{\cs{MakeLinkTarget}*\{destname\}} is roughly equivalent to
 % \texttt{\cs{hypertarget}\{destname\}\{\}} but unlike the
 % latter it also raises the destination in a PDF, there is no text argument,
-% and---most importantly--it updates \cs{@currentHref}, that means the target
+% and---most importantly---it updates \cs{@currentHref}, that means the target
 % name is stored by the next \cs{label}, something that \cs{hypertarget} doesn't do).
 % The target name is expanded, see the remarks about prefixes above regarding
 % the allowed chars.
@@ -534,7 +534,7 @@
 %    \begin{macrocode}
 \cs_new_protected:Npn \@@_target_counter_doc:nn #1 #2
   {
-    \bool_lazy_and:nnTF { \cs_if_free_p:c {c@#2} } { \cs_if_free_p:c {theH#2} }
+    \bool_lazy_or:nnTF { \cs_if_free_p:c {c@#2} } { \cs_if_free_p:c {theH#2} }
       {
         \PackageWarning {hyperref}{Counter~'#2'~or~the~representation~'\string\theH#2`\MessageBreak
         don't~exist.~No~target~created.}{}

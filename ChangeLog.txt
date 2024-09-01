@@ -1,3 +1,6 @@
+2024-08-31 Ulrike Fischer
+	* hyperref-linktarget.dtx: correct a test, see test missing-theH 
+
 Version: 2024-07-10 v7.01j
 2024-07-10 Ulrike Fischer
 	* hyperref.dtx: define \HyOrg@addtoreset always for cleveref

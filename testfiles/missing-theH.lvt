@@ -1,0 +1,9 @@
+\documentclass{book}
+\input{regression-test}
+\newtheorem{defn}{Definition}[chapter]
+\usepackage{hyperref}
+
+\begin{document}
+\START
+\begin{defn}\label{def:test} test\end{defn}
+\end{document}

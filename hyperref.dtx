@@ -11031,6 +11031,7 @@
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@footnote}{%
 \ifHy@hyperfootnotes
+  \let\theHfootnote\undefined
   \newcounter{Hfootnote}%
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark

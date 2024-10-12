@@ -11031,8 +11031,13 @@
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@footnote}{%
 \ifHy@hyperfootnotes
-  \let\theHfootnote\undefined
-  \newcounter{Hfootnote}%
+  \@ifundefined{theHfootnote}
+   {\newcounter{Hfootnote}}
+   {\let\H@@theHfootnote\theHfootnote
+    \let\theHfootnote\undefined
+    \newcounter{Hfootnote}
+    \let\theHfootnote\H@@theHfootnote
+   } %  
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark
   \def\@xfootnotenext[#1]{%

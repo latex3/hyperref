@@ -10349,9 +10349,6 @@
    \providecommand\theHHfootnote {\arabic{Hfootnote}}
    \providecommand\theHmpfootnote{\arabic{mpfootnote}}
  }  
-\@ifundefined{theHHmpfootnote}{%
-  \let\theHHmpfootnote\theHHfootnote
-}{}
 %    \end{macrocode}
 % Tanmoy asked for this default handling of undefined |\theH<name>|
 % situations. It really isn't clear what would be ideal, whether to
@@ -11072,7 +11069,13 @@
     \let\theHfootnote\undefined
     \newcounter{Hfootnote}
     \let\theHfootnote\H@@theHfootnote
-   } %  
+   }% 
+%    \end{macrocode}
+% where is this used?
+%    \begin{macrocode}
+  \@ifundefined{theHHmpfootnote}{%
+   \let\theHHmpfootnote\theHHfootnote
+   }{}    
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark
   \def\@xfootnotenext[#1]{%

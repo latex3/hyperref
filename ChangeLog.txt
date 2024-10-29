@@ -1,3 +1,11 @@
+Version: 2024-10-14 v7.01k
+
+2024-10-14 Ulrike Fischer
+	* hyperref.dtx: adapt to new format (predefined \theHcounter, sockets)
+
+2024-10-12 Ulrike Fischer
+	* hyperref.dtx: avoid warning if theHfootnote is predefined.
+
 2024-08-31 Ulrike Fischer
 	* hyperref-linktarget.dtx: correct a test, see test missing-theH 
 

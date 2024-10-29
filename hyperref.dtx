@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2024-07-10 v7.01j %
+%<!none&!packageEnd>  [2024-10-12 v7.01k %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -10293,29 +10293,35 @@
     \fi
   \fi
 }
-\Hy@CounterExists{section}{%
-  \providecommand\theHequation{\theHsection.\arabic{equation}}%
-}
-\providecommand\theHequation{\arabic{equation}}%
-\Hy@CounterExists{part}{%
-  \providecommand\theHpart{\arabic{part}}%
-}
-\@ifundefined{thechapter}{%
-  \providecommand\theHsection    {\arabic{section}}%
-  \providecommand\theHfigure     {\arabic{figure}}%
-  \providecommand\theHtable      {\arabic{table}}%
-}{%
-  \providecommand\theHchapter    {\arabic{chapter}}%
-  \providecommand\theHfigure     {\theHchapter.\arabic{figure}}%
-  \providecommand\theHtable      {\theHchapter.\arabic{table}}%
-  \providecommand\theHsection    {\theHchapter.\arabic{section}}%
-}
-\providecommand\theHsubsection   {\theHsection.\arabic{subsection}}
-\providecommand\theHsubsubsection{\theHsubsection.\arabic{subsubsection}}
-\providecommand\theHparagraph    {\theHsubsubsection.\arabic{paragraph}}
-\providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
-\providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
-\providecommand\theHthm          {\theHsection.\arabic{thm}}
+%    \end{macrocode}
+% change 2024-10-13: do not define if format is new enough.
+%    \begin{macrocode}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {
+    \Hy@CounterExists{section}{%
+      \providecommand\theHequation{\theHsection.\arabic{equation}}%
+    }
+    \providecommand\theHequation{\arabic{equation}}%
+    \Hy@CounterExists{part}{%
+      \providecommand\theHpart{\arabic{part}}%
+    }
+    \@ifundefined{thechapter}{%
+      \providecommand\theHsection    {\arabic{section}}%
+      \providecommand\theHfigure     {\arabic{figure}}%
+      \providecommand\theHtable      {\arabic{table}}%
+    }{%
+      \providecommand\theHchapter    {\arabic{chapter}}%
+      \providecommand\theHfigure     {\theHchapter.\arabic{figure}}%
+      \providecommand\theHtable      {\theHchapter.\arabic{table}}%
+      \providecommand\theHsection    {\theHchapter.\arabic{section}}%
+    }
+    \providecommand\theHsubsection   {\theHsection.\arabic{subsection}}
+    \providecommand\theHsubsubsection{\theHsubsection.\arabic{subsubsection}}
+    \providecommand\theHparagraph    {\theHsubsubsection.\arabic{paragraph}}
+    \providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
+    \providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
+    \providecommand\theHthm          {\theHsection.\arabic{thm}}
+  }  
 %    \end{macrocode}
 % Thanks to Greta Meyer (gbd@pop.cwru.edu) for making me realize
 % that enumeration starts at 0 for every list! But |\item|
@@ -10324,7 +10330,8 @@
 %    \begin{macrocode}
 \let\H@item\item
 \newcounter{Item}
-\def\theHItem{\arabic{Item}}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {\def\theHItem{\arabic{Item}}}
 \def\item{%
   \@hyper@itemfalse
   \if@nmbrlist\@hyper@itemtrue\fi
@@ -10333,15 +10340,15 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\providecommand\theHenumi     {\theHItem}
-\providecommand\theHenumii    {\theHItem}
-\providecommand\theHenumiii   {\theHItem}
-\providecommand\theHenumiv    {\theHItem}
-\providecommand\theHHfootnote {\arabic{Hfootnote}}
-\providecommand\theHmpfootnote{\arabic{mpfootnote}}
-\@ifundefined{theHHmpfootnote}{%
-  \let\theHHmpfootnote\theHHfootnote
-}{}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {
+   \providecommand\theHenumi     {\theHItem}
+   \providecommand\theHenumii    {\theHItem}
+   \providecommand\theHenumiii   {\theHItem}
+   \providecommand\theHenumiv    {\theHItem}
+   \providecommand\theHHfootnote {\arabic{Hfootnote}}
+   \providecommand\theHmpfootnote{\arabic{mpfootnote}}
+ }  
 %    \end{macrocode}
 % Tanmoy asked for this default handling of undefined |\theH<name>|
 % situations. It really isn't clear what would be ideal, whether to
@@ -10349,7 +10356,7 @@
 % definition of the counter, or to default it to something like
 % |\arabic{name}|. We take the latter course, slightly worriedly.
 %    \begin{macrocode}
-\let\H@refstepcounter\refstepcounter
+\let\H@refstepcounter\@kernel@refstepcounter
 \edef\name@of@eq{equation}%
 %    \end{macrocode}
 % We do not want the handler for |\refstepcounter| to cut in
@@ -10366,11 +10373,13 @@
 \@hyper@itemfalse
 \@skiphyperreffalse
 \ExplSyntaxOn
-\def\refstepcounter#1{%
-  \legacy_if:nF {Hy@pdfstring}
-   {
-    \H@refstepcounter{#1}%
-    \bool_lazy_and:nnT
+\IfFormatAtLeastTF{2024-11-01}
+ {
+  \NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
+  \AssignSocketPlug{refstepcounter}{hyperref}
+  \NewSocketPlug{refstepcounter/target}{hyperref}
+    {   
+      \bool_lazy_and:nnT
       { \l__hyp_target_create_bool }
       { ! \legacy_if_p:n{@skiphyperref} }
       {
@@ -10381,11 +10390,34 @@
             \@hyper@itemfalse
           }
           {
-            \hyper@refstepcounter{#1}%
+            \hyper@refstepcounter{\@currentcounter}%
           }
-      }
-   }
-}
+       }
+     }
+    \AssignSocketPlug{refstepcounter/target}{hyperref} 
+  }
+  {
+    \def\refstepcounter#1{%
+      \legacy_if:nF {Hy@pdfstring}
+       {
+        \H@refstepcounter{#1}%
+        \bool_lazy_and:nnT
+          { \l__hyp_target_create_bool }
+          { ! \legacy_if_p:n{@skiphyperref} }
+          {
+            \legacy_if:nTF {@hyper@item}
+              {
+                \stepcounter{Item}%
+                \hyper@refstepcounter{Item}%
+                \@hyper@itemfalse
+              }
+              {
+                \hyper@refstepcounter{#1}%
+              }
+          }
+       }
+     }
+  }
 \ExplSyntaxOff
 \let\Hy@saved@refstepcounter\refstepcounter
 %    \end{macrocode}
@@ -11031,7 +11063,19 @@
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@footnote}{%
 \ifHy@hyperfootnotes
-  \newcounter{Hfootnote}%
+  \@ifundefined{theHfootnote}
+   {\newcounter{Hfootnote}}
+   {\let\H@@theHfootnote\theHfootnote
+    \let\theHfootnote\undefined
+    \newcounter{Hfootnote}
+    \let\theHfootnote\H@@theHfootnote
+   }% 
+%    \end{macrocode}
+% where is this used?
+%    \begin{macrocode}
+  \@ifundefined{theHHmpfootnote}{%
+   \let\theHHmpfootnote\theHHfootnote
+   }{}    
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark
   \def\@xfootnotenext[#1]{%
@@ -11383,6 +11427,11 @@
           }%
           #3%
         \fi
+%    \end{macrocode}
+% as the anchor are set manually here, we have to update the tagging info.
+% For now we test for the format but this should go again in 2025.
+%    \begin{macrocode}
+        \IfFormatAtLeastTF{2024-11-01}{\UseTaggingSocket{recordtarget}}{}%        
       }%
     \fi
     \par
@@ -12017,7 +12066,9 @@
 % new counters are defined.
 % change 2024-02-14: use a csname to handle counter names with commands,
 % see issue \#330
+% change 2024-10-13: disable patches in new format 2024-11-01.
 %    \begin{macrocode}
+\IfFormatAtLeastTF{2024-11-01}{\def\hyper@nopatch@counter{}}{}
 \@ifundefined{hyper@nopatch@counter}
   {
    \let\H@definecounter\@definecounter

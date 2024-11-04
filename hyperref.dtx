@@ -10377,6 +10377,21 @@
  {
   \NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
   \AssignSocketPlug{refstepcounter}{hyperref}
+%    \end{macrocode}
+% change 2024-11-05: cleveref relies on refstepcounter to update its data. 
+%    \begin{macrocode}
+  \AddToHook{package/cleveref/after}
+   {
+     \@ifpackagelater{cleveref}{2018/03/28}{}
+      {
+      \NewSocketPlug{refstepcounter}{hyperref/fixcleveref}
+       {\ifHy@pdfstring\else
+         #1%
+         {\firstaid@cref@updatelabeldata{\@currentcounter}}%
+        \fi}
+       \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}   
+      }
+   }
   \NewSocketPlug{refstepcounter/target}{hyperref}
     {   
       \bool_lazy_and:nnT

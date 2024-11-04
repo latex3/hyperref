@@ -1,3 +1,7 @@
+
+2024-11-05 Ulrike Fischer
+	* hyperref.dtx: add a fix for cleveref to update its data in refstepcounter.
+
 Version: 2024-10-30 v7.01k
 
 2024-10-14 Ulrike Fischer

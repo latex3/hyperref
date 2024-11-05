@@ -1,5 +1,13 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
+! Use of \cref@override@label@type doesn't match its definition.
+\refstepcounter@optarg ...cref@currentlabel \@nil 
+                                                  {\@tempa }}
+l. ...\begin{lemma}
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line ....
 LaTeX Font Info:    External font `cmex10' loaded for size

@@ -98,7 +98,7 @@ Completed box being shipped out [1]
 .........\rule(*+*)x0.4
 ........\rule(0.4+0.0)x*
 ....\kern11.0
-...\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{}{}}}
+...\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{section.1}{}}}
 ...\penalty 10000
 ...\penalty 10000
 ...\glue(\parskip) 0.0 plus 1.0

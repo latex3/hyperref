@@ -58,7 +58,7 @@ Completed box being shipped out [1]
 ...\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}Test}{\thepage }{}\protected@file@percent }}
 ...\penalty 10000
 ...\glue 9.90276 plus 0.86108
-...\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{}{}}}
+...\write1{\newlabel{sec:test}{{sect: 1}{\thepage }{Test}{section.1}{}}}
 ...\penalty 10000
 ...\penalty 10000
 ...\glue(\parskip) 0.0 plus 1.0

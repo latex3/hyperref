@@ -1525,7 +1525,7 @@ Package hyperref Info: Reference (cite) `cite.Dallas:aia' on input line ....
 Package hyperref Info: Reference (link) `section.22' on input line ....
 Package hyperref Info: bookmark on input line ...:
 (hyperref)             thecounter {2.1}
-(hyperref)             text {\protect \numberline {\thetable }{A test long table (see \protect \cite {Dallas:aia} and section \protect \ref {sec1}}}
+(hyperref)             text {\protect \numberline {\@nameuse {the\LTcaptype }}{A test long table (see \protect \cite {Dallas:aia} and section \protect \ref {sec1}}}
 (hyperref)             reference {table.2.1}
 (hyperref)             toclevel {0}
 (hyperref)             type {lot}.

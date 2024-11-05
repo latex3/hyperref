@@ -1,6 +1,15 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 Chapter 1.
+! Use of \cref@override@label@type doesn't match its definition.
+\refstepcounter@optarg ...cref@currentlabel \@nil 
+                                                  {\@tempa }}
+l. ...\begin{definition}
+                       [proof script]
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line ....
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -8,6 +17,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line ....
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line ....
+! Use of \cref@override@label@type doesn't match its definition.
+\refstepcounter@optarg ...cref@currentlabel \@nil 
+                                                  {\@tempa }}
+l. ...\begin{definition}
+                       [proof script]
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+! Use of \cref@override@label@type doesn't match its definition.
+\refstepcounter@optarg ...cref@currentlabel \@nil 
+                                                  {\@tempa }}
+l. ...\begin{definition}
+                       [proof script]
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+! Use of \cref@override@label@type doesn't match its definition.
+\refstepcounter@optarg ...cref@currentlabel \@nil 
+                                                  {\@tempa }}
+l. ...\begin{definition}
+                       [proof script]
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 \tf@thm=\write...
 Completed box being shipped out [1]
 \vbox(679.0+0.0)x421.0

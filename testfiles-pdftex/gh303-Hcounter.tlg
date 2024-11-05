@@ -5,5 +5,5 @@ Don't change this file in any respect.
 ->\@arabic \c@duck .
 l. ...\show\theduck
 > \theHduck=macro:
-->\@arabic \c@duck .
+->\the \value {duck}.
 l. ...\show\theHduck

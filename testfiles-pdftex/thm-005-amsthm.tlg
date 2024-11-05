@@ -124,13 +124,13 @@ Completed box being shipped out [2]
 ...\glue 19.8738
 ...\glue(\lineskip) 0.0
 ...\vbox(548.5+0.0)x390.0, glue set 526.5fil
-....\write1{\newlabel{blub}{{1}{\thepage }{}{theorem.0.0.1}{}}}
+....\write1{\newlabel{blub}{{1}{\thepage }{}{theorem.1}{}}}
 ....\glue(\topskip) 3.66669
 ....\hbox(8.33331+0.0)x390.0, glue set 305.2165fil
 .....\penalty 10000
 .....\hbox(0.0+0.0)x0.0
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
-.......\pdfdest name{theorem.0.0.1} xyz
+.......\pdfdest name{theorem.1} xyz
 .......\penalty 10000
 .....\OT1/cmr/bx/n/12 t
 .....\OT1/cmr/bx/n/12 h
@@ -188,7 +188,7 @@ Completed box being shipped out [3]
 ....\glue(\topskip) 4.26668
 ....\hbox(7.73332+0.0)x390.0, glue set 366.50024fil
 .....\hbox(0.0+0.0)x17.62482
-.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{theorem.0.0.1}
+.....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{theorem.1}
 .....\OT1/cmr/m/n/12 1
 .....\pdfendlink
 .....\penalty 10000

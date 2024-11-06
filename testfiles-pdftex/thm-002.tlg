@@ -129,6 +129,7 @@ Completed box being shipped out [2]
 ........\hbox(0.0+0.0)x0.0, shifted -12.0
 .........\pdfdest name{theorem.1} xyz
 .........\penalty 10000
+.......\kern 0.0
 .......\glue 5.0
 .......\OT1/cmr/bx/n/10 T
 .......\OT1/cmr/bx/n/10 h
@@ -227,6 +228,7 @@ Completed box being shipped out [3]
 ........\hbox(0.0+0.0)x0.0, shifted -12.0
 .........\pdfdest name{theorem.2} xyz
 .........\penalty 10000
+.......\kern 0.0
 .......\glue 5.0
 .......\OT1/cmr/bx/n/10 T
 .......\OT1/cmr/bx/n/10 h

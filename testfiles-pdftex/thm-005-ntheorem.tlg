@@ -140,6 +140,7 @@ Completed box being shipped out [2]
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
 .......\pdfdest name{theorem.1} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\hbox(8.33331+0.0)x65.70827
 ......\glue 0.0
 ......\glue 0.0

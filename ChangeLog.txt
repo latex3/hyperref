@@ -1,3 +1,7 @@
+2024-11-05 Ulrike Fischer
+	* hyperref-linktarget.dtx: add a kern to guard anchor in para hook.
+
+Version: 2024-11-06 v7.01l
 
 2024-11-05 Ulrike Fischer
 	* hyperref.dtx: add a fix for cleveref to update its data in refstepcounter.

@@ -10074,13 +10074,12 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    Package \textsf{atveryend} is used to get behind the
+%    The \texttt{enddocument/afteraux} hook is used to get behind the
 %    final \cs{clearpage} and to avoid a \cs{clearpage}
 %    in \cs{AtEndDocument}.
 %    Then the PDF catalog entry for |\PageLabels| is set.
-%    \begin{macrocode}
-  \RequirePackage{atveryend}[2009/12/07]%
-  \AtVeryEndDocument{%
+%    \begin{macrocode}  
+  \AddToHook{enddocument/afteraux}{%
     \HyPL@SetPageLabels
   }%
 %    \end{macrocode}
@@ -18015,7 +18014,7 @@
       \pdfrefobj\OBJ@ZaDb
       \pdfrefobj\OBJ@Helv
     \fi
-    \AtVeryEndDocument{%
+    \AddToHook{enddocument/afteraux}{%
       \immediate\pdfobj{%
         <<%
           /Fields[\HyField@afields]%

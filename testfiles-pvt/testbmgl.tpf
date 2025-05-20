@@ -2075,27 +2075,27 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F46 17.2154 Tf 102.884 701.148 Td [(T)92(est)-250(bookmark)-250(glyphs)-250(\050HO\051)]TJ/F47 11.9552 Tf 0 -26.82 Td [(Document:)]TJ/F46 11.9552 Tf [-310(testbmgl.tex)-250([2008/09/11)-250(v1.3])]TJ/F46 14.3462 Tf 0 -35.417 Td [(Function)]TJ/F47 11.9552 Tf 0 -22.516 Td [(This)-250(test)-250(\002le)-250(has)-250(se)25(v)15(eral)-250(tasks:)]TJ
+/F50 17.2154 Tf 102.884 701.148 Td [(T)92(est)-250(bookmark)-250(glyphs)-250(\050HO\051)]TJ/F51 11.9552 Tf 0 -26.82 Td [(Document:)]TJ/F50 11.9552 Tf [-310(testbmgl.tex)-250([2008/09/11)-250(v1.3])]TJ/F50 14.3462 Tf 0 -35.417 Td [(Function)]TJ/F51 11.9552 Tf 0 -22.516 Td [(This)-250(test)-250(\002le)-250(has)-250(se)25(v)15(eral)-250(tasks:)]TJ
 0 g 0 G
  19.228 -24.408 Td [(\225)]TJ
 0 g 0 G
- [-490(T)70(esting)-250(package)]TJ/F50 11.9552 Tf [-249(hyperr)37(ef)]TJ/F47 11.9552 Tf [-396(with)-250(encoding)-250(\002le)]TJ/F50 11.9552 Tf [-250(pd1enc.def)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(T)70(esting)-250(package)]TJ/F54 11.9552 Tf [-249(hyperr)37(ef)]TJ/F51 11.9552 Tf [-396(with)-250(encoding)-250(\002le)]TJ/F54 11.9552 Tf [-250(pd1enc.def)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  0 -24.409 Td [(\225)]TJ
 0 g 0 G
- [-490(Sho)25(wing)-226(glyph)-227(commands)-227(and)-227(aliases)-227(that)-227(are)-227(supported)-227(by)-227(package)]TJ/F50 11.9552 Tf [-227(hyper)20(-)]TJ 10.037 -14.445 Td [(r)37(ef)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(Sho)25(wing)-226(glyph)-227(commands)-227(and)-227(aliases)-227(that)-227(are)-227(supported)-227(by)-227(package)]TJ/F54 11.9552 Tf [-227(hyper)20(-)]TJ 10.037 -14.445 Td [(r)37(ef)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  -10.037 -24.409 Td [(\225)]TJ
 0 g 0 G
- [-490(T)70(est)-389(for)-390(the)-389(pdf)-390(reader)40(,)-424(especially)]TJ/F50 11.9552 Tf [-390(Acr)45(obatRe)1(ader)]TJ/F47 11.9552 Tf [(.)-729(Which)-390(glyphs)-389(of)-390(the)]TJ/F50 11.9552 Tf 10.037 -14.446 Td [(PDFDocEncoding)]TJ/F47 11.9552 Tf [-250(are)-250(correctly)-250(displayed?)]TJ
+ [-490(T)70(est)-389(for)-390(the)-389(pdf)-390(reader)40(,)-424(especially)]TJ/F54 11.9552 Tf [-390(Acr)45(obatRe)1(ader)]TJ/F51 11.9552 Tf [(.)-729(Which)-390(glyphs)-389(of)-390(the)]TJ/F54 11.9552 Tf 10.037 -14.446 Td [(PDFDocEncoding)]TJ/F51 11.9552 Tf [-250(are)-250(correctly)-250(displayed?)]TJ
 0 g 0 G
  -10.037 -24.408 Td [(\225)]TJ
 0 g 0 G
- [-490(These)-241(glyphs)-242(are)-242(sho)25(wn)-242(that)-242(package)]TJ/F50 11.9552 Tf [-242(hyperr)37(ef)]TJ/F47 11.9552 Tf [-388(replaces)-242(with)-242(simpler)-242(letters)]TJ 10.037 -14.446 Td [(in)-250(order)-250(to)-250(a)20(v)20(oid)-250(missing)-250(glyphs.)]TJ/F46 14.3462 Tf -29.265 -35.417 Td [(Short)-250(explanation)-250(of)-250(the)-250(bookmarks)]TJ
+ [-490(These)-241(glyphs)-242(are)-242(sho)25(wn)-242(that)-242(package)]TJ/F54 11.9552 Tf [-242(hyperr)37(ef)]TJ/F51 11.9552 Tf [-388(replaces)-242(with)-242(simpler)-242(letters)]TJ 10.037 -14.446 Td [(in)-250(order)-250(to)-250(a)20(v)20(oid)-250(missing)-250(glyphs.)]TJ/F50 14.3462 Tf -29.265 -35.417 Td [(Short)-250(explanation)-250(of)-250(the)-250(bookmarks)]TJ
 0 g 0 G
-/F47 11.9552 Tf 14.446 -22.516 Td [(1.)]TJ
+/F51 11.9552 Tf 14.446 -22.516 Td [(1.)]TJ
 0 g 0 G
- [-490(The)-359(outline)-360(entries)-359(of)-360(the)-360(\002rst)-359(le)25(v)15(el)-360(sho)25(w)-359(a)-360(summary)-359(of)-360(their)-360(subentries.)]TJ 14.819 -14.445 Td [(Second)-389(a)-389(screenshot)-388(with)-389(closed)-389(bookmarks)-389(will)-389(contain)-389(all)-388(slots)-389(of)-389(the)]TJ/F50 11.9552 Tf 0 -14.446 Td [(PDFDocEncoding)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(The)-359(outline)-360(entries)-359(of)-360(the)-360(\002rst)-359(le)25(v)15(el)-360(sho)25(w)-359(a)-360(summary)-359(of)-360(their)-360(subentries.)]TJ 14.819 -14.445 Td [(Second)-389(a)-389(screenshot)-388(with)-389(closed)-389(bookmarks)-389(will)-389(contain)-389(all)-388(slots)-389(of)-389(the)]TJ/F54 11.9552 Tf 0 -14.446 Td [(PDFDocEncoding)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  -14.819 -24.409 Td [(2.)]TJ
 0 g 0 G
@@ -2103,7 +2103,7 @@ BT
 0 g 0 G
  21.449 -24.408 Td [(\050a\051)]TJ
 0 g 0 G
- [-490(Octal)-250(code)-250(of)-250(the)-250(s)1(lot)-250(in)-250(the)]TJ/F50 11.9552 Tf [-250(PDFDocEncoding)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(Octal)-250(code)-250(of)-250(the)-250(s)1(lot)-250(in)-250(the)]TJ/F54 11.9552 Tf [-250(PDFDocEncoding)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  -0.669 -19.427 Td [(\050b\051)]TJ
 0 g 0 G
@@ -2119,11 +2119,11 @@ BT
 0 g 0 G
  -19.123 -19.427 Td [(\050c\051)]TJ
 0 g 0 G
- [-490(The)-250(glyph)-250(name)-250(of)]TJ/F50 11.9552 Tf [-250(PDFDoc)1(Encoding)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(The)-250(glyph)-250(name)-250(of)]TJ/F54 11.9552 Tf [-250(PDFDoc)1(Encoding)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  -0.669 -19.427 Td [(\050d\051)]TJ
 0 g 0 G
- [-490(The)-250(higher)-249(glyph)-250(T)]TJ 110.439 -2.69 Td [(E)]TJ 5.811 2.69 Td [(X-command,)-250(supported)-250(by)-250(package)]TJ/F50 11.9552 Tf [-250(hyperr)37(ef)]TJ/F47 11.9552 Tf [(.)]TJ
+ [-490(The)-250(higher)-249(glyph)-250(T)]TJ 110.439 -2.69 Td [(E)]TJ 5.811 2.69 Td [(X-command,)-250(supported)-250(by)-250(package)]TJ/F54 11.9552 Tf [-250(hyperr)37(ef)]TJ/F51 11.9552 Tf [(.)]TJ
 0 g 0 G
  -137.03 -24.409 Td [(3.)]TJ
 0 g 0 G
@@ -3943,7 +3943,7 @@ endobj
 endobj
 1381 0 obj
 <<
-/Font << /F46 1386 0 R /F47 1387 0 R /F50 1389 0 R >>
+/Font << /F50 1386 0 R /F51 1387 0 R /F54 1389 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj

@@ -9683,19 +9683,19 @@
 \let\Hy@EveryPageHook\@empty
 \let\Hy@EveryPageBoxHook\@empty
 \let\Hy@FirstPageHook\@empty
-\AtBeginShipout{%
+\AddToHook{shipout/before}{%
   \Hy@EveryPageHook
   \ifx\Hy@EveryPageBoxHook\@empty
   \else
-    \setbox\AtBeginShipoutBox=\vbox{%
+    \setbox\ShipoutBox=\vbox{%
       \offinterlineskip
       \Hy@EveryPageBoxHook
-      \box\AtBeginShipoutBox
+      \box\ShipoutBox
     }%
   \fi
 }
 \Hy@iffileloaded{hpdftex.def}{%
-  \AtBeginShipout{%
+  \AddToHook{shipout/before}{%
     \Hy@FirstPageHook
     \global\let\Hy@FirstPageHook\@empty
   }%
@@ -14230,9 +14230,9 @@
       >>%
     >>%
   }%
-  \AtBeginShipout{%
-    \setbox\AtBeginShipoutBox=\hbox{%
-      \copy\AtBeginShipoutBox
+  \AddToHook{shipout/before}{%
+    \setbox\ShipoutBox=\hbox{%
+      \copy\ShipoutBox
       \@pdfm@mark{%
         put @resources <<%
           /Properties<<%

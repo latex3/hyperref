@@ -14337,8 +14337,12 @@
 \def\hyper@link#1#2#3{%
   \hyper@linkstart{#1}{#2}#3\Hy@xspace@end\hyper@linkend
 }
+%    \end{macrocode}
+% 2025-05-20 added a group for issue \#380
+%    \begin{macrocode}
 \def\hyper@linkfile#1#2#3{%
   \leavevmode
+  \begingroup
   \Hy@BeginAnnot{%
     \def\Hy@pstringF{#2}%
     \Hy@CleanupFile\Hy@pstringF
@@ -14374,6 +14378,7 @@
   }%
   #1\Hy@xspace@end
   \Hy@EndAnnot
+  \endgroup
 }
 \def\@hyper@launch run:#1\\#2#3{% filename, anchor text linkname
   \leavevmode

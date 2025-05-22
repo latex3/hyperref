@@ -1,0 +1,13 @@
+\documentclass[11pt]{article}
+\input{regression-test}
+\usepackage{hyperref}
+\START
+\def\blub{duck}
+\newcounter{\blub}
+\show\theduck
+\show\theHduck
+\OMIT
+\begin{document}
+\refstepcounter{duck}
+xxx
+\end{document}

@@ -1,0 +1,10 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{hyperref}
+\begin{document}
+\START \showoutput
+
+\catcode`\:=11
+\href{http://www.ctan.org/pkg/foo}{foo}
+
+\end{document}

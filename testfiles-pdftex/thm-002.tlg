@@ -119,16 +119,17 @@ Completed box being shipped out [2]
 ....\write1{\newlabel{thm:1}{{1}{\thepage }{}{theorem.1}{}}}
 ....\glue(\topskip) 3.05556
 ....\hbox(6.94444+1.94444)x345.0, glue set 170.9289fil
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -12.0
-.......\pdfdest name{theorem.1} xyz
-.......\penalty 10000
 .....\hbox(6.94444+0.0)x59.58307
 ......\glue 0.0
 ......\glue 0.0
 ......\glue -5.0
 ......\hbox(6.94444+0.0)x59.58307
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0, shifted -12.0
+.........\pdfdest name{theorem.1} xyz
+.........\penalty 10000
+.......\kern 0.0
 .......\glue 5.0
 .......\OT1/cmr/bx/n/10 T
 .......\OT1/cmr/bx/n/10 h
@@ -216,17 +217,18 @@ Completed box being shipped out [3]
 ....\write1{\newlabel{item:1}{{1}{\thepage }{}{Item.1}{}}}
 ....\glue(\topskip) 3.05556
 ....\hbox(6.94444+0.0)x319.99997, glue set 231.77266fil, shifted 25.00003
-.....\penalty 10000
-.....\hbox(0.0+0.0)x0.0
-......\hbox(0.0+0.0)x0.0, shifted -12.0
-.......\pdfdest name{theorem.2} xyz
-.......\penalty 10000
 .....\hbox(6.94444+0.0)x59.58307
 ......\glue -25.00003
 ......\glue 0.0
 ......\glue 0.0
 ......\glue -5.0
 ......\hbox(6.94444+0.0)x59.58307
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0, shifted -12.0
+.........\pdfdest name{theorem.2} xyz
+.........\penalty 10000
+.......\kern 0.0
 .......\glue 5.0
 .......\OT1/cmr/bx/n/10 T
 .......\OT1/cmr/bx/n/10 h

@@ -1,0 +1,13 @@
+% from https://github.com/latex3/hyperref/issues/11
+% 
+\documentclass{article}
+\input{regression-test}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\begin{document}
+\START \showoutput
+\begin{lstlisting}
+Foo
+\end{lstlisting}
+\end{document}

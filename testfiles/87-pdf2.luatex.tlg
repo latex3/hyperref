@@ -2,7 +2,7 @@ This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 > 2.
 <recently read> [internal backend integer]
-l. ... \expandafter\showthe\pdfvariable majorversion
+l. ......pandafter\showthe\pdfvariable majorversion
 > 0.
 <recently read> [internal backend integer]
-l. ... \expandafter\showthe\pdfvariable minorversion
+l. ......pandafter\showthe\pdfvariable minorversion

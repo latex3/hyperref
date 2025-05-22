@@ -1,6 +1,6 @@
 % \iffalse meta-comment
 %
-% Copyright (C) 1993-2024 David Carlisle
+% Copyright (C) 1993-2025 David Carlisle
 %
 % This file is part of the `Hyperref Bundle'.
 % -------------------------------------------
@@ -22,11 +22,11 @@
 %
 % \fi
 % \iffalse
-%% File: xr-hyper.dtx Copyright (C) 1993-2024 David Carlisle
+%% File: xr-hyper.dtx Copyright (C) 1993-2025 David Carlisle
 %
 %<package>\NeedsTeXFormat{LaTeX2e}
 %<package>\ProvidesPackage{xr-hyper}
-%<package>         [2024-01-20 v7.01h eXternal References (DPC)]
+%<package>         [2025-05-20 v7.01m eXternal References (DPC)]
 %
 %<*driver>
 \documentclass{l3doc}
@@ -95,7 +95,7 @@
 % In the \LaTeX{} release 2023-06-01 the label syntax of \pkg{hyperref}
 % and the \LaTeX{} kernel have been synchronized and there is no longer
 % a need for two packages. \pkg{xr-hyper} already works with all documents --
-% it is not required to load\pkg{hyperref} -- and its code will move in the
+% it is not required to load \pkg{hyperref} -- and its code will move in the
 % next \LaTeX{} release into the \pkg{xr} package. Then \pkg{xr-hyper} can be
 % deprecated.
 % 
@@ -108,7 +108,7 @@
 % If one document needs to refer to sections of another, say |aaa.tex|,
 % then this package may be loaded in the main file, and the command
 % \begin{verbatim}
-% |\externaldocument{aaa}|
+% \externaldocument{aaa}
 % \end{verbatim}
 %  given in the preamble.
 %
@@ -140,7 +140,7 @@
 % always work, it can be disabled by specifying \texttt{[nocite]} after the
 % \meta{prefix}:
 % \begin{verbatim}
-%  \externaldocument[][nocite]{aaa}
+% \externaldocument[][nocite]{aaa}
 % \end{verbatim}  
 % 
 % The `document' referred to by the main argument \meta{document} is the file

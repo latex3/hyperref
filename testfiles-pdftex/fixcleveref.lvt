@@ -1,0 +1,10 @@
+\documentclass{book}
+\usepackage{listings}
+\DebugSocketsOn
+\usepackage{hyperref}
+\usepackage{cleveref}
+\begin{document}
+\begin{lstlisting}
+blub
+\end{lstlisting}
+\end{document}

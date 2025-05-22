@@ -1,4 +1,4 @@
-%PDF-1.5
+%PDF-1.7
 %Ã’¡‘≈ÿ–ƒ∆
 1 0 obj
 << /S /GoTo /D (section.1) >>
@@ -70,7 +70,7 @@ endobj
 << /Type /FontDescriptor /FontName /HWCQOC+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 22 0 R /CIDSet 21 0 R >>
 endobj
 23 0 obj
-<< /Length 762 >>        
+<< /Length 736 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -92,8 +92,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 6 beginbfchar
 <0042> <0069>
 <004D> <006E>
@@ -131,7 +129,7 @@ endobj
 << /Type /FontDescriptor /FontName /QYFGYD+LMMono10-Regular /Flags 4 /FontBBox [ -451 -316 731 1016 ] /Ascent 1016 /CapHeight 611 /Descent -316 /ItalicAngle 0 /StemV 175 /XHeight 431 /FontFile3 28 0 R /CIDSet 27 0 R >>
 endobj
 29 0 obj
-<< /Length 828 >>        
+<< /Length 802 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -153,8 +151,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 11 beginbfchar
 <001C> <0061>
 <002C> <003A>
@@ -197,7 +193,7 @@ endobj
 << /Type /FontDescriptor /FontName /XLSFPP+LMRoman12-Bold /Flags 4 /FontBBox [ -476 -289 1577 1137 ] /Ascent 1137 /CapHeight 686 /Descent -289 /ItalicAngle 0 /StemV 104 /XHeight 444 /FontFile3 34 0 R /CIDSet 33 0 R >>
 endobj
 35 0 obj
-<< /Length 719 >>        
+<< /Length 693 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -219,8 +215,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 4 beginbfchar
 <0032> <0065>
 <0052> <0031>
@@ -267,7 +261,7 @@ xref
 0000000000 65535 f 
 0000000020 00000 n 
 0000001322 00000 n 
-0000010285 00000 n 
+0000010207 00000 n 
 0000000065 00000 n 
 0000000112 00000 n 
 0000000578 00000 n 
@@ -278,36 +272,36 @@ xref
 0000000160 00000 n 
 0000001201 00000 n 
 0000001261 00000 n 
-0000009804 00000 n 
-0000007295 00000 n 
-0000003879 00000 n 
-0000010152 00000 n 
+0000009726 00000 n 
+0000007243 00000 n 
+0000003853 00000 n 
+0000010074 00000 n 
 0000000702 00000 n 
 0000001476 00000 n 
 0000002821 00000 n 
 0000001556 00000 n 
 0000001630 00000 n 
 0000003057 00000 n 
-0000004033 00000 n 
-0000004233 00000 n 
-0000006172 00000 n 
-0000004377 00000 n 
-0000004452 00000 n 
-0000006407 00000 n 
-0000007448 00000 n 
-0000007647 00000 n 
-0000008791 00000 n 
-0000007712 00000 n 
-0000007786 00000 n 
-0000009025 00000 n 
-0000009955 00000 n 
-0000010213 00000 n 
-0000010343 00000 n 
-0000010465 00000 n 
-0000010501 00000 n 
-0000010623 00000 n 
+0000004007 00000 n 
+0000004207 00000 n 
+0000006146 00000 n 
+0000004351 00000 n 
+0000004426 00000 n 
+0000006381 00000 n 
+0000007396 00000 n 
+0000007595 00000 n 
+0000008739 00000 n 
+0000007660 00000 n 
+0000007734 00000 n 
+0000008973 00000 n 
+0000009877 00000 n 
+0000010135 00000 n 
+0000010265 00000 n 
+0000010387 00000 n 
+0000010423 00000 n 
+0000010545 00000 n 
 trailer
 << /Size 42 /Root 40 0 R /Info 41 0 R >>
 startxref
-10747
+10669
 %%EOF

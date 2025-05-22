@@ -1,6 +1,6 @@
 # README for hyperref bundle
 
-Version 2024-01-20 v7.01h
+Version 2025-05-20 v7.01m
 
 ## INTRODUCTION
 
@@ -137,5 +137,3 @@ Responsible for the additions to PU encoding for Arabi is
       \endgroup
       ```
  * ...
-
-

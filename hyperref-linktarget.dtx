@@ -2,7 +2,7 @@
 %
 %% File: hyperref-linktarget.dtx
 %
-% Copyright (C) 2022-2024 The LaTeX Project
+% Copyright (C) 2022-2025 The LaTeX Project
 %
 % It may be distributed and/or modified under the conditions of the
 % LaTeX Project Public License (LPPL), either version 1.3c of this
@@ -23,10 +23,9 @@
 % for those people who are interested.
 %
 %<*driver>
-\RequirePackage{pdfmanagement-testphase}
 \DocumentMetadata{pdfstandard=A-2b}
 \documentclass[full]{l3doc}
-\usepackage{array,booktabs,hyperxmp}
+\usepackage{array,booktabs}
 \hypersetup{pdfauthor=The LaTeX Project,
   pdftitle=Make link targets (hyperref bundle)}
 \usepackage[skins]{tcolorbox}
@@ -53,7 +52,7 @@
 %    }^^A
 % }
 %
-% \date{Version 2024-01-20 v7.01h}
+% \date{Version 2025-05-20 v7.01m}
 %
 % \maketitle
 % \begin{documentation}
@@ -217,7 +216,7 @@
 % \texttt{\cs{MakeLinkTarget}*\{destname\}} is roughly equivalent to
 % \texttt{\cs{hypertarget}\{destname\}\{\}} but unlike the
 % latter it also raises the destination in a PDF, there is no text argument,
-% and---most importantly--it updates \cs{@currentHref}, that means the target
+% and---most importantly---it updates \cs{@currentHref}, that means the target
 % name is stored by the next \cs{label}, something that \cs{hypertarget} doesn't do).
 % The target name is expanded, see the remarks about prefixes above regarding
 % the allowed chars.
@@ -408,6 +407,7 @@
 % but we removed the hooks and use \cs{normalbaselineskip}.
 % TODO: The code to save/restore the space factor should
 % be replaced by kernel methods.
+% change 2024-11-06: add a kern, see thm-anchor test.
 %    \begin{macrocode}
 \cs_new_protected:Npn \@@_target_raise:n #1
  {
@@ -429,6 +429,7 @@
           }
         }
       }
+     \kern0pt 
      \Hy@RestoreSpaceFactor
     }
  }
@@ -535,7 +536,7 @@
 %    \begin{macrocode}
 \cs_new_protected:Npn \@@_target_counter_doc:nn #1 #2
   {
-    \bool_lazy_and:nnTF { \cs_if_free_p:c {c@#2} } { \cs_if_free_p:c {theH#2} }
+    \bool_lazy_or:nnTF { \cs_if_free_p:c {c@#2} } { \cs_if_free_p:c {theH#2} }
       {
         \PackageWarning {hyperref}{Counter~'#2'~or~the~representation~'\string\theH#2`\MessageBreak
         don't~exist.~No~target~created.}{}

@@ -1,11 +1,10 @@
 % \iffalse meta-comment
-% \iffalse
 %% File: hyperref-patches.dtx
 %% Copyright
 %% 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
 %% 2001-2015 Heiko Oberdiek.
 %% 2016-2019 Oberdiek Package Support Group
-%% 2019-2024 LaTeX Project
+%% 2019-2025 LaTeX Project
 %%      https://github.com/latex3/hyperref/issues
 %%
 %% This file is part of the `Hyperref Bundle'.
@@ -27,13 +26,9 @@
 %% given in the file `manifest.txt'.
 %
 %<*driver>
-\RequirePackage{pdfmanagement-testphase}
-\DeclareDocumentMetadata{pdfstandard=A-2b}
-\makeatletter
-\declare@file@substitution{doc.sty}{doc-v3beta.sty}
-\makeatother
+\DocumentMetadata{pdfstandard=A-2b}
 \documentclass[full]{l3doc}
-\usepackage{array,booktabs,hyperxmp}
+\usepackage{array,booktabs}
 \hypersetup{pdfauthor=The LaTeX Project,pdftitle=hyperref patches}
 \usepackage{caption}
 \begin{document}
@@ -55,7 +50,7 @@
 %    }^^A
 % }
 %
-% \date{Version 2024-01-20 v7.01h}
+% \date{Version 2025-05-20 v7.01m}
 %
 % \maketitle
 % \begin{documentation}
@@ -79,7 +74,7 @@
 % \texttt{nofoiltex}, \texttt{nolisting}, \texttt{nolistings}, \texttt{norevtex}.
 %
 % \end{documentation}
-
+%
 % \begin{implementation}
 %
 % \section{\pkg{hyperref-patches} documentation}
@@ -141,6 +136,7 @@
 }{}
 \fi
 %    \end{macrocode}
+%
 % \section{listings}
 % --Moved 2021-06-30--
 %

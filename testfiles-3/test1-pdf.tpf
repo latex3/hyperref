@@ -1,4 +1,4 @@
-%PDF-1.5
+%PDF-1.7
 %ÐÔÅØ
 1 0 obj
 << /S /GoTo /D (tit.0) >>
@@ -91,7 +91,7 @@ endobj
 (\376\377\0002\000.\0007\000\040\000B\000a\000c\000k\000\040\000t\000o\000\040\000m\000a\000t\000h)
 endobj
 61 0 obj
-<< /S /GoTo /D (chapter*.47) >>
+<< /S /GoTo /D (chapter*.46) >>
 endobj
 64 0 obj
 (\376\377\000B\000i\000b\000l\000i\000o\000g\000r\000a\000p\000h\000y)
@@ -109,7 +109,7 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F38 17.2154 Tf 222.187 456.938 Td [(T)78(esting)-301(Hy)-1(p)-26(erref)]TJ/F39 11.9552 Tf 16.461 -46.675 Td [(Sebastian)-326(Rah)27(tz)]TJ 16.698 -30.312 Td [(Ma)27(y)-326(1999)]TJ
+/F42 17.2154 Tf 222.187 456.938 Td [(T)78(esting)-301(Hy)-1(p)-26(erref)]TJ/F43 11.9552 Tf 16.461 -46.675 Td [(Sebastian)-326(Rah)27(tz)]TJ 16.698 -30.312 Td [(Ma)27(y)-326(1999)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -141,7 +141,7 @@ endobj
 endobj
 67 0 obj
 <<
-/Font << /F38 71 0 R /F39 72 0 R >>
+/Font << /F42 71 0 R /F43 72 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -152,7 +152,7 @@ endobj
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(ii)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(ii)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -175,7 +175,7 @@ endobj
 endobj
 74 0 obj
 <<
-/Font << /F37 78 0 R >>
+/Font << /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -187,7 +187,7 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 24.7871 Tf 100.892 573.675 Td [(Con)31(ten)32(ts)]TJ/F54 10.9091 Tf 16.363 -64.309 Td [(LIST)-383(OF)-384(FIGURES)]TJ
+/F57 24.7871 Tf 100.892 573.675 Td [(Con)31(ten)32(ts)]TJ/F58 10.9091 Tf 16.363 -64.309 Td [(LIST)-383(OF)-384(FIGURES)]TJ
 1 0 0 rg 1 0 0 RG
  [-20675(1)]TJ
 0 g 0 G
@@ -195,7 +195,7 @@ BT
 1 0 0 rg 1 0 0 RG
  [-25883(3)]TJ
 0 g 0 G
-/F37 10.9091 Tf 16.363 -13.549 Td [(1.1)-1022(T)83(est)-333(section)-578(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
+/F41 10.9091 Tf 16.363 -13.549 Td [(1.1)-1022(T)83(est)-333(section)-578(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
 0 g 0 G
 1 0 0 rg 1 0 0 RG
  [-1516(3)]TJ
@@ -219,11 +219,11 @@ BT
  [-1516(5)]TJ
 0 g 0 G
 0 g 0 G
-/F54 10.9091 Tf -130.848 -24.458 Td [(2)-925(Second)-383(part)]TJ
+/F58 10.9091 Tf -130.848 -24.458 Td [(2)-925(Second)-383(part)]TJ
 1 0 0 rg 1 0 0 RG
  [-24770(7)]TJ
 0 g 0 G
-/F37 10.9091 Tf 16.363 -13.55 Td [(2.1)-1022(Section)-334(Thr)1(e)-1(e)-333(|)-333(Camels)-331(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
+/F41 10.9091 Tf 16.363 -13.55 Td [(2.1)-1022(Section)-334(Thr)1(e)-1(e)-333(|)-333(Camels)-331(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
 0 g 0 G
 1 0 0 rg 1 0 0 RG
  [-1516(7)]TJ
@@ -265,12 +265,12 @@ BT
  [-1016(14)]TJ
 0 g 0 G
 0 g 0 G
-/F54 10.9091 Tf -16.363 -24.458 Td [(Bibliograph)32(y)]TJ
+/F58 10.9091 Tf -16.363 -24.458 Td [(Bibliograph)32(y)]TJ
 1 0 0 rg 1 0 0 RG
  [-25276(19)]TJ
 0 g 0 G
 0 g 0 G
-/F37 10.9091 Tf 174.782 -189.353 Td [(iii)]TJ
+/F41 10.9091 Tf 174.782 -189.353 Td [(iii)]TJ
 0 g 0 G
 ET
 endstream
@@ -417,7 +417,7 @@ endobj
 /Subtype /Link
 /Border[0 0 0]/H/I/C[1 0 0]
 /Rect [446.005 285.954 460.543 294.976]
-/A << /S /GoTo /D (chapter*.47) >>
+/A << /S /GoTo /D (chapter*.46) >>
 >>
 endobj
 97 0 obj
@@ -432,18 +432,18 @@ endobj
 endobj
 94 0 obj
 <<
-/Font << /F53 99 0 R /F54 100 0 R /F37 78 0 R >>
+/Font << /F57 99 0 R /F58 100 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 103 0 obj
 <<
-/Length 125       
+/Length 118       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(iv)]TJ/F51 10.9091 Tf 296.685 0 Td [(CONTENTS)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(iv)]TJ/F55 10.9091 Tf [-26391(CONTENTS)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -466,7 +466,7 @@ endobj
 endobj
 101 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -478,7 +478,7 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 24.7871 Tf 100.892 573.675 Td [(List)-375(of)-375(T)94(ables)]TJ/F37 10.9091 Tf 16.363 -63.362 Td [(2.1)-1022(A)-334(test)-333(long)-333(table)-334(\050see)-333([)]TJ
+/F57 24.7871 Tf 100.892 573.675 Td [(List)-375(of)-375(T)94(ables)]TJ/F41 10.9091 Tf 16.363 -63.362 Td [(2.1)-1022(A)-334(test)-333(long)-333(table)-334(\050see)-333([)]TJ
 0 1 0 rg 0 1 0 RG
  [(Dallas)-333(1992)]TJ
 0 g 0 G
@@ -532,7 +532,7 @@ endobj
 /Subtype /Link
 /Border[0 0 0]/H/I/C[1 0 0]
 /Rect [447.641 509.316 460.543 518.339]
-/A << /S /GoTo /D (table.46) >>
+/A << /S /GoTo /D (table.2.1) >>
 >>
 endobj
 112 0 obj
@@ -547,18 +547,18 @@ endobj
 endobj
 109 0 obj
 <<
-/Font << /F53 99 0 R /F37 78 0 R >>
+/Font << /F57 99 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 118 0 obj
 <<
-/Length 145       
+/Length 138       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(vi)]TJ/F51 10.9091 Tf 267.897 0 Td [(LIST)-333(OF)-334(T)84(ABLES)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(vi)]TJ/F55 10.9091 Tf [-23752(LIST)-333(OF)-333(T)83(ABLES)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -581,7 +581,7 @@ endobj
 endobj
 116 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -593,7 +593,7 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 24.7871 Tf 100.892 573.675 Td [(List)-375(of)-375(Figures)]TJ/F37 10.9091 Tf 16.363 -63.362 Td [(2.1)-1022(A)-334(cat)-255(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
+/F57 24.7871 Tf 100.892 573.675 Td [(List)-375(of)-375(Figures)]TJ/F41 10.9091 Tf 16.363 -63.362 Td [(2.1)-1022(A)-334(cat)-255(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-499(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)-500(.)]TJ
 0 g 0 G
 1 0 0 rg 1 0 0 RG
  [-1016(12)]TJ
@@ -664,18 +664,18 @@ endobj
 endobj
 123 0 obj
 <<
-/Font << /F53 99 0 R /F37 78 0 R >>
+/Font << /F57 99 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 132 0 obj
 <<
-/Length 121       
+/Length 114       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(2)]TJ/F51 10.9091 Tf 335.625 0 Td [(Title)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(2)]TJ/F55 10.9091 Tf [-30266(Title)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -698,27 +698,27 @@ endobj
 endobj
 130 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 148 0 obj
 <<
-/Length 3299      
+/Length 3226      
 >>
 stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 20.6625 Tf 100.892 578.6 Td [(Chapter)-375(1)]TJ/F53 24.7871 Tf 0 -49.87 Td [(First)-375(part,)-375(leading)-375(to)]TJ
+/F57 20.6625 Tf 100.892 578.6 Td [(Chapter)-375(1)]TJ/F57 24.7871 Tf 0 -49.87 Td [(First)-375(part,)-375(leading)-375(to)]TJ
 1 0 0 rg 1 0 0 RG
  0 -29.887 Td [(section)-375(1.1)]TJ
 0 g 0 G
- [-375(next)]TJ/F53 14.3462 Tf 0 -57.84 Td [(1.1)-1125(Our)-333(L)]TJ/F54 9.9626 Tf 73.1 3.007 Td [(A)]TJ/F53 14.3462 Tf 6.241 -3.007 Td [(T)]TJ 8.535 -3.188 Td [(E)]TJ 8.576 3.188 Td [(X)-333(test)-332(section)-333(\050leading)-333(to)]TJ
+ [-375(next)]TJ/F57 14.3462 Tf 0 -57.84 Td [(1.1)-1125(Our)-333(L)]TJ/F58 9.9626 Tf 73.1 3.007 Td [(A)]TJ/F57 14.3462 Tf 6.241 -3.007 Td [(T)]TJ 8.535 -3.188 Td [(E)]TJ 8.576 3.188 Td [(X)-333(test)-332(section)-333(\050leading)-333(to)]TJ
 1 0 0 rg 1 0 0 RG
  [-332(section)-333(1.2)]TJ
 0 g 0 G
- [(\051)]TJ -59.69 -17.933 Td [(for)-375(100%)-375(of)-375(\035horrid)]TJ/F62 14.3462 Tf 150.054 0 Td [(X)]TJ/F39 14.3462 Tf 12.786 0 Td [([)]TJ/F62 14.3462 Tf 3.902 0 Td [(Y)]TJ/F39 14.3462 Tf 11.271 0 Td [(])]TJ/F62 14.3462 Tf 3.902 0 Td [(Z)]TJ/F53 14.3462 Tf 16.025 0 Td [(things,)-375(lik)31(e)]TJ/F39 14.3462 Tf 82.771 0 Td [(42)]TJ/F37 10.9091 Tf -317.473 -24.461 Td [(and)-333(so)-334(see)]TJ
+ [(\051)]TJ -59.69 -17.933 Td [(for)-375(100%)-375(of)-375(\035horrid)]TJ/F66 14.3462 Tf [-375(X)]TJ/F43 14.3462 Tf [-79([)]TJ/F66 14.3462 Tf [(Y)]TJ/F43 14.3462 Tf [-217(])]TJ/F66 14.3462 Tf [(Z)]TJ/F57 14.3462 Tf [-447(things,)-375(lik)31(e)]TJ/F43 14.3462 Tf [-375(42)]TJ/F41 10.9091 Tf -36.762 -24.461 Td [(and)-333(so)-334(see)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(section)-333(1.1)]TJ
 0 g 0 G
@@ -726,7 +726,7 @@ BT
 1 0 0 rg 1 0 0 RG
  [-333(3)]TJ
 0 g 0 G
- [(.)]TJ/F53 14.3462 Tf 0 -34.694 Td [(1.2)-1125(Section)-375(One)-375(|)-375(cats)]TJ/F37 10.9091 Tf 0 -24.462 Td [(see)-333(se)-1(ction)]TJ
+ [(.)]TJ/F57 14.3462 Tf 0 -34.694 Td [(1.2)-1125(Section)-375(One)-375(|)-375(cats)]TJ/F41 10.9091 Tf 0 -24.462 Td [(see)-333(se)-1(ction)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(2.1)-333(on)-333(page)-334(7)]TJ
 0 g 0 G
@@ -734,19 +734,19 @@ BT
 0 1 0 rg 0 1 0 RG
  [(1)]TJ
 0 g 0 G
- [(])]TJ/F53 14.3462 Tf 0 -34.694 Td [(1.3)-1125(one.1)-375({)-375(can)-375(w)31(e)-375(see)]TJ/F37 10.9091 Tf 0 -24.461 Td [(some)-287(text)-287(with)-287(a)-287(fo)-28(otnote)]TJ
+ [(])]TJ/F57 14.3462 Tf 0 -34.694 Td [(1.3)-1125(one.1)-375({)-375(can)-375(w)31(e)-375(see)]TJ/F41 10.9091 Tf 0 -24.461 Td [(some)-287(text)-287(with)-287(a)-287(fo)-28(otnote)]TJ
 1 0 0 rg 1 0 0 RG
-/F40 7.9701 Tf 121.376 3.958 Td [(1)]TJ
+/F44 7.9701 Tf 121.376 3.958 Td [(1)]TJ
 0 g 0 G
-/F37 10.9091 Tf 7.865 -3.958 Td [(and)-287(another)-287(one)-287(with)-287(an)-287(extended)-287(fo)-28(otnote)]TJ
+/F41 10.9091 Tf 7.865 -3.958 Td [(and)-287(another)-287(one)-287(with)-287(an)-287(extended)-287(fo)-28(otnote)]TJ
 1 0 0 rg 1 0 0 RG
-/F40 7.9701 Tf 203.974 3.958 Td [(2)]TJ
+/F44 7.9701 Tf 203.974 3.958 Td [(2)]TJ
 0 g 0 G
-/F37 10.9091 Tf 7.864 -3.958 Td [(and)]TJ -341.079 -13.55 Td [(a)-333(reference)-334(to)-333(a)-333(long)-334(table,)]TJ
+/F41 10.9091 Tf 7.864 -3.958 Td [(and)]TJ -341.079 -13.55 Td [(a)-333(reference)-334(to)-333(a)-333(long)-334(table,)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(T)83(able)-333(2.1)]TJ
 0 g 0 G
- [(.)]TJ/F53 11.9552 Tf 0 -29.534 Td [(I)-31(I)-31(I)-375({)-375(1)-1125(one.2)]TJ/F37 10.9091 Tf 0 -20.704 Td [(dogs)]TJ
+ [(.)]TJ/F57 11.9552 Tf 0 -29.534 Td [(I)-31(I)-31(I)-375({)-375(1)-1125(one.2)]TJ/F41 10.9091 Tf 0 -20.704 Td [(dogs)]TJ
 1 0 0 0 k 1 0 0 0 K
  16.936 -13.606 Td [(See)-333(page)-334(2)-333(in)-333(\014le)-334(test2)]TJ
 0 g 0 G
@@ -754,7 +754,7 @@ BT
 1 0 0 0 k 1 0 0 0 K
  0 -13.605 Td [(See)-333(page)-334(2)-333(in)-333(\014le)-334(test2.p)-27(df)]TJ
 0 g 0 G
- [-334(on)-333(page)-333(3)-334(of)-333(this)-333(\014le.)]TJ 0 -13.606 Td [(And)-333(can)-334(w)28(e)-333(see)]TJ/F54 10.9091 Tf 77.637 0 Td [(??)]TJ
+ [-334(on)-333(page)-333(3)-334(of)-333(this)-333(\014le.)]TJ 0 -13.606 Td [(And)-333(can)-334(w)28(e)-333(see)]TJ/F58 10.9091 Tf [-334(??)]TJ
 0 g 0 G
 ET
 q
@@ -762,10 +762,10 @@ q
 []0 d 0 J 0.398 w 0 0 m 143.46 0 l S
 Q
 BT
-/F41 5.9776 Tf 113.328 161.643 Td [(1)]TJ/F67 8.9664 Tf 4.151 -3.809 Td [(WISH)-343(U)1(PON)-343(A)-343(ST)86(AR)]TJ/F41 5.9776 Tf -4.151 -7.15 Td [(2)]TJ/F67 8.9664 Tf 4.151 -3.809 Td [(This)-361(is)-361(the)-362(w)29(a)29(y)-362(the)-361(w)29(orld)-361(ends)-362(not)-361(with)-361(a)-361(bang)-361(but)-361(a)-362(whimp)-28(er.)-513(This)-361(is)-361(the)-361(w)28(a)29(y)-361(the)]TJ -16.587 -10.959 Td [(w)29(orld)-394(ends)-394(not)-394(with)-394(a)-394(bang)-394(but)-394(a)-394(whimp)-28(er.)-611(This)-394(is)-394(the)-394(w)29(a)28(y)-393(the)-394(w)28(orld)-394(ends)-394(not)-394(w)1(ith)-394(a)]TJ 0 -10.959 Td [(bang)-342(but)-343(a)-343(whimp)-28(er.)]TJ
+/F45 5.9776 Tf 113.328 161.643 Td [(1)]TJ/F71 8.9664 Tf 4.151 -3.809 Td [(WISH)-343(U)1(PON)-343(A)-343(ST)86(AR)]TJ/F45 5.9776 Tf -4.151 -7.15 Td [(2)]TJ/F71 8.9664 Tf 4.151 -3.809 Td [(This)-361(is)-361(the)-362(w)29(a)29(y)-362(the)-361(w)29(orld)-361(ends)-362(not)-361(with)-361(a)-361(bang)-361(but)-361(a)-362(whimp)-28(er.)-513(This)-361(is)-361(the)-361(w)28(a)29(y)-361(the)]TJ -16.587 -10.959 Td [(w)29(orld)-394(ends)-394(not)-394(with)-394(a)-394(bang)-394(but)-394(a)-394(whimp)-28(er.)-611(This)-394(is)-394(the)-394(w)29(a)28(y)-393(the)-394(w)28(orld)-394(ends)-394(not)-394(w)1(ith)-394(a)]TJ 0 -10.959 Td [(bang)-342(but)-343(a)-343(whimp)-28(er.)]TJ
 0 g 0 G
 0 g 0 G
-/F37 10.9091 Tf 176.6 -27.36 Td [(3)]TJ
+/F41 10.9091 Tf 176.6 -27.36 Td [(3)]TJ
 0 g 0 G
 ET
 endstream
@@ -858,7 +858,7 @@ endobj
 /Subtype /Link
 /Border[0 0 0]/H/I/C[1 0 0]
 /Rect [231.168 263.631 277.1 275.32]
-/A << /S /GoTo /D (table.46) >>
+/A << /S /GoTo /D (table.2.1) >>
 >>
 endobj
 143 0 obj
@@ -919,26 +919,26 @@ endobj
 endobj
 146 0 obj
 <<
-/Font << /F53 99 0 R /F54 100 0 R /F62 150 0 R /F39 72 0 R /F37 78 0 R /F40 151 0 R /F41 153 0 R /F67 155 0 R >>
+/Font << /F57 99 0 R /F58 100 0 R /F66 150 0 R /F43 72 0 R /F41 78 0 R /F44 151 0 R /F45 153 0 R /F71 155 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 161 0 obj
 <<
-/Length 492       
+/Length 475       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(4)]TJ/F51 10.9091 Tf 216.685 0 Td [(CHAPTER)-333(1.)-778(FIRST)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(4)]TJ/F55 10.9091 Tf [-19363(CHAPTER)-333(1.)-778(FIRST)-333(P)83(AR)83(T)]TJ
 0 g 0 G
-/F37 10.9091 Tf -199.748 -30.758 Td [(in)-333(the)-334(\014l)1(e)-334(test2.p)-28(df)-77(?)-445(alternativ)28(ely)83(,)]TJ
+/F41 10.9091 Tf 16.937 -30.758 Td [(in)-333(the)-334(\014l)1(e)-334(test2.p)-28(df)-77(?)-445(alternativ)28(ely)83(,)]TJ
 1 0 0 0 k 1 0 0 0 K
  [-333(the)-333(link)-333(lik)27(e)-333(this)]TJ
 0 g 0 G
  0 -13.549 Td [(All)-333(Or)-334(th)1(is)-1(?)]TJ
 0 1 0 0 k 0 1 0 0 K
-/F73 10.9091 Tf 61.909 0 Td [(test2.pdf#section.1)]TJ
+/F77 10.9091 Tf [-444(test2.pdf#section.1)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -978,20 +978,20 @@ endobj
 endobj
 159 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R /F73 163 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R /F77 163 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 166 0 obj
 <<
-/Length 525       
+/Length 520       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(1.4.)-778(SECTION)-333(TW)28(O)-334(|)-333(T)]TJ 130.454 -2.348 Td [(E)]TJ 6.061 2.348 Td [(X)-333(IS)-334(A)-333(DOG)]TJ/F37 10.9091 Tf 216.685 0 Td [(5)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(1.4.)-778(SECTION)-333(TW)28(O)-334(|)-333(T)]TJ 130.454 -2.348 Td [(E)]TJ 6.061 2.348 Td [(X)-333(IS)-334(A)-333(DOG)]TJ/F41 10.9091 Tf [-14120(5)]TJ
 0 g 0 G
-/F53 14.3462 Tf -353.2 -30.758 Td [(1.4)-1125(Section)-375(Tw)31(o)-375(|)-375(T)]TJ 159.376 -3.188 Td [(E)]TJ 8.576 3.188 Td [(X)-375(is)-375(a)-375(dog)]TJ/F53 11.9552 Tf -167.952 -24.751 Td [(IV)-375({)-375(1)-1125(t)31(w)32(o.1)]TJ 0 -20.993 Td [(IV)-375({)-375(2)-1125(t)31(w)32(o.2)]TJ
+/F57 14.3462 Tf -136.515 -30.758 Td [(1.4)-1125(Section)-375(Tw)31(o)-375(|)-375(T)]TJ 159.376 -3.188 Td [(E)]TJ 8.576 3.188 Td [(X)-375(is)-375(a)-375(dog)]TJ/F57 11.9552 Tf -167.952 -24.751 Td [(IV)-375({)-375(1)-1125(t)31(w)32(o.1)]TJ 0 -20.993 Td [(IV)-375({)-375(2)-1125(t)31(w)32(o.2)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -1028,20 +1028,20 @@ endobj
 endobj
 164 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R /F53 99 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R /F57 99 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 173 0 obj
 <<
-/Length 270       
+/Length 261       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(6)]TJ/F51 10.9091 Tf 216.685 0 Td [(CHAPTER)-333(1.)-778(FIRST)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(6)]TJ/F55 10.9091 Tf [-19363(CHAPTER)-333(1.)-778(FIRST)-333(P)83(AR)83(T)]TJ
 0 g 0 G
-/F37 10.9091 Tf -199.748 -30.758 Td [(cite)-333([)]TJ
+/F41 10.9091 Tf 16.937 -30.758 Td [(cite)-333([)]TJ
 0 1 0 rg 0 1 0 RG
  [(1)]TJ
 0 g 0 G
@@ -1077,7 +1077,7 @@ endobj
 endobj
 171 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -1089,15 +1089,15 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 20.6625 Tf 100.892 578.656 Td [(Chapter)-375(2)]TJ/F53 24.7871 Tf 0 -49.813 Td [(Second)-375(part)]TJ/F53 14.3462 Tf 0 -57.783 Td [(2.1)-1125(Section)-375(Three)-375(|)-375(Camels)]TJ/F37 10.9091 Tf 0 -24.352 Td [(see)]TJ
+/F57 20.6625 Tf 100.892 578.656 Td [(Chapter)-375(2)]TJ/F57 24.7871 Tf 0 -49.813 Td [(Second)-375(part)]TJ/F57 14.3462 Tf 0 -57.783 Td [(2.1)-1125(Section)-375(Three)-375(|)-375(Camels)]TJ/F41 10.9091 Tf 0 -24.352 Td [(see)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(se)-1(ction)-333(1.2)]TJ
 0 g 0 G
-/F53 11.9552 Tf 0 -29.213 Td [(I)-375({)-375(1)-1125(three.1)]TJ/F37 10.9091 Tf 0 -20.595 Td [(some)-333(text)-334(with)-333(a)-333(fo)-28(otnote)]TJ
+/F57 11.9552 Tf 0 -29.213 Td [(I)-375({)-375(1)-1125(three.1)]TJ/F41 10.9091 Tf 0 -20.595 Td [(some)-333(text)-334(with)-333(a)-333(fo)-28(otnote)]TJ
 1 0 0 rg 1 0 0 RG
-/F40 7.9701 Tf 123.394 3.959 Td [(1)]TJ
+/F44 7.9701 Tf 123.394 3.959 Td [(1)]TJ
 0 g 0 G
-/F53 11.9552 Tf -123.394 -33.172 Td [(I)-375({)-375(2)-1125(three.2)]TJ
+/F57 11.9552 Tf -123.394 -33.172 Td [(I)-375({)-375(2)-1125(three.2)]TJ
 0 g 0 G
 ET
 q
@@ -1105,10 +1105,10 @@ q
 []0 d 0 J 0.398 w 0 0 m 143.46 0 l S
 Q
 BT
-/F41 5.9776 Tf 113.328 128.766 Td [(1)]TJ/F67 8.9664 Tf 4.151 -3.809 Td [(O)29(VER)-343(THE)-342(RAINBO)28(W)]TJ
+/F45 5.9776 Tf 113.328 128.766 Td [(1)]TJ/F71 8.9664 Tf 4.151 -3.809 Td [(O)29(VER)-343(THE)-342(RAINBO)28(W)]TJ
 0 g 0 G
 0 g 0 G
-/F37 10.9091 Tf 160.013 -27.36 Td [(7)]TJ
+/F41 10.9091 Tf 160.013 -27.36 Td [(7)]TJ
 0 g 0 G
 ET
 endstream
@@ -1173,20 +1173,20 @@ endobj
 endobj
 177 0 obj
 <<
-/Font << /F53 99 0 R /F37 78 0 R /F40 151 0 R /F41 153 0 R /F67 155 0 R >>
+/Font << /F57 99 0 R /F41 78 0 R /F44 151 0 R /F45 153 0 R /F71 155 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 188 0 obj
 <<
-/Length 541       
+/Length 527       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(8)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(8)]TJ/F55 10.9091 Tf [-18141(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
-/F53 14.3462 Tf -203.352 -30.758 Td [(2.2)-1125(Section)-375(F)94(our)-375(|)-375(Butter\015ies)-375(and)-375(so)-375(on)]TJ/F53 11.9552 Tf 0 -24.751 Td [(I)-31(I)-375({)-375(1)-1125(four.1)]TJ 0 -20.993 Td [(I)-31(I)-375({)-375(2)-1125(four.2)]TJ/F37 10.9091 Tf 0 -20.594 Td [(camels)-333(Re)-1(fer)-333(to)]TJ
+/F57 14.3462 Tf 0 -30.758 Td [(2.2)-1125(Section)-375(F)94(our)-375(|)-375(Butter\015ies)-375(and)-375(so)-375(on)]TJ/F57 11.9552 Tf 0 -24.751 Td [(I)-31(I)-375({)-375(1)-1125(four.1)]TJ 0 -20.993 Td [(I)-31(I)-375({)-375(2)-1125(four.2)]TJ/F41 10.9091 Tf 0 -20.594 Td [(camels)-333(R)-1(efer)-333(to)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(with)-333(these)-334(w)28(ords)]TJ
 0 g 0 G
@@ -1236,20 +1236,20 @@ endobj
 endobj
 186 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R /F53 99 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R /F57 99 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 195 0 obj
 <<
-/Length 291       
+/Length 281       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(2.3.)-778(INTR)28(ODUCTION)]TJ/F37 10.9091 Tf 353.2 0 Td [(9)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(2.3.)-778(INTR)28(ODUCTION)]TJ/F41 10.9091 Tf [-21877(9)]TJ
 0 g 0 G
-/F53 14.3462 Tf -353.2 -30.758 Td [(2.3)-1125(In)31(tro)-31(duction)]TJ/F53 11.9552 Tf 0 -24.751 Td [(I)-31(I)-31(I)-375({)-375(1)-1125(subs)-1(ec)]TJ
+/F57 14.3462 Tf 0 -30.758 Td [(2.3)-1125(In)31(tro)-31(duction)]TJ/F57 11.9552 Tf 0 -24.751 Td [(I)-31(I)-31(I)-375({)-375(1)-1125(subs)-1(ec)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -1281,20 +1281,20 @@ endobj
 endobj
 193 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R /F53 99 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R /F57 99 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 201 0 obj
 <<
-/Length 525       
+/Length 511       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(10)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(10)]TJ/F55 10.9091 Tf [-17641(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
-/F53 11.9552 Tf -203.352 -30.758 Td [(I)-31(I)-31(I)-375({)-375(2)-1125(subs)-1(ec)]TJ/F37 10.9091 Tf 0 -20.595 Td [(De\014ne)-280(a)-280(mark)28(er)-280(here)-280(while)-280(this)-280(one)-280(is)-281(a)-280(P)28(ostScript)-280(picture)-280(acting)-280(as)-280(mark)28(er:)]TJ
+/F57 11.9552 Tf 0 -30.758 Td [(I)-31(I)-31(I)-375({)-375(2)-1125(subs)-1(ec)]TJ/F41 10.9091 Tf 0 -20.595 Td [(De\014ne)-280(a)-280(mark)28(er)-280(here)-280(while)-280(this)-280(one)-280(is)-281(a)-280(P)28(ostScript)-280(picture)-280(acting)-280(as)-280(mark)28(er:)]TJ
 1 0 0 rg 1 0 0 RG
 0 g 0 G
  16.937 -27.098 Td [(This)-333(is)-334(a)-333(picture:)]TJ
@@ -1339,20 +1339,20 @@ endobj
 endobj
 199 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R /F53 99 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R /F57 99 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 207 0 obj
 <<
-/Length 333       
+/Length 319       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(2.4.)-778(TW)28(O)]TJ/F37 10.9091 Tf 347.746 0 Td [(11)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(2.4.)-778(TW)28(O)]TJ/F41 10.9091 Tf [-27043(11)]TJ
 0 g 0 G
-/F53 14.3462 Tf -347.746 -30.758 Td [(2.4)-1125(t)31(w)32(o)]TJ/F53 11.9552 Tf 0 -24.751 Td [(IV)-375({)-375(1)-1125(Subsection)-375(2)]TJ 0 -20.993 Td [(IV)-375({)-375(2)-1125(Subsection)-375(3)]TJ
+/F57 14.3462 Tf 0 -30.758 Td [(2.4)-1125(t)31(w)32(o)]TJ/F57 11.9552 Tf 0 -24.751 Td [(IV)-375({)-375(1)-1125(Subsection)-375(2)]TJ 0 -20.993 Td [(IV)-375({)-375(2)-1125(Subsection)-375(3)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -1389,21 +1389,21 @@ endobj
 endobj
 205 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R /F53 99 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R /F57 99 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 229 0 obj
 <<
-/Length 1418      
+/Length 1404      
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(12)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(12)]TJ/F55 10.9091 Tf [-17641(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
 0 g 0 G
-/F37 10.9091 Tf -203.352 -24.496 Td [(xxxx)]TJ 0 -13.549 Td [(T)83(est)-333(picture)]TJ 0 -13.549 Td [(xxxxx)]TJ 0 -13.55 Td [(xxxxx)]TJ
+/F41 10.9091 Tf 0 -24.496 Td [(xxxx)]TJ 0 -13.549 Td [(T)83(est)-333(picture)]TJ 0 -13.549 Td [(xxxxx)]TJ 0 -13.55 Td [(xxxxx)]TJ
 0 g 0 G
  138.025 -23.511 Td [(Figure)-333(2.1:)-445(A)-333(cat)]TJ
 0 g 0 G
@@ -1418,7 +1418,7 @@ BT
  [(])-333(xxxx)]TJ
 0 g 0 G
 0 g 0 G
-/F53 14.3462 Tf -9.327 -128.565 Td [(2.5)-1125(three)]TJ/F37 10.9091 Tf 0 -116.594 Td [(This)-360(is)-360(a)-360(reference)-360(to)-360(section)-360(1)-360(\050)]TJ
+/F57 14.3462 Tf -9.327 -128.565 Td [(2.5)-1125(three)]TJ/F41 10.9091 Tf 0 -116.594 Td [(This)-360(is)-360(a)-360(reference)-360(to)-360(section)-360(1)-360(\050)]TJ
 1 0 0 rg 1 0 0 RG
  [(section)-360(2.3)]TJ
 0 g 0 G
@@ -1438,7 +1438,7 @@ BT
 0 1 0 rg 0 1 0 RG
  [-334(Dal)1(las)-334(1992)]TJ
 0 g 0 G
- [(].)]TJ/F73 10.9091 Tf 16.937 -61.026 Td [(<<where)-525(is)]TJ
+ [(].)]TJ/F77 10.9091 Tf 16.937 -61.026 Td [(<<where)-525(is)]TJ
 1 0 0 rg 1 0 0 RG
  [-525(Equation)-525(2.1)]TJ
 0 g 0 G
@@ -1557,28 +1557,28 @@ endobj
 endobj
 227 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R /F53 99 0 R /F73 163 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R /F57 99 0 R /F77 163 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 235 0 obj
 <<
-/Length 1551      
+/Length 1523      
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(2.6.)-778(SOME)-333(URLS)]TJ/F37 10.9091 Tf 347.746 0 Td [(13)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(2.6.)-778(SOME)-333(URLS)]TJ/F41 10.9091 Tf [-23613(13)]TJ
 0 g 0 G
-/F53 14.3462 Tf -347.746 -30.758 Td [(2.6)-1125(Some)-375(URLs)]TJ
+/F57 14.3462 Tf 0 -30.758 Td [(2.6)-1125(Some)-375(URLs)]TJ
 0 1 0 0 k 0 1 0 0 K
-/F73 10.9091 Tf 0 -19.375 Td [(http://www.aw.)]TJ 0 -13.549 Td [(com/cp/tlgc.html#)]TJ 0 -13.549 Td [(Describe)]TJ
+/F77 10.9091 Tf 0 -19.375 Td [(http://www.aw.)]TJ 0 -13.549 Td [(com/cp/tlgc.html#)]TJ 0 -13.549 Td [(Describe)]TJ
 0 g 0 G
 0 1 0 0 k 0 1 0 0 K
  0 -13.55 Td [(http://nsi.net.)]TJ 0 -13.549 Td [(kiae.su/latex/)]TJ 0 -13.549 Td [(latex2e.html)]TJ
 0 g 0 G
 0 1 0 0 k 0 1 0 0 K
- 0 -13.549 Td [(http://www.lehigh.)]TJ 0 -13.549 Td [(edu/)]TJ 22.909 -2.114 Td [(~)]TJ 5.727 2.114 Td [(dlj0/LyriX.)]TJ -28.636 -13.55 Td [(html)]TJ
+ 0 -13.549 Td [(http://www.lehigh.)]TJ 0 -13.549 Td [(edu/)]TJ 22.908 -2.114 Td [(~)]TJ 5.728 2.114 Td [(dlj0/LyriX.)]TJ -28.636 -13.55 Td [(html)]TJ
 0 g 0 G
 0 1 0 0 k 0 1 0 0 K
  0 -13.549 Td [(http://www.cs.)]TJ 0 -13.549 Td [(wisc.edu/)]TJ 51.545 -2.114 Td [(~)]TJ 5.727 2.114 Td [(ghost/)]TJ -57.272 -13.549 Td [(index.html)]TJ
@@ -1592,12 +1592,12 @@ BT
 0 1 0 0 k 0 1 0 0 K
  0 -13.55 Td [(ftp://ftp.cbr.dit.)]TJ 0 -13.549 Td [(csiro.au/staff/)]TJ 0 -13.549 Td [(gjw/www/tex.html)]TJ
 0 g 0 G
-/F37 10.9091 Tf 0 -13.549 Td [(This)-441(is)-441(a)-441(URL:)]TJ
+/F41 10.9091 Tf 0 -13.549 Td [(This)-441(is)-441(a)-441(URL:)]TJ
 0 1 0 0 k 0 1 0 0 K
-/F73 10.9091 Tf 79.364 0 Td [(http:)]TJ -79.364 -13.549 Td [(//srahtz/attend.)]TJ 0 -13.55 Td [(html#sebastian)]TJ
+/F77 10.9091 Tf [-441(http:)]TJ 0 -13.549 Td [(//srahtz/attend.)]TJ 0 -13.55 Td [(html#sebastian)]TJ
 0 g 0 G
 1 0 0 0 k 1 0 0 0 K
-/F37 10.9091 Tf 0 -13.549 Td [(hello)]TJ
+/F41 10.9091 Tf 0 -13.549 Td [(hello)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -1834,29 +1834,29 @@ endobj
 endobj
 233 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R /F53 99 0 R /F73 163 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R /F57 99 0 R /F77 163 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 257 0 obj
 <<
-/Length 1859      
+/Length 1761      
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(14)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(14)]TJ/F55 10.9091 Tf [-17641(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
-/F53 14.3462 Tf -203.352 -30.758 Td [(2.7)-1125(Bac)31(k)-375(to)-375(math)]TJ/F55 10.9091 Tf 159.214 -24.352 Td [(z)-44(z)-44(z)-44(z)]TJ/F37 10.9091 Tf 24.636 0 Td [(+)]TJ/F55 10.9091 Tf 10.909 0 Td [(b)]TJ/F37 10.9091 Tf 141.472 0 Td [(\0502.1\051)]TJ -336.231 -20.025 Td [(and)-333(what)-334(next?)]TJ/F55 10.9091 Tf 167.282 -27.098 Td [(d)]TJ/F56 10.9091 Tf 8.102 0 Td [(\000)]TJ/F55 10.9091 Tf 10.909 0 Td [(e)]TJ/F37 10.9091 Tf 149.938 0 Td [(\0502.2\051)]TJ/F55 10.9091 Tf -177.121 -44.533 Td [(y)]TJ/F37 10.9091 Tf 15.702 0 Td [(=)]TJ/F55 10.9091 Tf 18.448 0 Td [(z)]TJ
+/F57 14.3462 Tf 0 -30.758 Td [(2.7)-1125(Bac)31(k)-375(to)-375(math)]TJ/F59 10.9091 Tf 159.214 -24.352 Td [(z)-44(z)-44(z)-44(z)]TJ/F41 10.9091 Tf [-266(+)]TJ/F59 10.9091 Tf [-223(b)]TJ/F41 10.9091 Tf [-12539(\0502.1\051)]TJ -159.214 -20.025 Td [(and)-333(what)-334(next?)]TJ/F59 10.9091 Tf 167.282 -27.098 Td [(d)]TJ/F60 10.9091 Tf [-222(\000)]TJ/F59 10.9091 Tf [-222(e)]TJ/F41 10.9091 Tf [-13279(\0502.2\051)]TJ/F59 10.9091 Tf -8.172 -44.533 Td [(y)]TJ/F41 10.9091 Tf [-949(=)]TJ/F59 10.9091 Tf [-913(z)]TJ
 0 g 0 G
-/F37 10.9091 Tf 142.971 0 Td [(\0502.3\051)]TJ
+/F41 10.9091 Tf [-12641(\0502.3\051)]TJ
 0 g 0 G
-/F55 10.9091 Tf -176.976 -16.538 Td [(g)]TJ/F37 10.9091 Tf 15.557 0 Td [(=)]TJ/F55 10.9091 Tf 18.448 0 Td [(h)]TJ
+/F59 10.9091 Tf 0.145 -16.538 Td [(g)]TJ/F41 10.9091 Tf [-949(=)]TJ/F59 10.9091 Tf [-913(h)]TJ
 0 g 0 G
-/F37 10.9091 Tf 142.971 0 Td [(\0502.4\051)]TJ
+/F41 10.9091 Tf [-12530(\0502.4\051)]TJ
 0 g 0 G
 0 g 0 G
- 0 -16.538 Td [(\0502.5\051)]TJ
+ 176.976 -16.538 Td [(\0502.5\051)]TJ
 0 g 0 G
  -336.231 -24.509 Td [(W)83(e)-333(need)-333(some)-334(lists:)]TJ
 0 g 0 G
@@ -1874,7 +1874,7 @@ BT
 0 g 0 G
  18.546 -22.516 Td [(\050a\051)]TJ
 0 g 0 G
- [-500(Sam)28(uel)-333(Smiths)]TJ
+ [-500(Sam)28(uel)-334(S)1(miths)]TJ
 0 g 0 G
  -0.606 -17.534 Td [(\050b\051)]TJ
 0 g 0 G
@@ -1894,7 +1894,7 @@ BT
 0 g 0 G
  18.546 -22.516 Td [(\050a\051)]TJ
 0 g 0 G
- [-500(Sam)28(uel)-333(Smiths)]TJ
+ [-500(Sam)28(uel)-334(S)1(miths)]TJ
 0 g 0 G
  -0.606 -17.534 Td [(\050b\051)]TJ
 0 g 0 G
@@ -1990,20 +1990,20 @@ endobj
 endobj
 255 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R /F53 99 0 R /F55 259 0 R /F56 261 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R /F57 99 0 R /F59 259 0 R /F60 261 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 284 0 obj
 <<
-/Length 842       
+/Length 834       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(2.7.)-778(BA)28(CK)-333(TO)-334(MA)84(TH)]TJ/F37 10.9091 Tf 347.746 0 Td [(15)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(2.7.)-778(BA)28(CK)-333(TO)-334(MA)84(TH)]TJ/F41 10.9091 Tf [-21391(15)]TJ
 0 g 0 G
- -330.81 -30.758 Td [(from)-333(whic)27(h)-333(see)]TJ
+ 16.936 -30.758 Td [(from)-333(whic)27(h)-333(see)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(item)-334(1)]TJ
 0 g 0 G
@@ -2143,20 +2143,20 @@ endobj
 endobj
 282 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 292 0 obj
 <<
-/Length 2077      
+/Length 2068      
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(16)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(16)]TJ/F55 10.9091 Tf [-17641(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
-/F37 10.9091 Tf -168.024 -30.758 Td [(T)83(able)-275(2.1:)-415(A)-275(test)-275(long)-275(table)-276(\050see)-275([)]TJ
+/F41 10.9091 Tf 35.328 -30.758 Td [(T)83(able)-275(2.1:)-415(A)-275(test)-275(long)-275(table)-276(\050see)-275([)]TJ
 0 1 0 rg 0 1 0 RG
  [(Dallas)-333(1992)]TJ
 0 g 0 G
@@ -2210,20 +2210,20 @@ endobj
 endobj
 290 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 298 0 obj
 <<
-/Length 1218      
+/Length 1210      
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(2.7.)-778(BA)28(CK)-333(TO)-334(MA)84(TH)]TJ/F37 10.9091 Tf 347.746 0 Td [(17)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(2.7.)-778(BA)28(CK)-333(TO)-334(MA)84(TH)]TJ/F41 10.9091 Tf [-21391(17)]TJ
 0 g 0 G
- -193.101 -30.758 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)]TJ -137.709 -29.569 Td [(Do)-28(es)]TJ
+ 154.645 -30.758 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.55 Td [(a)-333(a)-1096(b)-1096(c)]TJ 0 -13.549 Td [(a)]TJ -137.709 -29.569 Td [(Do)-28(es)]TJ
 1 0 0 rg 1 0 0 RG
  [-333(this)]TJ
 0 g 0 G
@@ -2272,18 +2272,18 @@ endobj
 endobj
 296 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 303 0 obj
 <<
-/Length 162       
+/Length 155       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(18)]TJ/F51 10.9091 Tf 203.352 0 Td [(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)83(T)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(18)]TJ/F55 10.9091 Tf [-17641(CHAPTER)-333(2.)-778(SECOND)-333(P)83(AR)84(T)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -2306,31 +2306,31 @@ endobj
 endobj
 301 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 307 0 obj
 <<
-/Length 1772      
+/Length 1689      
 >>
 stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 24.7871 Tf 100.892 573.675 Td [(Bibliograph)31(y)]TJ
+/F57 24.7871 Tf 100.892 573.675 Td [(Bibliograph)31(y)]TJ
 0 g 0 G
-/F37 10.9091 Tf 5.454 -53.4 Td [([1])]TJ
+/F41 10.9091 Tf 5.454 -53.4 Td [([1])]TJ
 0 g 0 G
- [-500(Barcel\023)500(o,)-345(J.)-343(1992.)-472(Programming)-342(an)-343(in)28(telligen)27(t)-342(database)-343(in)-343(arc)28(haeology)83(.)]TJ 16.97 -13.549 Td [(In)]TJ/F74 10.9091 Tf 15.555 0 Td [(Computer)-520(Appli)1(c)51(ations)-520(and)-520(Quantitative)-519(Metho)51(ds)-520(in)-519(A)25(r)51(chae)52(olo)51(gy)]TJ -15.555 -13.549 Td [(1991)]TJ/F37 10.9091 Tf 22.303 0 Td [(,)-477(Lo)-27(c)27(k,)-476(G.)-448(&)-448(J.)-448(Mo\013ett)-448(\050eds\051,)-476(21{28,)-477(Oxford:)-674(British)-447(Arc)27(haeo-)]TJ -22.303 -13.549 Td [(logical)-333(Rep)-28(orts.)]TJ
+ [-500(Barcel\023)500(o,)-345(J.)-343(1992.)-472(Programming)-342(an)-343(in)28(telligen)27(t)-342(database)-343(in)-343(arc)28(haeology)83(.)]TJ 16.97 -13.549 Td [(In)]TJ/F78 10.9091 Tf [-509(Computer)-520(Applic)51(ations)-519(and)-520(Quantitative)-519(Metho)51(ds)-520(in)-519(A)25(r)51(chae)51(olo)52(gy)]TJ 0 -13.549 Td [(1991)]TJ/F41 10.9091 Tf [(,)-477(Lo)-27(c)27(k,)-476(G.)-448(&)-448(J.)-448(Mo\013ett)-448(\050eds\051,)-477(21{28,)-476(Oxford:)-674(British)-447(Arc)27(haeo-)]TJ 0 -13.549 Td [(logical)-333(Rep)-28(orts.)]TJ
 0 g 0 G
  -22.424 -22.516 Td [([Dallas)-333(1992])]TJ
 0 g 0 G
- [-500(Dallas,)-365(C.)-359(J.)-359(1992.)-519(Syn)28(tax)-359(and)-358(seman)27(tics)-358(of)-359(\014gurativ)28(e)-359(art:)-495(a)]TJ 22.424 -13.549 Td [(formal)-319(approac)28(h.)-319(In)]TJ/F74 10.9091 Tf 97.466 0 Td [(A)26(r)51(chae)51(olo)51(gy)-344(and)-345(the)-344(Information)-345(A)51(ge)]TJ/F37 10.9091 Tf 177.357 0 Td [(,)-322(Reilly)84(,)-322(P)83(.)-319(&)]TJ -274.823 -13.549 Td [(S.)-333(Rah)28(tz)-334(\050eds\051,)-333(c)28(hapter)-334(16,)-333(London:)-444(Routledge.)]TJ
+ [-500(Dallas,)-365(C.)-359(J.)-359(1992.)-519(Syn)28(tax)-359(and)-358(seman)27(tics)-358(of)-359(\014gurativ)28(e)-359(art:)-495(a)]TJ 22.424 -13.549 Td [(formal)-319(approac)28(h.)-319(In)]TJ/F78 10.9091 Tf [-319(A)26(r)51(chae)51(olo)51(gy)-344(and)-345(the)-344(Information)-344(A)51(ge)]TJ/F41 10.9091 Tf [(,)-322(Reilly)83(,)-321(P)83(.)-319(&)]TJ 0 -13.549 Td [(S.)-333(Rah)28(tz)-334(\050eds\051,)-333(c)28(hapter)-334(16,)-333(London:)-444(Routledge.)]TJ
 0 g 0 G
  -22.424 -22.516 Td [([Stank)28(o)28(vic)-334(1988])]TJ
 0 g 0 G
- [-500(J.)-301(Stank)27(o)28(vic,)-308(\134Misconceptions)-302(ab)-27(out)-302(real-time)-302(computing:)]TJ 22.424 -13.549 Td [(a)-517(serious)-517(problem)-516(for)-517(next-generation)-517(systems,")]TJ/F74 10.9091 Tf 243.54 0 Td [(Computer)]TJ/F37 10.9091 Tf 46.975 0 Td [(,)-563(v)28(ol.)-517(21,)]TJ -290.515 -13.549 Td [(no.)-333(10,)-334(pp)1(.)-334(10{19,)-333(Oct.)-333(1988.)]TJ
+ [-500(J.)-301(Stank)27(o)28(vic,)-308(\134Misconceptions)-302(ab)-27(out)-302(real-time)-302(computing:)]TJ 22.424 -13.549 Td [(a)-517(serious)-517(probl)1(e)-1(m)-516(for)-517(next-generation)-517(systems,")]TJ/F78 10.9091 Tf [-563(Computer)]TJ/F41 10.9091 Tf [(,)-562(v)28(ol.)-517(21,)]TJ 0 -13.549 Td [(no.)-333(10,)-334(pp)1(.)-334(10{19,)-333(Oct.)-333(1988.)]TJ
 0 g 0 G
  151.449 -282.803 Td [(19)]TJ
 0 g 0 G
@@ -2373,20 +2373,20 @@ endobj
 endobj
 305 0 obj
 <<
-/Font << /F53 99 0 R /F37 78 0 R /F74 309 0 R >>
+/Font << /F57 99 0 R /F41 78 0 R /F78 309 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 314 0 obj
 <<
-/Length 223       
+/Length 214       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(20)]TJ/F51 10.9091 Tf 271.458 0 Td [(BIBLIOGRAPHY)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(20)]TJ/F55 10.9091 Tf [-23884(BIBLIOGRAPHY)]TJ
 0 g 0 G
-/F37 10.9091 Tf -254.521 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+/F41 10.9091 Tf 16.937 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2408,20 +2408,20 @@ endobj
 endobj
 312 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 318 0 obj
 <<
-/Length 207       
+/Length 199       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F37 10.9091 Tf 347.746 0 Td [(21)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F41 10.9091 Tf [-23884(21)]TJ
 0 g 0 G
- -330.81 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+ 16.936 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2443,20 +2443,20 @@ endobj
 endobj
 316 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 322 0 obj
 <<
-/Length 223       
+/Length 214       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(22)]TJ/F51 10.9091 Tf 271.458 0 Td [(BIBLIOGRAPHY)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(22)]TJ/F55 10.9091 Tf [-23884(BIBLIOGRAPHY)]TJ
 0 g 0 G
-/F37 10.9091 Tf -254.521 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+/F41 10.9091 Tf 16.937 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2478,20 +2478,20 @@ endobj
 endobj
 320 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 326 0 obj
 <<
-/Length 207       
+/Length 199       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F37 10.9091 Tf 347.746 0 Td [(23)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F41 10.9091 Tf [-23884(23)]TJ
 0 g 0 G
- -330.81 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+ 16.936 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2513,20 +2513,20 @@ endobj
 endobj
 324 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 330 0 obj
 <<
-/Length 223       
+/Length 214       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(24)]TJ/F51 10.9091 Tf 271.458 0 Td [(BIBLIOGRAPHY)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(24)]TJ/F55 10.9091 Tf [-23884(BIBLIOGRAPHY)]TJ
 0 g 0 G
-/F37 10.9091 Tf -254.521 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+/F41 10.9091 Tf 16.937 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2548,20 +2548,20 @@ endobj
 endobj
 328 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 334 0 obj
 <<
-/Length 207       
+/Length 199       
 >>
 stream
 0 g 0 G
 BT
-/F51 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F37 10.9091 Tf 347.746 0 Td [(25)]TJ
+/F55 10.9091 Tf 100.892 684.134 Td [(BIBLIOGRAPHY)]TJ/F41 10.9091 Tf [-23884(25)]TJ
 0 g 0 G
- -330.81 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
+ 16.936 -30.758 Td [(An)-333(index)-334(en)28(try)-333(for)-333(gn)28(us)]TJ
 0 g 0 G
 0 g 0 G
 ET
@@ -2583,18 +2583,18 @@ endobj
 endobj
 332 0 obj
 <<
-/Font << /F51 105 0 R /F37 78 0 R >>
+/Font << /F55 105 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
 339 0 obj
 <<
-/Length 129       
+/Length 122       
 >>
 stream
 0 g 0 G
 BT
-/F37 10.9091 Tf 151.701 684.134 Td [(26)]TJ/F51 10.9091 Tf 271.458 0 Td [(BIBLIOGRAPHY)]TJ
+/F41 10.9091 Tf 151.701 684.134 Td [(26)]TJ/F55 10.9091 Tf [-23884(BIBLIOGRAPHY)]TJ
 0 g 0 G
 0 g 0 G
 0 g 0 G
@@ -2617,7 +2617,7 @@ endobj
 endobj
 337 0 obj
 <<
-/Font << /F37 78 0 R /F51 105 0 R >>
+/Font << /F41 78 0 R /F55 105 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -2629,9 +2629,9 @@ stream
 0 g 0 G
 0 g 0 G
 BT
-/F53 24.7871 Tf 100.892 573.675 Td [(An)-375(app)-31(endix)-375(|)-375(the)-375(Index)]TJ
+/F57 24.7871 Tf 100.892 573.675 Td [(An)-375(app)-31(endix)-375(|)-375(the)-375(Index)]TJ
 0 g 0 G
-/F37 10.9091 Tf 173.873 -476.078 Td [(27)]TJ
+/F41 10.9091 Tf 173.873 -476.078 Td [(27)]TJ
 0 g 0 G
 ET
 endstream
@@ -2657,7 +2657,7 @@ endobj
 endobj
 341 0 obj
 <<
-/Font << /F53 99 0 R /F37 78 0 R >>
+/Font << /F57 99 0 R /F41 78 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -5134,14 +5134,14 @@ endobj
 endobj
 406 0 obj
 <<
-/Names [(Item.44) 271 0 R (Item.45) 272 0 R (chapter*.1) 98 0 R (chapter*.2) 113 0 R (chapter*.3) 6 0 R (chapter*.47) 62 0 R]
-/Limits [(Item.44) (chapter*.47)]
+/Names [(Item.44) 271 0 R (Item.45) 272 0 R (chapter*.1) 98 0 R (chapter*.2) 113 0 R (chapter*.3) 6 0 R (chapter*.46) 62 0 R]
+/Limits [(Item.44) (chapter*.46)]
 >>
 endobj
 407 0 obj
 <<
-/Names [(chapter*.48) 345 0 R (chapter.14) 30 0 R (chapter.4) 10 0 R (cite.Barcelo:1992:caa) 157 0 R (cite.Dallas:aia) 114 0 R (cite.stankovic:88) 310 0 R]
-/Limits [(chapter*.48) (cite.stankovic:88)]
+/Names [(chapter*.47) 345 0 R (chapter.14) 30 0 R (chapter.4) 10 0 R (cite.Barcelo:1992:caa) 157 0 R (cite.Dallas:aia) 114 0 R (cite.stankovic:88) 310 0 R]
+/Limits [(chapter*.47) (cite.stankovic:88)]
 >>
 endobj
 408 0 obj
@@ -5206,7 +5206,7 @@ endobj
 endobj
 418 0 obj
 <<
-/Names [(subsection.27) 210 0 R (table.46) 115 0 R (test.test1) 192 0 R (testpiccy) 204 0 R (tit.0) 2 0 R]
+/Names [(subsection.27) 210 0 R (table.2.1) 115 0 R (test.test1) 192 0 R (testpiccy) 204 0 R (tit.0) 2 0 R]
 /Limits [(subsection.27) (tit.0)]
 >>
 endobj
@@ -5260,67 +5260,67 @@ xref
 0000000286 65535 f 
 0000000015 00000 n 
 0000003218 00000 n 
-0000271628 00000 n 
+0000271140 00000 n 
 0000000056 00000 n 
 0000000107 00000 n 
-0000014101 00000 n 
-0000271544 00000 n 
+0000014088 00000 n 
+0000271056 00000 n 
 0000000153 00000 n 
 0000000268 00000 n 
-0000020002 00000 n 
-0000271422 00000 n 
+0000019910 00000 n 
+0000270934 00000 n 
 0000000313 00000 n 
 0000000406 00000 n 
-0000020063 00000 n 
-0000271348 00000 n 
+0000019971 00000 n 
+0000270860 00000 n 
 0000000452 00000 n 
 0000000565 00000 n 
-0000020124 00000 n 
-0000271261 00000 n 
+0000020032 00000 n 
+0000270773 00000 n 
 0000000611 00000 n 
 0000000763 00000 n 
-0000020185 00000 n 
-0000271174 00000 n 
+0000020093 00000 n 
+0000270686 00000 n 
 0000000809 00000 n 
 0000000964 00000 n 
-0000022530 00000 n 
-0000271100 00000 n 
+0000022416 00000 n 
+0000270612 00000 n 
 0000001011 00000 n 
 0000001212 00000 n 
-0000025002 00000 n 
-0000270976 00000 n 
+0000024879 00000 n 
+0000270488 00000 n 
 0000001259 00000 n 
 0000001357 00000 n 
-0000025063 00000 n 
-0000270902 00000 n 
+0000024940 00000 n 
+0000270414 00000 n 
 0000001404 00000 n 
 0000001576 00000 n 
-0000026377 00000 n 
-0000270815 00000 n 
+0000026240 00000 n 
+0000270327 00000 n 
 0000001623 00000 n 
 0000001815 00000 n 
-0000027180 00000 n 
-0000270728 00000 n 
+0000027033 00000 n 
+0000270240 00000 n 
 0000001862 00000 n 
 0000001972 00000 n 
-0000029114 00000 n 
-0000270641 00000 n 
+0000028939 00000 n 
+0000270153 00000 n 
 0000002019 00000 n 
 0000002084 00000 n 
-0000032550 00000 n 
-0000270554 00000 n 
+0000032361 00000 n 
+0000270066 00000 n 
 0000002131 00000 n 
 0000002206 00000 n 
-0000039643 00000 n 
-0000270467 00000 n 
+0000039426 00000 n 
+0000269979 00000 n 
 0000002253 00000 n 
 0000002351 00000 n 
-0000041905 00000 n 
-0000270393 00000 n 
+0000041590 00000 n 
+0000269905 00000 n 
 0000002398 00000 n 
 0000002514 00000 n 
-0000052655 00000 n 
-0000270318 00000 n 
+0000052225 00000 n 
+0000269830 00000 n 
 0000002562 00000 n 
 0000002649 00000 n 
 0000002992 00000 n 
@@ -5328,14 +5328,14 @@ xref
 0000002697 00000 n 
 0000003100 00000 n 
 0000003158 00000 n 
-0000255525 00000 n 
-0000253580 00000 n 
-0000269468 00000 n 
+0000255037 00000 n 
+0000253092 00000 n 
+0000268980 00000 n 
 0000003667 00000 n 
 0000003500 00000 n 
 0000003359 00000 n 
 0000003608 00000 n 
-0000251635 00000 n 
+0000251147 00000 n 
 0000007913 00000 n 
 0000008064 00000 n 
 0000008215 00000 n 
@@ -5356,338 +5356,338 @@ xref
 0000003737 00000 n 
 0000010186 00000 n 
 0000010244 00000 n 
-0000246174 00000 n 
-0000244222 00000 n 
-0000010756 00000 n 
-0000010584 00000 n 
+0000245686 00000 n 
+0000243734 00000 n 
+0000010749 00000 n 
+0000010577 00000 n 
 0000010399 00000 n 
-0000010695 00000 n 
-0000263293 00000 n 
-0000011513 00000 n 
-0000011671 00000 n 
-0000011824 00000 n 
-0000012097 00000 n 
-0000011366 00000 n 
-0000010840 00000 n 
-0000011975 00000 n 
-0000012035 00000 n 
-0000052778 00000 n 
-0000048156 00000 n 
-0000012557 00000 n 
-0000012385 00000 n 
-0000012180 00000 n 
-0000012496 00000 n 
-0000013580 00000 n 
-0000013732 00000 n 
-0000013890 00000 n 
-0000014161 00000 n 
-0000013432 00000 n 
-0000012641 00000 n 
-0000014041 00000 n 
-0000269581 00000 n 
-0000032427 00000 n 
-0000032489 00000 n 
-0000014598 00000 n 
-0000014425 00000 n 
-0000014244 00000 n 
-0000014537 00000 n 
-0000018253 00000 n 
-0000018404 00000 n 
-0000018554 00000 n 
-0000018706 00000 n 
-0000018858 00000 n 
-0000019010 00000 n 
-0000019173 00000 n 
-0000019327 00000 n 
-0000019480 00000 n 
-0000019628 00000 n 
-0000019785 00000 n 
-0000021284 00000 n 
-0000020432 00000 n 
-0000018041 00000 n 
-0000014682 00000 n 
-0000019942 00000 n 
-0000249689 00000 n 
-0000259404 00000 n 
-0000020246 00000 n 
-0000257465 00000 n 
-0000020308 00000 n 
-0000261343 00000 n 
-0000020370 00000 n 
-0000052716 00000 n 
-0000021449 00000 n 
-0000021676 00000 n 
-0000021144 00000 n 
-0000020592 00000 n 
-0000021615 00000 n 
-0000269305 00000 n 
-0000022714 00000 n 
-0000022358 00000 n 
-0000021773 00000 n 
-0000022470 00000 n 
-0000022591 00000 n 
-0000022653 00000 n 
-0000023272 00000 n 
-0000023496 00000 n 
-0000023140 00000 n 
-0000022810 00000 n 
-0000023435 00000 n 
-0000024636 00000 n 
-0000024787 00000 n 
-0000025310 00000 n 
-0000024496 00000 n 
-0000023580 00000 n 
-0000024942 00000 n 
-0000025124 00000 n 
-0000025186 00000 n 
-0000025248 00000 n 
-0000269698 00000 n 
-0000026165 00000 n 
-0000026561 00000 n 
-0000026033 00000 n 
-0000025432 00000 n 
-0000026316 00000 n 
-0000026438 00000 n 
-0000026500 00000 n 
-0000028391 00000 n 
-0000027303 00000 n 
-0000027008 00000 n 
-0000026657 00000 n 
-0000027120 00000 n 
-0000027241 00000 n 
-0000028116 00000 n 
-0000028453 00000 n 
-0000027984 00000 n 
-0000027399 00000 n 
-0000028268 00000 n 
-0000028329 00000 n 
-0000032365 00000 n 
-0000029298 00000 n 
-0000028942 00000 n 
-0000028549 00000 n 
-0000029054 00000 n 
-0000029175 00000 n 
-0000029237 00000 n 
-0000031218 00000 n 
-0000031369 00000 n 
-0000031679 00000 n 
-0000031831 00000 n 
-0000031994 00000 n 
-0000031060 00000 n 
-0000032152 00000 n 
-0000034663 00000 n 
-0000035221 00000 n 
-0000035785 00000 n 
-0000036339 00000 n 
-0000036898 00000 n 
-0000037725 00000 n 
-0000038289 00000 n 
-0000038876 00000 n 
-0000039423 00000 n 
-0000032611 00000 n 
-0000030872 00000 n 
-0000029394 00000 n 
-0000032304 00000 n 
-0000031524 00000 n 
-0000041966 00000 n 
-0000039704 00000 n 
-0000034331 00000 n 
-0000032720 00000 n 
-0000039583 00000 n 
-0000034849 00000 n 
-0000035035 00000 n 
-0000035409 00000 n 
-0000035597 00000 n 
-0000035970 00000 n 
-0000036155 00000 n 
-0000036525 00000 n 
-0000036712 00000 n 
-0000037104 00000 n 
-0000037311 00000 n 
-0000037518 00000 n 
-0000037913 00000 n 
-0000038101 00000 n 
-0000038485 00000 n 
-0000038681 00000 n 
-0000039059 00000 n 
-0000039241 00000 n 
-0000269815 00000 n 
-0000042769 00000 n 
-0000041732 00000 n 
-0000039813 00000 n 
-0000041844 00000 n 
-0000247931 00000 n 
-0000042028 00000 n 
-0000265566 00000 n 
-0000042089 00000 n 
-0000042151 00000 n 
-0000042211 00000 n 
-0000042273 00000 n 
-0000042335 00000 n 
-0000042397 00000 n 
-0000042459 00000 n 
-0000042521 00000 n 
-0000042583 00000 n 
-0000042645 00000 n 
-0000042707 00000 n 
-0000043989 00000 n 
-0000044139 00000 n 
-0000044289 00000 n 
-0000044439 00000 n 
-0000044589 00000 n 
-0000044742 00000 n 
-0000044895 00000 n 
-0000045049 00000 n 
-0000045200 00000 n 
-0000045424 00000 n 
-0000043793 00000 n 
-0000042891 00000 n 
-0000045364 00000 n 
+0000010688 00000 n 
+0000262805 00000 n 
+0000011506 00000 n 
+0000011664 00000 n 
+0000011817 00000 n 
+0000012091 00000 n 
+0000011359 00000 n 
+0000010833 00000 n 
+0000011969 00000 n 
+0000012029 00000 n 
+0000052348 00000 n 
+0000047824 00000 n 
+0000012544 00000 n 
+0000012372 00000 n 
+0000012174 00000 n 
+0000012483 00000 n 
+0000013567 00000 n 
+0000013719 00000 n 
+0000013877 00000 n 
+0000014148 00000 n 
+0000013419 00000 n 
+0000012628 00000 n 
+0000014028 00000 n 
+0000269093 00000 n 
+0000032238 00000 n 
+0000032300 00000 n 
+0000014578 00000 n 
+0000014405 00000 n 
+0000014231 00000 n 
+0000014517 00000 n 
+0000018160 00000 n 
+0000018311 00000 n 
+0000018461 00000 n 
+0000018613 00000 n 
+0000018765 00000 n 
+0000018917 00000 n 
+0000019080 00000 n 
+0000019234 00000 n 
+0000019387 00000 n 
+0000019536 00000 n 
+0000019693 00000 n 
+0000021175 00000 n 
+0000020340 00000 n 
+0000017948 00000 n 
+0000014662 00000 n 
+0000019850 00000 n 
+0000249201 00000 n 
+0000258916 00000 n 
+0000020154 00000 n 
+0000256977 00000 n 
+0000020216 00000 n 
+0000260855 00000 n 
+0000020278 00000 n 
+0000052286 00000 n 
+0000021340 00000 n 
+0000021567 00000 n 
+0000021035 00000 n 
+0000020500 00000 n 
+0000021506 00000 n 
+0000268817 00000 n 
+0000022600 00000 n 
+0000022244 00000 n 
+0000021664 00000 n 
+0000022356 00000 n 
+0000022477 00000 n 
+0000022539 00000 n 
+0000023149 00000 n 
+0000023373 00000 n 
+0000023017 00000 n 
+0000022696 00000 n 
+0000023312 00000 n 
+0000024513 00000 n 
+0000024664 00000 n 
+0000025187 00000 n 
+0000024373 00000 n 
+0000023457 00000 n 
+0000024819 00000 n 
+0000025001 00000 n 
+0000025063 00000 n 
+0000025125 00000 n 
+0000269210 00000 n 
+0000026028 00000 n 
+0000026424 00000 n 
+0000025896 00000 n 
+0000025309 00000 n 
+0000026179 00000 n 
+0000026301 00000 n 
+0000026363 00000 n 
+0000028230 00000 n 
+0000027156 00000 n 
+0000026861 00000 n 
+0000026520 00000 n 
+0000026973 00000 n 
+0000027094 00000 n 
+0000027955 00000 n 
+0000028292 00000 n 
+0000027823 00000 n 
+0000027252 00000 n 
+0000028107 00000 n 
+0000028168 00000 n 
+0000032176 00000 n 
+0000029123 00000 n 
+0000028767 00000 n 
+0000028388 00000 n 
+0000028879 00000 n 
+0000029000 00000 n 
+0000029062 00000 n 
+0000031029 00000 n 
+0000031180 00000 n 
+0000031490 00000 n 
+0000031642 00000 n 
+0000031805 00000 n 
+0000030871 00000 n 
+0000031963 00000 n 
+0000034446 00000 n 
+0000035004 00000 n 
+0000035568 00000 n 
+0000036122 00000 n 
+0000036681 00000 n 
+0000037508 00000 n 
+0000038072 00000 n 
+0000038659 00000 n 
+0000039206 00000 n 
+0000032422 00000 n 
+0000030683 00000 n 
+0000029219 00000 n 
+0000032115 00000 n 
+0000031335 00000 n 
+0000041651 00000 n 
+0000039487 00000 n 
+0000034114 00000 n 
+0000032531 00000 n 
+0000039366 00000 n 
+0000034632 00000 n 
+0000034818 00000 n 
+0000035192 00000 n 
+0000035380 00000 n 
+0000035753 00000 n 
+0000035938 00000 n 
+0000036308 00000 n 
+0000036495 00000 n 
+0000036887 00000 n 
+0000037094 00000 n 
+0000037301 00000 n 
+0000037696 00000 n 
+0000037884 00000 n 
+0000038268 00000 n 
+0000038464 00000 n 
+0000038842 00000 n 
+0000039024 00000 n 
+0000269327 00000 n 
+0000042454 00000 n 
+0000041417 00000 n 
+0000039596 00000 n 
+0000041529 00000 n 
+0000247443 00000 n 
+0000041713 00000 n 
+0000265078 00000 n 
+0000041774 00000 n 
+0000041836 00000 n 
+0000041896 00000 n 
+0000041958 00000 n 
+0000042020 00000 n 
+0000042082 00000 n 
+0000042144 00000 n 
+0000042206 00000 n 
+0000042268 00000 n 
+0000042330 00000 n 
+0000042392 00000 n 
+0000043666 00000 n 
+0000043816 00000 n 
+0000043966 00000 n 
+0000044116 00000 n 
+0000044266 00000 n 
+0000044419 00000 n 
+0000044572 00000 n 
+0000044726 00000 n 
+0000044877 00000 n 
+0000045101 00000 n 
+0000043470 00000 n 
+0000042576 00000 n 
+0000045041 00000 n 
 0000000287 00000 f 
 0000000000 00000 f 
-0000047785 00000 n 
-0000047942 00000 n 
-0000048218 00000 n 
-0000047645 00000 n 
-0000045508 00000 n 
-0000048095 00000 n 
-0000049720 00000 n 
-0000049874 00000 n 
-0000050088 00000 n 
-0000049580 00000 n 
-0000048302 00000 n 
-0000050028 00000 n 
-0000057183 00000 n 
-0000050567 00000 n 
-0000050394 00000 n 
-0000050172 00000 n 
-0000050506 00000 n 
-0000052902 00000 n 
-0000052483 00000 n 
-0000050651 00000 n 
-0000052595 00000 n 
-0000267539 00000 n 
-0000052840 00000 n 
-0000269932 00000 n 
-0000053454 00000 n 
-0000053281 00000 n 
-0000052998 00000 n 
-0000053393 00000 n 
-0000053977 00000 n 
-0000053805 00000 n 
-0000053538 00000 n 
-0000053917 00000 n 
-0000054517 00000 n 
-0000054344 00000 n 
+0000047453 00000 n 
+0000047610 00000 n 
+0000047886 00000 n 
+0000047313 00000 n 
+0000045185 00000 n 
+0000047763 00000 n 
+0000049380 00000 n 
+0000049534 00000 n 
+0000049748 00000 n 
+0000049240 00000 n 
+0000047970 00000 n 
+0000049688 00000 n 
+0000056695 00000 n 
+0000050220 00000 n 
+0000050047 00000 n 
+0000049832 00000 n 
+0000050159 00000 n 
+0000052472 00000 n 
+0000052053 00000 n 
+0000050304 00000 n 
+0000052165 00000 n 
+0000267051 00000 n 
+0000052410 00000 n 
+0000269444 00000 n 
+0000053015 00000 n 
+0000052842 00000 n 
+0000052568 00000 n 
+0000052954 00000 n 
+0000053530 00000 n 
+0000053358 00000 n 
+0000053099 00000 n 
+0000053470 00000 n 
 0000054061 00000 n 
-0000054456 00000 n 
-0000055040 00000 n 
-0000054868 00000 n 
-0000054601 00000 n 
-0000054980 00000 n 
-0000055580 00000 n 
-0000055407 00000 n 
-0000055124 00000 n 
-0000055519 00000 n 
-0000056103 00000 n 
-0000055931 00000 n 
-0000055664 00000 n 
-0000056043 00000 n 
-0000270049 00000 n 
-0000056549 00000 n 
-0000056376 00000 n 
-0000056187 00000 n 
-0000056488 00000 n 
-0000057100 00000 n 
-0000056866 00000 n 
-0000056633 00000 n 
-0000056978 00000 n 
-0000057038 00000 n 
-0000057214 00000 n 
-0000057653 00000 n 
-0000057678 00000 n 
-0000057841 00000 n 
-0000058228 00000 n 
-0000058678 00000 n 
-0000058709 00000 n 
-0000058740 00000 n 
-0000058777 00000 n 
-0000059220 00000 n 
-0000059645 00000 n 
-0000060293 00000 n 
-0000060925 00000 n 
-0000061335 00000 n 
-0000061650 00000 n 
-0000077367 00000 n 
-0000077676 00000 n 
-0000095077 00000 n 
-0000095469 00000 n 
-0000104345 00000 n 
-0000104579 00000 n 
-0000112658 00000 n 
-0000112884 00000 n 
-0000136955 00000 n 
-0000137468 00000 n 
-0000148180 00000 n 
-0000148465 00000 n 
-0000158282 00000 n 
-0000158522 00000 n 
-0000166090 00000 n 
-0000166314 00000 n 
-0000173879 00000 n 
-0000174103 00000 n 
-0000189387 00000 n 
-0000189674 00000 n 
-0000204675 00000 n 
-0000204989 00000 n 
-0000212369 00000 n 
-0000212595 00000 n 
-0000226553 00000 n 
-0000226830 00000 n 
-0000242090 00000 n 
-0000242433 00000 n 
-0000244385 00000 n 
-0000246336 00000 n 
-0000248094 00000 n 
-0000249851 00000 n 
-0000251796 00000 n 
-0000253741 00000 n 
-0000255686 00000 n 
-0000257625 00000 n 
-0000259564 00000 n 
-0000261504 00000 n 
-0000263456 00000 n 
-0000265726 00000 n 
-0000267702 00000 n 
-0000270142 00000 n 
-0000270243 00000 n 
-0000271699 00000 n 
-0000271885 00000 n 
-0000272055 00000 n 
-0000272238 00000 n 
-0000272461 00000 n 
-0000272659 00000 n 
-0000272826 00000 n 
-0000272993 00000 n 
-0000273163 00000 n 
-0000273331 00000 n 
-0000273497 00000 n 
-0000273672 00000 n 
-0000273858 00000 n 
-0000274062 00000 n 
-0000274280 00000 n 
-0000274444 00000 n 
-0000274555 00000 n 
-0000274666 00000 n 
-0000274751 00000 n 
-0000274836 00000 n 
-0000274874 00000 n 
-0000275041 00000 n 
+0000053888 00000 n 
+0000053614 00000 n 
+0000054000 00000 n 
+0000054576 00000 n 
+0000054404 00000 n 
+0000054145 00000 n 
+0000054516 00000 n 
+0000055107 00000 n 
+0000054934 00000 n 
+0000054660 00000 n 
+0000055046 00000 n 
+0000055622 00000 n 
+0000055450 00000 n 
+0000055191 00000 n 
+0000055562 00000 n 
+0000269561 00000 n 
+0000056061 00000 n 
+0000055888 00000 n 
+0000055706 00000 n 
+0000056000 00000 n 
+0000056612 00000 n 
+0000056378 00000 n 
+0000056145 00000 n 
+0000056490 00000 n 
+0000056550 00000 n 
+0000056726 00000 n 
+0000057165 00000 n 
+0000057190 00000 n 
+0000057353 00000 n 
+0000057740 00000 n 
+0000058190 00000 n 
+0000058221 00000 n 
+0000058252 00000 n 
+0000058289 00000 n 
+0000058732 00000 n 
+0000059157 00000 n 
+0000059805 00000 n 
+0000060437 00000 n 
+0000060847 00000 n 
+0000061162 00000 n 
+0000076879 00000 n 
+0000077188 00000 n 
+0000094589 00000 n 
+0000094981 00000 n 
+0000103857 00000 n 
+0000104091 00000 n 
+0000112170 00000 n 
+0000112396 00000 n 
+0000136467 00000 n 
+0000136980 00000 n 
+0000147692 00000 n 
+0000147977 00000 n 
+0000157794 00000 n 
+0000158034 00000 n 
+0000165602 00000 n 
+0000165826 00000 n 
+0000173391 00000 n 
+0000173615 00000 n 
+0000188899 00000 n 
+0000189186 00000 n 
+0000204187 00000 n 
+0000204501 00000 n 
+0000211881 00000 n 
+0000212107 00000 n 
+0000226065 00000 n 
+0000226342 00000 n 
+0000241602 00000 n 
+0000241945 00000 n 
+0000243897 00000 n 
+0000245848 00000 n 
+0000247606 00000 n 
+0000249363 00000 n 
+0000251308 00000 n 
+0000253253 00000 n 
+0000255198 00000 n 
+0000257137 00000 n 
+0000259076 00000 n 
+0000261016 00000 n 
+0000262968 00000 n 
+0000265238 00000 n 
+0000267214 00000 n 
+0000269654 00000 n 
+0000269755 00000 n 
+0000271211 00000 n 
+0000271397 00000 n 
+0000271567 00000 n 
+0000271750 00000 n 
+0000271973 00000 n 
+0000272171 00000 n 
+0000272338 00000 n 
+0000272505 00000 n 
+0000272675 00000 n 
+0000272843 00000 n 
+0000273009 00000 n 
+0000273184 00000 n 
+0000273370 00000 n 
+0000273574 00000 n 
+0000273792 00000 n 
+0000273957 00000 n 
+0000274068 00000 n 
+0000274179 00000 n 
+0000274264 00000 n 
+0000274349 00000 n 
+0000274387 00000 n 
+0000274554 00000 n 
 trailer
 << /Size 426
 /Root 424 0 R
 /Info 425 0 R
  >>
 startxref
-275166
+274679
 %%EOF

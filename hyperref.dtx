@@ -4,7 +4,7 @@
 % 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
 % 2001-2015 Heiko Oberdiek.
 % 2016-2019 Oberdiek Package Support Group
-% 2019-2024 LaTeX Project
+% 2019-2025 LaTeX Project
 %      https://github.com/latex3/hyperref/issues
 %
 % This file is part of the `Hyperref Bundle'.
@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2024-01-20 v7.01h %
+%<!none&!packageEnd>  [2025-05-20 v7.01m %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -594,6 +594,7 @@
 % change 2021-08-14: require expl3
 % change 2023-11-26: no longer require pdftexcmds
 % change 2023-11-26: no longer require expl3, we assume kernel is new enough.
+% change 2024-05-23: load stringenc always (for pdfx)
 %    \begin{macrocode}
 \RequirePackage{iftex}[2019/10/24]
 \RequirePackage{keyval}[1997/11/10]
@@ -601,9 +602,9 @@
 \RequirePackage{kvdefinekeys}[2011/04/07]
 \RequirePackage{pdfescape}[2007/11/11]
 \RequirePackage{hycolor}
-\RequirePackage{auxhook}[2009/12/14]
 \RequirePackage{nameref}[2012/07/28]
 \RequirePackage{etoolbox}
+\RequirePackage{stringenc}[2009/12/15]%
 \def\Hy@Error{\PackageError{hyperref}}
 \def\Hy@Warning{\PackageWarning{hyperref}}
 \def\Hy@WarningNoLine{\PackageWarningNoLine{hyperref}}
@@ -1864,30 +1865,27 @@
 %
 %    \begin{macrocode}
       \ifx\HyPsd@pdfencoding\HyPsd@pdfencoding@auto
-        \@ifundefined{StringEncodingConvertTest}{%
-        }{%
-          \EdefUnescapeString\HyPsd@temp#1%
-          \iftutex
-            \let\HyPsd@UnescapedString\HyPsd@temp
-            \StringEncodingConvertTest\HyPsd@temp\HyPsd@temp
-                                      {utf16be}{ascii-print}{%
-              \EdefEscapeString\HyPsd@temp\HyPsd@temp
-              \global\let#1\HyPsd@temp
-              \HyPsd@EscapeTeX#1%
-              \Hy@unicodefalse
-            }{%
-              \HyPsd@EscapeTeX#1%
-            }%
-          \else
-            \StringEncodingConvertTest\HyPsd@temp\HyPsd@temp
-                                      {utf16be}{pdfdoc}{%
-              \EdefEscapeString\HyPsd@temp\HyPsd@temp
-              \global\let#1\HyPsd@temp
-              \HyPsd@EscapeTeX#1%
-              \Hy@unicodefalse
-            }{}%
-          \fi
-        }%
+         \EdefUnescapeString\HyPsd@temp#1%
+         \iftutex
+           \let\HyPsd@UnescapedString\HyPsd@temp
+           \StringEncodingConvertTest\HyPsd@temp\HyPsd@temp
+                                     {utf16be}{ascii-print}{%
+             \EdefEscapeString\HyPsd@temp\HyPsd@temp
+             \global\let#1\HyPsd@temp
+             \HyPsd@EscapeTeX#1%
+             \Hy@unicodefalse
+           }{%
+             \HyPsd@EscapeTeX#1%
+           }%
+         \else
+           \StringEncodingConvertTest\HyPsd@temp\HyPsd@temp
+                                     {utf16be}{pdfdoc}{%
+             \EdefEscapeString\HyPsd@temp\HyPsd@temp
+             \global\let#1\HyPsd@temp
+             \HyPsd@EscapeTeX#1%
+             \Hy@unicodefalse
+           }{}%
+         \fi
       \fi
     \fi
 %    \end{macrocode}
@@ -4819,9 +4817,6 @@
       \hypersetup{unicode}%
       \ifHy@unicode
         \def\HyPsd@pdfencoding{#1}%
-        \ifx\HyPsd@pdfencoding\HyPsd@pdfencoding@auto
-          \HyPsd@LoadStringEnc
-        \fi
       \else
         \Hy@Warning{Cannot switch to unicode bookmarks}%
         \let\HyPsd@pdfencoding\HyPsd@pdfencoding@pdfdoc
@@ -4844,22 +4839,6 @@
 %    \begin{macrocode}
 \let\HyPsd@pdfencoding\HyPsd@pdfencoding@unicode
 \HyPsd@LoadUnicode
-\def\HyPsd@LoadStringEnc{%
-  \RequirePackage{stringenc}[2009/12/15]%
-  \let\HyPsd@LoadStringEnc\relax
-}
-\Hy@AtBeginDocument{%
-  \@ifpackageloaded{stringenc}{%
-    \let\HyPsd@LoadStringEnc\relax
-  }{%
-    \def\HyPsd@LoadStringEnc{%
-      \Hy@WarningNoLine{%
-        Missing package `stringenc'. Use `pdfencoding=auto'\MessageBreak
-        in the preamble or load the package there%
-      }%
-    }%
-  }%
-}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -7414,7 +7393,8 @@
 % command, you can use |#| and |%| unescaped, to produce themselves.
 % even if, say, |#| is entered as |#| it will be converted to |\#|
 % so it does not die if written to an aux file etc. |\#| will write
-% as |#| locally while making |\special|s.
+% as |#| locally while making |\special|s. The catcode |:| is set to other
+% to avoid problems with expl3 syntax.
 %    \begin{macrocode}
 \begingroup
   \endlinechar=-1 %
@@ -7427,6 +7407,7 @@
   \catcode`\&\active
   \gdef\hyper@normalise{^^A
     \begingroup
+    \@makeother{:}^^A
     \catcode`\^^M\active
     \def^^M{ }^^A
     \catcode`\%\active
@@ -9196,6 +9177,8 @@
 \Hy@temp{calculate}
 \Hy@temp{onfocus}
 \Hy@temp{onblur}
+\Hy@temp{onmousedown}
+\Hy@temp{onmouseup}
 \Hy@temp{onenter}
 \Hy@temp{onexit}
 %    \end{macrocode}
@@ -9220,8 +9203,6 @@
   }%
 \fi
 \Hy@temp{ondblclick}
-\Hy@temp{onmousedown}
-\Hy@temp{onmouseup}
 \Hy@temp{onmouseover}
 \Hy@temp{onmousemove}
 \Hy@temp{onmouseout}
@@ -9702,19 +9683,19 @@
 \let\Hy@EveryPageHook\@empty
 \let\Hy@EveryPageBoxHook\@empty
 \let\Hy@FirstPageHook\@empty
-\AtBeginShipout{%
+\AddToHook{shipout/before}{%
   \Hy@EveryPageHook
   \ifx\Hy@EveryPageBoxHook\@empty
   \else
-    \setbox\AtBeginShipoutBox=\vbox{%
+    \setbox\ShipoutBox=\vbox{%
       \offinterlineskip
       \Hy@EveryPageBoxHook
-      \box\AtBeginShipoutBox
+      \box\ShipoutBox
     }%
   \fi
 }
 \Hy@iffileloaded{hpdftex.def}{%
-  \AtBeginShipout{%
+  \AddToHook{shipout/before}{%
     \Hy@FirstPageHook
     \global\let\Hy@FirstPageHook\@empty
   }%
@@ -10093,13 +10074,12 @@
 %    \end{macrocode}
 %    \end{macro}
 %
-%    Package \textsf{atveryend} is used to get behind the
+%    The \texttt{enddocument/afteraux} hook is used to get behind the
 %    final \cs{clearpage} and to avoid a \cs{clearpage}
 %    in \cs{AtEndDocument}.
 %    Then the PDF catalog entry for |\PageLabels| is set.
-%    \begin{macrocode}
-  \RequirePackage{atveryend}[2009/12/07]%
-  \AtVeryEndDocument{%
+%    \begin{macrocode}  
+  \AddToHook{enddocument/afteraux}{%
     \HyPL@SetPageLabels
   }%
 %    \end{macrocode}
@@ -10119,7 +10099,6 @@
 \else
   \let\HyPsd@pdfencoding\HyPsd@pdfencoding@auto
 \fi
-\HyPsd@LoadStringEnc
 \define@key{Hyp}{unicode}[true]{%
   \Hy@boolkey{unicode}{#1}%
   \ifHy@unicode
@@ -10313,29 +10292,35 @@
     \fi
   \fi
 }
-\Hy@CounterExists{section}{%
-  \providecommand\theHequation{\theHsection.\arabic{equation}}%
-}
-\providecommand\theHequation{\arabic{equation}}%
-\Hy@CounterExists{part}{%
-  \providecommand\theHpart{\arabic{part}}%
-}
-\@ifundefined{thechapter}{%
-  \providecommand\theHsection    {\arabic{section}}%
-  \providecommand\theHfigure     {\arabic{figure}}%
-  \providecommand\theHtable      {\arabic{table}}%
-}{%
-  \providecommand\theHchapter    {\arabic{chapter}}%
-  \providecommand\theHfigure     {\theHchapter.\arabic{figure}}%
-  \providecommand\theHtable      {\theHchapter.\arabic{table}}%
-  \providecommand\theHsection    {\theHchapter.\arabic{section}}%
-}
-\providecommand\theHsubsection   {\theHsection.\arabic{subsection}}
-\providecommand\theHsubsubsection{\theHsubsection.\arabic{subsubsection}}
-\providecommand\theHparagraph    {\theHsubsubsection.\arabic{paragraph}}
-\providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
-\providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
-\providecommand\theHthm          {\theHsection.\arabic{thm}}
+%    \end{macrocode}
+% change 2024-10-13: do not define if format is new enough.
+%    \begin{macrocode}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {
+    \Hy@CounterExists{section}{%
+      \providecommand\theHequation{\theHsection.\arabic{equation}}%
+    }
+    \providecommand\theHequation{\arabic{equation}}%
+    \Hy@CounterExists{part}{%
+      \providecommand\theHpart{\arabic{part}}%
+    }
+    \@ifundefined{thechapter}{%
+      \providecommand\theHsection    {\arabic{section}}%
+      \providecommand\theHfigure     {\arabic{figure}}%
+      \providecommand\theHtable      {\arabic{table}}%
+    }{%
+      \providecommand\theHchapter    {\arabic{chapter}}%
+      \providecommand\theHfigure     {\theHchapter.\arabic{figure}}%
+      \providecommand\theHtable      {\theHchapter.\arabic{table}}%
+      \providecommand\theHsection    {\theHchapter.\arabic{section}}%
+    }
+    \providecommand\theHsubsection   {\theHsection.\arabic{subsection}}
+    \providecommand\theHsubsubsection{\theHsubsection.\arabic{subsubsection}}
+    \providecommand\theHparagraph    {\theHsubsubsection.\arabic{paragraph}}
+    \providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
+    \providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
+    \providecommand\theHthm          {\theHsection.\arabic{thm}}
+  }  
 %    \end{macrocode}
 % Thanks to Greta Meyer (gbd@pop.cwru.edu) for making me realize
 % that enumeration starts at 0 for every list! But |\item|
@@ -10344,7 +10329,8 @@
 %    \begin{macrocode}
 \let\H@item\item
 \newcounter{Item}
-\def\theHItem{\arabic{Item}}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {\def\theHItem{\arabic{Item}}}
 \def\item{%
   \@hyper@itemfalse
   \if@nmbrlist\@hyper@itemtrue\fi
@@ -10353,15 +10339,15 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\providecommand\theHenumi     {\theHItem}
-\providecommand\theHenumii    {\theHItem}
-\providecommand\theHenumiii   {\theHItem}
-\providecommand\theHenumiv    {\theHItem}
-\providecommand\theHHfootnote {\arabic{Hfootnote}}
-\providecommand\theHmpfootnote{\arabic{mpfootnote}}
-\@ifundefined{theHHmpfootnote}{%
-  \let\theHHmpfootnote\theHHfootnote
-}{}
+\IfFormatAtLeastTF{2024-11-01}{}
+ {
+   \providecommand\theHenumi     {\theHItem}
+   \providecommand\theHenumii    {\theHItem}
+   \providecommand\theHenumiii   {\theHItem}
+   \providecommand\theHenumiv    {\theHItem}
+   \providecommand\theHHfootnote {\arabic{Hfootnote}}
+   \providecommand\theHmpfootnote{\arabic{mpfootnote}}
+ }  
 %    \end{macrocode}
 % Tanmoy asked for this default handling of undefined |\theH<name>|
 % situations. It really isn't clear what would be ideal, whether to
@@ -10369,7 +10355,7 @@
 % definition of the counter, or to default it to something like
 % |\arabic{name}|. We take the latter course, slightly worriedly.
 %    \begin{macrocode}
-\let\H@refstepcounter\refstepcounter
+\let\H@refstepcounter\@kernel@refstepcounter
 \edef\name@of@eq{equation}%
 %    \end{macrocode}
 % We do not want the handler for |\refstepcounter| to cut in
@@ -10386,11 +10372,28 @@
 \@hyper@itemfalse
 \@skiphyperreffalse
 \ExplSyntaxOn
-\def\refstepcounter#1{%
-  \legacy_if:nF {Hy@pdfstring}
+\IfFormatAtLeastTF{2024-11-01}
+ {
+  \NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
+  \AssignSocketPlug{refstepcounter}{hyperref}
+%    \end{macrocode}
+% change 2024-11-05: cleveref relies on refstepcounter to update its data. 
+%    \begin{macrocode}
+  \AddToHook{package/cleveref/after}
    {
-    \H@refstepcounter{#1}%
-    \bool_lazy_and:nnT
+     \@ifpackagelater{cleveref}{2018/03/28}{}
+      {
+      \NewSocketPlug{refstepcounter}{hyperref/fixcleveref}
+       {\ifHy@pdfstring\else
+         #1%
+         {\firstaid@cref@updatelabeldata{\@currentcounter}}%
+        \fi}
+       \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}   
+      }
+   }
+  \NewSocketPlug{refstepcounter/target}{hyperref}
+    {   
+      \bool_lazy_and:nnT
       { \l__hyp_target_create_bool }
       { ! \legacy_if_p:n{@skiphyperref} }
       {
@@ -10401,11 +10404,34 @@
             \@hyper@itemfalse
           }
           {
-            \hyper@refstepcounter{#1}%
+            \hyper@refstepcounter{\@currentcounter}%
           }
-      }
-   }
-}
+       }
+     }
+    \AssignSocketPlug{refstepcounter/target}{hyperref} 
+  }
+  {
+    \def\refstepcounter#1{%
+      \legacy_if:nF {Hy@pdfstring}
+       {
+        \H@refstepcounter{#1}%
+        \bool_lazy_and:nnT
+          { \l__hyp_target_create_bool }
+          { ! \legacy_if_p:n{@skiphyperref} }
+          {
+            \legacy_if:nTF {@hyper@item}
+              {
+                \stepcounter{Item}%
+                \hyper@refstepcounter{Item}%
+                \@hyper@itemfalse
+              }
+              {
+                \hyper@refstepcounter{#1}%
+              }
+          }
+       }
+     }
+  }
 \ExplSyntaxOff
 \let\Hy@saved@refstepcounter\refstepcounter
 %    \end{macrocode}
@@ -11051,7 +11077,19 @@
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@footnote}{%
 \ifHy@hyperfootnotes
-  \newcounter{Hfootnote}%
+  \@ifundefined{theHfootnote}
+   {\newcounter{Hfootnote}}
+   {\let\H@@theHfootnote\theHfootnote
+    \let\theHfootnote\undefined
+    \newcounter{Hfootnote}
+    \let\theHfootnote\H@@theHfootnote
+   }% 
+%    \end{macrocode}
+% where is this used?
+%    \begin{macrocode}
+  \@ifundefined{theHHmpfootnote}{%
+   \let\theHHmpfootnote\theHHfootnote
+   }{}    
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark
   \def\@xfootnotenext[#1]{%
@@ -11403,6 +11441,11 @@
           }%
           #3%
         \fi
+%    \end{macrocode}
+% as the anchor are set manually here, we have to update the tagging info.
+% For now we test for the format but this should go again in 2025.
+%    \begin{macrocode}
+        \IfFormatAtLeastTF{2024-11-01}{\UseTaggingSocket{recordtarget}}{}%        
       }%
     \fi
     \par
@@ -12035,14 +12078,19 @@
 % The whole theorem business makes up new counters on the fly;
 % we are going to intercept this. Sigh. Do it at the level where
 % new counters are defined.
+% change 2024-02-14: use a csname to handle counter names with commands,
+% see issue \#330
+% change 2024-10-13: disable patches in new format 2024-11-01.
 %    \begin{macrocode}
+\IfFormatAtLeastTF{2024-11-01}{\def\hyper@nopatch@counter{}}{}
 \@ifundefined{hyper@nopatch@counter}
   {
    \let\H@definecounter\@definecounter
    \def\@definecounter#1{%
      \H@definecounter{#1}%
-     \expandafter\gdef\csname theH#1\endcsname{\arabic{#1}}%
-   }
+     \expandafter
+     \gdef\csname theH#1\expandafter\endcsname\expandafter
+          {\expandafter\@arabic\csname c@#1\endcsname}}%
   }{} 
 %    \end{macrocode}
 % But what if they have used the optional argument to e.g. |\newtheorem|
@@ -12120,7 +12168,10 @@
 %    the hyperref version of the counter print command
 %    \cs{theHcounter} is redefined in order to add the
 %    parent counter.
+% change 2024-07-10: define |\HyOrg@addtoreset| always for cleveref
+% compability with tagging code, see https://github.com/latex3/tagging-project/issues/2
 %    \begin{macrocode}
+\def\HyOrg@addtoreset#1#2{\expandafter\@cons\csname cl@#2\endcsname {{#1}}}
 \@ifundefined{hyper@nopatch@counter}
   {
    \let\HyOrg@addtoreset\@addtoreset
@@ -14179,9 +14230,9 @@
       >>%
     >>%
   }%
-  \AtBeginShipout{%
-    \setbox\AtBeginShipoutBox=\hbox{%
-      \copy\AtBeginShipoutBox
+  \AddToHook{shipout/before}{%
+    \setbox\ShipoutBox=\hbox{%
+      \copy\ShipoutBox
       \@pdfm@mark{%
         put @resources <<%
           /Properties<<%
@@ -14285,8 +14336,12 @@
 \def\hyper@link#1#2#3{%
   \hyper@linkstart{#1}{#2}#3\Hy@xspace@end\hyper@linkend
 }
+%    \end{macrocode}
+% 2025-05-20 added a group for issue \#380
+%    \begin{macrocode}
 \def\hyper@linkfile#1#2#3{%
   \leavevmode
+  \begingroup
   \Hy@BeginAnnot{%
     \def\Hy@pstringF{#2}%
     \Hy@CleanupFile\Hy@pstringF
@@ -14322,6 +14377,7 @@
   }%
   #1\Hy@xspace@end
   \Hy@EndAnnot
+  \endgroup
 }
 \def\@hyper@launch run:#1\\#2#3{% filename, anchor text linkname
   \leavevmode
@@ -17958,7 +18014,7 @@
       \pdfrefobj\OBJ@ZaDb
       \pdfrefobj\OBJ@Helv
     \fi
-    \AtVeryEndDocument{%
+    \AddToHook{enddocument/afteraux}{%
       \immediate\pdfobj{%
         <<%
           /Fields[\HyField@afields]%
@@ -23306,7 +23362,7 @@
 % U+2207 NABLA; nabla, gradient; \nabla (LaTeX)
 \DeclareTextCommand{\textnabla}{PU}{\9042\007}%* U+2207
 % U+2208 ELEMENT OF; element; \in (LaTeX)
-\DeclareTextCommand{\textin}{PU}{\9042\010}%* U+2208
+\DeclareTextCommand{\textinsymbol}{PU}{\9042\010}%* U+2208
 % U+2209 NOT AN ELEMENT OF; notelement, notelementof; \notin (LaTeX)
 \DeclareTextCommand{\textnotin}{PU}{\9042\011}%* U+2209
 % U+220A SMALL ELEMENT OF; \smallin (mathdesign)
@@ -25683,7 +25739,7 @@
   \let\emptyset\textemptyset
   \let\triangle\texttriangle
   \let\nabla\textnabla
-  \let\in\textin
+  \let\in\textinsymbol
   \let\notin\textnotin
   \let\smallin\textsmallin
   \let\ni\textni

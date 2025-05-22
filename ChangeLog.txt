@@ -1,3 +1,13 @@
+2025-05-20 Ulrike Fischer
+	* hyperref.dtx: added a group in the xetex driver, issue #380.
+	* hyperref.dtx: renamed \textin to \textinsymbol, issue #377
+	* hyperref.dtx: remove dependency from atveryend, issue #371
+	* hyperref.dtx: start to remove dependy from atbegshi, issue #371
+
+2024-11-05 Ulrike Fischer
+	* hyperref-linktarget.dtx: add a kern to guard anchor in para hook.
+
+Version: 2024-11-06 v7.01l
 
 2024-11-05 Ulrike Fischer
 	* hyperref.dtx: add a fix for cleveref to update its data in refstepcounter.

@@ -1,0 +1,15 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\START\showoutput 
+\AddToHookNext{para/begin}{\OmitIndent} 
+\begin{theorem}
+abc\label{blub} 
+\end{theorem} 
+
+\ref{blub}
+
+\end{document}

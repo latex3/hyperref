@@ -174,7 +174,9 @@ Completed box being shipped out [1]
 .....\TU/lmr/m/n/10 o
 .....\kern-0.28 (font)
 .....\TU/lmr/m/n/10 w
-.....\kern-0.28 (font)
+.....\discretionary (penalty 50)
+......< \TU/lmr/m/n/10 -
+......= \kern-0.28 (font)
 .....\TU/lmr/m/n/10 e
 .....\TU/lmr/m/n/10 r
 .....\TU/lmr/m/n/10 f

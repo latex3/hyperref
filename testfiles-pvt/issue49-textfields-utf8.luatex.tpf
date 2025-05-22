@@ -1,4 +1,4 @@
-%PDF-1.5
+%PDF-1.7
 %Ã’¡‘≈ÿ–ƒ∆
 1 0 obj
 << /S /GoTo /D [ 2 0 R /Fit ] >>
@@ -145,7 +145,7 @@ endobj
 << /Type /FontDescriptor /FontName /DRWVQJ+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 29 0 R /CIDSet 28 0 R >>
 endobj
 30 0 obj
-<< /Length 861 >>        
+<< /Length 835 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -167,8 +167,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 13 beginbfchar
 <001B> <0041>
 <002F> <0064>
@@ -213,7 +211,7 @@ endobj
 << /Type /FontDescriptor /FontName /ISVPDC+LMSans10-Regular /Flags 4 /FontBBox [ -420 -309 1431 1154 ] /Ascent 1154 /CapHeight 694 /Descent -309 /ItalicAngle 0 /StemV 93 /XHeight 444 /FontFile3 35 0 R /CIDSet 34 0 R >>
 endobj
 36 0 obj
-<< /Length 771 >>        
+<< /Length 745 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -235,8 +233,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 7 beginbfchar
 <0023> <0062>
 <0042> <0069>
@@ -298,10 +294,10 @@ xref
 0000003285 00000 n 
 0000000068 00000 n 
 0000000281 00000 n 
-0000014605 00000 n 
+0000014553 00000 n 
 0000000349 00000 n 
 0000000848 00000 n 
-0000011379 00000 n 
+0000011327 00000 n 
 0000000918 00000 n 
 0000001421 00000 n 
 0000003373 00000 n 
@@ -312,8 +308,8 @@ xref
 0000001491 00000 n 
 0000004695 00000 n 
 0000004755 00000 n 
-0000008650 00000 n 
-0000014748 00000 n 
+0000008624 00000 n 
+0000014696 00000 n 
 0000001979 00000 n 
 0000004886 00000 n 
 0000005015 00000 n 
@@ -321,22 +317,22 @@ xref
 0000005175 00000 n 
 0000005250 00000 n 
 0000007729 00000 n 
-0000008804 00000 n 
-0000009004 00000 n 
-0000010313 00000 n 
-0000009103 00000 n 
-0000009177 00000 n 
-0000010548 00000 n 
-0000011532 00000 n 
-0000011731 00000 n 
-0000014387 00000 n 
-0000011754 00000 n 
-0000014809 00000 n 
-0000014910 00000 n 
-0000014946 00000 n 
-0000015067 00000 n 
+0000008778 00000 n 
+0000008978 00000 n 
+0000010287 00000 n 
+0000009077 00000 n 
+0000009151 00000 n 
+0000010522 00000 n 
+0000011480 00000 n 
+0000011679 00000 n 
+0000014335 00000 n 
+0000011702 00000 n 
+0000014757 00000 n 
+0000014858 00000 n 
+0000014894 00000 n 
+0000015015 00000 n 
 trailer
 << /Size 45 /Root 43 0 R /Info 44 0 R >>
 startxref
-15191
+15139
 %%EOF

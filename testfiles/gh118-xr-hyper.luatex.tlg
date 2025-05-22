@@ -3,11 +3,11 @@ Don't change this file in any respect.
 > \r@sec-no-hyper=macro:
 ->{1}{1}{}{}{test-xr-nohyper.pdf}.
 <recently read> \r@sec-no-hyper 
-l. ......ndafter\show\csname r@sec-no-hyper\endcsname
+l. ......after\show\csname r@sec-no-hyper\endcsname
 > \r@sec-hyper=macro:
 ->{1}{1}{Section hyper}{section.1}{test-xr-hyper.pdf}.
 <recently read> \r@sec-hyper 
-l. ...\expandafter\show\csname r@sec-hyper\endcsname
+l. ......andafter\show\csname r@sec-hyper\endcsname
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0, direction TLT
 .\hbox(0.0+0.0)x0.0, direction TLT

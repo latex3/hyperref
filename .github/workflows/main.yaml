@@ -22,7 +22,7 @@ jobs:
           # different workflows.
           package_file: .github/tl_packages
       - run: l3build install
-      - run: l3build check
+      - run: l3build check -S
       - name: Archive failed test output
         if: ${{ always() }}
         uses: zauguin/l3build-failure-artifacts@v1

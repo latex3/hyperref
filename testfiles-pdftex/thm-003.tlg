@@ -199,6 +199,7 @@ Completed box being shipped out [1]
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
 .......\pdfdest name{definition.1.0.1} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -468,6 +469,7 @@ Completed box being shipped out [1]
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
 .......\pdfdest name{definition.1.0.2} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -738,6 +740,7 @@ Completed box being shipped out [1]
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
 .......\pdfdest name{definition.1.0.3} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0
@@ -1007,6 +1010,7 @@ Completed box being shipped out [1]
 ......\hbox(0.0+0.0)x0.0, shifted -14.5
 .......\pdfdest name{definition.1.0.4} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\hbox(9.0+3.0)x180.4847
 ......\glue 0.0
 ......\glue 0.0

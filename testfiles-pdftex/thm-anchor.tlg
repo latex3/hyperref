@@ -29,12 +29,13 @@ Completed box being shipped out [1]
 ....\write-{}
 ....\pdfdest name{Doc-Start} xyz
 ....\glue(\topskip) 3.05556
-....\hbox(6.94444+0.0)x345.0, glue set 266.37817fil
+....\hbox(6.94444+0.0)x345.0, glue set 268.42262fil
 .....\penalty 10000
 .....\hbox(0.0+0.0)x0.0
 ......\hbox(0.0+0.0)x0.0, shifted -12.0
 .......\pdfdest name{theorem.1} xyz
 .......\penalty 10000
+.....\kern 0.0
 .....\kern 0.0
 .....\OT1/cmr/bx/n/10 T
 .....\OT1/cmr/bx/n/10 h
@@ -49,12 +50,11 @@ Completed box being shipped out [1]
 .....\kern 0.0
 .....\OT1/cmr/bx/n/10 .
 .....\glue 5.0 plus 1.0 minus 1.0
-.....\OT1/cmr/m/it/10 b
-.....\OT1/cmr/m/it/10 l
 .....\OT1/cmr/m/it/10 a
-.....\glue 3.57774 plus 1.53333 minus 1.0222
-.....\write1{\newlabel{thm:lab}{{1}{\thepage }{}{theorem.1}{}}}
-.....\penalty 10000
+.....\OT1/cmr/m/it/10 b
+.....\kern-0.51112
+.....\OT1/cmr/m/it/10 c
+.....\write1{\newlabel{blub}{{1}{\thepage }{}{theorem.1}{}}}
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
@@ -81,6 +81,6 @@ Completed box being shipped out [1]
 .....\OT1/cmr/m/n/10 1
 .....\glue 0.0 plus 1.0fil
 .\kern 0.0
-(gh304-amsthm.aux)
-Package rerunfilecheck Info: File `gh304-amsthm.out' has not changed.
+(thm-anchor.aux)
+Package rerunfilecheck Info: File `thm-anchor.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.

@@ -1,3 +1,7 @@
+2025-06-17 Ulrike Fischer
+	* hyperref.dtx: set the pdfa key automatically if an A-standard is 
+      set in \DocumentMetadata. issue #387
+
 2025-06-01 Ulrike Fischer
 	* hyperref.dtx: change hyperindexformat to hyperxindexformat, issue #386
 

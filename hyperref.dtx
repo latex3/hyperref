@@ -6502,9 +6502,18 @@
 \define@key{Hyp}{pdfdisplaydoctitle}[true]{%
   \Hy@boolkey{pdfdisplaydoctitle}{#1}%
 }
-\define@key{Hyp}{pdfa}[true]{%
-  \Hy@boolkey{pdfa}{#1}%
+\define@key{Hyp}{pdfa}[true]{%  
+ \IfDocumentMetadataTF
+  {
+    \PackageWarning{hyperref}{%
+     \string\DocumentMetadata\space detected.\MessageBreak
+     The 'pdfa' key will be ignored.\MessageBreak
+     Please set the PDF/A standard in \string\DocumentMetadata\MessageBreak
+     with the 'pdfstandard' key.}  
+  }
+  {\Hy@boolkey{pdfa}{#1}}%  
 }
+
 \define@key{Hyp}{pdfnewwindow}[true]{%
   \def\Hy@temp{#1}%
   \ifx\Hy@temp\@empty
@@ -6833,8 +6842,21 @@
 %    \end{macrocode}
 %
 % \subsection{PDF/A}
-%
+% If an A-standard has been set in \cs{DocumentMetadata} hyperref should set the pdfa
+% key too.
 %    \begin{macrocode}
+\ExplSyntaxOn
+\IfDocumentMetadataT
+ {
+   \tl_if_empty:eTF{\GetDocumentProperties{document/pdfstandard}}
+    {
+      \Hy@pdfafalse
+    }
+    {
+      \Hy@pdfatrue
+    }
+ }
+\ExplSyntaxOff 
 \Hy@DisableOption{pdfa}
 %    \end{macrocode}
 %

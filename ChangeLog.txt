@@ -1,3 +1,6 @@
+2025-06-17 Ulrike Fischer
+	* hyperref.dtx: suppress pdfa key and message if \DocumentMetadata is detected issue #387
+
 2025-06-01 Ulrike Fischer
 	* hyperref.dtx: change hyperindexformat to hyperxindexformat, issue #386
 

@@ -6503,7 +6503,15 @@
   \Hy@boolkey{pdfdisplaydoctitle}{#1}%
 }
 \define@key{Hyp}{pdfa}[true]{%
-  \Hy@boolkey{pdfa}{#1}%
+ \IfDocumentMetadataTF
+  {%
+    \PackageWarning{hyperref}{%
+     \string\DocumentMetadata\space detected. \MessageBreak 
+     The 'pdfa' key will be ignored.\MessageBreak
+     Set the PDF standard in \string\DocumentMetadata.\MessageBreak 
+    }
+  }
+  {\Hy@boolkey{pdfa}{#1}}%
 }
 \define@key{Hyp}{pdfnewwindow}[true]{%
   \def\Hy@temp{#1}%
@@ -9353,11 +9361,14 @@
 \else
   \Hy@Info{Link coloring with OCG OFF}%
 \fi
-\ifHy@pdfa
-  \Hy@Info{PDF/A mode ON}%
-\else
-  \Hy@Info{PDF/A mode OFF}%
-\fi
+\IfDocumentMetadataF
+ {%
+  \ifHy@pdfa
+   \Hy@Info{PDF/A mode ON}%
+  \else
+   \Hy@Info{PDF/A mode OFF}%
+  \fi
+ } 
 %    \end{macrocode}
 % \section{Low-level utility macros}
 % We need unrestricted access to the |#|, |~| and |"| characters, so make

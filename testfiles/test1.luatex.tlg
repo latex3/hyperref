@@ -1166,9 +1166,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\marks2{\__mark_id:n {30}\MakeUppercase    []{2.5. \ three}}
-.\marks3{\__mark_id:n {31}\MakeUppercase    []{2.5. \ three}}
-.\mark{{\MakeUppercase    []{Chapter\ 2. \ Second part}}{\MakeUppercase    []{2.5. \ three}}}
+.\marks2{\__mark_value:nn {30}{\MakeUppercase    []{2.5. \ three}}}
+.\marks3{\__mark_value:nn {31}{\MakeUppercase    []{2.5. \ three}}}
 .\write4{\protect \BOOKMARK [1][-]{section.28}{\376\377\0002\000.\0005\000\040\000t\000h\000r\000e\000e}{chapter.14}% 13}
 .\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {2.5}three}{\thepage }{section.28}\protected@file@percent }}
 .\penalty 10000

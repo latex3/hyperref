@@ -80,7 +80,7 @@ Completed box being shipped out [2]
 .....\hbox(0.0+0.0)x345.0, direction TLT
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
-...\vbox(550.0+0.0)x345.0, glue set 530.0304fil, direction TLT
+...\vbox(550.0+0.0)x345.0, glue set 529.94403fil, direction TLT
 ....\glue(\topskip) 0.20801
 ....\hbox(9.79199+0.0864)x345.0, glue set 255.30246fil, direction TLT
 .....\localpar
@@ -120,7 +120,6 @@ Completed box being shipped out [2]
 ....\write1{\newlabel{sec}{{}{\thepage }{some section}{section*.1}{}}}
 ....\penalty 10000
 ....\penalty 10000
-....\glue -0.0864
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil

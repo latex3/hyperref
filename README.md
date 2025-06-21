@@ -1,6 +1,6 @@
 # README for hyperref bundle
 
-Version 2025-05-20 v7.01m
+Version 2025-06-21 v7.01n
 
 ## INTRODUCTION
 
@@ -98,7 +98,7 @@ A bug report should contain:
  * Used drivers/programs.
  * Version information about used packages and programs.
    * If you are using LaTeX, then add "`\listfiles`". Then
-     a list of version informations is printed at the end
+     a list of version information is printed at the end
      of the LaTeX run.
  * Please no other files than the minimal test file.
    The other files .log, .dvi, .ps, .pdf are seldom necessary,

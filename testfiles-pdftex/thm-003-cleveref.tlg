@@ -34,7 +34,7 @@ Completed box being shipped out [1]
 .....\hbox(0.0+0.0)x390.0
 ...\glue 25.0
 ...\glue(\lineskip) 0.0
-...\vbox(592.0+0.0)x390.0, glue set 155.98334fil
+...\vbox(592.0+0.0)x390.0, glue set 153.65027fil
 ....\write-{}
 ....\pdfdest name{Doc-Start} xyz
 ....\write-{}
@@ -1174,7 +1174,6 @@ Completed box being shipped out [1]
 .....\glue(\rightskip) 0.0
 ....\penalty -51
 ....\glue 10.0 plus 4.0 minus 6.0
-....\glue -2.33331
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil

@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2025-05-20 v7.01m %
+%<!none&!packageEnd>  [2025-06-21 v7.01n %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -1053,17 +1053,17 @@
 \@ifundefined{text_uppercase:n}{}
  {
    \def\MakeUppercaseUnsupportedInPdfStrings#1
-         {\use:e 
+         {\use:e
            {\exp_args:Ne
               \text_uppercase:nn{\BCPdata { casing }}{#1}
            }
          }
    \def\MakeLowercaseUnsupportedInPdfStrings#1
-         {\use:e 
+         {\use:e
            {\exp_args:Ne
               \text_lowercase:nn{\BCPdata { casing }}{#1}
            }
-         }        
+         }
  }
 \ExplSyntaxOff
 %    \end{macrocode}
@@ -1147,7 +1147,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Internal encoding commands.}
-%    \cs{pdfstringdef} interpretes text strings which are not allowed
+%    \cs{pdfstringdef} interprets text strings which are not allowed
 %    to contain mathematical stuff. The text glyph commands will produce
 %    a warning, if called in math mode. But this warning disturbs while
 %    expanding. Therefore we check for math mode here, before
@@ -1158,7 +1158,7 @@
 %    If a glyph is used, that isn't in the PD1/PU encoding there will
 %    be an infinite error loop, because the NFSS encoding stuff
 %    have to be expanded unprotected (\cs{edef}), so that the
-%    assigments of \cs{@changed@cmd} don't take place.
+%    assignments of \cs{@changed@cmd} don't take place.
 %    To patch this behaviour I only found \cs{@inmathwarn}
 %    as a usable hook. While an \cs{edef} a warning message by
 %    \cs{@inmathwarn} or \cs{TextSymbolUnavailable} cannot be give out,
@@ -1319,9 +1319,9 @@
 %
 % \paragraph{TextOrMath}
 % The \cs{TextOrMath} command is protected in a current \LaTeX{} and
-% so can not be processed. 
+% so can not be processed.
 %    \begin{macrocode}
-   \def\TextOrMath{\ifmmode\expandafter\@secondoftwo\else\expandafter\@firstoftwo\fi}%   
+   \def\TextOrMath{\ifmmode\expandafter\@secondoftwo\else\expandafter\@firstoftwo\fi}%
 %    \end{macrocode}
 % \paragraph{Support of math commands without prefix \texttt{text}.}
 %    This is controlled by option ``psdextra'' and only
@@ -1336,7 +1336,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Package babel.}
-%    Whereever ``naturalnames'' is used, disable \cs{textlatin}
+%    Wherever ``naturalnames'' is used, disable \cs{textlatin}
 %    (from Babel 3.6k). Thanks to Felix Neubauer
 %    (Email: \Email{Felix.Neubauer@gmx.net}).
 %    \begin{macrocode}
@@ -1520,7 +1520,7 @@
 %      it does not expand the font encoding commands. They are
 %      made roboust and protect themselves.
 %    \item[\cs{csname}:] First the string is
-%      expanded whithin a \cs{csname} and \cs{endcsname}.
+%      expanded within a \cs{csname} and \cs{endcsname}.
 %      Then the command name is converted to characters
 %      with catcode 12 by \cs{string} and the first
 %      escape character removed by \cs{@gobble}.
@@ -1539,7 +1539,7 @@
 %    \item[\cs{edef}] This version uses this standard form for expansion.
 %      It is stronger than \LaTeX's \cs{protected@edef}.
 %      So the font encoding mechanism works and the glyph commands
-%      are converted to the correct tokens for PDF strings whith the
+%      are converted to the correct tokens for PDF strings with the
 %      definitions of the PD1 encoding.
 %      Because the protecting mechanism of \LaTeX{} doesn't work
 %      within an \cs{edef}, there are situations thinkable where
@@ -1607,7 +1607,7 @@
 %    In order to check the tokens we must separate them. This will be
 %    done with \TeX's argument parsing. With this method
 %    we must the following item takes into account, that makes
-%    makes things a litte more complicate:
+%    makes things a little more complicated:
 %    \begin{itemize}
 %    \item \TeX{} does not accept a space as an undelimited argument,
 %    it cancels space tokens while looking for an undelimited
@@ -1691,7 +1691,7 @@
 %    \end{macrocode}
 %
 % \paragraph{Backslash.}
-%    The double backslash disturbs parsing octal sequenzes, for
+%    The double backslash disturbs parsing octal sequences, for
 %    example in an string like |abc\\051| the sequence \cs{051}
 %    is detected although the second \cs{} belongs to the
 %    first backslash.
@@ -2197,7 +2197,7 @@
 %    \end{macro}
 % \subsubsection{Babel languages}
 % change 2020-10-10: moved language patches to its own file as a first step
-% toward removing them completly.
+% toward removing them completely.
 %    \begin{macrocode}
 \newif\ifHy@next
 %</package>
@@ -2738,7 +2738,7 @@
 %    \begin{macro}{\HyPsd@XSPACE}
 %    \begin{macro}{\HyPsd@ITALCORR}
 %    \begin{macro}{\HyPsd@GLYPHERR}
-%    Some commands and informations cannot be utilized before
+%    Some commands and information cannot be utilized before
 %    the string expansion and the checking process.
 %    Command names are filtered out, so we need another way
 %    to transport the information: An unusual |#| with catcode
@@ -3165,7 +3165,7 @@
 %    \begin{macro}{\HyPsd@RemoveMask}
 %    \cs{HyPsd@RemoveMask} removes the protecting \verb+|+.
 %    It is used by \cs{HyPsd@@ProtectSpacesFi} and by the code in
-%    \cs{pdfstringdef} that removes the grouping chararcters.
+%    \cs{pdfstringdef} that removes the grouping characters.
 %    \begin{macrocode}
 \def\HyPsd@RemoveMask|#1|\HyPsd@End#2{%
   \xdef#2{\unexpanded\expandafter{#1}}%
@@ -3839,7 +3839,7 @@
     \lccode`\~=`^^f4\relax
   \lowercase{\endgroup
     \def\HyPsd@UTFviii{%
-      \HyPsd@expand@utfviii 
+      \HyPsd@expand@utfviii
       \let\UTFviii@two@octets\HyPsd@UTFviii@two
       \let\UTFviii@three@octets\HyPsd@UTFviii@three
       \let\UTFviii@four@octets\HyPsd@UTFviii@four
@@ -4258,14 +4258,14 @@
 %    \end{macrocode}
 %
 % \subsection{Package xr and xr-hyper}
-%  
+%
 % The beta version of xr that supports \cmd{\XR@addURL} is called
-% \verb|xr-hyper|. 
+% \verb|xr-hyper|.
 % If reading external aux files check whether they have a non zero
 % fourth field in |\newlabel| and if so, add the URL as the fifth field.
 % Change 2023-05-14: xr-hyper adds the field.
 %
-% 
+%
 %    \begin{macrocode}
 \def\Hy@true{true}
 \def\Hy@false{false}
@@ -4324,7 +4324,7 @@
 %    \begin{macrocode}
 \@ifl@t@r\fmtversion{2023-11-01}
  {\NewSocket{hyp/raisedlink}{1}}
- {\providecommand\UseSocket[2]{#2}} 
+ {\providecommand\UseSocket[2]{#2}}
 \def\Hy@raisedlink#1{%
   \ifvmode
     \UseSocket{hyp/raisedlink}{#1}%
@@ -4707,7 +4707,7 @@
     \ifHy@breaklinks
       \Hy@WarningNoLine{%
         You have enabled option `breaklinks'.\MessageBreak
-        But driver `\Hy@driver.def' does not suppport this.\MessageBreak
+        But driver `\Hy@driver.def' does not support this.\MessageBreak
         Expect trouble with the link areas of broken links%
       }%
     \fi
@@ -5101,7 +5101,7 @@
      {\Hy@Warning{%
       Missing driver file `hhitex.def',\MessageBreak
       ignoring hitex driver%
-     }}% 
+     }}%
   \else
     \Hy@Error{%
       Wrong driver option `hitex',\MessageBreak
@@ -5140,7 +5140,10 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\let\HyOpt@CustomDriver\@empty
+\IfPDFManagementActiveTF
+ {\def\HyOpt@CustomDriver{hgeneric-testphase}}
+ {\let\HyOpt@CustomDriver\@empty}
+
 \define@key{Hyp}{customdriver}{%
   \IfFileExists{#1.def}{%
     \def\HyOpt@CustomDriver{#1}%
@@ -6503,8 +6506,17 @@
   \Hy@boolkey{pdfdisplaydoctitle}{#1}%
 }
 \define@key{Hyp}{pdfa}[true]{%
-  \Hy@boolkey{pdfa}{#1}%
+ \IfDocumentMetadataTF
+  {
+    \PackageWarning{hyperref}{%
+     \string\DocumentMetadata\space detected.\MessageBreak
+     The 'pdfa' key will be ignored.\MessageBreak
+     Please set the PDF/A standard in \string\DocumentMetadata\MessageBreak
+     with the 'pdfstandard' key.}
+  }
+  {\Hy@boolkey{pdfa}{#1}}%
 }
+
 \define@key{Hyp}{pdfnewwindow}[true]{%
   \def\Hy@temp{#1}%
   \ifx\Hy@temp\@empty
@@ -6833,8 +6845,21 @@
 %    \end{macrocode}
 %
 % \subsection{PDF/A}
-%
+% If an A-standard has been set in \cs{DocumentMetadata} hyperref should set the pdfa
+% key too.
 %    \begin{macrocode}
+\ExplSyntaxOn
+\IfDocumentMetadataT
+ {
+   \tl_if_empty:eTF{\GetDocumentProperties{document/pdfstandard}}
+    {
+      \Hy@pdfafalse
+    }
+    {
+      \Hy@pdfatrue
+    }
+ }
+\ExplSyntaxOff
 \Hy@DisableOption{pdfa}
 %    \end{macrocode}
 %
@@ -7047,7 +7072,7 @@
   \ifx\Hy@driver\@empty
   \else
    \def\Hy@temp{hhitex}%
-   \ifhint    
+   \ifhint
      \ifx\Hy@driver\Hy@temp
      \else
         \Hy@WarningNoLine{%
@@ -7056,9 +7081,9 @@
           Forcing driver `\Hy@temp.def'%
         }%
         \let\Hy@driver\Hy@temp
-     \fi        
-    \fi 
-  \fi    
+     \fi
+    \fi
+  \fi
   \ifx\Hy@driver\@empty
   \else
     \def\Hy@temp{hvtexhtm}%
@@ -7141,7 +7166,7 @@
                   \fi
                 \fi
               \fi
-            \fi  
+            \fi
           \fi
         \fi
       \fi
@@ -9506,7 +9531,7 @@
 % All the code is delayed to |\begin{document}|
 % change 2023-08-13: with a new format it is no longer
 % needed to handle different |\newlabel|
-% definitions. The code can be removed completly later.
+% definitions. The code can be removed completely later.
 %    \begin{macrocode}
 %<*package>
 \@ifl@t@r\fmtversion{2023-06-01}{}
@@ -9576,7 +9601,7 @@
 % \section{Title strings}
 %
 %    If options |pdftitle| and |pdfauthor| are not used,
-%    these informations for the pdf information dictionary
+%    these data for the pdf information dictionary
 %    can be extracted by the \cmd{\title} and \cmd{\author}.
 %    \begin{macrocode}
 \ifHy@pdfusetitle
@@ -9679,7 +9704,6 @@
 % \section{Every page}
 %
 %    \begin{macrocode}
-\RequirePackage{atbegshi}[2007/09/09]
 \let\Hy@EveryPageHook\@empty
 \let\Hy@EveryPageBoxHook\@empty
 \let\Hy@FirstPageHook\@empty
@@ -9700,7 +9724,7 @@
     \global\let\Hy@FirstPageHook\@empty
   }%
 }{%
-  \AtBeginShipoutFirst{%
+  \AddToHook{shipout/firstpage}{%
     \Hy@FirstPageHook
   }%
 }
@@ -9870,7 +9894,8 @@
 %    \begin{macro}{\HyPL@@CheckThePage}
 %    The first check is, is \cmd{\thepage} is defined
 %    such as in \LaTeX, e.\,g.: |\csname @arabic\endcsname\c@page|.
-%    In the current implemenation the check fails, if there is
+%    In the current implement
+%    ation the check fails, if there is
 %    another \cmd{\csname} before.
 %
 %    The second check tries to detect |\arabic{page}| at the
@@ -9912,7 +9937,7 @@
 %    The help macro \cmd{\HyPL@Format} is executed while
 %    a \cmd{\protected@edef} in the second check
 %    method of \cmd{\HyPL@@CheckPage}.
-%    The first occurences of, for example, |\arabic{page}| is
+%    The first occurrences of, for example, |\arabic{page}| is
 %    marked by \cmd{\HyPL@found} that is also defined by
 %    \cmd{\csname}.
 %    \begin{macrocode}
@@ -10078,7 +10103,7 @@
 %    final \cs{clearpage} and to avoid a \cs{clearpage}
 %    in \cs{AtEndDocument}.
 %    Then the PDF catalog entry for |\PageLabels| is set.
-%    \begin{macrocode}  
+%    \begin{macrocode}
   \AddToHook{enddocument/afteraux}{%
     \HyPL@SetPageLabels
   }%
@@ -10262,7 +10287,7 @@
 % a trap to make |\theH<name>| be the same as |\arabic{<name>}|,
 % if |\theH<name>| is not defined, but this is not necessarily a good idea.
 % Alternatively, the `naturalnames' option uses whatever \LaTeX\
-% provides, which may be useable. But then its up to you to make
+% provides, which may be usable. But then its up to you to make
 % sure these are legal PDF and HTML names. The `hypertexnames=false' option
 % just makes up arbitrary names.
 %
@@ -10320,7 +10345,7 @@
     \providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
     \providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
     \providecommand\theHthm          {\theHsection.\arabic{thm}}
-  }  
+  }
 %    \end{macrocode}
 % Thanks to Greta Meyer (gbd@pop.cwru.edu) for making me realize
 % that enumeration starts at 0 for every list! But |\item|
@@ -10347,7 +10372,7 @@
    \providecommand\theHenumiv    {\theHItem}
    \providecommand\theHHfootnote {\arabic{Hfootnote}}
    \providecommand\theHmpfootnote{\arabic{mpfootnote}}
- }  
+ }
 %    \end{macrocode}
 % Tanmoy asked for this default handling of undefined |\theH<name>|
 % situations. It really isn't clear what would be ideal, whether to
@@ -10377,7 +10402,7 @@
   \NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
   \AssignSocketPlug{refstepcounter}{hyperref}
 %    \end{macrocode}
-% change 2024-11-05: cleveref relies on refstepcounter to update its data. 
+% change 2024-11-05: cleveref relies on refstepcounter to update its data.
 %    \begin{macrocode}
   \AddToHook{package/cleveref/after}
    {
@@ -10388,11 +10413,11 @@
          #1%
          {\firstaid@cref@updatelabeldata{\@currentcounter}}%
         \fi}
-       \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}   
+       \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}
       }
    }
   \NewSocketPlug{refstepcounter/target}{hyperref}
-    {   
+    {
       \bool_lazy_and:nnT
       { \l__hyp_target_create_bool }
       { ! \legacy_if_p:n{@skiphyperref} }
@@ -10408,7 +10433,7 @@
           }
        }
      }
-    \AssignSocketPlug{refstepcounter/target}{hyperref} 
+    \AssignSocketPlug{refstepcounter/target}{hyperref}
   }
   {
     \def\refstepcounter#1{%
@@ -10438,8 +10463,12 @@
 % AMS\LaTeX\ processes all equations twice; we want to make sure
 % that the hyper stuff is not executed twice, so we use the AMS
 % |\ifmeasuring@|, initialized if AMS math is not used.
+% change 2025-06-20: test if the switch already exist, see tagging-project issue 920.
 %    \begin{macrocode}
-\newif\ifmeasuring@\measuring@false
+\ifcsname ifmeasuring@\endcsname
+\else
+ \expandafter\newif\csname ifmeasuring@\endcsname\measuring@false
+\fi
 \newcommand\Hy@ifnotmeasuring[1]{#1}
 \AddToHook{package/amsmath/after}
  {
@@ -10456,7 +10485,7 @@
   \Hy@ifnotmeasuring
    {\Hy@raisedlink{%
       \hyper@anchorstart{\@currentHref}\hyper@anchorend
-    }}%  
+    }}%
 }
 %    \end{macrocode}
 %    \end{macro}
@@ -10706,15 +10735,15 @@
 % \section{Package varwidth support}
 % 2023-11-07: varwidth needs a special configuration point to inserts its handler.
 % We use a socket for this.
-% 
+%
 %    \begin{macrocode}
 \@ifl@t@r\fmtversion{2023-11-01}
  {
    \AddToHook{package/varwidth/after}
-    { 
+    {
       \NewSocketPlug{hyp/raisedlink}{varwidth}{\@vwid@wrap{#1}}
       \appto\@vwid@setup{\AssignSocketPlug{hyp/raisedlink}{varwidth}}
-    }  
+    }
  }{}
 %    \end{macrocode}
 % \section{Package titlesec and titletoc support}
@@ -10805,7 +10834,7 @@
       }%
     }%
   \expandafter\x\LT@start\@nil
- }{}  
+ }{}
 }{}
 %    \end{macrocode}
 %
@@ -10815,24 +10844,24 @@
 % |\refstepcounter|. If, however, it is in AMS math, we do not
 % do anything, as the tag mechanism is used there (see section \ref{ams}).
 % change 2023-06-14: previously hyperref contained code that moved
-% the equation incrementation inside the math environment to 
-% avoid specials outside and a wrong vertical spacing of equation environments. 
+% the equation incrementation inside the math environment to
+% avoid specials outside and a wrong vertical spacing of equation environments.
 % Since 2021/08/24 this code is now in amsmath directly and so has been removed here.
-% 
-% This and more math related patches can be suppressed with 
+%
+% This and more math related patches can be suppressed with
 % |\hyper@nopatch@mathenv|
 %    \begin{macrocode}
 \let\new@refstepcounter\refstepcounter
 \let\H@equation\equation
 \let\H@endequation\endequation
 %    \end{macrocode}
-% 
+%
 %    \begin{macrocode}
 \@ifundefined{hyper@nopatch@mathenv}{%
 %    \end{macrocode}
 % If amsmath was loaded before the following does nothing.
 % If amsmath is loaded later it will overwrite the definition again,
-% which is what is wanted here. 
+% which is what is wanted here.
 % If it is not loaded the new definition of equation
 % will be used.
 %    \begin{macrocode}
@@ -10859,7 +10888,7 @@
       \H@endequation
     }%
   }
-}{}  
+}{}
 %    \end{macrocode}
 % My goodness, why can't \LaTeX{} be consistent? Why is |\eqnarray|
 % set up differently from other objects?
@@ -10894,7 +10923,7 @@
   \def\endeqnarray{%
     \H@endeqnarray
   }
-}{}  
+}{}
 %    \end{macrocode}
 % This is quite heavy-handed, but it works for now. If its an |eqnarray*|
 % we need to disable the hyperref actions. There may well be a cleaner
@@ -10949,7 +10978,7 @@
 %    \end{macrocode}
 %
 % Support for amsmath's \texttt{subequations}:
-% change 2023-06-14: we use hooks to no longer depend on 
+% change 2023-06-14: we use hooks to no longer depend on
 % amsmath being loaded before hyperref.
 % Once amsmath sets the theH-representation itself this
 % can go completely.
@@ -10960,61 +10989,61 @@
     \protected@edef\theHparentequation{\theHequation}%
     \addtocounter{equation}{-1}%
  }
- 
+
 \AddToHook{cmd/subequations/after}
  {%
    \def\theHequation{\theHparentequation\alph{equation}}%
    \ignorespaces
- } 
+ }
 %    \end{macrocode}
 %
-% \section{Support for theorems} 
-% 
+% \section{Support for theorems}
+%
 % Hyperlink support in theorems has to resolve typically three problems:
 % \begin{itemize}
 % \item The \cs{refstepcounter} can be issued to early. The target it produces
-% can be separated from the theorem and then the link if wrong (see testfiles thm-005-xx). 
-% It can also affect spacing. 
+% can be separated from the theorem and then the link if wrong (see testfiles thm-005-xx).
+% It can also affect spacing.
 % This means that it is better if this \cs{refstepcounter} doesn't produce a target.
 %
 % \item The natural place for the target (before the theorem label) is normally not printed
-% directly but delayed to the next paragraph begin (through the \cs{item} code or by other means). 
-% and \cs{label} commands used directly at the begin of the environment are perhaps 
-% processed \emph{before} the target is created 
+% directly but delayed to the next paragraph begin (through the \cs{item} code or by other means).
+% and \cs{label} commands used directly at the begin of the environment are perhaps
+% processed \emph{before} the target is created
 % and so do not know the correct \cs{@currentHref} value. That means that if
 % \cs{refstepcounter} does not produce a target, it should nevertheless update the target
 % name.
-% 
+%
 % \item The target should be placed (in horizontal mode) before the theorem label to avoid
-% side effects on spacing. For this a suitable place must be 
-% found depending on the actual theorem definition. 
-% \end{itemize} 
-% 
-% Theorems typically issue the \cs{refstepcounter} in \cs{@thm}. 
-% The first two points can therefore be resolved by patching this command 
-% and replacing the \cs{refstepcounter}. 
-% 
+% side effects on spacing. For this a suitable place must be
+% found depending on the actual theorem definition.
+% \end{itemize}
+%
+% Theorems typically issue the \cs{refstepcounter} in \cs{@thm}.
+% The first two points can therefore be resolved by patching this command
+% and replacing the \cs{refstepcounter}.
+%
 % The last point is the most complicated. Simply moving at the point \cs{refstepcounter}
 % is encountered into the next para hook doesn't work, as this can be in a header if there is page
-% break. The next item hook doesn't work for the same reason, 
+% break. The next item hook doesn't work for the same reason,
 % also not every theorem environment actually use \cs{item} (e.g. \texttt{amsthm} and ams-classes).
 % Patching (or using a hook) \cs{@begintheorem} doesn't work either as \texttt{ntheorem}
-% redefines this on the fly. 
-% 
+% redefines this on the fly.
+%
 % For now we move the target creation into the item hook. This is not perfect,
 % as it can end up in header or be to much to the right, but there is not really
 % a better place.
-% 
-% The patch will not apply to 
+%
+% The patch will not apply to
 % \texttt{cleveref}, this means that with cleveref there
 % can be a page break between target and theorem but beside this
 % it hopefully it does the right thing.
-% \cs{@currentHref} is updated directly for labels set before 
+% \cs{@currentHref} is updated directly for labels set before
 % the actual start of the paragraph. The target can be behind
 % a target created from a following list, so we restore \cs{@currentHref}
 % just in case.
-% Later we could use sockets here (or hope that the packages take this over. 
-% 
+% Later we could use sockets here (or hope that the packages take this over.
+%
 %    \begin{macrocode}
 \newcommand\Hy@theorem@refstepcounter[1]
   {%
@@ -11022,7 +11051,7 @@
    \hyper@makecurrent{#1}%
    \global\let\Hy@dth@currentHref\@currentHref
    \Hy@theorem@makelinktarget{\Hy@dth@currentHref}%
-  } 
+  }
 \newcommand\Hy@theorem@makelinktarget[1]
  {
    \AddToHookNext{cmd/item/before}
@@ -11031,8 +11060,8 @@
         \MakeLinkTarget*{#1}% \Hy@dth@currentHref
         \global\let\@currentHref\Hy@tempa
        }%
-     }%   
- }  
+     }%
+ }
 %    \end{macrocode}
 % amsthm doesn't issue an item in the theorem, we delay the target into
 % \cs{deferred@thm@head} and hope that it always begins a paragraph.
@@ -11051,14 +11080,14 @@
           \MakeLinkTarget*{#1}%
           \global\let\@currentHref\Hy@tempa
          }%
-       }%  
+       }%
      }%
    }%
- }  
-\@ifundefined{hyper@nopatch@thm}{%  
-\AtBeginDocument{%  
+ }
+\@ifundefined{hyper@nopatch@thm}{%
+\AtBeginDocument{%
  \@ifpackageloaded{cleveref}
-  {\AddToHook{cmd/@thm/before}{\ifhmode\unskip\fi}} 
+  {\AddToHook{cmd/@thm/before}{\ifhmode\unskip\fi}}
   {%
    \ifpatchable\@thm{\refstepcounter}
      {\patchcmd\@thm{\refstepcounter}{\Hy@theorem@refstepcounter}{}{}}
@@ -11083,13 +11112,13 @@
     \let\theHfootnote\undefined
     \newcounter{Hfootnote}
     \let\theHfootnote\H@@theHfootnote
-   }% 
+   }%
 %    \end{macrocode}
 % where is this used?
 %    \begin{macrocode}
   \@ifundefined{theHHmpfootnote}{%
    \let\theHHmpfootnote\theHHfootnote
-   }{}    
+   }{}
   \let\H@@footnotetext\@footnotetext
   \let\H@@footnotemark\@footnotemark
   \def\@xfootnotenext[#1]{%
@@ -11201,7 +11230,7 @@
 %    \end{macrocode}
 %
 %    Support for footnotes in p columns of longtable.
-%    Here \verb+\footnote+ commands are splitted into
+%    Here \verb+\footnote+ commands are split into
 %    \verb+\footnotemark+ and a call of \verb+\footnotetext+
 %    with the optional argument, that is not supported
 %    by hyperref. The result is a link by \verb+\footnotemark+
@@ -11445,7 +11474,7 @@
 % as the anchor are set manually here, we have to update the tagging info.
 % For now we test for the format but this should go again in 2025.
 %    \begin{macrocode}
-        \IfFormatAtLeastTF{2024-11-01}{\UseTaggingSocket{recordtarget}}{}%        
+        \IfFormatAtLeastTF{2024-11-01}{\UseTaggingSocket{recordtarget}}{}%
       }%
     \fi
     \par
@@ -11630,7 +11659,7 @@
        \fi
        \ignorespaces
      }%
-  }{}%   
+  }{}%
 }{}
 %    \end{macrocode}
 %
@@ -11825,8 +11854,8 @@
 %    early, if lots of float pages will follow.
 %    Therefore currently nothing is done by hyperref.
 %
-% This where we supply a destination for each page. 
-% 
+% This where we supply a destination for each page.
+%
 % \marginpar{Experimental!}The name of destination
 % is stored in the global command \cs{@currentHpage}, this allows it to retrieve
 % it with an extended reference system like zref or the new property code from \LaTeX{}
@@ -11897,7 +11926,7 @@
     \ifHy@hypertexnames
       \ifHy@plainpages
         \def\Hy@TempPageAnchor{\hyper@@anchor{page.\the\c@page}}%
-        \xdef\@currentHpage{page.\the\c@page}%        
+        \xdef\@currentHpage{page.\the\c@page}%
         \Hy@PageAnchorSlidesPlain
       \else
         \begingroup
@@ -12004,15 +12033,15 @@
       }%
     \endgroup
   }
-}{}  
+}{}
 %    \end{macrocode}
 %    \begin{macro}{\contentsline}
 %    The page number might be empty. In this case the link for the
 %    page number is suppressed to avoid little link boxes.
-%    
+%
 %    change 2022-11-13: To avoid problems if |MakeUppercase| is used
 %    around the entry we use special protected commands:
-%    
+%
 %    \begin{macrocode}
 \protected\def\Hy@toclinkstart{\hyper@linkstart{link}{\Hy@tocdestname}}
 \protected\def\Hy@toclinkend{\hyper@linkend}
@@ -12091,7 +12120,7 @@
      \expandafter
      \gdef\csname theH#1\expandafter\endcsname\expandafter
           {\expandafter\@arabic\csname c@#1\endcsname}}%
-  }{} 
+  }{}
 %    \end{macrocode}
 % But what if they have used the optional argument to e.g. |\newtheorem|
 % to determine when the numbering is reset? OK, we'll trap that too.
@@ -12105,7 +12134,7 @@
         \csname the\@ifundefined{theH#2}{}{H}#2\endcsname.\arabic{#1}%
       }%
     }
-   }{} 
+   }{}
 %    \end{macrocode}
 % \section{AMS\LaTeX\ compatibility}\label{ams}
 % Oh, no, they don't use anything as simple as |\refstepcounter|
@@ -12146,7 +12175,7 @@
       \let\make@df@tag@@\Hy@make@df@tag@@
       \let\make@df@tag@@@\Hy@make@df@tag@@@
     }{}
-  }{} 
+  }{}
 %    \end{macrocode}
 % This code I simply cannot remember what I was trying to achieve.
 % The final result seems to do nothing anyway.
@@ -12183,7 +12212,7 @@
        .\noexpand\the\noexpand\value{#1}%
      }%
    }
-  }{} 
+  }{}
 %    \end{macrocode}
 %
 %    \begin{macro}{\numberwithin}
@@ -12227,7 +12256,7 @@
        }%
      }%
    }{}
-  }{} 
+  }{}
 %    \end{macrocode}
 %    \end{macro}
 %
@@ -12260,12 +12289,16 @@
 \ifHy@hyperindex
   \def\HyInd@ParenLeft{(}%
   \def\HyInd@ParenRight{)}%
-  \def\hyperindexformat#1#2{%
+  \def\hyperxindexformat#1#2{%
     \let\HyOrg@hyperpage\hyperpage
     \let\hyperpage\@firstofone
     #1{\HyOrg@hyperpage{#2}}%
     \let\hyperpage\HyOrg@hyperpage
   }%
+%    \end{macrocode}
+% keep the old name for compability.
+%    \begin{macrocode}
+  \let\hyperindexformat\hyperxindexformat
   \Hy@nextfalse
   \@ifpackageloaded{multind}{\Hy@nexttrue}{}%
   \@ifpackageloaded{index}{\Hy@nexttrue}{}%
@@ -12290,7 +12323,7 @@
                 \ifx\Hy@temp@A\HyInd@ParenRight 1\fi
                 \relax
           \HyInd@org@wrindex{#1}{%
-            #2|hyperindexformat{/#3#4}%
+            #2|hyperxindexformat{/#3#4}%
           }%
         \else
           \ifx\\#4\\%
@@ -12301,7 +12334,7 @@
             \fi
           \else
             \HyInd@org@wrindex{#1}{%
-              #2|#3hyperindexformat{/#4}%
+              #2|#3hyperxindexformat{/#4}%
             }%
           \fi
         \fi
@@ -12328,7 +12361,7 @@
                 \relax
           \protected@write\@indexfile{}{%
             \string\indexentry{%
-              #1|hyperindexformat{/#2#3}%
+              #1|hyperxindexformat{/#2#3}%
             }{\thepage}%
           }%
         \else
@@ -12357,14 +12390,14 @@
           \else
             \protected@write\@indexfile{}{%
                \string\indexentry{%
-                 #1|#2hyperindexformat{/#3}%
+                 #1|#2hyperxindexformat{/#3}%
                }{\thepage}%
             }%
             \ifx\Hy@temp@A\HyInd@ParenLeft
               \HyInd@DefKey{#1}%
               \expandafter
               \gdef\csname HyInd@(\HyInd@key)\endcsname{%
-                hyperindexformat{/#3}%
+                hyperxindexformat{/#3}%
               }%
             \fi
           \fi
@@ -12460,7 +12493,7 @@
 % normal text (which is used as an anchor).
 % (|\endinput| have to be on the same line like |\fi|, or you
 % have to use |\expandafter| before.)
-% 
+%
 % change 2022-11-13: added an |\@empty| for issue\#261.
 %    \begin{macrocode}
 \ifHy@texht
@@ -13096,7 +13129,7 @@
 %    \end{macrocode}
 %    \begin{macro}{\Hy@DestName}
 %    Wrap the call of \verb|\pdfdest name| in \cs{Hy@DestName}.
-%    Then it can easier be catched by package |hypdestopt|.
+%    Then it can easier be caught by package |hypdestopt|.
 %    \begin{macrocode}
 \def\Hy@DestName#1#2{%
   \pdfdest name{#1}#2\relax
@@ -13607,23 +13640,6 @@
 }
 %    \end{macrocode}
 %
-% \subsubsection{Fix for problem with different nesting levels}
-%
-%    \cs{AtBeginShipoutFirst} adds an additional box layer around
-%    the first output page. This disturbs pdf\TeX's low level
-%    link commands \cs{pdfstartlink} and \cs{pdfendlink}, if a
-%    link is broken across the first and second output page.
-%
-%    The problem could be fixed by replacing \cs{AtBeginShipoutFirst},
-%    because the box layer is not necessary for pdf\TeX -- no \cs{special}s
-%    need to be inserted. However it's easier to add an additional
-%    box level for the pages after the first one. Also \cs{AtBeginShipoutFirst}
-%    could be invoked independently from hyperref.
-%
-%    Since version 2011/10/05 v1.16 of package `atbegshi'
-%    \cs{AtBeginShipoutFirst} does not add a additional box layer.
-%
-%    change 2020-10-01: the code has been removed as outdated.
 %
 %    \begin{macrocode}
 %</pdftex>
@@ -14625,7 +14641,7 @@
 %    and \cs{pdfpageheight} for setting the paper size.
 %    \begin{macrocode}
 %<*dvipdfm>
-\AtBeginShipoutFirst{%
+\AddToHook{shipout/firstpage}{%
   \ifHy@setpagesize
     \begingroup
      \ifnum\mag=\@m
@@ -16438,7 +16454,7 @@
     } def%
   }%
 }
-\AtBeginShipoutFirst{%
+\AddToHook{shipout/firstpage}{%
   \ifHy@setpagesize
     \begingroup
      \ifnum\mag=\@m
@@ -16461,7 +16477,7 @@
           \fi
         \fi
       \fi
-     \fi 
+     \fi
     \endgroup
   \fi
   \Hy@DisableOption{setpagesize}%
@@ -16680,7 +16696,7 @@
     }def\Hy@ps@CR
     __pdfmark__ not{/pdfmark /betterpdfmark load def}if%
   }% end of \headerps@out
-}% end of \AtBeginShipoutFirst
+}% end of \AddToHook{shipout/firstpage}
 %
 \input{pdfmark.def}%
 %
@@ -19000,7 +19016,7 @@
     /Fo<</S/JavaScript/JS(\Hy@escapestring{\Fld@onfocus@code})>>%
   \fi
 %    \end{macrocode}
-%    Bl loosing the input focus (blurred)
+%    Bl losing the input focus (blurred)
 %    \begin{macrocode}
   \ifx\Fld@onblur@code\@empty
   \else
@@ -21072,7 +21088,7 @@
 %    \end{macrocode}
 %    The canonical name of U+0138, small letter kra, would be
 %    \cs{textkgreenlandic}, following the glyph naming convention.
-%    However |latex/base/inputenc.dtx| has choosen \cs{textkra}.
+%    However |latex/base/inputenc.dtx| has chosen \cs{textkra}.
 %    \begin{macrocode}
 % U+0138 LATIN SMALL LETTER KRA; kgreenlandic
 \DeclareTextCommand{\textkra}{PU}{\81\070}% U+0138

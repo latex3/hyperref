@@ -118,10 +118,9 @@ Completed box being shipped out [1]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\marks1{\__mark_id:n {1}\MakeTextUppercase    []{Contents}}
-....\marks2{\__mark_id:n {2}\MakeTextUppercase    []{Contents}}
-....\marks3{\__mark_id:n {3}\MakeTextUppercase    []{Contents}}
-....\mark{{\MakeTextUppercase    []{Contents}}{\MakeTextUppercase    []{Contents}}}
+....\marks1{\__mark_value:nn {1}{\MakeTextUppercase    []{Contents}}}
+....\marks2{\__mark_value:nn {2}{\MakeTextUppercase    []{Contents}}}
+....\marks3{\__mark_value:nn {3}{\MakeTextUppercase    []{Contents}}}
 ....\penalty 10000
 ....\glue 40.0
 ....\glue 10.00002 plus 1.0
@@ -358,7 +357,7 @@ Completed box being shipped out [1]
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 ...\glue 18.06749
 ...\glue(\lineskip) 0.0
-...\vbox(550.0+0.0)x341.0, glue set 383.0fil
+...\vbox(550.0+0.0)x341.0, glue set 378.96724fil
 ....\vbox(0.0+0.0)x0.0
 .....\hbox(0.0+0.0)x0.0, glue set - 348.0fil
 ......\glue 341.0
@@ -369,9 +368,8 @@ Completed box being shipped out [1]
 ....\special{ps:SDict begin H.S end}
 ....\special{ps:SDict begin 12 H.A end}
 ....\special{ps:SDict begin [/View [/XYZ H.V]/Dest (chapter.1) cvn /DEST pdfmark end}
-....\marks1{\__mark_id:n {4}\MakeTextUppercase    []{Chapter\ 1. \ A chapter}}
-....\marks2{\__mark_id:n {5}}
-....\mark{{\MakeTextUppercase    []{Chapter\ 1. \ A chapter}}{}}
+....\marks1{\__mark_value:nn {4}{\MakeTextUppercase    []{Chapter\ 1. \ A chapter}}}
+....\marks2{\__mark_value:nn {5}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10pt}}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10pt}}}
 ....\glue(\topskip) 10.0
@@ -422,7 +420,6 @@ Completed box being shipped out [1]
 ....\penalty 10000
 ....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \chapternumberline {1}A chapter}{\thepage }{chapter.1}\protected@file@percent }}
 ....\penalty 10000
-....\glue -4.03276
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ...\glue(\baselineskip) 16.89497

@@ -6502,9 +6502,18 @@
 \define@key{Hyp}{pdfdisplaydoctitle}[true]{%
   \Hy@boolkey{pdfdisplaydoctitle}{#1}%
 }
-\define@key{Hyp}{pdfa}[true]{%
-  \Hy@boolkey{pdfa}{#1}%
+\define@key{Hyp}{pdfa}[true]{%  
+ \IfDocumentMetadataTF
+  {
+    \PackageWarning{hyperref}{%
+     \string\DocumentMetadata\space detected.\MessageBreak
+     The 'pdfa' key will be ignored.\MessageBreak
+     Please set the PDF/A standard in \string\DocumentMetadata\MessageBreak
+     with the 'pdfstandard' key.}  
+  }
+  {\Hy@boolkey{pdfa}{#1}}%  
 }
+
 \define@key{Hyp}{pdfnewwindow}[true]{%
   \def\Hy@temp{#1}%
   \ifx\Hy@temp\@empty
@@ -6833,8 +6842,21 @@
 %    \end{macrocode}
 %
 % \subsection{PDF/A}
-%
+% If an A-standard has been set in \cs{DocumentMetadata} hyperref should set the pdfa
+% key too.
 %    \begin{macrocode}
+\ExplSyntaxOn
+\IfDocumentMetadataT
+ {
+   \tl_if_empty:eTF{\GetDocumentProperties{document/pdfstandard}}
+    {
+      \Hy@pdfafalse
+    }
+    {
+      \Hy@pdfatrue
+    }
+ }
+\ExplSyntaxOff 
 \Hy@DisableOption{pdfa}
 %    \end{macrocode}
 %
@@ -10438,8 +10460,12 @@
 % AMS\LaTeX\ processes all equations twice; we want to make sure
 % that the hyper stuff is not executed twice, so we use the AMS
 % |\ifmeasuring@|, initialized if AMS math is not used.
+% change 2025-06-20: test if the switch already exist, see tagging-project issue 920.
 %    \begin{macrocode}
-\newif\ifmeasuring@\measuring@false
+\ifcsname ifmeasuring@\endcsname  
+\else     
+ \expandafter\newif\csname ifmeasuring@\endcsname\measuring@false
+\fi
 \newcommand\Hy@ifnotmeasuring[1]{#1}
 \AddToHook{package/amsmath/after}
  {
@@ -12259,13 +12285,17 @@
 %    \begin{macrocode}
 \ifHy@hyperindex
   \def\HyInd@ParenLeft{(}%
-  \def\HyInd@ParenRight{)}%
-  \def\hyperindexformat#1#2{%
+  \def\HyInd@ParenRight{)}%  
+  \def\hyperxindexformat#1#2{%
     \let\HyOrg@hyperpage\hyperpage
     \let\hyperpage\@firstofone
     #1{\HyOrg@hyperpage{#2}}%
     \let\hyperpage\HyOrg@hyperpage
   }%
+%    \end{macrocode}
+% keep the old name for compability.
+%    \begin{macrocode}
+  \let\hyperindexformat\hyperxindexformat
   \Hy@nextfalse
   \@ifpackageloaded{multind}{\Hy@nexttrue}{}%
   \@ifpackageloaded{index}{\Hy@nexttrue}{}%
@@ -12290,7 +12320,7 @@
                 \ifx\Hy@temp@A\HyInd@ParenRight 1\fi
                 \relax
           \HyInd@org@wrindex{#1}{%
-            #2|hyperindexformat{/#3#4}%
+            #2|hyperxindexformat{/#3#4}%
           }%
         \else
           \ifx\\#4\\%
@@ -12301,7 +12331,7 @@
             \fi
           \else
             \HyInd@org@wrindex{#1}{%
-              #2|#3hyperindexformat{/#4}%
+              #2|#3hyperxindexformat{/#4}%
             }%
           \fi
         \fi
@@ -12328,7 +12358,7 @@
                 \relax
           \protected@write\@indexfile{}{%
             \string\indexentry{%
-              #1|hyperindexformat{/#2#3}%
+              #1|hyperxindexformat{/#2#3}%
             }{\thepage}%
           }%
         \else
@@ -12357,14 +12387,14 @@
           \else
             \protected@write\@indexfile{}{%
                \string\indexentry{%
-                 #1|#2hyperindexformat{/#3}%
+                 #1|#2hyperxindexformat{/#3}%
                }{\thepage}%
             }%
             \ifx\Hy@temp@A\HyInd@ParenLeft
               \HyInd@DefKey{#1}%
               \expandafter
               \gdef\csname HyInd@(\HyInd@key)\endcsname{%
-                hyperindexformat{/#3}%
+                hyperxindexformat{/#3}%
               }%
             \fi
           \fi

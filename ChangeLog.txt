@@ -1,3 +1,13 @@
+2025-06-20 Ulrike Fischer
+	* hyperref.dtx: test if \ifmeasuring@ already exists, tagging-project issue #920
+
+2025-06-17 Ulrike Fischer
+	* hyperref.dtx: set the pdfa key automatically if an A-standard is 
+      set in \DocumentMetadata. issue #387
+
+2025-06-01 Ulrike Fischer
+	* hyperref.dtx: change hyperindexformat to hyperxindexformat, issue #386
+
 2025-05-20 Ulrike Fischer
 	* hyperref.dtx: added a group in the xetex driver, issue #380.
 	* hyperref.dtx: renamed \textin to \textinsymbol, issue #377

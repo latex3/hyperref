@@ -1,3 +1,5 @@
+Version: 2025-06-21 v7.01n
+
 2025-06-21 Ulrike Fischer
 	* hyperref.dtx: load generic driver if pdfmanagement is detected.
 	* remove dependency to atveryend from hluatex.dtx
@@ -14,6 +16,8 @@
 
 2025-06-01 Ulrike Fischer
 	* hyperref.dtx: change hyperindexformat to hyperxindexformat, issue #386
+
+Version: 2025-05-20 v7.01m
 
 2025-05-20 Ulrike Fischer
 	* hyperref.dtx: added a group in the xetex driver, issue #380.

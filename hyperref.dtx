@@ -5140,7 +5140,10 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\let\HyOpt@CustomDriver\@empty
+\IfPDFManagementActiveTF
+ {\def\HyOpt@CustomDriver{hgeneric-testphase}}
+ {\let\HyOpt@CustomDriver\@empty}
+
 \define@key{Hyp}{customdriver}{%
   \IfFileExists{#1.def}{%
     \def\HyOpt@CustomDriver{#1}%
@@ -7010,7 +7013,7 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\Hy@AtEndOfPackage{%
+\Hy@AtEndOfPackage{%  
   \@ifpackageloaded{tex4ht}{%
     \def\Hy@driver{htex4ht}%
     \Hy@texhttrue
@@ -9701,7 +9704,6 @@
 % \section{Every page}
 %
 %    \begin{macrocode}
-\RequirePackage{atbegshi}[2007/09/09]
 \let\Hy@EveryPageHook\@empty
 \let\Hy@EveryPageBoxHook\@empty
 \let\Hy@FirstPageHook\@empty
@@ -9722,7 +9724,7 @@
     \global\let\Hy@FirstPageHook\@empty
   }%
 }{%
-  \AtBeginShipoutFirst{%
+  \AddToHook{shipout/firstpage}{%
     \Hy@FirstPageHook
   }%
 }
@@ -13638,23 +13640,6 @@
 }
 %    \end{macrocode}
 %
-% \subsubsection{Fix for problem with different nesting levels}
-%
-%    \cs{AtBeginShipoutFirst} adds an additional box layer around
-%    the first output page. This disturbs pdf\TeX's low level
-%    link commands \cs{pdfstartlink} and \cs{pdfendlink}, if a
-%    link is broken across the first and second output page.
-%
-%    The problem could be fixed by replacing \cs{AtBeginShipoutFirst},
-%    because the box layer is not necessary for pdf\TeX -- no \cs{special}s
-%    need to be inserted. However it's easier to add an additional
-%    box level for the pages after the first one. Also \cs{AtBeginShipoutFirst}
-%    could be invoked independently from hyperref.
-%
-%    Since version 2011/10/05 v1.16 of package `atbegshi'
-%    \cs{AtBeginShipoutFirst} does not add a additional box layer.
-%
-%    change 2020-10-01: the code has been removed as outdated.
 %
 %    \begin{macrocode}
 %</pdftex>
@@ -14656,7 +14641,7 @@
 %    and \cs{pdfpageheight} for setting the paper size.
 %    \begin{macrocode}
 %<*dvipdfm>
-\AtBeginShipoutFirst{%
+\AddToHook{shipout/firstpage}{%
   \ifHy@setpagesize
     \begingroup
      \ifnum\mag=\@m
@@ -16469,7 +16454,7 @@
     } def%
   }%
 }
-\AtBeginShipoutFirst{%
+\AddToHook{shipout/firstpage}{%
   \ifHy@setpagesize
     \begingroup
      \ifnum\mag=\@m
@@ -16711,7 +16696,7 @@
     }def\Hy@ps@CR
     __pdfmark__ not{/pdfmark /betterpdfmark load def}if%
   }% end of \headerps@out
-}% end of \AtBeginShipoutFirst
+}% end of \AddToHook{shipout/firstpage}
 %
 \input{pdfmark.def}%
 %

@@ -77,8 +77,7 @@
       \the\Hy@abspage<<#1>>%
     }%
   }%
-  \RequirePackage{atveryend}[2009/12/07]%
-  \AtVeryEndDocument{%
+  \AddToHook{enddocument/afteraux}{%
     \HyPL@SetPageLabels
   }%
 \fi
@@ -923,7 +922,7 @@
       \pdfrefobj\OBJ@pdfdocencoding
       \pdfrefobj\OBJ@ZaDb
       \pdfrefobj\OBJ@Helv
-    \AtVeryEndDocument{%
+    \AddToHook{enddocument/afteraux}{%
       \immediate\pdfobj{%
         <<%
           /Fields[\HyField@afields]%

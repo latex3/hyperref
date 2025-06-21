@@ -1,3 +1,6 @@
+2025-06-21 Ulrike Fischer/Matthew Bertucci
+	* nameref, backref, xrhyper, hyperref, hyperref-doc: correct typos
+
 2025-06-20 Ulrike Fischer
 	* hyperref.dtx: test if \ifmeasuring@ already exists, tagging-project issue #920
 

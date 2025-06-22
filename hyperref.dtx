@@ -8812,13 +8812,11 @@
     \else
       \ifx\Fld@default\relax
       \else
-        \pdfstringdef\Hy@gtemp\Fld@default
-        \xdef\Fld@choices{\Fld@choices/DV(\Hy@gtemp)}%
+        \xdef\Fld@choices{\Fld@choices/DV(\Fld@default)}%
       \fi
       \ifx\Fld@value\relax
-      \else
-        \pdfstringdef\Hy@gtemp\Fld@value
-        \xdef\Fld@choices{\Fld@choices/V(\Hy@gtemp)}%
+      \else        
+        \xdef\Fld@choices{\Fld@choices/V(\Fld@value)}%
       \fi
     \fi
   \endgroup

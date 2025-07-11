@@ -589,6 +589,28 @@
 %    \begin{macrocode}
 \Hy@SetCatcodes
 %    \end{macrocode}
+%
+% \subsection{Disable patches}
+% 
+% If new latex interfaces are used with \cs{DocumentMetadata} various patches are unneeded or do
+% harm, so we disable them.
+% Not handled yet: \cs{hyper@nopatch@amsmath@tag}, \cs{hyper@nopatch@mathenv}
+%    \begin{macrocode}
+\IfFormatAtLeastT{2025-11-01}
+ {
+   \IfDocumentMetadataT
+    {
+      \def\hyper@nopatch@counter{} % disabled since 2024-11-01 anyway
+      \def\hyper@nopatch@bib{}
+      \def\hyper@nopatch@thm{}
+      \def\hyper@nopatch@caption{}
+      \def\hyper@nopatch@footnote{}
+      \def\hyper@nopatch@sectioning{}
+      \def\hyper@nopatch@toc{}
+      \def\hyper@nopatch@longtable{}
+    }
+ }
+%    \end{macrocode}
 % change 2020-07-24: require newer pdftexcmds and remove fallback code
 % for version older than 2010.
 % change 2021-08-14: require expl3

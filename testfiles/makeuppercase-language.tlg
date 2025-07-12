@@ -74,7 +74,7 @@ Completed box being shipped out [1]
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
-....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\003\221\003\221\003\221\003\221\003\221\003\221\003\221\003\221\000\040\003\221\003\221\003\221\003\221\003\221\003\221\003\221\003\221}{}% 1}
+....\write3{\protect \BOOKMARK [2][-]{subsection.0.1}{\376\377\037\000\003\221\003\221\003\221\003\221\003\221\003\221\003\221\000\040\037\010\003\221\003\221\003\221\003\221\003\221\003\221\003\221}{}% 1}
 ....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline {0.1}\MakeUppercase    []{^^e1^^bc^^80^^e1^^bc^^81^^e1^^bc^^82^^e1^^bc^^83^^e1^^bc^^84^^e1^^bc^^85^^e1^^bc^^86^^e1^^bc^^87 ^^e1^^bc^^88^^e1^^bc^^89^^e1^^bc^^8a^^e1^^bc^^8b^^e1^^bc^^8c^^e1^^bc^^8d^^e1^^bc^^8e^^e1^^bc^^8f}}{\thepage }{subsection.0.1}\protected@file@percent }}
 ....\penalty 10000
 ....\glue 6.45676 plus 0.86089
@@ -90,4 +90,4 @@ Completed box being shipped out [1]
 .\kern 0.0
 (makeuppercase-language.aux)
 Package rerunfilecheck Info: File `makeuppercase-language.out' has not changed.
-(rerunfilecheck)             Checksum: 4C7D49BA2A1A998DB05A3F610C59B0F3;184.
+(rerunfilecheck)             Checksum: 0064435E1B8B38D3856D1E159FB82635;184.

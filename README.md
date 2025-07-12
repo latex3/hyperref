@@ -1,6 +1,6 @@
 # README for hyperref bundle
 
-Version 2025-06-21 v7.01n
+Version 2025-07-12 v7.01o
 
 ## INTRODUCTION
 

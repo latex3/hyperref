@@ -1,6 +1,9 @@
+2025-07-12 Ulrike Fischer
+	* hyperref.dtx: prepare disabling patches if DocumentMetadata is used.
+
 2025-07-04 Ulrike Fischer
 	* hyperref.dtx: set default pdf version in xetex driver to 1.7
-	* hyperref-linktarget.dtx: at missing recordtarget tagging socket. 
+	* hyperref-linktarget.dtx: at missing recordtarget tagging socket.
 
 2025-06-22 Ulrike Fischer
 	* hyperref.dtx: fix default values of choice field, see https://tex.stackexchange.com/a/669186/2388

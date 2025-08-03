@@ -131,10 +131,12 @@ typesetfiles = {"hyperref-doc.tex",
                 "hyperref-patches.dtx"
                 }
 
+
 local function type_manual()
   print("Special Typesetting hyperref-doc")
   local file = jobname("doc/hyperref-doc.tex")
   errorlevel = (runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
+  + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("htlatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + cp("*.html", typesetdir, docfiledir) + cp("*.css", typesetdir, docfiledir))

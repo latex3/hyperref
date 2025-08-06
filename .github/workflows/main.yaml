@@ -30,3 +30,10 @@ jobs:
           name: testfiles-hyperref
           # Decide how long to keep the test output artifact:
           retention-days: 3
+      - run: l3build ctan
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            build/distrib/ctan/*-ctan.zip
+            build/distrib/tds/*.tds.zip

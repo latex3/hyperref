@@ -12,7 +12,7 @@ jobs:
       cache_key: ${{ steps.texlive.outputs.cache_key }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - run: sudo apt-get update && sudo apt-get install ghostscript
       - name: Install TeX Live
         id: texlive

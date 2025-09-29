@@ -76,8 +76,8 @@ specialformats["latex"] = specialformats["latex"] or
 
 
 checkconfigs = {"build","config-pvt","config-3","config-xetex","config-pdftex"}
---checkengines = {"pdftex","etex","luatex"}
-checkengines = {"pdftex"}
+checkengines = {"pdftex","etex","luatex"}
+-- checkengines = {"pdftex"}
 -- for dev testing
 -- checkengines = {"pdftex","pdftexdev","etex","luatex"}
 -- checkengines = {"pdftex","pdftexdev"}

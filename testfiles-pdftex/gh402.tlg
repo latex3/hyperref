@@ -1,0 +1,204 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line ....
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\hbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 14.99626fil
+..\kern 0.0
+..\kern 16.0
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 60.99626fil
+...\kern 0.0
+...\kern 62.0
+...\kern -1.00374
+...\pdfdest name{page.1} xyz
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(633.0+0.0)x407.0
+..\glue 16.0
+..\vbox(617.0+0.0)x345.0, shifted 62.0
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0
+.....\hbox(0.0+0.0)x345.0
+...\glue 25.0
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 490.81474fil
+....\write-{}
+....\pdfdest name{Doc-Start} xyz
+....\pdfdest name{section.1} xyz
+....\glue(\topskip) 0.00002
+....\hbox(9.99998+2.79999)x345.0, glue set 256.83347fil
+.....\hbox(9.27998+0.0)x24.29997
+......\glue 0.0
+......\OT1/cmr/bx/n/14.4 1
+......\glue 16.19998
+.....\OT1/cmr/bx/n/14.4 m
+.....\OT1/cmr/bx/n/14.4 i
+.....\OT1/cmr/bx/n/14.4 n
+.....\OT1/cmr/bx/n/14.4 i
+.....\OT1/cmr/bx/n/14.4 p
+.....\OT1/cmr/bx/n/14.4 a
+.....\OT1/cmr/bx/n/14.4 g
+.....\OT1/cmr/bx/n/14.4 e
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\write3{\protect \BOOKMARK [1][-]{section.1}{\376\377\000m\000i\000n\000i\000p\000a\000g\000e}{}% 1}
+....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}minipage}{\thepage }{section.1}\protected@file@percent }}
+....\penalty 10000
+....\glue 9.90276 plus 0.86108
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\lineskip) 1.0
+....\hbox(22.71504+17.71504)x345.0
+.....\mathon
+.....\vbox(22.71504+17.71504)x345.0
+......\hbox(8.54503+3.54503)x345.0, glue set 140.12213fil
+.......\glue(\leftskip) 0.0 plus 1.0fil
+.......\hbox(0.0+0.0)x0.0
+.......\hbox(8.54503+3.54503)x64.75574
+........\mathon
+........\vbox(8.54503+3.54503)x64.75574
+.........\hbox(8.49002+3.60004)x64.75574
+..........\glue(\tabskip) 0.0
+..........\hbox(8.49002+3.60004)x24.22229
+...........\rule(8.39996+3.60004)x0.0
+...........\glue 6.0
+...........\glue 0.0 plus 1.0fil
+...........\glue 0.00002
+...........\OT1/cmr/m/n/10 X
+...........\penalty 10000
+...........\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.1}
+...........\hbox(6.6428+0.0)x4.72226
+............\mathon
+............\hbox(3.01389+0.0)x4.72226, shifted -3.62892
+.............\OT1/cmr/m/it/7 a
+............\mathoff
+...........\pdfendlink
+...........\glue 0.0 plus 1.0fil
+...........\glue 6.0
+..........\glue(\tabskip) 0.0
+..........\hbox(8.49002+3.60004)x16.31116
+...........\glue 6.0
+...........\glue 0.0 plus 1.0fil
+...........\glue 0.00002
+...........\penalty 10000
+...........\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.2}
+...........\hbox(8.49002+0.0)x4.31114
+............\mathon
+............\hbox(4.8611+0.0)x4.31114, shifted -3.62892
+.............\OT1/cmr/m/it/7 b
+............\mathoff
+...........\pdfendlink
+...........\glue 0.0 plus 1.0fil
+...........\glue 6.0
+..........\glue(\tabskip) 0.0
+..........\hbox(8.49002+3.60004)x24.22229
+...........\glue 6.0
+...........\glue 0.0 plus 1.0fil
+...........\glue 0.00002
+...........\OT1/cmr/m/n/10 X
+...........\penalty 10000
+...........\hbox(6.6428+0.0)x4.72226
+............\mathon
+............\hbox(3.01389+0.0)x4.72226, shifted -3.62892
+.............\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{Hfootnote.1}
+.............\OT1/cmr/m/it/7 a
+.............\pdfendlink
+............\mathoff
+...........\glue 0.0 plus 1.0fil
+...........\glue 6.0
+..........\glue(\tabskip) 0.0
+........\mathoff
+.......\penalty 10000
+.......\glue(\parfillskip) 0.0
+.......\glue(\rightskip) 0.0 plus 1.0fil
+......\glue 9.0 plus 4.0 minus 2.0
+......\kern -3.0
+......\rule(0.4+0.0)x137.9979
+......\kern 2.6
+......\hbox(6.65+2.85002)x345.0, glue set 296.17151fil
+.......\hbox(5.40666+0.0)x15.30023, glue set 11.18115fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\hbox(5.40666+0.0)x4.11908
+.........\mathon
+.........\hbox(2.58333+0.0)x4.11908, shifted -2.82333
+..........\OT1/cmr/m/it/6 a
+.........\mathoff
+.......\hbox(6.65+0.0)x0.0
+........\rule(6.65+0.0)x0.0
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0, shifted -9.5
+.........\pdfdest name{Hfootnote.1} xyz
+.........\penalty 10000
+.......\write1{\newlabel{minipage}{{{\itshape a}}{\thepage }{}{Hfootnote.1}{}}}
+.......\OT1/cmr/m/n/8 m
+.......\OT1/cmr/m/n/8 i
+.......\OT1/cmr/m/n/8 n
+.......\OT1/cmr/m/n/8 i
+.......\OT1/cmr/m/n/8 p
+.......\OT1/cmr/m/n/8 a
+.......\OT1/cmr/m/n/8 g
+.......\OT1/cmr/m/n/8 e
+.......\penalty 10000
+.......\rule(0.0+2.85002)x0.0
+.......\penalty 10000
+.......\glue(\parfillskip) 0.0 plus 1.0fil
+.......\glue(\rightskip) 0.0
+......\glue(\parskip) 0.0
+......\glue(\parskip) 0.0
+......\hbox(6.98999+2.85002)x345.0, glue set 310.33144fil
+.......\hbox(6.98999+0.0)x15.30023, glue set 11.53354fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\hbox(6.98999+0.0)x3.7667
+.........\mathon
+.........\hbox(4.16666+0.0)x3.7667, shifted -2.82333
+..........\OT1/cmr/m/it/6 b
+.........\mathoff
+.......\hbox(6.65+0.0)x0.0
+........\rule(6.65+0.0)x0.0
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0, shifted -9.5
+.........\pdfdest name{Hfootnote.2} xyz
+.........\penalty 10000
+.......\OT1/cmr/m/n/8 o
+.......\OT1/cmr/m/n/8 t
+.......\OT1/cmr/m/n/8 h
+.......\OT1/cmr/m/n/8 e
+.......\OT1/cmr/m/n/8 r
+.......\penalty 10000
+.......\rule(0.0+2.85002)x0.0
+.......\penalty 10000
+.......\glue(\parfillskip) 0.0 plus 1.0fil
+.......\glue(\rightskip) 0.0
+.....\mathoff
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -5.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+....\glue 0.0 plus 0.0001fil
+...\glue(\baselineskip) 23.55556
+...\hbox(6.44444+0.0)x345.0
+....\hbox(6.44444+0.0)x345.0, glue set 170.0fil
+.....\glue 0.0 plus 1.0fil
+.....\OT1/cmr/m/n/10 1
+.....\glue 0.0 plus 1.0fil
+.\kern 0.0
+(gh402.aux)
+Package rerunfilecheck Info: File `gh402.out' has not changed.
+(rerunfilecheck)             Checksum: 17BFA5B4BFBC2C93BDB643E8FB3C06EF;83.

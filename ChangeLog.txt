@@ -1,4 +1,7 @@
 2025-07-12 Ulrike Fischer
+	* hyperref.dtx: set \@currentHref in \@mpfootnotetext, issue #402.
+
+2025-07-12 Ulrike Fischer
 	* hyperref.dtx: prepare disabling patches if DocumentMetadata is used.
 
 2025-07-04 Ulrike Fischer

@@ -1,0 +1,15 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{hyperref}
+
+\begin{document}
+\START\showoutput
+\section{minipage}
+    \begin{minipage}{\linewidth}
+    \centering
+    \begin{tabular}{ccc}
+        X\footnote{\label{minipage}minipage} & \footnote{other} & X\footref{minipage} \\
+    \end{tabular}
+    \end{minipage}
+
+\end{document}

@@ -11176,7 +11176,13 @@
           \expandafter\hyper@@anchor\expandafter{%
             \Hy@footnote@currentHref
           }{\relax}%
-        }\ignorespaces #1%
+        }%
+%    \end{macrocode}
+% Change 2025-09-29: set \cs{@currentHref} and \cs{@currentlabelname} for issue 402.
+%    \begin{macrocode}
+        \let\@currentHref\Hy@footnote@currentHref
+        \let\@currentlabelname\@empty
+        \ignorespaces #1%
       }%
     }%
   }%

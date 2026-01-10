@@ -2,10 +2,10 @@
 	* hyperref.dtx: provide natbib command, issue #406.
 	* nameref.dtx (2025-06-21 v2.58): adapt label command to new version in 2026-06-01
 
-Version 2025-07-12 v7.01o
-
-2025-07-12 Ulrike Fischer
+2025-09-29 Ulrike Fischer
 	* hyperref.dtx: set \@currentHref in \@mpfootnotetext, issue #402.
+
+Version 2025-07-12 v7.01o
 
 2025-07-12 Ulrike Fischer
 	* hyperref.dtx: prepare disabling patches if DocumentMetadata is used.

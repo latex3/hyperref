@@ -1091,7 +1091,27 @@
 %    \end{macrocode}
 %    \end{macro}
 %    \end{macro}
-%
+%    
+% \begin{macro}{\hyper@natlinkstart}
+% \begin{macro}{\hyper@natlinkend}
+% \begin{macro}{\hyper@natlinkbreak}
+% \begin{macro}{\hyper@natanchorstart}
+% \begin{macro}{\hyper@natanchorend}
+% We provide the natbib hooks always, for better tagging support, see
+% issue \#406
+%    \begin{macrocode}
+\def\hyper@natlinkstart#1{}
+\def\hyper@natlinkend{}
+\def\hyper@natlinkbreak#1#2{}
+\def\hyper@natanchorstart#1{}
+\def\hyper@natanchorend{}
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+
 %    \begin{macro}{\pdfstringdef}
 %    \cs{pdfstringdef} works on the tokens in |#2| and converts them to
 %    a PDF string as far as possible:

@@ -33,7 +33,7 @@
 %<driver>\ProvidesFile{nameref.drv}
 % \fi
 % \ProvidesFile{nameref.dtx}
-  [2025-06-21 v2.57 Cross-referencing by name of section]%
+  [2025-06-21 v2.58 Cross-referencing by name of section]%
 %
 %
 % \iffalse
@@ -294,6 +294,18 @@
          {\@currentlabelname}{\@currentHref}{\@kernel@reserved@label@data}}}%
   \endgroup
   \@esphack}
+   \@ifl@t@r\fmtversion{2026-06-01}
+     {
+      \def\NR@label@copy#1{\@bsphack
+       \begingroup
+       \UseHookWithArguments{label}{1}{#1}%
+       \protected@write\@auxout{\let\label\@gobble@om\let\index\@gobble@som\let\glossary\@gobble@om}%
+         {\string\newlabel{#1}{{\@currentlabel}{\thepage}%
+         {\@currentlabelname}{\@currentHref}{\@kernel@reserved@label@data}}}%
+       \endgroup
+       \@esphack
+     }}
+     {}
     \ifx\label\NR@label@copy
     \else 
       \PackageWarning{nameref}{The definition of \string\label\space has changed! 

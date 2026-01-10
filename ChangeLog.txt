@@ -1,3 +1,8 @@
+2026-01-10 Ulrike Fischer
+	* nameref.dtx (2025-06-21 v2.58): adapt label command to new version in 2026-06-01
+
+Version 2025-07-12 v7.01o
+
 2025-07-12 Ulrike Fischer
 	* hyperref.dtx: set \@currentHref in \@mpfootnotetext, issue #402.
 

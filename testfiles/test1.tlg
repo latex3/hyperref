@@ -1420,6 +1420,7 @@ Package hyperref Info: bookmark on input line ...:
 (hyperref)             toclevel {0}
 (hyperref)             type {lot}.
 Package hyperref Info: Anchor `table.2.1' on input line ....
+ignored error: Infinite glue shrinkage found in box being split
 Package hyperref Info: Anchor `page.22' on input line ....
 [16
 Package `hyperref' Info: End of reference (cite) `cite.Dallas:aia', line 232.

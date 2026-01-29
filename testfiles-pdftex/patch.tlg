@@ -12,7 +12,7 @@ l. ...\ShowCommand\LT@array
 ->\let \LT@start \endgraf \endgraf \penalty \z@ \vskip \LTpre \endgraf \ifdim \pagetotal <\pagegoal \else \dimen@ =\pageshrink \advance \dimen@ 1sp\kern \dimen@ \penalty 9999\endgraf \kern -\dimen@ \fi \dimen@ \pagetotal \advance \dimen@ \ht \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \dp \ifvoid \LT@firsthead \LT@head \else \LT@firsthead \fi \advance \dimen@ \ht \LT@foot \edef \LT@reset@vfuzz {\vfuzz \the \vfuzz \vbadness \the \vbadness \relax }\vfuzz \maxdimen \vbadness \@M \setbox \tw@ \copy \z@ \setbox \tw@ \vsplit \tw@ to\ht \@arstrutbox \setbox \tw@ \vbox {\unvbox \tw@ }\LT@reset@vfuzz \advance \dimen@ \ht \ifdim \ht \@arstrutbox >\ht \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ \dp \ifdim \dp \@arstrutbox >\dp \tw@ \@arstrutbox \else \tw@ \fi \advance \dimen@ -\pagegoal \ifdim \dimen@ >\z@ \vfil \break \else \ifdim \pageshrink >\z@ \pageshrink \z@ \fi \fi \global \@colroom \@colht \ifvoid \LT@foot \else \global \advance \vsize -\ht \LT@foot \global \advance \@colroom -\ht \LT@foot \dimen@ \pagegoal \advance \dimen@ -\ht \LT@foot \pagegoal \dimen@ \maxdepth \z@ \fi \tl_if_empty:eTF {\LTcaptype }{\MakeLinkTarget {LT@tables}}{\MakeLinkTarget {\LTcaptype }}\ifvoid \LT@firsthead \copy \LT@head \else \box \LT@firsthead \fi \nobreak \UseTaggingSocket {tbl/longtable/head}\output {\LT@output }.
 <argument> \LT@start 
 l. ...\ShowCommand\LT@start
-> \equation=\long macro:
+> \equation=macro:
 ->\mathdisplay@push \st@rredfalse \global \@eqnswtrue \mathdisplay {equation}\incr@eqnum \mathopen {}.
 <argument> \equation 
 l. ...\ShowCommand\equation

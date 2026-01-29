@@ -28,6 +28,7 @@ Completed box being shipped out [1]
 ...\vbox(550.0+0.0)x345.0, glue set 505.32953fil, direction TLT
 ....\write-{}
 ....\write1{\babel@aux{greek}{}}
+....\write1{\babel@aux{greek}{}}
 ....\pdfdest name{Doc-Start} xyz
 ....\glue(\topskip) 5.69
 ....\hbox(4.31+0.0)x345.0, glue set 314.16fil, direction TLT

@@ -4,7 +4,7 @@
 % 1995-2001 Sebastian Rahtz, with portions written by David Carlisle and Heiko Oberdiek,
 % 2001-2015 Heiko Oberdiek.
 % 2016-2019 Oberdiek Package Support Group
-% 2019-2025 LaTeX Project
+% 2019-2026 LaTeX Project
 %      https://github.com/latex3/hyperref/issues
 %
 % This file is part of the `Hyperref Bundle'.
@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2025-07-12 v7.01o %
+%<!none&!packageEnd>  [2026-01-29 v7.01p %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -1091,7 +1091,27 @@
 %    \end{macrocode}
 %    \end{macro}
 %    \end{macro}
-%
+%    
+% \begin{macro}{\hyper@natlinkstart}
+% \begin{macro}{\hyper@natlinkend}
+% \begin{macro}{\hyper@natlinkbreak}
+% \begin{macro}{\hyper@natanchorstart}
+% \begin{macro}{\hyper@natanchorend}
+% We provide the natbib hooks always, for better tagging support, see
+% issue \#406
+%    \begin{macrocode}
+\def\hyper@natlinkstart#1{}
+\def\hyper@natlinkend{}
+\def\hyper@natlinkbreak#1#2{}
+\def\hyper@natanchorstart#1{}
+\def\hyper@natanchorend{}
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+
 %    \begin{macro}{\pdfstringdef}
 %    \cs{pdfstringdef} works on the tokens in |#2| and converts them to
 %    a PDF string as far as possible:
@@ -11176,7 +11196,13 @@
           \expandafter\hyper@@anchor\expandafter{%
             \Hy@footnote@currentHref
           }{\relax}%
-        }\ignorespaces #1%
+        }%
+%    \end{macrocode}
+% Change 2025-09-29: set \cs{@currentHref} and \cs{@currentlabelname} for issue 402.
+%    \begin{macrocode}
+        \let\@currentHref\Hy@footnote@currentHref
+        \let\@currentlabelname\@empty
+        \ignorespaces #1%
       }%
     }%
   }%

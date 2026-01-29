@@ -77,7 +77,7 @@ specialformats["latex"] = specialformats["latex"] or
 
 checkconfigs = {"build","config-pvt","config-3","config-xetex","config-pdftex"}
 checkengines = {"pdftex","etex","luatex"}
-
+-- checkengines = {"pdftex"}
 -- for dev testing
 -- checkengines = {"pdftex","pdftexdev","etex","luatex"}
 -- checkengines = {"pdftex","pdftexdev"}
@@ -131,10 +131,12 @@ typesetfiles = {"hyperref-doc.tex",
                 "hyperref-patches.dtx"
                 }
 
+
 local function type_manual()
   print("Special Typesetting hyperref-doc")
   local file = jobname("doc/hyperref-doc.tex")
   errorlevel = (runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
+  + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("lualatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + runcmd("htlatex "..file, typesetdir, {"TEXINPUTS","LUAINPUTS"})
   + cp("*.html", typesetdir, docfiledir) + cp("*.css", typesetdir, docfiledir))

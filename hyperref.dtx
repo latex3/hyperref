@@ -12027,18 +12027,23 @@
 \providecommand\protected@file@percent{}
 %    \end{macrocode}
 %
+% Change 2026-02-06: Add support for \cs{DocumentMetadata}. We externalize the command
+% to allow booksmark to be set without explicit toc-entry.% 
 %    \begin{macrocode}
-\@ifundefined{hyper@nopatch@toc}{%
-  \def\addcontentsline#1#2#3{% toc extension, type, tag
+\def\Hy@addcontentsline@addbookmark#1#2#3%#1 toc type, #2 level, #3 content
+  {%
+   \ifHy@bookmarks
+     \ifx\@currentHref\@empty
+      \Hy@Warning{%
+        No destination for bookmark of \string\addcontentsline,%
+        \MessageBreak destination is added%
+       }%
+      \phantomsection
+    \fi
     \begingroup
-      \let\label\@gobble
-      \ifx\@currentHref\@empty
-        \Hy@Warning{%
-          No destination for bookmark of \string\addcontentsline,%
-          \MessageBreak destination is added%
-        }%
-        \phantomsection
-      \fi
+      \let\label\@gobble@om
+      \let\index\@gobble@som
+      \let\glossary\@gobble@om
       \expandafter\ifx\csname toclevel@#2\endcsname\relax
         \begingroup
           \def\Hy@tempa{#1}%
@@ -12074,13 +12079,31 @@
           }%
         \endgroup
       \fi
-      \addtocontents{#1}{%
-        \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}\protected@file@percent
-      }%
-    \endgroup
+     \endgroup
+   \fi
   }
-}{}
 %    \end{macrocode}
+% If \cs{DocumentMetadata} is not used, we must redefine \cs{addcontentsline} as in the 
+% latex-lab code to ensure that the target is written:
+%    \begin{macrocode}
+\@ifundefined{hyper@nopatch@toc}{%
+\def\addcontentsline#1#2#3{% #1=toc extension, #2= heading type, tag
+    \addtocontents{#1}{%
+      \protect\contentsline{#2}{#3}{\thepage}{\@currentHref}\protected@file@percent
+    }}}{}
+%    \end{macrocode}
+%
+% Then this addition works also if \cs{DocumentMetadata} is used. 
+%    \begin{macrocode}
+\AddToHookWithArguments{cmd/addcontentsline/before}[hyp]
+  {%
+    \Hy@addcontentsline@addbookmark
+      {#1}
+      {#2}
+      {#3}%
+  }   
+%    \end{macrocode}
+%
 %    \begin{macro}{\contentsline}
 %    The page number might be empty. In this case the link for the
 %    page number is suppressed to avoid little link boxes.
@@ -12137,6 +12160,85 @@
 %    \end{macrocode}
 %    \end{macro}
 %
+% If \cs{DocumentMetadata} is used we make use of the \cs{contentsline}-hooks to add links:
+% 
+%    \begin{macrocode}
+\ExplSyntaxOn
+\IfDocumentMetadataT
+ {
+   \AddToHookWithArguments{contentsline/text/before}[hyp]
+     {
+       \tl_if_blank:nF {#2}%text
+        {
+          \tl_if_blank:nF {#4}%destination
+            {
+              \int_case:nnF {\Hy@linktoc}
+                {
+                  {0}{} %none
+                  {1}{\hyper@linkstart{link}{#4}} %section
+                  {2}{} %page
+                }
+                {\hyper@linkstart{link}{#4}} %all
+            }
+          }
+      }
+    \AddToHookWithArguments{contentsline/text/after}[hyp]
+      {
+        \tl_if_blank:nF {#2}
+         {
+           \tl_if_blank:nF {#4}
+             {
+               \int_case:nnF {\Hy@linktoc}
+                 {
+                   {0}{} %none
+                   {1}{\hyper@linkend} %section
+                   {2}{} %page
+                 }
+                 {\hyper@linkend} %all
+             } % none
+           }
+       }
+
+    \AddToHookWithArguments{contentsline/page/before}[hyp]
+      {
+        \tl_if_blank:nF {#3}
+         {
+           \tl_if_blank:nF {#4} %
+             {
+               \int_case:nnF {\Hy@linktoc}
+                 {
+                   {0}{} %none
+                   {1}{} %section
+                   {2}{\hyper@linkstart{link}{#4}} %page
+                 }
+                 {\hyper@linkstart{link}{#4}} %all
+             } % none
+           }
+       }
+   \AddToHookWithArguments{contentsline/page/after}[hyp]
+      {
+        \tl_if_blank:nF {#3}
+         {
+           \tl_if_blank:nF {#4}
+             {
+               \int_case:nnF {\Hy@linktoc}
+                 {
+                   {0}{} %none
+                   {1}{} %section
+                   {2}{\hyper@linkend} %page
+                 }
+                 {\hyper@linkend} %all
+             } % none
+           }
+       }  
+%    \end{macrocode}
+% Until the latex-lab file is cleaned up, we need to remove the hook code
+%    \begin{macrocode}
+  \AddToHook{package/hyperref/after}[latex-lab-testphase-toc]{}
+  \RemoveFromHook{package/hyperref/after}[latex-lab-testphase-toc]
+ }
+\ExplSyntaxOff
+%    \end{macrocode}
 %    \begin{macrocode}
 %</packageEnd>
 %<*check>

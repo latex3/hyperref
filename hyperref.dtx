@@ -11609,15 +11609,28 @@
 % that's a powerful, important package.
 % Patrick Daly (\Email{daly@linmpi.mpg.de}) has
 % provided hooks for us, so all we need to do is activate them.
+% 
+% Change 2026-02-06: use a generic hook to allow the tagging code to 
+% add its code without patching hyperref. 
 %    \begin{macrocode}
-\def\hyper@natlinkstart#1{%
-  \Hy@backout{#1}%
-  \hyper@linkstart{cite}{cite.#1}%
-  \def\hyper@nat@current{#1}%
-}
-\def\hyper@natlinkend{%
-  \hyper@linkend
-}
+\AddToHookWithArguments{cmd/hyper@natlinkstart/before}
+  {%
+    \Hy@backout{#1}%
+%    \end{macrocode}
+%  natbib passes the \cs{@extra@b@citeb} in the argument, and biblatex
+%  the refsection, so we only need to add the prefix \texttt{cite.}.
+%    \begin{macrocode}
+      \hyper@linkstart{cite}{cite.#1}%
+      \def\hyper@nat@current{#1}%
+  } 
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\AddToHook{cmd/hyper@natlinkend/after}
+   {\hyper@linkend}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \def\hyper@natlinkbreak#1#2{%
   \hyper@linkend#1\hyper@linkstart{cite}{cite.#2}%
 }
@@ -11707,6 +11720,22 @@
      }%
   }{}%
 }{}
+%    \end{macrocode}
+%
+% Change 2026-02-06: If \cs{DocumentMetadata} is used we add the links through the hooks
+% to \cs{bibcite}
+%    \begin{macrocode}
+\IfDocumentMetadataT
+  {
+   \AddToHookWithArguments{bibcite/before}
+     {\hyper@linkstart{cite}{cite.#1\@extra@b@citeb}}
+   \AddToHookWithArguments{bibcite/after}{\hyper@linkend}
+%    \end{macrocode}
+% Until the latex-lab file is cleaned up, we need to remove the hook code
+%    \begin{macrocode}
+  \AddToHook{package/hyperref/after}[latex-lab-testphase-bib]{}
+  \RemoveFromHook{package/hyperref/after}[latex-lab-testphase-bib]   
+  }  
 %    \end{macrocode}
 %
 %    \begin{macrocode}

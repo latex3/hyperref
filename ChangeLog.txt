@@ -1,5 +1,7 @@
 2026-02-04 Ulrike Fischer
 	* hyperref.dtx: add \hyper@nopatch@natbib test for latex-lab-bib code
+	* move natbib hooks from latex-lab-bib.dtx
+	* move toc hooks from latex-lab-toc.dtx
 
 Version 2026-01-29 v7.01p / v2.58
 

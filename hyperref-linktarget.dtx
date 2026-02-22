@@ -87,6 +87,8 @@
 % next \cs{label}.
 % A target name must be unique across a document. It is up to the users and package
 % authors to ensure this by following the advice given below.
+% 
+% Targets are not created if \cs{ifmeasuring@} is true. 
 %
 % \begin{doccomment}
 % A global \cs{@currentHref} means that the target name and
@@ -287,8 +289,8 @@
 % \end{syntax}
 % \end{function}
 %
-%
-% This commands allows to switch on and off locally the creation of a target with
+% Targets are not created if \cs{ifmeasuring@} is true. With 
+% these commands it is also possible to switch on and off locally the creation of a target with
 % \cs{MakeLinkTarget}.
 % The switches are also honored by \cs{refstepcounter}\footnote{currently
 % \cs{refstepcounter} doesn't use \cs{MakeLinkTarget} itself but this
@@ -408,11 +410,12 @@
 % TODO: The code to save/restore the space factor should
 % be replaced by kernel methods.
 % change 2024-11-06: add a kern, see thm-anchor test.
+% change 2026-02-22: use the hyp/raisedlink socket for varwidth support. 
 %    \begin{macrocode}
 \cs_new_protected:Npn \@@_target_raise:n #1
  {
    \mode_if_vertical:TF
-    { #1 }
+    { \UseSocket{hyp/raisedlink}{#1} }%
     {
      \Hy@SaveSpaceFactor
      \penalty\@M
@@ -468,7 +471,9 @@
 %    \begin{macrocode}
 \RenewDocumentCommand\MakeLinkTarget {s O{} m}
   {
-    \bool_if:NT \l_@@_target_create_bool
+    \bool_lazy_and:nnT 
+      { \l_@@_target_create_bool } 
+      { ! \legacy_if_p:n { measuring@ } }
       {
         \group_begin:
         \hook_use:n { makelinktarget }

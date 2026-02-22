@@ -10518,15 +10518,9 @@
 %    \end{macrocode}
 %
 %    \begin{macro}{\hyper@refstepcounter}
+%    changed 2026-02-22 to use \cs{MakeLinkTarget}
 %    \begin{macrocode}
-\def\hyper@refstepcounter#1{%
-  \HyCnt@ProvideTheHCounter{#1}%
-  \hyper@makecurrent{#1}%
-  \Hy@ifnotmeasuring
-   {\Hy@raisedlink{%
-      \hyper@anchorstart{\@currentHref}\hyper@anchorend
-    }}%
-}
+\def\hyper@refstepcounter#1{\ifHy@hypertexnames\MakeLinkTarget{#1}\else\MakeLinkTarget[#1]{} \fi}
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Hy@ProvideTheHCounter}
@@ -19413,11 +19407,10 @@
 % We do the \emph{same} for |\@ssect|, giving anchors to
 % unnumbered sections. This allows things like bibliographies
 % to get bookmarks when used with a manual |\addcontentsline|
+% 
+% change 2026-02-22: Use \cs{MakeLinkTarget}
 %    \begin{macrocode}
-\def\phantomsection{%
-  \Hy@MakeCurrentHrefAuto{section*}%
-  \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
-}
+\def\phantomsection{\MakeLinkTarget[section]{}}
 %</packageEnd>
 %    \end{macrocode}
 %

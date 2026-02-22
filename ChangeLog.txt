@@ -1,3 +1,9 @@
+2026-02-22 Ulrike Fischer
+	* hyperref-linktarget.dtx: do not create targets when measuring.
+	* hyperref-linktarget.dtx: use the hyp/raisedlink also in MakelinkTarget for better varwidth support%.
+	* hyperref.dtx: use \MakeLinkTarget in \hyper@refstepcounter
+	* hyperref.dtx: use \MakeLinkTarget in \phantomsection
+
 Version 2026-01-29 v7.01p / v2.58
 
 2026-01-10 Ulrike Fischer

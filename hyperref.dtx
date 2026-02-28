@@ -4364,9 +4364,7 @@
 % Packages like varwidth need an option to change the handling in vmode.
 % (Issue \#204). With a new format we therefore insert a socket.
 %    \begin{macrocode}
-\@ifl@t@r\fmtversion{2023-11-01}
- {\NewSocket{hyp/raisedlink}{1}}
- {\providecommand\UseSocket[2]{#2}}
+\NewSocket{hyp/raisedlink}{1}
 \def\Hy@raisedlink#1{%
   \ifvmode
     \UseSocket{hyp/raisedlink}{#1}%
@@ -9569,81 +9567,14 @@
 % to a document without having to remove .aux and .toc files
 % (this section is by David Carlisle)
 % All the code is delayed to |\begin{document}|
-% change 2023-08-13: with a new format it is no longer
-% needed to handle different |\newlabel|
-% definitions. The code can be removed completely later.
-%    \begin{macrocode}
-%<*package>
-\@ifl@t@r\fmtversion{2023-06-01}{}
- {
-   \Hy@AtBeginDocument{%
-%    \end{macrocode}
-% First the code to deal with removing the hyperref package from
-% a document.
-%
-% Write some stuff into the aux file so if the next run is done
-% without hyperref, then  |\newlabel| is defined
-% to cope with the extra arguments.
-% change 2022-03-28: removed the code for |\contentsline|, it is no
-% longer needed as |\contentsline| has now always four arguments.
-%    \begin{macrocode}
-      \if@filesw
-        \immediate\write\@auxout{%
-          \string\providecommand\string\HyperFirstAtBeginDocument{%
-            \string\AtBeginDocument}^^J%
-          \string\HyperFirstAtBeginDocument{%
-            \string\ifx\string\hyper@anchor\string\@undefined^^J%
-              \string\global\string\let\string\oldnewlabel\string\newlabel^^J%
-              \string\gdef\string\newlabel\string#1\string#2{%
-                 \string\newlabelxx{\string#1}\string#2}^^J%
-              \string\gdef\string\newlabelxx%
-                 \string#1\string#2\string#3\string#4\string#5\string#6{%
-                 \string\oldnewlabel{\string#1}{{\string#2}{\string#3}}}^^J%
-%    \end{macrocode}
-%
-% But the new aux file will be read again at the end, with the normal
-% definitions expected, so better put things back as they were.
-%    \begin{macrocode}
-              \string\AtEndDocument{%
-                \string\ifx\string\hyper@anchor\string\@undefined^^J%
-                  \string\let\string\newlabel\string\oldnewlabel^^J%
-                \string\fi%
-              }^^J%
-%    \end{macrocode}
-%
-% If the document is being run with hyperref put this definition
-% into the aux file, so we can spot it on the next run.
-%    \begin{macrocode}
-            \string\fi%
-          }^^J%
-          \string\global\string\let\string\hyper@last\relax^^J%
-          \string\gdef\string\HyperFirstAtBeginDocument\string#1{\string#1}%
-        }%
-      \fi
-      \let\HyperFirstAtBeginDocument\@firstofone
-%    \end{macrocode}
-%
-% Now the code to deal with adding the hyperref package to a document
-% with aux and toc written the standard way.
-%
-% If hyperref was used last time, do nothing.
-% change 2022-03-28: removed the test for an old toc.
-% |\contentsline|
-% has now always four arguments.
-%    \begin{macrocode}
-      \ifx\hyper@last\@undefined
-        \def\newlabel#1#2{\@newl@bel r{#1}{#2{}{}{}{}}}%
-      \fi
-    }
-}
-%    \end{macrocode}
-%
+% change 2026-02-22: removed code for different |\newlabel| definitions. 
 % \section{Title strings}
 %
 %    If options |pdftitle| and |pdfauthor| are not used,
 %    these data for the pdf information dictionary
 %    can be extracted by the \cmd{\title} and \cmd{\author}.
 %    \begin{macrocode}
+%<*package>
 \ifHy@pdfusetitle
   \let\HyOrg@title\title
   \let\HyOrg@author\author
@@ -10358,35 +10289,9 @@
   \fi
 }
 %    \end{macrocode}
-% change 2024-10-13: do not define if format is new enough.
-%    \begin{macrocode}
-\IfFormatAtLeastTF{2024-11-01}{}
- {
-    \Hy@CounterExists{section}{%
-      \providecommand\theHequation{\theHsection.\arabic{equation}}%
-    }
-    \providecommand\theHequation{\arabic{equation}}%
-    \Hy@CounterExists{part}{%
-      \providecommand\theHpart{\arabic{part}}%
-    }
-    \@ifundefined{thechapter}{%
-      \providecommand\theHsection    {\arabic{section}}%
-      \providecommand\theHfigure     {\arabic{figure}}%
-      \providecommand\theHtable      {\arabic{table}}%
-    }{%
-      \providecommand\theHchapter    {\arabic{chapter}}%
-      \providecommand\theHfigure     {\theHchapter.\arabic{figure}}%
-      \providecommand\theHtable      {\theHchapter.\arabic{table}}%
-      \providecommand\theHsection    {\theHchapter.\arabic{section}}%
-    }
-    \providecommand\theHsubsection   {\theHsection.\arabic{subsection}}
-    \providecommand\theHsubsubsection{\theHsubsection.\arabic{subsubsection}}
-    \providecommand\theHparagraph    {\theHsubsubsection.\arabic{paragraph}}
-    \providecommand\theHsubparagraph {\theHparagraph.\arabic{subparagraph}}
-    \providecommand\theHtheorem      {\theHsection.\arabic{theorem}}
-    \providecommand\theHthm          {\theHsection.\arabic{thm}}
-  }
-%    \end{macrocode}
+% change 2026-02-22: removed definitions provided for format before 
+% 2024-11-01
+% 
 % Thanks to Greta Meyer (gbd@pop.cwru.edu) for making me realize
 % that enumeration starts at 0 for every list! But |\item|
 % occurs inside |\trivlist|, so check if its a real |\item| before
@@ -10394,8 +10299,6 @@
 %    \begin{macrocode}
 \let\H@item\item
 \newcounter{Item}
-\IfFormatAtLeastTF{2024-11-01}{}
- {\def\theHItem{\arabic{Item}}}
 \def\item{%
   \@hyper@itemfalse
   \if@nmbrlist\@hyper@itemtrue\fi
@@ -10403,17 +10306,6 @@
 }
 %    \end{macrocode}
 %
-%    \begin{macrocode}
-\IfFormatAtLeastTF{2024-11-01}{}
- {
-   \providecommand\theHenumi     {\theHItem}
-   \providecommand\theHenumii    {\theHItem}
-   \providecommand\theHenumiii   {\theHItem}
-   \providecommand\theHenumiv    {\theHItem}
-   \providecommand\theHHfootnote {\arabic{Hfootnote}}
-   \providecommand\theHmpfootnote{\arabic{mpfootnote}}
- }
-%    \end{macrocode}
 % Tanmoy asked for this default handling of undefined |\theH<name>|
 % situations. It really isn't clear what would be ideal, whether to
 % turn off hyperizing of unknown elements, to pick up the textual
@@ -10437,66 +10329,41 @@
 \@hyper@itemfalse
 \@skiphyperreffalse
 \ExplSyntaxOn
-\IfFormatAtLeastTF{2024-11-01}
- {
-  \NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
-  \AssignSocketPlug{refstepcounter}{hyperref}
+\NewSocketPlug{refstepcounter}{hyperref}{\ifHy@pdfstring\else#1\fi}
+\AssignSocketPlug{refstepcounter}{hyperref}
 %    \end{macrocode}
 % change 2024-11-05: cleveref relies on refstepcounter to update its data.
 %    \begin{macrocode}
-  \AddToHook{package/cleveref/after}
-   {
-     \@ifpackagelater{cleveref}{2018/03/28}{}
-      {
-      \NewSocketPlug{refstepcounter}{hyperref/fixcleveref}
-       {\ifHy@pdfstring\else
-         #1%
-         {\firstaid@cref@updatelabeldata{\@currentcounter}}%
-        \fi}
-       \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}
-      }
-   }
-  \NewSocketPlug{refstepcounter/target}{hyperref}
+\AddToHook{package/cleveref/after}
+ {
+   \@ifpackagelater{cleveref}{2018/03/28}{}
     {
-      \bool_lazy_and:nnT
-      { \l__hyp_target_create_bool }
-      { ! \legacy_if_p:n{@skiphyperref} }
-      {
-        \legacy_if:nTF {@hyper@item}
-          {
-            \stepcounter{Item}%
-            \hyper@refstepcounter{Item}%
-            \@hyper@itemfalse
-          }
-          {
-            \hyper@refstepcounter{\@currentcounter}%
-          }
-       }
-     }
-    \AssignSocketPlug{refstepcounter/target}{hyperref}
-  }
+    \NewSocketPlug{refstepcounter}{hyperref/fixcleveref}
+     {\ifHy@pdfstring\else
+       #1%
+       {\firstaid@cref@updatelabeldata{\@currentcounter}}%
+      \fi}
+     \AssignSocketPlug{refstepcounter}{hyperref/fixcleveref}
+    }
+ }
+\NewSocketPlug{refstepcounter/target}{hyperref}
   {
-    \def\refstepcounter#1{%
-      \legacy_if:nF {Hy@pdfstring}
-       {
-        \H@refstepcounter{#1}%
-        \bool_lazy_and:nnT
-          { \l__hyp_target_create_bool }
-          { ! \legacy_if_p:n{@skiphyperref} }
-          {
-            \legacy_if:nTF {@hyper@item}
-              {
-                \stepcounter{Item}%
-                \hyper@refstepcounter{Item}%
-                \@hyper@itemfalse
-              }
-              {
-                \hyper@refstepcounter{#1}%
-              }
-          }
-       }
+    \bool_lazy_and:nnT
+    { \l__hyp_target_create_bool }
+    { ! \legacy_if_p:n{@skiphyperref} }
+    {
+      \legacy_if:nTF {@hyper@item}
+        {
+          \stepcounter{Item}%
+          \hyper@refstepcounter{Item}%
+          \@hyper@itemfalse
+        }
+        {
+          \hyper@refstepcounter{\@currentcounter}%
+        }
      }
-  }
+   }
+\AssignSocketPlug{refstepcounter/target}{hyperref}
 \ExplSyntaxOff
 \let\Hy@saved@refstepcounter\refstepcounter
 %    \end{macrocode}
@@ -10518,15 +10385,9 @@
 %    \end{macrocode}
 %
 %    \begin{macro}{\hyper@refstepcounter}
+%    changed 2026-02-22 to use \cs{MakeLinkTarget}
 %    \begin{macrocode}
-\def\hyper@refstepcounter#1{%
-  \HyCnt@ProvideTheHCounter{#1}%
-  \hyper@makecurrent{#1}%
-  \Hy@ifnotmeasuring
-   {\Hy@raisedlink{%
-      \hyper@anchorstart{\@currentHref}\hyper@anchorend
-    }}%
-}
+\def\hyper@refstepcounter#1{\ifHy@hypertexnames\MakeLinkTarget{#1}\else\MakeLinkTarget[#1]{} \fi}
 %    \end{macrocode}
 %    \end{macro}
 %    \begin{macro}{\Hy@ProvideTheHCounter}
@@ -10777,14 +10638,11 @@
 % We use a socket for this.
 %
 %    \begin{macrocode}
-\@ifl@t@r\fmtversion{2023-11-01}
+\AddToHook{package/varwidth/after}
  {
-   \AddToHook{package/varwidth/after}
-    {
-      \NewSocketPlug{hyp/raisedlink}{varwidth}{\@vwid@wrap{#1}}
-      \appto\@vwid@setup{\AssignSocketPlug{hyp/raisedlink}{varwidth}}
-    }
- }{}
+   \NewSocketPlug{hyp/raisedlink}{varwidth}{\@vwid@wrap{#1}}
+   \appto\@vwid@setup{\AssignSocketPlug{hyp/raisedlink}{varwidth}}
+ }
 %    \end{macrocode}
 % \section{Package titlesec and titletoc support}
 %
@@ -11520,7 +11378,7 @@
 % as the anchor are set manually here, we have to update the tagging info.
 % For now we test for the format but this should go again in 2025.
 %    \begin{macrocode}
-        \IfFormatAtLeastTF{2024-11-01}{\UseTaggingSocket{recordtarget}}{}%
+        \UseTaggingSocket{recordtarget}%
       }%
     \fi
     \par
@@ -12287,32 +12145,8 @@
 % change 2024-02-14: use a csname to handle counter names with commands,
 % see issue \#330
 % change 2024-10-13: disable patches in new format 2024-11-01.
-%    \begin{macrocode}
-\IfFormatAtLeastTF{2024-11-01}{\def\hyper@nopatch@counter{}}{}
-\@ifundefined{hyper@nopatch@counter}
-  {
-   \let\H@definecounter\@definecounter
-   \def\@definecounter#1{%
-     \H@definecounter{#1}%
-     \expandafter
-     \gdef\csname theH#1\expandafter\endcsname\expandafter
-          {\expandafter\@arabic\csname c@#1\endcsname}}%
-  }{}
-%    \end{macrocode}
-% But what if they have used the optional argument to e.g. |\newtheorem|
-% to determine when the numbering is reset? OK, we'll trap that too.
-%    \begin{macrocode}
-\@ifundefined{hyper@nopatch@counter}
-  {
-    \let\H@newctr\@newctr
-    \def\@newctr#1[#2]{%
-      \H@newctr#1[{#2}]%
-      \expandafter\gdef\csname theH#1\endcsname{%
-        \csname the\@ifundefined{theH#2}{}{H}#2\endcsname.\arabic{#1}%
-      }%
-    }
-   }{}
-%    \end{macrocode}
+% change 2026-02-22: removed patches fully.
+%
 % \section{AMS\LaTeX\ compatibility}\label{ams}
 % Oh, no, they don't use anything as simple as |\refstepcounter|
 % in the AMS! We need to intercept some low-level operations
@@ -19544,11 +19378,10 @@
 % We do the \emph{same} for |\@ssect|, giving anchors to
 % unnumbered sections. This allows things like bibliographies
 % to get bookmarks when used with a manual |\addcontentsline|
+% 
+% change 2026-02-22: Use \cs{MakeLinkTarget}
 %    \begin{macrocode}
-\def\phantomsection{%
-  \Hy@MakeCurrentHrefAuto{section*}%
-  \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
-}
+\def\phantomsection{\MakeLinkTarget[section]{}}
 %</packageEnd>
 %    \end{macrocode}
 %

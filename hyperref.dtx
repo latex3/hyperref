@@ -11579,6 +11579,34 @@
   }{}%
 }{}
 %    \end{macrocode}
+% If \cs{DocumentMetadata} is used hyperref can use the bibcite hooks.
+%    \begin{macrocode}
+\IfDocumentMetadataT
+ {
+   \AddToHook{package/hyperref/after}[latex-lab-testphase-bib]{}
+   \RemoveFromHook{package/hyperref/after}[latex-lab-testphase-bib]
+   \AddToHookWithArguments{bibcite/before}
+     {
+       \hyper@linkstart{cite}{cite.#1\@extra@b@citeb}
+     }
+   \AddToHookWithArguments{bibcite/after}{\hyper@linkend}
+   \renewcommand\hyper@natlinkstart[1]{}
+   \renewcommand\hyper@natlinkend{}
+   \AddToHookWithArguments{cmd/hyper@natlinkstart/before}
+      {
+        \Hy@backout{#1}%
+%    \end{macrocode}
+%  natbib passes the \cs{@extra@b@citeb} in the argument, and biblatex
+%  the refsection, so we only need to add the prefix \texttt{cite.}.
+%    \begin{macrocode}
+          \hyper@linkstart{cite}{cite.#1}%
+          \def\hyper@nat@current{#1}
+      } 
+    \AddToHook{cmd/hyper@natlinkend/after}
+      {  
+        \hyper@linkend         
+ }  
+%    \end{macrocode}
 %
 % Change 2026-02-06: If \cs{DocumentMetadata} is used we add the links through the hooks
 % to \cs{bibcite}

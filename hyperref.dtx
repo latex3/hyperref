@@ -7925,6 +7925,51 @@
 \fi
 %    \end{macrocode}
 %
+% \subsection{Link box support for generic drivers}
+%
+%    \begin{macrocode}
+\newdimen\HyperrefLinkMargin
+\setlength{\HyperrefLinkMargin}{2pt}
+\font\HyperrefLink@font=pzdr at 1pt\relax
+\newcommand*{\HyperrefLink@space}{%
+\begingroup
+    \HyperrefLink@font
+    \@xxxii
+\endgroup
+}%
+\newcommand{\HyperrefLinkBox}[1]{%
+\begingroup
+    \leavevmode
+    \sbox\z@{#1}%
+    \begingroup
+    \dimen@=\dp\z@
+    \advance\dimen@\HyperrefLinkMargin
+    \setbox\tw@=\llap{%
+        \hb@xt@\HyperrefLinkMargin{%
+        \lower\dimen@\hbox{\HyperrefLink@space}%
+        \hss
+        }%
+    }%
+    \dp\tw@=\dp\z@
+    \ht\tw@=\ht\z@
+    \copy\tw@
+    \endgroup
+    \copy\z@
+    \dimen@=\ht\z@
+    \advance\dimen@\HyperrefLinkMargin
+    \setbox\tw@=\rlap{%
+    \hb@xt@\HyperrefLinkMargin{%
+        \hss
+        \raise\dimen@\hbox{\HyperrefLink@space}%
+    }%
+    }%
+    \dp\tw@=\dp\z@
+    \ht\tw@=\ht\z@
+    \copy\tw@
+\endgroup
+}%
+%    \end{macrocode}
+%
 % \section{Underlying basic hypertext macros}\label{coremacros}
 %
 % Links have an optional type, a filename (possibly a URL),

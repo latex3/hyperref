@@ -1,3 +1,6 @@
+2026-03-16 Ulrike Fischer
+	* hyperref.dtx: extend \XeTeXLinkBox to dvipdfmx backend.
+
 2026-02-22 Ulrike Fischer
 	* hyperref-linktarget.dtx: do not create targets when measuring.
 	* hyperref-linktarget.dtx: use the hyp/raisedlink also in MakelinkTarget for better varwidth support%.

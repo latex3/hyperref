@@ -7868,23 +7868,26 @@
 %    \end{macrocode}
 % \end{macro}
 
-% \subsection{Link box support for XeTeX}
-%
+% \subsection{Link box support for XeTeX and dvipdfmx}
+% 
 %    \begin{macrocode}
 \newdimen\XeTeXLinkMargin
 \setlength{\XeTeXLinkMargin}{2pt}
-\ifxetex
-  \font\XeTeXLink@font=pzdr at 1sp\relax
-  \newcommand*{\XeTeXLink@space}{%
+\newcommand\XeTeXLinkBox[1]{}
+\newcommand*{\XeTeXLink@space}{}
+
+\newcommand\Hy@setup@XeTeXLinkBox@dvipdfmx
+ {\font\XeTeXLink@font=pzdr at 1sp\relax
+  \renewcommand*{\XeTeXLink@space}{%
     \begingroup
       \XeTeXLink@font
       \@xxxii
     \endgroup
-  }%
-  \newcommand{\XeTeXLinkBox}[1]{%
+   }%
+   \renewcommand{\XeTeXLinkBox}[1]{%
     \begingroup
       \leavevmode
-      \sbox\z@{#1}%
+      \sbox\z@{##1}%
       \begingroup
         \dimen@=\dp\z@
         \advance\dimen@\XeTeXLinkMargin
@@ -7911,16 +7914,22 @@
       \ht\tw@=\ht\z@
       \copy\tw@
     \endgroup
-  }%
-\else
-  \newcommand*{\XeTeXLinkBox}[1]{%
+  }}
+
+\newcommand\Hy@setup@XeTeXLinkBox@default{%
+ \renewcommand*{\XeTeXLinkBox}[1]{%
     \begingroup
       \leavevmode
-      \sbox\z@{#1}%
+      \sbox\z@{##1}%
       \copy\z@
     \endgroup
-  }%
-\fi
+  }}
+\ExplSyntaxOn
+\AddToHook{begindocument}{%
+  \bool_lazy_or:nnTF{\sys_if_engine_xetex_p:}{\str_if_eq_p:on{\c_sys_backend_str}{dvipdfmx}}
+    {\Hy@setup@XeTeXLinkBox@dvipdfmx}
+    {\Hy@setup@XeTeXLinkBox@default}}
+\ExplSyntaxOff  
 %    \end{macrocode}
 %
 % \section{Underlying basic hypertext macros}\label{coremacros}

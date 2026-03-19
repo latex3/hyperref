@@ -1,7 +1,10 @@
-2026-02-28 Ulrike Fischer
+2026-03-19 Ulrike Fischer
 	* hyperref.dtx: add \hyper@nopatch@natbib test for latex-lab-bib code
 	* move natbib hooks from latex-lab-bib.dtx
 	* move toc hooks from latex-lab-toc.dtx
+
+2026-03-16 Ulrike Fischer
+	* hyperref.dtx: extend \XeTeXLinkBox to dvipdfmx backend.
 
 2026-02-22 Ulrike Fischer
 	* hyperref-linktarget.dtx: do not create targets when measuring.

@@ -1,3 +1,6 @@
+2026-04-24 Ulrike Fischer
+	* hyperref.dtx: support bookmark code from latex-lab-sec-template.
+
 2026-03-19 Ulrike Fischer
 	* hyperref.dtx: add \hyper@nopatch@natbib test for latex-lab-bib code
 	* move natbib hooks from latex-lab-bib.dtx

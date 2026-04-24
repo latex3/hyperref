@@ -1,3 +1,23 @@
+Version 2026-04-24 v7.01q
+
+2026-04-24 Ulrike Fischer
+	* hyperref.dtx: support bookmark code from latex-lab-sec-template.
+
+2026-03-19 Ulrike Fischer
+	* hyperref.dtx: add \hyper@nopatch@natbib test for latex-lab-bib code
+	* move natbib hooks from latex-lab-bib.dtx
+	* move toc hooks from latex-lab-toc.dtx
+
+2026-03-16 Ulrike Fischer
+	* hyperref.dtx: extend \XeTeXLinkBox to dvipdfmx backend.
+
+2026-02-22 Ulrike Fischer
+	* hyperref-linktarget.dtx: do not create targets when measuring.
+	* hyperref-linktarget.dtx: use the hyp/raisedlink also in MakelinkTarget for better varwidth support%.
+	* hyperref.dtx: use \MakeLinkTarget in \hyper@refstepcounter
+	* hyperref.dtx: use \MakeLinkTarget in \phantomsection
+
+
 Version 2026-01-29 v7.01p / v2.58
 
 2026-01-10 Ulrike Fischer

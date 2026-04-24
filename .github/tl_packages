@@ -147,7 +147,7 @@ collection-basic
         parskip
         pdfcolfoot
         pdflscape
-        pdfmanagement-testphase
+        pdfmanagement
         pdfpages
         pdftexcmds
         ragged2e
@@ -168,7 +168,7 @@ babel-latin
 babel-french
 babel-czech
 hyphen-latin
-sourcesanspro
+sourcesans
 psnfss
 tex-gyre
 hyperxmp

@@ -11975,6 +11975,22 @@
    \fi
   }
 %    \end{macrocode}
+% If the new sec template code is used, we map the command to the new interface:
+%    \begin{macrocode}
+\@ifundefined{addcontentslinebookmark}{}
+ {
+   \RenewCommandCopy\addcontentslinebookmark\Hy@addcontentsline@addbookmark
+     \renewcommand\addcontentslinebookmarkOff
+      {%
+       \ifHy@bookmarks 
+        \let\addcontentslinebookmarkReset\Hy@bookmarkstrue
+       \else 
+         \let\addcontentslinebookmarkReset\relax
+       \fi  
+       \Hy@bookmarksfalse
+      } 
+ }  
+%    \end{macrocode}
 % If \cs{DocumentMetadata} is not used, we must redefine \cs{addcontentsline} as in the 
 % latex-lab code to ensure that the target is written:
 %    \begin{macrocode}

@@ -1,3 +1,6 @@
+2026-04-28 Ulrike Fischer
+	* hyperref.dtx: fix spurious space in \hyper@refstepcounter, issue #417
+
 Version 2026-04-24 v7.01q
 
 2026-04-24 Ulrike Fischer

@@ -1,0 +1,16 @@
+
+\input{regression-test}
+\documentclass{book}
+\usepackage{natbib}
+\usepackage[draft]{hyperref}
+\begin{document}
+\START\showoutput
+\begin{equation}
+1
+\end{equation}
+
+\begin{thebibliography}{1}
+\bibitem[{Awwad(2016)}]{sss}
+x
+\end{thebibliography}
+\end{document}

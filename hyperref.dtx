@@ -10790,7 +10790,7 @@
 %    an unary minus, for example.
 %    \begin{macrocode}
       \mathopen{%
-        \Hy@raisedlink{\hyper@anchorstart{\@currentHref}}%
+        \Hy@raisedlink{\hyper@anchorstart{\@currentHref}{}}%
       }%
       \let\refstepcounter\new@refstepcounter
     }%
@@ -11509,7 +11509,7 @@
   \hyper@linkend#1\hyper@linkstart{cite}{cite.#2}%
 }
 \def\hyper@natanchorstart#1{%
-  \Hy@raisedlink{\hyper@anchorstart{cite.#1}}%
+  \Hy@raisedlink{\hyper@anchorstart{cite.#1}\relax}%
 }
 \def\hyper@natanchorend{\hyper@anchorend}
 %    \end{macrocode}

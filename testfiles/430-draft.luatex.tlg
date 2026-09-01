@@ -1,0 +1,209 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line ....
+Completed box being shipped out [1]
+\vbox(627.36243+0.0)x380.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 33.99626fil, direction TLT
+...\kern0.0
+...\kern35.0
+...\kern-1.00374
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+0.0)x380.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+0.0)x345.0, shifted 35.0, direction TLT
+...\vbox(12.0+0.0)x345.0, glue set 5.34fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(6.66+0.0)x345.0, direction TLT
+.....\hbox(6.66+0.0)x345.0, glue set 340.0fil, direction TLT
+......\glue 0.0 plus 1.0fil
+......\TU/lmr/m/n/10 1
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 519.5fil, direction TLT
+....\write-{}
+....\glue(\topskip) 10.0
+....\hbox(0.0+0.0)x345.0, glue set 330.0fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x15.0, direction TLT
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\abovedisplayshortskip) 0.0 plus 3.0
+....\glue(\baselineskip) 4.5
+....\hbox(7.5+2.5)x345.0, direction TLT
+.....\kern170.0 (font)
+.....\hbox(6.44444+0.0)x5.00002, direction TLT
+......\hbox(0.0+0.0)x0.0, direction TLT
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0, direction TLT
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\mathon
+........\hbox(0.0+0.0)x0.0, shifted -12.0, direction TLT
+........\mathoff
+......\OT1/cmr/m/n/10 1
+......\hbox(0.0+0.0)x0.0, direction TLT
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0, direction TLT
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\mathon
+........\hbox(0.0+0.0)x0.0, shifted -12.0, direction TLT
+........\mathoff
+.....\kern157.21999 (font)
+.....\hbox(7.5+2.5)x12.78, direction TLT
+......\hbox(7.5+2.5)x12.78, direction TLT
+.......\TU/lmr/m/n/10 (
+.......\TU/lmr/m/n/10 1
+.......\TU/lmr/m/n/10 )
+....\penalty 0
+....\glue(\belowdisplayshortskip) 6.0 plus 3.0 minus 3.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 25.29494
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+.\kern0.0
+Completed box being shipped out [2]
+\vbox(627.36243+0.0)x434.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 87.99626fil, direction TLT
+...\kern0.0
+...\kern89.0
+...\kern-1.00374
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+0.0)x434.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+0.0)x345.0, shifted 89.0, direction TLT
+...\vbox(12.0+0.0)x345.0, glue set 5.34fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(6.66+0.0)x345.0, direction TLT
+.....\hbox(6.66+0.0)x345.0, glue set 340.0fil, direction TLT
+......\TU/lmr/m/n/10 2
+......\glue 0.0 plus 1.0fil
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x0.0, glue set 540.0fil, direction TLT
+....\write-{}
+....\glue(\topskip) 10.0
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 25.29494
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\hbox(0.0+0.0)x345.0, direction TLT
+Completed box being shipped out [3]
+\vbox(627.36243+0.22)x380.0, direction TLT
+.\vbox(0.0+0.0)x0.0, glue set - 20.99626fil, direction TLT
+..\kern0.0
+..\kern22.0
+..\kern-1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 33.99626fil, direction TLT
+...\kern0.0
+...\kern35.0
+...\kern-1.00374
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(627.36243+0.22)x380.0, direction TLT
+..\glue 22.0
+..\vbox(605.36243+0.22)x345.0, shifted 35.0, direction TLT
+...\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x345.0, direction TLT
+.....\hbox(0.0+0.0)x345.0, direction TLT
+...\glue 18.06749
+...\glue(\lineskip) 0.0
+...\vbox(550.0+0.0)x345.0, glue set 408.0fil, direction TLT
+....\glue(\topskip) 10.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 50.0
+....\glue 0.0
+....\glue(\parskip) 0.0 plus 1.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 12.73328
+....\hbox(17.26672+5.00089)x345.0, glue set 94.00359fil, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x0.0, direction TLT
+.....\TU/lmr/bx/n/24.88 B
+.....\TU/lmr/bx/n/24.88 i
+.....\TU/lmr/bx/n/24.88 b
+.....\TU/lmr/bx/n/24.88 l
+.....\TU/lmr/bx/n/24.88 i
+.....\TU/lmr/bx/n/24.88 o
+.....\TU/lmr/bx/n/24.88 g
+.....\TU/lmr/bx/n/24.88 r
+.....\TU/lmr/bx/n/24.88 a
+.....\TU/lmr/bx/n/24.88 p
+.....\TU/lmr/bx/n/24.88 h
+.....\kern-0.77129 (font)
+.....\TU/lmr/bx/n/24.88 y
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\marks1{\__mark_value:nn {1}{\MakeUppercase    []{Bibliography}}}
+....\marks2{\__mark_value:nn {2}{\MakeUppercase    []{Bibliography}}}
+....\marks3{\__mark_value:nn {3}{\MakeUppercase    []{Bibliography}}}
+....\penalty 10000
+....\glue 40.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 2.68912
+....\hbox(4.31+0.0)x335.0, glue set 339.72fil, shifted 10.0, direction TLT
+.....\localpar
+......\localinterlinepenalty=0
+......\localbrokenpenalty=0
+......\localleftbox=null
+......\localrightbox=null
+.....\hbox(0.0+0.0)x-10.0, direction TLT
+......\glue -10.0
+......\glue -20.0
+......\glue -5.0
+......\hbox(0.0+0.0)x20.0, glue set 20.0fill, direction TLT
+.......\glue 0.0 plus 1.0fil
+.......\glue 0.0 plus 1.0fil
+.......\penalty 10000
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\hbox(0.0+0.0)x0.0, shifted -12.0, direction TLT
+.......\glue 0.0 plus 1.0fill
+......\glue 5.0
+.....\penalty 0
+.....\TU/lmr/m/n/10 x
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\penalty -51
+....\glue 10.0 plus 3.0 minus 5.0
+....\glue -10.0 plus -3.0 minus -5.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 18.63493
+...\hbox(6.66+0.22)x345.0, direction TLT
+....\hbox(6.66+0.22)x345.0, glue set 170.0fil, direction TLT
+.....\glue 0.0 plus 1.0fil
+.....\TU/lmr/m/n/10 3
+.....\glue 0.0 plus 1.0fil
+(430-draft.aux)

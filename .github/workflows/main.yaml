@@ -6,6 +6,16 @@ on:
       - "*"
       - "!test*"
 jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Check spelling
+        uses: crate-ci/typos@v1.50.1
+        with:
+          config: .github/typos.toml
   run-checks:
     runs-on: ubuntu-latest
     outputs:
@@ -30,3 +40,19 @@ jobs:
           name: testfiles-hyperref
           # Decide how long to keep the test output artifact:
           retention-days: 3
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - run: sudo apt-get update && sudo apt-get install ghostscript
+      - name: Install TeX Live
+        id: texlive
+        uses: zauguin/install-texlive@v4
+        with:
+          # List the required TeX Live packages in a separate file to allow reuse in
+          # different workflows.
+          package_file: .github/tl_packages
+      - name: Run l3build
+        run: l3build doc -q -H

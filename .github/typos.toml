@@ -1,0 +1,14 @@
+[files]
+extend-exclude=[
+  "experiments/*", 
+  "support/*",
+  "*.lvt",
+  "*.pvt",
+  "*.tlg",
+  "*.tpf"  
+]
+
+[default.extend-words]
+
+
+[default.extend-identifiers]

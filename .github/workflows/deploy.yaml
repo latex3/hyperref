@@ -1,0 +1,34 @@
+name: Create release
+
+# We create releases for all new tags
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Build release
+    environment: Release
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      # We need Ghostscript for XeTeX tests.
+      - run: sudo apt-get update && sudo apt-get install ghostscript
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v4
+        with:
+          # List the required TeX Live packages in a separate file to allow reuse in
+          # different workflows.
+          package_file: .github/tl_packages
+      - name: Run l3build
+        run: l3build ctan -q -H
+      # Now create the release (this only runs if the previous steps were successful)
+      - name: Create GitHub release
+        uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
+        id: release
+        with:
+          artifacts: "build/distrib/ctan/*.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}

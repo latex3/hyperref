@@ -186,6 +186,7 @@ cbfonts
 appendix
 tex4ht
 alphalph
+fancyvrb
 
 # fonts
 amsfonts 

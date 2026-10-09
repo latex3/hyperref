@@ -16,6 +16,8 @@ Alph = "Alph"
 OT = "OT"
 10ths = "10ths"
 BA = "BA"
+EDE = "EDE"
+ths ="ths"
 
 [default.extend-identifiers]
 atend = "atend"

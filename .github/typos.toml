@@ -12,6 +12,10 @@ extend-exclude=[
 
 [default.extend-words]
 WOMENS = "WOMENS"
+Alph = "Alph"
+OT = "OT"
+10ths = "10ths"
+BA = "BA"
 
 [default.extend-identifiers]
 atend = "atend"

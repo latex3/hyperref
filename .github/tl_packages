@@ -185,6 +185,7 @@ cbfonts-fd
 cbfonts
 appendix
 tex4ht
+alphalph
 
 # fonts
 amsfonts 

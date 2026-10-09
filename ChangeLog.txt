@@ -246,7 +246,7 @@ Version: 2023-07-08 v7.01b
     * nameref: adapt label (re)definition to changes in LaTeX 2023-06-01
     
 2023-04-22 Ulrike Fischer
-    * fix cleveref/ntheorem incompability https://tex.stackexchange.com/q/683581/2388
+    * fix cleveref/ntheorem incompatibility https://tex.stackexchange.com/q/683581/2388
     * add nopatch option for \@thm 
     
 2023-04-20 Ulrike Fischer
@@ -304,7 +304,7 @@ Version: 2023-07-08 v7.01b
       the class has been loaded. issue #236.
 
 2022-05-16 Ulrike Fischer/David Carlisle
-    * fixed: check if \nameref is already defined for compability
+    * fixed: check if \nameref is already defined for compatibility
       with ltugboat.cls (issue #234)
     * nameref is loaded always and earlier (issue#235)
     * the typexml option has been removed as the package it supports
@@ -317,7 +317,7 @@ Version: 2023-07-08 v7.01b
     * allow to suppress sectioning and footnote patches of hyperref
     * removed loading of memhfixc: memoir handles that now by itself.
     * removed an old patch for KOMA before 2001
-    * removed compability code for pdftex 1.14
+    * removed compatibility code for pdftex 1.14
     * remove a test for amsmath before 1999
     * removed an since 2002 unneeded definition for subfigure
     * various patches in nameref can now be disabled by package authors
@@ -349,7 +349,7 @@ Version: 2023-07-08 v7.01b
     * added a key next-anchor to set the next anchor name.
     * added a command \hyperget to retrieve anchor names.
     * moved the patch for foiltex into an external package
-    * removed compability code for latex2html, this is now provided
+    * removed compatibility code for latex2html, this is now provided
       by html.sty directly.
     * removed patch for seminar, this is now in the class itself
     * moved (basically unneeded) listings patches to external
@@ -810,7 +810,7 @@ Version: 2023-07-08 v7.01b
       instead of a number with default unit bp.
       (Feature request of GL.)
     * Fix for \TextField and \TextCheckField:
-      \leavevmode is inserted before the formular field
+      \leavevmode is inserted before the form field
       to avoid the error that \pdfstartlink cannot be
       used in vertical mode. (Bug reported by GL.)
 
@@ -1363,7 +1363,7 @@ Version: 2023-07-08 v7.01b
 
 2009-09-22  6.78v  Heiko Oberdiek
     * 6.78v
-    * PDF objects needed for formulars are only allocated if
+    * PDF objects needed for forms are only allocated if
       environment `Form' is used (hpdftex, hdvipdfm).
 
 2009-09-10  6.78u  Heiko Oberdiek

@@ -588,8 +588,13 @@
     {
       \cs_set:cpn
     }
+%    \end{macrocode}
+% New definitions are global, so we need to ensure that the default uses the
+% counter name if the target key is set in a group.
+%    \begin{macrocode}
     {
-      \cs_new:cpn
+      \cs_new:cpn { @@_target_#1_prefix: }{#1}
+      \cs_set:cpn
     } 
     { @@_target_#1_prefix: }{#2} 
  }

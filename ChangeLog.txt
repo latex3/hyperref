@@ -1,3 +1,6 @@
+2026-10-09 Ulrike Fischer
+	* hyperref-linktarget.dtx: fix default target prefix
+
 2026-09-01 Ulrike Fischer
 	* hyperref.dtx: ensure that \hyper@anchorstart can always grab two arguments, issue #430.
 

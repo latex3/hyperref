@@ -188,6 +188,7 @@ tex4ht
 alphalph
 fancyvrb
 underscore
+tcolorbox
 
 # fonts
 amsfonts 

@@ -189,6 +189,7 @@ alphalph
 fancyvrb
 underscore
 tcolorbox
+tikzfill
 
 # fonts
 amsfonts 

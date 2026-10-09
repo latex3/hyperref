@@ -9973,7 +9973,7 @@
 %    \end{macro}
 %
 %    \begin{macro}{\HyPL@SetPageLabels}
-%    The page labels are written to the PDF cataloge.
+%    The page labels are written to the PDF catalogue.
 %    The command \cmd{\Hy@PutCatalog} is defined in the
 %    driver files.
 %    \begin{macrocode}
@@ -10630,7 +10630,7 @@
 %    \end{macro}
 %
 %    \begin{macro}{\@currentHlabel}
-%    \cs{@currrentHlabel} is only defined for compatibility with
+%    \cs{@currentHlabel} is only defined for compatibility with
 %    package `hypdvips'.
 %    \begin{macrocode}
 \def\@currentHlabel{\@currentHref}
@@ -12238,7 +12238,7 @@
 %    \cs{theHcounter} is redefined in order to add the
 %    parent counter.
 % change 2024-07-10: define |\HyOrg@addtoreset| always for cleveref
-% compability with tagging code, see https://github.com/latex3/tagging-project/issues/2
+% compatibility with tagging code, see https://github.com/latex3/tagging-project/issues/2
 %    \begin{macrocode}
 \def\HyOrg@addtoreset#1#2{\expandafter\@cons\csname cl@#2\endcsname {{#1}}}
 \@ifundefined{hyper@nopatch@counter}
@@ -12336,7 +12336,7 @@
     \let\hyperpage\HyOrg@hyperpage
   }%
 %    \end{macrocode}
-% keep the old name for compability.
+% keep the old name for compatibility.
 %    \begin{macrocode}
   \let\hyperindexformat\hyperxindexformat
   \Hy@nextfalse
@@ -19430,7 +19430,7 @@
 %
 % When using the right-to-left typesetting based on \eTeX, the order
 % of the |\BOOKMARK| commands written to the |\@outlinefile| could
-% appear wrong, because of mis-feature of \eTeX's implementation (that
+% appear wrong, because of a misfeature of \eTeX's implementation (that
 % it processes the shipped out lines left-to-right, instead of the
 % order in which they appear in the document). The wrong order will
 % appear when the file contains two bookmarks on the same line typeset

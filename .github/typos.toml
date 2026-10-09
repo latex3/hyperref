@@ -2,13 +2,34 @@
 extend-exclude=[
   "experiments/*", 
   "support/*",
+  "test/*",
   "*.lvt",
   "*.pvt",
   "*.tlg",
-  "*.tpf"  
+  "*.tpf",
+  "*.eps"  
 ]
 
 [default.extend-words]
-
+WOMENS = "WOMENS"
 
 [default.extend-identifiers]
+atend = "atend"
+thm   = "thm"
+Fo    ="Fo"
+portugues = "portugues"
+Alph = "Alph"
+alph = "alph"
+OT = "OT"
+ist = "ist"
+multline = "multline"
+Tabel = "Tabel"
+abl = "abl"
+agina = "agina"
+inh = "inh"
+Teorem = "Teorem"
+BA = "BA"
+rturned = "rturned"
+ot ="ot"
+EDE = "EDE"
+TEH = "TEH"

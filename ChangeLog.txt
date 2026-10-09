@@ -106,7 +106,7 @@ Version: 2024-10-30 v7.01k
 Version: 2024-07-10 v7.01j
 2024-07-10 Ulrike Fischer
 	* hyperref.dtx: define \HyOrg@addtoreset always for cleveref
-	 compability with tagging code, see https://github.com/latex3/tagging-project/issues/2
+	 compatibility with tagging code, see https://github.com/latex3/tagging-project/issues/2
 
 2024-06-02 Ulrike Fischer
 	* hyperref.dtx: enable use of onmousedown and onmouseup, issue #342
@@ -169,7 +169,7 @@ Version: 2023-11-09 v7.01f
 
 2023-11-09 Ulrike Fischer
 	* correct \cyreref to \cyrerev issue 307 
-	* corrent \textddagger definition issue 308
+	* correct \textddagger definition issue 308
 	* correct \DiamandSolid to \DiamondSolid in \psdmapshortnames issue 310
 	* correct \textDiamandSolid to \textDiamondSolid issue 310
 	* remove now unneeded fallbacks for reference commands
@@ -210,7 +210,7 @@ Version: 2023-10-21 v7.01c
       
 2023-08-14 Ulrike Fischer
     * remove redefinition of \newlabel from the aux if format is new enough.
-    * clean up and update documentation of package compabilities
+    * clean up and update documentation of package compatibilities
     
 2023-08-01 Ulrike Fischer
     * correct example in backref documentation, version changed to 2023-08-01 v1.43
@@ -240,7 +240,7 @@ Version: 2023-07-08 v7.01b
 2023-05-16 Ulrike Fischer
     * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.
     * xr-hyper: unified and simplified the brace handling: all defined references have now
-      five brace groups. Together with the planed change in LaTeX 2023-06-01 this
+      five brace groups. Together with the planned change in LaTeX 2023-06-01 this
       will improve the combination of hyperref/non-hyperref documents and allow to merge with xr
     * xr-hyper: changed default extension from dvi to pdf  
     * nameref: adapt label (re)definition to changes in LaTeX 2023-06-01
@@ -394,7 +394,7 @@ Version: 2023-07-08 v7.01b
     * if platex is detected unicode is set to false, issue #171
     * reverted the delayed loading of puenc.def as it breaks
     package options issue #172
-    * added a \lastnodetype test to distinguish explict 0pt vskip from no skip
+    * added a \lastnodetype test to distinguish explicit 0pt vskip from no skip
     in \Hy@SaveLastskip issue #167
     * enable setting the pdfversion with the xetex/dvipdfm driver,
     (related: issue #87)
@@ -713,7 +713,7 @@ Version: 2023-07-08 v7.01b
       \theH<counter> is not provided.
     * Fixes: File `psdextra.def` was loaded always with option `unicode',
       restriction of set option `psdextra' was missing. Also the
-      catcode was not explicitely set to `letter', when the file is loaded.
+      catcode was not explicitly set to `letter', when the file is loaded.
       (Thanks Daniel Halperin for bug report.)
 
 2012-07-31  6.82x  Heiko Oberdiek
@@ -724,7 +724,7 @@ Version: 2023-07-08 v7.01b
 2012-07-30  6.82w  Heiko Oberdiek
     * 6.82w
     * Bug fix in \pdfstringdef: Active characters defined with
-      \protected are catched and converted to characters with
+      \protected are caught and converted to characters with
       catcode 12 (other).
     * hpdftex.def: Before setting the version number it is checked,
       whether objects are already written. Also \pdfobjcompresslevel
@@ -789,7 +789,7 @@ Version: 2023-07-08 v7.01b
       present that affects math spacing (for example, if the
       equation starts with an unary minus). By putting \hbox
       in \mathopen/\mathclose, now only a math punctuation at
-      the end of the equation will add some space afterwords.
+      the end of the equation will add some space after words.
       Environment eqnarray is fixed in a similar way, also
       its anchor position is fixed.
 
@@ -873,7 +873,7 @@ Version: 2023-07-08 v7.01b
 2011-02-05  6.82a  Heiko Oberdiek
     * 6.82a
     * Options `hidelinks', `allcolors' and `allbordercolors' added.
-    * \pdfstringdef: \begin, \end, \foreignlanguage catched.
+    * \pdfstringdef: \begin, \end, \foreignlanguage caught.
     * Options `pdfpagelabels' and `pageanchor': some support
       for class with its page counters (slide/overlay/note/page) added.
     * Option `pageanchor': Double string escaping removed
@@ -1204,7 +1204,7 @@ Version: 2023-07-08 v7.01b
 
 2009-12-17  6.79v  Heiko Oberdiek
     * 6.79v
-    * Fix for `pdfencoding=auto', the code accidently got
+    * Fix for `pdfencoding=auto', the code accidentally got
       deleted for the other drivers than XeTeX.
     * `pdfencoding=auto' for XeTeX now adds a method to suppress the
       warning "Failed to convert input string to UTF16...", see README.
@@ -1339,7 +1339,7 @@ Version: 2023-07-08 v7.01b
 
 2009-10-28  6.79c  Heiko Oberdiek
     * 6.79c
-    * Fix for a wrong byte "0xA0", accidently introduced in 6.79b.
+    * Fix for a wrong byte "0xA0", accidentally introduced in 6.79b.
     * Adding bookmark sequence numbers in comments to the bookmark
       auxiliary file (Vladimier Volovich).
     * Manual fix: pdfpicktrackbypdfsize -> pdfpicktraybypdfsize
@@ -1598,7 +1598,7 @@ Version: 2023-07-08 v7.01b
 2007-11-12  6.77e  Heiko Oberdiek
     * 6.77e
     * LuaTeX: Package `pdftexcmds' for \pdfescapestring.
-    * Default producer setting recognices XeTeX and LuaTeX.
+    * Default producer setting recognizes XeTeX and LuaTeX.
 
 2007-11-08  6.77d  Heiko Oberdiek
     * 6.77d
@@ -1868,7 +1868,7 @@ Version: 2023-07-08 v7.01b
       into package refcount that is now loaded by nameref
       and hyperref.
     * Option bookmarksdepth: The depth of the outline entries
-      can now set separatly from counter "tocdepth",
+      can now set separately from counter "tocdepth",
       see README.
     * New option: pdfescapeform, see README.
     * \hyper@normalise for action attribute in forms.
@@ -1897,7 +1897,7 @@ Version: 2023-07-08 v7.01b
       after a word.
     * \@classoptionslist can be \relax (see psnfss/3773).
     * \new@ifnextchar also disabled for bookmarks and
-      constructs such as \let\if...\if{true,false} are catched,
+      constructs such as \let\if...\if{true,false} are caught,
       see latex/3662.
     * Bug fix: The case "\part without number by counter secnumdepth"
       was forgotten for the bookmarks (thanks to Rachel Elizabeth Dillon).
@@ -1939,7 +1939,7 @@ Version: 2023-07-08 v7.01b
     * \hyper@normalize: support of active dollar.
     * puenc.def: some fixes, reported by Ralf Stubner.
     * Makefile no longer provided.
-    * nameref 2.25, backref 1.26: Documenation fix: \HyperrefOverview
+    * nameref 2.25, backref 1.26: Documentation fix: \HyperrefOverview
       is undefined if bmhydoc.sty is not loaded.
     * nameref 2.24: Patch for ifthen moved from hyperref to nameref.
     * nameref 2.24: Definitions of \filedate and \fileversion removed.
@@ -2081,7 +2081,7 @@ Version: 2023-07-08 v7.01b
     * \hyper@link@: \@safe@activestrue used for internal name
     * backref 1.21:
       * Continued with inserting of \@safe@activestrue.
-      * \backrefxxxdupe added for comparision and detection
+      * \backrefxxxdupe added for comparison and detection
         of dupes.
       * \backrefalt added with more powerful interface with macros
         \backrefsep, \backreftwosep, and \backreflastsep.
@@ -2091,7 +2091,7 @@ Version: 2023-07-08 v7.01b
 2003-03-18  6.73q  Heiko Oberdiek
     * 6.73q
     * Suppressing /URI entry if \@baseurl is empty (hpdftex, hdvipsone).
-    * /URI moved to Cataloge (hdvipsone).
+    * /URI moved to Catalogue (hdvipsone).
     * Some locations of "file:" replaced by \Hy@linkfileprefix.
 
 2003-03-18  6.73p  Heiko Oberdiek
@@ -2320,7 +2320,7 @@ Version: 2023-07-08 v7.01b
 
 2002-01-06  6.72a  Heiko Oberdiek
     * 6.72a
-    * Annotation's additinal-actions dictionary for form fields:
+    * Annotation's additional-actions dictionary for form fields:
       Supported: keystroke (/K), validate (/V), format (/F)
       and now added: onfocus (/Fo), onblur (/Bl),
       onmousedown (/D), onmouseup (/U),
@@ -2514,7 +2514,7 @@ Version: 2023-07-08 v7.01b
 
 2000-11-05  6.71a  Heiko Oberdiek
     * 6.71a
-    * Two errorneous garbage lines removed, they cause
+    * Two erroneous garbage lines removed, they cause
       an infinite loop with \autoref{<equation|footnote>}.
 
 2000-10-04  6.71  Sebastian Rahtz
@@ -2690,7 +2690,7 @@ Version: 2023-07-08 v7.01b
     * \MP added (\pdfbookmarkstring, htex4ht.cfg).
     * All files of hyperref.dtx now identify themselves
       by \Provides{File,Package}.
-    * Start with nohyperref.sty (SR), toc-level addtions by HO.
+    * Start with nohyperref.sty (SR), toc-level additions by HO.
     * Updated: testbm{gl,u}.tex
 
 2000-03-23  6.70a  Heiko Oberdiek
@@ -2926,7 +2926,7 @@ Version: 2023-07-08 v7.01b
       \HyPsd@ConvertToUnicode rewritten, \HyPsd@string introduced, ...
     * Bug detected by Ian Bruce: hyperref has a different spacing
       with theorem environments.
-      Cause: The \lastskip value is destroyd by the specials that
+      Cause: The \lastskip value is destroyed by the specials that
       set the anchor.
       Fix: Saving the \lastskip value before the specials, and after
       setting \nobreak\{h,v}skip-\lastskip\{h,v}skip\lastskip.
@@ -3027,7 +3027,7 @@ Version: 2023-07-08 v7.01b
     * hyperref.dtx: support pdftex > 0.14 with new primitive names
     * hyperref.dtx: bookmark patches from Stephan Haller, to allow
       local changes of open status
-    * hyperref.dtx: small patche for \seteqlabel. obscure problem in
+    * hyperref.dtx: small patches for \seteqlabel. obscure problem in
       amstex compatibility mode, found by Michael Downes.
     * hyperref.dtx: patches to VTEX bookmark processing, from Taco
       Hoekwater, following patches by Denis Girou.
@@ -3168,7 +3168,7 @@ Version: 2023-07-08 v7.01b
     * With this version of \Hy@PDFDef the option exactdef can be
       removed now because of the warning messages.
     * All non-expandible commands like unknown glyphs or stomach
-      commands are catched by this version: a comprehensive
+      commands are caught by this version: a comprehensive
       warning message is produced and the tokens are removed.
     * xspace support.
     * Support for unbalanced parentheses, hyparen.sty is now obsolete.

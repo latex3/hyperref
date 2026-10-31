@@ -121,7 +121,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -133,9 +132,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
 .....\OT1/cmr/m/n/10 s
@@ -154,7 +152,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -166,9 +163,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\OT1/cmr/m/n/10 S
 .....\OT1/cmr/m/n/10 e
@@ -187,7 +183,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -199,9 +194,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
 .....\OT1/cmr/m/n/10 1
@@ -219,7 +213,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -231,9 +224,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\OT1/cmr/m/n/10 s
 .....\OT1/cmr/m/n/10 e
@@ -250,7 +242,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -262,9 +253,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\OT1/cmr/m/n/10 S
 .....\OT1/cmr/m/n/10 e
@@ -282,7 +272,6 @@ Completed box being shipped out [1]
 ......\hbox(11.92859+0.0)x0.0, glue set - 34.40048fil
 .......\rule(*+*)x0.4
 .......\hbox(4.42859+1.9999)x34.00049, shifted -7.5
-........\mathon
 ........\vbox(4.42859+1.9999)x34.00049
 .........\hbox(4.42859+0.0)x34.00049
 ..........\hbox(4.42859+0.0)x34.00049
@@ -294,9 +283,8 @@ Completed box being shipped out [1]
 ...........\OT1/cmtt/m/n/8 e
 ...........\OT1/cmtt/m/n/8 s
 ...........\OT1/cmtt/m/n/8 t
-.........\kern1.19994
+.........\kern 1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\OT1/cmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0

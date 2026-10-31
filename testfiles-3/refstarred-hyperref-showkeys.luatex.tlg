@@ -136,7 +136,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -148,9 +147,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
 .....\TU/lmr/m/n/10 s
@@ -169,7 +167,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -181,9 +178,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\TU/lmr/m/n/10 S
 .....\TU/lmr/m/n/10 e
@@ -202,7 +198,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -214,9 +209,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfstartlink(*+*)x* attr{/Border[0 0 1]/H/I/C[1 0 0]} action goto name{section.1}
 .....\TU/lmr/m/n/10 1
@@ -239,7 +233,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -251,9 +244,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\TU/lmr/m/n/10 s
 .....\TU/lmr/m/n/10 e
@@ -270,7 +262,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -282,9 +273,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\TU/lmr/m/n/10 S
 .....\TU/lmr/m/n/10 e
@@ -302,7 +292,6 @@ Completed box being shipped out [1]
 ......\hbox(11.932+0.0)x0.0, glue set - 34.384fil, direction TLT
 .......\rule(*+*)x0.4
 .......\hbox(4.432+1.9999)x33.98401, shifted -7.5, direction TLT
-........\mathon
 ........\vbox(4.432+1.9999)x33.98401, direction TLT
 .........\hbox(4.432+0.0)x33.98401, direction TLT
 ..........\hbox(4.432+0.0)x33.98401, direction TLT
@@ -314,9 +303,8 @@ Completed box being shipped out [1]
 ...........\TU/lmtt/m/n/8 e
 ...........\TU/lmtt/m/n/8 s
 ...........\TU/lmtt/m/n/8 t
-.........\kern1.19994 (font)
+.........\kern1.19994
 .........\rule(0.39998+0.0)x*
-........\mathoff
 .......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\TU/lmr/m/n/10 1
 .....\hbox(0.0+0.0)x0.0, direction TLT

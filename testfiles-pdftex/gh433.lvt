@@ -1,0 +1,15 @@
+\DocumentMetadata{}
+\input{regression-test}
+\documentclass{article}
+\usepackage{hyperref}
+\START
+\SHOWFILE{\jobname.aux}
+\OMIT
+\begin{document}
+
+\section{section}
+\begin{figure}
+\caption{a caption content}\label{caption}
+\end{figure}
+\nameref{caption}
+\end{document}

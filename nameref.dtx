@@ -33,7 +33,7 @@
 %<driver>\ProvidesFile{nameref.drv}
 % \fi
 % \ProvidesFile{nameref.dtx}
-  [2026-01-29 v2.58 Cross-referencing by name of section]%
+  [2026-10-31 v2.59 Cross-referencing by name of section]%
 %
 %
 % \iffalse
@@ -124,8 +124,10 @@
 % \item[captions] The following commands are patched
 % \begin{itemize}
 % \item \cs{@caption}: command to store the title added. This is done at begin
-% document, but only if \textsf{hyperref} is not detected. With \textsf{hyperref}
-% the patch is done there (and must be disabled in \textsf{hyperref}).
+% document, but only if \textsf{hyperref} or \cs{DocumentMetadata}
+% is not detected. With \textsf{hyperref} 
+% the patch is done there if \cs{DocumentMetadata} is not used
+% (and must be disabled in \textsf{hyperref}).
 %
 % This patch can be disabled by defining \cs{NR@nopatch@caption}
 %
@@ -501,16 +503,26 @@
 %
 %    \begin{macrocode}
 \AtBeginDocument{%
-  \@ifpackageloaded{hyperref}{}
-  {%
-    \@ifundefined{NR@nopatch@caption}
-     {\let\NR@@caption\@caption
-      \long\def\@caption#1[#2]{%
-      \NR@gettitle{#2}%
-      \NR@@caption{#1}[{#2}]%
-       }}%
-     {}%
-  }%
+  \@ifundefined{NR@nopatch@caption}
+   {
+     \@ifpackageloaded{hyperref}
+       {
+         \IfDocumentMetadataT
+          {        
+            \let\NR@@caption\@caption
+            \long\def\@caption#1[#2]{%
+             \NR@gettitle{#2}%
+             \NR@@caption{#1}[{#2}]}
+          }
+       }
+       {
+         \let\NR@@caption\@caption
+         \long\def\@caption#1[#2]{%
+          \NR@gettitle{#2}%
+          \NR@@caption{#1}[{#2}]}
+       }     
+   }
+   {}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

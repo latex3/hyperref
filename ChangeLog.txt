@@ -1,3 +1,10 @@
+Version 2026-11-03 v7.01t
+
+2026-11-03 Ulrike 
+	* nameref and backref have been move out of the bundle and are now in their own repositories at https://github.com/LaTeX-Package-Repositories
+  * xr-hyper is now only a small wrapper which calls xr.
+
+Version 2026-11-03 v7.01s
 2026-10-31 Ulrike Fischer
 	* nameref.dtx: extend caption patch, issue #433
   

@@ -1,13 +1,14 @@
 Version 2026-11-03 v7.01t
 
-2026-11-03 Ulrike 
-	* nameref and backref have been move out of the bundle and are now in their own repositories at https://github.com/LaTeX-Package-Repositories
-  * xr-hyper is now only a small wrapper which calls xr.
+2026-11-03 Ulrike
+	* nameref and backref have been moved out of the bundle and are now in their own repositories
+	at https://github.com/LaTeX-Package-Repositories
+	* xr-hyper is now only a small wrapper which calls xr.
 
 Version 2026-11-03 v7.01s
 2026-10-31 Ulrike Fischer
 	* nameref.dtx: extend caption patch, issue #433
-  
+
 2026-10-09 Ulrike Fischer
 	* hyperref-linktarget.dtx: fix default target prefix
 
@@ -80,7 +81,7 @@ Version: 2025-06-21 v7.01n
 	* hyperref.dtx: test if \ifmeasuring@ already exists, tagging-project issue #920
 
 2025-06-17 Ulrike Fischer
-	* hyperref.dtx: set the pdfa key automatically if an A-standard is 
+	* hyperref.dtx: set the pdfa key automatically if an A-standard is
       set in \DocumentMetadata. issue #387
 
 2025-06-01 Ulrike Fischer
@@ -111,7 +112,7 @@ Version: 2024-10-30 v7.01k
 	* hyperref.dtx: avoid warning if theHfootnote is predefined.
 
 2024-08-31 Ulrike Fischer
-	* hyperref-linktarget.dtx: correct a test, see test missing-theH 
+	* hyperref-linktarget.dtx: correct a test, see test missing-theH
 
 Version: 2024-07-10 v7.01j
 2024-07-10 Ulrike Fischer
@@ -135,7 +136,7 @@ Version: 2024-05-23 v7.01i
 	* hyperref.dtx: allow commands in counter names
 issue #330
 
-Version: 2024-01-20 v7.01h 
+Version: 2024-01-20 v7.01h
 2024-01-20 Ulrike Fischer
 	* hyperref.dtx: alias for \deferred@thm@head to allow patching if czech is used,
 issue #324
@@ -152,9 +153,9 @@ issue #324
 2023-12-19 Ulrike Fischer
 	* hyperref.dtx: remove letltxmacro package. Is unused.
 
-Version: 2023-11-26 v7.01g 
-		nameref 2023-11-26 v2.56 
-		backref 2023-11-26 v1.44
+Version: 2023-11-26 v7.01g
+	* nameref 2023-11-26 v2.56
+	* backref 2023-11-26 v1.44
 
 2023-11-26  David Carlisle
 	* hyperref.dtx: Remove infwarerr
@@ -165,8 +166,8 @@ Version: 2023-11-26 v7.01g
 	* nameref.dtx remove unneeded memoir patch
 	* nameref.dtx remove unneeded titlesec patch
 	* rename \HyPsd@expand@utfvii to \HyPsd@expand@utfviii, issue #309
-	* correct composite declaration, issue #314 
-   
+	* correct composite declaration, issue #314
+
 2023-11-14 Ulrike Fischer
 	* remove ltxcmds dependency in hluatex.dtx
 	* remove ltxcmds dependency in nameref.dtx (v2.56)
@@ -178,7 +179,7 @@ Version: 2023-11-26 v7.01g
 Version: 2023-11-09 v7.01f
 
 2023-11-09 Ulrike Fischer
-	* correct \cyreref to \cyrerev issue 307 
+	* correct \cyreref to \cyrerev issue 307
 	* correct \textddagger definition issue 308
 	* correct \DiamandSolid to \DiamondSolid in \psdmapshortnames issue 310
 	* correct \textDiamandSolid to \textDiamondSolid issue 310
@@ -195,33 +196,33 @@ Version: 2023-11-?? v7.01e
 
 2023-10-31 Ulrike Fischer
     * hyperref-linktarget.dtx: switch to e-type
-    
+
 ===========
 Version: 2023-10-27 v7.01d
 
 
 2023-10-27 Ulrike Fischer
     * hyperref.dtx: change anchor handling for amsthm, issue 304
-    
+
 ===========
 Version: 2023-10-21 v7.01c
 
 2023-10-16 Ulrike Fischer
     * hyperref.dtx: add \@currentHpage support
 
-2023-10-12 Ulrike Fischer 
-    * hyperref.dtx: handle \TextOrMath in \pdfstringdef, issue 303 
-    * support babel languages loaded with main or 
-    with \babelprovide, issue 165 
-    
+2023-10-12 Ulrike Fischer
+    * hyperref.dtx: handle \TextOrMath in \pdfstringdef, issue 303
+    * support babel languages loaded with main or
+    with \babelprovide, issue 165
+
 2023-10-05 Ulrike Fischer
     * nameref.dtx: add missing nameref nopatches issue 302,
       version changed to 2023-10-05 v2.54
-      
+
 2023-08-14 Ulrike Fischer
     * remove redefinition of \newlabel from the aux if format is new enough.
     * clean up and update documentation of package compatibilities
-    
+
 2023-08-01 Ulrike Fischer
     * correct example in backref documentation, version changed to 2023-08-01 v1.43
 
@@ -230,42 +231,42 @@ Version: 2023-10-21 v7.01c
 
 2023-07-10 Ulrike Fischer
     * solve amsmath/showkeys/final conflict, issue 292
-  
+
 ===============
 Version: 2023-07-08 v7.01b
-    
+
 2023-07-07 Ulrike Fischer
     * make \Hy@@SectionAnchor safe in a MakeUppercase, issue 281
     * reset also \ltx@label of amsmath (avoids problems with ntheorem and classes like svmono)
-    
+
 
 2023-06-25 Ulrike Fischer
     * define the amsmath \ifmeasuring@ always as external package depend on hyperref doing it.
-    
+
 2023-06-18 Ulrike Fischer
     * changed various patches for amsmath to make them independent of loading order.
     * nameref: check the definition of label and reinstate the kernel definition if it has been changed.
       This avoid problems with classes (revtex) and packages (ntheorem) which changes \label in an incompatible way.
-    
+
 2023-05-16 Ulrike Fischer
     * remove puenc-greekbasic.def and load definitions from greek-fontenc instead.
     * xr-hyper: unified and simplified the brace handling: all defined references have now
       five brace groups. Together with the planned change in LaTeX 2023-06-01 this
       will improve the combination of hyperref/non-hyperref documents and allow to merge with xr
-    * xr-hyper: changed default extension from dvi to pdf  
+    * xr-hyper: changed default extension from dvi to pdf
     * nameref: adapt label (re)definition to changes in LaTeX 2023-06-01
-    
+
 2023-04-22 Ulrike Fischer
     * fix cleveref/ntheorem incompatibility https://tex.stackexchange.com/q/683581/2388
-    * add nopatch option for \@thm 
-    
+    * add nopatch option for \@thm
+
 2023-04-20 Ulrike Fischer
-    * fix spacing issues in theorems with new \@thm handling, issues 11,48. 
+    * fix spacing issues in theorems with new \@thm handling, issues 11,48.
       This requires etoolbox and the LaTeX para hooks.
     * Adapted MakeUppercase and MakeLowercase to new \BCPdata used by babel and polyglossia.
     * added swissgerman and nswissgerman, issue #264
     * removed stray \CheckSum from backref.dtx
-       
+
 2023-04-19 Ulrike Fischer
     * support hitex engine
 
@@ -275,11 +276,11 @@ Version: 2023-07-08 v7.01b
 2023-02-19 Ulrike Fischer/David Carlisle
     * expand key once, issue #275
     * added italian to backref, PR # 274
-    * added swedish to autoref names, PR #266   
+    * added swedish to autoref names, PR #266
 
-2023-02-05 Ulrike Fischer/David Carlisle 
-    * if babel is loaded casing with 
-    \MakeUppercase and \MakeLowercase 
+2023-02-05 Ulrike Fischer/David Carlisle
+    * if babel is loaded casing with
+    \MakeUppercase and \MakeLowercase
       respects the rules of the current locale/language in the bookmarks.
     * removed old amstex patch of \@seteqlabel
     * added test for \hyper@nopatch@amsmath@tag to allow to suppress an amsmath patch
@@ -291,11 +292,11 @@ Version: 2023-07-08 v7.01b
     * change puenc-greek.def to puenc-greekbasic.def in docs, to sync with file
     renaming, issue #269
 
-2022-11-13 Ulrike Fischer/David Carlisle * don't set the pagesize if \mag is 
-    different from 1000, see issue #1138 in latex3. * avoid error from old 
-    labels if hyperref is loaded, issue #261 * fixed issue #260 * fixed a 
-    nopatch command, issue #258 * Use protected commands in \contentsline to 
-    allow the use of \MakeUppercase, issue #121 
+2022-11-13 Ulrike Fischer/David Carlisle * don't set the pagesize if \mag is
+    different from 1000, see issue #1138 in latex3. * avoid error from old
+    labels if hyperref is loaded, issue #261 * fixed issue #260 * fixed a
+    nopatch command, issue #258 * Use protected commands in \contentsline to
+    allow the use of \MakeUppercase, issue #121
 
 2022-09-22 Ulrike Fischer/David Carlisle
     * adapt setpagesize option to changes in LaTeX (stockwidth is always defined)

@@ -5,10 +5,6 @@ hyperref.dtx
         Main package with various drivers.
 hluatex.dtx
         luatex back end for hyperref.
-backref.dtx
-        Bibliographical back referencing.
-nameref.dtx
-        Cross-referencing by name of section.
 hyperref-linktarget.dtx
         Module with commands to create targets         
 hyperref-patches.dtx
@@ -42,16 +38,12 @@ README.md
 % Derived files
 % =============
 
-backref.sty
-nameref.sty
 hyperref.sty
 nohyperref.sty
 hyperref-patches.sty
         LaTeX package files.
 hycheck.tex
 	Test file.
-backref.drv
-nameref.drv
 hyperref.drv
         Documentation drivers.
 hypertex.def

@@ -1,0 +1,17 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+-------- gh433.aux (start) ---------
+(gh433.aux)
+\relax[nl]
+\providecommand\hyper@newdestlabel[2]{}[nl]
+\providecommand\HyField@AuxAddToFields[1]{}[nl]
+\providecommand\HyField@AuxAddToCoFields[2]{}[nl]
+\providecommand\BKM@entry[2]{}[nl]
+\BKM@entry{id=1,dest={73656374696F6E2E31},srcline={10}}{5C3337365C3337375C303030735C303030655C303030635C303030745C303030695C3030306F5C3030306E}[nl]
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces a caption content}}{1}{figure.struct.1}\protected@file@percent }[nl]
+\newlabel{caption}{{1}{1}{a caption content}{figure.struct.1}{}}[nl]
+\new@label@record{heading*.0}{{pagenum}{1}}[nl]
+\@writefile{toc}{\contentsline {section}{\numberline {1}section}{1}{section.1}\protected@file@percent }[nl]
+\new@label@record{@tag@LastPage}{{abspage}{1}{tagmcabs}{0}{tagstruct}{1}}[nl]
+\gdef \@abspage@last{1}[nl]
+-------- gh433.aux (end) -----------

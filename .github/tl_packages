@@ -39,6 +39,7 @@ collection-basic
         ltxcmds
         mfnfss
         mptopdf
+        nameref
         natbib
         oberdiek
         pdfescape

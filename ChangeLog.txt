@@ -1,6 +1,9 @@
+2026-11-05 Ulrike Fischer
+   * hyperref-linktarget.dtx: provide \ifmeasuring@, issue #438
+
 Version 2026-11-03 v7.01t
 
-2026-11-03 Ulrike
+2026-11-03 Ulrike Fischer
 	* nameref and backref have been moved out of the bundle and are now in their own repositories
 	at https://github.com/LaTeX-Package-Repositories
 	* xr-hyper is now only a small wrapper which calls xr.

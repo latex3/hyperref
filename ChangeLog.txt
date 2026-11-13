@@ -1,5 +1,6 @@
 2026-11-05 Ulrike Fischer
    * hyperref-linktarget.dtx: provide \ifmeasuring@, issue #438
+   * hyperref.dtx: change \ttl@Hy@refstepcounter, issue #441
 
 Version 2026-11-03 v7.01t
 

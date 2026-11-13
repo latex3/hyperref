@@ -51,7 +51,7 @@
 %<puvnenc>\ProvidesFile{puvnenc.def}
 %<puarenc>\ProvidesFile{puarenc.def}
 %<psdextra>\ProvidesFile{psdextra.def}
-%<!none&!packageEnd>  [2026-11-03 v7.01t %
+%<!none&!packageEnd>  [2026-11-13 v7.01u %
 %<package>  Hypertext links for LaTeX]
 %<nohyperref>  Dummy hyperref (SR)]
 %<driver>  Hyperref documentation driver file]
@@ -11357,11 +11357,7 @@
   \else
     \hyper@makecurrent{\@captype}%
   \fi
-  \@ifundefined{NR@gettitle}{%
-    \def\@currentlabelname{#2}%
-  }{%
-    \NR@gettitle{#2}%
-  }%
+  \NR@gettitle{#2}%
   \par\addcontentsline{\csname ext@#1\endcsname}{#1}{%
     \protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}%
   }%

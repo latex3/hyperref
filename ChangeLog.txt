@@ -3,9 +3,13 @@ Version 2026-11-12 v7.01u
 2026-11-12 Matthew Bertucci
     * remove unnecessary check for \NR@gettitle in redefinition of \@caption
 
+2026-11-05 Ulrike Fischer
+   * hyperref-linktarget.dtx: provide \ifmeasuring@, issue #438
+   * hyperref.dtx: change \ttl@Hy@refstepcounter, issue #441
+
 Version 2026-11-03 v7.01t
 
-2026-11-03 Ulrike
+2026-11-03 Ulrike Fischer
 	* nameref and backref have been moved out of the bundle and are now in their own repositories
 	at https://github.com/LaTeX-Package-Repositories
 	* xr-hyper is now only a small wrapper which calls xr.

@@ -460,6 +460,14 @@
 \ProvideDocumentCommand\NextLinkTarget{m}{}
 %    \end{macrocode}
 %
+% \subsection{Provide \cs{ifmeasuring@}}
+% see issue \#438.
+%    \begin{macrocode}
+\ifcsname ifmeasuring@\endcsname
+\else
+ \expandafter\newif\csname ifmeasuring@\endcsname\measuring@false
+\fi
+%    \end{macrocode}
 % \subsection{Target on and off switch}
 % \begin{macro}{\LinkTargetOn,\LinkTargetOff}
 %    \begin{macrocode}

@@ -156,7 +156,7 @@ tagfiles={"README.md","xr-hyper.sty","*.dtx","doc/*.tex"}
 function update_tag(file,content,tagname,tagdate)
 
 local tagpattern="(%d%d%d%d[-/]%d%d[-/]%d%d) v(%d+[.])(%d+)(%l)"
-local oldv,newv
+local oldv,newv,newvv
 if tagname == 'auto' or tagname == 'AUTO' then
   local i,j,olddate,a,b,c
   i,j,olddate,a,b,c= string.find(content, tagpattern)
@@ -166,15 +166,20 @@ if tagname == 'auto' or tagname == 'AUTO' then
   else
     print ('FOUND: ' .. olddate .. ' v' .. a .. b .. c)
     oldv = olddate .. ' v' .. a .. b .. c
-    if tagname == 'AUTO' then
-      newv = tagdate .. ' v'  .. a .. string.format("%02d",math.floor(b + 1)) .. 'a'
+    if tagname == 'AUTO' then      
+      newvv= ' v'  .. a .. string.format("%02d",math.floor(b + 1)) .. 'a'
+      newv = tagdate .. newvv
     else
-      newv = tagdate .. ' v'  .. a .. b .. string.char(string.byte(c)+1)
+      newvv = ' v'  .. a .. b .. string.char(string.byte(c)+1)
+      newv = tagdate .. newvv
     end
     print('USING OLD TAG: ' .. oldv)
     print('USING NEW TAG: ' .. newv)
     local oldpattern = string.gsub(oldv,"[-/]", "[-/]")
     content=string.gsub(content,oldpattern,newv)
+    content = string.gsub (content,
+      "\\ProvidesExplPackage{(.-)}{.-}{.-}",
+      "\\ProvidesExplPackage{%1}{" .. tagdate.."}{".. newvv .. "}")
     return content
   end
 else

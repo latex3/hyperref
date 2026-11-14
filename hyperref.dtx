@@ -10693,12 +10693,8 @@
     \x
   }%
   \def\ttl@Hy@refstepcounter#1{%
-    \let\ttl@b\Hy@raisedlink
-    \def\Hy@raisedlink##1{%
-      \def\ttl@Hy@saveanchor{\Hy@raisedlink{##1}}%
-    }%
-    \refstepcounter{#1}%
-    \let\Hy@raisedlink\ttl@b
+    \def\ttl@Hy@saveanchor{\MakeLinkTarget{#1}}%
+    \@kernel@refstepcounter{#1}%
   }%
 }{}
 %    \end{macrocode}

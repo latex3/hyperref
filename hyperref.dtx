@@ -11353,11 +11353,7 @@
   \else
     \hyper@makecurrent{\@captype}%
   \fi
-  \@ifundefined{NR@gettitle}{%
-    \def\@currentlabelname{#2}%
-  }{%
-    \NR@gettitle{#2}%
-  }%
+  \NR@gettitle{#2}%
   \par\addcontentsline{\csname ext@#1\endcsname}{#1}{%
     \protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}%
   }%

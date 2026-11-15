@@ -1,3 +1,8 @@
+Version 2026-11-12 v7.01u
+
+2026-11-12 Matthew Bertucci
+    * remove unnecessary check for \NR@gettitle in redefinition of \@caption
+
 2026-11-05 Ulrike Fischer
    * hyperref-linktarget.dtx: provide \ifmeasuring@, issue #438
    * hyperref.dtx: change \ttl@Hy@refstepcounter, issue #441
